@@ -1,0 +1,1608 @@
+{
+	"vocab": [
+		{
+			"arabic": "أنا",
+			"arabicTashkeel": "أنا",
+			"english": "I",
+			"transliteration": "ana",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "إنت",
+			"arabicTashkeel": "إنتَ",
+			"english": "You (to a man)",
+			"transliteration": "inta",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "You",
+					"transliteration": "inta"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "إنتي",
+			"arabicTashkeel": "إنتي",
+			"english": "You (to a woman)",
+			"transliteration": "inti",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "You",
+					"transliteration": "inti"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "هوا",
+			"arabicTashkeel": "هوّا",
+			"english": "He",
+			"transliteration": "huwwa",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He",
+					"transliteration": "huwwa"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "هيا",
+			"arabicTashkeel": "هيّا",
+			"english": "She",
+			"transliteration": "hiyya",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She",
+					"transliteration": "hiyya"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "إحنا",
+			"arabicTashkeel": "إحنا",
+			"english": "We",
+			"transliteration": "i7na",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We",
+					"transliteration": "i7na"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "إنتو",
+			"arabicTashkeel": "إنتو",
+			"english": "You (plural)",
+			"transliteration": "intu",
+			"wordAlignments": [
+				{
+					"arabic": "إنتو",
+					"english": "You all",
+					"transliteration": "intu"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "هما",
+			"arabicTashkeel": "هُمّا",
+			"english": "They",
+			"transliteration": "humma",
+			"wordAlignments": [
+				{
+					"arabic": "هما",
+					"english": "They",
+					"transliteration": "humma"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "طالب",
+			"arabicTashkeel": "طالِب",
+			"english": "Student (male)",
+			"transliteration": "taalib",
+			"wordAlignments": [
+				{
+					"arabic": "طالب",
+					"english": "Student",
+					"transliteration": "taalib"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "طالبة",
+			"arabicTashkeel": "طالبة",
+			"english": "Student (female)",
+			"transliteration": "taaliba",
+			"wordAlignments": [
+				{
+					"arabic": "طالبة",
+					"english": "Student",
+					"transliteration": "taaliba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مدرس",
+			"arabicTashkeel": "مُدَرِّس",
+			"english": "Teacher (male)",
+			"transliteration": "mudarris",
+			"wordAlignments": [
+				{
+					"arabic": "مدرس",
+					"english": "Teacher",
+					"transliteration": "mudarris"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سعودي",
+			"arabicTashkeel": "سُعودي",
+			"english": "Saudi",
+			"transliteration": "su3oodi",
+			"wordAlignments": [
+				{
+					"arabic": "سعودي",
+					"english": "Saudi",
+					"transliteration": "su3oodi"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "تعبان",
+			"arabicTashkeel": "تَعبان",
+			"english": "Tired",
+			"transliteration": "ta3baan",
+			"wordAlignments": [
+				{
+					"arabic": "تعبان",
+					"english": "Tired",
+					"transliteration": "ta3baan"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "هنا",
+			"arabicTashkeel": "هِنا",
+			"english": "Here",
+			"transliteration": "hina",
+			"wordAlignments": [
+				{
+					"arabic": "هنا",
+					"english": "Here",
+					"transliteration": "hina"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "مشغول",
+			"arabicTashkeel": "مَشغول",
+			"english": "Busy",
+			"transliteration": "mashghool",
+			"wordAlignments": [
+				{
+					"arabic": "مشغول",
+					"english": "Busy",
+					"transliteration": "mashghool"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أنا طالب.",
+			"arabicTashkeel": "أنا طالِب.",
+			"english": "I am a student.",
+			"transliteration": "ana taalib.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "طالب.",
+					"english": "a student.",
+					"transliteration": "taalib."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Student (male)"
+			]
+		},
+		{
+			"arabic": "إنت مدرس؟",
+			"arabicTashkeel": "إنتَ مُدَرِّس؟",
+			"english": "Are you a teacher?",
+			"transliteration": "inta mudarris?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "مدرس؟",
+					"english": "a teacher?",
+					"transliteration": "mudarris?"
+				}
+			],
+			"targetWords": [
+				"You (to a man)",
+				"Teacher (male)"
+			]
+		},
+		{
+			"arabic": "إنتي طالبة؟",
+			"arabicTashkeel": "إنتي طالبة؟",
+			"english": "Are you a student?",
+			"transliteration": "inti taaliba?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "طالبة؟",
+					"english": "a student?",
+					"transliteration": "taaliba?"
+				}
+			],
+			"targetWords": [
+				"You (to a woman)",
+				"Student (female)"
+			]
+		},
+		{
+			"arabic": "هوا سعودي.",
+			"arabicTashkeel": "هوّا سُعودي.",
+			"english": "He is Saudi.",
+			"transliteration": "huwwa su3oodi.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "سعودي.",
+					"english": "Saudi.",
+					"transliteration": "su3oodi."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Saudi"
+			]
+		},
+		{
+			"arabic": "هيا طالبة.",
+			"arabicTashkeel": "هيّا طالبة.",
+			"english": "She is a student.",
+			"transliteration": "hiyya taaliba.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "طالبة.",
+					"english": "a student.",
+					"transliteration": "taaliba."
+				}
+			],
+			"targetWords": [
+				"She",
+				"Student (female)"
+			]
+		},
+		{
+			"arabic": "إحنا هنا.",
+			"arabicTashkeel": "إحنا هِنا.",
+			"english": "We are here.",
+			"transliteration": "i7na hina.",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "هنا.",
+					"english": "here.",
+					"transliteration": "hina."
+				}
+			],
+			"targetWords": [
+				"We",
+				"Here"
+			]
+		},
+		{
+			"arabic": "إنتو مشغولين؟",
+			"arabicTashkeel": "إنتو مَشغولين؟",
+			"english": "Are you all busy?",
+			"transliteration": "intu mashghooleen?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتو",
+					"english": "Are you all",
+					"transliteration": "intu"
+				},
+				{
+					"arabic": "مشغولين؟",
+					"english": "busy?",
+					"transliteration": "mashghooleen?"
+				}
+			],
+			"targetWords": [
+				"You (plural)"
+			]
+		},
+		{
+			"arabic": "هما هنا.",
+			"arabicTashkeel": "هُمّا هِنا.",
+			"english": "They are here.",
+			"transliteration": "humma hina.",
+			"wordAlignments": [
+				{
+					"arabic": "هما",
+					"english": "They are",
+					"transliteration": "humma"
+				},
+				{
+					"arabic": "هنا.",
+					"english": "here.",
+					"transliteration": "hina."
+				}
+			],
+			"targetWords": [
+				"They",
+				"Here"
+			]
+		},
+		{
+			"arabic": "أنا تعبان دحين.",
+			"arabicTashkeel": "أنا تَعبان دحين.",
+			"english": "I am tired now.",
+			"transliteration": "ana ta3baan da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "تعبان",
+					"english": "tired",
+					"transliteration": "ta3baan"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Tired"
+			]
+		},
+		{
+			"arabic": "هوا مدرس سعودي.",
+			"arabicTashkeel": "هوّا مُدَرِّس سُعودي.",
+			"english": "He is a Saudi teacher.",
+			"transliteration": "huwwa mudarris su3oodi.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مدرس",
+					"english": "a teacher",
+					"transliteration": "mudarris"
+				},
+				{
+					"arabic": "سعودي.",
+					"english": "Saudi.",
+					"transliteration": "su3oodi."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Teacher (male)",
+				"Saudi"
+			]
+		},
+		{
+			"arabic": "هيا مو هنا.",
+			"arabicTashkeel": "هيّا مو هِنا.",
+			"english": "She is not here.",
+			"transliteration": "hiyya moo hina.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "هنا.",
+					"english": "here.",
+					"transliteration": "hina."
+				}
+			],
+			"targetWords": [
+				"She",
+				"Here"
+			]
+		},
+		{
+			"arabic": "إنت مشغول؟",
+			"arabicTashkeel": "إنتَ مَشغول؟",
+			"english": "Are you busy?",
+			"transliteration": "inta mashghool?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "مشغول؟",
+					"english": "busy?",
+					"transliteration": "mashghool?"
+				}
+			],
+			"targetWords": [
+				"You (to a man)",
+				"Busy"
+			]
+		},
+		{
+			"arabic": "أنا مو مشغول.",
+			"arabicTashkeel": "أنا مو مَشغول.",
+			"english": "I am not busy.",
+			"transliteration": "ana moo mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Busy"
+			]
+		},
+		{
+			"arabic": "إحنا طلاب.",
+			"arabicTashkeel": "إحنا طُلّاب.",
+			"english": "We are students.",
+			"transliteration": "i7na tullaab.",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "طلاب.",
+					"english": "students.",
+					"transliteration": "tullaab."
+				}
+			],
+			"targetWords": [
+				"We"
+			]
+		},
+		{
+			"arabic": "هما سعوديين.",
+			"arabicTashkeel": "هُمّا سُعوديين.",
+			"english": "They are Saudis.",
+			"transliteration": "humma su3oodiyyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "هما",
+					"english": "They are",
+					"transliteration": "humma"
+				},
+				{
+					"arabic": "سعوديين.",
+					"english": "Saudis.",
+					"transliteration": "su3oodiyyeen."
+				}
+			],
+			"targetWords": [
+				"They"
+			]
+		},
+		{
+			"arabic": "إنتي مصرية؟",
+			"arabicTashkeel": "إنتي مَصرية؟",
+			"english": "Are you Egyptian?",
+			"transliteration": "inti masriyya?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "مصرية؟",
+					"english": "Egyptian?",
+					"transliteration": "masriyya?"
+				}
+			],
+			"targetWords": [
+				"You (to a woman)"
+			]
+		},
+		{
+			"arabic": "لا، أنا مو مصرية.",
+			"arabicTashkeel": "لا، أنا مو مَصرية.",
+			"english": "No, I am not Egyptian.",
+			"transliteration": "laa, ana moo masriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "لا،",
+					"english": "No,",
+					"transliteration": "laa,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مصرية.",
+					"english": "Egyptian.",
+					"transliteration": "masriyya."
+				}
+			],
+			"targetWords": [
+				"I"
+			]
+		},
+		{
+			"arabic": "هوا تعبان اليوم.",
+			"arabicTashkeel": "هوّا تَعبان اليوم.",
+			"english": "He is tired today.",
+			"transliteration": "huwwa ta3baan il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "تعبان",
+					"english": "tired",
+					"transliteration": "ta3baan"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Tired"
+			]
+		},
+		{
+			"arabic": "إنتو هنا؟",
+			"arabicTashkeel": "إنتو هِنا؟",
+			"english": "Are you all here?",
+			"transliteration": "intu hina?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتو",
+					"english": "Are you all",
+					"transliteration": "intu"
+				},
+				{
+					"arabic": "هنا؟",
+					"english": "here?",
+					"transliteration": "hina?"
+				}
+			],
+			"targetWords": [
+				"You (plural)",
+				"Here"
+			]
+		},
+		{
+			"arabic": "هيا مدرسة.",
+			"arabicTashkeel": "هيّا مُدَرِّسة.",
+			"english": "She is a teacher.",
+			"transliteration": "hiyya mudarrisa.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "مدرسة.",
+					"english": "a teacher.",
+					"transliteration": "mudarrisa."
+				}
+			],
+			"targetWords": [
+				"She"
+			]
+		},
+		{
+			"arabic": "أنا مدرس، وإنت؟",
+			"arabicTashkeel": "أنا مُدَرِّس، وإنتَ؟",
+			"english": "I am a teacher, and you?",
+			"transliteration": "ana mudarris, w-inta?",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مدرس،",
+					"english": "a teacher,",
+					"transliteration": "mudarris,"
+				},
+				{
+					"arabic": "وإنت؟",
+					"english": "and you?",
+					"transliteration": "w-inta?"
+				}
+			],
+			"targetWords": [
+				"I",
+				"Teacher (male)",
+				"You (to a man)"
+			]
+		},
+		{
+			"arabic": "إنت طالب؟",
+			"arabicTashkeel": "إنتَ طالِب؟",
+			"english": "Are you a student?",
+			"transliteration": "inta taalib?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "طالب؟",
+					"english": "a student?",
+					"transliteration": "taalib?"
+				}
+			],
+			"targetWords": [
+				"You (to a man)",
+				"Student (male)"
+			]
+		},
+		{
+			"arabic": "إحنا مشغولين مرة.",
+			"arabicTashkeel": "إحنا مَشغولين مَرّة.",
+			"english": "We are very busy.",
+			"transliteration": "i7na mashghooleen marra.",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "مشغولين",
+					"english": "busy",
+					"transliteration": "mashghooleen"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"We"
+			]
+		},
+		{
+			"arabic": "هما مو هنا دحين.",
+			"arabicTashkeel": "هُمّا مو هِنا دحين.",
+			"english": "They are not here now.",
+			"transliteration": "humma moo hina da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "هما",
+					"english": "They are",
+					"transliteration": "humma"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "هنا",
+					"english": "here",
+					"transliteration": "hina"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"They",
+				"Here"
+			]
+		},
+		{
+			"arabic": "هوا طالب هنا.",
+			"arabicTashkeel": "هوّا طالِب هِنا.",
+			"english": "He is a student here.",
+			"transliteration": "huwwa taalib hina.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "طالب",
+					"english": "a student",
+					"transliteration": "taalib"
+				},
+				{
+					"arabic": "هنا.",
+					"english": "here.",
+					"transliteration": "hina."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Student (male)",
+				"Here"
+			]
+		},
+		{
+			"arabic": "إنتي تعبانة؟",
+			"arabicTashkeel": "إنتي تَعبانة؟",
+			"english": "Are you tired?",
+			"transliteration": "inti ta3baana?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "تعبانة؟",
+					"english": "tired?",
+					"transliteration": "ta3baana?"
+				}
+			],
+			"targetWords": [
+				"You (to a woman)"
+			]
+		},
+		{
+			"arabic": "أنا سعودي، من جدة.",
+			"arabicTashkeel": "أنا سُعودي، مِن جِدّة.",
+			"english": "I am Saudi, from Jeddah.",
+			"transliteration": "ana su3oodi, min jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "سعودي،",
+					"english": "Saudi,",
+					"transliteration": "su3oodi,"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Saudi"
+			]
+		},
+		{
+			"arabic": "إنتو طلاب؟",
+			"arabicTashkeel": "إنتو طُلّاب؟",
+			"english": "Are you all students?",
+			"transliteration": "intu tullaab?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتو",
+					"english": "Are you all",
+					"transliteration": "intu"
+				},
+				{
+					"arabic": "طلاب؟",
+					"english": "students?",
+					"transliteration": "tullaab?"
+				}
+			],
+			"targetWords": [
+				"You (plural)"
+			]
+		},
+		{
+			"arabic": "هيا مشغولة اليوم.",
+			"arabicTashkeel": "هيّا مَشغولة اليوم.",
+			"english": "She is busy today.",
+			"transliteration": "hiyya mashghoola il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "مشغولة",
+					"english": "busy",
+					"transliteration": "mashghoola"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"She"
+			]
+		},
+		{
+			"arabic": "إحنا سعوديين.",
+			"arabicTashkeel": "إحنا سُعوديين.",
+			"english": "We are Saudis.",
+			"transliteration": "i7na su3oodiyyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "سعوديين.",
+					"english": "Saudis.",
+					"transliteration": "su3oodiyyeen."
+				}
+			],
+			"targetWords": [
+				"We"
+			]
+		},
+		{
+			"arabic": "هما طلاب، مو مدرسين.",
+			"arabicTashkeel": "هُمّا طُلّاب، مو مُدَرّسين.",
+			"english": "They are students, not teachers.",
+			"transliteration": "humma tullaab, moo mudarriseen.",
+			"wordAlignments": [
+				{
+					"arabic": "هما",
+					"english": "They are",
+					"transliteration": "humma"
+				},
+				{
+					"arabic": "طلاب،",
+					"english": "students,",
+					"transliteration": "tullaab,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مدرسين.",
+					"english": "teachers.",
+					"transliteration": "mudarriseen."
+				}
+			],
+			"targetWords": [
+				"They"
+			]
+		},
+		{
+			"arabic": "إنت تعبان؟",
+			"arabicTashkeel": "إنتَ تَعبان؟",
+			"english": "Are you tired?",
+			"transliteration": "inta ta3baan?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "تعبان؟",
+					"english": "tired?",
+					"transliteration": "ta3baan?"
+				}
+			],
+			"targetWords": [
+				"You (to a man)",
+				"Tired"
+			]
+		},
+		{
+			"arabic": "أنا طالبة هنا.",
+			"arabicTashkeel": "أنا طالبة هِنا.",
+			"english": "I am a student here.",
+			"transliteration": "ana taaliba hina.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "طالبة",
+					"english": "a student",
+					"transliteration": "taaliba"
+				},
+				{
+					"arabic": "هنا.",
+					"english": "here.",
+					"transliteration": "hina."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Student (female)",
+				"Here"
+			]
+		},
+		{
+			"arabic": "إنتي مدرسة؟",
+			"arabicTashkeel": "إنتي مُدَرِّسة؟",
+			"english": "Are you a teacher?",
+			"transliteration": "inti mudarrisa?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "مدرسة؟",
+					"english": "a teacher?",
+					"transliteration": "mudarrisa?"
+				}
+			],
+			"targetWords": [
+				"You (to a woman)"
+			]
+		},
+		{
+			"arabic": "هوا مشغول دحين.",
+			"arabicTashkeel": "هوّا مَشغول دحين.",
+			"english": "He is busy now.",
+			"transliteration": "huwwa mashghool da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مشغول",
+					"english": "busy",
+					"transliteration": "mashghool"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Busy"
+			]
+		},
+		{
+			"arabic": "إنتو تعبانين؟",
+			"arabicTashkeel": "إنتو تَعبانين؟",
+			"english": "Are you all tired?",
+			"transliteration": "intu ta3baaneen?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتو",
+					"english": "Are you all",
+					"transliteration": "intu"
+				},
+				{
+					"arabic": "تعبانين؟",
+					"english": "tired?",
+					"transliteration": "ta3baaneen?"
+				}
+			],
+			"targetWords": [
+				"You (plural)"
+			]
+		},
+		{
+			"arabic": "هما مشغولين.",
+			"arabicTashkeel": "هُمّا مَشغولين.",
+			"english": "They are busy.",
+			"transliteration": "humma mashghooleen.",
+			"wordAlignments": [
+				{
+					"arabic": "هما",
+					"english": "They are",
+					"transliteration": "humma"
+				},
+				{
+					"arabic": "مشغولين.",
+					"english": "busy.",
+					"transliteration": "mashghooleen."
+				}
+			],
+			"targetWords": [
+				"They"
+			]
+		},
+		{
+			"arabic": "إحنا هنا، فين إنتو؟",
+			"arabicTashkeel": "إحنا هِنا، فين إنتو؟",
+			"english": "We are here, where are you all?",
+			"transliteration": "i7na hina, feen intu?",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "هنا،",
+					"english": "here,",
+					"transliteration": "hina,"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنتو؟",
+					"english": "are you all?",
+					"transliteration": "intu?"
+				}
+			],
+			"targetWords": [
+				"We",
+				"Here",
+				"You (plural)"
+			]
+		},
+		{
+			"arabic": "هوا طالب سعودي.",
+			"arabicTashkeel": "هوّا طالِب سُعودي.",
+			"english": "He is a Saudi student.",
+			"transliteration": "huwwa taalib su3oodi.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "طالب",
+					"english": "a student",
+					"transliteration": "taalib"
+				},
+				{
+					"arabic": "سعودي.",
+					"english": "Saudi.",
+					"transliteration": "su3oodi."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Student (male)",
+				"Saudi"
+			]
+		},
+		{
+			"arabic": "هيا طالبة سعودية.",
+			"arabicTashkeel": "هيّا طالبة سُعودية.",
+			"english": "She is a Saudi student.",
+			"transliteration": "hiyya taaliba su3oodiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "طالبة",
+					"english": "a student",
+					"transliteration": "taaliba"
+				},
+				{
+					"arabic": "سعودية.",
+					"english": "Saudi.",
+					"transliteration": "su3oodiyya."
+				}
+			],
+			"targetWords": [
+				"She",
+				"Student (female)"
+			]
+		},
+		{
+			"arabic": "أنا تعبان ومشغول.",
+			"arabicTashkeel": "أنا تَعبان ومَشغول.",
+			"english": "I am tired and busy.",
+			"transliteration": "ana ta3baan w-mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "تعبان",
+					"english": "tired",
+					"transliteration": "ta3baan"
+				},
+				{
+					"arabic": "ومشغول.",
+					"english": "and busy.",
+					"transliteration": "w-mashghool."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Tired"
+			]
+		},
+		{
+			"arabic": "إنت سعودي؟",
+			"arabicTashkeel": "إنتَ سُعودي؟",
+			"english": "Are you Saudi?",
+			"transliteration": "inta su3oodi?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "سعودي؟",
+					"english": "Saudi?",
+					"transliteration": "su3oodi?"
+				}
+			],
+			"targetWords": [
+				"You (to a man)",
+				"Saudi"
+			]
+		},
+		{
+			"arabic": "هوا مدرس مشغول.",
+			"arabicTashkeel": "هوّا مُدَرِّس مَشغول.",
+			"english": "He is a busy teacher.",
+			"transliteration": "huwwa mudarris mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مدرس",
+					"english": "a teacher",
+					"transliteration": "mudarris"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"He",
+				"Teacher (male)",
+				"Busy"
+			]
+		},
+		{
+			"arabic": "إنتي هنا؟",
+			"arabicTashkeel": "إنتي هِنا؟",
+			"english": "Are you here?",
+			"transliteration": "inti hina?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "هنا؟",
+					"english": "here?",
+					"transliteration": "hina?"
+				}
+			],
+			"targetWords": [
+				"You (to a woman)",
+				"Here"
+			]
+		},
+		{
+			"arabic": "إحنا تعبانين.",
+			"arabicTashkeel": "إحنا تَعبانين.",
+			"english": "We are tired.",
+			"transliteration": "i7na ta3baaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "تعبانين.",
+					"english": "tired.",
+					"transliteration": "ta3baaneen."
+				}
+			],
+			"targetWords": [
+				"We"
+			]
+		},
+		{
+			"arabic": "إنتي طالبة ولا مدرسة؟",
+			"arabicTashkeel": "إنتي طالبة وَلّا مُدَرِّسة؟",
+			"english": "Are you a student or a teacher?",
+			"transliteration": "inti taaliba walla mudarrisa?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "طالبة",
+					"english": "a student",
+					"transliteration": "taaliba"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "مدرسة؟",
+					"english": "a teacher?",
+					"transliteration": "mudarrisa?"
+				}
+			],
+			"targetWords": [
+				"You (to a woman)",
+				"Student (female)"
+			]
+		},
+		{
+			"arabic": "أنا طالب، مو مدرس.",
+			"arabicTashkeel": "أنا طالِب، مو مُدَرِّس.",
+			"english": "I am a student, not a teacher.",
+			"transliteration": "ana taalib, moo mudarris.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "طالب،",
+					"english": "a student,",
+					"transliteration": "taalib,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مدرس.",
+					"english": "a teacher.",
+					"transliteration": "mudarris."
+				}
+			],
+			"targetWords": [
+				"I",
+				"Student (male)",
+				"Teacher (male)"
+			]
+		},
+		{
+			"arabic": "فيصل تعبان.",
+			"arabicTashkeel": "فَيصَل تَعبان.",
+			"english": "Faisal is tired.",
+			"transliteration": "faisal ta3baan.",
+			"wordAlignments": [
+				{
+					"arabic": "فيصل",
+					"english": "Faisal is",
+					"transliteration": "faisal"
+				},
+				{
+					"arabic": "تعبان.",
+					"english": "tired.",
+					"transliteration": "ta3baan."
+				}
+			],
+			"targetWords": [
+				"Tired"
+			]
+		},
+		{
+			"arabic": "فيصل مشغول اليوم.",
+			"arabicTashkeel": "فَيصَل مَشغول اليوم.",
+			"english": "Faisal is busy today.",
+			"transliteration": "faisal mashghool il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "فيصل",
+					"english": "Faisal is",
+					"transliteration": "faisal"
+				},
+				{
+					"arabic": "مشغول",
+					"english": "busy",
+					"transliteration": "mashghool"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Busy"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "In the Classroom",
+			"sentences": [
+				{
+					"arabic": "أنا طالب.",
+					"arabicTashkeel": "أنا طالِب.",
+					"english": "I am a student.",
+					"transliteration": "ana taalib.",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I am",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "طالب.",
+							"english": "a student.",
+							"transliteration": "taalib."
+						}
+					]
+				},
+				{
+					"arabic": "هوا مدرس سعودي.",
+					"arabicTashkeel": "هوّا مُدَرِّس سُعودي.",
+					"english": "He is a Saudi teacher.",
+					"transliteration": "huwwa mudarris su3oodi.",
+					"wordAlignments": [
+						{
+							"arabic": "هوا",
+							"english": "He is",
+							"transliteration": "huwwa"
+						},
+						{
+							"arabic": "مدرس",
+							"english": "a teacher",
+							"transliteration": "mudarris"
+						},
+						{
+							"arabic": "سعودي.",
+							"english": "Saudi.",
+							"transliteration": "su3oodi."
+						}
+					]
+				},
+				{
+					"arabic": "إحنا هنا اليوم.",
+					"arabicTashkeel": "إحنا هِنا اليوم.",
+					"english": "We are here today.",
+					"transliteration": "i7na hina il-yoom.",
+					"wordAlignments": [
+						{
+							"arabic": "إحنا",
+							"english": "We are",
+							"transliteration": "i7na"
+						},
+						{
+							"arabic": "هنا",
+							"english": "here",
+							"transliteration": "hina"
+						},
+						{
+							"arabic": "اليوم.",
+							"english": "today.",
+							"transliteration": "il-yoom."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Two Friends",
+			"sentences": [
+				{
+					"arabic": "هادي نورة، هيا طالبة.",
+					"arabicTashkeel": "هادي نورة، هيّا طالبة.",
+					"english": "This is Noura, she is a student.",
+					"transliteration": "haadi noora, hiyya taaliba.",
+					"wordAlignments": [
+						{
+							"arabic": "هادي",
+							"english": "This is",
+							"transliteration": "haadi"
+						},
+						{
+							"arabic": "نورة،",
+							"english": "Noura,",
+							"transliteration": "noora,"
+						},
+						{
+							"arabic": "هيا",
+							"english": "she is",
+							"transliteration": "hiyya"
+						},
+						{
+							"arabic": "طالبة.",
+							"english": "a student.",
+							"transliteration": "taaliba."
+						}
+					]
+				},
+				{
+					"arabic": "هادا خالد، هوا مدرس.",
+					"arabicTashkeel": "هادا خالِد، هوّا مُدَرِّس.",
+					"english": "This is Khalid, he is a teacher.",
+					"transliteration": "haada khaalid, huwwa mudarris.",
+					"wordAlignments": [
+						{
+							"arabic": "هادا",
+							"english": "This is",
+							"transliteration": "haada"
+						},
+						{
+							"arabic": "خالد،",
+							"english": "Khalid,",
+							"transliteration": "khaalid,"
+						},
+						{
+							"arabic": "هوا",
+							"english": "he is",
+							"transliteration": "huwwa"
+						},
+						{
+							"arabic": "مدرس.",
+							"english": "a teacher.",
+							"transliteration": "mudarris."
+						}
+					]
+				},
+				{
+					"arabic": "هما مشغولين دحين.",
+					"arabicTashkeel": "هُمّا مَشغولين دحين.",
+					"english": "They are busy now.",
+					"transliteration": "humma mashghooleen da7een.",
+					"wordAlignments": [
+						{
+							"arabic": "هما",
+							"english": "They are",
+							"transliteration": "humma"
+						},
+						{
+							"arabic": "مشغولين",
+							"english": "busy",
+							"transliteration": "mashghooleen"
+						},
+						{
+							"arabic": "دحين.",
+							"english": "now.",
+							"transliteration": "da7een."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "It is the first day of an Arabic class in Jeddah and the student is meeting classmates.",
+		"studentRole": "A new student in the class.",
+		"otherRole": "A Jeddawi classmate who is curious about the new student.",
+		"goalEnglish": "Say who you are, ask whether they are a student or a teacher, and talk about who is here and who is busy.",
+		"targetWords": [
+			"I",
+			"You (to a man)",
+			"He",
+			"She",
+			"We",
+			"Student (male)",
+			"Teacher (male)",
+			"Here"
+		]
+	}
+}

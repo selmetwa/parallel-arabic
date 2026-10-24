@@ -1,0 +1,318 @@
+{
+  "slug": "sab",
+  "arabic": "ترك",
+  "transliteration": "tarak",
+  "english": "to leave",
+  "wordId": null,
+  "rootLetters": "ت ر ك",
+  "verbClass": "sound",
+  "notes": "Past tarak, present atrik (I leave).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "تركت",
+          "transliteration": "tarakt",
+          "english": "I left"
+        },
+        {
+          "person": "enta",
+          "arabic": "تركت",
+          "transliteration": "tarakt",
+          "english": "you (m) left"
+        },
+        {
+          "person": "enti",
+          "arabic": "تركتي",
+          "transliteration": "tarakti",
+          "english": "you (f) left"
+        },
+        {
+          "person": "howa",
+          "arabic": "ترك",
+          "transliteration": "tarak",
+          "english": "he left"
+        },
+        {
+          "person": "heya",
+          "arabic": "تركت",
+          "transliteration": "tarkat",
+          "english": "she left"
+        },
+        {
+          "person": "ehna",
+          "arabic": "تركنا",
+          "transliteration": "tarakna",
+          "english": "we left"
+        },
+        {
+          "person": "entu",
+          "arabic": "تركتوا",
+          "transliteration": "taraktaw",
+          "english": "you (pl) left"
+        },
+        {
+          "person": "homma",
+          "arabic": "تركوا",
+          "transliteration": "tarkaw",
+          "english": "they left"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما تركت",
+          "transliteration": "ma tarakt",
+          "english": "I didn't leave"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تركت",
+          "transliteration": "ma tarakt",
+          "english": "you (m) didn't leave"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تركتي",
+          "transliteration": "ma tarakti",
+          "english": "you (f) didn't leave"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ترك",
+          "transliteration": "ma tarak",
+          "english": "he didn't leave"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تركت",
+          "transliteration": "ma tarkat",
+          "english": "she didn't leave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما تركنا",
+          "transliteration": "ma tarakna",
+          "english": "we didn't leave"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تركتوا",
+          "transliteration": "ma taraktaw",
+          "english": "you (pl) didn't leave"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما تركوا",
+          "transliteration": "ma tarkaw",
+          "english": "they didn't leave"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اترك",
+          "transliteration": "atrik",
+          "english": "I leave"
+        },
+        {
+          "person": "enta",
+          "arabic": "تترك",
+          "transliteration": "titrik",
+          "english": "you (m) leave"
+        },
+        {
+          "person": "enti",
+          "arabic": "تتركين",
+          "transliteration": "titrikeen",
+          "english": "you (f) leave"
+        },
+        {
+          "person": "howa",
+          "arabic": "يترك",
+          "transliteration": "yitrik",
+          "english": "he leaves"
+        },
+        {
+          "person": "heya",
+          "arabic": "تترك",
+          "transliteration": "titrik",
+          "english": "she leaves"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نترك",
+          "transliteration": "nitrik",
+          "english": "we leave"
+        },
+        {
+          "person": "entu",
+          "arabic": "تتركون",
+          "transliteration": "titrikoon",
+          "english": "you (pl) leave"
+        },
+        {
+          "person": "homma",
+          "arabic": "يتركون",
+          "transliteration": "yitrikoon",
+          "english": "they leave"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اترك",
+          "transliteration": "ma atrik",
+          "english": "I don't leave"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تترك",
+          "transliteration": "ma titrik",
+          "english": "you (m) don't leave"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تتركين",
+          "transliteration": "ma titrikeen",
+          "english": "you (f) don't leave"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يترك",
+          "transliteration": "ma yitrik",
+          "english": "he doesn't leave"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تترك",
+          "transliteration": "ma titrik",
+          "english": "she doesn't leave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نترك",
+          "transliteration": "ma nitrik",
+          "english": "we don't leave"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تتركون",
+          "transliteration": "ma titrikoon",
+          "english": "you (pl) don't leave"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يتركون",
+          "transliteration": "ma yitrikoon",
+          "english": "they don't leave"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اترك",
+          "transliteration": "raa7 atrik",
+          "english": "I will leave"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تترك",
+          "transliteration": "raa7 titrik",
+          "english": "you (m) will leave"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تتركين",
+          "transliteration": "raa7 titrikeen",
+          "english": "you (f) will leave"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يترك",
+          "transliteration": "raa7 yitrik",
+          "english": "he will leave"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تترك",
+          "transliteration": "raa7 titrik",
+          "english": "she will leave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نترك",
+          "transliteration": "raa7 nitrik",
+          "english": "we will leave"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تتركون",
+          "transliteration": "raa7 titrikoon",
+          "english": "you (pl) will leave"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يتركون",
+          "transliteration": "raa7 yitrikoon",
+          "english": "they will leave"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اترك",
+          "transliteration": "ma raa7 atrik",
+          "english": "I won't leave"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تترك",
+          "transliteration": "ma raa7 titrik",
+          "english": "you (m) won't leave"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تتركين",
+          "transliteration": "ma raa7 titrikeen",
+          "english": "you (f) won't leave"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يترك",
+          "transliteration": "ma raa7 yitrik",
+          "english": "he won't leave"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تترك",
+          "transliteration": "ma raa7 titrik",
+          "english": "she won't leave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نترك",
+          "transliteration": "ma raa7 nitrik",
+          "english": "we won't leave"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تتركون",
+          "transliteration": "ma raa7 titrikoon",
+          "english": "you (pl) won't leave"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يتركون",
+          "transliteration": "ma raa7 yitrikoon",
+          "english": "they won't leave"
+        }
+      ]
+    }
+  }
+}

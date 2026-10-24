@@ -1,0 +1,2142 @@
+{
+	"vocab": [
+		{
+			"arabic": "بيئة",
+			"arabicTashkeel": "بيئة",
+			"english": "Environment",
+			"transliteration": "bee2a",
+			"wordAlignments": [
+				{
+					"arabic": "بيئة",
+					"english": "Environment",
+					"transliteration": "bee2a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "تلوث",
+			"arabicTashkeel": "تَلَوُّث",
+			"english": "Pollution",
+			"transliteration": "talawwuth",
+			"wordAlignments": [
+				{
+					"arabic": "تلوث",
+					"english": "Pollution",
+					"transliteration": "talawwuth"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "زبالة",
+			"arabicTashkeel": "زْبالة",
+			"english": "Rubbish",
+			"transliteration": "zbaala",
+			"wordAlignments": [
+				{
+					"arabic": "زبالة",
+					"english": "Rubbish",
+					"transliteration": "zbaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "إعادة التدوير",
+			"arabicTashkeel": "إعادة التَّدوير",
+			"english": "Recycling",
+			"transliteration": "i3aadat it-tadweer",
+			"wordAlignments": [
+				{
+					"arabic": "إعادة",
+					"english": "Re-",
+					"transliteration": "i3aadat"
+				},
+				{
+					"arabic": "التدوير",
+					"english": "cycling",
+					"transliteration": "it-tadweer"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "جفاف",
+			"arabicTashkeel": "جَفاف",
+			"english": "Drought",
+			"transliteration": "jafaaf",
+			"wordAlignments": [
+				{
+					"arabic": "جفاف",
+					"english": "Drought",
+					"transliteration": "jafaaf"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تصحر",
+			"arabicTashkeel": "تَصَحُّر",
+			"english": "Desertification",
+			"transliteration": "tasa77ur",
+			"wordAlignments": [
+				{
+					"arabic": "تصحر",
+					"english": "Desertification",
+					"transliteration": "tasa77ur"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شحة الماي",
+			"arabicTashkeel": "شِحّة الماي",
+			"english": "Water shortage",
+			"transliteration": "shi77at il-maay",
+			"wordAlignments": [
+				{
+					"arabic": "شحة",
+					"english": "Scarcity of",
+					"transliteration": "shi77at"
+				},
+				{
+					"arabic": "الماي",
+					"english": "water",
+					"transliteration": "il-maay"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "الطاقة الشمسية",
+			"arabicTashkeel": "الطّاقة الشَّمسية",
+			"english": "Solar energy",
+			"transliteration": "it-taaqa ish-shamsiyya",
+			"wordAlignments": [
+				{
+					"arabic": "الطاقة",
+					"english": "The energy",
+					"transliteration": "it-taaqa"
+				},
+				{
+					"arabic": "الشمسية",
+					"english": "solar",
+					"transliteration": "ish-shamsiyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "دخان",
+			"arabicTashkeel": "دُخّان",
+			"english": "Smoke",
+			"transliteration": "dukhkhaan",
+			"wordAlignments": [
+				{
+					"arabic": "دخان",
+					"english": "Smoke",
+					"transliteration": "dukhkhaan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بلاستك",
+			"arabicTashkeel": "بْلاستِك",
+			"english": "Plastic",
+			"transliteration": "blaastik",
+			"wordAlignments": [
+				{
+					"arabic": "بلاستك",
+					"english": "Plastic",
+					"transliteration": "blaastik"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الإحتباس الحراري",
+			"arabicTashkeel": "الإحتِباس الحَراري",
+			"english": "Global warming",
+			"transliteration": "il-i7tibaas il-7araari",
+			"wordAlignments": [
+				{
+					"arabic": "الإحتباس",
+					"english": "The trapping",
+					"transliteration": "il-i7tibaas"
+				},
+				{
+					"arabic": "الحراري",
+					"english": "of heat",
+					"transliteration": "il-7araari"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "نحمي",
+			"arabicTashkeel": "نِحمي",
+			"english": "We protect",
+			"transliteration": "ni7mi",
+			"wordAlignments": [
+				{
+					"arabic": "نحمي",
+					"english": "We protect",
+					"transliteration": "ni7mi"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "هدر",
+			"arabicTashkeel": "هَدِر",
+			"english": "Waste (wasting)",
+			"transliteration": "hadir",
+			"wordAlignments": [
+				{
+					"arabic": "هدر",
+					"english": "Waste",
+					"transliteration": "hadir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مساحات خضرة",
+			"arabicTashkeel": "مَساحات خَضرة",
+			"english": "Green spaces",
+			"transliteration": "masaa7aat khadhra",
+			"wordAlignments": [
+				{
+					"arabic": "مساحات",
+					"english": "Spaces",
+					"transliteration": "masaa7aat"
+				},
+				{
+					"arabic": "خضرة",
+					"english": "green",
+					"transliteration": "khadhra"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "وعي",
+			"arabicTashkeel": "وَعي",
+			"english": "Awareness",
+			"transliteration": "wa3i",
+			"wordAlignments": [
+				{
+					"arabic": "وعي",
+					"english": "Awareness",
+					"transliteration": "wa3i"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "لازم نحمي البيئة.",
+			"arabicTashkeel": "لازِم نِحمي البيئة.",
+			"english": "We must protect the environment.",
+			"transliteration": "laazim ni7mi il-bee2a.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "We must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "نحمي",
+					"english": "protect",
+					"transliteration": "ni7mi"
+				},
+				{
+					"arabic": "البيئة.",
+					"english": "the environment.",
+					"transliteration": "il-bee2a."
+				}
+			],
+			"targetWords": [
+				"We protect",
+				"Environment"
+			]
+		},
+		{
+			"arabic": "تلوث الهوا عالي ببغداد.",
+			"arabicTashkeel": "تَلَوُّث الهَوا عالي ببَغداد.",
+			"english": "Air pollution is high in Baghdad.",
+			"transliteration": "talawwuth il-hawa 3aali b-baghdaad.",
+			"wordAlignments": [
+				{
+					"arabic": "تلوث",
+					"english": "The pollution of",
+					"transliteration": "talawwuth"
+				},
+				{
+					"arabic": "الهوا",
+					"english": "the air is",
+					"transliteration": "il-hawa"
+				},
+				{
+					"arabic": "عالي",
+					"english": "high",
+					"transliteration": "3aali"
+				},
+				{
+					"arabic": "ببغداد.",
+					"english": "in Baghdad.",
+					"transliteration": "b-baghdaad."
+				}
+			],
+			"targetWords": [
+				"Pollution"
+			]
+		},
+		{
+			"arabic": "لا تذب زبالة بالشارع.",
+			"arabicTashkeel": "لا تِذِب زْبالة بالشّارع.",
+			"english": "Don't throw rubbish in the street.",
+			"transliteration": "la tidhib zbaala bish-shaari3.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تذب",
+					"english": "throw",
+					"transliteration": "tidhib"
+				},
+				{
+					"arabic": "زبالة",
+					"english": "rubbish",
+					"transliteration": "zbaala"
+				},
+				{
+					"arabic": "بالشارع.",
+					"english": "in the street.",
+					"transliteration": "bish-shaari3."
+				}
+			],
+			"targetWords": [
+				"Rubbish"
+			]
+		},
+		{
+			"arabic": "إعادة التدوير بعدها جديدة بالعراق.",
+			"arabicTashkeel": "إعادة التَّدوير بَعدها جْديدة بالعِراق.",
+			"english": "Recycling is still new in Iraq.",
+			"transliteration": "i3aadat it-tadweer ba3adha jdeeda bil-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "إعادة",
+					"english": "Re-",
+					"transliteration": "i3aadat"
+				},
+				{
+					"arabic": "التدوير",
+					"english": "cycling is",
+					"transliteration": "it-tadweer"
+				},
+				{
+					"arabic": "بعدها",
+					"english": "still",
+					"transliteration": "ba3adha"
+				},
+				{
+					"arabic": "جديدة",
+					"english": "new",
+					"transliteration": "jdeeda"
+				},
+				{
+					"arabic": "بالعراق.",
+					"english": "in Iraq.",
+					"transliteration": "bil-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Recycling"
+			]
+		},
+		{
+			"arabic": "الجفاف أثر عالفلاحين.",
+			"arabicTashkeel": "الجَفاف أثَّر عالفَلّاحين.",
+			"english": "Drought has affected the farmers.",
+			"transliteration": "ij-jafaaf aththar 3al-fallaa7een.",
+			"wordAlignments": [
+				{
+					"arabic": "الجفاف",
+					"english": "The drought",
+					"transliteration": "ij-jafaaf"
+				},
+				{
+					"arabic": "أثر",
+					"english": "affected",
+					"transliteration": "aththar"
+				},
+				{
+					"arabic": "عالفلاحين.",
+					"english": "the farmers.",
+					"transliteration": "3al-fallaa7een."
+				}
+			],
+			"targetWords": [
+				"Drought"
+			]
+		},
+		{
+			"arabic": "التصحر دا ياكل الأراضي الزراعية.",
+			"arabicTashkeel": "التَّصَحُّر دا ياكُل الأراضي الزِّراعية.",
+			"english": "Desertification is eating the farmland.",
+			"transliteration": "it-tasa77ur da yaakul il-araadhi iz-ziraa3iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "التصحر",
+					"english": "Desertification",
+					"transliteration": "it-tasa77ur"
+				},
+				{
+					"arabic": "دا",
+					"english": "is",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "ياكل",
+					"english": "eating",
+					"transliteration": "yaakul"
+				},
+				{
+					"arabic": "الأراضي",
+					"english": "the lands",
+					"transliteration": "il-araadhi"
+				},
+				{
+					"arabic": "الزراعية.",
+					"english": "agricultural.",
+					"transliteration": "iz-ziraa3iyya."
+				}
+			],
+			"targetWords": [
+				"Desertification"
+			]
+		},
+		{
+			"arabic": "أكو شحة ماي بالجنوب.",
+			"arabicTashkeel": "أكو شِحّة ماي بالجَنوب.",
+			"english": "There is a water shortage in the south.",
+			"transliteration": "aku shi77at maay bij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "أكو",
+					"english": "There is",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "شحة",
+					"english": "scarcity of",
+					"transliteration": "shi77at"
+				},
+				{
+					"arabic": "ماي",
+					"english": "water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "بالجنوب.",
+					"english": "in the south.",
+					"transliteration": "bij-janoob."
+				}
+			],
+			"targetWords": [
+				"Water shortage"
+			]
+		},
+		{
+			"arabic": "الطاقة الشمسية الحل لقطع الكهرباء.",
+			"arabicTashkeel": "الطّاقة الشَّمسية الحَل لقَطع الكَهرَباء.",
+			"english": "Solar energy is the solution for power cuts.",
+			"transliteration": "it-taaqa ish-shamsiyya il-7all l-gat3 il-kahrabaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "الطاقة",
+					"english": "The energy",
+					"transliteration": "it-taaqa"
+				},
+				{
+					"arabic": "الشمسية",
+					"english": "solar is",
+					"transliteration": "ish-shamsiyya"
+				},
+				{
+					"arabic": "الحل",
+					"english": "the solution",
+					"transliteration": "il-7all"
+				},
+				{
+					"arabic": "لقطع",
+					"english": "for the cut of",
+					"transliteration": "l-gat3"
+				},
+				{
+					"arabic": "الكهرباء.",
+					"english": "the electricity.",
+					"transliteration": "il-kahrabaa2."
+				}
+			],
+			"targetWords": [
+				"Solar energy"
+			]
+		},
+		{
+			"arabic": "دخان المولدات مضر.",
+			"arabicTashkeel": "دُخّان المُوَلِّدات مُضِر.",
+			"english": "The smoke from the generators is harmful.",
+			"transliteration": "dukhkhaan il-mwallidaat mudhirr.",
+			"wordAlignments": [
+				{
+					"arabic": "دخان",
+					"english": "The smoke of",
+					"transliteration": "dukhkhaan"
+				},
+				{
+					"arabic": "المولدات",
+					"english": "the generators is",
+					"transliteration": "il-mwallidaat"
+				},
+				{
+					"arabic": "مضر.",
+					"english": "harmful.",
+					"transliteration": "mudhirr."
+				}
+			],
+			"targetWords": [
+				"Smoke"
+			]
+		},
+		{
+			"arabic": "أكياس البلاستك تلوث النهر.",
+			"arabicTashkeel": "أكياس البْلاستِك تْلَوِّث النَّهَر.",
+			"english": "Plastic bags pollute the river.",
+			"transliteration": "akyaas il-blaastik tlawwith in-nahar.",
+			"wordAlignments": [
+				{
+					"arabic": "أكياس",
+					"english": "The bags of",
+					"transliteration": "akyaas"
+				},
+				{
+					"arabic": "البلاستك",
+					"english": "plastic",
+					"transliteration": "il-blaastik"
+				},
+				{
+					"arabic": "تلوث",
+					"english": "pollute",
+					"transliteration": "tlawwith"
+				},
+				{
+					"arabic": "النهر.",
+					"english": "the river.",
+					"transliteration": "in-nahar."
+				}
+			],
+			"targetWords": [
+				"Plastic",
+				"Pollution"
+			]
+		},
+		{
+			"arabic": "الإحتباس الحراري يخلي الصيف أحر.",
+			"arabicTashkeel": "الإحتِباس الحَراري يْخَلّي الصّيف أحَر.",
+			"english": "Global warming makes summers hotter.",
+			"transliteration": "il-i7tibaas il-7araari ykhalli is-seef a7arr.",
+			"wordAlignments": [
+				{
+					"arabic": "الإحتباس",
+					"english": "The trapping",
+					"transliteration": "il-i7tibaas"
+				},
+				{
+					"arabic": "الحراري",
+					"english": "of heat",
+					"transliteration": "il-7araari"
+				},
+				{
+					"arabic": "يخلي",
+					"english": "makes",
+					"transliteration": "ykhalli"
+				},
+				{
+					"arabic": "الصيف",
+					"english": "summer",
+					"transliteration": "is-seef"
+				},
+				{
+					"arabic": "أحر.",
+					"english": "hotter.",
+					"transliteration": "a7arr."
+				}
+			],
+			"targetWords": [
+				"Global warming"
+			]
+		},
+		{
+			"arabic": "هدر الماي مشكلة كبيرة.",
+			"arabicTashkeel": "هَدِر الماي مُشكِلة كْبيرة.",
+			"english": "Wasting water is a big problem.",
+			"transliteration": "hadir il-maay mushkila chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "هدر",
+					"english": "The waste of",
+					"transliteration": "hadir"
+				},
+				{
+					"arabic": "الماي",
+					"english": "water is",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "مشكلة",
+					"english": "a problem",
+					"transliteration": "mushkila"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Waste (wasting)"
+			]
+		},
+		{
+			"arabic": "بغداد تحتاج مساحات خضرة أكثر.",
+			"arabicTashkeel": "بَغداد تِحتاج مَساحات خَضرة أكثَر.",
+			"english": "Baghdad needs more green spaces.",
+			"transliteration": "baghdaad ti7taaj masaa7aat khadhra akthar.",
+			"wordAlignments": [
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "needs",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "مساحات",
+					"english": "spaces",
+					"transliteration": "masaa7aat"
+				},
+				{
+					"arabic": "خضرة",
+					"english": "green",
+					"transliteration": "khadhra"
+				},
+				{
+					"arabic": "أكثر.",
+					"english": "more.",
+					"transliteration": "akthar."
+				}
+			],
+			"targetWords": [
+				"Green spaces"
+			]
+		},
+		{
+			"arabic": "الوعي البيئي دا يزداد.",
+			"arabicTashkeel": "الوَعي البيئي دا يِزداد.",
+			"english": "Environmental awareness is growing.",
+			"transliteration": "il-wa3i il-bee2i da yizdaad.",
+			"wordAlignments": [
+				{
+					"arabic": "الوعي",
+					"english": "The awareness",
+					"transliteration": "il-wa3i"
+				},
+				{
+					"arabic": "البيئي",
+					"english": "environmental",
+					"transliteration": "il-bee2i"
+				},
+				{
+					"arabic": "دا",
+					"english": "is",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "يزداد.",
+					"english": "increasing.",
+					"transliteration": "yizdaad."
+				}
+			],
+			"targetWords": [
+				"Awareness",
+				"Environment"
+			]
+		},
+		{
+			"arabic": "بيئة نظيفة لجهالنا.",
+			"arabicTashkeel": "بيئة نْظيفة لجْهالنا.",
+			"english": "A clean environment for our children.",
+			"transliteration": "bee2a ndheefa l-jhaalna.",
+			"wordAlignments": [
+				{
+					"arabic": "بيئة",
+					"english": "An environment",
+					"transliteration": "bee2a"
+				},
+				{
+					"arabic": "نظيفة",
+					"english": "clean",
+					"transliteration": "ndheefa"
+				},
+				{
+					"arabic": "لجهالنا.",
+					"english": "for our kids.",
+					"transliteration": "l-jhaalna."
+				}
+			],
+			"targetWords": [
+				"Environment"
+			]
+		},
+		{
+			"arabic": "تلوث النهر يموت السمك.",
+			"arabicTashkeel": "تَلَوُّث النَّهَر يْموِّت السِّمَك.",
+			"english": "River pollution kills the fish.",
+			"transliteration": "talawwuth in-nahar ymawwit is-simach.",
+			"wordAlignments": [
+				{
+					"arabic": "تلوث",
+					"english": "The pollution of",
+					"transliteration": "talawwuth"
+				},
+				{
+					"arabic": "النهر",
+					"english": "the river",
+					"transliteration": "in-nahar"
+				},
+				{
+					"arabic": "يموت",
+					"english": "kills",
+					"transliteration": "ymawwit"
+				},
+				{
+					"arabic": "السمك.",
+					"english": "the fish.",
+					"transliteration": "is-simach."
+				}
+			],
+			"targetWords": [
+				"Pollution"
+			]
+		},
+		{
+			"arabic": "منو يجمع الزبالة؟",
+			"arabicTashkeel": "مِنو يِجمَع الزْبالة؟",
+			"english": "Who collects the rubbish?",
+			"transliteration": "minu yijma3 iz-zbaala?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "يجمع",
+					"english": "collects",
+					"transliteration": "yijma3"
+				},
+				{
+					"arabic": "الزبالة؟",
+					"english": "the rubbish?",
+					"transliteration": "iz-zbaala?"
+				}
+			],
+			"targetWords": [
+				"Rubbish"
+			]
+		},
+		{
+			"arabic": "مشروع إعادة تدوير بأربيل.",
+			"arabicTashkeel": "مَشروع إعادة تَدوير بأربيل.",
+			"english": "A recycling project in Erbil.",
+			"transliteration": "mashroo3 i3aadat tadweer b-arbeel.",
+			"wordAlignments": [
+				{
+					"arabic": "مشروع",
+					"english": "A project of",
+					"transliteration": "mashroo3"
+				},
+				{
+					"arabic": "إعادة",
+					"english": "re-",
+					"transliteration": "i3aadat"
+				},
+				{
+					"arabic": "تدوير",
+					"english": "cycling",
+					"transliteration": "tadweer"
+				},
+				{
+					"arabic": "بأربيل.",
+					"english": "in Erbil.",
+					"transliteration": "b-arbeel."
+				}
+			],
+			"targetWords": [
+				"Recycling"
+			]
+		},
+		{
+			"arabic": "الأهوار تعبت من الجفاف.",
+			"arabicTashkeel": "الأهوار تِعبَت مِن الجَفاف.",
+			"english": "The Marshes suffered from drought.",
+			"transliteration": "il-ahwaar ti3bat min ij-jafaaf.",
+			"wordAlignments": [
+				{
+					"arabic": "الأهوار",
+					"english": "The Marshes",
+					"transliteration": "il-ahwaar"
+				},
+				{
+					"arabic": "تعبت",
+					"english": "suffered",
+					"transliteration": "ti3bat"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الجفاف.",
+					"english": "the drought.",
+					"transliteration": "ij-jafaaf."
+				}
+			],
+			"targetWords": [
+				"Drought"
+			]
+		},
+		{
+			"arabic": "التصحر يسبب عجاج.",
+			"arabicTashkeel": "التَّصَحُّر يْسَبِّب عَجاج.",
+			"english": "Desertification causes dust storms.",
+			"transliteration": "it-tasa77ur ysabbib 3ajaaj.",
+			"wordAlignments": [
+				{
+					"arabic": "التصحر",
+					"english": "Desertification",
+					"transliteration": "it-tasa77ur"
+				},
+				{
+					"arabic": "يسبب",
+					"english": "causes",
+					"transliteration": "ysabbib"
+				},
+				{
+					"arabic": "عجاج.",
+					"english": "dust storms.",
+					"transliteration": "3ajaaj."
+				}
+			],
+			"targetWords": [
+				"Desertification"
+			]
+		},
+		{
+			"arabic": "شحة الماي بالصيف.",
+			"arabicTashkeel": "شِحّة الماي بالصّيف.",
+			"english": "Water shortage in summer.",
+			"transliteration": "shi77at il-maay bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "شحة",
+					"english": "Scarcity of",
+					"transliteration": "shi77at"
+				},
+				{
+					"arabic": "الماي",
+					"english": "water",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Water shortage"
+			]
+		},
+		{
+			"arabic": "حطينا ألواح طاقة شمسية عالسطح.",
+			"arabicTashkeel": "حَطَّينا ألواح طاقة شَمسية عالسَّطِح.",
+			"english": "We put solar panels on the roof.",
+			"transliteration": "7atteena alwaa7 taaqa shamsiyya 3as-sati7.",
+			"wordAlignments": [
+				{
+					"arabic": "حطينا",
+					"english": "We put",
+					"transliteration": "7atteena"
+				},
+				{
+					"arabic": "ألواح",
+					"english": "panels of",
+					"transliteration": "alwaa7"
+				},
+				{
+					"arabic": "طاقة",
+					"english": "energy",
+					"transliteration": "taaqa"
+				},
+				{
+					"arabic": "شمسية",
+					"english": "solar",
+					"transliteration": "shamsiyya"
+				},
+				{
+					"arabic": "عالسطح.",
+					"english": "on the roof.",
+					"transliteration": "3as-sati7."
+				}
+			],
+			"targetWords": [
+				"Solar energy"
+			]
+		},
+		{
+			"arabic": "دخان أسود من المعمل.",
+			"arabicTashkeel": "دُخّان أسوَد مِن المَعمَل.",
+			"english": "Black smoke from the factory.",
+			"transliteration": "dukhkhaan aswad min il-ma3mal.",
+			"wordAlignments": [
+				{
+					"arabic": "دخان",
+					"english": "Smoke",
+					"transliteration": "dukhkhaan"
+				},
+				{
+					"arabic": "أسود",
+					"english": "black",
+					"transliteration": "aswad"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المعمل.",
+					"english": "the factory.",
+					"transliteration": "il-ma3mal."
+				}
+			],
+			"targetWords": [
+				"Smoke"
+			]
+		},
+		{
+			"arabic": "إستعمل بلاستك أقل.",
+			"arabicTashkeel": "إستَعمِل بْلاستِك أقَل.",
+			"english": "Use less plastic.",
+			"transliteration": "ista3mil blaastik agall.",
+			"wordAlignments": [
+				{
+					"arabic": "إستعمل",
+					"english": "Use",
+					"transliteration": "ista3mil"
+				},
+				{
+					"arabic": "بلاستك",
+					"english": "plastic",
+					"transliteration": "blaastik"
+				},
+				{
+					"arabic": "أقل.",
+					"english": "less.",
+					"transliteration": "agall."
+				}
+			],
+			"targetWords": [
+				"Plastic"
+			]
+		},
+		{
+			"arabic": "الإحتباس الحراري يأثر عالعالم كله.",
+			"arabicTashkeel": "الإحتِباس الحَراري يأثِّر عالعالَم كُلَّه.",
+			"english": "Global warming affects the whole world.",
+			"transliteration": "il-i7tibaas il-7araari y2aththir 3al-3aalam kulla.",
+			"wordAlignments": [
+				{
+					"arabic": "الإحتباس",
+					"english": "The trapping",
+					"transliteration": "il-i7tibaas"
+				},
+				{
+					"arabic": "الحراري",
+					"english": "of heat",
+					"transliteration": "il-7araari"
+				},
+				{
+					"arabic": "يأثر",
+					"english": "affects",
+					"transliteration": "y2aththir"
+				},
+				{
+					"arabic": "عالعالم",
+					"english": "the world",
+					"transliteration": "3al-3aalam"
+				},
+				{
+					"arabic": "كله.",
+					"english": "all of it.",
+					"transliteration": "kulla."
+				}
+			],
+			"targetWords": [
+				"Global warming"
+			]
+		},
+		{
+			"arabic": "نحمي الأنهار للجيل الجاي.",
+			"arabicTashkeel": "نِحمي الأنهار للجيل الجاي.",
+			"english": "We protect the rivers for the next generation.",
+			"transliteration": "ni7mi il-anhaar lij-jeel ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "نحمي",
+					"english": "We protect",
+					"transliteration": "ni7mi"
+				},
+				{
+					"arabic": "الأنهار",
+					"english": "the rivers",
+					"transliteration": "il-anhaar"
+				},
+				{
+					"arabic": "للجيل",
+					"english": "for the generation",
+					"transliteration": "lij-jeel"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"We protect"
+			]
+		},
+		{
+			"arabic": "بس عاد هدر الماي!",
+			"arabicTashkeel": "بَس عاد هَدِر الماي!",
+			"english": "Stop wasting water!",
+			"transliteration": "bas 3aad hadir il-maay!",
+			"wordAlignments": [
+				{
+					"arabic": "بس",
+					"english": "Enough",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "عاد",
+					"english": "now",
+					"transliteration": "3aad"
+				},
+				{
+					"arabic": "هدر",
+					"english": "waste of",
+					"transliteration": "hadir"
+				},
+				{
+					"arabic": "الماي!",
+					"english": "water!",
+					"transliteration": "il-maay!"
+				}
+			],
+			"targetWords": [
+				"Waste (wasting)"
+			]
+		},
+		{
+			"arabic": "حدايق ومساحات خضرة.",
+			"arabicTashkeel": "حَدايِق ومَساحات خَضرة.",
+			"english": "Parks and green spaces.",
+			"transliteration": "7adaayig w-masaa7aat khadhra.",
+			"wordAlignments": [
+				{
+					"arabic": "حدايق",
+					"english": "Parks",
+					"transliteration": "7adaayig"
+				},
+				{
+					"arabic": "ومساحات",
+					"english": "and spaces",
+					"transliteration": "w-masaa7aat"
+				},
+				{
+					"arabic": "خضرة.",
+					"english": "green.",
+					"transliteration": "khadhra."
+				}
+			],
+			"targetWords": [
+				"Green spaces"
+			]
+		},
+		{
+			"arabic": "الوعي يبدي من المدرسة.",
+			"arabicTashkeel": "الوَعي يِبدي مِن المَدرَسة.",
+			"english": "Awareness starts at school.",
+			"transliteration": "il-wa3i yibdi min il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "الوعي",
+					"english": "Awareness",
+					"transliteration": "il-wa3i"
+				},
+				{
+					"arabic": "يبدي",
+					"english": "starts",
+					"transliteration": "yibdi"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "the school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Awareness"
+			]
+		},
+		{
+			"arabic": "البيئة مسؤولية الكل.",
+			"arabicTashkeel": "البيئة مَسؤولية الكُل.",
+			"english": "The environment is everyone's responsibility.",
+			"transliteration": "il-bee2a mas2ooliyyat il-kull.",
+			"wordAlignments": [
+				{
+					"arabic": "البيئة",
+					"english": "The environment is",
+					"transliteration": "il-bee2a"
+				},
+				{
+					"arabic": "مسؤولية",
+					"english": "the responsibility of",
+					"transliteration": "mas2ooliyyat"
+				},
+				{
+					"arabic": "الكل.",
+					"english": "everyone.",
+					"transliteration": "il-kull."
+				}
+			],
+			"targetWords": [
+				"Environment"
+			]
+		},
+		{
+			"arabic": "التلوث الصوتي بالمدينة.",
+			"arabicTashkeel": "التَّلَوُّث الصَّوتي بالمَدينة.",
+			"english": "Noise pollution in the city.",
+			"transliteration": "it-talawwuth is-sawti bil-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "التلوث",
+					"english": "The pollution",
+					"transliteration": "it-talawwuth"
+				},
+				{
+					"arabic": "الصوتي",
+					"english": "of sound",
+					"transliteration": "is-sawti"
+				},
+				{
+					"arabic": "بالمدينة.",
+					"english": "in the city.",
+					"transliteration": "bil-madeena."
+				}
+			],
+			"targetWords": [
+				"Pollution"
+			]
+		},
+		{
+			"arabic": "زبالة عالشط.",
+			"arabicTashkeel": "زْبالة عالشَّط.",
+			"english": "Rubbish on the riverbank.",
+			"transliteration": "zbaala 3ash-shatt.",
+			"wordAlignments": [
+				{
+					"arabic": "زبالة",
+					"english": "Rubbish",
+					"transliteration": "zbaala"
+				},
+				{
+					"arabic": "عالشط.",
+					"english": "on the riverbank.",
+					"transliteration": "3ash-shatt."
+				}
+			],
+			"targetWords": [
+				"Rubbish"
+			]
+		},
+		{
+			"arabic": "إعادة تدوير البلاستك والورق.",
+			"arabicTashkeel": "إعادة تَدوير البْلاستِك والوَرَق.",
+			"english": "Recycling plastic and paper.",
+			"transliteration": "i3aadat tadweer il-blaastik w-il-warag.",
+			"wordAlignments": [
+				{
+					"arabic": "إعادة",
+					"english": "Re-",
+					"transliteration": "i3aadat"
+				},
+				{
+					"arabic": "تدوير",
+					"english": "cycling of",
+					"transliteration": "tadweer"
+				},
+				{
+					"arabic": "البلاستك",
+					"english": "plastic",
+					"transliteration": "il-blaastik"
+				},
+				{
+					"arabic": "والورق.",
+					"english": "and paper.",
+					"transliteration": "w-il-warag."
+				}
+			],
+			"targetWords": [
+				"Recycling",
+				"Plastic"
+			]
+		},
+		{
+			"arabic": "سنين جفاف.",
+			"arabicTashkeel": "سِنين جَفاف.",
+			"english": "Years of drought.",
+			"transliteration": "sneen jafaaf.",
+			"wordAlignments": [
+				{
+					"arabic": "سنين",
+					"english": "Years of",
+					"transliteration": "sneen"
+				},
+				{
+					"arabic": "جفاف.",
+					"english": "drought.",
+					"transliteration": "jafaaf."
+				}
+			],
+			"targetWords": [
+				"Drought"
+			]
+		},
+		{
+			"arabic": "مكافحة التصحر بزراعة الشجر.",
+			"arabicTashkeel": "مُكافَحة التَّصَحُّر بزِراعة الشَّجَر.",
+			"english": "Fighting desertification by planting trees.",
+			"transliteration": "mukaafa7at it-tasa77ur b-ziraa3at ish-shajar.",
+			"wordAlignments": [
+				{
+					"arabic": "مكافحة",
+					"english": "Fighting",
+					"transliteration": "mukaafa7at"
+				},
+				{
+					"arabic": "التصحر",
+					"english": "desertification",
+					"transliteration": "it-tasa77ur"
+				},
+				{
+					"arabic": "بزراعة",
+					"english": "by planting",
+					"transliteration": "b-ziraa3at"
+				},
+				{
+					"arabic": "الشجر.",
+					"english": "the trees.",
+					"transliteration": "ish-shajar."
+				}
+			],
+			"targetWords": [
+				"Desertification"
+			]
+		},
+		{
+			"arabic": "شحة الماي دا تزداد.",
+			"arabicTashkeel": "شِحّة الماي دا تِزداد.",
+			"english": "The water shortage is getting worse.",
+			"transliteration": "shi77at il-maay da tizdaad.",
+			"wordAlignments": [
+				{
+					"arabic": "شحة",
+					"english": "The scarcity of",
+					"transliteration": "shi77at"
+				},
+				{
+					"arabic": "الماي",
+					"english": "water",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "دا",
+					"english": "is",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "تزداد.",
+					"english": "increasing.",
+					"transliteration": "tizdaad."
+				}
+			],
+			"targetWords": [
+				"Water shortage"
+			]
+		},
+		{
+			"arabic": "الطاقة الشمسية رخيصة ونظيفة.",
+			"arabicTashkeel": "الطّاقة الشَّمسية رْخيصة ونْظيفة.",
+			"english": "Solar energy is cheap and clean.",
+			"transliteration": "it-taaqa ish-shamsiyya rkheesa w-ndheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "الطاقة",
+					"english": "The energy",
+					"transliteration": "it-taaqa"
+				},
+				{
+					"arabic": "الشمسية",
+					"english": "solar is",
+					"transliteration": "ish-shamsiyya"
+				},
+				{
+					"arabic": "رخيصة",
+					"english": "cheap",
+					"transliteration": "rkheesa"
+				},
+				{
+					"arabic": "ونظيفة.",
+					"english": "and clean.",
+					"transliteration": "w-ndheefa."
+				}
+			],
+			"targetWords": [
+				"Solar energy"
+			]
+		},
+		{
+			"arabic": "دخان الجقاير.",
+			"arabicTashkeel": "دُخّان الجِقاير.",
+			"english": "Cigarette smoke.",
+			"transliteration": "dukhkhaan ij-jigaayir.",
+			"wordAlignments": [
+				{
+					"arabic": "دخان",
+					"english": "The smoke of",
+					"transliteration": "dukhkhaan"
+				},
+				{
+					"arabic": "الجقاير.",
+					"english": "cigarettes.",
+					"transliteration": "ij-jigaayir."
+				}
+			],
+			"targetWords": [
+				"Smoke"
+			]
+		},
+		{
+			"arabic": "قناني بلاستك.",
+			"arabicTashkeel": "قناني بْلاستِك.",
+			"english": "Plastic bottles.",
+			"transliteration": "qanaani blaastik.",
+			"wordAlignments": [
+				{
+					"arabic": "قناني",
+					"english": "Bottles of",
+					"transliteration": "qanaani"
+				},
+				{
+					"arabic": "بلاستك.",
+					"english": "plastic.",
+					"transliteration": "blaastik."
+				}
+			],
+			"targetWords": [
+				"Plastic"
+			]
+		},
+		{
+			"arabic": "آثار الإحتباس الحراري.",
+			"arabicTashkeel": "آثار الإحتِباس الحَراري.",
+			"english": "The effects of global warming.",
+			"transliteration": "aathaar il-i7tibaas il-7araari.",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "The effects of",
+					"transliteration": "aathaar"
+				},
+				{
+					"arabic": "الإحتباس",
+					"english": "the trapping",
+					"transliteration": "il-i7tibaas"
+				},
+				{
+					"arabic": "الحراري.",
+					"english": "of heat.",
+					"transliteration": "il-7araari."
+				}
+			],
+			"targetWords": [
+				"Global warming"
+			]
+		},
+		{
+			"arabic": "شلون نحمي الطبيعة؟",
+			"arabicTashkeel": "شْلون نِحمي الطَّبيعة؟",
+			"english": "How do we protect nature?",
+			"transliteration": "shloon ni7mi it-tabee3a?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "نحمي",
+					"english": "do we protect",
+					"transliteration": "ni7mi"
+				},
+				{
+					"arabic": "الطبيعة؟",
+					"english": "nature?",
+					"transliteration": "it-tabee3a?"
+				}
+			],
+			"targetWords": [
+				"We protect"
+			]
+		},
+		{
+			"arabic": "هدر الكهرباء.",
+			"arabicTashkeel": "هَدِر الكَهرَباء.",
+			"english": "Electricity waste.",
+			"transliteration": "hadir il-kahrabaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "هدر",
+					"english": "The waste of",
+					"transliteration": "hadir"
+				},
+				{
+					"arabic": "الكهرباء.",
+					"english": "electricity.",
+					"transliteration": "il-kahrabaa2."
+				}
+			],
+			"targetWords": [
+				"Waste (wasting)"
+			]
+		},
+		{
+			"arabic": "مساحات خضرة أكثر، تلوث أقل.",
+			"arabicTashkeel": "مَساحات خَضرة أكثَر، تَلَوُّث أقَل.",
+			"english": "More green spaces, less pollution.",
+			"transliteration": "masaa7aat khadhra akthar, talawwuth agall.",
+			"wordAlignments": [
+				{
+					"arabic": "مساحات",
+					"english": "Spaces",
+					"transliteration": "masaa7aat"
+				},
+				{
+					"arabic": "خضرة",
+					"english": "green",
+					"transliteration": "khadhra"
+				},
+				{
+					"arabic": "أكثر،",
+					"english": "more,",
+					"transliteration": "akthar,"
+				},
+				{
+					"arabic": "تلوث",
+					"english": "pollution",
+					"transliteration": "talawwuth"
+				},
+				{
+					"arabic": "أقل.",
+					"english": "less.",
+					"transliteration": "agall."
+				}
+			],
+			"targetWords": [
+				"Green spaces",
+				"Pollution"
+			]
+		},
+		{
+			"arabic": "حملة توعية.",
+			"arabicTashkeel": "حَملة توعية.",
+			"english": "An awareness campaign.",
+			"transliteration": "7amlat taw3iya.",
+			"wordAlignments": [
+				{
+					"arabic": "حملة",
+					"english": "A campaign of",
+					"transliteration": "7amlat"
+				},
+				{
+					"arabic": "توعية.",
+					"english": "awareness.",
+					"transliteration": "taw3iya."
+				}
+			],
+			"targetWords": [
+				"Awareness"
+			]
+		},
+		{
+			"arabic": "البيئة العراقية.",
+			"arabicTashkeel": "البيئة العِراقية.",
+			"english": "The Iraqi environment.",
+			"transliteration": "il-bee2a il-3iraaqiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "البيئة",
+					"english": "The environment",
+					"transliteration": "il-bee2a"
+				},
+				{
+					"arabic": "العراقية.",
+					"english": "Iraqi.",
+					"transliteration": "il-3iraaqiyya."
+				}
+			],
+			"targetWords": [
+				"Environment"
+			]
+		},
+		{
+			"arabic": "تلوث الماي.",
+			"arabicTashkeel": "تَلَوُّث الماي.",
+			"english": "Water pollution.",
+			"transliteration": "talawwuth il-maay.",
+			"wordAlignments": [
+				{
+					"arabic": "تلوث",
+					"english": "The pollution of",
+					"transliteration": "talawwuth"
+				},
+				{
+					"arabic": "الماي.",
+					"english": "water.",
+					"transliteration": "il-maay."
+				}
+			],
+			"targetWords": [
+				"Pollution"
+			]
+		},
+		{
+			"arabic": "فرز الزبالة.",
+			"arabicTashkeel": "فَرِّز الزْبالة.",
+			"english": "Separate the rubbish.",
+			"transliteration": "farriz iz-zbaala.",
+			"wordAlignments": [
+				{
+					"arabic": "فرز",
+					"english": "Sort",
+					"transliteration": "farriz"
+				},
+				{
+					"arabic": "الزبالة.",
+					"english": "the rubbish.",
+					"transliteration": "iz-zbaala."
+				}
+			],
+			"targetWords": [
+				"Rubbish"
+			]
+		},
+		{
+			"arabic": "معمل إعادة تدوير.",
+			"arabicTashkeel": "مَعمَل إعادة تَدوير.",
+			"english": "A recycling factory.",
+			"transliteration": "ma3mal i3aadat tadweer.",
+			"wordAlignments": [
+				{
+					"arabic": "معمل",
+					"english": "A factory of",
+					"transliteration": "ma3mal"
+				},
+				{
+					"arabic": "إعادة",
+					"english": "re-",
+					"transliteration": "i3aadat"
+				},
+				{
+					"arabic": "تدوير.",
+					"english": "cycling.",
+					"transliteration": "tadweer."
+				}
+			],
+			"targetWords": [
+				"Recycling"
+			]
+		},
+		{
+			"arabic": "جفاف وحر.",
+			"arabicTashkeel": "جَفاف وحَر.",
+			"english": "Drought and heat.",
+			"transliteration": "jafaaf w-7arr.",
+			"wordAlignments": [
+				{
+					"arabic": "جفاف",
+					"english": "Drought",
+					"transliteration": "jafaaf"
+				},
+				{
+					"arabic": "وحر.",
+					"english": "and heat.",
+					"transliteration": "w-7arr."
+				}
+			],
+			"targetWords": [
+				"Drought"
+			]
+		},
+		{
+			"arabic": "التصحر بالغرب.",
+			"arabicTashkeel": "التَّصَحُّر بالغَرب.",
+			"english": "Desertification in the west.",
+			"transliteration": "it-tasa77ur bil-gharb.",
+			"wordAlignments": [
+				{
+					"arabic": "التصحر",
+					"english": "Desertification",
+					"transliteration": "it-tasa77ur"
+				},
+				{
+					"arabic": "بالغرب.",
+					"english": "in the west.",
+					"transliteration": "bil-gharb."
+				}
+			],
+			"targetWords": [
+				"Desertification"
+			]
+		},
+		{
+			"arabic": "حلول لشحة الماي.",
+			"arabicTashkeel": "حُلول لشِحّة الماي.",
+			"english": "Solutions for the water shortage.",
+			"transliteration": "7ulool l-shi77at il-maay.",
+			"wordAlignments": [
+				{
+					"arabic": "حلول",
+					"english": "Solutions",
+					"transliteration": "7ulool"
+				},
+				{
+					"arabic": "لشحة",
+					"english": "for the scarcity of",
+					"transliteration": "l-shi77at"
+				},
+				{
+					"arabic": "الماي.",
+					"english": "water.",
+					"transliteration": "il-maay."
+				}
+			],
+			"targetWords": [
+				"Water shortage"
+			]
+		},
+		{
+			"arabic": "الطاقة الشمسية بالقرى.",
+			"arabicTashkeel": "الطّاقة الشَّمسية بالقُرى.",
+			"english": "Solar energy in villages.",
+			"transliteration": "it-taaqa ish-shamsiyya bil-gura.",
+			"wordAlignments": [
+				{
+					"arabic": "الطاقة",
+					"english": "The energy",
+					"transliteration": "it-taaqa"
+				},
+				{
+					"arabic": "الشمسية",
+					"english": "solar",
+					"transliteration": "ish-shamsiyya"
+				},
+				{
+					"arabic": "بالقرى.",
+					"english": "in the villages.",
+					"transliteration": "bil-gura."
+				}
+			],
+			"targetWords": [
+				"Solar energy"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Iraq's Environmental Challenges",
+			"sentences": [
+				{
+					"arabic": "العراق يواجه تحديات بيئية كبيرة.",
+					"arabicTashkeel": "العِراق يْواجِه تَحَدّيات بيئية كْبيرة.",
+					"english": "Iraq faces big environmental challenges.",
+					"transliteration": "il-3iraaq ywaajih ta7addiyaat bee2iyya chbeera.",
+					"wordAlignments": [
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "يواجه",
+							"english": "faces",
+							"transliteration": "ywaajih"
+						},
+						{
+							"arabic": "تحديات",
+							"english": "challenges",
+							"transliteration": "ta7addiyaat"
+						},
+						{
+							"arabic": "بيئية",
+							"english": "environmental",
+							"transliteration": "bee2iyya"
+						},
+						{
+							"arabic": "كبيرة.",
+							"english": "big.",
+							"transliteration": "chbeera."
+						}
+					]
+				},
+				{
+					"arabic": "بسبب الإحتباس الحراري والجفاف، دجلة والفرات دا ينزلون.",
+					"arabicTashkeel": "بسَبَب الإحتِباس الحَراري والجَفاف، دِجلة والفُرات دا يْنَزلون.",
+					"english": "Because of global warming and drought, the Tigris and the Euphrates are getting lower.",
+					"transliteration": "b-sabab il-i7tibaas il-7araari w-ij-jafaaf, dijla w-il-furaat da ynazloon.",
+					"wordAlignments": [
+						{
+							"arabic": "بسبب",
+							"english": "Because of",
+							"transliteration": "b-sabab"
+						},
+						{
+							"arabic": "الإحتباس",
+							"english": "the trapping",
+							"transliteration": "il-i7tibaas"
+						},
+						{
+							"arabic": "الحراري",
+							"english": "of heat",
+							"transliteration": "il-7araari"
+						},
+						{
+							"arabic": "والجفاف،",
+							"english": "and the drought,",
+							"transliteration": "w-ij-jafaaf,"
+						},
+						{
+							"arabic": "دجلة",
+							"english": "the Tigris",
+							"transliteration": "dijla"
+						},
+						{
+							"arabic": "والفرات",
+							"english": "and the Euphrates",
+							"transliteration": "w-il-furaat"
+						},
+						{
+							"arabic": "دا",
+							"english": "are",
+							"transliteration": "da"
+						},
+						{
+							"arabic": "ينزلون.",
+							"english": "going down.",
+							"transliteration": "ynazloon."
+						}
+					]
+				},
+				{
+					"arabic": "التصحر يسبب عجاج أكثر، وأكو شحة ماي بالجنوب.",
+					"arabicTashkeel": "التَّصَحُّر يْسَبِّب عَجاج أكثَر، وأكو شِحّة ماي بالجَنوب.",
+					"english": "Desertification causes more dust storms, and there's a water shortage in the south.",
+					"transliteration": "it-tasa77ur ysabbib 3ajaaj akthar, w-aku shi77at maay bij-janoob.",
+					"wordAlignments": [
+						{
+							"arabic": "التصحر",
+							"english": "Desertification",
+							"transliteration": "it-tasa77ur"
+						},
+						{
+							"arabic": "يسبب",
+							"english": "causes",
+							"transliteration": "ysabbib"
+						},
+						{
+							"arabic": "عجاج",
+							"english": "dust storms",
+							"transliteration": "3ajaaj"
+						},
+						{
+							"arabic": "أكثر،",
+							"english": "more,",
+							"transliteration": "akthar,"
+						},
+						{
+							"arabic": "وأكو",
+							"english": "and there is",
+							"transliteration": "w-aku"
+						},
+						{
+							"arabic": "شحة",
+							"english": "scarcity of",
+							"transliteration": "shi77at"
+						},
+						{
+							"arabic": "ماي",
+							"english": "water",
+							"transliteration": "maay"
+						},
+						{
+							"arabic": "بالجنوب.",
+							"english": "in the south.",
+							"transliteration": "bij-janoob."
+						}
+					]
+				},
+				{
+					"arabic": "بالمدن، تلوث المولدات والسيارات عالي.",
+					"arabicTashkeel": "بالمُدُن، تَلَوُّث المُوَلِّدات والسَّيّارات عالي.",
+					"english": "In the cities, the pollution from generators and cars is high.",
+					"transliteration": "bil-mudun, talawwuth il-mwallidaat w-is-sayyaaraat 3aali.",
+					"wordAlignments": [
+						{
+							"arabic": "بالمدن،",
+							"english": "In the cities,",
+							"transliteration": "bil-mudun,"
+						},
+						{
+							"arabic": "تلوث",
+							"english": "the pollution of",
+							"transliteration": "talawwuth"
+						},
+						{
+							"arabic": "المولدات",
+							"english": "the generators",
+							"transliteration": "il-mwallidaat"
+						},
+						{
+							"arabic": "والسيارات",
+							"english": "and the cars is",
+							"transliteration": "w-is-sayyaaraat"
+						},
+						{
+							"arabic": "عالي.",
+							"english": "high.",
+							"transliteration": "3aali."
+						}
+					]
+				},
+				{
+					"arabic": "بس أكو أمل: الطاقة الشمسية دا تنتشر، والوعي دا يزداد.",
+					"arabicTashkeel": "بَس أكو أمَل: الطّاقة الشَّمسية دا تِنتِشِر، والوَعي دا يِزداد.",
+					"english": "But there is hope: solar energy is spreading, and awareness is growing.",
+					"transliteration": "bas aku amal: it-taaqa ish-shamsiyya da tintishir, w-il-wa3i da yizdaad.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "أكو",
+							"english": "there is",
+							"transliteration": "aku"
+						},
+						{
+							"arabic": "أمل:",
+							"english": "hope:",
+							"transliteration": "amal:"
+						},
+						{
+							"arabic": "الطاقة",
+							"english": "the energy",
+							"transliteration": "it-taaqa"
+						},
+						{
+							"arabic": "الشمسية",
+							"english": "solar",
+							"transliteration": "ish-shamsiyya"
+						},
+						{
+							"arabic": "دا",
+							"english": "is",
+							"transliteration": "da"
+						},
+						{
+							"arabic": "تنتشر،",
+							"english": "spreading,",
+							"transliteration": "tintishir,"
+						},
+						{
+							"arabic": "والوعي",
+							"english": "and the awareness",
+							"transliteration": "w-il-wa3i"
+						},
+						{
+							"arabic": "دا",
+							"english": "is",
+							"transliteration": "da"
+						},
+						{
+							"arabic": "يزداد.",
+							"english": "increasing.",
+							"transliteration": "yizdaad."
+						}
+					]
+				},
+				{
+					"arabic": "كلنا نكدر نساعد: نقلل البلاستك، نوقف هدر الماي ونزرع شجر.",
+					"arabicTashkeel": "كُلنا نِكدَر نْساعِد: نْقَلِّل البْلاستِك، نوقِف هَدِر الماي ونِزرَع شَجَر.",
+					"english": "We can all help: reduce plastic, stop wasting water and plant trees.",
+					"transliteration": "kullna nigdar nsaa3id: ngallil il-blaastik, noogif hadir il-maay w-nizra3 shajar.",
+					"wordAlignments": [
+						{
+							"arabic": "كلنا",
+							"english": "All of us",
+							"transliteration": "kullna"
+						},
+						{
+							"arabic": "نكدر",
+							"english": "can",
+							"transliteration": "nigdar"
+						},
+						{
+							"arabic": "نساعد:",
+							"english": "help:",
+							"transliteration": "nsaa3id:"
+						},
+						{
+							"arabic": "نقلل",
+							"english": "we reduce",
+							"transliteration": "ngallil"
+						},
+						{
+							"arabic": "البلاستك،",
+							"english": "plastic,",
+							"transliteration": "il-blaastik,"
+						},
+						{
+							"arabic": "نوقف",
+							"english": "we stop",
+							"transliteration": "noogif"
+						},
+						{
+							"arabic": "هدر",
+							"english": "the waste of",
+							"transliteration": "hadir"
+						},
+						{
+							"arabic": "الماي",
+							"english": "water",
+							"transliteration": "il-maay"
+						},
+						{
+							"arabic": "ونزرع",
+							"english": "and we plant",
+							"transliteration": "w-nizra3"
+						},
+						{
+							"arabic": "شجر.",
+							"english": "trees.",
+							"transliteration": "shajar."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Clean Neighbourhood",
+			"sentences": [
+				{
+					"arabic": "شباب منطقتنا بدوا حملة تنظيف.",
+					"arabicTashkeel": "شَباب مَنطِقتنا بِدَوا حَملة تَنظيف.",
+					"english": "The young people in our neighbourhood started a cleaning campaign.",
+					"transliteration": "shabaab mantigatna bidaw 7amlat tandheef.",
+					"wordAlignments": [
+						{
+							"arabic": "شباب",
+							"english": "The young people of",
+							"transliteration": "shabaab"
+						},
+						{
+							"arabic": "منطقتنا",
+							"english": "our neighbourhood",
+							"transliteration": "mantigatna"
+						},
+						{
+							"arabic": "بدوا",
+							"english": "started",
+							"transliteration": "bidaw"
+						},
+						{
+							"arabic": "حملة",
+							"english": "a campaign of",
+							"transliteration": "7amlat"
+						},
+						{
+							"arabic": "تنظيف.",
+							"english": "cleaning.",
+							"transliteration": "tandheef."
+						}
+					]
+				},
+				{
+					"arabic": "جمعوا الزبالة من الشط وفرزوها لإعادة التدوير.",
+					"arabicTashkeel": "جِمعوا الزْبالة مِن الشَّط وفَرّزوها لإعادة التَّدوير.",
+					"english": "They collected the rubbish from the riverbank and sorted it for recycling.",
+					"transliteration": "jim3aw iz-zbaala min ish-shatt w-farrazooha l-i3aadat it-tadweer.",
+					"wordAlignments": [
+						{
+							"arabic": "جمعوا",
+							"english": "They collected",
+							"transliteration": "jim3aw"
+						},
+						{
+							"arabic": "الزبالة",
+							"english": "the rubbish",
+							"transliteration": "iz-zbaala"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الشط",
+							"english": "the riverbank",
+							"transliteration": "ish-shatt"
+						},
+						{
+							"arabic": "وفرزوها",
+							"english": "and sorted it",
+							"transliteration": "w-farrazooha"
+						},
+						{
+							"arabic": "لإعادة",
+							"english": "for re-",
+							"transliteration": "l-i3aadat"
+						},
+						{
+							"arabic": "التدوير.",
+							"english": "cycling.",
+							"transliteration": "it-tadweer."
+						}
+					]
+				},
+				{
+					"arabic": "هسه يريدون يحولون الأرض الفارغة لمساحات خضرة.",
+					"arabicTashkeel": "هَسَّه يْريدون يْحَوّلون الأرض الفارغة لمَساحات خَضرة.",
+					"english": "Now they want to turn the empty land into green spaces.",
+					"transliteration": "hassa yreedoon y7awwiloon il-ardh il-faargha l-masaa7aat khadhra.",
+					"wordAlignments": [
+						{
+							"arabic": "هسه",
+							"english": "Now",
+							"transliteration": "hassa"
+						},
+						{
+							"arabic": "يريدون",
+							"english": "they want",
+							"transliteration": "yreedoon"
+						},
+						{
+							"arabic": "يحولون",
+							"english": "to turn",
+							"transliteration": "y7awwiloon"
+						},
+						{
+							"arabic": "الأرض",
+							"english": "the land",
+							"transliteration": "il-ardh"
+						},
+						{
+							"arabic": "الفارغة",
+							"english": "empty",
+							"transliteration": "il-faargha"
+						},
+						{
+							"arabic": "لمساحات",
+							"english": "into spaces",
+							"transliteration": "l-masaa7aat"
+						},
+						{
+							"arabic": "خضرة.",
+							"english": "green.",
+							"transliteration": "khadhra."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student joins an Iraqi environmental volunteer group meeting in Baghdad.",
+		"studentRole": "A volunteer learning Iraqi Arabic.",
+		"otherRole": "The group's Iraqi organizer.",
+		"goalEnglish": "Discuss Iraq's environmental problems (drought, desertification, water shortage, pollution) and propose practical solutions (recycling, solar energy, green spaces, awareness).",
+		"targetWords": [
+			"Environment",
+			"Pollution",
+			"Drought",
+			"Water shortage",
+			"Recycling",
+			"Solar energy",
+			"Awareness",
+			"We protect"
+		]
+	}
+}

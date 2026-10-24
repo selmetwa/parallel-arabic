@@ -1,0 +1,247 @@
+# Iraqi — B1 — Travel and Booking Tickets (base-b1-u04)
+# Iraqi: جْنَط = luggage (bags), مَكتَب سَفَريات = travel agency, ذِهاب وإياب = return ticket.
+
+@vocab
+noun:m = Passport
+جَواز / jawaaz / Passport
+
+noun:f = Visa
+فيزا / veeza / Visa
+
+noun:f = Flight
+رِحلة / ri7la / Flight
+
+noun:f = Departure
+مُغادَرة / mughaadara / Departure
+
+noun:m = Arrival
+وُصول / wusool / Arrival
+
+noun:f = Gate
+بَوّابة / bawwaaba / Gate
+
+noun = Luggage
+جْنَط / jnat / Bags
+
+phrase = Boarding pass
+بِطاقة / bitaagat / Card of | الصُّعود / is-su3ood / boarding
+
+phrase = One way
+ذِهاب / dhihaab / Going | بَس / bas / only
+
+phrase = Return (ticket)
+ذِهاب / dhihaab / Going | وإياب / w-iyaab / and return
+
+noun:m = Seat
+مَقعَد / mag3ad / Seat
+
+adjective = Cancelled
+مَلغية / malghiyya / Cancelled
+
+noun = Timetable
+مَواعيد / mawaa3eed / Times
+
+verb = He books
+يِحجِز / yi7jiz / He books
+
+phrase = Travel agency
+مَكتَب / maktab / Office of | سَفَريات / safariyyaat / travels
+
+@pool
+Don't forget your passport. = Passport
+لا / la / Don't | تِنسى / tinsa / forget | جَوازَك. / jawaazak. / your passport.
+
+Do I need a visa for Turkey? = Visa
+أحتاج / a7taaj / Do I need | فيزا / veeza / a visa | لتُركيا؟ / l-turkiya? / for Turkey?
+
+The flight to Erbil is at nine. = Flight
+الرِّحلة / ir-ri7la / The flight | لأربيل / l-arbeel / to Erbil is | السّاعة / is-saa3a / at | تِسعة. / tis3a. / nine.
+
+The departure hall is upstairs. = Departure
+صالة / saalat / The hall of | المُغادَرة / il-mughaadara / departure is | فوق. / foog. / upstairs.
+
+What time is the arrival? = Arrival
+شْوَكِت / shwakit / When is | الوُصول؟ / il-wusool? / the arrival?
+
+Which gate? Gate number five. = Gate
+يا / ya / Which | بَوّابة؟ / bawwaaba? / gate? | بَوّابة / bawwaaba / Gate | رَقَم / ragam / number | خَمسة. / khamsa. / five.
+
+How many bags do you have? = Luggage
+كَم / cham / How many | جُنطة / junta / bags | عِندَك؟ / 3indak? / do you have?
+
+Your passport and boarding pass, please. = Passport; Boarding pass
+جَوازَك / jawaazak / Your passport | وبِطاقة / w-bitaagat / and the card of | الصُّعود / is-su3ood / boarding | رَجاءً. / rajaa2an. / please.
+
+A one-way ticket to Basra. = One way
+تَذكَرة / tathkara / A ticket | ذِهاب / dhihaab / going | بَس / bas / only | للبَصرة. / lil-basra. / to Basra.
+
+I want a return ticket. = Return (ticket)
+أريد / areed / I want | تَذكَرة / tathkara / a ticket | ذِهاب / dhihaab / going | وإياب. / w-iyaab. / and return.
+
+I want a seat by the window. = Seat
+أريد / areed / I want | مَقعَد / mag3ad / a seat | يَم / yamm / by | الشِّبّاك. / ish-shibbaach. / the window.
+
+The flight is cancelled because of the dust storm. = Cancelled; Flight
+الرِّحلة / ir-ri7la / The flight is | مَلغية / malghiyya / cancelled | بسَبَب / b-sabab / because of | العَجاج. / il-3ajaaj. / the dust storm.
+
+What is the train timetable? = Timetable
+شِنو / shinu / What are | مَواعيد / mawaa3eed / the times of | القِطار؟ / il-gitaar? / the train?
+
+I booked a ticket online. = He books
+حِجَزِت / 7ijazit / I booked | تَذكَرة / tathkara / a ticket | أونلاين. / onlaayn. / online.
+
+The travel agency is on Karrada street. = Travel agency
+مَكتَب / maktab / The office of | السَّفَريات / is-safariyyaat / travels is | بشارِع / b-shaari3 / on the street of | الكَرّادة. / il-karraada. / Karrada.
+
+My passport is expired. = Passport
+جَوازي / jawaazi / My passport is | مِنتِهي. / minthi. / expired.
+
+The visa takes two weeks. = Visa
+الفيزا / il-veeza / The visa | تاخُذ / taakhudh / takes | إسبوعَين. / isboo3een. / two weeks.
+
+The flight is delayed an hour. = Flight
+الرِّحلة / ir-ri7la / The flight | مِتأخّرة / mit2akhkhra / is delayed | ساعة. / saa3a. / an hour.
+
+The departure time changed. = Departure
+وَقت / wagt / The time of | المُغادَرة / il-mughaadara / departure | تغَيَّر. / tghayyar. / changed.
+
+The arrival hall is crowded. = Arrival
+صالة / saalat / The hall of | الوُصول / il-wusool / arrival is | مَزدَحمة. / mazda7ma. / crowded.
+
+The gate closes in twenty minutes. = Gate
+البَوّابة / il-bawwaaba / The gate | تِنسَد / tinsadd / closes | بَعد / ba3d / after | عِشرين / 3ishreen / twenty | دَقيقة. / dageega. / minutes.
+
+My luggage is lost! = Luggage
+جْنَطي / jnati / My bags are | ضايعة! / dhaay3a! / lost!
+
+Where is my boarding pass? = Boarding pass
+وين / ween / Where is | بِطاقة / bitaagat / the card of | الصُّعود؟ / is-su3ood? / boarding?
+
+One way or return? = One way; Return (ticket)
+ذِهاب / dhihaab / Going | بَس / bas / only | لو / law / or | ذِهاب / dhihaab / going | وإياب؟ / w-iyaab? / and return?
+
+The return ticket is cheaper. = Return (ticket)
+التَّذكَرة / it-tathkara / The ticket | ذِهاب / dhihaab / going | وإياب / w-iyaab / and return is | أرخَص. / arkhas. / cheaper.
+
+My seat is number twelve. = Seat
+مَقعَدي / mag3adi / My seat is | رَقَم / ragam / number | ثْنَعَش. / thna3ash. / twelve.
+
+Is the train cancelled today? = Cancelled
+القِطار / il-gitaar / Is the train | مَلغي / malghi / cancelled | اليوم؟ / il-yoom? / today?
+
+The new timetable. = Timetable
+المَواعيد / il-mawaa3eed / The times | الجْديدة. / ij-jdeeda. / new.
+
+Book me a hotel too. = He books
+إحجِزلي / i7jizli / Book me | فِندِق / findig / a hotel | هَم. / ham. / too.
+
+I bought the ticket from the travel agency. = Travel agency
+إشتِريت / ishtireet / I bought | التَّذكَرة / it-tathkara / the ticket | مِن / min / from | مَكتَب / maktab / the office of | السَّفَريات. / is-safariyyaat. / travels.
+
+Where do I renew my passport? = Passport
+وين / ween / Where | أجَدِّد / ajaddid / do I renew | جَوازي؟ / jawaazi? / my passport?
+
+They gave me the visa! = Visa
+إنطوني / intooni / They gave me | الفيزا! / il-veeza! / the visa!
+
+A direct flight to Istanbul. = Flight
+رِحلة / ri7la / A flight | مُباشرة / mubaashra / direct | لإسطَنبول. / l-istanbool. / to Istanbul.
+
+Departure at six, arrival at eight. = Departure; Arrival
+المُغادَرة / il-mughaadara / Departure | سِتّة، / sitta, / at six, | والوُصول / w-il-wusool / and arrival | ثْمانية. / thmaanya. / at eight.
+
+Go to the gate now. = Gate
+روح / rooh / Go | للبَوّابة / lil-bawwaaba / to the gate | هَسَّه. / hassa. / now.
+
+The luggage is too heavy. = Luggage
+الجْنَط / ij-jnat / The bags are | ثْقيلة / thgeela / heavy | هْوايَة. / hwaaya. / too.
+
+Print the boarding pass. = Boarding pass
+إطبَع / itba3 / Print | بِطاقة / bitaagat / the card of | الصُّعود. / is-su3ood. / boarding.
+
+A one-way ticket is enough. = One way
+تَذكَرة / tathkara / A ticket | ذِهاب / dhihaab / going | بَس / bas / only | تِكفي. / tikfi. / is enough.
+
+Change my seat, please. = Seat
+بَدِّل / baddil / Change | مَقعَدي / mag3adi / my seat | رَجاءً. / rajaa2an. / please.
+
+All the flights are cancelled today. = Cancelled; Flight
+كُل / kull / All | الرِّحلات / ir-ri7laat / the flights are | مَلغية / malghiyya / cancelled | اليوم. / il-yoom. / today.
+
+Check the timetable before you go. = Timetable
+شوف / shoof / Check | المَواعيد / il-mawaa3eed / the times | قَبُل / gabul / before | ما / ma / that | تْروح. / trooh. / you go.
+
+Did you book the tickets? = He books
+حِجَزِت / 7ijazit / Did you book | التَّذاكِر؟ / it-tathaakir? / the tickets?
+
+The travel agency closes at five. = Travel agency
+مَكتَب / maktab / The office of | السَّفَريات / is-safariyyaat / travels | يِنسَد / yinsadd / closes | السّاعة / is-saa3a / at | خَمسة. / khamsa. / five.
+
+Keep the passport with you. = Passport
+خَلّي / khalli / Keep | الجَواز / ij-jawaaz / the passport | وِيّاك. / wiyyaak. / with you.
+
+The visa is expensive. = Visa
+الفيزا / il-veeza / The visa is | غالية. / ghaalya. / expensive.
+
+A long flight. = Flight
+رِحلة / ri7la / A flight | طْويلة. / tweela. / long.
+
+Departure from Baghdad airport. = Departure
+المُغادَرة / il-mughaadara / Departure | مِن / min / from | مَطار / mataar / the airport of | بَغداد. / baghdaad. / Baghdad.
+
+On arrival, call me. = Arrival
+عِند / 3ind / At | الوُصول، / il-wusool, / arrival, | إتَّصِل / ittasil / call | بيّا. / biyya. / me.
+
+The gate changed. = Gate
+البَوّابة / il-bawwaaba / The gate | تغَيرَت. / tghayrat. / changed.
+
+Put the luggage on the scale. = Luggage
+حُط / 7utt / Put | الجْنَط / ij-jnat / the bags | عالميزان. / 3al-meezaan. / on the scale.
+
+I have the boarding pass on my phone. = Boarding pass
+بِطاقة / bitaagat / The card of | الصُّعود / is-su3ood / boarding | عِندي / 3indi / I have | بالتَّلَفون. / bit-talafoon. / on the phone.
+
+Return in a week. = Return (ticket)
+ذِهاب / dhihaab / Going | وإياب / w-iyaab / and return | بإسبوع. / b-isboo3. / in a week.
+
+A comfortable seat. = Seat
+مَقعَد / mag3ad / A seat | مْريح. / mree7. / comfortable.
+
+Why was the trip cancelled? = Cancelled
+ليش / leesh / Why | السَّفرة / is-safra / the trip | مَلغية؟ / malghiyya? / cancelled?
+
+He booked two seats. = He books; Seat
+حِجَز / 7ijaz / He booked | مَقعَدَين. / mag3adeen. / two seats.
+
+@passage Booking a Trip
+I went to the travel agency to book a flight to Istanbul.
+رِحِت / ri7it / I went | لمَكتَب / l-maktab / to the office of | السَّفَريات / is-safariyyaat / travels | حَتّى / 7atta / to | أحجِز / a7jiz / book | رِحلة / ri7la / a flight | لإسطَنبول. / l-istanbool. / to Istanbul.
+
+The employee asked for my passport.
+المْوَظَّف / il-mwadhdhaf / The employee | طِلَب / tilab / asked for | جَوازي. / jawaazi. / my passport.
+
+I don't need a visa, praise be to God.
+ما / ma / not | أحتاج / a7taaj / I need | فيزا، / veeza, / a visa, | الحَمدُ / il-7amdu / praise | لله. / lillaah. / be to God.
+
+I booked a return ticket and a window seat.
+حِجَزِت / 7ijazit / I booked | تَذكَرة / tathkara / a ticket | ذِهاب / dhihaab / going | وإياب / w-iyaab / and return | ومَقعَد / w-mag3ad / and a seat | يَم / yamm / by | الشِّبّاك. / ish-shibbaach. / the window.
+
+The departure is on Thursday at six in the morning.
+المُغادَرة / il-mughaadara / The departure is | يوم / yoom / on | الخَميس / il-khamees / Thursday | سِتّة / sitta / at six | الصُّبُح. / is-subu7. / in the morning.
+
+@passage At the Airport
+At the airport I put my luggage on the scale.
+بالمَطار / bil-mataar / At the airport | حَطَّيت / 7atteet / I put | جْنَطي / jnati / my bags | عالميزان. / 3al-meezaan. / on the scale.
+
+They gave me the boarding pass: gate number seven.
+إنطوني / intooni / They gave me | بِطاقة / bitaagat / the card of | الصُّعود: / is-su3ood: / boarding: | بَوّابة / bawwaaba / gate | سَبعة. / sab3a. / seven.
+
+But the flight was delayed two hours because of the dust storm.
+بَس / bas / But | الرِّحلة / ir-ri7la / the flight | تأخرَت / t2akhrat / was delayed | ساعتين / saa3teen / two hours | بسَبَب / b-sabab / because of | العَجاج. / il-3ajaaj. / the dust storm.
+
+@scenario
+situation: The student is at a travel agency in Baghdad booking a trip to Istanbul for next month.
+studentRole: A traveller learning Iraqi Arabic.
+otherRole: The travel agent, who asks for all the details.
+goalEnglish: Book a flight (one way or return), choose a seat, ask about the visa, departure and arrival times, and how much luggage you can take.
+targetWords: Flight; Passport; Visa; Return (ticket); Seat; Departure; Luggage; He books

@@ -1,0 +1,2193 @@
+{
+	"vocab": [
+		{
+			"arabic": "قد إيش",
+			"arabicTashkeel": "قَدّ إيش",
+			"english": "How ...! (exclamation)",
+			"transliteration": "gadd eesh",
+			"wordAlignments": [
+				{
+					"arabic": "قد",
+					"english": "Amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يا سلام",
+			"arabicTashkeel": "يا سَلام",
+			"english": "Wow!",
+			"transliteration": "ya salaam",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "سلام",
+					"english": "peace",
+					"transliteration": "salaam"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ما شاء الله",
+			"arabicTashkeel": "ما شاء الله",
+			"english": "Mashallah",
+			"transliteration": "ma shaa2 allah",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "What",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يا ريت",
+			"arabicTashkeel": "يا ريت",
+			"english": "I wish",
+			"transliteration": "ya reet",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "ريت",
+					"english": "would that",
+					"transliteration": "reet"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يا شيخ",
+			"arabicTashkeel": "يا شيخ",
+			"english": "Oh come on!",
+			"transliteration": "ya shaikh",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "شيخ",
+					"english": "sheikh",
+					"transliteration": "shaikh"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "خطير",
+			"arabicTashkeel": "خَطير",
+			"english": "Awesome!",
+			"transliteration": "khateer",
+			"wordAlignments": [
+				{
+					"arabic": "خطير",
+					"english": "Dangerous",
+					"transliteration": "khateer"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "برافو",
+			"arabicTashkeel": "بْرافو",
+			"english": "Bravo!",
+			"transliteration": "braafo",
+			"wordAlignments": [
+				{
+					"arabic": "برافو",
+					"english": "Bravo",
+					"transliteration": "braafo"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يا الله",
+			"arabicTashkeel": "يا الله",
+			"english": "Oh my God!",
+			"transliteration": "ya allah",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يا حرام",
+			"arabicTashkeel": "يا حَرام",
+			"english": "What a shame!",
+			"transliteration": "ya 7araam",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "حرام",
+					"english": "pity",
+					"transliteration": "7araam"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بالضبط",
+			"arabicTashkeel": "بالضَّبط",
+			"english": "Exactly",
+			"transliteration": "biz-zabt",
+			"wordAlignments": [
+				{
+					"arabic": "بالضبط",
+					"english": "Exactly",
+					"transliteration": "biz-zabt"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "مرة",
+			"arabicTashkeel": "مَرّة",
+			"english": "Really / very much",
+			"transliteration": "marra",
+			"wordAlignments": [
+				{
+					"arabic": "مرة",
+					"english": "Very",
+					"transliteration": "marra"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "طبعا",
+			"arabicTashkeel": "طَبعاً",
+			"english": "Of course",
+			"transliteration": "tab3an",
+			"wordAlignments": [
+				{
+					"arabic": "طبعا",
+					"english": "Of course",
+					"transliteration": "tab3an"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "صدق",
+			"arabicTashkeel": "صِدق",
+			"english": "Seriously",
+			"transliteration": "sidg",
+			"wordAlignments": [
+				{
+					"arabic": "صدق",
+					"english": "Truly",
+					"transliteration": "sidg"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "مو معقول",
+			"arabicTashkeel": "مو مَعقول",
+			"english": "Unbelievable",
+			"transliteration": "moo ma3gool",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "معقول",
+					"english": "reasonable",
+					"transliteration": "ma3gool"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "خلاص",
+			"arabicTashkeel": "خَلاص",
+			"english": "Enough!",
+			"transliteration": "khalaas",
+			"wordAlignments": [
+				{
+					"arabic": "خلاص",
+					"english": "Enough",
+					"transliteration": "khalaas"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "قد إيش جدة حلوة!",
+			"arabicTashkeel": "قَدّ إيش جِدّة حِلوة!",
+			"english": "How beautiful Jeddah is!",
+			"transliteration": "gadd eesh jidda 7ilwa!",
+			"wordAlignments": [
+				{
+					"arabic": "قد",
+					"english": "Amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "جدة",
+					"english": "Jeddah is",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "حلوة!",
+					"english": "beautiful!",
+					"transliteration": "7ilwa!"
+				}
+			],
+			"targetWords": [
+				"How ...! (exclamation)"
+			]
+		},
+		{
+			"arabic": "يا سلام، إيش هادا البيت الحلو!",
+			"arabicTashkeel": "يا سَلام، إيش هادا البيت الحِلو!",
+			"english": "Wow, what a beautiful house!",
+			"transliteration": "ya salaam, eesh haada il-bait il-7ilu!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "سلام،",
+					"english": "peace,",
+					"transliteration": "salaam,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هادا",
+					"english": "this",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "الحلو!",
+					"english": "beautiful!",
+					"transliteration": "il-7ilu!"
+				}
+			],
+			"targetWords": [
+				"Wow!"
+			]
+		},
+		{
+			"arabic": "ما شاء الله، ولدك شاطر.",
+			"arabicTashkeel": "ما شاء الله، وَلَدَك شاطِر.",
+			"english": "Mashallah, your son is clever.",
+			"transliteration": "ma shaa2 allah, waladak shaatir.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "What",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "ولدك",
+					"english": "your son is",
+					"transliteration": "waladak"
+				},
+				{
+					"arabic": "شاطر.",
+					"english": "clever.",
+					"transliteration": "shaatir."
+				}
+			],
+			"targetWords": [
+				"Mashallah"
+			]
+		},
+		{
+			"arabic": "يا ريت أقدر أسافر.",
+			"arabicTashkeel": "يا ريت أقدَر أسافِر.",
+			"english": "I wish I could travel.",
+			"transliteration": "ya reet agdar asaafir.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "ريت",
+					"english": "would that",
+					"transliteration": "reet"
+				},
+				{
+					"arabic": "أقدر",
+					"english": "I could",
+					"transliteration": "agdar"
+				},
+				{
+					"arabic": "أسافر.",
+					"english": "travel.",
+					"transliteration": "asaafir."
+				}
+			],
+			"targetWords": [
+				"I wish"
+			]
+		},
+		{
+			"arabic": "يا شيخ، نسيت جوالي!",
+			"arabicTashkeel": "يا شيخ، نِسيت جَوّالي!",
+			"english": "Oh come on, I forgot my phone!",
+			"transliteration": "ya shaikh, niseet jawwaali!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "شيخ،",
+					"english": "sheikh,",
+					"transliteration": "shaikh,"
+				},
+				{
+					"arabic": "نسيت",
+					"english": "I forgot",
+					"transliteration": "niseet"
+				},
+				{
+					"arabic": "جوالي!",
+					"english": "my phone!",
+					"transliteration": "jawwaali!"
+				}
+			],
+			"targetWords": [
+				"Oh come on!"
+			]
+		},
+		{
+			"arabic": "خطير، يلا!",
+			"arabicTashkeel": "خَطير، يَلّا!",
+			"english": "Awesome, let's go!",
+			"transliteration": "khateer, yalla!",
+			"wordAlignments": [
+				{
+					"arabic": "خطير،",
+					"english": "Awesome,",
+					"transliteration": "khateer,"
+				},
+				{
+					"arabic": "يلا!",
+					"english": "let's go!",
+					"transliteration": "yalla!"
+				}
+			],
+			"targetWords": [
+				"Awesome!"
+			]
+		},
+		{
+			"arabic": "برافو، فزت!",
+			"arabicTashkeel": "بْرافو، فُزت!",
+			"english": "Bravo, you won!",
+			"transliteration": "braafo, fuzt!",
+			"wordAlignments": [
+				{
+					"arabic": "برافو،",
+					"english": "Bravo,",
+					"transliteration": "braafo,"
+				},
+				{
+					"arabic": "فزت!",
+					"english": "you won!",
+					"transliteration": "fuzt!"
+				}
+			],
+			"targetWords": [
+				"Bravo!"
+			]
+		},
+		{
+			"arabic": "يا الله، إيش صار؟",
+			"arabicTashkeel": "يا الله، إيش صار؟",
+			"english": "Oh my God, what happened?",
+			"transliteration": "ya allah, eesh saar?",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "صار؟",
+					"english": "happened?",
+					"transliteration": "saar?"
+				}
+			],
+			"targetWords": [
+				"Oh my God!"
+			]
+		},
+		{
+			"arabic": "يا حرام، هوا مريض.",
+			"arabicTashkeel": "يا حَرام، هوّا مَريض.",
+			"english": "What a shame, he's sick.",
+			"transliteration": "ya 7araam, huwwa mareedh.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "حرام،",
+					"english": "pity,",
+					"transliteration": "7araam,"
+				},
+				{
+					"arabic": "هوا",
+					"english": "he is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مريض.",
+					"english": "sick.",
+					"transliteration": "mareedh."
+				}
+			],
+			"targetWords": [
+				"What a shame!"
+			]
+		},
+		{
+			"arabic": "بالضبط، هادا قصدي.",
+			"arabicTashkeel": "بالضَّبط، هادا قَصدي.",
+			"english": "Exactly, that's what I meant.",
+			"transliteration": "biz-zabt, haada gasdi.",
+			"wordAlignments": [
+				{
+					"arabic": "بالضبط،",
+					"english": "Exactly,",
+					"transliteration": "biz-zabt,"
+				},
+				{
+					"arabic": "هادا",
+					"english": "this is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "قصدي.",
+					"english": "my meaning.",
+					"transliteration": "gasdi."
+				}
+			],
+			"targetWords": [
+				"Exactly"
+			]
+		},
+		{
+			"arabic": "أحب البحر مرة.",
+			"arabicTashkeel": "أحِب البَحر مَرّة.",
+			"english": "I really love the sea.",
+			"transliteration": "a7ibb il-ba7r marra.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "البحر",
+					"english": "the sea",
+					"transliteration": "il-ba7r"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very much.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Really / very much"
+			]
+		},
+		{
+			"arabic": "طبعا حجي!",
+			"arabicTashkeel": "طَبعاً حَجي!",
+			"english": "Of course I'll come!",
+			"transliteration": "tab3an 7aji!",
+			"wordAlignments": [
+				{
+					"arabic": "طبعا",
+					"english": "Of course",
+					"transliteration": "tab3an"
+				},
+				{
+					"arabic": "حجي!",
+					"english": "I'll come!",
+					"transliteration": "7aji!"
+				}
+			],
+			"targetWords": [
+				"Of course"
+			]
+		},
+		{
+			"arabic": "صدق، حتسافر؟",
+			"arabicTashkeel": "صِدق، حَتسافِر؟",
+			"english": "Seriously, you're leaving?",
+			"transliteration": "sidg, 7atsaafir?",
+			"wordAlignments": [
+				{
+					"arabic": "صدق،",
+					"english": "Truly,",
+					"transliteration": "sidg,"
+				},
+				{
+					"arabic": "حتسافر؟",
+					"english": "you're travelling?",
+					"transliteration": "7atsaafir?"
+				}
+			],
+			"targetWords": [
+				"Seriously"
+			]
+		},
+		{
+			"arabic": "السعر مو معقول!",
+			"arabicTashkeel": "السِّعر مو مَعقول!",
+			"english": "The price is unbelievable!",
+			"transliteration": "is-si3r moo ma3gool!",
+			"wordAlignments": [
+				{
+					"arabic": "السعر",
+					"english": "The price is",
+					"transliteration": "is-si3r"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "معقول!",
+					"english": "reasonable!",
+					"transliteration": "ma3gool!"
+				}
+			],
+			"targetWords": [
+				"Unbelievable"
+			]
+		},
+		{
+			"arabic": "خلاص، أنا تعبان!",
+			"arabicTashkeel": "خَلاص، أنا تَعبان!",
+			"english": "Enough, I'm tired!",
+			"transliteration": "khalaas, ana ta3baan!",
+			"wordAlignments": [
+				{
+					"arabic": "خلاص،",
+					"english": "Enough,",
+					"transliteration": "khalaas,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "تعبان!",
+					"english": "tired!",
+					"transliteration": "ta3baan!"
+				}
+			],
+			"targetWords": [
+				"Enough!"
+			]
+		},
+		{
+			"arabic": "قد إيش الجو حر اليوم!",
+			"arabicTashkeel": "قَدّ إيش الجَو حَر اليوم!",
+			"english": "How hot it is today!",
+			"transliteration": "gadd eesh ij-jaw 7arr il-yoom!",
+			"wordAlignments": [
+				{
+					"arabic": "قد",
+					"english": "Amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "حر",
+					"english": "hot",
+					"transliteration": "7arr"
+				},
+				{
+					"arabic": "اليوم!",
+					"english": "today!",
+					"transliteration": "il-yoom!"
+				}
+			],
+			"targetWords": [
+				"How ...! (exclamation)"
+			]
+		},
+		{
+			"arabic": "يا سلام، سيارة جديدة!",
+			"arabicTashkeel": "يا سَلام، سَيّارة جَديدة!",
+			"english": "Wow, a new car!",
+			"transliteration": "ya salaam, sayyaara jadeeda!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "سلام،",
+					"english": "peace,",
+					"transliteration": "salaam,"
+				},
+				{
+					"arabic": "سيارة",
+					"english": "a car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "جديدة!",
+					"english": "new!",
+					"transliteration": "jadeeda!"
+				}
+			],
+			"targetWords": [
+				"Wow!"
+			]
+		},
+		{
+			"arabic": "ما شاء الله، البيت حلو.",
+			"arabicTashkeel": "ما شاء الله، البيت حِلو.",
+			"english": "Mashallah, the house is beautiful.",
+			"transliteration": "ma shaa2 allah, il-bait 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "What",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Mashallah"
+			]
+		},
+		{
+			"arabic": "يا ريت كنت معانا.",
+			"arabicTashkeel": "يا ريت كُنت مَعانا.",
+			"english": "I wish you were with us.",
+			"transliteration": "ya reet kunt ma3aana.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "ريت",
+					"english": "would that",
+					"transliteration": "reet"
+				},
+				{
+					"arabic": "كنت",
+					"english": "you were",
+					"transliteration": "kunt"
+				},
+				{
+					"arabic": "معانا.",
+					"english": "with us.",
+					"transliteration": "ma3aana."
+				}
+			],
+			"targetWords": [
+				"I wish"
+			]
+		},
+		{
+			"arabic": "يا شيخ، مرة تانية؟!",
+			"arabicTashkeel": "يا شيخ، مَرّة تانية؟!",
+			"english": "Oh come on, not again!",
+			"transliteration": "ya shaikh, marra taanya?!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "شيخ،",
+					"english": "sheikh,",
+					"transliteration": "shaikh,"
+				},
+				{
+					"arabic": "مرة",
+					"english": "a time",
+					"transliteration": "marra"
+				},
+				{
+					"arabic": "تانية؟!",
+					"english": "again?!",
+					"transliteration": "taanya?!"
+				}
+			],
+			"targetWords": [
+				"Oh come on!"
+			]
+		},
+		{
+			"arabic": "الفيلم كان خطير!",
+			"arabicTashkeel": "الفيلم كان خَطير!",
+			"english": "The film was awesome!",
+			"transliteration": "il-film kaan khateer!",
+			"wordAlignments": [
+				{
+					"arabic": "الفيلم",
+					"english": "The film",
+					"transliteration": "il-film"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "خطير!",
+					"english": "awesome!",
+					"transliteration": "khateer!"
+				}
+			],
+			"targetWords": [
+				"Awesome!"
+			]
+		},
+		{
+			"arabic": "برافو، جول حلو!",
+			"arabicTashkeel": "بْرافو، جول حِلو!",
+			"english": "Bravo, a beautiful goal!",
+			"transliteration": "braafo, gool 7ilu!",
+			"wordAlignments": [
+				{
+					"arabic": "برافو،",
+					"english": "Bravo,",
+					"transliteration": "braafo,"
+				},
+				{
+					"arabic": "جول",
+					"english": "a goal",
+					"transliteration": "gool"
+				},
+				{
+					"arabic": "حلو!",
+					"english": "beautiful!",
+					"transliteration": "7ilu!"
+				}
+			],
+			"targetWords": [
+				"Bravo!"
+			]
+		},
+		{
+			"arabic": "يا الله، قد إيش غالي!",
+			"arabicTashkeel": "يا الله، قَدّ إيش غالي!",
+			"english": "Oh my God, how expensive!",
+			"transliteration": "ya allah, gadd eesh ghaali!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "قد",
+					"english": "amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "غالي!",
+					"english": "expensive!",
+					"transliteration": "ghaali!"
+				}
+			],
+			"targetWords": [
+				"Oh my God!"
+			]
+		},
+		{
+			"arabic": "يا حرام، الرحلة انلغت.",
+			"arabicTashkeel": "يا حَرام، الرِّحلة اِنلَغَت.",
+			"english": "What a shame, the trip was cancelled.",
+			"transliteration": "ya 7araam, ir-ri7la inlaghat.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "حرام،",
+					"english": "pity,",
+					"transliteration": "7araam,"
+				},
+				{
+					"arabic": "الرحلة",
+					"english": "the trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "انلغت.",
+					"english": "was cancelled.",
+					"transliteration": "inlaghat."
+				}
+			],
+			"targetWords": [
+				"What a shame!"
+			]
+		},
+		{
+			"arabic": "الساعة عشرة بالضبط.",
+			"arabicTashkeel": "السّاعة عَشَرة بالضَّبط.",
+			"english": "Exactly ten o'clock.",
+			"transliteration": "is-saa3a 3ashara biz-zabt.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "عشرة",
+					"english": "ten",
+					"transliteration": "3ashara"
+				},
+				{
+					"arabic": "بالضبط.",
+					"english": "exactly.",
+					"transliteration": "biz-zabt."
+				}
+			],
+			"targetWords": [
+				"Exactly"
+			]
+		},
+		{
+			"arabic": "الأكل لذيذ مرة.",
+			"arabicTashkeel": "الأكل لَذيذ مَرّة.",
+			"english": "The food is really delicious.",
+			"transliteration": "il-akl lazeez marra.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "The food is",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "لذيذ",
+					"english": "delicious",
+					"transliteration": "lazeez"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Really / very much"
+			]
+		},
+		{
+			"arabic": "طبعا يا صاحبي.",
+			"arabicTashkeel": "طَبعاً يا صاحبي.",
+			"english": "Of course, my friend.",
+			"transliteration": "tab3an ya saa7bi.",
+			"wordAlignments": [
+				{
+					"arabic": "طبعا",
+					"english": "Of course",
+					"transliteration": "tab3an"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "صاحبي.",
+					"english": "my friend.",
+					"transliteration": "saa7bi."
+				}
+			],
+			"targetWords": [
+				"Of course"
+			]
+		},
+		{
+			"arabic": "صدق؟ ما كنت أدري!",
+			"arabicTashkeel": "صِدق؟ ما كُنت أدري!",
+			"english": "Seriously? I didn't know!",
+			"transliteration": "sidg? ma kunt adri!",
+			"wordAlignments": [
+				{
+					"arabic": "صدق؟",
+					"english": "Truly?",
+					"transliteration": "sidg?"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "kunt"
+				},
+				{
+					"arabic": "أدري!",
+					"english": "knowing!",
+					"transliteration": "adri!"
+				}
+			],
+			"targetWords": [
+				"Seriously"
+			]
+		},
+		{
+			"arabic": "مو معقول، نجح!",
+			"arabicTashkeel": "مو مَعقول، نَجَح!",
+			"english": "Unbelievable, he passed!",
+			"transliteration": "moo ma3gool, naja7!",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "معقول،",
+					"english": "reasonable,",
+					"transliteration": "ma3gool,"
+				},
+				{
+					"arabic": "نجح!",
+					"english": "he passed!",
+					"transliteration": "naja7!"
+				}
+			],
+			"targetWords": [
+				"Unbelievable"
+			]
+		},
+		{
+			"arabic": "خلاص كلام، يلا ناكل.",
+			"arabicTashkeel": "خَلاص كَلام، يَلّا ناكُل.",
+			"english": "Enough talking, let's eat.",
+			"transliteration": "khalaas kalaam, yalla naakul.",
+			"wordAlignments": [
+				{
+					"arabic": "خلاص",
+					"english": "Enough",
+					"transliteration": "khalaas"
+				},
+				{
+					"arabic": "كلام،",
+					"english": "talk,",
+					"transliteration": "kalaam,"
+				},
+				{
+					"arabic": "يلا",
+					"english": "come on",
+					"transliteration": "yalla"
+				},
+				{
+					"arabic": "ناكل.",
+					"english": "let's eat.",
+					"transliteration": "naakul."
+				}
+			],
+			"targetWords": [
+				"Enough!"
+			]
+		},
+		{
+			"arabic": "قد إيش هوا طيب!",
+			"arabicTashkeel": "قَدّ إيش هوّا طَيِّب!",
+			"english": "How kind he is!",
+			"transliteration": "gadd eesh huwwa tayyib!",
+			"wordAlignments": [
+				{
+					"arabic": "قد",
+					"english": "Amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هوا",
+					"english": "he is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "طيب!",
+					"english": "kind!",
+					"transliteration": "tayyib!"
+				}
+			],
+			"targetWords": [
+				"How ...! (exclamation)"
+			]
+		},
+		{
+			"arabic": "يا سلام، شوف البحر!",
+			"arabicTashkeel": "يا سَلام، شوف البَحر!",
+			"english": "Wow, look at the sea!",
+			"transliteration": "ya salaam, shoof il-ba7r!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "سلام،",
+					"english": "peace,",
+					"transliteration": "salaam,"
+				},
+				{
+					"arabic": "شوف",
+					"english": "look at",
+					"transliteration": "shoof"
+				},
+				{
+					"arabic": "البحر!",
+					"english": "the sea!",
+					"transliteration": "il-ba7r!"
+				}
+			],
+			"targetWords": [
+				"Wow!"
+			]
+		},
+		{
+			"arabic": "ما شاء الله، كبرت!",
+			"arabicTashkeel": "ما شاء الله، كِبِرت!",
+			"english": "Mashallah, you've grown!",
+			"transliteration": "ma shaa2 allah, kibirt!",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "What",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "كبرت!",
+					"english": "you've grown!",
+					"transliteration": "kibirt!"
+				}
+			],
+			"targetWords": [
+				"Mashallah"
+			]
+		},
+		{
+			"arabic": "يا ريت تمطر.",
+			"arabicTashkeel": "يا ريت تِمَطِّر.",
+			"english": "I wish it would rain.",
+			"transliteration": "ya reet timattir.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "ريت",
+					"english": "would that",
+					"transliteration": "reet"
+				},
+				{
+					"arabic": "تمطر.",
+					"english": "it rains.",
+					"transliteration": "timattir."
+				}
+			],
+			"targetWords": [
+				"I wish"
+			]
+		},
+		{
+			"arabic": "يا شيخ، الزحمة!",
+			"arabicTashkeel": "يا شيخ، الزَّحمة!",
+			"english": "Oh come on, the traffic!",
+			"transliteration": "ya shaikh, iz-za7ma!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "شيخ،",
+					"english": "sheikh,",
+					"transliteration": "shaikh,"
+				},
+				{
+					"arabic": "الزحمة!",
+					"english": "the traffic!",
+					"transliteration": "iz-za7ma!"
+				}
+			],
+			"targetWords": [
+				"Oh come on!"
+			]
+		},
+		{
+			"arabic": "فكرة خطيرة!",
+			"arabicTashkeel": "فِكرة خَطيرة!",
+			"english": "An awesome idea!",
+			"transliteration": "fikra khateera!",
+			"wordAlignments": [
+				{
+					"arabic": "فكرة",
+					"english": "An idea",
+					"transliteration": "fikra"
+				},
+				{
+					"arabic": "خطيرة!",
+					"english": "awesome!",
+					"transliteration": "khateera!"
+				}
+			],
+			"targetWords": [
+				"Awesome!"
+			]
+		},
+		{
+			"arabic": "برافو عليك، إنت بطل!",
+			"arabicTashkeel": "بْرافو عَلَيك، إنتَ بَطَل!",
+			"english": "Bravo, you're a hero!",
+			"transliteration": "braafo 3alaik, inta batal!",
+			"wordAlignments": [
+				{
+					"arabic": "برافو",
+					"english": "Bravo",
+					"transliteration": "braafo"
+				},
+				{
+					"arabic": "عليك،",
+					"english": "to you,",
+					"transliteration": "3alaik,"
+				},
+				{
+					"arabic": "إنت",
+					"english": "you are",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "بطل!",
+					"english": "a hero!",
+					"transliteration": "batal!"
+				}
+			],
+			"targetWords": [
+				"Bravo!"
+			]
+		},
+		{
+			"arabic": "يا الله، اتأخرت!",
+			"arabicTashkeel": "يا الله، اِتأخَّرت!",
+			"english": "Oh my God, I'm late!",
+			"transliteration": "ya allah, it2akhkhart!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "اتأخرت!",
+					"english": "I'm late!",
+					"transliteration": "it2akhkhart!"
+				}
+			],
+			"targetWords": [
+				"Oh my God!"
+			]
+		},
+		{
+			"arabic": "يا حرام، المحل مسكر.",
+			"arabicTashkeel": "يا حَرام، المَحَل مْسَكَّر.",
+			"english": "What a shame, the shop is closed.",
+			"transliteration": "ya 7araam, il-ma7al msakkar.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "حرام،",
+					"english": "pity,",
+					"transliteration": "7araam,"
+				},
+				{
+					"arabic": "المحل",
+					"english": "the shop is",
+					"transliteration": "il-ma7al"
+				},
+				{
+					"arabic": "مسكر.",
+					"english": "closed.",
+					"transliteration": "msakkar."
+				}
+			],
+			"targetWords": [
+				"What a shame!"
+			]
+		},
+		{
+			"arabic": "هادا اللي أبغاه بالضبط.",
+			"arabicTashkeel": "هادا اللي أبغاه بالضَّبط.",
+			"english": "That's exactly what I want.",
+			"transliteration": "haada illi abghaah biz-zabt.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "اللي",
+					"english": "what",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "أبغاه",
+					"english": "I want it",
+					"transliteration": "abghaah"
+				},
+				{
+					"arabic": "بالضبط.",
+					"english": "exactly.",
+					"transliteration": "biz-zabt."
+				}
+			],
+			"targetWords": [
+				"Exactly"
+			]
+		},
+		{
+			"arabic": "أنا تعبان مرة اليوم.",
+			"arabicTashkeel": "أنا تَعبان مَرّة اليوم.",
+			"english": "I'm very tired today.",
+			"transliteration": "ana ta3baan marra il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "تعبان",
+					"english": "tired",
+					"transliteration": "ta3baan"
+				},
+				{
+					"arabic": "مرة",
+					"english": "very",
+					"transliteration": "marra"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Really / very much"
+			]
+		},
+		{
+			"arabic": "طبعا فاكرك!",
+			"arabicTashkeel": "طَبعاً فاكرَك!",
+			"english": "Of course I remember you!",
+			"transliteration": "tab3an faakrak!",
+			"wordAlignments": [
+				{
+					"arabic": "طبعا",
+					"english": "Of course",
+					"transliteration": "tab3an"
+				},
+				{
+					"arabic": "فاكرك!",
+					"english": "I remember you!",
+					"transliteration": "faakrak!"
+				}
+			],
+			"targetWords": [
+				"Of course"
+			]
+		},
+		{
+			"arabic": "صدق، ما أمزح.",
+			"arabicTashkeel": "صِدق، ما أمزَح.",
+			"english": "Seriously, I'm not joking.",
+			"transliteration": "sidg, ma amzah.",
+			"wordAlignments": [
+				{
+					"arabic": "صدق،",
+					"english": "Truly,",
+					"transliteration": "sidg,"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أمزح.",
+					"english": "I'm joking.",
+					"transliteration": "amzah."
+				}
+			],
+			"targetWords": [
+				"Seriously"
+			]
+		},
+		{
+			"arabic": "قصة مو معقولة!",
+			"arabicTashkeel": "قِصّة مو مَعقولة!",
+			"english": "An unbelievable story!",
+			"transliteration": "gissa moo ma3goola!",
+			"wordAlignments": [
+				{
+					"arabic": "قصة",
+					"english": "A story",
+					"transliteration": "gissa"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "معقولة!",
+					"english": "reasonable!",
+					"transliteration": "ma3goola!"
+				}
+			],
+			"targetWords": [
+				"Unbelievable"
+			]
+		},
+		{
+			"arabic": "خلاص يا عيال، اسكتوا!",
+			"arabicTashkeel": "خَلاص يا عِيال، اُسكُتوا!",
+			"english": "Enough, kids, be quiet!",
+			"transliteration": "khalaas ya 3iyaal, uskutu!",
+			"wordAlignments": [
+				{
+					"arabic": "خلاص",
+					"english": "Enough",
+					"transliteration": "khalaas"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "عيال،",
+					"english": "kids,",
+					"transliteration": "3iyaal,"
+				},
+				{
+					"arabic": "اسكتوا!",
+					"english": "be quiet!",
+					"transliteration": "uskutu!"
+				}
+			],
+			"targetWords": [
+				"Enough!"
+			]
+		},
+		{
+			"arabic": "قد إيش الوقت مشى بسرعة!",
+			"arabicTashkeel": "قَدّ إيش الوَقت مَشى بسُرعة!",
+			"english": "How quickly the time passed!",
+			"transliteration": "gadd eesh il-wagt masha b-sur3a!",
+			"wordAlignments": [
+				{
+					"arabic": "قد",
+					"english": "Amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "الوقت",
+					"english": "the time",
+					"transliteration": "il-wagt"
+				},
+				{
+					"arabic": "مشى",
+					"english": "went",
+					"transliteration": "masha"
+				},
+				{
+					"arabic": "بسرعة!",
+					"english": "quickly!",
+					"transliteration": "b-sur3a!"
+				}
+			],
+			"targetWords": [
+				"How ...! (exclamation)"
+			]
+		},
+		{
+			"arabic": "يا سلام، كيف سويتها؟",
+			"arabicTashkeel": "يا سَلام، كيف سَوّيتها؟",
+			"english": "Wow, how did you do that?",
+			"transliteration": "ya salaam, kaif sawweetaha?",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "سلام،",
+					"english": "peace,",
+					"transliteration": "salaam,"
+				},
+				{
+					"arabic": "كيف",
+					"english": "how",
+					"transliteration": "kaif"
+				},
+				{
+					"arabic": "سويتها؟",
+					"english": "did you do it?",
+					"transliteration": "sawweetaha?"
+				}
+			],
+			"targetWords": [
+				"Wow!"
+			]
+		},
+		{
+			"arabic": "ما شاء الله، عربيتك ممتازة.",
+			"arabicTashkeel": "ما شاء الله، عَرَبيتَك مُمتازة.",
+			"english": "Mashallah, your Arabic is excellent.",
+			"transliteration": "ma shaa2 allah, 3arabiyyatak mumtaaza.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "What",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله،",
+					"english": "God,",
+					"transliteration": "allah,"
+				},
+				{
+					"arabic": "عربيتك",
+					"english": "your Arabic is",
+					"transliteration": "3arabiyyatak"
+				},
+				{
+					"arabic": "ممتازة.",
+					"english": "excellent.",
+					"transliteration": "mumtaaza."
+				}
+			],
+			"targetWords": [
+				"Mashallah"
+			]
+		},
+		{
+			"arabic": "يا ريت عندي وقت أكتر.",
+			"arabicTashkeel": "يا ريت عِندي وَقت أكتَر.",
+			"english": "I wish I had more time.",
+			"transliteration": "ya reet 3indi wagt aktar.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "ريت",
+					"english": "would that",
+					"transliteration": "reet"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "وقت",
+					"english": "time",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "أكتر.",
+					"english": "more.",
+					"transliteration": "aktar."
+				}
+			],
+			"targetWords": [
+				"I wish"
+			]
+		},
+		{
+			"arabic": "يا شيخ، مو عدل!",
+			"arabicTashkeel": "يا شيخ، مو عَدل!",
+			"english": "Oh come on, that's not fair!",
+			"transliteration": "ya shaikh, moo 3adl!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "شيخ،",
+					"english": "sheikh,",
+					"transliteration": "shaikh,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "عدل!",
+					"english": "fair!",
+					"transliteration": "3adl!"
+				}
+			],
+			"targetWords": [
+				"Oh come on!"
+			]
+		},
+		{
+			"arabic": "برافو، يعطيك العافية!",
+			"arabicTashkeel": "بْرافو، يِعطيك العافية!",
+			"english": "Bravo, well done!",
+			"transliteration": "braafo, yi3teek il-3aafya!",
+			"wordAlignments": [
+				{
+					"arabic": "برافو،",
+					"english": "Bravo,",
+					"transliteration": "braafo,"
+				},
+				{
+					"arabic": "يعطيك",
+					"english": "may He give you",
+					"transliteration": "yi3teek"
+				},
+				{
+					"arabic": "العافية!",
+					"english": "health!",
+					"transliteration": "il-3aafya!"
+				}
+			],
+			"targetWords": [
+				"Bravo!"
+			]
+		},
+		{
+			"arabic": "يا حرام، فاتتني المباراة.",
+			"arabicTashkeel": "يا حَرام، فاتَتني المُباراة.",
+			"english": "What a shame, I missed the match.",
+			"transliteration": "ya 7araam, faatatni il-mubaaraa.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "Oh",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "حرام،",
+					"english": "pity,",
+					"transliteration": "7araam,"
+				},
+				{
+					"arabic": "فاتتني",
+					"english": "I missed",
+					"transliteration": "faatatni"
+				},
+				{
+					"arabic": "المباراة.",
+					"english": "the match.",
+					"transliteration": "il-mubaaraa."
+				}
+			],
+			"targetWords": [
+				"What a shame!"
+			]
+		},
+		{
+			"arabic": "زي أبوه بالضبط.",
+			"arabicTashkeel": "زَي أبوه بالضَّبط.",
+			"english": "Exactly like his father.",
+			"transliteration": "zay aboo biz-zabt.",
+			"wordAlignments": [
+				{
+					"arabic": "زي",
+					"english": "Like",
+					"transliteration": "zay"
+				},
+				{
+					"arabic": "أبوه",
+					"english": "his father",
+					"transliteration": "aboo"
+				},
+				{
+					"arabic": "بالضبط.",
+					"english": "exactly.",
+					"transliteration": "biz-zabt."
+				}
+			],
+			"targetWords": [
+				"Exactly"
+			]
+		},
+		{
+			"arabic": "طبعا لا!",
+			"arabicTashkeel": "طَبعاً لا!",
+			"english": "Of course not!",
+			"transliteration": "tab3an laa!",
+			"wordAlignments": [
+				{
+					"arabic": "طبعا",
+					"english": "Of course",
+					"transliteration": "tab3an"
+				},
+				{
+					"arabic": "لا!",
+					"english": "not!",
+					"transliteration": "laa!"
+				}
+			],
+			"targetWords": [
+				"Of course"
+			]
+		},
+		{
+			"arabic": "مو معقول قد إيش رخيص!",
+			"arabicTashkeel": "مو مَعقول قَدّ إيش رَخيص!",
+			"english": "It's unbelievable how cheap it is!",
+			"transliteration": "moo ma3gool gadd eesh rakhees!",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "معقول",
+					"english": "reasonable",
+					"transliteration": "ma3gool"
+				},
+				{
+					"arabic": "قد",
+					"english": "amount of",
+					"transliteration": "gadd"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "رخيص!",
+					"english": "cheap!",
+					"transliteration": "rakhees!"
+				}
+			],
+			"targetWords": [
+				"Unbelievable"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Final Match",
+			"sentences": [
+				{
+					"arabic": "أمس تفرجنا على النهائي في بيت صاحبي.",
+					"arabicTashkeel": "أمس تفَرَّجنا على النِّهائي في بيت صاحبي.",
+					"english": "Yesterday we watched the final at my friend's house.",
+					"transliteration": "ams tfarrajna 3ala in-nihaa2i fi bait saa7bi.",
+					"wordAlignments": [
+						{
+							"arabic": "أمس",
+							"english": "Yesterday",
+							"transliteration": "ams"
+						},
+						{
+							"arabic": "تفرجنا",
+							"english": "we watched",
+							"transliteration": "tfarrajna"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "النهائي",
+							"english": "the final",
+							"transliteration": "in-nihaa2i"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "بيت",
+							"english": "the house of",
+							"transliteration": "bait"
+						},
+						{
+							"arabic": "صاحبي.",
+							"english": "my friend.",
+							"transliteration": "saa7bi."
+						}
+					]
+				},
+				{
+					"arabic": "في الشوط الأول ضيعوا بلنتي. يا شيخ!",
+					"arabicTashkeel": "في الشّوط الأوَّل ضَيَّعوا بِلَنتي. يا شيخ!",
+					"english": "In the first half, they missed a penalty. Oh come on!",
+					"transliteration": "fi ish-shoot il-awwal dhayya3u bilanti. ya shaikh!",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "In",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "الشوط",
+							"english": "the half",
+							"transliteration": "ish-shoot"
+						},
+						{
+							"arabic": "الأول",
+							"english": "first",
+							"transliteration": "il-awwal"
+						},
+						{
+							"arabic": "ضيعوا",
+							"english": "they missed",
+							"transliteration": "dhayya3u"
+						},
+						{
+							"arabic": "بلنتي.",
+							"english": "a penalty.",
+							"transliteration": "bilanti."
+						},
+						{
+							"arabic": "يا",
+							"english": "Oh",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "شيخ!",
+							"english": "sheikh!",
+							"transliteration": "shaikh!"
+						}
+					]
+				},
+				{
+					"arabic": "بعدين، في آخر دقيقة، جول حلو! يا سلام!",
+					"arabicTashkeel": "بَعدين، في آخِر دَقيقة، جول حِلو! يا سَلام!",
+					"english": "Then, in the last minute, a beautiful goal! Wow!",
+					"transliteration": "ba3dain, fi aakhir dageega, gool 7ilu! ya salaam!",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين،",
+							"english": "Then,",
+							"transliteration": "ba3dain,"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "آخر",
+							"english": "the last",
+							"transliteration": "aakhir"
+						},
+						{
+							"arabic": "دقيقة،",
+							"english": "minute,",
+							"transliteration": "dageega,"
+						},
+						{
+							"arabic": "جول",
+							"english": "a goal",
+							"transliteration": "gool"
+						},
+						{
+							"arabic": "حلو!",
+							"english": "beautiful!",
+							"transliteration": "7ilu!"
+						},
+						{
+							"arabic": "يا",
+							"english": "Oh",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "سلام!",
+							"english": "peace!",
+							"transliteration": "salaam!"
+						}
+					]
+				},
+				{
+					"arabic": "الكل صاح: برافو! خطير!",
+					"arabicTashkeel": "الكُل صاح: بْرافو! خَطير!",
+					"english": "Everyone shouted: Bravo! Awesome!",
+					"transliteration": "il-kull saa7: braafo! khateer!",
+					"wordAlignments": [
+						{
+							"arabic": "الكل",
+							"english": "Everyone",
+							"transliteration": "il-kull"
+						},
+						{
+							"arabic": "صاح:",
+							"english": "shouted:",
+							"transliteration": "saa7:"
+						},
+						{
+							"arabic": "برافو!",
+							"english": "Bravo!",
+							"transliteration": "braafo!"
+						},
+						{
+							"arabic": "خطير!",
+							"english": "Awesome!",
+							"transliteration": "khateer!"
+						}
+					]
+				},
+				{
+					"arabic": "كان شي مو معقول.",
+					"arabicTashkeel": "كان شي مو مَعقول.",
+					"english": "It was unbelievable.",
+					"transliteration": "kaan shay moo ma3gool.",
+					"wordAlignments": [
+						{
+							"arabic": "كان",
+							"english": "It was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "شي",
+							"english": "a thing",
+							"transliteration": "shay"
+						},
+						{
+							"arabic": "مو",
+							"english": "not",
+							"transliteration": "moo"
+						},
+						{
+							"arabic": "معقول.",
+							"english": "reasonable.",
+							"transliteration": "ma3gool."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Good News",
+			"sentences": [
+				{
+					"arabic": "ولد عمي نجح بتقدير ممتاز. ما شاء الله!",
+					"arabicTashkeel": "وَلَد عَمّي نَجَح بِتَقدير مُمتاز. ما شاء الله!",
+					"english": "My cousin passed the exam with distinction. Mashallah!",
+					"transliteration": "walad 3ammi naja7 b-tagdeer mumtaaz. ma shaa2 allah!",
+					"wordAlignments": [
+						{
+							"arabic": "ولد",
+							"english": "The son of",
+							"transliteration": "walad"
+						},
+						{
+							"arabic": "عمي",
+							"english": "my uncle",
+							"transliteration": "3ammi"
+						},
+						{
+							"arabic": "نجح",
+							"english": "passed",
+							"transliteration": "naja7"
+						},
+						{
+							"arabic": "بتقدير",
+							"english": "with a grade of",
+							"transliteration": "b-tagdeer"
+						},
+						{
+							"arabic": "ممتاز.",
+							"english": "excellent.",
+							"transliteration": "mumtaaz."
+						},
+						{
+							"arabic": "ما",
+							"english": "What",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "شاء",
+							"english": "willed",
+							"transliteration": "shaa2"
+						},
+						{
+							"arabic": "الله!",
+							"english": "God!",
+							"transliteration": "allah!"
+						}
+					]
+				},
+				{
+					"arabic": "قد إيش أمه كانت مبسوطة!",
+					"arabicTashkeel": "قَدّ إيش أُمُّه كانَت مَبسوطة!",
+					"english": "How happy his mother was!",
+					"transliteration": "gadd eesh ummu kaanat mabsoota!",
+					"wordAlignments": [
+						{
+							"arabic": "قد",
+							"english": "Amount of",
+							"transliteration": "gadd"
+						},
+						{
+							"arabic": "إيش",
+							"english": "what",
+							"transliteration": "eesh"
+						},
+						{
+							"arabic": "أمه",
+							"english": "his mother",
+							"transliteration": "ummu"
+						},
+						{
+							"arabic": "كانت",
+							"english": "was",
+							"transliteration": "kaanat"
+						},
+						{
+							"arabic": "مبسوطة!",
+							"english": "happy!",
+							"transliteration": "mabsoota!"
+						}
+					]
+				},
+				{
+					"arabic": "يا ريت أخويا يذاكر زيه.",
+					"arabicTashkeel": "يا ريت أخويا يِذاكِر زَيُّه.",
+					"english": "I wish my brother would study like him.",
+					"transliteration": "ya reet akhooya yizaakir zayyu.",
+					"wordAlignments": [
+						{
+							"arabic": "يا",
+							"english": "Oh",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "ريت",
+							"english": "would that",
+							"transliteration": "reet"
+						},
+						{
+							"arabic": "أخويا",
+							"english": "my brother",
+							"transliteration": "akhooya"
+						},
+						{
+							"arabic": "يذاكر",
+							"english": "studies",
+							"transliteration": "yizaakir"
+						},
+						{
+							"arabic": "زيه.",
+							"english": "like him.",
+							"transliteration": "zayyu."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is watching a Saudi League match between Al-Ittihad and Al-Ahli with Jeddawi friends, and everyone reacts loudly to every moment.",
+		"studentRole": "A guest learning Saudi (Hijazi) Arabic.",
+		"otherRole": "An excitable Ittihad fan from Jeddah.",
+		"goalEnglish": "React to what happens with exclamations (wow, bravo, what a shame, unbelievable, oh come on) and agree or disagree with emphasis.",
+		"targetWords": [
+			"Wow!",
+			"Bravo!",
+			"What a shame!",
+			"Oh come on!",
+			"Unbelievable",
+			"Awesome!",
+			"Exactly",
+			"Of course"
+		]
+	}
+}

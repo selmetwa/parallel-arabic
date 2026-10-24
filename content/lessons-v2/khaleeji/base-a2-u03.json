@@ -1,0 +1,1769 @@
+{
+	"vocab": [
+		{
+			"arabic": "طباخ",
+			"arabicTashkeel": "طَبّاخ",
+			"english": "Stove",
+			"transliteration": "tabbaakh",
+			"wordAlignments": [
+				{
+					"arabic": "طباخ",
+					"english": "Stove",
+					"transliteration": "tabbaakh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قدر",
+			"arabicTashkeel": "قِدر",
+			"english": "Pot",
+			"transliteration": "jidir",
+			"wordAlignments": [
+				{
+					"arabic": "قدر",
+					"english": "Pot",
+					"transliteration": "jidir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "طاوة",
+			"arabicTashkeel": "طاوة",
+			"english": "Frying pan",
+			"transliteration": "taawa",
+			"wordAlignments": [
+				{
+					"arabic": "طاوة",
+					"english": "Frying pan",
+					"transliteration": "taawa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "سكين",
+			"arabicTashkeel": "سِكّين",
+			"english": "Knife",
+			"transliteration": "sichcheen",
+			"wordAlignments": [
+				{
+					"arabic": "سكين",
+					"english": "Knife",
+					"transliteration": "sichcheen"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خاشوقة",
+			"arabicTashkeel": "خاشوقة",
+			"english": "Spoon",
+			"transliteration": "khaashooga",
+			"wordAlignments": [
+				{
+					"arabic": "خاشوقة",
+					"english": "Spoon",
+					"transliteration": "khaashooga"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "شوكة",
+			"arabicTashkeel": "شوكة",
+			"english": "Fork",
+			"transliteration": "shooka",
+			"wordAlignments": [
+				{
+					"arabic": "شوكة",
+					"english": "Fork",
+					"transliteration": "shooka"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صحن",
+			"arabicTashkeel": "صَحن",
+			"english": "Plate",
+			"transliteration": "sa7an",
+			"wordAlignments": [
+				{
+					"arabic": "صحن",
+					"english": "Plate",
+					"transliteration": "sa7an"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إستكانة",
+			"arabicTashkeel": "إستِكانة",
+			"english": "Tea glass",
+			"transliteration": "istikaana",
+			"wordAlignments": [
+				{
+					"arabic": "إستكانة",
+					"english": "Tea glass",
+					"transliteration": "istikaana"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "زبدية",
+			"arabicTashkeel": "زِبدية",
+			"english": "Bowl",
+			"transliteration": "zibdiyya",
+			"wordAlignments": [
+				{
+					"arabic": "زبدية",
+					"english": "Bowl",
+					"transliteration": "zibdiyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "فرن",
+			"arabicTashkeel": "فِرن",
+			"english": "Oven",
+			"transliteration": "firn",
+			"wordAlignments": [
+				{
+					"arabic": "فرن",
+					"english": "Oven",
+					"transliteration": "firn"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يقلي",
+			"arabicTashkeel": "يِقلي",
+			"english": "He fries",
+			"transliteration": "yigli",
+			"wordAlignments": [
+				{
+					"arabic": "يقلي",
+					"english": "He fries",
+					"transliteration": "yigli"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "يغلي",
+			"arabicTashkeel": "يِغلي",
+			"english": "He boils",
+			"transliteration": "yighli",
+			"wordAlignments": [
+				{
+					"arabic": "يغلي",
+					"english": "He boils",
+					"transliteration": "yighli"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "يقطع",
+			"arabicTashkeel": "يْقَطِّع",
+			"english": "He cuts",
+			"transliteration": "ygatti3",
+			"wordAlignments": [
+				{
+					"arabic": "يقطع",
+					"english": "He cuts",
+					"transliteration": "ygatti3"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "ملح",
+			"arabicTashkeel": "مِلح",
+			"english": "Salt",
+			"transliteration": "mil7",
+			"wordAlignments": [
+				{
+					"arabic": "ملح",
+					"english": "Salt",
+					"transliteration": "mil7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "زيت",
+			"arabicTashkeel": "زيت",
+			"english": "Oil",
+			"transliteration": "zeet",
+			"wordAlignments": [
+				{
+					"arabic": "زيت",
+					"english": "Oil",
+					"transliteration": "zeet"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "القدر فوق الطباخ.",
+			"arabicTashkeel": "القِدر فوق الطَّبّاخ.",
+			"english": "The pot is on the stove.",
+			"transliteration": "il-jidir foog it-tabbaakh.",
+			"wordAlignments": [
+				{
+					"arabic": "القدر",
+					"english": "The pot is",
+					"transliteration": "il-jidir"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الطباخ.",
+					"english": "the stove.",
+					"transliteration": "it-tabbaakh."
+				}
+			],
+			"targetWords": [
+				"Pot",
+				"Stove"
+			]
+		},
+		{
+			"arabic": "حط زيت بالطاوة.",
+			"arabicTashkeel": "حُط زيت بالطّاوة.",
+			"english": "Put oil in the pan.",
+			"transliteration": "7utt zeet bit-taawa.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "زيت",
+					"english": "oil",
+					"transliteration": "zeet"
+				},
+				{
+					"arabic": "بالطاوة.",
+					"english": "in the pan.",
+					"transliteration": "bit-taawa."
+				}
+			],
+			"targetWords": [
+				"Oil",
+				"Frying pan"
+			]
+		},
+		{
+			"arabic": "السكين حاد.",
+			"arabicTashkeel": "السِّكّين حادّ.",
+			"english": "The knife is sharp.",
+			"transliteration": "is-sichcheen 7aadd.",
+			"wordAlignments": [
+				{
+					"arabic": "السكين",
+					"english": "The knife is",
+					"transliteration": "is-sichcheen"
+				},
+				{
+					"arabic": "حاد.",
+					"english": "sharp.",
+					"transliteration": "7aadd."
+				}
+			],
+			"targetWords": [
+				"Knife"
+			]
+		},
+		{
+			"arabic": "عطني خاشوقة.",
+			"arabicTashkeel": "عَطني خاشوقة.",
+			"english": "Give me a spoon.",
+			"transliteration": "3atni khaashooga.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "خاشوقة.",
+					"english": "a spoon.",
+					"transliteration": "khaashooga."
+				}
+			],
+			"targetWords": [
+				"Spoon"
+			]
+		},
+		{
+			"arabic": "وين الشوك؟",
+			"arabicTashkeel": "وين الشُّوَك؟",
+			"english": "Where are the forks?",
+			"transliteration": "ween ish-shuwak?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where are",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الشوك؟",
+					"english": "the forks?",
+					"transliteration": "ish-shuwak?"
+				}
+			],
+			"targetWords": [
+				"Fork"
+			]
+		},
+		{
+			"arabic": "حط العيش بالصحن.",
+			"arabicTashkeel": "حُط العيش بالصَّحن.",
+			"english": "Put the rice on the plate.",
+			"transliteration": "7utt il-3eesh bis-sa7an.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "العيش",
+					"english": "the rice",
+					"transliteration": "il-3eesh"
+				},
+				{
+					"arabic": "بالصحن.",
+					"english": "on the plate.",
+					"transliteration": "bis-sa7an."
+				}
+			],
+			"targetWords": [
+				"Plate"
+			]
+		},
+		{
+			"arabic": "إستكانة لو سمحت.",
+			"arabicTashkeel": "إستِكانة لو سَمَحت.",
+			"english": "A tea glass, please.",
+			"transliteration": "istikaana law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "إستكانة",
+					"english": "A tea glass",
+					"transliteration": "istikaana"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Tea glass"
+			]
+		},
+		{
+			"arabic": "زبدية شوربة.",
+			"arabicTashkeel": "زِبدية شوربة.",
+			"english": "A bowl of soup.",
+			"transliteration": "zibdiyya shoorba.",
+			"wordAlignments": [
+				{
+					"arabic": "زبدية",
+					"english": "A bowl of",
+					"transliteration": "zibdiyya"
+				},
+				{
+					"arabic": "شوربة.",
+					"english": "soup.",
+					"transliteration": "shoorba."
+				}
+			],
+			"targetWords": [
+				"Bowl"
+			]
+		},
+		{
+			"arabic": "الخبز بالفرن.",
+			"arabicTashkeel": "الخُبُز بالفِرن.",
+			"english": "The bread is in the oven.",
+			"transliteration": "il-khubuz bil-firn.",
+			"wordAlignments": [
+				{
+					"arabic": "الخبز",
+					"english": "The bread is",
+					"transliteration": "il-khubuz"
+				},
+				{
+					"arabic": "بالفرن.",
+					"english": "in the oven.",
+					"transliteration": "bil-firn."
+				}
+			],
+			"targetWords": [
+				"Oven"
+			]
+		},
+		{
+			"arabic": "أمي تقلي بيض.",
+			"arabicTashkeel": "أُمّي تِقلي بيض.",
+			"english": "My mom fries eggs.",
+			"transliteration": "ummi tigli beedh.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "تقلي",
+					"english": "fries",
+					"transliteration": "tigli"
+				},
+				{
+					"arabic": "بيض.",
+					"english": "eggs.",
+					"transliteration": "beedh."
+				}
+			],
+			"targetWords": [
+				"He fries"
+			]
+		},
+		{
+			"arabic": "إغلي الماي.",
+			"arabicTashkeel": "إغلي الماي.",
+			"english": "Boil the water.",
+			"transliteration": "ighli il-maay.",
+			"wordAlignments": [
+				{
+					"arabic": "إغلي",
+					"english": "Boil",
+					"transliteration": "ighli"
+				},
+				{
+					"arabic": "الماي.",
+					"english": "the water.",
+					"transliteration": "il-maay."
+				}
+			],
+			"targetWords": [
+				"He boils"
+			]
+		},
+		{
+			"arabic": "قطع الطماط بالسكين.",
+			"arabicTashkeel": "قَطِّع الطَّماط بالسِّكّين.",
+			"english": "Cut the tomatoes.",
+			"transliteration": "gatti3 it-tamaat bis-sichcheen.",
+			"wordAlignments": [
+				{
+					"arabic": "قطع",
+					"english": "Cut",
+					"transliteration": "gatti3"
+				},
+				{
+					"arabic": "الطماط",
+					"english": "the tomatoes",
+					"transliteration": "it-tamaat"
+				},
+				{
+					"arabic": "بالسكين.",
+					"english": "with the knife.",
+					"transliteration": "bis-sichcheen."
+				}
+			],
+			"targetWords": [
+				"He cuts",
+				"Knife"
+			]
+		},
+		{
+			"arabic": "شوي ملح.",
+			"arabicTashkeel": "شْوَي مِلح.",
+			"english": "A little salt.",
+			"transliteration": "shway mil7.",
+			"wordAlignments": [
+				{
+					"arabic": "شوي",
+					"english": "A little",
+					"transliteration": "shway"
+				},
+				{
+					"arabic": "ملح.",
+					"english": "salt.",
+					"transliteration": "mil7."
+				}
+			],
+			"targetWords": [
+				"Salt"
+			]
+		},
+		{
+			"arabic": "الزيت حار.",
+			"arabicTashkeel": "الزّيت حار.",
+			"english": "The oil is hot.",
+			"transliteration": "iz-zeet 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "الزيت",
+					"english": "The oil is",
+					"transliteration": "iz-zeet"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Oil"
+			]
+		},
+		{
+			"arabic": "شغل الطباخ.",
+			"arabicTashkeel": "شَغِّل الطَّبّاخ.",
+			"english": "Turn on the stove.",
+			"transliteration": "shaghghil it-tabbaakh.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Turn on",
+					"transliteration": "shaghghil"
+				},
+				{
+					"arabic": "الطباخ.",
+					"english": "the stove.",
+					"transliteration": "it-tabbaakh."
+				}
+			],
+			"targetWords": [
+				"Stove"
+			]
+		},
+		{
+			"arabic": "القدر كبير.",
+			"arabicTashkeel": "القِدر كْبير.",
+			"english": "The pot is big.",
+			"transliteration": "il-jidir chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "القدر",
+					"english": "The pot is",
+					"transliteration": "il-jidir"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Pot"
+			]
+		},
+		{
+			"arabic": "الطاوة وصخة.",
+			"arabicTashkeel": "الطّاوة وَصخة.",
+			"english": "The pan is dirty.",
+			"transliteration": "it-taawa waskha.",
+			"wordAlignments": [
+				{
+					"arabic": "الطاوة",
+					"english": "The pan is",
+					"transliteration": "it-taawa"
+				},
+				{
+					"arabic": "وصخة.",
+					"english": "dirty.",
+					"transliteration": "waskha."
+				}
+			],
+			"targetWords": [
+				"Frying pan"
+			]
+		},
+		{
+			"arabic": "قطع اللحم بالسكين.",
+			"arabicTashkeel": "قَطِّع اللَّحَم بالسِّكّين.",
+			"english": "Cut the meat with the knife.",
+			"transliteration": "gatti3 il-la7am bis-sichcheen.",
+			"wordAlignments": [
+				{
+					"arabic": "قطع",
+					"english": "Cut",
+					"transliteration": "gatti3"
+				},
+				{
+					"arabic": "اللحم",
+					"english": "the meat",
+					"transliteration": "il-la7am"
+				},
+				{
+					"arabic": "بالسكين.",
+					"english": "with the knife.",
+					"transliteration": "bis-sichcheen."
+				}
+			],
+			"targetWords": [
+				"He cuts",
+				"Knife"
+			]
+		},
+		{
+			"arabic": "آكل بالخاشوقة.",
+			"arabicTashkeel": "آكِل بالخاشوقة.",
+			"english": "I eat with a spoon.",
+			"transliteration": "aakil bil-khaashooga.",
+			"wordAlignments": [
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "بالخاشوقة.",
+					"english": "with the spoon.",
+					"transliteration": "bil-khaashooga."
+				}
+			],
+			"targetWords": [
+				"Spoon"
+			]
+		},
+		{
+			"arabic": "شوكة وسكين.",
+			"arabicTashkeel": "شوكة وسِكّين.",
+			"english": "A fork and a knife.",
+			"transliteration": "shooka w-sichcheen.",
+			"wordAlignments": [
+				{
+					"arabic": "شوكة",
+					"english": "A fork",
+					"transliteration": "shooka"
+				},
+				{
+					"arabic": "وسكين.",
+					"english": "and a knife.",
+					"transliteration": "w-sichcheen."
+				}
+			],
+			"targetWords": [
+				"Fork",
+				"Knife"
+			]
+		},
+		{
+			"arabic": "الصحون نظيفة.",
+			"arabicTashkeel": "الصُّحون نْظيفة.",
+			"english": "The plates are clean.",
+			"transliteration": "is-su7oon ndheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "الصحون",
+					"english": "The plates are",
+					"transliteration": "is-su7oon"
+				},
+				{
+					"arabic": "نظيفة.",
+					"english": "clean.",
+					"transliteration": "ndheefa."
+				}
+			],
+			"targetWords": [
+				"Plate"
+			]
+		},
+		{
+			"arabic": "الإستكانة صغيرة.",
+			"arabicTashkeel": "الإستِكانة صْغَيّرة.",
+			"english": "The tea glass is small.",
+			"transliteration": "il-istikaana sghayyra.",
+			"wordAlignments": [
+				{
+					"arabic": "الإستكانة",
+					"english": "The tea glass is",
+					"transliteration": "il-istikaana"
+				},
+				{
+					"arabic": "صغيرة.",
+					"english": "small.",
+					"transliteration": "sghayyra."
+				}
+			],
+			"targetWords": [
+				"Tea glass"
+			]
+		},
+		{
+			"arabic": "عطني زبدية.",
+			"arabicTashkeel": "عَطني زِبدية.",
+			"english": "Give me a bowl.",
+			"transliteration": "3atni zibdiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "زبدية.",
+					"english": "a bowl.",
+					"transliteration": "zibdiyya."
+				}
+			],
+			"targetWords": [
+				"Bowl"
+			]
+		},
+		{
+			"arabic": "الفرن حار.",
+			"arabicTashkeel": "الفِرن حار.",
+			"english": "The oven is hot.",
+			"transliteration": "il-firn 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "الفرن",
+					"english": "The oven is",
+					"transliteration": "il-firn"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Oven"
+			]
+		},
+		{
+			"arabic": "يقلي بطاط بالزيت.",
+			"arabicTashkeel": "يِقلي بَطاط بالزّيت.",
+			"english": "He fries potatoes in oil.",
+			"transliteration": "yigli bataat biz-zeet.",
+			"wordAlignments": [
+				{
+					"arabic": "يقلي",
+					"english": "He fries",
+					"transliteration": "yigli"
+				},
+				{
+					"arabic": "بطاط",
+					"english": "potatoes",
+					"transliteration": "bataat"
+				},
+				{
+					"arabic": "بالزيت.",
+					"english": "in oil.",
+					"transliteration": "biz-zeet."
+				}
+			],
+			"targetWords": [
+				"He fries",
+				"Oil"
+			]
+		},
+		{
+			"arabic": "الماي يغلي.",
+			"arabicTashkeel": "الماي يِغلي.",
+			"english": "The water is boiling.",
+			"transliteration": "il-maay yighli.",
+			"wordAlignments": [
+				{
+					"arabic": "الماي",
+					"english": "The water is",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "يغلي.",
+					"english": "boiling.",
+					"transliteration": "yighli."
+				}
+			],
+			"targetWords": [
+				"He boils"
+			]
+		},
+		{
+			"arabic": "يقطع الخبز.",
+			"arabicTashkeel": "يْقَطِّع الخُبُز.",
+			"english": "He cuts the bread.",
+			"transliteration": "ygatti3 il-khubuz.",
+			"wordAlignments": [
+				{
+					"arabic": "يقطع",
+					"english": "He cuts",
+					"transliteration": "ygatti3"
+				},
+				{
+					"arabic": "الخبز.",
+					"english": "the bread.",
+					"transliteration": "il-khubuz."
+				}
+			],
+			"targetWords": [
+				"He cuts"
+			]
+		},
+		{
+			"arabic": "وين الملح؟",
+			"arabicTashkeel": "وين المِلح؟",
+			"english": "Where is the salt?",
+			"transliteration": "ween il-mil7?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الملح؟",
+					"english": "the salt?",
+					"transliteration": "il-mil7?"
+				}
+			],
+			"targetWords": [
+				"Salt"
+			]
+		},
+		{
+			"arabic": "زيت زيتون.",
+			"arabicTashkeel": "زيت زيتون.",
+			"english": "Olive oil.",
+			"transliteration": "zeet zaitoon.",
+			"wordAlignments": [
+				{
+					"arabic": "زيت",
+					"english": "Oil of",
+					"transliteration": "zeet"
+				},
+				{
+					"arabic": "زيتون.",
+					"english": "olive.",
+					"transliteration": "zaitoon."
+				}
+			],
+			"targetWords": [
+				"Oil"
+			]
+		},
+		{
+			"arabic": "الطباخ جديد.",
+			"arabicTashkeel": "الطَّبّاخ جْديد.",
+			"english": "The stove is new.",
+			"transliteration": "it-tabbaakh ydeed.",
+			"wordAlignments": [
+				{
+					"arabic": "الطباخ",
+					"english": "The stove is",
+					"transliteration": "it-tabbaakh"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "ydeed."
+				}
+			],
+			"targetWords": [
+				"Stove"
+			]
+		},
+		{
+			"arabic": "العيش بالقدر.",
+			"arabicTashkeel": "العيش بالقِدر.",
+			"english": "The rice is in the pot.",
+			"transliteration": "il-3eesh bil-jidir.",
+			"wordAlignments": [
+				{
+					"arabic": "العيش",
+					"english": "The rice is",
+					"transliteration": "il-3eesh"
+				},
+				{
+					"arabic": "بالقدر.",
+					"english": "in the pot.",
+					"transliteration": "bil-jidir."
+				}
+			],
+			"targetWords": [
+				"Pot"
+			]
+		},
+		{
+			"arabic": "إغسل الطاوة.",
+			"arabicTashkeel": "إغسِل الطّاوة.",
+			"english": "Wash the pan.",
+			"transliteration": "ighsil it-taawa.",
+			"wordAlignments": [
+				{
+					"arabic": "إغسل",
+					"english": "Wash",
+					"transliteration": "ighsil"
+				},
+				{
+					"arabic": "الطاوة.",
+					"english": "the pan.",
+					"transliteration": "it-taawa."
+				}
+			],
+			"targetWords": [
+				"Frying pan"
+			]
+		},
+		{
+			"arabic": "دير بالك، السكين!",
+			"arabicTashkeel": "دير بالَك، السِّكّين!",
+			"english": "Be careful, the knife!",
+			"transliteration": "deer baalak, is-sichcheen!",
+			"wordAlignments": [
+				{
+					"arabic": "دير",
+					"english": "Take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك،",
+					"english": "care,",
+					"transliteration": "baalak,"
+				},
+				{
+					"arabic": "السكين!",
+					"english": "the knife!",
+					"transliteration": "is-sichcheen!"
+				}
+			],
+			"targetWords": [
+				"Knife"
+			]
+		},
+		{
+			"arabic": "خاشوقة كبيرة.",
+			"arabicTashkeel": "خاشوقة كْبيرة.",
+			"english": "A big spoon.",
+			"transliteration": "khaashooga chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "خاشوقة",
+					"english": "A spoon",
+					"transliteration": "khaashooga"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Spoon"
+			]
+		},
+		{
+			"arabic": "ما عندي شوكة.",
+			"arabicTashkeel": "ما عِندي شوكة.",
+			"english": "I don't have a fork.",
+			"transliteration": "ma 3indi shooka.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "شوكة.",
+					"english": "a fork.",
+					"transliteration": "shooka."
+				}
+			],
+			"targetWords": [
+				"Fork"
+			]
+		},
+		{
+			"arabic": "صحن مكبوس.",
+			"arabicTashkeel": "صَحن مَكبوس.",
+			"english": "A plate of machboos.",
+			"transliteration": "sa7an machboos.",
+			"wordAlignments": [
+				{
+					"arabic": "صحن",
+					"english": "A plate of",
+					"transliteration": "sa7an"
+				},
+				{
+					"arabic": "مكبوس.",
+					"english": "machboos.",
+					"transliteration": "machboos."
+				}
+			],
+			"targetWords": [
+				"Plate"
+			]
+		},
+		{
+			"arabic": "إغسل الإستكانات.",
+			"arabicTashkeel": "إغسِل الإستِكانات.",
+			"english": "Wash the tea glasses.",
+			"transliteration": "ighsil il-istikaanaat.",
+			"wordAlignments": [
+				{
+					"arabic": "إغسل",
+					"english": "Wash",
+					"transliteration": "ighsil"
+				},
+				{
+					"arabic": "الإستكانات.",
+					"english": "the tea glasses.",
+					"transliteration": "il-istikaanaat."
+				}
+			],
+			"targetWords": [
+				"Tea glass"
+			]
+		},
+		{
+			"arabic": "زبدية لبن.",
+			"arabicTashkeel": "زِبدية لَبَن.",
+			"english": "A bowl of yogurt.",
+			"transliteration": "zibdiyya laban.",
+			"wordAlignments": [
+				{
+					"arabic": "زبدية",
+					"english": "A bowl of",
+					"transliteration": "zibdiyya"
+				},
+				{
+					"arabic": "لبن.",
+					"english": "yogurt.",
+					"transliteration": "laban."
+				}
+			],
+			"targetWords": [
+				"Bowl"
+			]
+		},
+		{
+			"arabic": "حط الدجاج بالفرن.",
+			"arabicTashkeel": "حُط الدِّجاج بالفِرن.",
+			"english": "Put the chicken in the oven.",
+			"transliteration": "7utt id-diyaay bil-firn.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "الدجاج",
+					"english": "the chicken",
+					"transliteration": "id-diyaay"
+				},
+				{
+					"arabic": "بالفرن.",
+					"english": "in the oven.",
+					"transliteration": "bil-firn."
+				}
+			],
+			"targetWords": [
+				"Oven"
+			]
+		},
+		{
+			"arabic": "إقلي البصل.",
+			"arabicTashkeel": "إقلي البَصَل.",
+			"english": "Fry the onions.",
+			"transliteration": "igli il-basal.",
+			"wordAlignments": [
+				{
+					"arabic": "إقلي",
+					"english": "Fry",
+					"transliteration": "igli"
+				},
+				{
+					"arabic": "البصل.",
+					"english": "the onions.",
+					"transliteration": "il-basal."
+				}
+			],
+			"targetWords": [
+				"He fries"
+			]
+		},
+		{
+			"arabic": "إغلي البيض عشر دقايق.",
+			"arabicTashkeel": "إغلي البيض عَشر دَقايِق.",
+			"english": "Boil the eggs for ten minutes.",
+			"transliteration": "ighli il-beedh 3ashar dagaayig.",
+			"wordAlignments": [
+				{
+					"arabic": "إغلي",
+					"english": "Boil",
+					"transliteration": "ighli"
+				},
+				{
+					"arabic": "البيض",
+					"english": "the eggs",
+					"transliteration": "il-beedh"
+				},
+				{
+					"arabic": "عشر",
+					"english": "ten",
+					"transliteration": "3ashar"
+				},
+				{
+					"arabic": "دقايق.",
+					"english": "minutes.",
+					"transliteration": "dagaayig."
+				}
+			],
+			"targetWords": [
+				"He boils"
+			]
+		},
+		{
+			"arabic": "قطع البصل صغار.",
+			"arabicTashkeel": "قَطِّع البَصَل صْغار.",
+			"english": "Cut the onions small.",
+			"transliteration": "gatti3 il-basal sghaar.",
+			"wordAlignments": [
+				{
+					"arabic": "قطع",
+					"english": "Cut",
+					"transliteration": "gatti3"
+				},
+				{
+					"arabic": "البصل",
+					"english": "the onions",
+					"transliteration": "il-basal"
+				},
+				{
+					"arabic": "صغار.",
+					"english": "small.",
+					"transliteration": "sghaar."
+				}
+			],
+			"targetWords": [
+				"He cuts"
+			]
+		},
+		{
+			"arabic": "الملح وايد!",
+			"arabicTashkeel": "المِلح وايد!",
+			"english": "Too much salt!",
+			"transliteration": "il-mil7 waayid!",
+			"wordAlignments": [
+				{
+					"arabic": "الملح",
+					"english": "The salt is",
+					"transliteration": "il-mil7"
+				},
+				{
+					"arabic": "وايد!",
+					"english": "too much!",
+					"transliteration": "waayid!"
+				}
+			],
+			"targetWords": [
+				"Salt"
+			]
+		},
+		{
+			"arabic": "شوي زيت.",
+			"arabicTashkeel": "شْوَي زيت.",
+			"english": "A little oil.",
+			"transliteration": "shway zeet.",
+			"wordAlignments": [
+				{
+					"arabic": "شوي",
+					"english": "A little",
+					"transliteration": "shway"
+				},
+				{
+					"arabic": "زيت.",
+					"english": "oil.",
+					"transliteration": "zeet."
+				}
+			],
+			"targetWords": [
+				"Oil"
+			]
+		},
+		{
+			"arabic": "بند الطباخ.",
+			"arabicTashkeel": "بَنِّد الطَّبّاخ.",
+			"english": "Turn off the stove.",
+			"transliteration": "bannid it-tabbaakh.",
+			"wordAlignments": [
+				{
+					"arabic": "بند",
+					"english": "Turn off",
+					"transliteration": "bannid"
+				},
+				{
+					"arabic": "الطباخ.",
+					"english": "the stove.",
+					"transliteration": "it-tabbaakh."
+				}
+			],
+			"targetWords": [
+				"Stove"
+			]
+		},
+		{
+			"arabic": "قدر الهريس.",
+			"arabicTashkeel": "قِدر الهَريس.",
+			"english": "The pot of harees.",
+			"transliteration": "jidir il-harees.",
+			"wordAlignments": [
+				{
+					"arabic": "قدر",
+					"english": "The pot of",
+					"transliteration": "jidir"
+				},
+				{
+					"arabic": "الهريس.",
+					"english": "harees.",
+					"transliteration": "il-harees."
+				}
+			],
+			"targetWords": [
+				"Pot"
+			]
+		},
+		{
+			"arabic": "بيض بالطاوة.",
+			"arabicTashkeel": "بيض بالطّاوة.",
+			"english": "Eggs in the frying pan.",
+			"transliteration": "beedh bit-taawa.",
+			"wordAlignments": [
+				{
+					"arabic": "بيض",
+					"english": "Eggs",
+					"transliteration": "beedh"
+				},
+				{
+					"arabic": "بالطاوة.",
+					"english": "in the pan.",
+					"transliteration": "bit-taawa."
+				}
+			],
+			"targetWords": [
+				"Frying pan"
+			]
+		},
+		{
+			"arabic": "السكين على الطاولة.",
+			"arabicTashkeel": "السِّكّين على الطّاوِلة.",
+			"english": "The knife is on the table.",
+			"transliteration": "is-sichcheen 3ala it-taawla.",
+			"wordAlignments": [
+				{
+					"arabic": "السكين",
+					"english": "The knife is",
+					"transliteration": "is-sichcheen"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الطاولة.",
+					"english": "the table.",
+					"transliteration": "it-taawla."
+				}
+			],
+			"targetWords": [
+				"Knife"
+			]
+		},
+		{
+			"arabic": "الخاشوقة بالزبدية.",
+			"arabicTashkeel": "الخاشوقة بالزِّبدية.",
+			"english": "The spoon is in the bowl.",
+			"transliteration": "il-khaashooga biz-zibdiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الخاشوقة",
+					"english": "The spoon is",
+					"transliteration": "il-khaashooga"
+				},
+				{
+					"arabic": "بالزبدية.",
+					"english": "in the bowl.",
+					"transliteration": "biz-zibdiyya."
+				}
+			],
+			"targetWords": [
+				"Spoon",
+				"Bowl"
+			]
+		},
+		{
+			"arabic": "شوك وخواشيق.",
+			"arabicTashkeel": "شُوَك وخَواشيق.",
+			"english": "Forks and spoons.",
+			"transliteration": "shuwak w-khawaasheeg.",
+			"wordAlignments": [
+				{
+					"arabic": "شوك",
+					"english": "Forks",
+					"transliteration": "shuwak"
+				},
+				{
+					"arabic": "وخواشيق.",
+					"english": "and spoons.",
+					"transliteration": "w-khawaasheeg."
+				}
+			],
+			"targetWords": [
+				"Fork",
+				"Spoon"
+			]
+		},
+		{
+			"arabic": "صحن كبير.",
+			"arabicTashkeel": "صَحن كْبير.",
+			"english": "A big plate.",
+			"transliteration": "sa7an chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "صحن",
+					"english": "A plate",
+					"transliteration": "sa7an"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Plate"
+			]
+		},
+		{
+			"arabic": "شاي بإستكانة.",
+			"arabicTashkeel": "شاي بإستِكانة.",
+			"english": "Tea in a tea glass.",
+			"transliteration": "chaay b-istikaana.",
+			"wordAlignments": [
+				{
+					"arabic": "شاي",
+					"english": "Tea",
+					"transliteration": "chaay"
+				},
+				{
+					"arabic": "بإستكانة.",
+					"english": "in a tea glass.",
+					"transliteration": "b-istikaana."
+				}
+			],
+			"targetWords": [
+				"Tea glass"
+			]
+		},
+		{
+			"arabic": "الزبادي بالمطبخ.",
+			"arabicTashkeel": "الزَّبادي بالمَطبَخ.",
+			"english": "The bowls are in the kitchen.",
+			"transliteration": "iz-zabaadi bil-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "الزبادي",
+					"english": "The bowls are",
+					"transliteration": "iz-zabaadi"
+				},
+				{
+					"arabic": "بالمطبخ.",
+					"english": "in the kitchen.",
+					"transliteration": "bil-matbakh."
+				}
+			],
+			"targetWords": [
+				"Bowl"
+			]
+		},
+		{
+			"arabic": "الفرن خربان.",
+			"arabicTashkeel": "الفِرن خَربان.",
+			"english": "The oven is not working.",
+			"transliteration": "il-firn kharbaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الفرن",
+					"english": "The oven",
+					"transliteration": "il-firn"
+				},
+				{
+					"arabic": "خربان.",
+					"english": "is broken.",
+					"transliteration": "kharbaan."
+				}
+			],
+			"targetWords": [
+				"Oven"
+			]
+		},
+		{
+			"arabic": "تقلي سمك.",
+			"arabicTashkeel": "تِقلي سِمَك.",
+			"english": "She fries fish.",
+			"transliteration": "tigli simach.",
+			"wordAlignments": [
+				{
+					"arabic": "تقلي",
+					"english": "She fries",
+					"transliteration": "tigli"
+				},
+				{
+					"arabic": "سمك.",
+					"english": "fish.",
+					"transliteration": "simach."
+				}
+			],
+			"targetWords": [
+				"He fries"
+			]
+		},
+		{
+			"arabic": "يغلي ماي حق الشاي.",
+			"arabicTashkeel": "يِغلي ماي حَق الشّاي.",
+			"english": "He boils water for tea.",
+			"transliteration": "yighli maay 7agg ish-shaay.",
+			"wordAlignments": [
+				{
+					"arabic": "يغلي",
+					"english": "He boils",
+					"transliteration": "yighli"
+				},
+				{
+					"arabic": "ماي",
+					"english": "water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الشاي.",
+					"english": "the tea.",
+					"transliteration": "ish-shaay."
+				}
+			],
+			"targetWords": [
+				"He boils"
+			]
+		},
+		{
+			"arabic": "تقطع الخضرة.",
+			"arabicTashkeel": "تْقَطِّع الخُضرة.",
+			"english": "She cuts the vegetables.",
+			"transliteration": "tgatti3 il-khudhra.",
+			"wordAlignments": [
+				{
+					"arabic": "تقطع",
+					"english": "She cuts",
+					"transliteration": "tgatti3"
+				},
+				{
+					"arabic": "الخضرة.",
+					"english": "the vegetables.",
+					"transliteration": "il-khudhra."
+				}
+			],
+			"targetWords": [
+				"He cuts"
+			]
+		},
+		{
+			"arabic": "ملح وزيت.",
+			"arabicTashkeel": "مِلح وزيت.",
+			"english": "Salt and oil.",
+			"transliteration": "mil7 w-zeet.",
+			"wordAlignments": [
+				{
+					"arabic": "ملح",
+					"english": "Salt",
+					"transliteration": "mil7"
+				},
+				{
+					"arabic": "وزيت.",
+					"english": "and oil.",
+					"transliteration": "w-zeet."
+				}
+			],
+			"targetWords": [
+				"Salt",
+				"Oil"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Cooking Dinner",
+			"sentences": [
+				{
+					"arabic": "أشغل الطباخ وأحط القدر فوقه.",
+					"arabicTashkeel": "أشَغِّل الطَّبّاخ وأحُط القِدر فوقَه.",
+					"english": "I turn on the stove and put the pot on it.",
+					"transliteration": "ashaghghil it-tabbaakh w-a7utt il-jidir fooga.",
+					"wordAlignments": [
+						{
+							"arabic": "أشغل",
+							"english": "I turn on",
+							"transliteration": "ashaghghil"
+						},
+						{
+							"arabic": "الطباخ",
+							"english": "the stove",
+							"transliteration": "it-tabbaakh"
+						},
+						{
+							"arabic": "وأحط",
+							"english": "and put",
+							"transliteration": "w-a7utt"
+						},
+						{
+							"arabic": "القدر",
+							"english": "the pot",
+							"transliteration": "il-jidir"
+						},
+						{
+							"arabic": "فوقه.",
+							"english": "on it.",
+							"transliteration": "fooga."
+						}
+					]
+				},
+				{
+					"arabic": "أغلي الماي وأحط العيش.",
+					"arabicTashkeel": "أغلي الماي وأحُط العيش.",
+					"english": "I boil the water and put the rice in.",
+					"transliteration": "aghli il-maay w-a7utt il-3eesh.",
+					"wordAlignments": [
+						{
+							"arabic": "أغلي",
+							"english": "I boil",
+							"transliteration": "aghli"
+						},
+						{
+							"arabic": "الماي",
+							"english": "the water",
+							"transliteration": "il-maay"
+						},
+						{
+							"arabic": "وأحط",
+							"english": "and put",
+							"transliteration": "w-a7utt"
+						},
+						{
+							"arabic": "العيش.",
+							"english": "the rice.",
+							"transliteration": "il-3eesh."
+						}
+					]
+				},
+				{
+					"arabic": "أقطع البصل بالسكين وأقليه بالزيت.",
+					"arabicTashkeel": "أقَطِّع البَصَل بالسِّكّين وأقليه بالزّيت.",
+					"english": "I cut the onions with the knife and fry them in oil.",
+					"transliteration": "agatti3 il-basal bis-sichcheen w-aglee biz-zeet.",
+					"wordAlignments": [
+						{
+							"arabic": "أقطع",
+							"english": "I cut",
+							"transliteration": "agatti3"
+						},
+						{
+							"arabic": "البصل",
+							"english": "the onions",
+							"transliteration": "il-basal"
+						},
+						{
+							"arabic": "بالسكين",
+							"english": "with the knife",
+							"transliteration": "bis-sichcheen"
+						},
+						{
+							"arabic": "وأقليه",
+							"english": "and fry it",
+							"transliteration": "w-aglee"
+						},
+						{
+							"arabic": "بالزيت.",
+							"english": "in oil.",
+							"transliteration": "biz-zeet."
+						}
+					]
+				},
+				{
+					"arabic": "شوي ملح، والعشا جاهز!",
+					"arabicTashkeel": "شْوَي مِلح، والعَشا جاهِز!",
+					"english": "A little salt, and dinner is ready!",
+					"transliteration": "shway mil7, w-il-3asha jaahiz!",
+					"wordAlignments": [
+						{
+							"arabic": "شوي",
+							"english": "A little",
+							"transliteration": "shway"
+						},
+						{
+							"arabic": "ملح،",
+							"english": "salt,",
+							"transliteration": "mil7,"
+						},
+						{
+							"arabic": "والعشا",
+							"english": "and dinner is",
+							"transliteration": "w-il-3asha"
+						},
+						{
+							"arabic": "جاهز!",
+							"english": "ready!",
+							"transliteration": "jaahiz!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Setting the Table",
+			"sentences": [
+				{
+					"arabic": "حط الصحون على الطاولة.",
+					"arabicTashkeel": "حُط الصُّحون على الطّاوِلة.",
+					"english": "Put the plates on the table.",
+					"transliteration": "7utt is-su7oon 3ala it-taawla.",
+					"wordAlignments": [
+						{
+							"arabic": "حط",
+							"english": "Put",
+							"transliteration": "7utt"
+						},
+						{
+							"arabic": "الصحون",
+							"english": "the plates",
+							"transliteration": "is-su7oon"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الطاولة.",
+							"english": "the table.",
+							"transliteration": "it-taawla."
+						}
+					]
+				},
+				{
+					"arabic": "وين الخواشيق والشوك؟",
+					"arabicTashkeel": "وين الخَواشيق والشُّوَك؟",
+					"english": "Where are the spoons and forks?",
+					"transliteration": "ween il-khawaasheeg w-ish-shuwak?",
+					"wordAlignments": [
+						{
+							"arabic": "وين",
+							"english": "Where are",
+							"transliteration": "ween"
+						},
+						{
+							"arabic": "الخواشيق",
+							"english": "the spoons",
+							"transliteration": "il-khawaasheeg"
+						},
+						{
+							"arabic": "والشوك؟",
+							"english": "and the forks?",
+							"transliteration": "w-ish-shuwak?"
+						}
+					]
+				},
+				{
+					"arabic": "والإستكانات حق بعد العشا.",
+					"arabicTashkeel": "والإستِكانات حَق بَعد العَشا.",
+					"english": "And the tea glasses for after dinner.",
+					"transliteration": "w-il-istikaanaat 7agg ba3d il-3asha.",
+					"wordAlignments": [
+						{
+							"arabic": "والإستكانات",
+							"english": "And the tea glasses",
+							"transliteration": "w-il-istikaanaat"
+						},
+						{
+							"arabic": "حق",
+							"english": "for",
+							"transliteration": "7agg"
+						},
+						{
+							"arabic": "بعد",
+							"english": "after",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "العشا.",
+							"english": "dinner.",
+							"transliteration": "il-3asha."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is helping an Emirati friend's mother cook machboos in her kitchen in Al Ain.",
+		"studentRole": "A guest learning Gulf Arabic who wants to help.",
+		"otherRole": "The friend's mother, who gives instructions and asks for tools.",
+		"goalEnglish": "Ask where the tools are, follow instructions to cut, fry and boil, and help set the table.",
+		"targetWords": [
+			"Pot",
+			"Knife",
+			"Spoon",
+			"Plate",
+			"Stove",
+			"He cuts",
+			"He fries",
+			"Salt"
+		]
+	}
+}

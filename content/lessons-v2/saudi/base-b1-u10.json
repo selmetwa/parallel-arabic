@@ -1,0 +1,2271 @@
+{
+	"vocab": [
+		{
+			"arabic": "أتمنى",
+			"arabicTashkeel": "أتمَنّى",
+			"english": "I hope / I wish",
+			"transliteration": "atmanna",
+			"wordAlignments": [
+				{
+					"arabic": "أتمنى",
+					"english": "I wish",
+					"transliteration": "atmanna"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "نفسي",
+			"arabicTashkeel": "نِفسي",
+			"english": "I'd really love to",
+			"transliteration": "nifsi",
+			"wordAlignments": [
+				{
+					"arabic": "نفسي",
+					"english": "My soul",
+					"transliteration": "nifsi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إن شاء الله",
+			"arabicTashkeel": "إن شاء الله",
+			"english": "Hopefully",
+			"transliteration": "in shaa2 allah",
+			"wordAlignments": [
+				{
+					"arabic": "إن",
+					"english": "If",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "حلم",
+			"arabicTashkeel": "حِلم",
+			"english": "Dream",
+			"transliteration": "7ilm",
+			"wordAlignments": [
+				{
+					"arabic": "حلم",
+					"english": "Dream",
+					"transliteration": "7ilm"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "لما أكبر",
+			"arabicTashkeel": "لَمّا أكبَر",
+			"english": "When I grow up",
+			"transliteration": "lamma akbar",
+			"wordAlignments": [
+				{
+					"arabic": "لما",
+					"english": "When",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "I grow up",
+					"transliteration": "akbar"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "طموح",
+			"arabicTashkeel": "طُموح",
+			"english": "Ambition",
+			"transliteration": "tumoo7",
+			"wordAlignments": [
+				{
+					"arabic": "طموح",
+					"english": "Ambition",
+					"transliteration": "tumoo7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "هدف",
+			"arabicTashkeel": "هَدَف",
+			"english": "Goal",
+			"transliteration": "hadaf",
+			"wordAlignments": [
+				{
+					"arabic": "هدف",
+					"english": "Goal",
+					"transliteration": "hadaf"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مستقبل",
+			"arabicTashkeel": "مُستَقبَل",
+			"english": "Future",
+			"transliteration": "mustagbal",
+			"wordAlignments": [
+				{
+					"arabic": "مستقبل",
+					"english": "Future",
+					"transliteration": "mustagbal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أصير",
+			"arabicTashkeel": "أصير",
+			"english": "I become",
+			"transliteration": "aseer",
+			"wordAlignments": [
+				{
+					"arabic": "أصير",
+					"english": "I become",
+					"transliteration": "aseer"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "نجاح",
+			"arabicTashkeel": "نَجاح",
+			"english": "Success",
+			"transliteration": "najaa7",
+			"wordAlignments": [
+				{
+					"arabic": "نجاح",
+					"english": "Success",
+					"transliteration": "najaa7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أحقق",
+			"arabicTashkeel": "أحَقِّق",
+			"english": "I achieve",
+			"transliteration": "a7aggig",
+			"wordAlignments": [
+				{
+					"arabic": "أحقق",
+					"english": "I achieve",
+					"transliteration": "a7aggig"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "خطة",
+			"arabicTashkeel": "خُطّة",
+			"english": "Plan",
+			"transliteration": "khutta",
+			"wordAlignments": [
+				{
+					"arabic": "خطة",
+					"english": "Plan",
+					"transliteration": "khutta"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "يوم من الأيام",
+			"arabicTashkeel": "يوم مِن الأيّام",
+			"english": "Someday",
+			"transliteration": "yoom min il-ayyaam",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "A day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الأيام",
+					"english": "the days",
+					"transliteration": "il-ayyaam"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "برا",
+			"arabicTashkeel": "بَرّا",
+			"english": "Abroad",
+			"transliteration": "barra",
+			"wordAlignments": [
+				{
+					"arabic": "برا",
+					"english": "Outside",
+					"transliteration": "barra"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أمل",
+			"arabicTashkeel": "أمَل",
+			"english": "Hope",
+			"transliteration": "amal",
+			"wordAlignments": [
+				{
+					"arabic": "أمل",
+					"english": "Hope",
+					"transliteration": "amal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أتمنى لك النجاح.",
+			"arabicTashkeel": "أتمَنّى لَك النَّجاح.",
+			"english": "I hope you succeed.",
+			"transliteration": "atmanna lak in-najaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "أتمنى",
+					"english": "I wish",
+					"transliteration": "atmanna"
+				},
+				{
+					"arabic": "لك",
+					"english": "for you",
+					"transliteration": "lak"
+				},
+				{
+					"arabic": "النجاح.",
+					"english": "the success.",
+					"transliteration": "in-najaa7."
+				}
+			],
+			"targetWords": [
+				"I hope / I wish"
+			]
+		},
+		{
+			"arabic": "نفسي أزور اليابان.",
+			"arabicTashkeel": "نِفسي أزور اليابان.",
+			"english": "I'd really love to visit Japan.",
+			"transliteration": "nifsi azoor il-yaabaan.",
+			"wordAlignments": [
+				{
+					"arabic": "نفسي",
+					"english": "My soul wants",
+					"transliteration": "nifsi"
+				},
+				{
+					"arabic": "أزور",
+					"english": "I visit",
+					"transliteration": "azoor"
+				},
+				{
+					"arabic": "اليابان.",
+					"english": "Japan.",
+					"transliteration": "il-yaabaan."
+				}
+			],
+			"targetWords": [
+				"I'd really love to"
+			]
+		},
+		{
+			"arabic": "إن شاء الله نتقابل بكرة.",
+			"arabicTashkeel": "إن شاء الله نِتقابَل بُكرة.",
+			"english": "Hopefully we'll meet tomorrow.",
+			"transliteration": "in shaa2 allah nitgaabal bukra.",
+			"wordAlignments": [
+				{
+					"arabic": "إن",
+					"english": "If",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "نتقابل",
+					"english": "we meet",
+					"transliteration": "nitgaabal"
+				},
+				{
+					"arabic": "بكرة.",
+					"english": "tomorrow.",
+					"transliteration": "bukra."
+				}
+			],
+			"targetWords": [
+				"Hopefully"
+			]
+		},
+		{
+			"arabic": "حلمي أفتح مطعم.",
+			"arabicTashkeel": "حِلمي أفتَح مَطعَم.",
+			"english": "My dream is to open a restaurant.",
+			"transliteration": "7ilmi afta7 mat3am.",
+			"wordAlignments": [
+				{
+					"arabic": "حلمي",
+					"english": "My dream is",
+					"transliteration": "7ilmi"
+				},
+				{
+					"arabic": "أفتح",
+					"english": "I open",
+					"transliteration": "afta7"
+				},
+				{
+					"arabic": "مطعم.",
+					"english": "a restaurant.",
+					"transliteration": "mat3am."
+				}
+			],
+			"targetWords": [
+				"Dream"
+			]
+		},
+		{
+			"arabic": "لما أكبر أبغى أصير طيار.",
+			"arabicTashkeel": "لَمّا أكبَر أبغى أصير طَيّار.",
+			"english": "When I grow up I want to be a pilot.",
+			"transliteration": "lamma akbar abgha aseer tayyaar.",
+			"wordAlignments": [
+				{
+					"arabic": "لما",
+					"english": "When",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "I grow up",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أصير",
+					"english": "I become",
+					"transliteration": "aseer"
+				},
+				{
+					"arabic": "طيار.",
+					"english": "a pilot.",
+					"transliteration": "tayyaar."
+				}
+			],
+			"targetWords": [
+				"When I grow up"
+			]
+		},
+		{
+			"arabic": "عندها طموح كبير.",
+			"arabicTashkeel": "عِندَها طُموح كبير.",
+			"english": "She has big ambition.",
+			"transliteration": "3indaha tumoo7 kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "عندها",
+					"english": "She has",
+					"transliteration": "3indaha"
+				},
+				{
+					"arabic": "طموح",
+					"english": "ambition",
+					"transliteration": "tumoo7"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Ambition"
+			]
+		},
+		{
+			"arabic": "هدفي السنة دي أتعلم إنجليزي.",
+			"arabicTashkeel": "هَدَفي السَّنة دي أتعَلَّم إنجليزي.",
+			"english": "My goal this year is to learn English.",
+			"transliteration": "hadafi is-sana di at3allam ingleezi.",
+			"wordAlignments": [
+				{
+					"arabic": "هدفي",
+					"english": "My goal",
+					"transliteration": "hadafi"
+				},
+				{
+					"arabic": "السنة",
+					"english": "the year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "دي",
+					"english": "this is",
+					"transliteration": "di"
+				},
+				{
+					"arabic": "أتعلم",
+					"english": "I learn",
+					"transliteration": "at3allam"
+				},
+				{
+					"arabic": "إنجليزي.",
+					"english": "English.",
+					"transliteration": "ingleezi."
+				}
+			],
+			"targetWords": [
+				"Goal"
+			]
+		},
+		{
+			"arabic": "المستقبل في إيدك.",
+			"arabicTashkeel": "المُستَقبَل في إيدَك.",
+			"english": "The future is in your hands.",
+			"transliteration": "il-mustagbal fi eedak.",
+			"wordAlignments": [
+				{
+					"arabic": "المستقبل",
+					"english": "The future is",
+					"transliteration": "il-mustagbal"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "إيدك.",
+					"english": "your hand.",
+					"transliteration": "eedak."
+				}
+			],
+			"targetWords": [
+				"Future"
+			]
+		},
+		{
+			"arabic": "أبغى أصير دكتور.",
+			"arabicTashkeel": "أبغى أصير دُكتور.",
+			"english": "I want to become a doctor.",
+			"transliteration": "abgha aseer duktoor.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أصير",
+					"english": "I become",
+					"transliteration": "aseer"
+				},
+				{
+					"arabic": "دكتور.",
+					"english": "a doctor.",
+					"transliteration": "duktoor."
+				}
+			],
+			"targetWords": [
+				"I become"
+			]
+		},
+		{
+			"arabic": "النجاح يبغاله تعب.",
+			"arabicTashkeel": "النَّجاح يِبغالُه تَعَب.",
+			"english": "Success needs effort.",
+			"transliteration": "in-najaa7 yibghaalu ta3ab.",
+			"wordAlignments": [
+				{
+					"arabic": "النجاح",
+					"english": "Success",
+					"transliteration": "in-najaa7"
+				},
+				{
+					"arabic": "يبغاله",
+					"english": "needs",
+					"transliteration": "yibghaalu"
+				},
+				{
+					"arabic": "تعب.",
+					"english": "effort.",
+					"transliteration": "ta3ab."
+				}
+			],
+			"targetWords": [
+				"Success"
+			]
+		},
+		{
+			"arabic": "أبغى أحقق حلمي.",
+			"arabicTashkeel": "أبغى أحَقِّق حِلمي.",
+			"english": "I want to achieve my dream.",
+			"transliteration": "abgha a7aggig 7ilmi.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أحقق",
+					"english": "I achieve",
+					"transliteration": "a7aggig"
+				},
+				{
+					"arabic": "حلمي.",
+					"english": "my dream.",
+					"transliteration": "7ilmi."
+				}
+			],
+			"targetWords": [
+				"I achieve",
+				"Dream"
+			]
+		},
+		{
+			"arabic": "إيش خطتك للسنة الجاية؟",
+			"arabicTashkeel": "إيش خُطّتَك للسَّنة الجاية؟",
+			"english": "What's your plan for next year?",
+			"transliteration": "eesh khuttatak lis-sana ij-jaaya?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "خطتك",
+					"english": "your plan",
+					"transliteration": "khuttatak"
+				},
+				{
+					"arabic": "للسنة",
+					"english": "for the year",
+					"transliteration": "lis-sana"
+				},
+				{
+					"arabic": "الجاية؟",
+					"english": "next?",
+					"transliteration": "ij-jaaya?"
+				}
+			],
+			"targetWords": [
+				"Plan"
+			]
+		},
+		{
+			"arabic": "يوم من الأيام حلف العالم.",
+			"arabicTashkeel": "يوم مِن الأيّام حَلِف العالَم.",
+			"english": "Someday I'll travel around the world.",
+			"transliteration": "yoom min il-ayyaam 7alif il-3aalam.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "A day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الأيام",
+					"english": "the days",
+					"transliteration": "il-ayyaam"
+				},
+				{
+					"arabic": "حلف",
+					"english": "I'll go around",
+					"transliteration": "7alif"
+				},
+				{
+					"arabic": "العالم.",
+					"english": "the world.",
+					"transliteration": "il-3aalam."
+				}
+			],
+			"targetWords": [
+				"Someday"
+			]
+		},
+		{
+			"arabic": "أخويا يدرس برا.",
+			"arabicTashkeel": "أخويا يِدرُس بَرّا.",
+			"english": "My brother is studying abroad.",
+			"transliteration": "akhooya yidrus barra.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويا",
+					"english": "My brother",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "يدرس",
+					"english": "studies",
+					"transliteration": "yidrus"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Abroad"
+			]
+		},
+		{
+			"arabic": "فيه أمل دايما.",
+			"arabicTashkeel": "فيه أمَل دايماً.",
+			"english": "There's always hope.",
+			"transliteration": "feeh amal daayman.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "أمل",
+					"english": "hope",
+					"transliteration": "amal"
+				},
+				{
+					"arabic": "دايما.",
+					"english": "always.",
+					"transliteration": "daayman."
+				}
+			],
+			"targetWords": [
+				"Hope"
+			]
+		},
+		{
+			"arabic": "أتمنى الجو حلو بكرة.",
+			"arabicTashkeel": "أتمَنّى الجَو حِلو بُكرة.",
+			"english": "I hope the weather is nice tomorrow.",
+			"transliteration": "atmanna ij-jaw 7ilu bukra.",
+			"wordAlignments": [
+				{
+					"arabic": "أتمنى",
+					"english": "I wish",
+					"transliteration": "atmanna"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "حلو",
+					"english": "nice",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "بكرة.",
+					"english": "tomorrow.",
+					"transliteration": "bukra."
+				}
+			],
+			"targetWords": [
+				"I hope / I wish"
+			]
+		},
+		{
+			"arabic": "نفسي آكل مندي.",
+			"arabicTashkeel": "نِفسي آكُل مَندي.",
+			"english": "I'd really love to eat mandi.",
+			"transliteration": "nifsi aakul mandi.",
+			"wordAlignments": [
+				{
+					"arabic": "نفسي",
+					"english": "My soul wants",
+					"transliteration": "nifsi"
+				},
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakul"
+				},
+				{
+					"arabic": "مندي.",
+					"english": "mandi.",
+					"transliteration": "mandi."
+				}
+			],
+			"targetWords": [
+				"I'd really love to"
+			]
+		},
+		{
+			"arabic": "إن شاء الله تتحسن قريب.",
+			"arabicTashkeel": "إن شاء الله تِتحَسَّن قَريب.",
+			"english": "Hopefully you'll get better soon.",
+			"transliteration": "in shaa2 allah tit7assan gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "إن",
+					"english": "If",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "تتحسن",
+					"english": "you get better",
+					"transliteration": "tit7assan"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "soon.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Hopefully"
+			]
+		},
+		{
+			"arabic": "كان حلم وتحقق.",
+			"arabicTashkeel": "كان حِلم وتحَقَّق.",
+			"english": "It was a dream and it came true.",
+			"transliteration": "kaan 7ilm w-t7aggag.",
+			"wordAlignments": [
+				{
+					"arabic": "كان",
+					"english": "It was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "حلم",
+					"english": "a dream",
+					"transliteration": "7ilm"
+				},
+				{
+					"arabic": "وتحقق.",
+					"english": "and came true.",
+					"transliteration": "w-t7aggag."
+				}
+			],
+			"targetWords": [
+				"Dream"
+			]
+		},
+		{
+			"arabic": "لما أكبر حشتري بيت كبير.",
+			"arabicTashkeel": "لَمّا أكبَر حَشتَري بيت كبير.",
+			"english": "When I grow up I'll buy a big house.",
+			"transliteration": "lamma akbar 7ashtari bait kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "لما",
+					"english": "When",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "I grow up",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "حشتري",
+					"english": "I'll buy",
+					"transliteration": "7ashtari"
+				},
+				{
+					"arabic": "بيت",
+					"english": "a house",
+					"transliteration": "bait"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"When I grow up"
+			]
+		},
+		{
+			"arabic": "بدون طموح ما فيه نجاح.",
+			"arabicTashkeel": "بِدون طُموح ما فيه نَجاح.",
+			"english": "Without ambition there's no success.",
+			"transliteration": "bidoon tumoo7 ma feeh najaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "بدون",
+					"english": "Without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "طموح",
+					"english": "ambition",
+					"transliteration": "tumoo7"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "نجاح.",
+					"english": "success.",
+					"transliteration": "najaa7."
+				}
+			],
+			"targetWords": [
+				"Ambition",
+				"Success"
+			]
+		},
+		{
+			"arabic": "هدفي واضح.",
+			"arabicTashkeel": "هَدَفي واضِح.",
+			"english": "My goal is clear.",
+			"transliteration": "hadafi waadhi7.",
+			"wordAlignments": [
+				{
+					"arabic": "هدفي",
+					"english": "My goal is",
+					"transliteration": "hadafi"
+				},
+				{
+					"arabic": "واضح.",
+					"english": "clear.",
+					"transliteration": "waadhi7."
+				}
+			],
+			"targetWords": [
+				"Goal"
+			]
+		},
+		{
+			"arabic": "فكر في مستقبلك.",
+			"arabicTashkeel": "فَكِّر في مُستَقبَلَك.",
+			"english": "Think about your future.",
+			"transliteration": "fakkir fi mustagbalak.",
+			"wordAlignments": [
+				{
+					"arabic": "فكر",
+					"english": "Think",
+					"transliteration": "fakkir"
+				},
+				{
+					"arabic": "في",
+					"english": "about",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مستقبلك.",
+					"english": "your future.",
+					"transliteration": "mustagbalak."
+				}
+			],
+			"targetWords": [
+				"Future"
+			]
+		},
+		{
+			"arabic": "أبغى أصير غني.",
+			"arabicTashkeel": "أبغى أصير غَني.",
+			"english": "I want to become rich.",
+			"transliteration": "abgha aseer ghani.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أصير",
+					"english": "I become",
+					"transliteration": "aseer"
+				},
+				{
+					"arabic": "غني.",
+					"english": "rich.",
+					"transliteration": "ghani."
+				}
+			],
+			"targetWords": [
+				"I become"
+			]
+		},
+		{
+			"arabic": "مبروك النجاح!",
+			"arabicTashkeel": "مَبروك النَّجاح!",
+			"english": "Congratulations on your success!",
+			"transliteration": "mabrook in-najaa7!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "النجاح!",
+					"english": "the success!",
+					"transliteration": "in-najaa7!"
+				}
+			],
+			"targetWords": [
+				"Success"
+			]
+		},
+		{
+			"arabic": "حققت هدفي.",
+			"arabicTashkeel": "حَقَّقت هَدَفي.",
+			"english": "I achieved my goal.",
+			"transliteration": "7aggagt hadafi.",
+			"wordAlignments": [
+				{
+					"arabic": "حققت",
+					"english": "I achieved",
+					"transliteration": "7aggagt"
+				},
+				{
+					"arabic": "هدفي.",
+					"english": "my goal.",
+					"transliteration": "hadafi."
+				}
+			],
+			"targetWords": [
+				"I achieve",
+				"Goal"
+			]
+		},
+		{
+			"arabic": "نحتاج خطة واضحة.",
+			"arabicTashkeel": "نِحتاج خُطّة واضحة.",
+			"english": "We need a clear plan.",
+			"transliteration": "ni7taaj khutta waadh7a.",
+			"wordAlignments": [
+				{
+					"arabic": "نحتاج",
+					"english": "We need",
+					"transliteration": "ni7taaj"
+				},
+				{
+					"arabic": "خطة",
+					"english": "a plan",
+					"transliteration": "khutta"
+				},
+				{
+					"arabic": "واضحة.",
+					"english": "clear.",
+					"transliteration": "waadh7a."
+				}
+			],
+			"targetWords": [
+				"Plan"
+			]
+		},
+		{
+			"arabic": "يوم من الأيام حتفهم.",
+			"arabicTashkeel": "يوم مِن الأيّام حَتِفهَم.",
+			"english": "Someday you'll understand.",
+			"transliteration": "yoom min il-ayyaam 7atifham.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "A day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الأيام",
+					"english": "the days",
+					"transliteration": "il-ayyaam"
+				},
+				{
+					"arabic": "حتفهم.",
+					"english": "you'll understand.",
+					"transliteration": "7atifham."
+				}
+			],
+			"targetWords": [
+				"Someday"
+			]
+		},
+		{
+			"arabic": "تبغى تعيش برا؟",
+			"arabicTashkeel": "تِبغى تِعيش بَرّا؟",
+			"english": "Do you want to live abroad?",
+			"transliteration": "tibgha ti3eesh barra?",
+			"wordAlignments": [
+				{
+					"arabic": "تبغى",
+					"english": "Do you want",
+					"transliteration": "tibgha"
+				},
+				{
+					"arabic": "تعيش",
+					"english": "you live",
+					"transliteration": "ti3eesh"
+				},
+				{
+					"arabic": "برا؟",
+					"english": "outside?",
+					"transliteration": "barra?"
+				}
+			],
+			"targetWords": [
+				"Abroad"
+			]
+		},
+		{
+			"arabic": "لا تفقد الأمل.",
+			"arabicTashkeel": "لا تِفقِد الأمَل.",
+			"english": "Don't lose hope.",
+			"transliteration": "la tifgid il-amal.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تفقد",
+					"english": "lose",
+					"transliteration": "tifgid"
+				},
+				{
+					"arabic": "الأمل.",
+					"english": "the hope.",
+					"transliteration": "il-amal."
+				}
+			],
+			"targetWords": [
+				"Hope"
+			]
+		},
+		{
+			"arabic": "أتمنى لو درست طب.",
+			"arabicTashkeel": "أتمَنّى لو دَرَست طِب.",
+			"english": "I wish I had studied medicine.",
+			"transliteration": "atmanna law darast tibb.",
+			"wordAlignments": [
+				{
+					"arabic": "أتمنى",
+					"english": "I wish",
+					"transliteration": "atmanna"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "درست",
+					"english": "I had studied",
+					"transliteration": "darast"
+				},
+				{
+					"arabic": "طب.",
+					"english": "medicine.",
+					"transliteration": "tibb."
+				}
+			],
+			"targetWords": [
+				"I hope / I wish"
+			]
+		},
+		{
+			"arabic": "نفسي أشوفك.",
+			"arabicTashkeel": "نِفسي أشوفَك.",
+			"english": "I'd really love to see you.",
+			"transliteration": "nifsi ashoofak.",
+			"wordAlignments": [
+				{
+					"arabic": "نفسي",
+					"english": "My soul wants",
+					"transliteration": "nifsi"
+				},
+				{
+					"arabic": "أشوفك.",
+					"english": "I see you.",
+					"transliteration": "ashoofak."
+				}
+			],
+			"targetWords": [
+				"I'd really love to"
+			]
+		},
+		{
+			"arabic": "إن شاء الله كل شي يكون كويس.",
+			"arabicTashkeel": "إن شاء الله كُل شي يِكون كْوَيِّس.",
+			"english": "Hopefully everything will be good.",
+			"transliteration": "in shaa2 allah kull shay yikoon kwayyis.",
+			"wordAlignments": [
+				{
+					"arabic": "إن",
+					"english": "If",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شي",
+					"english": "thing",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "يكون",
+					"english": "will be",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "كويس.",
+					"english": "good.",
+					"transliteration": "kwayyis."
+				}
+			],
+			"targetWords": [
+				"Hopefully"
+			]
+		},
+		{
+			"arabic": "حلمي بعيد، بس مو مستحيل.",
+			"arabicTashkeel": "حِلمي بَعيد، بَس مو مُستَحيل.",
+			"english": "My dream is far, but not impossible.",
+			"transliteration": "7ilmi ba3eed, bas moo musta7eel.",
+			"wordAlignments": [
+				{
+					"arabic": "حلمي",
+					"english": "My dream is",
+					"transliteration": "7ilmi"
+				},
+				{
+					"arabic": "بعيد،",
+					"english": "far,",
+					"transliteration": "ba3eed,"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مستحيل.",
+					"english": "impossible.",
+					"transliteration": "musta7eel."
+				}
+			],
+			"targetWords": [
+				"Dream"
+			]
+		},
+		{
+			"arabic": "لما أكبر حعيش في جدة.",
+			"arabicTashkeel": "لَمّا أكبَر حَعيش في جِدّة.",
+			"english": "When I grow up I'll live in Jeddah.",
+			"transliteration": "lamma akbar 7a3eesh fi jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "لما",
+					"english": "When",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "I grow up",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "حعيش",
+					"english": "I'll live",
+					"transliteration": "7a3eesh"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"When I grow up"
+			]
+		},
+		{
+			"arabic": "طموحه ما له حدود.",
+			"arabicTashkeel": "طُموحُه ما لُه حُدود.",
+			"english": "His ambition has no limits.",
+			"transliteration": "tumoo7u ma lu 7udood.",
+			"wordAlignments": [
+				{
+					"arabic": "طموحه",
+					"english": "His ambition",
+					"transliteration": "tumoo7u"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "حدود.",
+					"english": "limits.",
+					"transliteration": "7udood."
+				}
+			],
+			"targetWords": [
+				"Ambition"
+			]
+		},
+		{
+			"arabic": "حط لك هدف.",
+			"arabicTashkeel": "حُط لَك هَدَف.",
+			"english": "Set a goal for yourself.",
+			"transliteration": "7ut lak hadaf.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7ut"
+				},
+				{
+					"arabic": "لك",
+					"english": "for yourself",
+					"transliteration": "lak"
+				},
+				{
+					"arabic": "هدف.",
+					"english": "a goal.",
+					"transliteration": "hadaf."
+				}
+			],
+			"targetWords": [
+				"Goal"
+			]
+		},
+		{
+			"arabic": "مستقبل العيال.",
+			"arabicTashkeel": "مُستَقبَل العِيال.",
+			"english": "The future of the kids.",
+			"transliteration": "mustagbal il-3iyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "مستقبل",
+					"english": "The future of",
+					"transliteration": "mustagbal"
+				},
+				{
+					"arabic": "العيال.",
+					"english": "the kids.",
+					"transliteration": "il-3iyaal."
+				}
+			],
+			"targetWords": [
+				"Future"
+			]
+		},
+		{
+			"arabic": "يبغى يصير مهندس.",
+			"arabicTashkeel": "يِبغى يِصير مُهَندِس.",
+			"english": "He wants to become an engineer.",
+			"transliteration": "yibgha yiseer muhandis.",
+			"wordAlignments": [
+				{
+					"arabic": "يبغى",
+					"english": "He wants",
+					"transliteration": "yibgha"
+				},
+				{
+					"arabic": "يصير",
+					"english": "he becomes",
+					"transliteration": "yiseer"
+				},
+				{
+					"arabic": "مهندس.",
+					"english": "an engineer.",
+					"transliteration": "muhandis."
+				}
+			],
+			"targetWords": [
+				"I become"
+			]
+		},
+		{
+			"arabic": "سر النجاح الصبر.",
+			"arabicTashkeel": "سِر النَّجاح الصَّبر.",
+			"english": "The secret of success is patience.",
+			"transliteration": "sirr in-najaa7 is-sabr.",
+			"wordAlignments": [
+				{
+					"arabic": "سر",
+					"english": "The secret of",
+					"transliteration": "sirr"
+				},
+				{
+					"arabic": "النجاح",
+					"english": "success is",
+					"transliteration": "in-najaa7"
+				},
+				{
+					"arabic": "الصبر.",
+					"english": "patience.",
+					"transliteration": "is-sabr."
+				}
+			],
+			"targetWords": [
+				"Success"
+			]
+		},
+		{
+			"arabic": "كيف أحقق أهدافي؟",
+			"arabicTashkeel": "كيف أحَقِّق أهدافي؟",
+			"english": "How do I achieve my goals?",
+			"transliteration": "kaif a7aggig ahdaafi?",
+			"wordAlignments": [
+				{
+					"arabic": "كيف",
+					"english": "How",
+					"transliteration": "kaif"
+				},
+				{
+					"arabic": "أحقق",
+					"english": "do I achieve",
+					"transliteration": "a7aggig"
+				},
+				{
+					"arabic": "أهدافي؟",
+					"english": "my goals?",
+					"transliteration": "ahdaafi?"
+				}
+			],
+			"targetWords": [
+				"I achieve"
+			]
+		},
+		{
+			"arabic": "الخطة تغيرت.",
+			"arabicTashkeel": "الخُطّة تِغَيَّرَت.",
+			"english": "The plan changed.",
+			"transliteration": "il-khutta tighayyarat.",
+			"wordAlignments": [
+				{
+					"arabic": "الخطة",
+					"english": "The plan",
+					"transliteration": "il-khutta"
+				},
+				{
+					"arabic": "تغيرت.",
+					"english": "changed.",
+					"transliteration": "tighayyarat."
+				}
+			],
+			"targetWords": [
+				"Plan"
+			]
+		},
+		{
+			"arabic": "يوم من الأيام حكتب كتاب.",
+			"arabicTashkeel": "يوم مِن الأيّام حَكتُب كِتاب.",
+			"english": "Someday I'll write a book.",
+			"transliteration": "yoom min il-ayyaam 7aktub kitaab.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "A day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الأيام",
+					"english": "the days",
+					"transliteration": "il-ayyaam"
+				},
+				{
+					"arabic": "حكتب",
+					"english": "I'll write",
+					"transliteration": "7aktub"
+				},
+				{
+					"arabic": "كتاب.",
+					"english": "a book.",
+					"transliteration": "kitaab."
+				}
+			],
+			"targetWords": [
+				"Someday"
+			]
+		},
+		{
+			"arabic": "الحياة برا صعبة.",
+			"arabicTashkeel": "الحَياة بَرّا صَعبة.",
+			"english": "Life abroad is hard.",
+			"transliteration": "il-7ayaa barra sa3ba.",
+			"wordAlignments": [
+				{
+					"arabic": "الحياة",
+					"english": "Life",
+					"transliteration": "il-7ayaa"
+				},
+				{
+					"arabic": "برا",
+					"english": "outside is",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "صعبة.",
+					"english": "hard.",
+					"transliteration": "sa3ba."
+				}
+			],
+			"targetWords": [
+				"Abroad"
+			]
+		},
+		{
+			"arabic": "إنت أملي.",
+			"arabicTashkeel": "إنتَ أمَلي.",
+			"english": "You are my hope.",
+			"transliteration": "inta amali.",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "You are",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "أملي.",
+					"english": "my hope.",
+					"transliteration": "amali."
+				}
+			],
+			"targetWords": [
+				"Hope"
+			]
+		},
+		{
+			"arabic": "أتمنى أشوفك قريب.",
+			"arabicTashkeel": "أتمَنّى أشوفَك قَريب.",
+			"english": "I hope to see you soon.",
+			"transliteration": "atmanna ashoofak gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "أتمنى",
+					"english": "I wish",
+					"transliteration": "atmanna"
+				},
+				{
+					"arabic": "أشوفك",
+					"english": "I see you",
+					"transliteration": "ashoofak"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "soon.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"I hope / I wish"
+			]
+		},
+		{
+			"arabic": "نفسي أسافر الصيف دا.",
+			"arabicTashkeel": "نِفسي أسافِر الصّيف دا.",
+			"english": "I'd really love to travel this summer.",
+			"transliteration": "nifsi asaafir is-saif da.",
+			"wordAlignments": [
+				{
+					"arabic": "نفسي",
+					"english": "My soul wants",
+					"transliteration": "nifsi"
+				},
+				{
+					"arabic": "أسافر",
+					"english": "I travel",
+					"transliteration": "asaafir"
+				},
+				{
+					"arabic": "الصيف",
+					"english": "the summer",
+					"transliteration": "is-saif"
+				},
+				{
+					"arabic": "دا.",
+					"english": "this.",
+					"transliteration": "da."
+				}
+			],
+			"targetWords": [
+				"I'd really love to"
+			]
+		},
+		{
+			"arabic": "إن شاء الله آخد الوظيفة.",
+			"arabicTashkeel": "إن شاء الله آخُد الوَظيفة.",
+			"english": "Hopefully I'll get the job.",
+			"transliteration": "in shaa2 allah aakhud il-wadheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "إن",
+					"english": "If",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "آخد",
+					"english": "I take",
+					"transliteration": "aakhud"
+				},
+				{
+					"arabic": "الوظيفة.",
+					"english": "the job.",
+					"transliteration": "il-wadheefa."
+				}
+			],
+			"targetWords": [
+				"Hopefully"
+			]
+		},
+		{
+			"arabic": "قول لي عن حلمك.",
+			"arabicTashkeel": "قول لي عَن حِلمَك.",
+			"english": "Tell me about your dream.",
+			"transliteration": "gool li 3an 7ilmak.",
+			"wordAlignments": [
+				{
+					"arabic": "قول",
+					"english": "Tell",
+					"transliteration": "gool"
+				},
+				{
+					"arabic": "لي",
+					"english": "me",
+					"transliteration": "li"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "حلمك.",
+					"english": "your dream.",
+					"transliteration": "7ilmak."
+				}
+			],
+			"targetWords": [
+				"Dream"
+			]
+		},
+		{
+			"arabic": "لما أكبر حساعد أهلي.",
+			"arabicTashkeel": "لَمّا أكبَر حَساعِد أهلي.",
+			"english": "When I grow up I'll help my parents.",
+			"transliteration": "lamma akbar 7asaa3id ahli.",
+			"wordAlignments": [
+				{
+					"arabic": "لما",
+					"english": "When",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "I grow up",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "حساعد",
+					"english": "I'll help",
+					"transliteration": "7asaa3id"
+				},
+				{
+					"arabic": "أهلي.",
+					"english": "my parents.",
+					"transliteration": "ahli."
+				}
+			],
+			"targetWords": [
+				"When I grow up"
+			]
+		},
+		{
+			"arabic": "الطموح شي كويس.",
+			"arabicTashkeel": "الطُّموح شي كْوَيِّس.",
+			"english": "Ambition is good.",
+			"transliteration": "it-tumoo7 shay kwayyis.",
+			"wordAlignments": [
+				{
+					"arabic": "الطموح",
+					"english": "Ambition is",
+					"transliteration": "it-tumoo7"
+				},
+				{
+					"arabic": "شي",
+					"english": "a thing",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "كويس.",
+					"english": "good.",
+					"transliteration": "kwayyis."
+				}
+			],
+			"targetWords": [
+				"Ambition"
+			]
+		},
+		{
+			"arabic": "إيش هدفك في الحياة؟",
+			"arabicTashkeel": "إيش هَدَفَك في الحَياة؟",
+			"english": "What's your goal in life?",
+			"transliteration": "eesh hadafak fi il-7ayaa?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هدفك",
+					"english": "your goal",
+					"transliteration": "hadafak"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الحياة؟",
+					"english": "the life?",
+					"transliteration": "il-7ayaa?"
+				}
+			],
+			"targetWords": [
+				"Goal"
+			]
+		},
+		{
+			"arabic": "المستقبل حلو.",
+			"arabicTashkeel": "المُستَقبَل حِلو.",
+			"english": "The future is bright.",
+			"transliteration": "il-mustagbal 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "المستقبل",
+					"english": "The future is",
+					"transliteration": "il-mustagbal"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Future"
+			]
+		},
+		{
+			"arabic": "أبغى أصير مدرس زي أمي.",
+			"arabicTashkeel": "أبغى أصير مُدَرِّس زَي أُمّي.",
+			"english": "I want to become a teacher like my mom.",
+			"transliteration": "abgha aseer mudarris zay ummi.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أصير",
+					"english": "I become",
+					"transliteration": "aseer"
+				},
+				{
+					"arabic": "مدرس",
+					"english": "a teacher",
+					"transliteration": "mudarris"
+				},
+				{
+					"arabic": "زي",
+					"english": "like",
+					"transliteration": "zay"
+				},
+				{
+					"arabic": "أمي.",
+					"english": "my mom.",
+					"transliteration": "ummi."
+				}
+			],
+			"targetWords": [
+				"I become"
+			]
+		},
+		{
+			"arabic": "النجاح مو سهل.",
+			"arabicTashkeel": "النَّجاح مو سَهل.",
+			"english": "Success isn't easy.",
+			"transliteration": "in-najaa7 moo sahl.",
+			"wordAlignments": [
+				{
+					"arabic": "النجاح",
+					"english": "Success",
+					"transliteration": "in-najaa7"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "سهل.",
+					"english": "easy.",
+					"transliteration": "sahl."
+				}
+			],
+			"targetWords": [
+				"Success"
+			]
+		},
+		{
+			"arabic": "ححققه إن شاء الله.",
+			"arabicTashkeel": "حَحَقِّقُه إن شاء الله.",
+			"english": "I'll achieve it, God willing.",
+			"transliteration": "7a7aggigu in shaa2 allah.",
+			"wordAlignments": [
+				{
+					"arabic": "ححققه",
+					"english": "I'll achieve it",
+					"transliteration": "7a7aggigu"
+				},
+				{
+					"arabic": "إن",
+					"english": "if",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله.",
+					"english": "God.",
+					"transliteration": "allah."
+				}
+			],
+			"targetWords": [
+				"I achieve",
+				"Hopefully"
+			]
+		},
+		{
+			"arabic": "خطة بديلة.",
+			"arabicTashkeel": "خُطّة بَديلة.",
+			"english": "A plan B.",
+			"transliteration": "khutta badeela.",
+			"wordAlignments": [
+				{
+					"arabic": "خطة",
+					"english": "A plan",
+					"transliteration": "khutta"
+				},
+				{
+					"arabic": "بديلة.",
+					"english": "alternative.",
+					"transliteration": "badeela."
+				}
+			],
+			"targetWords": [
+				"Plan"
+			]
+		},
+		{
+			"arabic": "حرجع لقريتي يوم من الأيام.",
+			"arabicTashkeel": "حَرجَع لِقَريتي يوم مِن الأيّام.",
+			"english": "I'll go back to my village someday.",
+			"transliteration": "7arja3 li-garyati yoom min il-ayyaam.",
+			"wordAlignments": [
+				{
+					"arabic": "حرجع",
+					"english": "I'll go back",
+					"transliteration": "7arja3"
+				},
+				{
+					"arabic": "لقريتي",
+					"english": "to my village",
+					"transliteration": "li-garyati"
+				},
+				{
+					"arabic": "يوم",
+					"english": "a day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الأيام.",
+					"english": "the days.",
+					"transliteration": "il-ayyaam."
+				}
+			],
+			"targetWords": [
+				"Someday"
+			]
+		},
+		{
+			"arabic": "الدراسة برا غالية.",
+			"arabicTashkeel": "الدِّراسة بَرّا غالية.",
+			"english": "Studying abroad is expensive.",
+			"transliteration": "id-diraasa barra ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "الدراسة",
+					"english": "Studying",
+					"transliteration": "id-diraasa"
+				},
+				{
+					"arabic": "برا",
+					"english": "outside is",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Abroad"
+			]
+		},
+		{
+			"arabic": "ما فيه أمل.",
+			"arabicTashkeel": "ما فيه أمَل.",
+			"english": "There's no hope.",
+			"transliteration": "ma feeh amal.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "أمل.",
+					"english": "hope.",
+					"transliteration": "amal."
+				}
+			],
+			"targetWords": [
+				"Hope"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Dreams",
+			"sentences": [
+				{
+					"arabic": "لما كنت صغير، حلمي كان أصير طيار.",
+					"arabicTashkeel": "لَمّا كُنت صُغَيَّر، حِلمي كان أصير طَيّار.",
+					"english": "When I was little, my dream was to become a pilot.",
+					"transliteration": "lamma kunt sughayyar, 7ilmi kaan aseer tayyaar.",
+					"wordAlignments": [
+						{
+							"arabic": "لما",
+							"english": "When",
+							"transliteration": "lamma"
+						},
+						{
+							"arabic": "كنت",
+							"english": "I was",
+							"transliteration": "kunt"
+						},
+						{
+							"arabic": "صغير،",
+							"english": "little,",
+							"transliteration": "sughayyar,"
+						},
+						{
+							"arabic": "حلمي",
+							"english": "my dream",
+							"transliteration": "7ilmi"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "أصير",
+							"english": "I become",
+							"transliteration": "aseer"
+						},
+						{
+							"arabic": "طيار.",
+							"english": "a pilot.",
+							"transliteration": "tayyaar."
+						}
+					]
+				},
+				{
+					"arabic": "دحين هدفي أخلص الجامعة وأدرس برا.",
+					"arabicTashkeel": "دحين هَدَفي أخَلِّص الجامعة وأدرُس بَرّا.",
+					"english": "Now my goal is to finish university and study abroad.",
+					"transliteration": "da7een hadafi akhallis ij-jaam3a w-adrus barra.",
+					"wordAlignments": [
+						{
+							"arabic": "دحين",
+							"english": "Now",
+							"transliteration": "da7een"
+						},
+						{
+							"arabic": "هدفي",
+							"english": "my goal is",
+							"transliteration": "hadafi"
+						},
+						{
+							"arabic": "أخلص",
+							"english": "I finish",
+							"transliteration": "akhallis"
+						},
+						{
+							"arabic": "الجامعة",
+							"english": "the university",
+							"transliteration": "ij-jaam3a"
+						},
+						{
+							"arabic": "وأدرس",
+							"english": "and study",
+							"transliteration": "w-adrus"
+						},
+						{
+							"arabic": "برا.",
+							"english": "outside.",
+							"transliteration": "barra."
+						}
+					]
+				},
+				{
+					"arabic": "عندي خطة واضحة، وأتمنى أحققها.",
+					"arabicTashkeel": "عِندي خُطّة واضحة، وأتمَنّى أحَقِّقها.",
+					"english": "I have a clear plan, and I hope to achieve it.",
+					"transliteration": "3indi khutta waadh7a, w-atmanna a7aggigha.",
+					"wordAlignments": [
+						{
+							"arabic": "عندي",
+							"english": "I have",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "خطة",
+							"english": "a plan",
+							"transliteration": "khutta"
+						},
+						{
+							"arabic": "واضحة،",
+							"english": "clear,",
+							"transliteration": "waadh7a,"
+						},
+						{
+							"arabic": "وأتمنى",
+							"english": "and I wish",
+							"transliteration": "w-atmanna"
+						},
+						{
+							"arabic": "أحققها.",
+							"english": "I achieve it.",
+							"transliteration": "a7aggigha."
+						}
+					]
+				},
+				{
+					"arabic": "يوم من الأيام، إن شاء الله، حرجع وأفتح شركتي.",
+					"arabicTashkeel": "يوم مِن الأيّام، إن شاء الله، حَرجَع وأفتَح شِركتي.",
+					"english": "Someday, God willing, I'll go back and open my own company.",
+					"transliteration": "yoom min il-ayyaam, in shaa2 allah, 7arja3 w-afta7 shirkati.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "A day",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الأيام،",
+							"english": "the days,",
+							"transliteration": "il-ayyaam,"
+						},
+						{
+							"arabic": "إن",
+							"english": "if",
+							"transliteration": "in"
+						},
+						{
+							"arabic": "شاء",
+							"english": "willed",
+							"transliteration": "shaa2"
+						},
+						{
+							"arabic": "الله،",
+							"english": "God,",
+							"transliteration": "allah,"
+						},
+						{
+							"arabic": "حرجع",
+							"english": "I'll come back",
+							"transliteration": "7arja3"
+						},
+						{
+							"arabic": "وأفتح",
+							"english": "and open",
+							"transliteration": "w-afta7"
+						},
+						{
+							"arabic": "شركتي.",
+							"english": "my company.",
+							"transliteration": "shirkati."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Graduation",
+			"sentences": [
+				{
+					"arabic": "اليوم أختي اتخرجت، وإحنا فرحانين بنجاحها مرة.",
+					"arabicTashkeel": "اليوم أُختي اِتخَرَّجَت، وإحنا فَرحانين بِنَجاحها مَرّة.",
+					"english": "Today my sister graduated, and we're very happy for her success.",
+					"transliteration": "il-yoom ukhti itkharrajat, w-i7na far7aaneen bi-najaa7ha marra.",
+					"wordAlignments": [
+						{
+							"arabic": "اليوم",
+							"english": "Today",
+							"transliteration": "il-yoom"
+						},
+						{
+							"arabic": "أختي",
+							"english": "my sister",
+							"transliteration": "ukhti"
+						},
+						{
+							"arabic": "اتخرجت،",
+							"english": "graduated,",
+							"transliteration": "itkharrajat,"
+						},
+						{
+							"arabic": "وإحنا",
+							"english": "and we are",
+							"transliteration": "w-i7na"
+						},
+						{
+							"arabic": "فرحانين",
+							"english": "happy",
+							"transliteration": "far7aaneen"
+						},
+						{
+							"arabic": "بنجاحها",
+							"english": "with her success",
+							"transliteration": "bi-najaa7ha"
+						},
+						{
+							"arabic": "مرة.",
+							"english": "very.",
+							"transliteration": "marra."
+						}
+					]
+				},
+				{
+					"arabic": "عندها طموح كبير وتبغى تصير دكتورة.",
+					"arabicTashkeel": "عِندَها طُموح كبير وتِبغى تِصير دُكتورة.",
+					"english": "She has big ambition and wants to become a doctor.",
+					"transliteration": "3indaha tumoo7 kbeer w-tibgha tiseer duktoora.",
+					"wordAlignments": [
+						{
+							"arabic": "عندها",
+							"english": "She has",
+							"transliteration": "3indaha"
+						},
+						{
+							"arabic": "طموح",
+							"english": "ambition",
+							"transliteration": "tumoo7"
+						},
+						{
+							"arabic": "كبير",
+							"english": "big",
+							"transliteration": "kbeer"
+						},
+						{
+							"arabic": "وتبغى",
+							"english": "and she wants",
+							"transliteration": "w-tibgha"
+						},
+						{
+							"arabic": "تصير",
+							"english": "she becomes",
+							"transliteration": "tiseer"
+						},
+						{
+							"arabic": "دكتورة.",
+							"english": "a doctor.",
+							"transliteration": "duktoora."
+						}
+					]
+				},
+				{
+					"arabic": "أتمنى مستقبلها يكون حلو.",
+					"arabicTashkeel": "أتمَنّى مُستَقبَلها يِكون حِلو.",
+					"english": "I hope her future is beautiful.",
+					"transliteration": "atmanna mustagbalha yikoon 7ilu.",
+					"wordAlignments": [
+						{
+							"arabic": "أتمنى",
+							"english": "I wish",
+							"transliteration": "atmanna"
+						},
+						{
+							"arabic": "مستقبلها",
+							"english": "her future",
+							"transliteration": "mustagbalha"
+						},
+						{
+							"arabic": "يكون",
+							"english": "is",
+							"transliteration": "yikoon"
+						},
+						{
+							"arabic": "حلو.",
+							"english": "beautiful.",
+							"transliteration": "7ilu."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "At a graduation party in Jeddah, the student chats with a young Jeddawi graduate about plans and dreams.",
+		"studentRole": "A guest learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The proud new graduate, who wants to study abroad.",
+		"goalEnglish": "Congratulate the graduate, ask about their dreams, goals and plans, and talk about your own hopes for the future.",
+		"targetWords": [
+			"Dream",
+			"Goal",
+			"Plan",
+			"Future",
+			"Success",
+			"I hope / I wish",
+			"I'd really love to",
+			"Abroad"
+		]
+	}
+}

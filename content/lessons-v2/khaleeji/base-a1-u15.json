@@ -1,0 +1,1778 @@
+{
+	"vocab": [
+		{
+			"arabic": "خبز",
+			"arabicTashkeel": "خُبُز",
+			"english": "Bread",
+			"transliteration": "khubuz",
+			"wordAlignments": [
+				{
+					"arabic": "خبز",
+					"english": "Bread",
+					"transliteration": "khubuz"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عيش",
+			"arabicTashkeel": "عيش",
+			"english": "Rice",
+			"transliteration": "3eesh",
+			"wordAlignments": [
+				{
+					"arabic": "عيش",
+					"english": "Rice",
+					"transliteration": "3eesh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مكبوس",
+			"arabicTashkeel": "مَكبوس",
+			"english": "Machboos",
+			"transliteration": "machboos",
+			"wordAlignments": [
+				{
+					"arabic": "مكبوس",
+					"english": "Machboos",
+					"transliteration": "machboos"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "لحم",
+			"arabicTashkeel": "لَحَم",
+			"english": "Meat",
+			"transliteration": "la7am",
+			"wordAlignments": [
+				{
+					"arabic": "لحم",
+					"english": "Meat",
+					"transliteration": "la7am"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "دجاج",
+			"arabicTashkeel": "دِجاج",
+			"english": "Chicken",
+			"transliteration": "diyaay",
+			"wordAlignments": [
+				{
+					"arabic": "دجاج",
+					"english": "Chicken",
+					"transliteration": "diyaay"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سمك",
+			"arabicTashkeel": "سِمَك",
+			"english": "Fish",
+			"transliteration": "simach",
+			"wordAlignments": [
+				{
+					"arabic": "سمك",
+					"english": "Fish",
+					"transliteration": "simach"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شاي",
+			"arabicTashkeel": "شاي",
+			"english": "Tea",
+			"transliteration": "chaay",
+			"wordAlignments": [
+				{
+					"arabic": "شاي",
+					"english": "Tea",
+					"transliteration": "chaay"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ماي",
+			"arabicTashkeel": "ماي",
+			"english": "Water",
+			"transliteration": "maay",
+			"wordAlignments": [
+				{
+					"arabic": "ماي",
+					"english": "Water",
+					"transliteration": "maay"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حليب",
+			"arabicTashkeel": "حَليب",
+			"english": "Milk",
+			"transliteration": "7aleeb",
+			"wordAlignments": [
+				{
+					"arabic": "حليب",
+					"english": "Milk",
+					"transliteration": "7aleeb"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فواكه",
+			"arabicTashkeel": "فَواكِه",
+			"english": "Fruit",
+			"transliteration": "fawaakih",
+			"wordAlignments": [
+				{
+					"arabic": "فواكه",
+					"english": "Fruit",
+					"transliteration": "fawaakih"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "تمر",
+			"arabicTashkeel": "تَمر",
+			"english": "Dates",
+			"transliteration": "tamr",
+			"wordAlignments": [
+				{
+					"arabic": "تمر",
+					"english": "Dates",
+					"transliteration": "tamr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بيض",
+			"arabicTashkeel": "بيض",
+			"english": "Eggs",
+			"transliteration": "beedh",
+			"wordAlignments": [
+				{
+					"arabic": "بيض",
+					"english": "Eggs",
+					"transliteration": "beedh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خضرة",
+			"arabicTashkeel": "خُضرة",
+			"english": "Vegetables",
+			"transliteration": "khudhra",
+			"wordAlignments": [
+				{
+					"arabic": "خضرة",
+					"english": "Vegetables",
+					"transliteration": "khudhra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "جوعان",
+			"arabicTashkeel": "جوعان",
+			"english": "Hungry",
+			"transliteration": "yoo3aan",
+			"wordAlignments": [
+				{
+					"arabic": "جوعان",
+					"english": "Hungry",
+					"transliteration": "yoo3aan"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "عطشان",
+			"arabicTashkeel": "عَطشان",
+			"english": "Thirsty",
+			"transliteration": "3atshaan",
+			"wordAlignments": [
+				{
+					"arabic": "عطشان",
+					"english": "Thirsty",
+					"transliteration": "3atshaan"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أبي خبز.",
+			"arabicTashkeel": "أبي خُبُز.",
+			"english": "I want bread.",
+			"transliteration": "abi khubuz.",
+			"wordAlignments": [
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "خبز.",
+					"english": "bread.",
+					"transliteration": "khubuz."
+				}
+			],
+			"targetWords": [
+				"Bread"
+			]
+		},
+		{
+			"arabic": "عيش ويا دجاج.",
+			"arabicTashkeel": "عيش وِيّا دِجاج.",
+			"english": "Rice with chicken.",
+			"transliteration": "3eesh wiyya diyaay.",
+			"wordAlignments": [
+				{
+					"arabic": "عيش",
+					"english": "Rice",
+					"transliteration": "3eesh"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "دجاج.",
+					"english": "chicken.",
+					"transliteration": "diyaay."
+				}
+			],
+			"targetWords": [
+				"Rice",
+				"Chicken"
+			]
+		},
+		{
+			"arabic": "أمي تطبخ مكبوس يوم الجمعة.",
+			"arabicTashkeel": "أُمّي تِطبَخ مَكبوس يوم الجُمعة.",
+			"english": "My mom cooks machboos on Friday.",
+			"transliteration": "ummi titbakh machboos yoom il-yum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "تطبخ",
+					"english": "cooks",
+					"transliteration": "titbakh"
+				},
+				{
+					"arabic": "مكبوس",
+					"english": "machboos",
+					"transliteration": "machboos"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "il-yum3a."
+				}
+			],
+			"targetWords": [
+				"Machboos"
+			]
+		},
+		{
+			"arabic": "اللحم لذيذ.",
+			"arabicTashkeel": "اللَّحَم لَذيذ.",
+			"english": "The meat is delicious.",
+			"transliteration": "il-la7am ladheedh.",
+			"wordAlignments": [
+				{
+					"arabic": "اللحم",
+					"english": "The meat is",
+					"transliteration": "il-la7am"
+				},
+				{
+					"arabic": "لذيذ.",
+					"english": "delicious.",
+					"transliteration": "ladheedh."
+				}
+			],
+			"targetWords": [
+				"Meat"
+			]
+		},
+		{
+			"arabic": "ما آكل دجاج.",
+			"arabicTashkeel": "ما آكِل دِجاج.",
+			"english": "I don't eat chicken.",
+			"transliteration": "ma aakil diyaay.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "دجاج.",
+					"english": "chicken.",
+					"transliteration": "diyaay."
+				}
+			],
+			"targetWords": [
+				"Chicken"
+			]
+		},
+		{
+			"arabic": "السمك طازج.",
+			"arabicTashkeel": "السِّمَك طازَج.",
+			"english": "The fish is fresh.",
+			"transliteration": "is-simach taazaj.",
+			"wordAlignments": [
+				{
+					"arabic": "السمك",
+					"english": "The fish is",
+					"transliteration": "is-simach"
+				},
+				{
+					"arabic": "طازج.",
+					"english": "fresh.",
+					"transliteration": "taazaj."
+				}
+			],
+			"targetWords": [
+				"Fish"
+			]
+		},
+		{
+			"arabic": "تبي شاي؟",
+			"arabicTashkeel": "تَبي شاي؟",
+			"english": "Do you want tea?",
+			"transliteration": "tabi chaay?",
+			"wordAlignments": [
+				{
+					"arabic": "تبي",
+					"english": "Do you want",
+					"transliteration": "tabi"
+				},
+				{
+					"arabic": "شاي؟",
+					"english": "tea?",
+					"transliteration": "chaay?"
+				}
+			],
+			"targetWords": [
+				"Tea"
+			]
+		},
+		{
+			"arabic": "أبي ماي بارد.",
+			"arabicTashkeel": "أبي ماي بارِد.",
+			"english": "I want cold water.",
+			"transliteration": "abi maay baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "ماي",
+					"english": "water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "بارد.",
+					"english": "cold.",
+					"transliteration": "baarid."
+				}
+			],
+			"targetWords": [
+				"Water"
+			]
+		},
+		{
+			"arabic": "الحليب بالثلاجة.",
+			"arabicTashkeel": "الحَليب بالثَّلّاجة.",
+			"english": "The milk is in the fridge.",
+			"transliteration": "il-7aleeb bith-thallaaja.",
+			"wordAlignments": [
+				{
+					"arabic": "الحليب",
+					"english": "The milk is",
+					"transliteration": "il-7aleeb"
+				},
+				{
+					"arabic": "بالثلاجة.",
+					"english": "in the fridge.",
+					"transliteration": "bith-thallaaja."
+				}
+			],
+			"targetWords": [
+				"Milk"
+			]
+		},
+		{
+			"arabic": "الفواكه زينة.",
+			"arabicTashkeel": "الفَواكِه زينة.",
+			"english": "Fruit is good.",
+			"transliteration": "il-fawaakih zeena.",
+			"wordAlignments": [
+				{
+					"arabic": "الفواكه",
+					"english": "Fruit is",
+					"transliteration": "il-fawaakih"
+				},
+				{
+					"arabic": "زينة.",
+					"english": "good.",
+					"transliteration": "zeena."
+				}
+			],
+			"targetWords": [
+				"Fruit"
+			]
+		},
+		{
+			"arabic": "قهوة وتمر.",
+			"arabicTashkeel": "قَهوة وتَمر.",
+			"english": "Coffee and dates.",
+			"transliteration": "gahwa w-tamr.",
+			"wordAlignments": [
+				{
+					"arabic": "قهوة",
+					"english": "Coffee",
+					"transliteration": "gahwa"
+				},
+				{
+					"arabic": "وتمر.",
+					"english": "and dates.",
+					"transliteration": "w-tamr."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "آكل بيض الصبح.",
+			"arabicTashkeel": "آكِل بيض الصُّبح.",
+			"english": "I eat eggs in the morning.",
+			"transliteration": "aakil beedh is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "بيض",
+					"english": "eggs",
+					"transliteration": "beedh"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Eggs"
+			]
+		},
+		{
+			"arabic": "الخضرة رخيصة.",
+			"arabicTashkeel": "الخُضرة رْخيصة.",
+			"english": "Vegetables are cheap.",
+			"transliteration": "il-khudhra rkheesa.",
+			"wordAlignments": [
+				{
+					"arabic": "الخضرة",
+					"english": "Vegetables are",
+					"transliteration": "il-khudhra"
+				},
+				{
+					"arabic": "رخيصة.",
+					"english": "cheap.",
+					"transliteration": "rkheesa."
+				}
+			],
+			"targetWords": [
+				"Vegetables"
+			]
+		},
+		{
+			"arabic": "أنا جوعان وايد.",
+			"arabicTashkeel": "أنا جوعان وايد.",
+			"english": "I'm very hungry.",
+			"transliteration": "ana yoo3aan waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "جوعان",
+					"english": "hungry",
+					"transliteration": "yoo3aan"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Hungry"
+			]
+		},
+		{
+			"arabic": "عطشان، أبي ماي.",
+			"arabicTashkeel": "عَطشان، أبي ماي.",
+			"english": "I'm thirsty, I want water.",
+			"transliteration": "3atshaan, abi maay.",
+			"wordAlignments": [
+				{
+					"arabic": "عطشان،",
+					"english": "I'm thirsty,",
+					"transliteration": "3atshaan,"
+				},
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "ماي.",
+					"english": "water.",
+					"transliteration": "maay."
+				}
+			],
+			"targetWords": [
+				"Thirsty",
+				"Water"
+			]
+		},
+		{
+			"arabic": "الخبز حار.",
+			"arabicTashkeel": "الخُبُز حار.",
+			"english": "The bread is hot.",
+			"transliteration": "il-khubuz 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "الخبز",
+					"english": "The bread is",
+					"transliteration": "il-khubuz"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Bread"
+			]
+		},
+		{
+			"arabic": "العيش جاهز.",
+			"arabicTashkeel": "العيش جاهِز.",
+			"english": "The rice is ready.",
+			"transliteration": "il-3eesh jaahiz.",
+			"wordAlignments": [
+				{
+					"arabic": "العيش",
+					"english": "The rice is",
+					"transliteration": "il-3eesh"
+				},
+				{
+					"arabic": "جاهز.",
+					"english": "ready.",
+					"transliteration": "jaahiz."
+				}
+			],
+			"targetWords": [
+				"Rice"
+			]
+		},
+		{
+			"arabic": "مكبوس الدجاج المفضل عندي.",
+			"arabicTashkeel": "مَكبوس الدِّجاج المُفَضَّل عِندي.",
+			"english": "Chicken machboos is my favourite.",
+			"transliteration": "machboos id-diyaay il-mufadhdhal 3indi.",
+			"wordAlignments": [
+				{
+					"arabic": "مكبوس",
+					"english": "Machboos of",
+					"transliteration": "machboos"
+				},
+				{
+					"arabic": "الدجاج",
+					"english": "chicken is",
+					"transliteration": "id-diyaay"
+				},
+				{
+					"arabic": "المفضل",
+					"english": "the favourite",
+					"transliteration": "il-mufadhdhal"
+				},
+				{
+					"arabic": "عندي.",
+					"english": "for me.",
+					"transliteration": "3indi."
+				}
+			],
+			"targetWords": [
+				"Machboos",
+				"Chicken"
+			]
+		},
+		{
+			"arabic": "بكم كيلو اللحم؟",
+			"arabicTashkeel": "بْكَم كيلو اللَّحَم؟",
+			"english": "How much is a kilo of meat?",
+			"transliteration": "b-cham keelo il-la7am?",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much is",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "كيلو",
+					"english": "a kilo of",
+					"transliteration": "keelo"
+				},
+				{
+					"arabic": "اللحم؟",
+					"english": "meat?",
+					"transliteration": "il-la7am?"
+				}
+			],
+			"targetWords": [
+				"Meat"
+			]
+		},
+		{
+			"arabic": "الدجاج بالفرن.",
+			"arabicTashkeel": "الدِّجاج بالفِرن.",
+			"english": "The chicken is in the oven.",
+			"transliteration": "id-diyaay bil-firn.",
+			"wordAlignments": [
+				{
+					"arabic": "الدجاج",
+					"english": "The chicken is",
+					"transliteration": "id-diyaay"
+				},
+				{
+					"arabic": "بالفرن.",
+					"english": "in the oven.",
+					"transliteration": "bil-firn."
+				}
+			],
+			"targetWords": [
+				"Chicken"
+			]
+		},
+		{
+			"arabic": "ناكل سمك يوم الجمعة.",
+			"arabicTashkeel": "ناكِل سِمَك يوم الجُمعة.",
+			"english": "We eat fish on Friday.",
+			"transliteration": "naakil simach yoom il-yum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "ناكل",
+					"english": "We eat",
+					"transliteration": "naakil"
+				},
+				{
+					"arabic": "سمك",
+					"english": "fish",
+					"transliteration": "simach"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "il-yum3a."
+				}
+			],
+			"targetWords": [
+				"Fish"
+			]
+		},
+		{
+			"arabic": "شاي بالحليب لو سمحت.",
+			"arabicTashkeel": "شاي بالحَليب لو سَمَحت.",
+			"english": "Tea with milk, please.",
+			"transliteration": "chaay bil-7aleeb law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "شاي",
+					"english": "Tea",
+					"transliteration": "chaay"
+				},
+				{
+					"arabic": "بالحليب",
+					"english": "with milk",
+					"transliteration": "bil-7aleeb"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Tea",
+				"Milk"
+			]
+		},
+		{
+			"arabic": "الماي بارد.",
+			"arabicTashkeel": "الماي بارِد.",
+			"english": "The water is cold.",
+			"transliteration": "il-maay baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "الماي",
+					"english": "The water is",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "بارد.",
+					"english": "cold.",
+					"transliteration": "baarid."
+				}
+			],
+			"targetWords": [
+				"Water"
+			]
+		},
+		{
+			"arabic": "العيال يشربون حليب.",
+			"arabicTashkeel": "العْيال يِشرَبون حَليب.",
+			"english": "The kids drink milk.",
+			"transliteration": "il-3yaal yishraboon 7aleeb.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يشربون",
+					"english": "drink",
+					"transliteration": "yishraboon"
+				},
+				{
+					"arabic": "حليب.",
+					"english": "milk.",
+					"transliteration": "7aleeb."
+				}
+			],
+			"targetWords": [
+				"Milk"
+			]
+		},
+		{
+			"arabic": "أشتري فواكه من السوق.",
+			"arabicTashkeel": "أشتِري فَواكِه مِن السّوق.",
+			"english": "I buy fruit from the market.",
+			"transliteration": "ashtiri fawaakih min is-soog.",
+			"wordAlignments": [
+				{
+					"arabic": "أشتري",
+					"english": "I buy",
+					"transliteration": "ashtiri"
+				},
+				{
+					"arabic": "فواكه",
+					"english": "fruit",
+					"transliteration": "fawaakih"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "السوق.",
+					"english": "the market.",
+					"transliteration": "is-soog."
+				}
+			],
+			"targetWords": [
+				"Fruit"
+			]
+		},
+		{
+			"arabic": "التمر حلو.",
+			"arabicTashkeel": "التَّمر حِلو.",
+			"english": "Dates are sweet.",
+			"transliteration": "it-tamr 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "التمر",
+					"english": "Dates are",
+					"transliteration": "it-tamr"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "sweet.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "بيضتين لو سمحت.",
+			"arabicTashkeel": "بيضتين لو سَمَحت.",
+			"english": "Two eggs, please.",
+			"transliteration": "beedhteen law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "بيضتين",
+					"english": "Two eggs",
+					"transliteration": "beedhteen"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Eggs"
+			]
+		},
+		{
+			"arabic": "أحب الخضرة.",
+			"arabicTashkeel": "أحِب الخُضرة.",
+			"english": "I like vegetables.",
+			"transliteration": "a7ibb il-khudhra.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الخضرة.",
+					"english": "vegetables.",
+					"transliteration": "il-khudhra."
+				}
+			],
+			"targetWords": [
+				"Vegetables"
+			]
+		},
+		{
+			"arabic": "إنت جوعان؟",
+			"arabicTashkeel": "إنتَ جوعان؟",
+			"english": "Are you hungry?",
+			"transliteration": "inta yoo3aan?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "جوعان؟",
+					"english": "hungry?",
+					"transliteration": "yoo3aan?"
+				}
+			],
+			"targetWords": [
+				"Hungry"
+			]
+		},
+		{
+			"arabic": "إنتي عطشانة؟",
+			"arabicTashkeel": "إنتي عَطشانة؟",
+			"english": "Are you thirsty?",
+			"transliteration": "inti 3atshaana?",
+			"wordAlignments": [
+				{
+					"arabic": "إنتي",
+					"english": "Are you",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "عطشانة؟",
+					"english": "thirsty?",
+					"transliteration": "3atshaana?"
+				}
+			],
+			"targetWords": [
+				"Thirsty"
+			]
+		},
+		{
+			"arabic": "خبز وبيض حق الريوق.",
+			"arabicTashkeel": "خُبُز وبيض حَق الرّيوق.",
+			"english": "Bread and eggs for breakfast.",
+			"transliteration": "khubuz w-beedh 7agg ir-ryoog.",
+			"wordAlignments": [
+				{
+					"arabic": "خبز",
+					"english": "Bread",
+					"transliteration": "khubuz"
+				},
+				{
+					"arabic": "وبيض",
+					"english": "and eggs",
+					"transliteration": "w-beedh"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الريوق.",
+					"english": "breakfast.",
+					"transliteration": "ir-ryoog."
+				}
+			],
+			"targetWords": [
+				"Bread",
+				"Eggs"
+			]
+		},
+		{
+			"arabic": "عيش أبيض لو مكبوس؟",
+			"arabicTashkeel": "عيش أبيَض لو مَكبوس؟",
+			"english": "White rice or machboos?",
+			"transliteration": "3eesh abyadh law machboos?",
+			"wordAlignments": [
+				{
+					"arabic": "عيش",
+					"english": "Rice",
+					"transliteration": "3eesh"
+				},
+				{
+					"arabic": "أبيض",
+					"english": "white",
+					"transliteration": "abyadh"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "مكبوس؟",
+					"english": "machboos?",
+					"transliteration": "machboos?"
+				}
+			],
+			"targetWords": [
+				"Rice",
+				"Machboos"
+			]
+		},
+		{
+			"arabic": "مكبوس لحم لو دجاج؟",
+			"arabicTashkeel": "مَكبوس لَحَم لو دِجاج؟",
+			"english": "Machboos with meat or chicken?",
+			"transliteration": "machboos la7am law diyaay?",
+			"wordAlignments": [
+				{
+					"arabic": "مكبوس",
+					"english": "Machboos",
+					"transliteration": "machboos"
+				},
+				{
+					"arabic": "لحم",
+					"english": "meat",
+					"transliteration": "la7am"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "دجاج؟",
+					"english": "chicken?",
+					"transliteration": "diyaay?"
+				}
+			],
+			"targetWords": [
+				"Machboos",
+				"Meat",
+				"Chicken"
+			]
+		},
+		{
+			"arabic": "اللحم غالي.",
+			"arabicTashkeel": "اللَّحَم غالي.",
+			"english": "The meat is expensive.",
+			"transliteration": "il-la7am ghaali.",
+			"wordAlignments": [
+				{
+					"arabic": "اللحم",
+					"english": "The meat is",
+					"transliteration": "il-la7am"
+				},
+				{
+					"arabic": "غالي.",
+					"english": "expensive.",
+					"transliteration": "ghaali."
+				}
+			],
+			"targetWords": [
+				"Meat"
+			]
+		},
+		{
+			"arabic": "السمك من البحر.",
+			"arabicTashkeel": "السِّمَك مِن البَحَر.",
+			"english": "The fish is from the sea.",
+			"transliteration": "is-simach min il-ba7ar.",
+			"wordAlignments": [
+				{
+					"arabic": "السمك",
+					"english": "The fish is",
+					"transliteration": "is-simach"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البحر.",
+					"english": "the sea.",
+					"transliteration": "il-ba7ar."
+				}
+			],
+			"targetWords": [
+				"Fish"
+			]
+		},
+		{
+			"arabic": "الشاي حار وايد.",
+			"arabicTashkeel": "الشّاي حار وايد.",
+			"english": "The tea is very hot.",
+			"transliteration": "ish-shaay 7aarr waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاي",
+					"english": "The tea is",
+					"transliteration": "ish-shaay"
+				},
+				{
+					"arabic": "حار",
+					"english": "hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Tea"
+			]
+		},
+		{
+			"arabic": "بطل ماي.",
+			"arabicTashkeel": "بُطل ماي.",
+			"english": "A bottle of water.",
+			"transliteration": "butl maay.",
+			"wordAlignments": [
+				{
+					"arabic": "بطل",
+					"english": "A bottle of",
+					"transliteration": "butl"
+				},
+				{
+					"arabic": "ماي.",
+					"english": "water.",
+					"transliteration": "maay."
+				}
+			],
+			"targetWords": [
+				"Water"
+			]
+		},
+		{
+			"arabic": "حليب الناقة مشهور بالإمارات.",
+			"arabicTashkeel": "حَليب النّاقة مَشهور بالإمارات.",
+			"english": "Camel milk is famous in the UAE.",
+			"transliteration": "7aleeb in-naaga mash-hoor bil-imaaraat.",
+			"wordAlignments": [
+				{
+					"arabic": "حليب",
+					"english": "Milk of",
+					"transliteration": "7aleeb"
+				},
+				{
+					"arabic": "الناقة",
+					"english": "the camel is",
+					"transliteration": "in-naaga"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "famous",
+					"transliteration": "mash-hoor"
+				},
+				{
+					"arabic": "بالإمارات.",
+					"english": "in the UAE.",
+					"transliteration": "bil-imaaraat."
+				}
+			],
+			"targetWords": [
+				"Milk"
+			]
+		},
+		{
+			"arabic": "الفواكه طازجة.",
+			"arabicTashkeel": "الفَواكِه طازجة.",
+			"english": "The fruit is fresh.",
+			"transliteration": "il-fawaakih taazja.",
+			"wordAlignments": [
+				{
+					"arabic": "الفواكه",
+					"english": "The fruit is",
+					"transliteration": "il-fawaakih"
+				},
+				{
+					"arabic": "طازجة.",
+					"english": "fresh.",
+					"transliteration": "taazja."
+				}
+			],
+			"targetWords": [
+				"Fruit"
+			]
+		},
+		{
+			"arabic": "هاذا التمر من العين.",
+			"arabicTashkeel": "هاذا التَّمر مِن العين.",
+			"english": "These dates are from Al Ain.",
+			"transliteration": "haadha it-tamr min il-3een.",
+			"wordAlignments": [
+				{
+					"arabic": "هاذا",
+					"english": "This",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "التمر",
+					"english": "dates is",
+					"transliteration": "it-tamr"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "العين.",
+					"english": "Al Ain.",
+					"transliteration": "il-3een."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "ما آكل بيض.",
+			"arabicTashkeel": "ما آكِل بيض.",
+			"english": "I don't eat eggs.",
+			"transliteration": "ma aakil beedh.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "بيض.",
+					"english": "eggs.",
+					"transliteration": "beedh."
+				}
+			],
+			"targetWords": [
+				"Eggs"
+			]
+		},
+		{
+			"arabic": "الخضرة بالثلاجة.",
+			"arabicTashkeel": "الخُضرة بالثَّلّاجة.",
+			"english": "The vegetables are in the fridge.",
+			"transliteration": "il-khudhra bith-thallaaja.",
+			"wordAlignments": [
+				{
+					"arabic": "الخضرة",
+					"english": "The vegetables are",
+					"transliteration": "il-khudhra"
+				},
+				{
+					"arabic": "بالثلاجة.",
+					"english": "in the fridge.",
+					"transliteration": "bith-thallaaja."
+				}
+			],
+			"targetWords": [
+				"Vegetables"
+			]
+		},
+		{
+			"arabic": "العيال جوعانين.",
+			"arabicTashkeel": "العْيال جوعانين.",
+			"english": "The kids are hungry.",
+			"transliteration": "il-3yaal yoo3aaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids are",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "جوعانين.",
+					"english": "hungry.",
+					"transliteration": "yoo3aaneen."
+				}
+			],
+			"targetWords": [
+				"Hungry"
+			]
+		},
+		{
+			"arabic": "أنا عطشان، الجو حار.",
+			"arabicTashkeel": "أنا عَطشان، الجَو حار.",
+			"english": "I'm thirsty, it's hot.",
+			"transliteration": "ana 3atshaan, il-yaw 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "عطشان،",
+					"english": "thirsty,",
+					"transliteration": "3atshaan,"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Thirsty"
+			]
+		},
+		{
+			"arabic": "أبي خبز طازج.",
+			"arabicTashkeel": "أبي خُبُز طازَج.",
+			"english": "I want fresh bread.",
+			"transliteration": "abi khubuz taazaj.",
+			"wordAlignments": [
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "خبز",
+					"english": "bread",
+					"transliteration": "khubuz"
+				},
+				{
+					"arabic": "طازج.",
+					"english": "fresh.",
+					"transliteration": "taazaj."
+				}
+			],
+			"targetWords": [
+				"Bread"
+			]
+		},
+		{
+			"arabic": "عيش وسمك.",
+			"arabicTashkeel": "عيش وسِمَك.",
+			"english": "Rice and fish.",
+			"transliteration": "3eesh w-simach.",
+			"wordAlignments": [
+				{
+					"arabic": "عيش",
+					"english": "Rice",
+					"transliteration": "3eesh"
+				},
+				{
+					"arabic": "وسمك.",
+					"english": "and fish.",
+					"transliteration": "w-simach."
+				}
+			],
+			"targetWords": [
+				"Rice",
+				"Fish"
+			]
+		},
+		{
+			"arabic": "مكبوس السمك لذيذ.",
+			"arabicTashkeel": "مَكبوس السِّمَك لَذيذ.",
+			"english": "Fish machboos is delicious.",
+			"transliteration": "machboos is-simach ladheedh.",
+			"wordAlignments": [
+				{
+					"arabic": "مكبوس",
+					"english": "Machboos of",
+					"transliteration": "machboos"
+				},
+				{
+					"arabic": "السمك",
+					"english": "fish is",
+					"transliteration": "is-simach"
+				},
+				{
+					"arabic": "لذيذ.",
+					"english": "delicious.",
+					"transliteration": "ladheedh."
+				}
+			],
+			"targetWords": [
+				"Machboos",
+				"Fish"
+			]
+		},
+		{
+			"arabic": "أبي كيلو لحم.",
+			"arabicTashkeel": "أبي كيلو لَحَم.",
+			"english": "I want a kilo of meat.",
+			"transliteration": "abi keelo la7am.",
+			"wordAlignments": [
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "كيلو",
+					"english": "a kilo of",
+					"transliteration": "keelo"
+				},
+				{
+					"arabic": "لحم.",
+					"english": "meat.",
+					"transliteration": "la7am."
+				}
+			],
+			"targetWords": [
+				"Meat"
+			]
+		},
+		{
+			"arabic": "إستكانة شاي.",
+			"arabicTashkeel": "إستِكانة شاي.",
+			"english": "A glass of tea.",
+			"transliteration": "istikaana chaay.",
+			"wordAlignments": [
+				{
+					"arabic": "إستكانة",
+					"english": "A small glass of",
+					"transliteration": "istikaana"
+				},
+				{
+					"arabic": "شاي.",
+					"english": "tea.",
+					"transliteration": "chaay."
+				}
+			],
+			"targetWords": [
+				"Tea"
+			]
+		},
+		{
+			"arabic": "إشرب ماي!",
+			"arabicTashkeel": "إشرَب ماي!",
+			"english": "Drink water!",
+			"transliteration": "ishrab maay!",
+			"wordAlignments": [
+				{
+					"arabic": "إشرب",
+					"english": "Drink",
+					"transliteration": "ishrab"
+				},
+				{
+					"arabic": "ماي!",
+					"english": "water!",
+					"transliteration": "maay!"
+				}
+			],
+			"targetWords": [
+				"Water"
+			]
+		},
+		{
+			"arabic": "الفواكه غالية هالأسبوع.",
+			"arabicTashkeel": "الفَواكِه غالية هالأسبوع.",
+			"english": "Fruit is expensive this week.",
+			"transliteration": "il-fawaakih ghaalya hal-usboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "الفواكه",
+					"english": "Fruit is",
+					"transliteration": "il-fawaakih"
+				},
+				{
+					"arabic": "غالية",
+					"english": "expensive",
+					"transliteration": "ghaalya"
+				},
+				{
+					"arabic": "هالأسبوع.",
+					"english": "this week.",
+					"transliteration": "hal-usboo3."
+				}
+			],
+			"targetWords": [
+				"Fruit"
+			]
+		},
+		{
+			"arabic": "تفضل تمر!",
+			"arabicTashkeel": "تْفَضَّل تَمر!",
+			"english": "Have some dates!",
+			"transliteration": "tfaddal tamr!",
+			"wordAlignments": [
+				{
+					"arabic": "تفضل",
+					"english": "Please have",
+					"transliteration": "tfaddal"
+				},
+				{
+					"arabic": "تمر!",
+					"english": "dates!",
+					"transliteration": "tamr!"
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "أنا جوعان وعطشان.",
+			"arabicTashkeel": "أنا جوعان وعَطشان.",
+			"english": "I'm hungry and thirsty.",
+			"transliteration": "ana yoo3aan w-3atshaan.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "جوعان",
+					"english": "hungry",
+					"transliteration": "yoo3aan"
+				},
+				{
+					"arabic": "وعطشان.",
+					"english": "and thirsty.",
+					"transliteration": "w-3atshaan."
+				}
+			],
+			"targetWords": [
+				"Hungry",
+				"Thirsty"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At Grandma's House",
+			"sentences": [
+				{
+					"arabic": "يوم الجمعة نروح بيت جدتي.",
+					"arabicTashkeel": "يوم الجُمعة نْروح بيت جَدّتي.",
+					"english": "On Friday we go to my grandmother's house.",
+					"transliteration": "yoom il-yum3a nrooh beet yaddati.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الجمعة",
+							"english": "Friday",
+							"transliteration": "il-yum3a"
+						},
+						{
+							"arabic": "نروح",
+							"english": "we go",
+							"transliteration": "nrooh"
+						},
+						{
+							"arabic": "بيت",
+							"english": "to the house of",
+							"transliteration": "beet"
+						},
+						{
+							"arabic": "جدتي.",
+							"english": "my grandmother.",
+							"transliteration": "yaddati."
+						}
+					]
+				},
+				{
+					"arabic": "جدتي تطبخ مكبوس دجاج.",
+					"arabicTashkeel": "جَدّتي تِطبَخ مَكبوس دِجاج.",
+					"english": "My grandmother cooks machboos with chicken.",
+					"transliteration": "yaddati titbakh machboos diyaay.",
+					"wordAlignments": [
+						{
+							"arabic": "جدتي",
+							"english": "My grandmother",
+							"transliteration": "yaddati"
+						},
+						{
+							"arabic": "تطبخ",
+							"english": "cooks",
+							"transliteration": "titbakh"
+						},
+						{
+							"arabic": "مكبوس",
+							"english": "machboos",
+							"transliteration": "machboos"
+						},
+						{
+							"arabic": "دجاج.",
+							"english": "chicken.",
+							"transliteration": "diyaay."
+						}
+					]
+				},
+				{
+					"arabic": "بعد الأكل نشرب شاي وناكل تمر.",
+					"arabicTashkeel": "بَعد الأكل نِشرَب شاي وناكِل تَمر.",
+					"english": "After the food we drink tea and eat dates.",
+					"transliteration": "ba3d il-akl nishrab chaay w-naakil tamr.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "الأكل",
+							"english": "the food",
+							"transliteration": "il-akl"
+						},
+						{
+							"arabic": "نشرب",
+							"english": "we drink",
+							"transliteration": "nishrab"
+						},
+						{
+							"arabic": "شاي",
+							"english": "tea",
+							"transliteration": "chaay"
+						},
+						{
+							"arabic": "وناكل",
+							"english": "and eat",
+							"transliteration": "w-naakil"
+						},
+						{
+							"arabic": "تمر.",
+							"english": "dates.",
+							"transliteration": "tamr."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Restaurant",
+			"sentences": [
+				{
+					"arabic": "أنا جوعان. شو عندكم؟",
+					"arabicTashkeel": "أنا جوعان. شو عِندكُم؟",
+					"english": "I'm hungry. What do you have?",
+					"transliteration": "ana yoo3aan. shu 3indakum?",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I am",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "جوعان.",
+							"english": "hungry.",
+							"transliteration": "yoo3aan."
+						},
+						{
+							"arabic": "شو",
+							"english": "What",
+							"transliteration": "shu"
+						},
+						{
+							"arabic": "عندكم؟",
+							"english": "do you have?",
+							"transliteration": "3indakum?"
+						}
+					]
+				},
+				{
+					"arabic": "عندنا سمك ولحم ودجاج.",
+					"arabicTashkeel": "عِندنا سِمَك ولَحَم ودِجاج.",
+					"english": "We have fish, meat and chicken.",
+					"transliteration": "3indana simach w-la7am w-diyaay.",
+					"wordAlignments": [
+						{
+							"arabic": "عندنا",
+							"english": "We have",
+							"transliteration": "3indana"
+						},
+						{
+							"arabic": "سمك",
+							"english": "fish",
+							"transliteration": "simach"
+						},
+						{
+							"arabic": "ولحم",
+							"english": "and meat",
+							"transliteration": "w-la7am"
+						},
+						{
+							"arabic": "ودجاج.",
+							"english": "and chicken.",
+							"transliteration": "w-diyaay."
+						}
+					]
+				},
+				{
+					"arabic": "سمك ويا عيش، وماي بارد لو سمحت.",
+					"arabicTashkeel": "سِمَك وِيّا عيش، وماي بارِد لو سَمَحت.",
+					"english": "Fish with rice, and cold water please.",
+					"transliteration": "simach wiyya 3eesh, w-maay baarid law sama7t.",
+					"wordAlignments": [
+						{
+							"arabic": "سمك",
+							"english": "Fish",
+							"transliteration": "simach"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "عيش،",
+							"english": "rice,",
+							"transliteration": "3eesh,"
+						},
+						{
+							"arabic": "وماي",
+							"english": "and water",
+							"transliteration": "w-maay"
+						},
+						{
+							"arabic": "بارد",
+							"english": "cold",
+							"transliteration": "baarid"
+						},
+						{
+							"arabic": "لو",
+							"english": "if",
+							"transliteration": "law"
+						},
+						{
+							"arabic": "سمحت.",
+							"english": "you please.",
+							"transliteration": "sama7t."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is at a traditional Emirati restaurant in Abu Dhabi, ordering lunch.",
+		"studentRole": "A hungry customer learning Gulf Arabic.",
+		"otherRole": "The friendly waiter, who recommends the machboos.",
+		"goalEnglish": "Say you are hungry and thirsty, ask what dishes they have, and order a main dish and a drink.",
+		"targetWords": [
+			"Hungry",
+			"Thirsty",
+			"Rice",
+			"Machboos",
+			"Chicken",
+			"Fish",
+			"Water",
+			"Tea"
+		]
+	}
+}

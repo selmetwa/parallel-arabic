@@ -1,0 +1,2010 @@
+{
+	"vocab": [
+		{
+			"arabic": "أكيد",
+			"arabicTashkeel": "أكيد",
+			"english": "Definitely",
+			"transliteration": "akeed",
+			"wordAlignments": [
+				{
+					"arabic": "أكيد",
+					"english": "Definitely",
+					"transliteration": "akeed"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "يمكن",
+			"arabicTashkeel": "يِمكِن",
+			"english": "Maybe",
+			"transliteration": "yimkin",
+			"wordAlignments": [
+				{
+					"arabic": "يمكن",
+					"english": "Maybe",
+					"transliteration": "yimkin"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "محتمل",
+			"arabicTashkeel": "مُحتَمَل",
+			"english": "Probably",
+			"transliteration": "mu7tamal",
+			"wordAlignments": [
+				{
+					"arabic": "محتمل",
+					"english": "Probable",
+					"transliteration": "mu7tamal"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "عالأغلب",
+			"arabicTashkeel": "عالأغلَب",
+			"english": "Most likely",
+			"transliteration": "3al-aghlab",
+			"wordAlignments": [
+				{
+					"arabic": "عالأغلب",
+					"english": "Most likely",
+					"transliteration": "3al-aghlab"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مستحيل",
+			"arabicTashkeel": "مُستَحيل",
+			"english": "Impossible",
+			"transliteration": "musta7eel",
+			"wordAlignments": [
+				{
+					"arabic": "مستحيل",
+					"english": "Impossible",
+					"transliteration": "musta7eel"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "ممكن",
+			"arabicTashkeel": "مُمكِن",
+			"english": "Possible",
+			"transliteration": "mumkin",
+			"wordAlignments": [
+				{
+					"arabic": "ممكن",
+					"english": "Possible",
+					"transliteration": "mumkin"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "متأكد",
+			"arabicTashkeel": "مِتأكِّد",
+			"english": "I'm sure",
+			"transliteration": "mit2akkid",
+			"wordAlignments": [
+				{
+					"arabic": "متأكد",
+					"english": "Sure",
+					"transliteration": "mit2akkid"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مو متأكد",
+			"arabicTashkeel": "مو مِتأكِّد",
+			"english": "I'm not sure",
+			"transliteration": "moo mit2akkid",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أشك",
+			"arabicTashkeel": "أشُك",
+			"english": "I doubt",
+			"transliteration": "ashukk",
+			"wordAlignments": [
+				{
+					"arabic": "أشك",
+					"english": "I doubt",
+					"transliteration": "ashukk"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "شك",
+			"arabicTashkeel": "شَك",
+			"english": "Doubt",
+			"transliteration": "shakk",
+			"wordAlignments": [
+				{
+					"arabic": "شك",
+					"english": "Doubt",
+					"transliteration": "shakk"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "واضح",
+			"arabicTashkeel": "واضِح",
+			"english": "Obvious",
+			"transliteration": "waadhi7",
+			"wordAlignments": [
+				{
+					"arabic": "واضح",
+					"english": "Obvious",
+					"transliteration": "waadhi7"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "لازم",
+			"arabicTashkeel": "لازِم",
+			"english": "It must be",
+			"transliteration": "laazim",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مستبعد",
+			"arabicTashkeel": "مُستَبعَد",
+			"english": "Unlikely",
+			"transliteration": "mustab3ad",
+			"wordAlignments": [
+				{
+					"arabic": "مستبعد",
+					"english": "Unlikely",
+					"transliteration": "mustab3ad"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "بالتأكيد",
+			"arabicTashkeel": "بالتّأكيد",
+			"english": "Certainly",
+			"transliteration": "bit-ta2keed",
+			"wordAlignments": [
+				{
+					"arabic": "بالتأكيد",
+					"english": "Certainly",
+					"transliteration": "bit-ta2keed"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "يجوز",
+			"arabicTashkeel": "يِجوز",
+			"english": "It could be that",
+			"transliteration": "yijooz",
+			"wordAlignments": [
+				{
+					"arabic": "يجوز",
+					"english": "It could be",
+					"transliteration": "yijooz"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أكيد حجي.",
+			"arabicTashkeel": "أكيد حَجي.",
+			"english": "I'll definitely come.",
+			"transliteration": "akeed 7aji.",
+			"wordAlignments": [
+				{
+					"arabic": "أكيد",
+					"english": "Definitely",
+					"transliteration": "akeed"
+				},
+				{
+					"arabic": "حجي.",
+					"english": "I'll come.",
+					"transliteration": "7aji."
+				}
+			],
+			"targetWords": [
+				"Definitely"
+			]
+		},
+		{
+			"arabic": "يمكن تمطر بكرة.",
+			"arabicTashkeel": "يِمكِن تِمَطِّر بُكرة.",
+			"english": "Maybe it will rain tomorrow.",
+			"transliteration": "yimkin timattir bukra.",
+			"wordAlignments": [
+				{
+					"arabic": "يمكن",
+					"english": "Maybe",
+					"transliteration": "yimkin"
+				},
+				{
+					"arabic": "تمطر",
+					"english": "it rains",
+					"transliteration": "timattir"
+				},
+				{
+					"arabic": "بكرة.",
+					"english": "tomorrow.",
+					"transliteration": "bukra."
+				}
+			],
+			"targetWords": [
+				"Maybe"
+			]
+		},
+		{
+			"arabic": "محتمل يكون متأخر.",
+			"arabicTashkeel": "مُحتَمَل يِكون مِتأخِّر.",
+			"english": "It's probable that he's late.",
+			"transliteration": "mu7tamal yikoon mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "محتمل",
+					"english": "Probable",
+					"transliteration": "mu7tamal"
+				},
+				{
+					"arabic": "يكون",
+					"english": "that he is",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Probably"
+			]
+		},
+		{
+			"arabic": "عالأغلب هوا في الزحمة.",
+			"arabicTashkeel": "عالأغلَب هوّا في الزَّحمة.",
+			"english": "Most likely he's in the traffic.",
+			"transliteration": "3al-aghlab huwwa fi iz-za7ma.",
+			"wordAlignments": [
+				{
+					"arabic": "عالأغلب",
+					"english": "Most likely",
+					"transliteration": "3al-aghlab"
+				},
+				{
+					"arabic": "هوا",
+					"english": "he is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الزحمة.",
+					"english": "the traffic.",
+					"transliteration": "iz-za7ma."
+				}
+			],
+			"targetWords": [
+				"Most likely"
+			]
+		},
+		{
+			"arabic": "هادا مستحيل!",
+			"arabicTashkeel": "هادا مُستَحيل!",
+			"english": "That's impossible!",
+			"transliteration": "haada musta7eel!",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "مستحيل!",
+					"english": "impossible!",
+					"transliteration": "musta7eel!"
+				}
+			],
+			"targetWords": [
+				"Impossible"
+			]
+		},
+		{
+			"arabic": "ممكن نغير الوقت؟",
+			"arabicTashkeel": "مُمكِن نِغَيِّر الوَقت؟",
+			"english": "Is it possible to change the time?",
+			"transliteration": "mumkin nighayyir il-wagt?",
+			"wordAlignments": [
+				{
+					"arabic": "ممكن",
+					"english": "Is it possible",
+					"transliteration": "mumkin"
+				},
+				{
+					"arabic": "نغير",
+					"english": "we change",
+					"transliteration": "nighayyir"
+				},
+				{
+					"arabic": "الوقت؟",
+					"english": "the time?",
+					"transliteration": "il-wagt?"
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "أنا متأكد إنه قال كدا.",
+			"arabicTashkeel": "أنا مِتأكِّد إنُّه قال كِدا.",
+			"english": "I'm sure he said that.",
+			"transliteration": "ana mit2akkid innu gaal kida.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				},
+				{
+					"arabic": "إنه",
+					"english": "that he",
+					"transliteration": "innu"
+				},
+				{
+					"arabic": "قال",
+					"english": "said",
+					"transliteration": "gaal"
+				},
+				{
+					"arabic": "كدا.",
+					"english": "so.",
+					"transliteration": "kida."
+				}
+			],
+			"targetWords": [
+				"I'm sure"
+			]
+		},
+		{
+			"arabic": "أنا مو متأكد من العنوان.",
+			"arabicTashkeel": "أنا مو مِتأكِّد مِن العُنوان.",
+			"english": "I'm not sure of the address.",
+			"transliteration": "ana moo mit2akkid min il-3unwaan.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "العنوان.",
+					"english": "the address.",
+					"transliteration": "il-3unwaan."
+				}
+			],
+			"targetWords": [
+				"I'm not sure"
+			]
+		},
+		{
+			"arabic": "أشك إنه حيجي.",
+			"arabicTashkeel": "أشُك إنُّه حَيِجي.",
+			"english": "I doubt he'll come.",
+			"transliteration": "ashukk innu 7ayiji.",
+			"wordAlignments": [
+				{
+					"arabic": "أشك",
+					"english": "I doubt",
+					"transliteration": "ashukk"
+				},
+				{
+					"arabic": "إنه",
+					"english": "that he",
+					"transliteration": "innu"
+				},
+				{
+					"arabic": "حيجي.",
+					"english": "will come.",
+					"transliteration": "7ayiji."
+				}
+			],
+			"targetWords": [
+				"I doubt"
+			]
+		},
+		{
+			"arabic": "ما فيه شك.",
+			"arabicTashkeel": "ما فيه شَك.",
+			"english": "There's no doubt.",
+			"transliteration": "ma feeh shakk.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "شك.",
+					"english": "doubt.",
+					"transliteration": "shakk."
+				}
+			],
+			"targetWords": [
+				"Doubt"
+			]
+		},
+		{
+			"arabic": "واضح إنه تعبان.",
+			"arabicTashkeel": "واضِح إنُّه تَعبان.",
+			"english": "It's obvious he's tired.",
+			"transliteration": "waadhi7 innu ta3baan.",
+			"wordAlignments": [
+				{
+					"arabic": "واضح",
+					"english": "Obvious",
+					"transliteration": "waadhi7"
+				},
+				{
+					"arabic": "إنه",
+					"english": "that he is",
+					"transliteration": "innu"
+				},
+				{
+					"arabic": "تعبان.",
+					"english": "tired.",
+					"transliteration": "ta3baan."
+				}
+			],
+			"targetWords": [
+				"Obvious"
+			]
+		},
+		{
+			"arabic": "لازم يكون نايم.",
+			"arabicTashkeel": "لازِم يِكون نايِم.",
+			"english": "He must be asleep.",
+			"transliteration": "laazim yikoon naayim.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "يكون",
+					"english": "he is",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "نايم.",
+					"english": "asleep.",
+					"transliteration": "naayim."
+				}
+			],
+			"targetWords": [
+				"It must be"
+			]
+		},
+		{
+			"arabic": "مستبعد يفوز.",
+			"arabicTashkeel": "مُستَبعَد يِفوز.",
+			"english": "It's unlikely he'll win.",
+			"transliteration": "mustab3ad yifooz.",
+			"wordAlignments": [
+				{
+					"arabic": "مستبعد",
+					"english": "Unlikely",
+					"transliteration": "mustab3ad"
+				},
+				{
+					"arabic": "يفوز.",
+					"english": "he wins.",
+					"transliteration": "yifooz."
+				}
+			],
+			"targetWords": [
+				"Unlikely"
+			]
+		},
+		{
+			"arabic": "بالتأكيد، إن شاء الله.",
+			"arabicTashkeel": "بالتّأكيد، إن شاء الله.",
+			"english": "Certainly, God willing.",
+			"transliteration": "bit-ta2keed, in shaa2 allah.",
+			"wordAlignments": [
+				{
+					"arabic": "بالتأكيد،",
+					"english": "Certainly,",
+					"transliteration": "bit-ta2keed,"
+				},
+				{
+					"arabic": "إن",
+					"english": "if",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله.",
+					"english": "God.",
+					"transliteration": "allah."
+				}
+			],
+			"targetWords": [
+				"Certainly"
+			]
+		},
+		{
+			"arabic": "يجوز نسي.",
+			"arabicTashkeel": "يِجوز نِسي.",
+			"english": "It could be that he forgot.",
+			"transliteration": "yijooz nisi.",
+			"wordAlignments": [
+				{
+					"arabic": "يجوز",
+					"english": "It could be",
+					"transliteration": "yijooz"
+				},
+				{
+					"arabic": "نسي.",
+					"english": "he forgot.",
+					"transliteration": "nisi."
+				}
+			],
+			"targetWords": [
+				"It could be that"
+			]
+		},
+		{
+			"arabic": "أكيد، هوا الأحسن.",
+			"arabicTashkeel": "أكيد، هوّا الأحسَن.",
+			"english": "Definitely, he's the best.",
+			"transliteration": "akeed, huwwa il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "أكيد،",
+					"english": "Definitely,",
+					"transliteration": "akeed,"
+				},
+				{
+					"arabic": "هوا",
+					"english": "he is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"Definitely"
+			]
+		},
+		{
+			"arabic": "يمكن أسافر الأسبوع الجاي.",
+			"arabicTashkeel": "يِمكِن أسافِر الأُسبوع الجاي.",
+			"english": "Maybe I'll travel next week.",
+			"transliteration": "yimkin asaafir il-usboo3 ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "يمكن",
+					"english": "Maybe",
+					"transliteration": "yimkin"
+				},
+				{
+					"arabic": "أسافر",
+					"english": "I travel",
+					"transliteration": "asaafir"
+				},
+				{
+					"arabic": "الأسبوع",
+					"english": "the week",
+					"transliteration": "il-usboo3"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Maybe"
+			]
+		},
+		{
+			"arabic": "محتمل المباراة تنلغي.",
+			"arabicTashkeel": "مُحتَمَل المُباراة تِنلِغي.",
+			"english": "It's probable the match will be cancelled.",
+			"transliteration": "mu7tamal il-mubaaraa tinlighi.",
+			"wordAlignments": [
+				{
+					"arabic": "محتمل",
+					"english": "Probable",
+					"transliteration": "mu7tamal"
+				},
+				{
+					"arabic": "المباراة",
+					"english": "the match",
+					"transliteration": "il-mubaaraa"
+				},
+				{
+					"arabic": "تنلغي.",
+					"english": "gets cancelled.",
+					"transliteration": "tinlighi."
+				}
+			],
+			"targetWords": [
+				"Probably"
+			]
+		},
+		{
+			"arabic": "عالأغلب المحل مسكر.",
+			"arabicTashkeel": "عالأغلَب المَحَل مْسَكَّر.",
+			"english": "Most likely the shop is closed.",
+			"transliteration": "3al-aghlab il-ma7al msakkar.",
+			"wordAlignments": [
+				{
+					"arabic": "عالأغلب",
+					"english": "Most likely",
+					"transliteration": "3al-aghlab"
+				},
+				{
+					"arabic": "المحل",
+					"english": "the shop is",
+					"transliteration": "il-ma7al"
+				},
+				{
+					"arabic": "مسكر.",
+					"english": "closed.",
+					"transliteration": "msakkar."
+				}
+			],
+			"targetWords": [
+				"Most likely"
+			]
+		},
+		{
+			"arabic": "ما فيه شي مستحيل.",
+			"arabicTashkeel": "ما فيه شي مُستَحيل.",
+			"english": "Nothing is impossible.",
+			"transliteration": "ma feeh shay musta7eel.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "شي",
+					"english": "a thing",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "مستحيل.",
+					"english": "impossible.",
+					"transliteration": "musta7eel."
+				}
+			],
+			"targetWords": [
+				"Impossible"
+			]
+		},
+		{
+			"arabic": "ممكن، ليش لا؟",
+			"arabicTashkeel": "مُمكِن، ليش لا؟",
+			"english": "It's possible, why not?",
+			"transliteration": "mumkin, laish laa?",
+			"wordAlignments": [
+				{
+					"arabic": "ممكن،",
+					"english": "Possible,",
+					"transliteration": "mumkin,"
+				},
+				{
+					"arabic": "ليش",
+					"english": "why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "لا؟",
+					"english": "not?",
+					"transliteration": "laa?"
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "إنت متأكد؟",
+			"arabicTashkeel": "إنتَ مِتأكِّد؟",
+			"english": "Are you sure?",
+			"transliteration": "inta mit2akkid?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "متأكد؟",
+					"english": "sure?",
+					"transliteration": "mit2akkid?"
+				}
+			],
+			"targetWords": [
+				"I'm sure"
+			]
+		},
+		{
+			"arabic": "مو متأكد، حسأل.",
+			"arabicTashkeel": "مو مِتأكِّد، حَسأل.",
+			"english": "I'm not sure, I'll ask.",
+			"transliteration": "moo mit2akkid, 7as2al.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "متأكد،",
+					"english": "sure,",
+					"transliteration": "mit2akkid,"
+				},
+				{
+					"arabic": "حسأل.",
+					"english": "I'll ask.",
+					"transliteration": "7as2al."
+				}
+			],
+			"targetWords": [
+				"I'm not sure"
+			]
+		},
+		{
+			"arabic": "أشك في هادي القصة.",
+			"arabicTashkeel": "أشُك في هادي القِصّة.",
+			"english": "I doubt this story.",
+			"transliteration": "ashukk fi haadi il-gissa.",
+			"wordAlignments": [
+				{
+					"arabic": "أشك",
+					"english": "I doubt",
+					"transliteration": "ashukk"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "هادي",
+					"english": "this",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "القصة.",
+					"english": "the story.",
+					"transliteration": "il-gissa."
+				}
+			],
+			"targetWords": [
+				"I doubt"
+			]
+		},
+		{
+			"arabic": "عندي شك فيه.",
+			"arabicTashkeel": "عِندي شَك فيه.",
+			"english": "I have a doubt about him.",
+			"transliteration": "3indi shakk feeh.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "شك",
+					"english": "a doubt",
+					"transliteration": "shakk"
+				},
+				{
+					"arabic": "فيه.",
+					"english": "in him.",
+					"transliteration": "feeh."
+				}
+			],
+			"targetWords": [
+				"Doubt"
+			]
+		},
+		{
+			"arabic": "الجواب واضح.",
+			"arabicTashkeel": "الجَواب واضِح.",
+			"english": "The answer is obvious.",
+			"transliteration": "ij-jawaab waadhi7.",
+			"wordAlignments": [
+				{
+					"arabic": "الجواب",
+					"english": "The answer is",
+					"transliteration": "ij-jawaab"
+				},
+				{
+					"arabic": "واضح.",
+					"english": "obvious.",
+					"transliteration": "waadhi7."
+				}
+			],
+			"targetWords": [
+				"Obvious"
+			]
+		},
+		{
+			"arabic": "لازم يكون مسكر اليوم.",
+			"arabicTashkeel": "لازِم يِكون مْسَكَّر اليوم.",
+			"english": "It must be closed today.",
+			"transliteration": "laazim yikoon msakkar il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "يكون",
+					"english": "it is",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "مسكر",
+					"english": "closed",
+					"transliteration": "msakkar"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"It must be"
+			]
+		},
+		{
+			"arabic": "المطر في الصيف مستبعد.",
+			"arabicTashkeel": "المَطَر في الصّيف مُستَبعَد.",
+			"english": "Rain in summer is unlikely.",
+			"transliteration": "il-matar fi is-saif mustab3ad.",
+			"wordAlignments": [
+				{
+					"arabic": "المطر",
+					"english": "The rain",
+					"transliteration": "il-matar"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الصيف",
+					"english": "summer is",
+					"transliteration": "is-saif"
+				},
+				{
+					"arabic": "مستبعد.",
+					"english": "unlikely.",
+					"transliteration": "mustab3ad."
+				}
+			],
+			"targetWords": [
+				"Unlikely"
+			]
+		},
+		{
+			"arabic": "بالتأكيد حساعدك.",
+			"arabicTashkeel": "بالتّأكيد حَساعدَك.",
+			"english": "I'll certainly help you.",
+			"transliteration": "bit-ta2keed 7asaa3dak.",
+			"wordAlignments": [
+				{
+					"arabic": "بالتأكيد",
+					"english": "Certainly",
+					"transliteration": "bit-ta2keed"
+				},
+				{
+					"arabic": "حساعدك.",
+					"english": "I'll help you.",
+					"transliteration": "7asaa3dak."
+				}
+			],
+			"targetWords": [
+				"Certainly"
+			]
+		},
+		{
+			"arabic": "يجوز الجوال مقفول.",
+			"arabicTashkeel": "يِجوز الجَوّال مَقفول.",
+			"english": "It could be that the phone is off.",
+			"transliteration": "yijooz ij-jawwaal magfool.",
+			"wordAlignments": [
+				{
+					"arabic": "يجوز",
+					"english": "It could be",
+					"transliteration": "yijooz"
+				},
+				{
+					"arabic": "الجوال",
+					"english": "the mobile is",
+					"transliteration": "ij-jawwaal"
+				},
+				{
+					"arabic": "مقفول.",
+					"english": "closed.",
+					"transliteration": "magfool."
+				}
+			],
+			"targetWords": [
+				"It could be that"
+			]
+		},
+		{
+			"arabic": "أكيد لا!",
+			"arabicTashkeel": "أكيد لا!",
+			"english": "Definitely not!",
+			"transliteration": "akeed laa!",
+			"wordAlignments": [
+				{
+					"arabic": "أكيد",
+					"english": "Definitely",
+					"transliteration": "akeed"
+				},
+				{
+					"arabic": "لا!",
+					"english": "not!",
+					"transliteration": "laa!"
+				}
+			],
+			"targetWords": [
+				"Definitely"
+			]
+		},
+		{
+			"arabic": "يمكن أيوا، يمكن لا.",
+			"arabicTashkeel": "يِمكِن أيوا، يِمكِن لا.",
+			"english": "Maybe yes, maybe no.",
+			"transliteration": "yimkin aiwa, yimkin laa.",
+			"wordAlignments": [
+				{
+					"arabic": "يمكن",
+					"english": "Maybe",
+					"transliteration": "yimkin"
+				},
+				{
+					"arabic": "أيوا،",
+					"english": "yes,",
+					"transliteration": "aiwa,"
+				},
+				{
+					"arabic": "يمكن",
+					"english": "maybe",
+					"transliteration": "yimkin"
+				},
+				{
+					"arabic": "لا.",
+					"english": "no.",
+					"transliteration": "laa."
+				}
+			],
+			"targetWords": [
+				"Maybe"
+			]
+		},
+		{
+			"arabic": "محتمل بكرة.",
+			"arabicTashkeel": "مُحتَمَل بُكرة.",
+			"english": "Probably tomorrow.",
+			"transliteration": "mu7tamal bukra.",
+			"wordAlignments": [
+				{
+					"arabic": "محتمل",
+					"english": "Probable",
+					"transliteration": "mu7tamal"
+				},
+				{
+					"arabic": "بكرة.",
+					"english": "tomorrow.",
+					"transliteration": "bukra."
+				}
+			],
+			"targetWords": [
+				"Probably"
+			]
+		},
+		{
+			"arabic": "عالأغلب حجي متأخر.",
+			"arabicTashkeel": "عالأغلَب حَجي مِتأخِّر.",
+			"english": "Most likely I'll come late.",
+			"transliteration": "3al-aghlab 7aji mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "عالأغلب",
+					"english": "Most likely",
+					"transliteration": "3al-aghlab"
+				},
+				{
+					"arabic": "حجي",
+					"english": "I'll come",
+					"transliteration": "7aji"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Most likely"
+			]
+		},
+		{
+			"arabic": "مستحيل أنساك.",
+			"arabicTashkeel": "مُستَحيل أنساك.",
+			"english": "Impossible, I won't forget you.",
+			"transliteration": "musta7eel ansaak.",
+			"wordAlignments": [
+				{
+					"arabic": "مستحيل",
+					"english": "Impossible",
+					"transliteration": "musta7eel"
+				},
+				{
+					"arabic": "أنساك.",
+					"english": "I forget you.",
+					"transliteration": "ansaak."
+				}
+			],
+			"targetWords": [
+				"Impossible"
+			]
+		},
+		{
+			"arabic": "إذا ممكن، كلمني.",
+			"arabicTashkeel": "إذا مُمكِن، كَلِّمني.",
+			"english": "If possible, call me.",
+			"transliteration": "iza mumkin, kallimni.",
+			"wordAlignments": [
+				{
+					"arabic": "إذا",
+					"english": "If",
+					"transliteration": "iza"
+				},
+				{
+					"arabic": "ممكن،",
+					"english": "possible,",
+					"transliteration": "mumkin,"
+				},
+				{
+					"arabic": "كلمني.",
+					"english": "call me.",
+					"transliteration": "kallimni."
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "أنا متأكد من جوابي.",
+			"arabicTashkeel": "أنا مِتأكِّد مِن جَوابي.",
+			"english": "I'm sure of my answer.",
+			"transliteration": "ana mit2akkid min jawaabi.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جوابي.",
+					"english": "my answer.",
+					"transliteration": "jawaabi."
+				}
+			],
+			"targetWords": [
+				"I'm sure"
+			]
+		},
+		{
+			"arabic": "هوا مو متأكد من الوظيفة.",
+			"arabicTashkeel": "هوّا مو مِتأكِّد مِن الوَظيفة.",
+			"english": "He's not sure about the job.",
+			"transliteration": "huwwa moo mit2akkid min il-wadheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الوظيفة.",
+					"english": "the job.",
+					"transliteration": "il-wadheefa."
+				}
+			],
+			"targetWords": [
+				"I'm not sure"
+			]
+		},
+		{
+			"arabic": "أشك.",
+			"arabicTashkeel": "أشُك.",
+			"english": "I doubt it.",
+			"transliteration": "ashukk.",
+			"wordAlignments": [
+				{
+					"arabic": "أشك.",
+					"english": "I doubt.",
+					"transliteration": "ashukk."
+				}
+			],
+			"targetWords": [
+				"I doubt"
+			]
+		},
+		{
+			"arabic": "بدون شك، هوا الأحسن.",
+			"arabicTashkeel": "بِدون شَك، هوّا الأحسَن.",
+			"english": "Without doubt, he's the best.",
+			"transliteration": "bidoon shakk, huwwa il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "بدون",
+					"english": "Without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "شك،",
+					"english": "doubt,",
+					"transliteration": "shakk,"
+				},
+				{
+					"arabic": "هوا",
+					"english": "he is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"Doubt"
+			]
+		},
+		{
+			"arabic": "الموضوع واضح.",
+			"arabicTashkeel": "المَوضوع واضِح.",
+			"english": "The matter is obvious.",
+			"transliteration": "il-mawdhoo3 waadhi7.",
+			"wordAlignments": [
+				{
+					"arabic": "الموضوع",
+					"english": "The matter is",
+					"transliteration": "il-mawdhoo3"
+				},
+				{
+					"arabic": "واضح.",
+					"english": "obvious.",
+					"transliteration": "waadhi7."
+				}
+			],
+			"targetWords": [
+				"Obvious"
+			]
+		},
+		{
+			"arabic": "لازم يكون غالي.",
+			"arabicTashkeel": "لازِم يِكون غالي.",
+			"english": "It must be expensive.",
+			"transliteration": "laazim yikoon ghaali.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "يكون",
+					"english": "it is",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "غالي.",
+					"english": "expensive.",
+					"transliteration": "ghaali."
+				}
+			],
+			"targetWords": [
+				"It must be"
+			]
+		},
+		{
+			"arabic": "مستبعد نوصل بدري.",
+			"arabicTashkeel": "مُستَبعَد نِوصَل بَدري.",
+			"english": "It's unlikely we arrive early.",
+			"transliteration": "mustab3ad niwsal badri.",
+			"wordAlignments": [
+				{
+					"arabic": "مستبعد",
+					"english": "Unlikely",
+					"transliteration": "mustab3ad"
+				},
+				{
+					"arabic": "نوصل",
+					"english": "we arrive",
+					"transliteration": "niwsal"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"Unlikely"
+			]
+		},
+		{
+			"arabic": "بالتأكيد، حياك.",
+			"arabicTashkeel": "بالتّأكيد، حَيّاك.",
+			"english": "Certainly, you're welcome.",
+			"transliteration": "bit-ta2keed, 7ayyaak.",
+			"wordAlignments": [
+				{
+					"arabic": "بالتأكيد،",
+					"english": "Certainly,",
+					"transliteration": "bit-ta2keed,"
+				},
+				{
+					"arabic": "حياك.",
+					"english": "welcome.",
+					"transliteration": "7ayyaak."
+				}
+			],
+			"targetWords": [
+				"Certainly"
+			]
+		},
+		{
+			"arabic": "يجوز هيا مشغولة.",
+			"arabicTashkeel": "يِجوز هيّا مَشغولة.",
+			"english": "It could be that she's busy.",
+			"transliteration": "yijooz hiyya mashghoola.",
+			"wordAlignments": [
+				{
+					"arabic": "يجوز",
+					"english": "It could be",
+					"transliteration": "yijooz"
+				},
+				{
+					"arabic": "هيا",
+					"english": "she is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "مشغولة.",
+					"english": "busy.",
+					"transliteration": "mashghoola."
+				}
+			],
+			"targetWords": [
+				"It could be that"
+			]
+		},
+		{
+			"arabic": "أكيد حكلمك.",
+			"arabicTashkeel": "أكيد حَكَلِّمَك.",
+			"english": "Definitely, I'll call you.",
+			"transliteration": "akeed 7akallimak.",
+			"wordAlignments": [
+				{
+					"arabic": "أكيد",
+					"english": "Definitely",
+					"transliteration": "akeed"
+				},
+				{
+					"arabic": "حكلمك.",
+					"english": "I'll call you.",
+					"transliteration": "7akallimak."
+				}
+			],
+			"targetWords": [
+				"Definitely"
+			]
+		},
+		{
+			"arabic": "يمكن ما سمع.",
+			"arabicTashkeel": "يِمكِن ما سِمِع.",
+			"english": "Maybe he didn't hear.",
+			"transliteration": "yimkin ma simi3.",
+			"wordAlignments": [
+				{
+					"arabic": "يمكن",
+					"english": "Maybe",
+					"transliteration": "yimkin"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "سمع.",
+					"english": "he heard.",
+					"transliteration": "simi3."
+				}
+			],
+			"targetWords": [
+				"Maybe"
+			]
+		},
+		{
+			"arabic": "سبب محتمل.",
+			"arabicTashkeel": "سَبَب مُحتَمَل.",
+			"english": "A probable reason.",
+			"transliteration": "sabab mu7tamal.",
+			"wordAlignments": [
+				{
+					"arabic": "سبب",
+					"english": "A reason",
+					"transliteration": "sabab"
+				},
+				{
+					"arabic": "محتمل.",
+					"english": "probable.",
+					"transliteration": "mu7tamal."
+				}
+			],
+			"targetWords": [
+				"Probably"
+			]
+		},
+		{
+			"arabic": "عالأغلب الرحلة متأخرة.",
+			"arabicTashkeel": "عالأغلَب الرِّحلة مِتأخِّرة.",
+			"english": "Most likely the flight is delayed.",
+			"transliteration": "3al-aghlab ir-ri7la mit2akhkhira.",
+			"wordAlignments": [
+				{
+					"arabic": "عالأغلب",
+					"english": "Most likely",
+					"transliteration": "3al-aghlab"
+				},
+				{
+					"arabic": "الرحلة",
+					"english": "the flight is",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "متأخرة.",
+					"english": "delayed.",
+					"transliteration": "mit2akhkhira."
+				}
+			],
+			"targetWords": [
+				"Most likely"
+			]
+		},
+		{
+			"arabic": "هادا مستحيل في زحمة جدة.",
+			"arabicTashkeel": "هادا مُستَحيل في زَحمة جِدّة.",
+			"english": "That's impossible in Jeddah's traffic.",
+			"transliteration": "haada musta7eel fi za7mat jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "مستحيل",
+					"english": "impossible",
+					"transliteration": "musta7eel"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "زحمة",
+					"english": "the traffic of",
+					"transliteration": "za7mat"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Impossible"
+			]
+		},
+		{
+			"arabic": "أي شي ممكن.",
+			"arabicTashkeel": "أيّ شي مُمكِن.",
+			"english": "Anything is possible.",
+			"transliteration": "ayy shay mumkin.",
+			"wordAlignments": [
+				{
+					"arabic": "أي",
+					"english": "Any",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "شي",
+					"english": "thing is",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "ممكن.",
+					"english": "possible.",
+					"transliteration": "mumkin."
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "أنا متأكد إنك حتنجح.",
+			"arabicTashkeel": "أنا مِتأكِّد إنَّك حَتِنجَح.",
+			"english": "I'm sure you'll pass.",
+			"transliteration": "ana mit2akkid innak 7atinja7.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				},
+				{
+					"arabic": "إنك",
+					"english": "that you",
+					"transliteration": "innak"
+				},
+				{
+					"arabic": "حتنجح.",
+					"english": "will pass.",
+					"transliteration": "7atinja7."
+				}
+			],
+			"targetWords": [
+				"I'm sure"
+			]
+		},
+		{
+			"arabic": "مو متأكد الساعة كم.",
+			"arabicTashkeel": "مو مِتأكِّد السّاعة كَم.",
+			"english": "I'm not sure what time.",
+			"transliteration": "moo mit2akkid is-saa3a kam.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "متأكد",
+					"english": "sure",
+					"transliteration": "mit2akkid"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "the hour",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "كم.",
+					"english": "what.",
+					"transliteration": "kam."
+				}
+			],
+			"targetWords": [
+				"I'm not sure"
+			]
+		},
+		{
+			"arabic": "أشك إن السعر صح.",
+			"arabicTashkeel": "أشُك إنّ السِّعر صَح.",
+			"english": "I doubt the price is right.",
+			"transliteration": "ashukk inn is-si3r sa77.",
+			"wordAlignments": [
+				{
+					"arabic": "أشك",
+					"english": "I doubt",
+					"transliteration": "ashukk"
+				},
+				{
+					"arabic": "إن",
+					"english": "that",
+					"transliteration": "inn"
+				},
+				{
+					"arabic": "السعر",
+					"english": "the price is",
+					"transliteration": "is-si3r"
+				},
+				{
+					"arabic": "صح.",
+					"english": "right.",
+					"transliteration": "sa77."
+				}
+			],
+			"targetWords": [
+				"I doubt"
+			]
+		},
+		{
+			"arabic": "الشك يقتل العلاقة.",
+			"arabicTashkeel": "الشَّك يِقتِل العَلاقة.",
+			"english": "Doubt kills the relationship.",
+			"transliteration": "ish-shakk yigtil il-3alaaga.",
+			"wordAlignments": [
+				{
+					"arabic": "الشك",
+					"english": "Doubt",
+					"transliteration": "ish-shakk"
+				},
+				{
+					"arabic": "يقتل",
+					"english": "kills",
+					"transliteration": "yigtil"
+				},
+				{
+					"arabic": "العلاقة.",
+					"english": "the relationship.",
+					"transliteration": "il-3alaaga."
+				}
+			],
+			"targetWords": [
+				"Doubt"
+			]
+		},
+		{
+			"arabic": "واضح من وشه.",
+			"arabicTashkeel": "واضِح مِن وِشُّه.",
+			"english": "It's obvious from his face.",
+			"transliteration": "waadhi7 min wishshu.",
+			"wordAlignments": [
+				{
+					"arabic": "واضح",
+					"english": "Obvious",
+					"transliteration": "waadhi7"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "وشه.",
+					"english": "his face.",
+					"transliteration": "wishshu."
+				}
+			],
+			"targetWords": [
+				"Obvious"
+			]
+		},
+		{
+			"arabic": "لازم يكون سافر.",
+			"arabicTashkeel": "لازِم يِكون سافَر.",
+			"english": "He must have travelled.",
+			"transliteration": "laazim yikoon saafar.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "يكون",
+					"english": "he has",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "سافر.",
+					"english": "travelled.",
+					"transliteration": "saafar."
+				}
+			],
+			"targetWords": [
+				"It must be"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Where Is Khalid?",
+			"sentences": [
+				{
+					"arabic": "الإجتماع بدا، بس خالد ما جا.",
+					"arabicTashkeel": "الإجتِماع بَدا، بَس خالِد ما جا.",
+					"english": "The meeting started, but Khalid didn't come.",
+					"transliteration": "il-ijtimaa3 bada, bas khaalid ma ja.",
+					"wordAlignments": [
+						{
+							"arabic": "الإجتماع",
+							"english": "The meeting",
+							"transliteration": "il-ijtimaa3"
+						},
+						{
+							"arabic": "بدا،",
+							"english": "started,",
+							"transliteration": "bada,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "خالد",
+							"english": "Khalid",
+							"transliteration": "khaalid"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "جا.",
+							"english": "came.",
+							"transliteration": "ja."
+						}
+					]
+				},
+				{
+					"arabic": "زميلي قال: عالأغلب هوا في الزحمة.",
+					"arabicTashkeel": "زَميلي قال: عالأغلَب هوّا في الزَّحمة.",
+					"english": "My colleague said: most likely he's in the traffic.",
+					"transliteration": "zameeli gaal: 3al-aghlab huwwa fi iz-za7ma.",
+					"wordAlignments": [
+						{
+							"arabic": "زميلي",
+							"english": "My colleague",
+							"transliteration": "zameeli"
+						},
+						{
+							"arabic": "قال:",
+							"english": "said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "عالأغلب",
+							"english": "most likely",
+							"transliteration": "3al-aghlab"
+						},
+						{
+							"arabic": "هوا",
+							"english": "he is",
+							"transliteration": "huwwa"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "الزحمة.",
+							"english": "the traffic.",
+							"transliteration": "iz-za7ma."
+						}
+					]
+				},
+				{
+					"arabic": "قلت: أشك، هوا دايما يجي بدري. يمكن مريض.",
+					"arabicTashkeel": "قُلت: أشُك، هوّا دايماً يِجي بَدري. يِمكِن مَريض.",
+					"english": "I said: I doubt it, he always comes early. Maybe he's sick.",
+					"transliteration": "gult: ashukk, huwwa daayman yiji badri. yimkin mareedh.",
+					"wordAlignments": [
+						{
+							"arabic": "قلت:",
+							"english": "I said:",
+							"transliteration": "gult:"
+						},
+						{
+							"arabic": "أشك،",
+							"english": "I doubt,",
+							"transliteration": "ashukk,"
+						},
+						{
+							"arabic": "هوا",
+							"english": "he",
+							"transliteration": "huwwa"
+						},
+						{
+							"arabic": "دايما",
+							"english": "always",
+							"transliteration": "daayman"
+						},
+						{
+							"arabic": "يجي",
+							"english": "comes",
+							"transliteration": "yiji"
+						},
+						{
+							"arabic": "بدري.",
+							"english": "early.",
+							"transliteration": "badri."
+						},
+						{
+							"arabic": "يمكن",
+							"english": "Maybe",
+							"transliteration": "yimkin"
+						},
+						{
+							"arabic": "مريض.",
+							"english": "sick.",
+							"transliteration": "mareedh."
+						}
+					]
+				},
+				{
+					"arabic": "اتصلنا عليه، بس الجوال مقفول. لازم يكون سايق.",
+					"arabicTashkeel": "اِتَّصَلنا عَلَيه، بَس الجَوّال مَقفول. لازِم يِكون سايِق.",
+					"english": "We called him, but the phone was off. It must be that he's driving.",
+					"transliteration": "ittasalna 3alaih, bas ij-jawwaal magfool. laazim yikoon saayig.",
+					"wordAlignments": [
+						{
+							"arabic": "اتصلنا",
+							"english": "We called",
+							"transliteration": "ittasalna"
+						},
+						{
+							"arabic": "عليه،",
+							"english": "him,",
+							"transliteration": "3alaih,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الجوال",
+							"english": "the mobile was",
+							"transliteration": "ij-jawwaal"
+						},
+						{
+							"arabic": "مقفول.",
+							"english": "closed.",
+							"transliteration": "magfool."
+						},
+						{
+							"arabic": "لازم",
+							"english": "Must",
+							"transliteration": "laazim"
+						},
+						{
+							"arabic": "يكون",
+							"english": "he is",
+							"transliteration": "yikoon"
+						},
+						{
+							"arabic": "سايق.",
+							"english": "driving.",
+							"transliteration": "saayig."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Result",
+			"sentences": [
+				{
+					"arabic": "أنا مو متأكد من نتيجة الإختبار.",
+					"arabicTashkeel": "أنا مو مِتأكِّد مِن نَتيجة الإختِبار.",
+					"english": "I'm not sure about the exam result.",
+					"transliteration": "ana moo mit2akkid min nateejat il-ikhtibaar.",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I am",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "مو",
+							"english": "not",
+							"transliteration": "moo"
+						},
+						{
+							"arabic": "متأكد",
+							"english": "sure",
+							"transliteration": "mit2akkid"
+						},
+						{
+							"arabic": "من",
+							"english": "of",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "نتيجة",
+							"english": "the result of",
+							"transliteration": "nateejat"
+						},
+						{
+							"arabic": "الإختبار.",
+							"english": "the exam.",
+							"transliteration": "il-ikhtibaar."
+						}
+					]
+				},
+				{
+					"arabic": "الأستاذ قال: أكيد حتنجح، واضح من شغلك.",
+					"arabicTashkeel": "الأُستاذ قال: أكيد حَتِنجَح، واضِح مِن شُغلَك.",
+					"english": "My teacher said: definitely you'll pass, it's obvious from your work.",
+					"transliteration": "il-ustaaz gaal: akeed 7atinja7, waadhi7 min shughlak.",
+					"wordAlignments": [
+						{
+							"arabic": "الأستاذ",
+							"english": "The teacher",
+							"transliteration": "il-ustaaz"
+						},
+						{
+							"arabic": "قال:",
+							"english": "said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "أكيد",
+							"english": "definitely",
+							"transliteration": "akeed"
+						},
+						{
+							"arabic": "حتنجح،",
+							"english": "you'll pass,",
+							"transliteration": "7atinja7,"
+						},
+						{
+							"arabic": "واضح",
+							"english": "obvious",
+							"transliteration": "waadhi7"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "شغلك.",
+							"english": "your work.",
+							"transliteration": "shughlak."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "A colleague hasn't arrived for an important meeting in Jeddah, and the student and another colleague guess what has happened.",
+		"studentRole": "An employee learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi colleague, who always imagines the worst.",
+		"goalEnglish": "Speculate about what happened using maybe, probably, most likely, it must be and I doubt, and decide what to do.",
+		"targetWords": [
+			"Maybe",
+			"Probably",
+			"Most likely",
+			"I'm sure",
+			"I'm not sure",
+			"I doubt",
+			"It must be",
+			"Impossible"
+		]
+	}
+}

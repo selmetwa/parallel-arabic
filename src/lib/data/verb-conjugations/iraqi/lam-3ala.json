@@ -1,0 +1,318 @@
+{
+  "slug": "lam-3ala",
+  "arabic": "لام",
+  "transliteration": "laam",
+  "english": "to blame",
+  "wordId": null,
+  "rootLetters": "ل و م",
+  "verbClass": "hollow",
+  "notes": "Past laam, present aloom (I blame).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "لمت",
+          "transliteration": "limit",
+          "english": "I blamed"
+        },
+        {
+          "person": "enta",
+          "arabic": "لمت",
+          "transliteration": "limit",
+          "english": "you (m) blamed"
+        },
+        {
+          "person": "enti",
+          "arabic": "لمتي",
+          "transliteration": "limti",
+          "english": "you (f) blamed"
+        },
+        {
+          "person": "howa",
+          "arabic": "لام",
+          "transliteration": "laam",
+          "english": "he blamed"
+        },
+        {
+          "person": "heya",
+          "arabic": "لامت",
+          "transliteration": "laamat",
+          "english": "she blamed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لمنا",
+          "transliteration": "limna",
+          "english": "we blamed"
+        },
+        {
+          "person": "entu",
+          "arabic": "لمتوا",
+          "transliteration": "limtu",
+          "english": "you (pl) blamed"
+        },
+        {
+          "person": "homma",
+          "arabic": "لاموا",
+          "transliteration": "laamaw",
+          "english": "they blamed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما لمت",
+          "transliteration": "ma limit",
+          "english": "I didn't blame"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما لمت",
+          "transliteration": "ma limit",
+          "english": "you (m) didn't blame"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما لمتي",
+          "transliteration": "ma limti",
+          "english": "you (f) didn't blame"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما لام",
+          "transliteration": "ma laam",
+          "english": "he didn't blame"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما لامت",
+          "transliteration": "ma laamat",
+          "english": "she didn't blame"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما لمنا",
+          "transliteration": "ma limna",
+          "english": "we didn't blame"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما لمتوا",
+          "transliteration": "ma limtu",
+          "english": "you (pl) didn't blame"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما لاموا",
+          "transliteration": "ma laamaw",
+          "english": "they didn't blame"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "الوم",
+          "transliteration": "aloom",
+          "english": "I blame"
+        },
+        {
+          "person": "enta",
+          "arabic": "تلوم",
+          "transliteration": "tloom",
+          "english": "you (m) blame"
+        },
+        {
+          "person": "enti",
+          "arabic": "تلومين",
+          "transliteration": "tloomeen",
+          "english": "you (f) blame"
+        },
+        {
+          "person": "howa",
+          "arabic": "يلوم",
+          "transliteration": "yloom",
+          "english": "he blames"
+        },
+        {
+          "person": "heya",
+          "arabic": "تلوم",
+          "transliteration": "tloom",
+          "english": "she blames"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نلوم",
+          "transliteration": "nloom",
+          "english": "we blame"
+        },
+        {
+          "person": "entu",
+          "arabic": "تلومون",
+          "transliteration": "tloomoon",
+          "english": "you (pl) blame"
+        },
+        {
+          "person": "homma",
+          "arabic": "يلومون",
+          "transliteration": "yloomoon",
+          "english": "they blame"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما الوم",
+          "transliteration": "ma aloom",
+          "english": "I don't blame"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تلوم",
+          "transliteration": "ma tloom",
+          "english": "you (m) don't blame"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تلومين",
+          "transliteration": "ma tloomeen",
+          "english": "you (f) don't blame"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يلوم",
+          "transliteration": "ma yloom",
+          "english": "he doesn't blame"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تلوم",
+          "transliteration": "ma tloom",
+          "english": "she doesn't blame"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نلوم",
+          "transliteration": "ma nloom",
+          "english": "we don't blame"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تلومون",
+          "transliteration": "ma tloomoon",
+          "english": "you (pl) don't blame"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يلومون",
+          "transliteration": "ma yloomoon",
+          "english": "they don't blame"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح الوم",
+          "transliteration": "raa7 aloom",
+          "english": "I will blame"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تلوم",
+          "transliteration": "raa7 tloom",
+          "english": "you (m) will blame"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تلومين",
+          "transliteration": "raa7 tloomeen",
+          "english": "you (f) will blame"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يلوم",
+          "transliteration": "raa7 yloom",
+          "english": "he will blame"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تلوم",
+          "transliteration": "raa7 tloom",
+          "english": "she will blame"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نلوم",
+          "transliteration": "raa7 nloom",
+          "english": "we will blame"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تلومون",
+          "transliteration": "raa7 tloomoon",
+          "english": "you (pl) will blame"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يلومون",
+          "transliteration": "raa7 yloomoon",
+          "english": "they will blame"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح الوم",
+          "transliteration": "ma raa7 aloom",
+          "english": "I won't blame"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تلوم",
+          "transliteration": "ma raa7 tloom",
+          "english": "you (m) won't blame"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تلومين",
+          "transliteration": "ma raa7 tloomeen",
+          "english": "you (f) won't blame"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يلوم",
+          "transliteration": "ma raa7 yloom",
+          "english": "he won't blame"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تلوم",
+          "transliteration": "ma raa7 tloom",
+          "english": "she won't blame"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نلوم",
+          "transliteration": "ma raa7 nloom",
+          "english": "we won't blame"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تلومون",
+          "transliteration": "ma raa7 tloomoon",
+          "english": "you (pl) won't blame"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يلومون",
+          "transliteration": "ma raa7 yloomoon",
+          "english": "they won't blame"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1909 @@
+{
+	"vocab": [
+		{
+			"arabic": "فريزر",
+			"arabicTashkeel": "فريزَر",
+			"english": "Freezer",
+			"transliteration": "freezar",
+			"wordAlignments": [
+				{
+					"arabic": "فريزر",
+					"english": "Freezer",
+					"transliteration": "freezar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "غسالة",
+			"arabicTashkeel": "غَسّالة",
+			"english": "Washing machine",
+			"transliteration": "ghassaala",
+			"wordAlignments": [
+				{
+					"arabic": "غسالة",
+					"english": "Washing machine",
+					"transliteration": "ghassaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "نشافة",
+			"arabicTashkeel": "نَشّافة",
+			"english": "Dryer",
+			"transliteration": "nashshaafa",
+			"wordAlignments": [
+				{
+					"arabic": "نشافة",
+					"english": "Dryer",
+					"transliteration": "nashshaafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مروحة",
+			"arabicTashkeel": "مِروَحة",
+			"english": "Fan",
+			"transliteration": "mirwa7a",
+			"wordAlignments": [
+				{
+					"arabic": "مروحة",
+					"english": "Fan",
+					"transliteration": "mirwa7a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أوتي",
+			"arabicTashkeel": "أوتي",
+			"english": "Iron",
+			"transliteration": "ooti",
+			"wordAlignments": [
+				{
+					"arabic": "أوتي",
+					"english": "Iron",
+					"transliteration": "ooti"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مكنسة كهربائية",
+			"arabicTashkeel": "مِكنَسة كَهرَبائية",
+			"english": "Vacuum cleaner",
+			"transliteration": "maknasa kahrabaa2iyya",
+			"wordAlignments": [
+				{
+					"arabic": "مكنسة",
+					"english": "Broom",
+					"transliteration": "maknasa"
+				},
+				{
+					"arabic": "كهربائية",
+					"english": "electric",
+					"transliteration": "kahrabaa2iyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مايكروويف",
+			"arabicTashkeel": "مايكروويف",
+			"english": "Microwave",
+			"transliteration": "maykrooweef",
+			"wordAlignments": [
+				{
+					"arabic": "مايكروويف",
+					"english": "Microwave",
+					"transliteration": "maykrooweef"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سخان",
+			"arabicTashkeel": "سَخّان",
+			"english": "Water heater",
+			"transliteration": "sakhkhaan",
+			"wordAlignments": [
+				{
+					"arabic": "سخان",
+					"english": "Water heater",
+					"transliteration": "sakhkhaan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "لابتوب",
+			"arabicTashkeel": "لابتوب",
+			"english": "Laptop",
+			"transliteration": "laabtoob",
+			"wordAlignments": [
+				{
+					"arabic": "لابتوب",
+					"english": "Laptop",
+					"transliteration": "laabtoob"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شاحن",
+			"arabicTashkeel": "شاحِن",
+			"english": "Charger",
+			"transliteration": "shaa7in",
+			"wordAlignments": [
+				{
+					"arabic": "شاحن",
+					"english": "Charger",
+					"transliteration": "shaa7in"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فيش",
+			"arabicTashkeel": "فيش",
+			"english": "Plug / socket",
+			"transliteration": "feesh",
+			"wordAlignments": [
+				{
+					"arabic": "فيش",
+					"english": "Plug",
+					"transliteration": "feesh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سويج",
+			"arabicTashkeel": "سويج",
+			"english": "Switch",
+			"transliteration": "sweech",
+			"wordAlignments": [
+				{
+					"arabic": "سويج",
+					"english": "Switch",
+					"transliteration": "sweech"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ريموت",
+			"arabicTashkeel": "ريموت",
+			"english": "Remote control",
+			"transliteration": "reemoot",
+			"wordAlignments": [
+				{
+					"arabic": "ريموت",
+					"english": "Remote",
+					"transliteration": "reemoot"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خلاط",
+			"arabicTashkeel": "خَلّاط",
+			"english": "Blender",
+			"transliteration": "khallaat",
+			"wordAlignments": [
+				{
+					"arabic": "خلاط",
+					"english": "Blender",
+					"transliteration": "khallaat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جهاز",
+			"arabicTashkeel": "جِهاز",
+			"english": "Appliance / device",
+			"transliteration": "yihaaz",
+			"wordAlignments": [
+				{
+					"arabic": "جهاز",
+					"english": "Device",
+					"transliteration": "yihaaz"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "اللحم بالفريزر.",
+			"arabicTashkeel": "اللَّحَم بالفريزَر.",
+			"english": "The meat is in the freezer.",
+			"transliteration": "il-la7am bil-freezar.",
+			"wordAlignments": [
+				{
+					"arabic": "اللحم",
+					"english": "The meat is",
+					"transliteration": "il-la7am"
+				},
+				{
+					"arabic": "بالفريزر.",
+					"english": "in the freezer.",
+					"transliteration": "bil-freezar."
+				}
+			],
+			"targetWords": [
+				"Freezer"
+			]
+		},
+		{
+			"arabic": "الغسالة خربانة.",
+			"arabicTashkeel": "الغَسّالة خَربانة.",
+			"english": "The washing machine is broken.",
+			"transliteration": "il-ghassaala kharbaana.",
+			"wordAlignments": [
+				{
+					"arabic": "الغسالة",
+					"english": "The washing machine is",
+					"transliteration": "il-ghassaala"
+				},
+				{
+					"arabic": "خربانة.",
+					"english": "broken.",
+					"transliteration": "kharbaana."
+				}
+			],
+			"targetWords": [
+				"Washing machine"
+			]
+		},
+		{
+			"arabic": "حط الهدوم بالنشافة.",
+			"arabicTashkeel": "حُط الهْدوم بالنَّشّافة.",
+			"english": "Put the clothes in the dryer.",
+			"transliteration": "7utt il-hdoom bin-nashshaafa.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "الهدوم",
+					"english": "the clothes",
+					"transliteration": "il-hdoom"
+				},
+				{
+					"arabic": "بالنشافة.",
+					"english": "in the dryer.",
+					"transliteration": "bin-nashshaafa."
+				}
+			],
+			"targetWords": [
+				"Dryer"
+			]
+		},
+		{
+			"arabic": "شغل المروحة، حر.",
+			"arabicTashkeel": "شَغِّل المِروَحة، حَر.",
+			"english": "Turn on the fan, it's hot.",
+			"transliteration": "shaghghil il-mirwa7a, 7arr.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Turn on",
+					"transliteration": "shaghghil"
+				},
+				{
+					"arabic": "المروحة،",
+					"english": "the fan,",
+					"transliteration": "il-mirwa7a,"
+				},
+				{
+					"arabic": "حر.",
+					"english": "it's hot.",
+					"transliteration": "7arr."
+				}
+			],
+			"targetWords": [
+				"Fan"
+			]
+		},
+		{
+			"arabic": "أكوي كندورتي كل صبح.",
+			"arabicTashkeel": "أكوي كَندورتي كِل صُبح.",
+			"english": "I iron my kandura every morning.",
+			"transliteration": "akwi kandoorti kil sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "أكوي",
+					"english": "I iron",
+					"transliteration": "akwi"
+				},
+				{
+					"arabic": "كندورتي",
+					"english": "my kandura",
+					"transliteration": "kandoorti"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "صبح.",
+					"english": "morning.",
+					"transliteration": "sub7."
+				}
+			],
+			"targetWords": [
+				"Iron"
+			]
+		},
+		{
+			"arabic": "المكنسة الكهربائية صوتها عالي.",
+			"arabicTashkeel": "المِكنَسة الكَهرَبائية صوتها عالي.",
+			"english": "The vacuum cleaner is very loud.",
+			"transliteration": "il-maknasa il-kahrabaa2iyya sootha 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "المكنسة",
+					"english": "The broom",
+					"transliteration": "il-maknasa"
+				},
+				{
+					"arabic": "الكهربائية",
+					"english": "electric is",
+					"transliteration": "il-kahrabaa2iyya"
+				},
+				{
+					"arabic": "صوتها",
+					"english": "its sound",
+					"transliteration": "sootha"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "loud.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Vacuum cleaner"
+			]
+		},
+		{
+			"arabic": "حم الأكل بالمايكروويف.",
+			"arabicTashkeel": "حَمِّ الأكل بالمايكروويف.",
+			"english": "Heat the food in the microwave.",
+			"transliteration": "7ammi il-akl bil-maykrooweef.",
+			"wordAlignments": [
+				{
+					"arabic": "حم",
+					"english": "Heat",
+					"transliteration": "7ammi"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "بالمايكروويف.",
+					"english": "in the microwave.",
+					"transliteration": "bil-maykrooweef."
+				}
+			],
+			"targetWords": [
+				"Microwave"
+			]
+		},
+		{
+			"arabic": "شغل السخان قبل لا تتسبح.",
+			"arabicTashkeel": "شَغِّل السَّخّان قَبل لا تِتسَبَّح.",
+			"english": "Turn on the water heater before showering.",
+			"transliteration": "shaghghil is-sakhkhaan gabil la titsabba7.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Turn on",
+					"transliteration": "shaghghil"
+				},
+				{
+					"arabic": "السخان",
+					"english": "the water heater",
+					"transliteration": "is-sakhkhaan"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "لا",
+					"english": "that",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تتسبح.",
+					"english": "you shower.",
+					"transliteration": "titsabba7."
+				}
+			],
+			"targetWords": [
+				"Water heater"
+			]
+		},
+		{
+			"arabic": "اللابتوب مالي قديم.",
+			"arabicTashkeel": "اللّابتوب مالي قَديم.",
+			"english": "My laptop is old.",
+			"transliteration": "il-laabtoob maali gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "اللابتوب",
+					"english": "The laptop",
+					"transliteration": "il-laabtoob"
+				},
+				{
+					"arabic": "مالي",
+					"english": "of mine is",
+					"transliteration": "maali"
+				},
+				{
+					"arabic": "قديم.",
+					"english": "old.",
+					"transliteration": "gadeem."
+				}
+			],
+			"targetWords": [
+				"Laptop"
+			]
+		},
+		{
+			"arabic": "عندك شاحن تلفون؟",
+			"arabicTashkeel": "عِندَك شاحِن تِلِفون؟",
+			"english": "Do you have a phone charger?",
+			"transliteration": "3indak shaa7in tilifoon?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "شاحن",
+					"english": "a charger of",
+					"transliteration": "shaa7in"
+				},
+				{
+					"arabic": "تلفون؟",
+					"english": "phone?",
+					"transliteration": "tilifoon?"
+				}
+			],
+			"targetWords": [
+				"Charger"
+			]
+		},
+		{
+			"arabic": "الفيش جنب السرير.",
+			"arabicTashkeel": "الفيش جَنب السَّرير.",
+			"english": "The plug is next to the bed.",
+			"transliteration": "il-feesh yamb is-sareer.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيش",
+					"english": "The plug is",
+					"transliteration": "il-feesh"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "yamb"
+				},
+				{
+					"arabic": "السرير.",
+					"english": "the bed.",
+					"transliteration": "is-sareer."
+				}
+			],
+			"targetWords": [
+				"Plug / socket"
+			]
+		},
+		{
+			"arabic": "وين سويج الليت؟",
+			"arabicTashkeel": "وين سويج اللّيت؟",
+			"english": "Where is the light switch?",
+			"transliteration": "ween sweech il-leet?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "سويج",
+					"english": "the switch of",
+					"transliteration": "sweech"
+				},
+				{
+					"arabic": "الليت؟",
+					"english": "the light?",
+					"transliteration": "il-leet?"
+				}
+			],
+			"targetWords": [
+				"Switch"
+			]
+		},
+		{
+			"arabic": "وين ريموت التلفزيون؟",
+			"arabicTashkeel": "وين ريموت التِّلِفِزيون؟",
+			"english": "Where is the TV remote?",
+			"transliteration": "ween reemoot it-tilifizyoon?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ريموت",
+					"english": "the remote of",
+					"transliteration": "reemoot"
+				},
+				{
+					"arabic": "التلفزيون؟",
+					"english": "the TV?",
+					"transliteration": "it-tilifizyoon?"
+				}
+			],
+			"targetWords": [
+				"Remote control"
+			]
+		},
+		{
+			"arabic": "سو عصير بالخلاط.",
+			"arabicTashkeel": "سَوِّ عَصير بالخَلّاط.",
+			"english": "Make juice in the blender.",
+			"transliteration": "sawwi 3aseer bil-khallaat.",
+			"wordAlignments": [
+				{
+					"arabic": "سو",
+					"english": "Make",
+					"transliteration": "sawwi"
+				},
+				{
+					"arabic": "عصير",
+					"english": "juice",
+					"transliteration": "3aseer"
+				},
+				{
+					"arabic": "بالخلاط.",
+					"english": "in the blender.",
+					"transliteration": "bil-khallaat."
+				}
+			],
+			"targetWords": [
+				"Blender"
+			]
+		},
+		{
+			"arabic": "هالجهاز ياخذ كهربا وايد.",
+			"arabicTashkeel": "هالجِهاز ياخِذ كَهرَبا وايد.",
+			"english": "This appliance uses a lot of electricity.",
+			"transliteration": "hal-yihaaz yaakhidh kahraba waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "هالجهاز",
+					"english": "This device",
+					"transliteration": "hal-yihaaz"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "كهربا",
+					"english": "electricity",
+					"transliteration": "kahraba"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Appliance / device"
+			]
+		},
+		{
+			"arabic": "الفريزر مليان ثلج.",
+			"arabicTashkeel": "الفريزَر مَليان ثَلج.",
+			"english": "The freezer is full of ice.",
+			"transliteration": "il-freezar malyaan thalj.",
+			"wordAlignments": [
+				{
+					"arabic": "الفريزر",
+					"english": "The freezer is",
+					"transliteration": "il-freezar"
+				},
+				{
+					"arabic": "مليان",
+					"english": "full of",
+					"transliteration": "malyaan"
+				},
+				{
+					"arabic": "ثلج.",
+					"english": "ice.",
+					"transliteration": "thalj."
+				}
+			],
+			"targetWords": [
+				"Freezer"
+			]
+		},
+		{
+			"arabic": "حط الهدوم بالغسالة.",
+			"arabicTashkeel": "حُط الهْدوم بالغَسّالة.",
+			"english": "Put the clothes in the washing machine.",
+			"transliteration": "7utt il-hdoom bil-ghassaala.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "الهدوم",
+					"english": "the clothes",
+					"transliteration": "il-hdoom"
+				},
+				{
+					"arabic": "بالغسالة.",
+					"english": "in the washing machine.",
+					"transliteration": "bil-ghassaala."
+				}
+			],
+			"targetWords": [
+				"Washing machine"
+			]
+		},
+		{
+			"arabic": "النشافة سريعة.",
+			"arabicTashkeel": "النَّشّافة سَريعة.",
+			"english": "The dryer is fast.",
+			"transliteration": "in-nashshaafa saree3a.",
+			"wordAlignments": [
+				{
+					"arabic": "النشافة",
+					"english": "The dryer is",
+					"transliteration": "in-nashshaafa"
+				},
+				{
+					"arabic": "سريعة.",
+					"english": "fast.",
+					"transliteration": "saree3a."
+				}
+			],
+			"targetWords": [
+				"Dryer"
+			]
+		},
+		{
+			"arabic": "المروحة بطيئة.",
+			"arabicTashkeel": "المِروَحة بَطيئة.",
+			"english": "The fan is slow.",
+			"transliteration": "il-mirwa7a batee2a.",
+			"wordAlignments": [
+				{
+					"arabic": "المروحة",
+					"english": "The fan is",
+					"transliteration": "il-mirwa7a"
+				},
+				{
+					"arabic": "بطيئة.",
+					"english": "slow.",
+					"transliteration": "batee2a."
+				}
+			],
+			"targetWords": [
+				"Fan"
+			]
+		},
+		{
+			"arabic": "الأوتي حار، دير بالك.",
+			"arabicTashkeel": "الأوتي حار، دير بالَك.",
+			"english": "The iron is hot, be careful.",
+			"transliteration": "il-ooti 7aarr, deer baalak.",
+			"wordAlignments": [
+				{
+					"arabic": "الأوتي",
+					"english": "The iron is",
+					"transliteration": "il-ooti"
+				},
+				{
+					"arabic": "حار،",
+					"english": "hot,",
+					"transliteration": "7aarr,"
+				},
+				{
+					"arabic": "دير",
+					"english": "take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك.",
+					"english": "care.",
+					"transliteration": "baalak."
+				}
+			],
+			"targetWords": [
+				"Iron"
+			]
+		},
+		{
+			"arabic": "نظف الزولية بالمكنسة الكهربائية.",
+			"arabicTashkeel": "نَظِّف الزّولية بالمِكنَسة الكَهرَبائية.",
+			"english": "Clean the carpet with the vacuum cleaner.",
+			"transliteration": "nadhdhif iz-zoolya bil-maknasa il-kahrabaa2iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "نظف",
+					"english": "Clean",
+					"transliteration": "nadhdhif"
+				},
+				{
+					"arabic": "الزولية",
+					"english": "the carpet",
+					"transliteration": "iz-zoolya"
+				},
+				{
+					"arabic": "بالمكنسة",
+					"english": "with the broom",
+					"transliteration": "bil-maknasa"
+				},
+				{
+					"arabic": "الكهربائية.",
+					"english": "electric.",
+					"transliteration": "il-kahrabaa2iyya."
+				}
+			],
+			"targetWords": [
+				"Vacuum cleaner"
+			]
+		},
+		{
+			"arabic": "المايكروويف سريع.",
+			"arabicTashkeel": "المايكروويف سَريع.",
+			"english": "The microwave is fast.",
+			"transliteration": "il-maykrooweef saree3.",
+			"wordAlignments": [
+				{
+					"arabic": "المايكروويف",
+					"english": "The microwave is",
+					"transliteration": "il-maykrooweef"
+				},
+				{
+					"arabic": "سريع.",
+					"english": "fast.",
+					"transliteration": "saree3."
+				}
+			],
+			"targetWords": [
+				"Microwave"
+			]
+		},
+		{
+			"arabic": "السخان ما يشتغل بالشتا!",
+			"arabicTashkeel": "السَّخّان ما يِشتِغِل بالشِّتا!",
+			"english": "The water heater doesn't work in winter!",
+			"transliteration": "is-sakhkhaan ma yishtighil bish-shita!",
+			"wordAlignments": [
+				{
+					"arabic": "السخان",
+					"english": "The water heater",
+					"transliteration": "is-sakhkhaan"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يشتغل",
+					"english": "works",
+					"transliteration": "yishtighil"
+				},
+				{
+					"arabic": "بالشتا!",
+					"english": "in winter!",
+					"transliteration": "bish-shita!"
+				}
+			],
+			"targetWords": [
+				"Water heater"
+			]
+		},
+		{
+			"arabic": "أشتغل على اللابتوب بالبيت.",
+			"arabicTashkeel": "أشتِغِل على اللّابتوب بالبيت.",
+			"english": "I work on the laptop at home.",
+			"transliteration": "ashtighil 3ala il-laabtoob bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "أشتغل",
+					"english": "I work",
+					"transliteration": "ashtighil"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "اللابتوب",
+					"english": "the laptop",
+					"transliteration": "il-laabtoob"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"Laptop"
+			]
+		},
+		{
+			"arabic": "نسيت الشاحن بالبيت.",
+			"arabicTashkeel": "نِسيت الشّاحِن بالبيت.",
+			"english": "I forgot the charger at home.",
+			"transliteration": "niseet ish-shaa7in bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "نسيت",
+					"english": "I forgot",
+					"transliteration": "niseet"
+				},
+				{
+					"arabic": "الشاحن",
+					"english": "the charger",
+					"transliteration": "ish-shaa7in"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"Charger"
+			]
+		},
+		{
+			"arabic": "الفيش ما يشتغل.",
+			"arabicTashkeel": "الفيش ما يِشتِغِل.",
+			"english": "The socket doesn't work.",
+			"transliteration": "il-feesh ma yishtighil.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيش",
+					"english": "The socket",
+					"transliteration": "il-feesh"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يشتغل.",
+					"english": "works.",
+					"transliteration": "yishtighil."
+				}
+			],
+			"targetWords": [
+				"Plug / socket"
+			]
+		},
+		{
+			"arabic": "دوس السويج.",
+			"arabicTashkeel": "دوس السّويج.",
+			"english": "Press the switch.",
+			"transliteration": "doos is-sweech.",
+			"wordAlignments": [
+				{
+					"arabic": "دوس",
+					"english": "Press",
+					"transliteration": "doos"
+				},
+				{
+					"arabic": "السويج.",
+					"english": "the switch.",
+					"transliteration": "is-sweech."
+				}
+			],
+			"targetWords": [
+				"Switch"
+			]
+		},
+		{
+			"arabic": "العيال خشوا الريموت.",
+			"arabicTashkeel": "العْيال خَشّوا الرّيموت.",
+			"english": "The kids hid the remote.",
+			"transliteration": "il-3yaal khashshaw ir-reemoot.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "خشوا",
+					"english": "hid",
+					"transliteration": "khashshaw"
+				},
+				{
+					"arabic": "الريموت.",
+					"english": "the remote.",
+					"transliteration": "ir-reemoot."
+				}
+			],
+			"targetWords": [
+				"Remote control"
+			]
+		},
+		{
+			"arabic": "الخلاط بالمطبخ.",
+			"arabicTashkeel": "الخَلّاط بالمَطبَخ.",
+			"english": "The blender is in the kitchen.",
+			"transliteration": "il-khallaat bil-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "الخلاط",
+					"english": "The blender is",
+					"transliteration": "il-khallaat"
+				},
+				{
+					"arabic": "بالمطبخ.",
+					"english": "in the kitchen.",
+					"transliteration": "bil-matbakh."
+				}
+			],
+			"targetWords": [
+				"Blender"
+			]
+		},
+		{
+			"arabic": "جهاز جديد حق المطبخ.",
+			"arabicTashkeel": "جِهاز جْديد حَق المَطبَخ.",
+			"english": "A new appliance for the kitchen.",
+			"transliteration": "yihaaz ydeed 7agg il-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "جهاز",
+					"english": "A device",
+					"transliteration": "yihaaz"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "ydeed"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "المطبخ.",
+					"english": "the kitchen.",
+					"transliteration": "il-matbakh."
+				}
+			],
+			"targetWords": [
+				"Appliance / device"
+			]
+		},
+		{
+			"arabic": "طلع الثلج من الفريزر.",
+			"arabicTashkeel": "طَلِّع الثَّلج مِن الفريزَر.",
+			"english": "Take the ice out of the freezer.",
+			"transliteration": "talli3 ith-thalj min il-freezar.",
+			"wordAlignments": [
+				{
+					"arabic": "طلع",
+					"english": "Take out",
+					"transliteration": "talli3"
+				},
+				{
+					"arabic": "الثلج",
+					"english": "the ice",
+					"transliteration": "ith-thalj"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفريزر.",
+					"english": "the freezer.",
+					"transliteration": "il-freezar."
+				}
+			],
+			"targetWords": [
+				"Freezer"
+			]
+		},
+		{
+			"arabic": "الغسالة خلصت.",
+			"arabicTashkeel": "الغَسّالة خَلَّصَت.",
+			"english": "The washing machine finished.",
+			"transliteration": "il-ghassaala khallasat.",
+			"wordAlignments": [
+				{
+					"arabic": "الغسالة",
+					"english": "The washing machine",
+					"transliteration": "il-ghassaala"
+				},
+				{
+					"arabic": "خلصت.",
+					"english": "finished.",
+					"transliteration": "khallasat."
+				}
+			],
+			"targetWords": [
+				"Washing machine"
+			]
+		},
+		{
+			"arabic": "النشافة صغرت قميصي.",
+			"arabicTashkeel": "النَّشّافة صَغّرَت قَميصي.",
+			"english": "The dryer shrank my shirt.",
+			"transliteration": "in-nashshaafa saghgharat gameesi.",
+			"wordAlignments": [
+				{
+					"arabic": "النشافة",
+					"english": "The dryer",
+					"transliteration": "in-nashshaafa"
+				},
+				{
+					"arabic": "صغرت",
+					"english": "shrank",
+					"transliteration": "saghgharat"
+				},
+				{
+					"arabic": "قميصي.",
+					"english": "my shirt.",
+					"transliteration": "gameesi."
+				}
+			],
+			"targetWords": [
+				"Dryer"
+			]
+		},
+		{
+			"arabic": "المروحة بكل غرفة.",
+			"arabicTashkeel": "المِروَحة بكِل غُرفة.",
+			"english": "The fan is in every room.",
+			"transliteration": "il-mirwa7a b-kil ghurfa.",
+			"wordAlignments": [
+				{
+					"arabic": "المروحة",
+					"english": "The fan is",
+					"transliteration": "il-mirwa7a"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "غرفة.",
+					"english": "room.",
+					"transliteration": "ghurfa."
+				}
+			],
+			"targetWords": [
+				"Fan"
+			]
+		},
+		{
+			"arabic": "وين الأوتي؟",
+			"arabicTashkeel": "وين الأوتي؟",
+			"english": "Where is the iron?",
+			"transliteration": "ween il-ooti?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الأوتي؟",
+					"english": "the iron?",
+					"transliteration": "il-ooti?"
+				}
+			],
+			"targetWords": [
+				"Iron"
+			]
+		},
+		{
+			"arabic": "بند المكنسة، الجاهل نايم.",
+			"arabicTashkeel": "بَنِّد المِكنَسة، الجاهِل نايِم.",
+			"english": "Turn off the vacuum cleaner, the baby is asleep.",
+			"transliteration": "bannid il-maknasa, il-yaahil naayim.",
+			"wordAlignments": [
+				{
+					"arabic": "بند",
+					"english": "Turn off",
+					"transliteration": "bannid"
+				},
+				{
+					"arabic": "المكنسة،",
+					"english": "the broom,",
+					"transliteration": "il-maknasa,"
+				},
+				{
+					"arabic": "الجاهل",
+					"english": "the baby is",
+					"transliteration": "il-yaahil"
+				},
+				{
+					"arabic": "نايم.",
+					"english": "asleep.",
+					"transliteration": "naayim."
+				}
+			],
+			"targetWords": [
+				"Vacuum cleaner"
+			]
+		},
+		{
+			"arabic": "دقيقتين بالمايكروويف.",
+			"arabicTashkeel": "دَقيقتين بالمايكروويف.",
+			"english": "Two minutes in the microwave.",
+			"transliteration": "dageegteen bil-maykrooweef.",
+			"wordAlignments": [
+				{
+					"arabic": "دقيقتين",
+					"english": "Two minutes",
+					"transliteration": "dageegteen"
+				},
+				{
+					"arabic": "بالمايكروويف.",
+					"english": "in the microwave.",
+					"transliteration": "bil-maykrooweef."
+				}
+			],
+			"targetWords": [
+				"Microwave"
+			]
+		},
+		{
+			"arabic": "السخان على السطح.",
+			"arabicTashkeel": "السَّخّان على السَّطح.",
+			"english": "The water heater is on the roof.",
+			"transliteration": "is-sakhkhaan 3ala is-sat7.",
+			"wordAlignments": [
+				{
+					"arabic": "السخان",
+					"english": "The water heater is",
+					"transliteration": "is-sakhkhaan"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السطح.",
+					"english": "the roof.",
+					"transliteration": "is-sat7."
+				}
+			],
+			"targetWords": [
+				"Water heater"
+			]
+		},
+		{
+			"arabic": "لابتوب جديد حق الجامعة.",
+			"arabicTashkeel": "لابتوب جْديد حَق الجامعة.",
+			"english": "A new laptop for university.",
+			"transliteration": "laabtoob ydeed 7agg il-yaam3a.",
+			"wordAlignments": [
+				{
+					"arabic": "لابتوب",
+					"english": "A laptop",
+					"transliteration": "laabtoob"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "ydeed"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الجامعة.",
+					"english": "the university.",
+					"transliteration": "il-yaam3a."
+				}
+			],
+			"targetWords": [
+				"Laptop"
+			]
+		},
+		{
+			"arabic": "الشاحن خربان.",
+			"arabicTashkeel": "الشّاحِن خَربان.",
+			"english": "The charger is broken.",
+			"transliteration": "ish-shaa7in kharbaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاحن",
+					"english": "The charger is",
+					"transliteration": "ish-shaa7in"
+				},
+				{
+					"arabic": "خربان.",
+					"english": "broken.",
+					"transliteration": "kharbaan."
+				}
+			],
+			"targetWords": [
+				"Charger"
+			]
+		},
+		{
+			"arabic": "لا تلمس الفيش!",
+			"arabicTashkeel": "لا تِلمِس الفيش!",
+			"english": "Don't touch the socket!",
+			"transliteration": "la tilmis il-feesh!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تلمس",
+					"english": "touch",
+					"transliteration": "tilmis"
+				},
+				{
+					"arabic": "الفيش!",
+					"english": "the socket!",
+					"transliteration": "il-feesh!"
+				}
+			],
+			"targetWords": [
+				"Plug / socket"
+			]
+		},
+		{
+			"arabic": "السويج ورا الباب.",
+			"arabicTashkeel": "السّويج وَرا الباب.",
+			"english": "The switch is behind the door.",
+			"transliteration": "is-sweech wara il-baab.",
+			"wordAlignments": [
+				{
+					"arabic": "السويج",
+					"english": "The switch is",
+					"transliteration": "is-sweech"
+				},
+				{
+					"arabic": "ورا",
+					"english": "behind",
+					"transliteration": "wara"
+				},
+				{
+					"arabic": "الباب.",
+					"english": "the door.",
+					"transliteration": "il-baab."
+				}
+			],
+			"targetWords": [
+				"Switch"
+			]
+		},
+		{
+			"arabic": "عطني الريموت.",
+			"arabicTashkeel": "عَطني الرّيموت.",
+			"english": "Give me the remote.",
+			"transliteration": "3atni ir-reemoot.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "الريموت.",
+					"english": "the remote.",
+					"transliteration": "ir-reemoot."
+				}
+			],
+			"targetWords": [
+				"Remote control"
+			]
+		},
+		{
+			"arabic": "إغسل الخلاط.",
+			"arabicTashkeel": "إغسِل الخَلّاط.",
+			"english": "Wash the blender.",
+			"transliteration": "ighsil il-khallaat.",
+			"wordAlignments": [
+				{
+					"arabic": "إغسل",
+					"english": "Wash",
+					"transliteration": "ighsil"
+				},
+				{
+					"arabic": "الخلاط.",
+					"english": "the blender.",
+					"transliteration": "il-khallaat."
+				}
+			],
+			"targetWords": [
+				"Blender"
+			]
+		},
+		{
+			"arabic": "الجهاز خربان.",
+			"arabicTashkeel": "الجِهاز خَربان.",
+			"english": "The device is broken.",
+			"transliteration": "il-yihaaz kharbaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الجهاز",
+					"english": "The device is",
+					"transliteration": "il-yihaaz"
+				},
+				{
+					"arabic": "خربان.",
+					"english": "broken.",
+					"transliteration": "kharbaan."
+				}
+			],
+			"targetWords": [
+				"Appliance / device"
+			]
+		},
+		{
+			"arabic": "الفريزر صوته عالي.",
+			"arabicTashkeel": "الفريزَر صوتَه عالي.",
+			"english": "The freezer is noisy.",
+			"transliteration": "il-freezar soota 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "الفريزر",
+					"english": "The freezer",
+					"transliteration": "il-freezar"
+				},
+				{
+					"arabic": "صوته",
+					"english": "its sound is",
+					"transliteration": "soota"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "loud.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Freezer"
+			]
+		},
+		{
+			"arabic": "الغسالة الجديدة هادية.",
+			"arabicTashkeel": "الغَسّالة الجْديدة هادية.",
+			"english": "The new washing machine is quiet.",
+			"transliteration": "il-ghassaala il-ydeeda haadya.",
+			"wordAlignments": [
+				{
+					"arabic": "الغسالة",
+					"english": "The washing machine",
+					"transliteration": "il-ghassaala"
+				},
+				{
+					"arabic": "الجديدة",
+					"english": "new is",
+					"transliteration": "il-ydeeda"
+				},
+				{
+					"arabic": "هادية.",
+					"english": "quiet.",
+					"transliteration": "haadya."
+				}
+			],
+			"targetWords": [
+				"Washing machine"
+			]
+		},
+		{
+			"arabic": "ما نحتاج نشافة بالصيف.",
+			"arabicTashkeel": "ما نِحتاج نَشّافة بالصّيف.",
+			"english": "We don't need a dryer in summer.",
+			"transliteration": "ma ni7taaj nashshaafa bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "نحتاج",
+					"english": "we need",
+					"transliteration": "ni7taaj"
+				},
+				{
+					"arabic": "نشافة",
+					"english": "a dryer",
+					"transliteration": "nashshaafa"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Dryer"
+			]
+		},
+		{
+			"arabic": "المروحة صوتها عالي.",
+			"arabicTashkeel": "المِروَحة صوتها عالي.",
+			"english": "The fan is noisy.",
+			"transliteration": "il-mirwa7a sootha 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "المروحة",
+					"english": "The fan",
+					"transliteration": "il-mirwa7a"
+				},
+				{
+					"arabic": "صوتها",
+					"english": "its sound is",
+					"transliteration": "sootha"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "loud.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Fan"
+			]
+		},
+		{
+			"arabic": "الأوتي حرق قميصي.",
+			"arabicTashkeel": "الأوتي حَرَق قَميصي.",
+			"english": "The iron burned my shirt.",
+			"transliteration": "il-ooti 7arag gameesi.",
+			"wordAlignments": [
+				{
+					"arabic": "الأوتي",
+					"english": "The iron",
+					"transliteration": "il-ooti"
+				},
+				{
+					"arabic": "حرق",
+					"english": "burned",
+					"transliteration": "7arag"
+				},
+				{
+					"arabic": "قميصي.",
+					"english": "my shirt.",
+					"transliteration": "gameesi."
+				}
+			],
+			"targetWords": [
+				"Iron"
+			]
+		},
+		{
+			"arabic": "مكنسة كهربائية رخيصة.",
+			"arabicTashkeel": "مِكنَسة كَهرَبائية رْخيصة.",
+			"english": "A cheap vacuum cleaner.",
+			"transliteration": "maknasa kahrabaa2iyya rkheesa.",
+			"wordAlignments": [
+				{
+					"arabic": "مكنسة",
+					"english": "A broom",
+					"transliteration": "maknasa"
+				},
+				{
+					"arabic": "كهربائية",
+					"english": "electric",
+					"transliteration": "kahrabaa2iyya"
+				},
+				{
+					"arabic": "رخيصة.",
+					"english": "cheap.",
+					"transliteration": "rkheesa."
+				}
+			],
+			"targetWords": [
+				"Vacuum cleaner"
+			]
+		},
+		{
+			"arabic": "حم الحليب بالمايكروويف.",
+			"arabicTashkeel": "حَمِّ الحَليب بالمايكروويف.",
+			"english": "Heat the milk in the microwave.",
+			"transliteration": "7ammi il-7aleeb bil-maykrooweef.",
+			"wordAlignments": [
+				{
+					"arabic": "حم",
+					"english": "Heat",
+					"transliteration": "7ammi"
+				},
+				{
+					"arabic": "الحليب",
+					"english": "the milk",
+					"transliteration": "il-7aleeb"
+				},
+				{
+					"arabic": "بالمايكروويف.",
+					"english": "in the microwave.",
+					"transliteration": "bil-maykrooweef."
+				}
+			],
+			"targetWords": [
+				"Microwave"
+			]
+		},
+		{
+			"arabic": "الماي بارد، السخان مبند.",
+			"arabicTashkeel": "الماي بارِد، السَّخّان مْبَنَّد.",
+			"english": "The water is cold, the water heater is off.",
+			"transliteration": "il-maay baarid, is-sakhkhaan mbannad.",
+			"wordAlignments": [
+				{
+					"arabic": "الماي",
+					"english": "The water is",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "بارد،",
+					"english": "cold,",
+					"transliteration": "baarid,"
+				},
+				{
+					"arabic": "السخان",
+					"english": "the water heater is",
+					"transliteration": "is-sakhkhaan"
+				},
+				{
+					"arabic": "مبند.",
+					"english": "off.",
+					"transliteration": "mbannad."
+				}
+			],
+			"targetWords": [
+				"Water heater"
+			]
+		},
+		{
+			"arabic": "بطارية اللابتوب ضعيفة.",
+			"arabicTashkeel": "بَطّارية اللّابتوب ضَعيفة.",
+			"english": "The laptop battery is weak.",
+			"transliteration": "battaariyyat il-laabtoob dha3eefa.",
+			"wordAlignments": [
+				{
+					"arabic": "بطارية",
+					"english": "The battery of",
+					"transliteration": "battaariyyat"
+				},
+				{
+					"arabic": "اللابتوب",
+					"english": "the laptop is",
+					"transliteration": "il-laabtoob"
+				},
+				{
+					"arabic": "ضعيفة.",
+					"english": "weak.",
+					"transliteration": "dha3eefa."
+				}
+			],
+			"targetWords": [
+				"Laptop"
+			]
+		},
+		{
+			"arabic": "ركب الشاحن بالفيش.",
+			"arabicTashkeel": "رَكِّب الشّاحِن بالفيش.",
+			"english": "Plug the charger in.",
+			"transliteration": "rakkib ish-shaa7in bil-feesh.",
+			"wordAlignments": [
+				{
+					"arabic": "ركب",
+					"english": "Put",
+					"transliteration": "rakkib"
+				},
+				{
+					"arabic": "الشاحن",
+					"english": "the charger",
+					"transliteration": "ish-shaa7in"
+				},
+				{
+					"arabic": "بالفيش.",
+					"english": "in the socket.",
+					"transliteration": "bil-feesh."
+				}
+			],
+			"targetWords": [
+				"Charger",
+				"Plug / socket"
+			]
+		},
+		{
+			"arabic": "شغل السويج.",
+			"arabicTashkeel": "شَغِّل السّويج.",
+			"english": "Turn on the switch.",
+			"transliteration": "shaghghil is-sweech.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Turn on",
+					"transliteration": "shaghghil"
+				},
+				{
+					"arabic": "السويج.",
+					"english": "the switch.",
+					"transliteration": "is-sweech."
+				}
+			],
+			"targetWords": [
+				"Switch"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Appliances in a Gulf Home",
+			"sentences": [
+				{
+					"arabic": "بالبيت الخليجي أهم جهاز المكيف.",
+					"arabicTashkeel": "بالبيت الخَليجي أهَم جِهاز المُكَيِّف.",
+					"english": "In a Gulf home, the most important appliance is the AC.",
+					"transliteration": "bil-beet il-khaleeji aham yihaaz il-mukayyif.",
+					"wordAlignments": [
+						{
+							"arabic": "بالبيت",
+							"english": "In the home",
+							"transliteration": "bil-beet"
+						},
+						{
+							"arabic": "الخليجي",
+							"english": "Gulf",
+							"transliteration": "il-khaleeji"
+						},
+						{
+							"arabic": "أهم",
+							"english": "the most important",
+							"transliteration": "aham"
+						},
+						{
+							"arabic": "جهاز",
+							"english": "device is",
+							"transliteration": "yihaaz"
+						},
+						{
+							"arabic": "المكيف.",
+							"english": "the AC.",
+							"transliteration": "il-mukayyif."
+						}
+					]
+				},
+				{
+					"arabic": "وعندنا فريزر كبير مليان سمك ولحم.",
+					"arabicTashkeel": "وعِندنا فريزَر كْبير مَليان سِمَك ولَحَم.",
+					"english": "We also have a big freezer full of fish and meat.",
+					"transliteration": "w-3indana freezar chbeer malyaan simach w-la7am.",
+					"wordAlignments": [
+						{
+							"arabic": "وعندنا",
+							"english": "And we have",
+							"transliteration": "w-3indana"
+						},
+						{
+							"arabic": "فريزر",
+							"english": "a freezer",
+							"transliteration": "freezar"
+						},
+						{
+							"arabic": "كبير",
+							"english": "big",
+							"transliteration": "chbeer"
+						},
+						{
+							"arabic": "مليان",
+							"english": "full of",
+							"transliteration": "malyaan"
+						},
+						{
+							"arabic": "سمك",
+							"english": "fish",
+							"transliteration": "simach"
+						},
+						{
+							"arabic": "ولحم.",
+							"english": "and meat.",
+							"transliteration": "w-la7am."
+						}
+					]
+				},
+				{
+					"arabic": "الغسالة والنشافة يشتغلون كل يوم.",
+					"arabicTashkeel": "الغَسّالة والنَّشّافة يِشتِغلون كِل يوم.",
+					"english": "The washing machine and dryer work every day.",
+					"transliteration": "il-ghassaala w-in-nashshaafa yishtighloon kil yoom.",
+					"wordAlignments": [
+						{
+							"arabic": "الغسالة",
+							"english": "The washing machine",
+							"transliteration": "il-ghassaala"
+						},
+						{
+							"arabic": "والنشافة",
+							"english": "and the dryer",
+							"transliteration": "w-in-nashshaafa"
+						},
+						{
+							"arabic": "يشتغلون",
+							"english": "work",
+							"transliteration": "yishtighloon"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "يوم.",
+							"english": "day.",
+							"transliteration": "yoom."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Broken Washing Machine",
+			"sentences": [
+				{
+					"arabic": "غسالتنا خربانة والهدوم وصخة.",
+					"arabicTashkeel": "غَسّالتنا خَربانة والهْدوم وَصخة.",
+					"english": "Our washing machine is broken and the clothes are dirty.",
+					"transliteration": "ghassaalatna kharbaana w-il-hdoom waskha.",
+					"wordAlignments": [
+						{
+							"arabic": "غسالتنا",
+							"english": "Our washing machine is",
+							"transliteration": "ghassaalatna"
+						},
+						{
+							"arabic": "خربانة",
+							"english": "broken",
+							"transliteration": "kharbaana"
+						},
+						{
+							"arabic": "والهدوم",
+							"english": "and the clothes are",
+							"transliteration": "w-il-hdoom"
+						},
+						{
+							"arabic": "وصخة.",
+							"english": "dirty.",
+							"transliteration": "waskha."
+						}
+					]
+				},
+				{
+					"arabic": "إتصلنا بالكهربائي، وقال الفيش المشكلة.",
+					"arabicTashkeel": "إتَّصَلنا بالكَهرَبائي، وقال الفيش المُشكِلة.",
+					"english": "We called the electrician, and he said the socket is the problem.",
+					"transliteration": "ittasalna bil-kahrabaa2i, w-gaal il-feesh il-mushkila.",
+					"wordAlignments": [
+						{
+							"arabic": "إتصلنا",
+							"english": "We called",
+							"transliteration": "ittasalna"
+						},
+						{
+							"arabic": "بالكهربائي،",
+							"english": "the electrician,",
+							"transliteration": "bil-kahrabaa2i,"
+						},
+						{
+							"arabic": "وقال",
+							"english": "and he said",
+							"transliteration": "w-gaal"
+						},
+						{
+							"arabic": "الفيش",
+							"english": "the socket is",
+							"transliteration": "il-feesh"
+						},
+						{
+							"arabic": "المشكلة.",
+							"english": "the problem.",
+							"transliteration": "il-mushkila."
+						}
+					]
+				},
+				{
+					"arabic": "صلحه بخمس دقايق!",
+					"arabicTashkeel": "صَلَّحَه بخَمس دَقايِق!",
+					"english": "He fixed it in five minutes!",
+					"transliteration": "salla7a b-khams dagaayig!",
+					"wordAlignments": [
+						{
+							"arabic": "صلحه",
+							"english": "He fixed it",
+							"transliteration": "salla7a"
+						},
+						{
+							"arabic": "بخمس",
+							"english": "in five",
+							"transliteration": "b-khams"
+						},
+						{
+							"arabic": "دقايق!",
+							"english": "minutes!",
+							"transliteration": "dagaayig!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student has just moved into a furnished flat in Dubai and calls the landlord because several appliances aren't working.",
+		"studentRole": "A new tenant learning Gulf Arabic.",
+		"otherRole": "The landlord, who asks questions to understand each problem.",
+		"goalEnglish": "Describe which appliances are broken, ask where switches and sockets are, and arrange for an electrician to come.",
+		"targetWords": [
+			"Washing machine",
+			"Water heater",
+			"Freezer",
+			"Plug / socket",
+			"Switch",
+			"Appliance / device",
+			"Iron",
+			"Remote control"
+		]
+	}
+}

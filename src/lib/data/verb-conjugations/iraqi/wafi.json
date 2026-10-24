@@ -1,0 +1,318 @@
+{
+  "slug": "wafi",
+  "arabic": "وافق",
+  "transliteration": "waafag",
+  "english": "to accept",
+  "wordId": null,
+  "rootLetters": "و ف ق",
+  "verbClass": "sound",
+  "notes": "Past waafag, present awaafig (I accept).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وافقت",
+          "transliteration": "waafagit",
+          "english": "I accepted"
+        },
+        {
+          "person": "enta",
+          "arabic": "وافقت",
+          "transliteration": "waafagit",
+          "english": "you (m) accepted"
+        },
+        {
+          "person": "enti",
+          "arabic": "وافقتي",
+          "transliteration": "waafagti",
+          "english": "you (f) accepted"
+        },
+        {
+          "person": "howa",
+          "arabic": "وافق",
+          "transliteration": "waafag",
+          "english": "he accepted"
+        },
+        {
+          "person": "heya",
+          "arabic": "وافقت",
+          "transliteration": "waafgat",
+          "english": "she accepted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وافقنا",
+          "transliteration": "waafagna",
+          "english": "we accepted"
+        },
+        {
+          "person": "entu",
+          "arabic": "وافقتوا",
+          "transliteration": "waafagtu",
+          "english": "you (pl) accepted"
+        },
+        {
+          "person": "homma",
+          "arabic": "وافقوا",
+          "transliteration": "waafgaw",
+          "english": "they accepted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وافقت",
+          "transliteration": "ma waafagit",
+          "english": "I didn't accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وافقت",
+          "transliteration": "ma waafagit",
+          "english": "you (m) didn't accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وافقتي",
+          "transliteration": "ma waafagti",
+          "english": "you (f) didn't accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وافق",
+          "transliteration": "ma waafag",
+          "english": "he didn't accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وافقت",
+          "transliteration": "ma waafgat",
+          "english": "she didn't accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وافقنا",
+          "transliteration": "ma waafagna",
+          "english": "we didn't accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وافقتوا",
+          "transliteration": "ma waafagtu",
+          "english": "you (pl) didn't accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وافقوا",
+          "transliteration": "ma waafgaw",
+          "english": "they didn't accept"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اوافق",
+          "transliteration": "awaafig",
+          "english": "I accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "توافق",
+          "transliteration": "twaafig",
+          "english": "you (m) accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "توافقين",
+          "transliteration": "twaafigeen",
+          "english": "you (f) accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "يوافق",
+          "transliteration": "ywaafig",
+          "english": "he accepts"
+        },
+        {
+          "person": "heya",
+          "arabic": "توافق",
+          "transliteration": "twaafig",
+          "english": "she accepts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نوافق",
+          "transliteration": "nwaafig",
+          "english": "we accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "توافقون",
+          "transliteration": "twaafigoon",
+          "english": "you (pl) accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "يوافقون",
+          "transliteration": "ywaafigoon",
+          "english": "they accept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اوافق",
+          "transliteration": "ma awaafig",
+          "english": "I don't accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما توافق",
+          "transliteration": "ma twaafig",
+          "english": "you (m) don't accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما توافقين",
+          "transliteration": "ma twaafigeen",
+          "english": "you (f) don't accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يوافق",
+          "transliteration": "ma ywaafig",
+          "english": "he doesn't accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما توافق",
+          "transliteration": "ma twaafig",
+          "english": "she doesn't accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نوافق",
+          "transliteration": "ma nwaafig",
+          "english": "we don't accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما توافقون",
+          "transliteration": "ma twaafigoon",
+          "english": "you (pl) don't accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يوافقون",
+          "transliteration": "ma ywaafigoon",
+          "english": "they don't accept"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اوافق",
+          "transliteration": "raa7 awaafig",
+          "english": "I will accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح توافق",
+          "transliteration": "raa7 twaafig",
+          "english": "you (m) will accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح توافقين",
+          "transliteration": "raa7 twaafigeen",
+          "english": "you (f) will accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يوافق",
+          "transliteration": "raa7 ywaafig",
+          "english": "he will accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح توافق",
+          "transliteration": "raa7 twaafig",
+          "english": "she will accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نوافق",
+          "transliteration": "raa7 nwaafig",
+          "english": "we will accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح توافقون",
+          "transliteration": "raa7 twaafigoon",
+          "english": "you (pl) will accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يوافقون",
+          "transliteration": "raa7 ywaafigoon",
+          "english": "they will accept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اوافق",
+          "transliteration": "ma raa7 awaafig",
+          "english": "I won't accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح توافق",
+          "transliteration": "ma raa7 twaafig",
+          "english": "you (m) won't accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح توافقين",
+          "transliteration": "ma raa7 twaafigeen",
+          "english": "you (f) won't accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يوافق",
+          "transliteration": "ma raa7 ywaafig",
+          "english": "he won't accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح توافق",
+          "transliteration": "ma raa7 twaafig",
+          "english": "she won't accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نوافق",
+          "transliteration": "ma raa7 nwaafig",
+          "english": "we won't accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح توافقون",
+          "transliteration": "ma raa7 twaafigoon",
+          "english": "you (pl) won't accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يوافقون",
+          "transliteration": "ma raa7 ywaafigoon",
+          "english": "they won't accept"
+        }
+      ]
+    }
+  }
+}

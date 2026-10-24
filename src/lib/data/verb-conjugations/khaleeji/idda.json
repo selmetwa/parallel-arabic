@@ -1,0 +1,318 @@
+{
+  "slug": "idda",
+  "arabic": "عطى",
+  "transliteration": "3ata",
+  "english": "to give",
+  "wordId": null,
+  "rootLetters": "ع ط ي",
+  "verbClass": "defective",
+  "notes": "Gulf عطى (3ata, yi3ti) = to give: 3atni = give me.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عطيت",
+          "transliteration": "3ateit",
+          "english": "I gave"
+        },
+        {
+          "person": "enta",
+          "arabic": "عطيت",
+          "transliteration": "3ateit",
+          "english": "you (m) gave"
+        },
+        {
+          "person": "enti",
+          "arabic": "عطيتي",
+          "transliteration": "3ateiti",
+          "english": "you (f) gave"
+        },
+        {
+          "person": "howa",
+          "arabic": "عطى",
+          "transliteration": "3ata",
+          "english": "he gave"
+        },
+        {
+          "person": "heya",
+          "arabic": "عطت",
+          "transliteration": "3atat",
+          "english": "she gave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عطينا",
+          "transliteration": "3ateina",
+          "english": "we gave"
+        },
+        {
+          "person": "entu",
+          "arabic": "عطيتوا",
+          "transliteration": "3ateitaw",
+          "english": "you (pl) gave"
+        },
+        {
+          "person": "homma",
+          "arabic": "عطوا",
+          "transliteration": "3ataw",
+          "english": "they gave"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما عطيت",
+          "transliteration": "ma 3ateit",
+          "english": "I didn't give"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما عطيت",
+          "transliteration": "ma 3ateit",
+          "english": "you (m) didn't give"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما عطيتي",
+          "transliteration": "ma 3ateiti",
+          "english": "you (f) didn't give"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما عطى",
+          "transliteration": "ma 3ata",
+          "english": "he didn't give"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما عطت",
+          "transliteration": "ma 3atat",
+          "english": "she didn't give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما عطينا",
+          "transliteration": "ma 3ateina",
+          "english": "we didn't give"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما عطيتوا",
+          "transliteration": "ma 3ateitaw",
+          "english": "you (pl) didn't give"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما عطوا",
+          "transliteration": "ma 3ataw",
+          "english": "they didn't give"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اعطي",
+          "transliteration": "a3ti",
+          "english": "I give"
+        },
+        {
+          "person": "enta",
+          "arabic": "تعطي",
+          "transliteration": "ti3ti",
+          "english": "you (m) give"
+        },
+        {
+          "person": "enti",
+          "arabic": "تعطين",
+          "transliteration": "ti3teen",
+          "english": "you (f) give"
+        },
+        {
+          "person": "howa",
+          "arabic": "يعطي",
+          "transliteration": "yi3ti",
+          "english": "he gives"
+        },
+        {
+          "person": "heya",
+          "arabic": "تعطي",
+          "transliteration": "ti3ti",
+          "english": "she gives"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نعطي",
+          "transliteration": "ni3ti",
+          "english": "we give"
+        },
+        {
+          "person": "entu",
+          "arabic": "تعطون",
+          "transliteration": "ti3toon",
+          "english": "you (pl) give"
+        },
+        {
+          "person": "homma",
+          "arabic": "يعطون",
+          "transliteration": "yi3toon",
+          "english": "they give"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اعطي",
+          "transliteration": "ma a3ti",
+          "english": "I don't give"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تعطي",
+          "transliteration": "ma ti3ti",
+          "english": "you (m) don't give"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تعطين",
+          "transliteration": "ma ti3teen",
+          "english": "you (f) don't give"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يعطي",
+          "transliteration": "ma yi3ti",
+          "english": "he doesn't give"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تعطي",
+          "transliteration": "ma ti3ti",
+          "english": "she doesn't give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نعطي",
+          "transliteration": "ma ni3ti",
+          "english": "we don't give"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تعطون",
+          "transliteration": "ma ti3toon",
+          "english": "you (pl) don't give"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يعطون",
+          "transliteration": "ma yi3toon",
+          "english": "they don't give"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اعطي",
+          "transliteration": "raa7 a3ti",
+          "english": "I will give"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تعطي",
+          "transliteration": "raa7 ti3ti",
+          "english": "you (m) will give"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تعطين",
+          "transliteration": "raa7 ti3teen",
+          "english": "you (f) will give"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يعطي",
+          "transliteration": "raa7 yi3ti",
+          "english": "he will give"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تعطي",
+          "transliteration": "raa7 ti3ti",
+          "english": "she will give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نعطي",
+          "transliteration": "raa7 ni3ti",
+          "english": "we will give"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تعطون",
+          "transliteration": "raa7 ti3toon",
+          "english": "you (pl) will give"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يعطون",
+          "transliteration": "raa7 yi3toon",
+          "english": "they will give"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اعطي",
+          "transliteration": "ma raa7 a3ti",
+          "english": "I won't give"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تعطي",
+          "transliteration": "ma raa7 ti3ti",
+          "english": "you (m) won't give"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تعطين",
+          "transliteration": "ma raa7 ti3teen",
+          "english": "you (f) won't give"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يعطي",
+          "transliteration": "ma raa7 yi3ti",
+          "english": "he won't give"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تعطي",
+          "transliteration": "ma raa7 ti3ti",
+          "english": "she won't give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نعطي",
+          "transliteration": "ma raa7 ni3ti",
+          "english": "we won't give"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تعطون",
+          "transliteration": "ma raa7 ti3toon",
+          "english": "you (pl) won't give"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يعطون",
+          "transliteration": "ma raa7 yi3toon",
+          "english": "they won't give"
+        }
+      ]
+    }
+  }
+}

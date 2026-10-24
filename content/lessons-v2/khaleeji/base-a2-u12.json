@@ -1,0 +1,1884 @@
+{
+	"vocab": [
+		{
+			"arabic": "حيوان",
+			"arabicTashkeel": "حَيوان",
+			"english": "Animal",
+			"transliteration": "7aywaan",
+			"wordAlignments": [
+				{
+					"arabic": "حيوان",
+					"english": "Animal",
+					"transliteration": "7aywaan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أسد",
+			"arabicTashkeel": "أسَد",
+			"english": "Lion",
+			"transliteration": "asad",
+			"wordAlignments": [
+				{
+					"arabic": "أسد",
+					"english": "Lion",
+					"transliteration": "asad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نمر",
+			"arabicTashkeel": "نِمر",
+			"english": "Tiger",
+			"transliteration": "nimr",
+			"wordAlignments": [
+				{
+					"arabic": "نمر",
+					"english": "Tiger",
+					"transliteration": "nimr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فيل",
+			"arabicTashkeel": "فيل",
+			"english": "Elephant",
+			"transliteration": "feel",
+			"wordAlignments": [
+				{
+					"arabic": "فيل",
+					"english": "Elephant",
+					"transliteration": "feel"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "زرافة",
+			"arabicTashkeel": "زَرافة",
+			"english": "Giraffe",
+			"transliteration": "zaraafa",
+			"wordAlignments": [
+				{
+					"arabic": "زرافة",
+					"english": "Giraffe",
+					"transliteration": "zaraafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "قرد",
+			"arabicTashkeel": "قِرد",
+			"english": "Monkey",
+			"transliteration": "gird",
+			"wordAlignments": [
+				{
+					"arabic": "قرد",
+					"english": "Monkey",
+					"transliteration": "gird"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ذيب",
+			"arabicTashkeel": "ذيب",
+			"english": "Wolf",
+			"transliteration": "dheeb",
+			"wordAlignments": [
+				{
+					"arabic": "ذيب",
+					"english": "Wolf",
+					"transliteration": "dheeb"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "صقر",
+			"arabicTashkeel": "صَقر",
+			"english": "Falcon",
+			"transliteration": "sagr",
+			"wordAlignments": [
+				{
+					"arabic": "صقر",
+					"english": "Falcon",
+					"transliteration": "sagr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مها",
+			"arabicTashkeel": "مَها",
+			"english": "Oryx",
+			"transliteration": "maha",
+			"wordAlignments": [
+				{
+					"arabic": "مها",
+					"english": "Oryx",
+					"transliteration": "maha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حية",
+			"arabicTashkeel": "حَيّة",
+			"english": "Snake",
+			"transliteration": "7ayya",
+			"wordAlignments": [
+				{
+					"arabic": "حية",
+					"english": "Snake",
+					"transliteration": "7ayya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "غزال",
+			"arabicTashkeel": "غَزال",
+			"english": "Gazelle",
+			"transliteration": "ghazaal",
+			"wordAlignments": [
+				{
+					"arabic": "غزال",
+					"english": "Gazelle",
+					"transliteration": "ghazaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بعير",
+			"arabicTashkeel": "بَعير",
+			"english": "Camel",
+			"transliteration": "ba3eer",
+			"wordAlignments": [
+				{
+					"arabic": "بعير",
+					"english": "Camel",
+					"transliteration": "ba3eer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حديقة الحيوانات",
+			"arabicTashkeel": "حَديقة الحَيوانات",
+			"english": "Zoo",
+			"transliteration": "7adeegat il-7aywaanaat",
+			"wordAlignments": [
+				{
+					"arabic": "حديقة",
+					"english": "Garden of",
+					"transliteration": "7adeegat"
+				},
+				{
+					"arabic": "الحيوانات",
+					"english": "the animals",
+					"transliteration": "il-7aywaanaat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "بر",
+			"arabicTashkeel": "بَر",
+			"english": "Desert",
+			"transliteration": "barr",
+			"wordAlignments": [
+				{
+					"arabic": "بر",
+					"english": "Desert",
+					"transliteration": "barr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خطير",
+			"arabicTashkeel": "خَطير",
+			"english": "Dangerous",
+			"transliteration": "khateer",
+			"wordAlignments": [
+				{
+					"arabic": "خطير",
+					"english": "Dangerous",
+					"transliteration": "khateer"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شو حيوانك المفضل؟",
+			"arabicTashkeel": "شو حَيوانَك المُفَضَّل؟",
+			"english": "What is your favourite animal?",
+			"transliteration": "shu 7aywaanak il-mufadhdhal?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "حيوانك",
+					"english": "your animal",
+					"transliteration": "7aywaanak"
+				},
+				{
+					"arabic": "المفضل؟",
+					"english": "favourite?",
+					"transliteration": "il-mufadhdhal?"
+				}
+			],
+			"targetWords": [
+				"Animal"
+			]
+		},
+		{
+			"arabic": "الأسد قوي.",
+			"arabicTashkeel": "الأسَد قَوي.",
+			"english": "The lion is strong.",
+			"transliteration": "il-asad gawi.",
+			"wordAlignments": [
+				{
+					"arabic": "الأسد",
+					"english": "The lion is",
+					"transliteration": "il-asad"
+				},
+				{
+					"arabic": "قوي.",
+					"english": "strong.",
+					"transliteration": "gawi."
+				}
+			],
+			"targetWords": [
+				"Lion"
+			]
+		},
+		{
+			"arabic": "النمر سريع.",
+			"arabicTashkeel": "النِّمر سَريع.",
+			"english": "The tiger is fast.",
+			"transliteration": "in-nimr saree3.",
+			"wordAlignments": [
+				{
+					"arabic": "النمر",
+					"english": "The tiger is",
+					"transliteration": "in-nimr"
+				},
+				{
+					"arabic": "سريع.",
+					"english": "fast.",
+					"transliteration": "saree3."
+				}
+			],
+			"targetWords": [
+				"Tiger"
+			]
+		},
+		{
+			"arabic": "الفيل كبير وايد.",
+			"arabicTashkeel": "الفيل كْبير وايد.",
+			"english": "The elephant is very big.",
+			"transliteration": "il-feel chbeer waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيل",
+					"english": "The elephant is",
+					"transliteration": "il-feel"
+				},
+				{
+					"arabic": "كبير",
+					"english": "big",
+					"transliteration": "chbeer"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Elephant"
+			]
+		},
+		{
+			"arabic": "الزرافة رقبتها طويلة.",
+			"arabicTashkeel": "الزَّرافة رَقبتها طْويلة.",
+			"english": "The giraffe has a long neck.",
+			"transliteration": "iz-zaraafa ragbatha tweela.",
+			"wordAlignments": [
+				{
+					"arabic": "الزرافة",
+					"english": "The giraffe",
+					"transliteration": "iz-zaraafa"
+				},
+				{
+					"arabic": "رقبتها",
+					"english": "her neck is",
+					"transliteration": "ragbatha"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "tweela."
+				}
+			],
+			"targetWords": [
+				"Giraffe"
+			]
+		},
+		{
+			"arabic": "القرد ياكل موز.",
+			"arabicTashkeel": "القِرد ياكِل مَوز.",
+			"english": "The monkey eats bananas.",
+			"transliteration": "il-gird yaakil mawz.",
+			"wordAlignments": [
+				{
+					"arabic": "القرد",
+					"english": "The monkey",
+					"transliteration": "il-gird"
+				},
+				{
+					"arabic": "ياكل",
+					"english": "eats",
+					"transliteration": "yaakil"
+				},
+				{
+					"arabic": "موز.",
+					"english": "bananas.",
+					"transliteration": "mawz."
+				}
+			],
+			"targetWords": [
+				"Monkey"
+			]
+		},
+		{
+			"arabic": "الذيب يسكن بالبر.",
+			"arabicTashkeel": "الذّيب يِسكِن بالبَر.",
+			"english": "The wolf lives in the desert.",
+			"transliteration": "idh-dheeb yiskin bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "الذيب",
+					"english": "The wolf",
+					"transliteration": "idh-dheeb"
+				},
+				{
+					"arabic": "يسكن",
+					"english": "lives",
+					"transliteration": "yiskin"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Wolf",
+				"Desert"
+			]
+		},
+		{
+			"arabic": "الصقر طير الإمارات.",
+			"arabicTashkeel": "الصَّقر طَير الإمارات.",
+			"english": "The falcon is the bird of the UAE.",
+			"transliteration": "is-sagr tayr il-imaaraat.",
+			"wordAlignments": [
+				{
+					"arabic": "الصقر",
+					"english": "The falcon is",
+					"transliteration": "is-sagr"
+				},
+				{
+					"arabic": "طير",
+					"english": "the bird of",
+					"transliteration": "tayr"
+				},
+				{
+					"arabic": "الإمارات.",
+					"english": "the UAE.",
+					"transliteration": "il-imaaraat."
+				}
+			],
+			"targetWords": [
+				"Falcon"
+			]
+		},
+		{
+			"arabic": "المها بيضا.",
+			"arabicTashkeel": "المَها بيضا.",
+			"english": "The oryx is white.",
+			"transliteration": "il-maha beedha.",
+			"wordAlignments": [
+				{
+					"arabic": "المها",
+					"english": "The oryx is",
+					"transliteration": "il-maha"
+				},
+				{
+					"arabic": "بيضا.",
+					"english": "white.",
+					"transliteration": "beedha."
+				}
+			],
+			"targetWords": [
+				"Oryx"
+			]
+		},
+		{
+			"arabic": "دير بالك، حية!",
+			"arabicTashkeel": "دير بالَك، حَيّة!",
+			"english": "Be careful, a snake!",
+			"transliteration": "deer baalak, 7ayya!",
+			"wordAlignments": [
+				{
+					"arabic": "دير",
+					"english": "Take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك،",
+					"english": "care,",
+					"transliteration": "baalak,"
+				},
+				{
+					"arabic": "حية!",
+					"english": "a snake!",
+					"transliteration": "7ayya!"
+				}
+			],
+			"targetWords": [
+				"Snake"
+			]
+		},
+		{
+			"arabic": "الغزال حلو.",
+			"arabicTashkeel": "الغَزال حِلو.",
+			"english": "The gazelle is beautiful.",
+			"transliteration": "il-ghazaal 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الغزال",
+					"english": "The gazelle is",
+					"transliteration": "il-ghazaal"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Gazelle"
+			]
+		},
+		{
+			"arabic": "البعير يسكن بالبر.",
+			"arabicTashkeel": "البَعير يِسكِن بالبَر.",
+			"english": "The camel lives in the desert.",
+			"transliteration": "il-ba3eer yiskin bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "البعير",
+					"english": "The camel",
+					"transliteration": "il-ba3eer"
+				},
+				{
+					"arabic": "يسكن",
+					"english": "lives",
+					"transliteration": "yiskin"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Camel",
+				"Desert"
+			]
+		},
+		{
+			"arabic": "يلا نروح حديقة الحيوانات.",
+			"arabicTashkeel": "يَلّا نْروح حَديقة الحَيوانات.",
+			"english": "Let's go to the zoo.",
+			"transliteration": "yalla nrooh 7adeegat il-7aywaanaat.",
+			"wordAlignments": [
+				{
+					"arabic": "يلا",
+					"english": "Come on,",
+					"transliteration": "yalla"
+				},
+				{
+					"arabic": "نروح",
+					"english": "let's go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "حديقة",
+					"english": "to the garden of",
+					"transliteration": "7adeegat"
+				},
+				{
+					"arabic": "الحيوانات.",
+					"english": "the animals.",
+					"transliteration": "il-7aywaanaat."
+				}
+			],
+			"targetWords": [
+				"Zoo"
+			]
+		},
+		{
+			"arabic": "الأسد خطير.",
+			"arabicTashkeel": "الأسَد خَطير.",
+			"english": "The lion is dangerous.",
+			"transliteration": "il-asad khateer.",
+			"wordAlignments": [
+				{
+					"arabic": "الأسد",
+					"english": "The lion is",
+					"transliteration": "il-asad"
+				},
+				{
+					"arabic": "خطير.",
+					"english": "dangerous.",
+					"transliteration": "khateer."
+				}
+			],
+			"targetWords": [
+				"Lion",
+				"Dangerous"
+			]
+		},
+		{
+			"arabic": "حيوانات برية.",
+			"arabicTashkeel": "حَيوانات بَرّية.",
+			"english": "Wild animals.",
+			"transliteration": "7aywaanaat barriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "حيوانات",
+					"english": "Animals",
+					"transliteration": "7aywaanaat"
+				},
+				{
+					"arabic": "برية.",
+					"english": "wild.",
+					"transliteration": "barriyya."
+				}
+			],
+			"targetWords": [
+				"Animal"
+			]
+		},
+		{
+			"arabic": "الأسد ملك الحيوانات.",
+			"arabicTashkeel": "الأسَد مَلِك الحَيوانات.",
+			"english": "The lion is the king of the animals.",
+			"transliteration": "il-asad malik il-7aywaanaat.",
+			"wordAlignments": [
+				{
+					"arabic": "الأسد",
+					"english": "The lion is",
+					"transliteration": "il-asad"
+				},
+				{
+					"arabic": "ملك",
+					"english": "the king of",
+					"transliteration": "malik"
+				},
+				{
+					"arabic": "الحيوانات.",
+					"english": "the animals.",
+					"transliteration": "il-7aywaanaat."
+				}
+			],
+			"targetWords": [
+				"Lion",
+				"Animal"
+			]
+		},
+		{
+			"arabic": "النمر عليه خطوط.",
+			"arabicTashkeel": "النِّمر عَليه خْطوط.",
+			"english": "The tiger has stripes.",
+			"transliteration": "in-nimr 3alee khtoot.",
+			"wordAlignments": [
+				{
+					"arabic": "النمر",
+					"english": "The tiger",
+					"transliteration": "in-nimr"
+				},
+				{
+					"arabic": "عليه",
+					"english": "has on him",
+					"transliteration": "3alee"
+				},
+				{
+					"arabic": "خطوط.",
+					"english": "stripes.",
+					"transliteration": "khtoot."
+				}
+			],
+			"targetWords": [
+				"Tiger"
+			]
+		},
+		{
+			"arabic": "الفيل خشمه طويل.",
+			"arabicTashkeel": "الفيل خَشمَه طْويل.",
+			"english": "The elephant has a long trunk.",
+			"transliteration": "il-feel khashma tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيل",
+					"english": "The elephant",
+					"transliteration": "il-feel"
+				},
+				{
+					"arabic": "خشمه",
+					"english": "his nose is",
+					"transliteration": "khashma"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Elephant"
+			]
+		},
+		{
+			"arabic": "الزرافة تاكل ورق الشجر.",
+			"arabicTashkeel": "الزَّرافة تاكِل وَرَق الشَّجَر.",
+			"english": "The giraffe eats leaves.",
+			"transliteration": "iz-zaraafa taakil warag ish-shajar.",
+			"wordAlignments": [
+				{
+					"arabic": "الزرافة",
+					"english": "The giraffe",
+					"transliteration": "iz-zaraafa"
+				},
+				{
+					"arabic": "تاكل",
+					"english": "eats",
+					"transliteration": "taakil"
+				},
+				{
+					"arabic": "ورق",
+					"english": "leaves of",
+					"transliteration": "warag"
+				},
+				{
+					"arabic": "الشجر.",
+					"english": "the trees.",
+					"transliteration": "ish-shajar."
+				}
+			],
+			"targetWords": [
+				"Giraffe"
+			]
+		},
+		{
+			"arabic": "العيال يحبون القرود.",
+			"arabicTashkeel": "العْيال يْحِبّون القُرود.",
+			"english": "The kids love the monkeys.",
+			"transliteration": "il-3yaal y7ibboon il-gurood.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يحبون",
+					"english": "love",
+					"transliteration": "y7ibboon"
+				},
+				{
+					"arabic": "القرود.",
+					"english": "the monkeys.",
+					"transliteration": "il-gurood."
+				}
+			],
+			"targetWords": [
+				"Monkey"
+			]
+		},
+		{
+			"arabic": "الذيب خطير.",
+			"arabicTashkeel": "الذّيب خَطير.",
+			"english": "The wolf is dangerous.",
+			"transliteration": "idh-dheeb khateer.",
+			"wordAlignments": [
+				{
+					"arabic": "الذيب",
+					"english": "The wolf is",
+					"transliteration": "idh-dheeb"
+				},
+				{
+					"arabic": "خطير.",
+					"english": "dangerous.",
+					"transliteration": "khateer."
+				}
+			],
+			"targetWords": [
+				"Wolf",
+				"Dangerous"
+			]
+		},
+		{
+			"arabic": "الصقر يطير عالي.",
+			"arabicTashkeel": "الصَّقر يطير عالي.",
+			"english": "The falcon flies high.",
+			"transliteration": "is-sagr yteer 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "الصقر",
+					"english": "The falcon",
+					"transliteration": "is-sagr"
+				},
+				{
+					"arabic": "يطير",
+					"english": "flies",
+					"transliteration": "yteer"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "high.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Falcon"
+			]
+		},
+		{
+			"arabic": "المها تسكن بالبر.",
+			"arabicTashkeel": "المَها تِسكِن بالبَر.",
+			"english": "The oryx lives in the desert.",
+			"transliteration": "il-maha tiskin bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "المها",
+					"english": "The oryx",
+					"transliteration": "il-maha"
+				},
+				{
+					"arabic": "تسكن",
+					"english": "lives",
+					"transliteration": "tiskin"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Oryx",
+				"Desert"
+			]
+		},
+		{
+			"arabic": "أخاف من الحيات.",
+			"arabicTashkeel": "أخاف مِن الحَيّات.",
+			"english": "I'm scared of snakes.",
+			"transliteration": "akhaaf min il-7ayyaat.",
+			"wordAlignments": [
+				{
+					"arabic": "أخاف",
+					"english": "I'm scared",
+					"transliteration": "akhaaf"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الحيات.",
+					"english": "snakes.",
+					"transliteration": "il-7ayyaat."
+				}
+			],
+			"targetWords": [
+				"Snake"
+			]
+		},
+		{
+			"arabic": "الغزال يركض بسرعة.",
+			"arabicTashkeel": "الغَزال يِركِض بسُرعة.",
+			"english": "The gazelle runs fast.",
+			"transliteration": "il-ghazaal yirkidh b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الغزال",
+					"english": "The gazelle",
+					"transliteration": "il-ghazaal"
+				},
+				{
+					"arabic": "يركض",
+					"english": "runs",
+					"transliteration": "yirkidh"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "fast.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"Gazelle"
+			]
+		},
+		{
+			"arabic": "البعير يشرب ماي شوي.",
+			"arabicTashkeel": "البَعير يِشرَب ماي شْوَي.",
+			"english": "The camel drinks little water.",
+			"transliteration": "il-ba3eer yishrab maay shway.",
+			"wordAlignments": [
+				{
+					"arabic": "البعير",
+					"english": "The camel",
+					"transliteration": "il-ba3eer"
+				},
+				{
+					"arabic": "يشرب",
+					"english": "drinks",
+					"transliteration": "yishrab"
+				},
+				{
+					"arabic": "ماي",
+					"english": "water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"Camel"
+			]
+		},
+		{
+			"arabic": "حديقة الحيوانات بالعين كبيرة.",
+			"arabicTashkeel": "حَديقة الحَيوانات بالعين كْبيرة.",
+			"english": "The Al Ain zoo is big.",
+			"transliteration": "7adeegat il-7aywaanaat bil-3een chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "حديقة",
+					"english": "The garden of",
+					"transliteration": "7adeegat"
+				},
+				{
+					"arabic": "الحيوانات",
+					"english": "the animals",
+					"transliteration": "il-7aywaanaat"
+				},
+				{
+					"arabic": "بالعين",
+					"english": "in Al Ain is",
+					"transliteration": "bil-3een"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Zoo"
+			]
+		},
+		{
+			"arabic": "البر حار بالنهار.",
+			"arabicTashkeel": "البَر حار بالنَّهار.",
+			"english": "The desert is hot during the day.",
+			"transliteration": "il-barr 7aarr bin-nahaar.",
+			"wordAlignments": [
+				{
+					"arabic": "البر",
+					"english": "The desert is",
+					"transliteration": "il-barr"
+				},
+				{
+					"arabic": "حار",
+					"english": "hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "بالنهار.",
+					"english": "in the daytime.",
+					"transliteration": "bin-nahaar."
+				}
+			],
+			"targetWords": [
+				"Desert"
+			]
+		},
+		{
+			"arabic": "الحيات خطيرة.",
+			"arabicTashkeel": "الحَيّات خَطيرة.",
+			"english": "Snakes are dangerous.",
+			"transliteration": "il-7ayyaat khateera.",
+			"wordAlignments": [
+				{
+					"arabic": "الحيات",
+					"english": "Snakes are",
+					"transliteration": "il-7ayyaat"
+				},
+				{
+					"arabic": "خطيرة.",
+					"english": "dangerous.",
+					"transliteration": "khateera."
+				}
+			],
+			"targetWords": [
+				"Snake",
+				"Dangerous"
+			]
+		},
+		{
+			"arabic": "تحب الحيوانات؟",
+			"arabicTashkeel": "تْحِب الحَيوانات؟",
+			"english": "Do you like animals?",
+			"transliteration": "t7ibb il-7aywaanaat?",
+			"wordAlignments": [
+				{
+					"arabic": "تحب",
+					"english": "Do you like",
+					"transliteration": "t7ibb"
+				},
+				{
+					"arabic": "الحيوانات؟",
+					"english": "animals?",
+					"transliteration": "il-7aywaanaat?"
+				}
+			],
+			"targetWords": [
+				"Animal"
+			]
+		},
+		{
+			"arabic": "الأسد ينام وايد.",
+			"arabicTashkeel": "الأسَد يْنام وايد.",
+			"english": "The lion sleeps a lot.",
+			"transliteration": "il-asad ynaam waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الأسد",
+					"english": "The lion",
+					"transliteration": "il-asad"
+				},
+				{
+					"arabic": "ينام",
+					"english": "sleeps",
+					"transliteration": "ynaam"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Lion"
+			]
+		},
+		{
+			"arabic": "النمر من الهند.",
+			"arabicTashkeel": "النِّمر مِن الهِند.",
+			"english": "The tiger is from India.",
+			"transliteration": "in-nimr min il-hind.",
+			"wordAlignments": [
+				{
+					"arabic": "النمر",
+					"english": "The tiger is",
+					"transliteration": "in-nimr"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الهند.",
+					"english": "India.",
+					"transliteration": "il-hind."
+				}
+			],
+			"targetWords": [
+				"Tiger"
+			]
+		},
+		{
+			"arabic": "الفيلة تسكن بأفريقيا.",
+			"arabicTashkeel": "الفيلة تِسكِن بأفريقيا.",
+			"english": "Elephants live in Africa.",
+			"transliteration": "il-feela tiskin b-afreegya.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيلة",
+					"english": "Elephants",
+					"transliteration": "il-feela"
+				},
+				{
+					"arabic": "تسكن",
+					"english": "live",
+					"transliteration": "tiskin"
+				},
+				{
+					"arabic": "بأفريقيا.",
+					"english": "in Africa.",
+					"transliteration": "b-afreegya."
+				}
+			],
+			"targetWords": [
+				"Elephant"
+			]
+		},
+		{
+			"arabic": "الزرافة أطول حيوان.",
+			"arabicTashkeel": "الزَّرافة أطوَل حَيوان.",
+			"english": "The giraffe is the tallest animal.",
+			"transliteration": "iz-zaraafa atwal 7aywaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الزرافة",
+					"english": "The giraffe is",
+					"transliteration": "iz-zaraafa"
+				},
+				{
+					"arabic": "أطول",
+					"english": "the tallest",
+					"transliteration": "atwal"
+				},
+				{
+					"arabic": "حيوان.",
+					"english": "animal.",
+					"transliteration": "7aywaan."
+				}
+			],
+			"targetWords": [
+				"Giraffe",
+				"Animal"
+			]
+		},
+		{
+			"arabic": "القرد يضحك.",
+			"arabicTashkeel": "القِرد يِضَحِّك.",
+			"english": "The monkey is funny.",
+			"transliteration": "il-gird yidha77ik.",
+			"wordAlignments": [
+				{
+					"arabic": "القرد",
+					"english": "The monkey is",
+					"transliteration": "il-gird"
+				},
+				{
+					"arabic": "يضحك.",
+					"english": "funny.",
+					"transliteration": "yidha77ik."
+				}
+			],
+			"targetWords": [
+				"Monkey"
+			]
+		},
+		{
+			"arabic": "الذيب يعوي بالليل.",
+			"arabicTashkeel": "الذّيب يْعَوّي بالليل.",
+			"english": "The wolf howls at night.",
+			"transliteration": "idh-dheeb y3awwi bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "الذيب",
+					"english": "The wolf",
+					"transliteration": "idh-dheeb"
+				},
+				{
+					"arabic": "يعوي",
+					"english": "howls",
+					"transliteration": "y3awwi"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Wolf"
+			]
+		},
+		{
+			"arabic": "الصقر غالي وايد.",
+			"arabicTashkeel": "الصَّقر غالي وايد.",
+			"english": "A falcon is very expensive.",
+			"transliteration": "is-sagr ghaali waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الصقر",
+					"english": "The falcon is",
+					"transliteration": "is-sagr"
+				},
+				{
+					"arabic": "غالي",
+					"english": "expensive",
+					"transliteration": "ghaali"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Falcon"
+			]
+		},
+		{
+			"arabic": "المها قرونها طويلة.",
+			"arabicTashkeel": "المَها قُرونها طْويلة.",
+			"english": "The oryx has long horns.",
+			"transliteration": "il-maha guroonha tweela.",
+			"wordAlignments": [
+				{
+					"arabic": "المها",
+					"english": "The oryx",
+					"transliteration": "il-maha"
+				},
+				{
+					"arabic": "قرونها",
+					"english": "its horns are",
+					"transliteration": "guroonha"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "tweela."
+				}
+			],
+			"targetWords": [
+				"Oryx"
+			]
+		},
+		{
+			"arabic": "حية كبيرة.",
+			"arabicTashkeel": "حَيّة كْبيرة.",
+			"english": "A big snake.",
+			"transliteration": "7ayya chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "حية",
+					"english": "A snake",
+					"transliteration": "7ayya"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Snake"
+			]
+		},
+		{
+			"arabic": "الغزلان تسكن بالبر.",
+			"arabicTashkeel": "الغِزلان تِسكِن بالبَر.",
+			"english": "Gazelles live in the desert.",
+			"transliteration": "il-ghizlaan tiskin bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "الغزلان",
+					"english": "Gazelles",
+					"transliteration": "il-ghizlaan"
+				},
+				{
+					"arabic": "تسكن",
+					"english": "live",
+					"transliteration": "tiskin"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Gazelle",
+				"Desert"
+			]
+		},
+		{
+			"arabic": "البعير سفينة البر.",
+			"arabicTashkeel": "البَعير سَفينة البَر.",
+			"english": "The camel is the ship of the desert.",
+			"transliteration": "il-ba3eer safeenat il-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "البعير",
+					"english": "The camel is",
+					"transliteration": "il-ba3eer"
+				},
+				{
+					"arabic": "سفينة",
+					"english": "the ship of",
+					"transliteration": "safeenat"
+				},
+				{
+					"arabic": "البر.",
+					"english": "the desert.",
+					"transliteration": "il-barr."
+				}
+			],
+			"targetWords": [
+				"Camel",
+				"Desert"
+			]
+		},
+		{
+			"arabic": "حديقة الحيوانات مسكرة يوم الإثنين.",
+			"arabicTashkeel": "حَديقة الحَيوانات مْسَكَّرة يوم الإثنين.",
+			"english": "The zoo is closed on Monday.",
+			"transliteration": "7adeegat il-7aywaanaat msakkara yoom il-ithneen.",
+			"wordAlignments": [
+				{
+					"arabic": "حديقة",
+					"english": "The garden of",
+					"transliteration": "7adeegat"
+				},
+				{
+					"arabic": "الحيوانات",
+					"english": "the animals is",
+					"transliteration": "il-7aywaanaat"
+				},
+				{
+					"arabic": "مسكرة",
+					"english": "closed",
+					"transliteration": "msakkara"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الإثنين.",
+					"english": "Monday.",
+					"transliteration": "il-ithneen."
+				}
+			],
+			"targetWords": [
+				"Zoo"
+			]
+		},
+		{
+			"arabic": "لا تقرب، خطير!",
+			"arabicTashkeel": "لا تْقَرِّب، خَطير!",
+			"english": "Don't go near, it's dangerous!",
+			"transliteration": "la tgarrib, khateer!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تقرب،",
+					"english": "go near,",
+					"transliteration": "tgarrib,"
+				},
+				{
+					"arabic": "خطير!",
+					"english": "it's dangerous!",
+					"transliteration": "khateer!"
+				}
+			],
+			"targetWords": [
+				"Dangerous"
+			]
+		},
+		{
+			"arabic": "الحيوانات بحديقة الحيوانات.",
+			"arabicTashkeel": "الحَيوانات بحَديقة الحَيوانات.",
+			"english": "The animals at the zoo.",
+			"transliteration": "il-7aywaanaat b-7adeegat il-7aywaanaat.",
+			"wordAlignments": [
+				{
+					"arabic": "الحيوانات",
+					"english": "The animals",
+					"transliteration": "il-7aywaanaat"
+				},
+				{
+					"arabic": "بحديقة",
+					"english": "in the garden of",
+					"transliteration": "b-7adeegat"
+				},
+				{
+					"arabic": "الحيوانات.",
+					"english": "the animals.",
+					"transliteration": "il-7aywaanaat."
+				}
+			],
+			"targetWords": [
+				"Animal",
+				"Zoo"
+			]
+		},
+		{
+			"arabic": "شفت أسد ونمر.",
+			"arabicTashkeel": "شِفت أسَد ونِمر.",
+			"english": "I saw a lion and a tiger.",
+			"transliteration": "shift asad w-nimr.",
+			"wordAlignments": [
+				{
+					"arabic": "شفت",
+					"english": "I saw",
+					"transliteration": "shift"
+				},
+				{
+					"arabic": "أسد",
+					"english": "a lion",
+					"transliteration": "asad"
+				},
+				{
+					"arabic": "ونمر.",
+					"english": "and a tiger.",
+					"transliteration": "w-nimr."
+				}
+			],
+			"targetWords": [
+				"Lion",
+				"Tiger"
+			]
+		},
+		{
+			"arabic": "الفيل ياكل وايد.",
+			"arabicTashkeel": "الفيل ياكِل وايد.",
+			"english": "The elephant eats a lot.",
+			"transliteration": "il-feel yaakil waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيل",
+					"english": "The elephant",
+					"transliteration": "il-feel"
+				},
+				{
+					"arabic": "ياكل",
+					"english": "eats",
+					"transliteration": "yaakil"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Elephant"
+			]
+		},
+		{
+			"arabic": "شوف الزرافة!",
+			"arabicTashkeel": "شوف الزَّرافة!",
+			"english": "Look at the giraffe!",
+			"transliteration": "shoof iz-zaraafa!",
+			"wordAlignments": [
+				{
+					"arabic": "شوف",
+					"english": "Look at",
+					"transliteration": "shoof"
+				},
+				{
+					"arabic": "الزرافة!",
+					"english": "the giraffe!",
+					"transliteration": "iz-zaraafa!"
+				}
+			],
+			"targetWords": [
+				"Giraffe"
+			]
+		},
+		{
+			"arabic": "القرد فوق الشجرة.",
+			"arabicTashkeel": "القِرد فوق الشَّجَرة.",
+			"english": "The monkey is in the tree.",
+			"transliteration": "il-gird foog ish-shajara.",
+			"wordAlignments": [
+				{
+					"arabic": "القرد",
+					"english": "The monkey is",
+					"transliteration": "il-gird"
+				},
+				{
+					"arabic": "فوق",
+					"english": "up",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الشجرة.",
+					"english": "the tree.",
+					"transliteration": "ish-shajara."
+				}
+			],
+			"targetWords": [
+				"Monkey"
+			]
+		},
+		{
+			"arabic": "الذيب والصقر.",
+			"arabicTashkeel": "الذّيب والصَّقر.",
+			"english": "The wolf and the falcon.",
+			"transliteration": "idh-dheeb w-is-sagr.",
+			"wordAlignments": [
+				{
+					"arabic": "الذيب",
+					"english": "The wolf",
+					"transliteration": "idh-dheeb"
+				},
+				{
+					"arabic": "والصقر.",
+					"english": "and the falcon.",
+					"transliteration": "w-is-sagr."
+				}
+			],
+			"targetWords": [
+				"Wolf",
+				"Falcon"
+			]
+		},
+		{
+			"arabic": "المها والغزال.",
+			"arabicTashkeel": "المَها والغَزال.",
+			"english": "The oryx and the gazelle.",
+			"transliteration": "il-maha w-il-ghazaal.",
+			"wordAlignments": [
+				{
+					"arabic": "المها",
+					"english": "The oryx",
+					"transliteration": "il-maha"
+				},
+				{
+					"arabic": "والغزال.",
+					"english": "and the gazelle.",
+					"transliteration": "w-il-ghazaal."
+				}
+			],
+			"targetWords": [
+				"Oryx",
+				"Gazelle"
+			]
+		},
+		{
+			"arabic": "في حيات بالبر.",
+			"arabicTashkeel": "في حَيّات بالبَر.",
+			"english": "There are snakes in the desert.",
+			"transliteration": "fee 7ayyaat bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "There are",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "حيات",
+					"english": "snakes",
+					"transliteration": "7ayyaat"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Snake",
+				"Desert"
+			]
+		},
+		{
+			"arabic": "الغزال الصغير.",
+			"arabicTashkeel": "الغَزال الصْغَيِّر.",
+			"english": "The little gazelle.",
+			"transliteration": "il-ghazaal is-sghayyir.",
+			"wordAlignments": [
+				{
+					"arabic": "الغزال",
+					"english": "The gazelle",
+					"transliteration": "il-ghazaal"
+				},
+				{
+					"arabic": "الصغير.",
+					"english": "little.",
+					"transliteration": "is-sghayyir."
+				}
+			],
+			"targetWords": [
+				"Gazelle"
+			]
+		},
+		{
+			"arabic": "ركبت بعير.",
+			"arabicTashkeel": "رِكَبت بَعير.",
+			"english": "I rode a camel.",
+			"transliteration": "rikabt ba3eer.",
+			"wordAlignments": [
+				{
+					"arabic": "ركبت",
+					"english": "I rode",
+					"transliteration": "rikabt"
+				},
+				{
+					"arabic": "بعير.",
+					"english": "a camel.",
+					"transliteration": "ba3eer."
+				}
+			],
+			"targetWords": [
+				"Camel"
+			]
+		},
+		{
+			"arabic": "شفنا حيوانات وايد بحديقة الحيوانات.",
+			"arabicTashkeel": "شِفنا حَيوانات وايد بحَديقة الحَيوانات.",
+			"english": "We saw many animals at the zoo.",
+			"transliteration": "shifna 7aywaanaat waayid b-7adeegat il-7aywaanaat.",
+			"wordAlignments": [
+				{
+					"arabic": "شفنا",
+					"english": "We saw",
+					"transliteration": "shifna"
+				},
+				{
+					"arabic": "حيوانات",
+					"english": "animals",
+					"transliteration": "7aywaanaat"
+				},
+				{
+					"arabic": "وايد",
+					"english": "many",
+					"transliteration": "waayid"
+				},
+				{
+					"arabic": "بحديقة",
+					"english": "in the garden of",
+					"transliteration": "b-7adeegat"
+				},
+				{
+					"arabic": "الحيوانات.",
+					"english": "the animals.",
+					"transliteration": "il-7aywaanaat."
+				}
+			],
+			"targetWords": [
+				"Zoo",
+				"Animal"
+			]
+		},
+		{
+			"arabic": "البر كبير وهادي.",
+			"arabicTashkeel": "البَر كْبير وهادي.",
+			"english": "The desert is big and quiet.",
+			"transliteration": "il-barr chbeer w-haadi.",
+			"wordAlignments": [
+				{
+					"arabic": "البر",
+					"english": "The desert is",
+					"transliteration": "il-barr"
+				},
+				{
+					"arabic": "كبير",
+					"english": "big",
+					"transliteration": "chbeer"
+				},
+				{
+					"arabic": "وهادي.",
+					"english": "and quiet.",
+					"transliteration": "w-haadi."
+				}
+			],
+			"targetWords": [
+				"Desert"
+			]
+		},
+		{
+			"arabic": "النمر خطير.",
+			"arabicTashkeel": "النِّمر خَطير.",
+			"english": "The tiger is dangerous.",
+			"transliteration": "in-nimr khateer.",
+			"wordAlignments": [
+				{
+					"arabic": "النمر",
+					"english": "The tiger is",
+					"transliteration": "in-nimr"
+				},
+				{
+					"arabic": "خطير.",
+					"english": "dangerous.",
+					"transliteration": "khateer."
+				}
+			],
+			"targetWords": [
+				"Tiger",
+				"Dangerous"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At the Zoo",
+			"sentences": [
+				{
+					"arabic": "يوم السبت رحنا حديقة الحيوانات بالعين.",
+					"arabicTashkeel": "يوم السَّبت رِحنا حَديقة الحَيوانات بالعين.",
+					"english": "On Saturday we went to the zoo in Al Ain.",
+					"transliteration": "yoom is-sabt ri7na 7adeegat il-7aywaanaat bil-3een.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "السبت",
+							"english": "Saturday",
+							"transliteration": "is-sabt"
+						},
+						{
+							"arabic": "رحنا",
+							"english": "we went",
+							"transliteration": "ri7na"
+						},
+						{
+							"arabic": "حديقة",
+							"english": "to the garden of",
+							"transliteration": "7adeegat"
+						},
+						{
+							"arabic": "الحيوانات",
+							"english": "the animals",
+							"transliteration": "il-7aywaanaat"
+						},
+						{
+							"arabic": "بالعين.",
+							"english": "in Al Ain.",
+							"transliteration": "bil-3een."
+						}
+					]
+				},
+				{
+					"arabic": "شفنا أسد، نمر، وفيل كبير.",
+					"arabicTashkeel": "شِفنا أسَد، نِمر، وفيل كْبير.",
+					"english": "We saw a lion, a tiger and a big elephant.",
+					"transliteration": "shifna asad, nimr, w-feel chbeer.",
+					"wordAlignments": [
+						{
+							"arabic": "شفنا",
+							"english": "We saw",
+							"transliteration": "shifna"
+						},
+						{
+							"arabic": "أسد،",
+							"english": "a lion,",
+							"transliteration": "asad,"
+						},
+						{
+							"arabic": "نمر،",
+							"english": "a tiger,",
+							"transliteration": "nimr,"
+						},
+						{
+							"arabic": "وفيل",
+							"english": "and an elephant",
+							"transliteration": "w-feel"
+						},
+						{
+							"arabic": "كبير.",
+							"english": "big.",
+							"transliteration": "chbeer."
+						}
+					]
+				},
+				{
+					"arabic": "العيال حبوا القرود والزرافة.",
+					"arabicTashkeel": "العْيال حَبّوا القُرود والزَّرافة.",
+					"english": "The kids loved the monkeys and the giraffe.",
+					"transliteration": "il-3yaal 7abbu il-gurood w-iz-zaraafa.",
+					"wordAlignments": [
+						{
+							"arabic": "العيال",
+							"english": "The kids",
+							"transliteration": "il-3yaal"
+						},
+						{
+							"arabic": "حبوا",
+							"english": "loved",
+							"transliteration": "7abbu"
+						},
+						{
+							"arabic": "القرود",
+							"english": "the monkeys",
+							"transliteration": "il-gurood"
+						},
+						{
+							"arabic": "والزرافة.",
+							"english": "and the giraffe.",
+							"transliteration": "w-iz-zaraafa."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "In the Desert",
+			"sentences": [
+				{
+					"arabic": "بالبر الإماراتي في بعارين وغزلان ومها.",
+					"arabicTashkeel": "بالبَر الإماراتي في بعارين وغِزلان ومَها.",
+					"english": "In the Emirati desert there are camels, gazelles and oryx.",
+					"transliteration": "bil-barr il-imaaraati fee ba3aareen w-ghizlaan w-maha.",
+					"wordAlignments": [
+						{
+							"arabic": "بالبر",
+							"english": "In the desert",
+							"transliteration": "bil-barr"
+						},
+						{
+							"arabic": "الإماراتي",
+							"english": "Emirati",
+							"transliteration": "il-imaaraati"
+						},
+						{
+							"arabic": "في",
+							"english": "there are",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "بعارين",
+							"english": "camels,",
+							"transliteration": "ba3aareen"
+						},
+						{
+							"arabic": "وغزلان",
+							"english": "and gazelles",
+							"transliteration": "w-ghizlaan"
+						},
+						{
+							"arabic": "ومها.",
+							"english": "and oryx.",
+							"transliteration": "w-maha."
+						}
+					]
+				},
+				{
+					"arabic": "وفي صقور وحيات بعد.",
+					"arabicTashkeel": "وفي صُقور وحَيّات بَعَد.",
+					"english": "There are also falcons and snakes.",
+					"transliteration": "w-fee sugoor w-7ayyaat ba3ad.",
+					"wordAlignments": [
+						{
+							"arabic": "وفي",
+							"english": "And there are",
+							"transliteration": "w-fee"
+						},
+						{
+							"arabic": "صقور",
+							"english": "falcons",
+							"transliteration": "sugoor"
+						},
+						{
+							"arabic": "وحيات",
+							"english": "and snakes",
+							"transliteration": "w-7ayyaat"
+						},
+						{
+							"arabic": "بعد.",
+							"english": "also.",
+							"transliteration": "ba3ad."
+						}
+					]
+				},
+				{
+					"arabic": "الحيات خطيرة، دير بالك!",
+					"arabicTashkeel": "الحَيّات خَطيرة، دير بالَك!",
+					"english": "Snakes are dangerous, be careful!",
+					"transliteration": "il-7ayyaat khateera, deer baalak!",
+					"wordAlignments": [
+						{
+							"arabic": "الحيات",
+							"english": "Snakes are",
+							"transliteration": "il-7ayyaat"
+						},
+						{
+							"arabic": "خطيرة،",
+							"english": "dangerous,",
+							"transliteration": "khateera,"
+						},
+						{
+							"arabic": "دير",
+							"english": "take",
+							"transliteration": "deer"
+						},
+						{
+							"arabic": "بالك!",
+							"english": "care!",
+							"transliteration": "baalak!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is on a desert safari outside Dubai, and the Emirati guide is pointing out animals.",
+		"studentRole": "A tourist learning Gulf Arabic.",
+		"otherRole": "The Emirati desert guide, who knows every animal.",
+		"goalEnglish": "Ask what animals live in the desert, which ones are dangerous, and say which animals you like or are scared of.",
+		"targetWords": [
+			"Animal",
+			"Desert",
+			"Camel",
+			"Falcon",
+			"Oryx",
+			"Gazelle",
+			"Snake",
+			"Dangerous"
+		]
+	}
+}

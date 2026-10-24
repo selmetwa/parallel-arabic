@@ -41,14 +41,22 @@ const CONTENT: Record<string, Partial<Record<Dialect, TryContent>>> = {
 		levantine: { readLines: [0], trace: ANA },
 		'egyptian-arabic': { readLines: [0], trace: ANA },
 		fusha: { readLines: [0], trace: ANA },
-		darija: { readLines: [0], trace: ANA }
+		darija: { readLines: [0], trace: ANA },
+		// Iraqi says آني for "I".
+		iraqi: { readLines: [0], trace: { arabic: 'آني', transliteration: 'aani', english: 'I' } },
+		khaleeji: { readLines: [0], trace: ANA },
+		saudi: { readLines: [0], trace: ANA }
 	},
 	// Coffee and family open on the other person's question, so Read shows it too.
 	'ordering-coffee': {
 		levantine: { readLines: [0, 1], trace: SUKKAR },
 		'egyptian-arabic': { readLines: [0, 1], trace: SUKKAR },
 		fusha: { readLines: [0, 1], trace: SUKKAR },
-		darija: { readLines: [0, 1], trace: SUKKAR }
+		darija: { readLines: [0, 1], trace: SUKKAR },
+		// Iraqi sugar is شكر (shakar).
+		iraqi: { readLines: [0, 1], trace: { arabic: 'شكر', transliteration: 'shakar', english: 'sugar' } },
+		khaleeji: { readLines: [0, 1], trace: SUKKAR },
+		saudi: { readLines: [0, 1], trace: SUKKAR }
 	},
 	'talking-about-family': {
 		levantine: { readLines: [0, 1], trace: AKH },
@@ -58,7 +66,10 @@ const CONTENT: Record<string, Partial<Record<Dialect, TryContent>>> = {
 		darija: {
 			readLines: [0, 1],
 			trace: { arabic: 'ختي', transliteration: 'khti', english: 'my sister' }
-		}
+		},
+		iraqi: { readLines: [0, 1], trace: AKH },
+		khaleeji: { readLines: [0, 1], trace: AKH },
+		saudi: { readLines: [0, 1], trace: AKH }
 	}
 };
 

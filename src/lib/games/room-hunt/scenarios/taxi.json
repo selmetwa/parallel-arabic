@@ -15,6 +15,18 @@
 		"fusha": {
 			"arabic": "مَرْحَبًا! إِلَى أَيْنَ؟",
 			"transliteration": "mar7aban! ila ayna?"
+		},
+		"iraqi": {
+			"arabic": "هَلا! وين؟",
+			"transliteration": "hala! wein?"
+		},
+		"khaleeji": {
+			"arabic": "هَلا! وين؟",
+			"transliteration": "hala! wain?"
+		},
+		"saudi": {
+			"arabic": "أهلين! على فين؟",
+			"transliteration": "ahlain! 3ala feen?"
 		}
 	},
 	"d_price": {
@@ -33,6 +45,18 @@
 		"fusha": {
 			"arabic": "إِلَى الْمَحَطَّةِ؟ الْأُجْرَةُ خَمْسُونَ.",
 			"transliteration": "ila al-ma7atta? al-2ujra khamsun."
+		},
+		"iraqi": {
+			"arabic": "للمَحَطّة؟ الأُجرة خَمسين",
+			"transliteration": "lil-ma7atta? il-ujra khamseen"
+		},
+		"khaleeji": {
+			"arabic": "المَحَطّة؟ الأُجرة خَمسين",
+			"transliteration": "il-ma7atta? il-ujra khamseen"
+		},
+		"saudi": {
+			"arabic": "المَحَطّة؟ الأُجرة خَمسين",
+			"transliteration": "il-ma7atta? il-ujra khamseen"
 		}
 	},
 	"d_forty": {
@@ -51,6 +75,18 @@
 		"fusha": {
 			"arabic": "حَسَنًا، أَرْبَعُونَ.",
 			"transliteration": "7asanan, arba3un."
+		},
+		"iraqi": {
+			"arabic": "زين، أربعين",
+			"transliteration": "zein, arba3een"
+		},
+		"khaleeji": {
+			"arabic": "زين، أربعين",
+			"transliteration": "zain, arba3een"
+		},
+		"saudi": {
+			"arabic": "طَيِّب، أربعين",
+			"transliteration": "tayyib, arba3een"
 		}
 	},
 	"d_lets_go": {
@@ -69,6 +105,18 @@
 		"fusha": {
 			"arabic": "هَيَّا بِنَا!",
 			"transliteration": "hayya bina!"
+		},
+		"iraqi": {
+			"arabic": "يَلّا!",
+			"transliteration": "yalla!"
+		},
+		"khaleeji": {
+			"arabic": "يَلّا!",
+			"transliteration": "yalla!"
+		},
+		"saudi": {
+			"arabic": "يَلّا!",
+			"transliteration": "yalla!"
 		}
 	},
 	"d_way": {
@@ -87,6 +135,18 @@
 		"fusha": {
 			"arabic": "هَلْ تَعْرِفُ الطَّرِيقَ؟",
 			"transliteration": "hal ta3rifu at-tariq?"
+		},
+		"iraqi": {
+			"arabic": "تُعرُف الطَّريق؟",
+			"transliteration": "tu3ruf it-tareeg?"
+		},
+		"khaleeji": {
+			"arabic": "تِعرِف الطَّريق؟",
+			"transliteration": "ti3rif it-tareeg?"
+		},
+		"saudi": {
+			"arabic": "تِعرِف الطَّريق؟",
+			"transliteration": "ti3rif it-tareeg?"
 		}
 	},
 	"d_here": {
@@ -105,6 +165,18 @@
 		"fusha": {
 			"arabic": "هُنَا؟",
 			"transliteration": "huna?"
+		},
+		"iraqi": {
+			"arabic": "هنا؟",
+			"transliteration": "hna?"
+		},
+		"khaleeji": {
+			"arabic": "هني؟",
+			"transliteration": "hni?"
+		},
+		"saudi": {
+			"arabic": "هِنا؟",
+			"transliteration": "hina?"
 		}
 	},
 	"d_arrived": {
@@ -123,6 +195,18 @@
 		"fusha": {
 			"arabic": "وَصَلْنَا. هَذِهِ هِيَ الْمَحَطَّةُ.",
 			"transliteration": "wasalna. hadhihi hiya al-ma7atta."
+		},
+		"iraqi": {
+			"arabic": "وصَلنا. هاي المَحَطّة",
+			"transliteration": "wsalna. haay il-ma7atta"
+		},
+		"khaleeji": {
+			"arabic": "وَصَلنا. هاذي المَحَطّة",
+			"transliteration": "wasalna. haadhi il-ma7atta"
+		},
+		"saudi": {
+			"arabic": "وَصَلنا. دي المَحَطّة",
+			"transliteration": "wasalna. di il-ma7atta"
 		}
 	},
 	"d_bye": {
@@ -141,6 +225,18 @@
 		"fusha": {
 			"arabic": "شُكْرًا! أَتَمَنَّى لَكَ يَوْمًا سَعِيدًا.",
 			"transliteration": "shukran! atamanna laka yawman sa3idan."
+		},
+		"iraqi": {
+			"arabic": "شُكراً! يومَك سَعيد",
+			"transliteration": "shukran! yoomak sa3eed"
+		},
+		"khaleeji": {
+			"arabic": "مَشكور! يومَك سَعيد",
+			"transliteration": "mashkoor! yoomak sa3eed"
+		},
+		"saudi": {
+			"arabic": "شُكراً! يومَك سَعيد",
+			"transliteration": "shukran! yoomak sa3eed"
 		}
 	},
 	"d_sorry": {
@@ -159,6 +255,18 @@
 		"fusha": {
 			"arabic": "عُذْرًا؟ لَمْ أَفْهَمْ.",
 			"transliteration": "3udhran? lam afham."
+		},
+		"iraqi": {
+			"arabic": "عَفواً؟ ما فِتهَمِت",
+			"transliteration": "3afwan? ma fithamit"
+		},
+		"khaleeji": {
+			"arabic": "عَفواً؟ ما فِهَمت",
+			"transliteration": "3afwan? ma fihamt"
+		},
+		"saudi": {
+			"arabic": "عَفواً؟ ما فِهِمت",
+			"transliteration": "3afwan? ma fihimt"
 		}
 	},
 	"y_station": {
@@ -177,6 +285,18 @@
 		"fusha": {
 			"arabic": "إِلَى مَحَطَّةِ الْقِطَارِ، مِنْ فَضْلِكَ.",
 			"transliteration": "ila ma7attat al-qitar, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "لِمَحَطّة القِطار رَجاءً",
+			"transliteration": "li-ma7attat il-gitaar rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "لِمَحَطّة المِترو لو سَمَحت",
+			"transliteration": "li-ma7attat il-mitro law sama7t"
+		},
+		"saudi": {
+			"arabic": "لِمَحَطّة القِطار لو سَمَحت",
+			"transliteration": "li-ma7attat il-gitaar law sama7t"
 		}
 	},
 	"y_too_much": {
@@ -195,6 +315,18 @@
 		"fusha": {
 			"arabic": "هَذَا كَثِيرٌ! أَرْبَعُونَ؟",
 			"transliteration": "hadha kathir! arba3un?"
+		},
+		"iraqi": {
+			"arabic": "هوايه! أربعين؟",
+			"transliteration": "hwaaya! arba3een?"
+		},
+		"khaleeji": {
+			"arabic": "وايد! أربعين؟",
+			"transliteration": "waayid! arba3een?"
+		},
+		"saudi": {
+			"arabic": "كِتير! أربعين؟",
+			"transliteration": "kteer! arba3een?"
 		}
 	},
 	"y_ok_go": {
@@ -213,6 +345,18 @@
 		"fusha": {
 			"arabic": "حَسَنًا، هَيَّا بِنَا.",
 			"transliteration": "7asanan, hayya bina."
+		},
+		"iraqi": {
+			"arabic": "زين، يَلّا",
+			"transliteration": "zein, yalla"
+		},
+		"khaleeji": {
+			"arabic": "زين، يَلّا",
+			"transliteration": "zain, yalla"
+		},
+		"saudi": {
+			"arabic": "طَيِّب، يَلّا",
+			"transliteration": "tayyib, yalla"
 		}
 	},
 	"y_straight_right": {
@@ -231,6 +375,18 @@
 		"fusha": {
 			"arabic": "اِذْهَبْ مُسْتَقِيمًا، ثُمَّ اِنْعَطِفْ يَمِينًا عِنْدَ الْإِشَارَةِ.",
 			"transliteration": "idhhab mustaqiman, thumma in3atif yaminan 3inda al-ishara."
+		},
+		"iraqi": {
+			"arabic": "روح سيدا، وبَعدين لِف يَمين عِند الإشارة",
+			"transliteration": "roo7 seeda, w-ba3dain liff yameen 3ind il-ishaara"
+		},
+		"khaleeji": {
+			"arabic": "سير سيده، وبَعدين لِف يَمين عِند الإشارة",
+			"transliteration": "seer seeda, w-ba3dain liff yimeen 3ind il-ishaara"
+		},
+		"saudi": {
+			"arabic": "روح دُغري، وبَعدين لِف يَمين عِند الإشارة",
+			"transliteration": "rooh dughri, w-ba3dain liff yameen 3ind il-ishaara"
 		}
 	},
 	"y_stop_here": {
@@ -249,6 +405,18 @@
 		"fusha": {
 			"arabic": "نَعَمْ، تَوَقَّفْ هُنَا مِنْ فَضْلِكَ.",
 			"transliteration": "na3am, tawaqqaf huna min fadlik."
+		},
+		"iraqi": {
+			"arabic": "إي، وَقِّف هنا رَجاءً",
+			"transliteration": "ee, waggif hna rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "إي، وَقِّف هني لو سَمَحت",
+			"transliteration": "ee, waggif hni law sama7t"
+		},
+		"saudi": {
+			"arabic": "أيوا، وَقِّف هِنا لو سَمَحت",
+			"transliteration": "aiwa, waggif hina law sama7t"
 		}
 	},
 	"y_change": {
@@ -267,6 +435,18 @@
 		"fusha": {
 			"arabic": "تَفَضَّلْ. اِحْتَفِظْ بِالْبَاقِي.",
 			"transliteration": "tafaddal. i7tafiz bil-baqi."
+		},
+		"iraqi": {
+			"arabic": "تِفَضَّل. خَلّي الباقي",
+			"transliteration": "tfadhdhal. khalli il-baagi"
+		},
+		"khaleeji": {
+			"arabic": "تِفَضَّل. خَلّ الباقي",
+			"transliteration": "tfadhdhal. khall il-baagi"
+		},
+		"saudi": {
+			"arabic": "اِتفَضَّل. خَلّي الباقي",
+			"transliteration": "itfadhdhal. khalli il-baagi"
 		}
 	},
 	"y_faster": {
@@ -285,6 +465,18 @@
 		"fusha": {
 			"arabic": "أَسْرِعْ مِنْ فَضْلِكَ!",
 			"transliteration": "asri3 min fadlik!"
+		},
+		"iraqi": {
+			"arabic": "أسرَع رَجاءً!",
+			"transliteration": "asra3 rajaa2an!"
+		},
+		"khaleeji": {
+			"arabic": "أسرَع لو سَمَحت!",
+			"transliteration": "asra3 law sama7t!"
+		},
+		"saudi": {
+			"arabic": "أسرَع لو سَمَحت!",
+			"transliteration": "asra3 law sama7t!"
 		}
 	},
 	"y_menu": {
@@ -303,6 +495,18 @@
 		"fusha": {
 			"arabic": "قَائِمَةُ الطَّعَامِ، مِنْ فَضْلِكَ.",
 			"transliteration": "qa2imat at-ta3am, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "المِنيو رَجاءً",
+			"transliteration": "il-menyu rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "المِنيو لو سَمَحت",
+			"transliteration": "il-menyu law sama7t"
+		},
+		"saudi": {
+			"arabic": "المِنيو لو سَمَحت",
+			"transliteration": "il-menyu law sama7t"
 		}
 	},
 	"y_thanks_bye": {
@@ -321,6 +525,18 @@
 		"fusha": {
 			"arabic": "شُكْرًا، مَعَ السَّلَامَةِ!",
 			"transliteration": "shukran, ma3a as-salama!"
+		},
+		"iraqi": {
+			"arabic": "شُكراً، مَعَ السَّلامة!",
+			"transliteration": "shukran, ma3a is-salaama!"
+		},
+		"khaleeji": {
+			"arabic": "مَشكور، مَعَ السَّلامة!",
+			"transliteration": "mashkoor, ma3a is-salaama!"
+		},
+		"saudi": {
+			"arabic": "شُكراً، مَعَ السَّلامة!",
+			"transliteration": "shukran, ma3a is-salaama!"
 		}
 	},
 	"y_table_two": {
@@ -339,6 +555,18 @@
 		"fusha": {
 			"arabic": "طَاوِلَةٌ لِشَخْصَيْنِ، مِنْ فَضْلِكَ.",
 			"transliteration": "tawilatun li-shakhsayn, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "ميز لِنَفَرين رَجاءً",
+			"transliteration": "meiz li-nafarein rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "طاولة حَق اِثنين لو سَمَحت",
+			"transliteration": "taawla 7agg ithnain law sama7t"
+		},
+		"saudi": {
+			"arabic": "طاولة لِشَخصين لو سَمَحت",
+			"transliteration": "taawla li-shakhsain law sama7t"
 		}
 	},
 	"y_headache": {
@@ -357,6 +585,18 @@
 		"fusha": {
 			"arabic": "عِنْدِي صُدَاعٌ.",
 			"transliteration": "3indi suda3."
+		},
+		"iraqi": {
+			"arabic": "عِندي صُداع",
+			"transliteration": "3indi sudaa3"
+		},
+		"khaleeji": {
+			"arabic": "عِندي صُداع",
+			"transliteration": "3indi sudaa3"
+		},
+		"saudi": {
+			"arabic": "عِندي صُداع",
+			"transliteration": "3indi sudaa3"
 		}
 	},
 	"y_kilo": {
@@ -375,6 +615,18 @@
 		"fusha": {
 			"arabic": "كِيلُو، مِنْ فَضْلِكَ.",
 			"transliteration": "kilu, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "كيلو رَجاءً",
+			"transliteration": "keelo rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "كيلو لو سَمَحت",
+			"transliteration": "keelo law sama7t"
+		},
+		"saudi": {
+			"arabic": "كيلو لو سَمَحت",
+			"transliteration": "keelo law sama7t"
 		}
 	},
 	"y_enjoy": {
@@ -393,6 +645,18 @@
 		"fusha": {
 			"arabic": "بِالْهَنَاءِ وَالشِّفَاءِ!",
 			"transliteration": "bil-hana2 wash-shifa2!"
+		},
+		"iraqi": {
+			"arabic": "بالعافية!",
+			"transliteration": "bil-3aafya!"
+		},
+		"khaleeji": {
+			"arabic": "بالعافية!",
+			"transliteration": "bil-3aafya!"
+		},
+		"saudi": {
+			"arabic": "بالعافية!",
+			"transliteration": "bil-3aafya!"
 		}
 	},
 	"y_welcome": {
@@ -411,6 +675,18 @@
 		"fusha": {
 			"arabic": "أَهْلًا وَسَهْلًا!",
 			"transliteration": "ahlan wa sahlan!"
+		},
+		"iraqi": {
+			"arabic": "أهلاً وسَهلاً!",
+			"transliteration": "ahlan w-sahlan!"
+		},
+		"khaleeji": {
+			"arabic": "أهلاً وسَهلاً!",
+			"transliteration": "ahlan w-sahlan!"
+		},
+		"saudi": {
+			"arabic": "أهلاً وسَهلاً!",
+			"transliteration": "ahlan w-sahlan!"
 		}
 	},
 	"d_ac": {
@@ -429,6 +705,18 @@
 		"fusha": {
 			"arabic": "هَلْ تُرِيدُ أَنْ أُشَغِّلَ الْمُكَيِّفَ؟",
 			"transliteration": "hal turidu an ushaghghila al-mukayyif?"
+		},
+		"iraqi": {
+			"arabic": "تريد أشَغِّل المُبَرِّدة؟",
+			"transliteration": "treed ashaghghil il-mubarrida?"
+		},
+		"khaleeji": {
+			"arabic": "تِبي أشَغِّل المُكَيِّف؟",
+			"transliteration": "tabi ashaghghil il-mkayyif?"
+		},
+		"saudi": {
+			"arabic": "تِبغى أشَغِّل المُكَيِّف؟",
+			"transliteration": "tibgha ashaghghil il-mukayyif?"
 		}
 	},
 	"d_traffic": {
@@ -447,6 +735,18 @@
 		"fusha": {
 			"arabic": "الزِّحَامُ شَدِيدٌ الْيَوْمَ!",
 			"transliteration": "az-zi7am shadid al-yawm!"
+		},
+		"iraqi": {
+			"arabic": "الزَّحمة شَديدة اليوم!",
+			"transliteration": "iz-za7ma shadeeda il-yoom!"
+		},
+		"khaleeji": {
+			"arabic": "الزَّحمة وايد اليوم!",
+			"transliteration": "iz-za7ma waayid il-yoom!"
+		},
+		"saudi": {
+			"arabic": "الزَّحمة شَديدة اليوم!",
+			"transliteration": "iz-za7ma shadeeda il-yoom!"
 		}
 	},
 	"d_from": {
@@ -465,6 +765,18 @@
 		"fusha": {
 			"arabic": "مِنْ أَيْنَ أَنْتَ؟",
 			"transliteration": "min ayna anta?"
+		},
+		"iraqi": {
+			"arabic": "مِنين إنتَ؟",
+			"transliteration": "mineen inta?"
+		},
+		"khaleeji": {
+			"arabic": "مِنين إنتَ؟",
+			"transliteration": "mneen inta?"
+		},
+		"saudi": {
+			"arabic": "مِن فين إنتَ؟",
+			"transliteration": "min feen inta?"
 		}
 	},
 	"d_arabic": {
@@ -483,6 +795,18 @@
 		"fusha": {
 			"arabic": "لُغَتُكَ الْعَرَبِيَّةُ جَيِّدَةٌ جِدًّا!",
 			"transliteration": "lughatuka al-3arabiyya jayyida jiddan!"
+		},
+		"iraqi": {
+			"arabic": "عَرَبيتَك زينة كُلِّش!",
+			"transliteration": "3arabiitak zeina kullish!"
+		},
+		"khaleeji": {
+			"arabic": "عَرَبيتَك وايد زينة!",
+			"transliteration": "3arabiitak waayid zaina!"
+		},
+		"saudi": {
+			"arabic": "عَرَبيتَك كْوَيّسة مَرّة!",
+			"transliteration": "3arabiyyatak kwayyisa marra!"
 		}
 	},
 	"d_turn": {
@@ -501,6 +825,18 @@
 		"fusha": {
 			"arabic": "يَمِينًا أَمْ يَسَارًا؟",
 			"transliteration": "yaminan am yasaran?"
+		},
+		"iraqi": {
+			"arabic": "يَمين لو يَسار؟",
+			"transliteration": "yameen lo yisaar?"
+		},
+		"khaleeji": {
+			"arabic": "يَمين ولا يَسار؟",
+			"transliteration": "yimeen walla yisaar?"
+		},
+		"saudi": {
+			"arabic": "يَمين وَلّا يَسار؟",
+			"transliteration": "yameen walla yasaar?"
 		}
 	},
 	"d_receipt": {
@@ -519,6 +855,18 @@
 		"fusha": {
 			"arabic": "هَلْ تُرِيدُ إِيصَالًا؟",
 			"transliteration": "hal turidu isalan?"
+		},
+		"iraqi": {
+			"arabic": "تريد وَصِل؟",
+			"transliteration": "treed wasil?"
+		},
+		"khaleeji": {
+			"arabic": "تِبي فاتورة؟",
+			"transliteration": "tabi faatoora?"
+		},
+		"saudi": {
+			"arabic": "تِبغى فاتورة؟",
+			"transliteration": "tibgha faatoora?"
 		}
 	},
 	"y_ac_yes": {
@@ -537,6 +885,18 @@
 		"fusha": {
 			"arabic": "نَعَمْ مِنْ فَضْلِكَ، الْجَوُّ حَارٌّ.",
 			"transliteration": "na3am min fadlik, al-jaww 7arr."
+		},
+		"iraqi": {
+			"arabic": "إي رَجاءً، الدُّنيا حَر",
+			"transliteration": "ee rajaa2an, id-dinya 7arr"
+		},
+		"khaleeji": {
+			"arabic": "إي لو سَمَحت، الجَو حَر",
+			"transliteration": "ee law sama7t, il-yaw 7arr"
+		},
+		"saudi": {
+			"arabic": "أيوا لو سَمَحت، الجَو حَر",
+			"transliteration": "aiwa law sama7t, ij-jaw 7arr"
 		}
 	},
 	"y_ac_no": {
@@ -555,6 +915,18 @@
 		"fusha": {
 			"arabic": "لَا شُكْرًا، النَّافِذَةُ تَكْفِي.",
 			"transliteration": "la shukran, an-nafidha takfi."
+		},
+		"iraqi": {
+			"arabic": "لا شُكراً، الشِّبّاك يِكفي",
+			"transliteration": "la shukran, ish-shibbaach yikfi"
+		},
+		"khaleeji": {
+			"arabic": "لا مَشكور، الدَّريشة تِكفي",
+			"transliteration": "la mashkoor, id-dareesha tikfi"
+		},
+		"saudi": {
+			"arabic": "لا شُكراً، الشُّبّاك يِكفي",
+			"transliteration": "la shukran, ish-shubbaak yikfi"
 		}
 	},
 	"y_traffic": {
@@ -573,6 +945,18 @@
 		"fusha": {
 			"arabic": "نَعَمْ، دَائِمًا هَكَذَا.",
 			"transliteration": "na3am, da2iman hakadha."
+		},
+		"iraqi": {
+			"arabic": "إي، دايماً هيجي",
+			"transliteration": "ee, daayman heechi"
+		},
+		"khaleeji": {
+			"arabic": "إي، دايماً جِذي",
+			"transliteration": "ee, daayman chidhi"
+		},
+		"saudi": {
+			"arabic": "أيوا، دايماً كِدا",
+			"transliteration": "aiwa, daayman kida"
 		}
 	},
 	"y_from_canada": {
@@ -591,6 +975,18 @@
 		"fusha": {
 			"arabic": "أَنَا مِنْ كَنَدَا.",
 			"transliteration": "ana min kanada."
+		},
+		"iraqi": {
+			"arabic": "آني مِن كَنَدا",
+			"transliteration": "aani min kanada"
+		},
+		"khaleeji": {
+			"arabic": "أنا مِن كَنَدا",
+			"transliteration": "ana min kanada"
+		},
+		"saudi": {
+			"arabic": "أنا مِن كَنَدا",
+			"transliteration": "ana min kanada"
 		}
 	},
 	"y_from_england": {
@@ -609,6 +1005,18 @@
 		"fusha": {
 			"arabic": "أَنَا مِنْ إِنْجِلْتِرَا.",
 			"transliteration": "ana min injiltira."
+		},
+		"iraqi": {
+			"arabic": "آني مِن إنكِلترا",
+			"transliteration": "aani min inkiltra"
+		},
+		"khaleeji": {
+			"arabic": "أنا مِن إنجِلترا",
+			"transliteration": "ana min inyiltira"
+		},
+		"saudi": {
+			"arabic": "أنا مِن إنجِلترا",
+			"transliteration": "ana min injiltira"
 		}
 	},
 	"y_learning": {
@@ -627,6 +1035,18 @@
 		"fusha": {
 			"arabic": "شُكْرًا! مَا زِلْتُ أَتَعَلَّمُ.",
 			"transliteration": "shukran! ma ziltu ata3allam."
+		},
+		"iraqi": {
+			"arabic": "شُكراً! بَعدني أتعَلَّم",
+			"transliteration": "shukran! ba3adni at3allam"
+		},
+		"khaleeji": {
+			"arabic": "مَشكور! لِين الحين أتعَلَّم",
+			"transliteration": "mashkoor! lain il-7een at3allam"
+		},
+		"saudi": {
+			"arabic": "شُكراً! لِسّا أتعَلَّم",
+			"transliteration": "shukran! lissa at3allam"
 		}
 	},
 	"y_right": {
@@ -645,6 +1065,18 @@
 		"fusha": {
 			"arabic": "يَمِينًا، مِنْ فَضْلِكَ.",
 			"transliteration": "yaminan, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "يَمين رَجاءً",
+			"transliteration": "yameen rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "يَمين لو سَمَحت",
+			"transliteration": "yimeen law sama7t"
+		},
+		"saudi": {
+			"arabic": "يَمين لو سَمَحت",
+			"transliteration": "yameen law sama7t"
 		}
 	},
 	"y_left": {
@@ -663,6 +1095,18 @@
 		"fusha": {
 			"arabic": "يَسَارًا، مِنْ فَضْلِكَ.",
 			"transliteration": "yasaran, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "يَسار رَجاءً",
+			"transliteration": "yisaar rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "يَسار لو سَمَحت",
+			"transliteration": "yisaar law sama7t"
+		},
+		"saudi": {
+			"arabic": "يَسار لو سَمَحت",
+			"transliteration": "yasaar law sama7t"
 		}
 	},
 	"y_no_thanks": {
@@ -681,6 +1125,18 @@
 		"fusha": {
 			"arabic": "لَا، شُكْرًا.",
 			"transliteration": "la, shukran."
+		},
+		"iraqi": {
+			"arabic": "لا، شُكراً",
+			"transliteration": "la, shukran"
+		},
+		"khaleeji": {
+			"arabic": "لا، مَشكور",
+			"transliteration": "la, mashkoor"
+		},
+		"saudi": {
+			"arabic": "لا، شُكراً",
+			"transliteration": "la, shukran"
 		}
 	},
 	"y_yes_please": {
@@ -699,6 +1155,18 @@
 		"fusha": {
 			"arabic": "نَعَمْ، مِنْ فَضْلِكَ.",
 			"transliteration": "na3am, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "إي رَجاءً",
+			"transliteration": "ee rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "إي لو سَمَحت",
+			"transliteration": "ee law sama7t"
+		},
+		"saudi": {
+			"arabic": "أيوا لو سَمَحت",
+			"transliteration": "aiwa law sama7t"
 		}
 	}
 }

@@ -1,0 +1,63 @@
+{
+  "slug": "hello",
+  "dialect": "saudi",
+  "english": "hello",
+  "arabic": "هَلا",
+  "arabicPlain": "هلا",
+  "transliteration": "hala",
+  "franco": "hala",
+  "literal": "welcome",
+  "usage": "The everyday Hijazi hello, warm and fine for anyone. In Jeddah a greeting is usually followed by \"kaifak?\" and a few blessings before getting to the point.",
+  "variants": [
+    {
+      "label": "formal / traditional",
+      "arabic": "السَّلامُ عَلَيكُم",
+      "transliteration": "is-salaamu 3alaikum",
+      "english": "peace be upon you",
+      "note": "The standard greeting when entering a shop, office or home; always answered with \"w-3alaikum is-salaam\"."
+    },
+    {
+      "label": "extra warm",
+      "arabic": "يا هَلا",
+      "transliteration": "ya hala",
+      "english": "oh welcome",
+      "note": "Warm and very common when you see a friend."
+    },
+    {
+      "label": "casual",
+      "arabic": "أهلين",
+      "transliteration": "ahlain",
+      "english": "two welcomes",
+      "note": "Friendly and relaxed, typical of Hijaz."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "هَلا بيك",
+      "transliteration": "hala beek",
+      "english": "welcome to you"
+    },
+    {
+      "arabic": "أهلين وسَهلين",
+      "transliteration": "ahlain w-sahlain",
+      "english": "welcome, welcome"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "هَلا، كيفَك اليوم؟",
+      "transliteration": "hala, kaifak il-yoom?",
+      "english": "Hello, how are you today?"
+    },
+    {
+      "arabic": "يا هَلا، إيش الأخبار؟",
+      "transliteration": "ya hala, eesh il-akhbaar?",
+      "english": "Hello, what's new?"
+    },
+    {
+      "arabic": "هَلا، أحمد موجود؟",
+      "transliteration": "hala, a7mad mawjood?",
+      "english": "Hello, is Ahmed here?"
+    }
+  ]
+}

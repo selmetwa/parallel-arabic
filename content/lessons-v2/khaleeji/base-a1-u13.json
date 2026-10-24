@@ -1,0 +1,1894 @@
+{
+	"vocab": [
+		{
+			"arabic": "فوق",
+			"arabicTashkeel": "فوق",
+			"english": "On / above",
+			"transliteration": "foog",
+			"wordAlignments": [
+				{
+					"arabic": "فوق",
+					"english": "On",
+					"transliteration": "foog"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "تحت",
+			"arabicTashkeel": "تَحت",
+			"english": "Under",
+			"transliteration": "ta7t",
+			"wordAlignments": [
+				{
+					"arabic": "تحت",
+					"english": "Under",
+					"transliteration": "ta7t"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "جنب",
+			"arabicTashkeel": "جَنب",
+			"english": "Next to",
+			"transliteration": "yamb",
+			"wordAlignments": [
+				{
+					"arabic": "جنب",
+					"english": "Next to",
+					"transliteration": "yamb"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "داخل",
+			"arabicTashkeel": "داخِل",
+			"english": "Inside",
+			"transliteration": "daakhil",
+			"wordAlignments": [
+				{
+					"arabic": "داخل",
+					"english": "Inside",
+					"transliteration": "daakhil"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "برا",
+			"arabicTashkeel": "بَرّا",
+			"english": "Outside",
+			"transliteration": "barra",
+			"wordAlignments": [
+				{
+					"arabic": "برا",
+					"english": "Outside",
+					"transliteration": "barra"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "قدام",
+			"arabicTashkeel": "قِدّام",
+			"english": "In front of",
+			"transliteration": "giddaam",
+			"wordAlignments": [
+				{
+					"arabic": "قدام",
+					"english": "In front of",
+					"transliteration": "giddaam"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "ورا",
+			"arabicTashkeel": "وَرا",
+			"english": "Behind",
+			"transliteration": "wara",
+			"wordAlignments": [
+				{
+					"arabic": "ورا",
+					"english": "Behind",
+					"transliteration": "wara"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "يمين",
+			"arabicTashkeel": "يَمين",
+			"english": "Right",
+			"transliteration": "yimeen",
+			"wordAlignments": [
+				{
+					"arabic": "يمين",
+					"english": "Right",
+					"transliteration": "yimeen"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "يسار",
+			"arabicTashkeel": "يَسار",
+			"english": "Left",
+			"transliteration": "yisaar",
+			"wordAlignments": [
+				{
+					"arabic": "يسار",
+					"english": "Left",
+					"transliteration": "yisaar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "هناك",
+			"arabicTashkeel": "هْناك",
+			"english": "There",
+			"transliteration": "hnaak",
+			"wordAlignments": [
+				{
+					"arabic": "هناك",
+					"english": "There",
+					"transliteration": "hnaak"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "قريب",
+			"arabicTashkeel": "قَريب",
+			"english": "Near",
+			"transliteration": "gareeb",
+			"wordAlignments": [
+				{
+					"arabic": "قريب",
+					"english": "Near",
+					"transliteration": "gareeb"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "بعيد",
+			"arabicTashkeel": "بَعيد",
+			"english": "Far",
+			"transliteration": "ba3eed",
+			"wordAlignments": [
+				{
+					"arabic": "بعيد",
+					"english": "Far",
+					"transliteration": "ba3eed"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "سيدا",
+			"arabicTashkeel": "سيدا",
+			"english": "Straight ahead",
+			"transliteration": "seeda",
+			"wordAlignments": [
+				{
+					"arabic": "سيدا",
+					"english": "Straight ahead",
+					"transliteration": "seeda"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "لف",
+			"arabicTashkeel": "لِف",
+			"english": "Turn",
+			"transliteration": "liff",
+			"wordAlignments": [
+				{
+					"arabic": "لف",
+					"english": "Turn",
+					"transliteration": "liff"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "بين",
+			"arabicTashkeel": "بين",
+			"english": "Between",
+			"transliteration": "been",
+			"wordAlignments": [
+				{
+					"arabic": "بين",
+					"english": "Between",
+					"transliteration": "been"
+				}
+			],
+			"partOfSpeech": "preposition"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "الكتاب فوق الطاولة.",
+			"arabicTashkeel": "الكِتاب فوق الطّاوِلة.",
+			"english": "The book is on the table.",
+			"transliteration": "il-kitaab foog it-taawla.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book is",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الطاولة.",
+					"english": "the table.",
+					"transliteration": "it-taawla."
+				}
+			],
+			"targetWords": [
+				"On / above"
+			]
+		},
+		{
+			"arabic": "القطة تحت السيارة.",
+			"arabicTashkeel": "القَطّة تَحت السَّيّارة.",
+			"english": "The cat is under the car.",
+			"transliteration": "il-gatta ta7t is-sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "القطة",
+					"english": "The cat is",
+					"transliteration": "il-gatta"
+				},
+				{
+					"arabic": "تحت",
+					"english": "under",
+					"transliteration": "ta7t"
+				},
+				{
+					"arabic": "السيارة.",
+					"english": "the car.",
+					"transliteration": "is-sayyaara."
+				}
+			],
+			"targetWords": [
+				"Under"
+			]
+		},
+		{
+			"arabic": "الصيدلية جنب البنك.",
+			"arabicTashkeel": "الصَّيدَلية جَنب البَنك.",
+			"english": "The pharmacy is next to the bank.",
+			"transliteration": "is-saydaliyya yamb il-bank.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيدلية",
+					"english": "The pharmacy is",
+					"transliteration": "is-saydaliyya"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "yamb"
+				},
+				{
+					"arabic": "البنك.",
+					"english": "the bank.",
+					"transliteration": "il-bank."
+				}
+			],
+			"targetWords": [
+				"Next to"
+			]
+		},
+		{
+			"arabic": "العيال داخل البيت.",
+			"arabicTashkeel": "العْيال داخِل البيت.",
+			"english": "The kids are inside the house.",
+			"transliteration": "il-3yaal daakhil il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids are",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "داخل",
+					"english": "inside",
+					"transliteration": "daakhil"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Inside"
+			]
+		},
+		{
+			"arabic": "برا حر وايد.",
+			"arabicTashkeel": "بَرّا حَر وايد.",
+			"english": "It's very hot outside.",
+			"transliteration": "barra 7arr waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "برا",
+					"english": "Outside",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "حر",
+					"english": "it's hot",
+					"transliteration": "7arr"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Outside"
+			]
+		},
+		{
+			"arabic": "السيارة قدام البيت.",
+			"arabicTashkeel": "السَّيّارة قِدّام البيت.",
+			"english": "The car is in front of the house.",
+			"transliteration": "is-sayyaara giddaam il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car is",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"In front of"
+			]
+		},
+		{
+			"arabic": "المسجد ورا المدرسة.",
+			"arabicTashkeel": "المَسجِد وَرا المَدرَسة.",
+			"english": "The mosque is behind the school.",
+			"transliteration": "il-masjid wara il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "المسجد",
+					"english": "The mosque is",
+					"transliteration": "il-masjid"
+				},
+				{
+					"arabic": "ورا",
+					"english": "behind",
+					"transliteration": "wara"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "the school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Behind"
+			]
+		},
+		{
+			"arabic": "لف يمين.",
+			"arabicTashkeel": "لِف يَمين.",
+			"english": "Turn right.",
+			"transliteration": "liff yimeen.",
+			"wordAlignments": [
+				{
+					"arabic": "لف",
+					"english": "Turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "يمين.",
+					"english": "right.",
+					"transliteration": "yimeen."
+				}
+			],
+			"targetWords": [
+				"Turn",
+				"Right"
+			]
+		},
+		{
+			"arabic": "لف يسار.",
+			"arabicTashkeel": "لِف يَسار.",
+			"english": "Turn left.",
+			"transliteration": "liff yisaar.",
+			"wordAlignments": [
+				{
+					"arabic": "لف",
+					"english": "Turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "يسار.",
+					"english": "left.",
+					"transliteration": "yisaar."
+				}
+			],
+			"targetWords": [
+				"Turn",
+				"Left"
+			]
+		},
+		{
+			"arabic": "المول هناك.",
+			"arabicTashkeel": "المول هْناك.",
+			"english": "The mall is there.",
+			"transliteration": "il-mool hnaak.",
+			"wordAlignments": [
+				{
+					"arabic": "المول",
+					"english": "The mall is",
+					"transliteration": "il-mool"
+				},
+				{
+					"arabic": "هناك.",
+					"english": "there.",
+					"transliteration": "hnaak."
+				}
+			],
+			"targetWords": [
+				"There"
+			]
+		},
+		{
+			"arabic": "البيت قريب.",
+			"arabicTashkeel": "البيت قَريب.",
+			"english": "The house is near.",
+			"transliteration": "il-beet gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "near.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Near"
+			]
+		},
+		{
+			"arabic": "العين بعيدة عن دبي.",
+			"arabicTashkeel": "العين بَعيدة عَن دُبَي.",
+			"english": "Al Ain is far from Dubai.",
+			"transliteration": "il-3een ba3eeda 3an dubay.",
+			"wordAlignments": [
+				{
+					"arabic": "العين",
+					"english": "Al Ain is",
+					"transliteration": "il-3een"
+				},
+				{
+					"arabic": "بعيدة",
+					"english": "far",
+					"transliteration": "ba3eeda"
+				},
+				{
+					"arabic": "عن",
+					"english": "from",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "دبي.",
+					"english": "Dubai.",
+					"transliteration": "dubay."
+				}
+			],
+			"targetWords": [
+				"Far"
+			]
+		},
+		{
+			"arabic": "روح سيدا.",
+			"arabicTashkeel": "رُوح سيدا.",
+			"english": "Go straight ahead.",
+			"transliteration": "rooh seeda.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "سيدا.",
+					"english": "straight ahead.",
+					"transliteration": "seeda."
+				}
+			],
+			"targetWords": [
+				"Straight ahead"
+			]
+		},
+		{
+			"arabic": "البنك بين المول والمسجد.",
+			"arabicTashkeel": "البَنك بين المول والمَسجِد.",
+			"english": "The bank is between the mall and the mosque.",
+			"transliteration": "il-bank been il-mool w-il-masjid.",
+			"wordAlignments": [
+				{
+					"arabic": "البنك",
+					"english": "The bank is",
+					"transliteration": "il-bank"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "المول",
+					"english": "the mall",
+					"transliteration": "il-mool"
+				},
+				{
+					"arabic": "والمسجد.",
+					"english": "and the mosque.",
+					"transliteration": "w-il-masjid."
+				}
+			],
+			"targetWords": [
+				"Between"
+			]
+		},
+		{
+			"arabic": "وين الصيدلية؟ قريبة، هناك.",
+			"arabicTashkeel": "وين الصَّيدَلية؟ قَريبة، هْناك.",
+			"english": "Where is the pharmacy? Near, over there.",
+			"transliteration": "ween is-saydaliyya? gareeba, hnaak.",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الصيدلية؟",
+					"english": "the pharmacy?",
+					"transliteration": "is-saydaliyya?"
+				},
+				{
+					"arabic": "قريبة،",
+					"english": "Near,",
+					"transliteration": "gareeba,"
+				},
+				{
+					"arabic": "هناك.",
+					"english": "over there.",
+					"transliteration": "hnaak."
+				}
+			],
+			"targetWords": [
+				"Near",
+				"There"
+			]
+		},
+		{
+			"arabic": "روح سيدا، بعدين لف يمين.",
+			"arabicTashkeel": "رُوح سيدا، بَعدين لِف يَمين.",
+			"english": "Go straight, then turn right.",
+			"transliteration": "rooh seeda, ba3dain liff yimeen.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "سيدا،",
+					"english": "straight,",
+					"transliteration": "seeda,"
+				},
+				{
+					"arabic": "بعدين",
+					"english": "then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "لف",
+					"english": "turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "يمين.",
+					"english": "right.",
+					"transliteration": "yimeen."
+				}
+			],
+			"targetWords": [
+				"Straight ahead",
+				"Turn",
+				"Right"
+			]
+		},
+		{
+			"arabic": "عند الدوار لف يسار.",
+			"arabicTashkeel": "عِند الدَّوّار لِف يَسار.",
+			"english": "At the roundabout, turn left.",
+			"transliteration": "3ind id-dawwaar liff yisaar.",
+			"wordAlignments": [
+				{
+					"arabic": "عند",
+					"english": "At",
+					"transliteration": "3ind"
+				},
+				{
+					"arabic": "الدوار",
+					"english": "the roundabout",
+					"transliteration": "id-dawwaar"
+				},
+				{
+					"arabic": "لف",
+					"english": "turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "يسار.",
+					"english": "left.",
+					"transliteration": "yisaar."
+				}
+			],
+			"targetWords": [
+				"Turn",
+				"Left"
+			]
+		},
+		{
+			"arabic": "القلم تحت الكتاب.",
+			"arabicTashkeel": "القَلَم تَحت الكِتاب.",
+			"english": "The pen is under the book.",
+			"transliteration": "il-galam ta7t il-kitaab.",
+			"wordAlignments": [
+				{
+					"arabic": "القلم",
+					"english": "The pen is",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "تحت",
+					"english": "under",
+					"transliteration": "ta7t"
+				},
+				{
+					"arabic": "الكتاب.",
+					"english": "the book.",
+					"transliteration": "il-kitaab."
+				}
+			],
+			"targetWords": [
+				"Under"
+			]
+		},
+		{
+			"arabic": "الشنطة فوق الكرسي.",
+			"arabicTashkeel": "الشَّنطة فوق الكِرسي.",
+			"english": "The bag is on the chair.",
+			"transliteration": "ish-shanta foog il-kirsi.",
+			"wordAlignments": [
+				{
+					"arabic": "الشنطة",
+					"english": "The bag is",
+					"transliteration": "ish-shanta"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الكرسي.",
+					"english": "the chair.",
+					"transliteration": "il-kirsi."
+				}
+			],
+			"targetWords": [
+				"On / above"
+			]
+		},
+		{
+			"arabic": "بيتي جنب المسجد.",
+			"arabicTashkeel": "بيتي جَنب المَسجِد.",
+			"english": "My house is next to the mosque.",
+			"transliteration": "beeti yamb il-masjid.",
+			"wordAlignments": [
+				{
+					"arabic": "بيتي",
+					"english": "My house is",
+					"transliteration": "beeti"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "yamb"
+				},
+				{
+					"arabic": "المسجد.",
+					"english": "the mosque.",
+					"transliteration": "il-masjid."
+				}
+			],
+			"targetWords": [
+				"Next to"
+			]
+		},
+		{
+			"arabic": "الأكل داخل الثلاجة.",
+			"arabicTashkeel": "الأكل داخِل الثَّلّاجة.",
+			"english": "The food is inside the fridge.",
+			"transliteration": "il-akl daakhil ith-thallaaja.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "The food is",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "داخل",
+					"english": "inside",
+					"transliteration": "daakhil"
+				},
+				{
+					"arabic": "الثلاجة.",
+					"english": "the fridge.",
+					"transliteration": "ith-thallaaja."
+				}
+			],
+			"targetWords": [
+				"Inside"
+			]
+		},
+		{
+			"arabic": "العيال يلعبون برا.",
+			"arabicTashkeel": "العْيال يِلعَبون بَرّا.",
+			"english": "The kids are playing outside.",
+			"transliteration": "il-3yaal yil3aboon barra.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids are",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يلعبون",
+					"english": "playing",
+					"transliteration": "yil3aboon"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Outside"
+			]
+		},
+		{
+			"arabic": "أنا أنطر قدام المول.",
+			"arabicTashkeel": "أنا أنطِر قِدّام المول.",
+			"english": "I'm waiting in front of the mall.",
+			"transliteration": "ana antir giddaam il-mool.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "أنطر",
+					"english": "waiting",
+					"transliteration": "antir"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "المول.",
+					"english": "the mall.",
+					"transliteration": "il-mool."
+				}
+			],
+			"targetWords": [
+				"In front of"
+			]
+		},
+		{
+			"arabic": "المواقف ورا البناية.",
+			"arabicTashkeel": "المَواقِف وَرا البِناية.",
+			"english": "The parking is behind the building.",
+			"transliteration": "il-mawaagif wara il-binaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "المواقف",
+					"english": "The parking is",
+					"transliteration": "il-mawaagif"
+				},
+				{
+					"arabic": "ورا",
+					"english": "behind",
+					"transliteration": "wara"
+				},
+				{
+					"arabic": "البناية.",
+					"english": "the building.",
+					"transliteration": "il-binaaya."
+				}
+			],
+			"targetWords": [
+				"Behind"
+			]
+		},
+		{
+			"arabic": "البنك على اليمين.",
+			"arabicTashkeel": "البَنك على اليَمين.",
+			"english": "The bank is on the right.",
+			"transliteration": "il-bank 3ala il-yimeen.",
+			"wordAlignments": [
+				{
+					"arabic": "البنك",
+					"english": "The bank is",
+					"transliteration": "il-bank"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "اليمين.",
+					"english": "the right.",
+					"transliteration": "il-yimeen."
+				}
+			],
+			"targetWords": [
+				"Right"
+			]
+		},
+		{
+			"arabic": "المدرسة على اليسار.",
+			"arabicTashkeel": "المَدرَسة على اليَسار.",
+			"english": "The school is on the left.",
+			"transliteration": "il-madrasa 3ala il-yisaar.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسة",
+					"english": "The school is",
+					"transliteration": "il-madrasa"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "اليسار.",
+					"english": "the left.",
+					"transliteration": "il-yisaar."
+				}
+			],
+			"targetWords": [
+				"Left"
+			]
+		},
+		{
+			"arabic": "سيارتي هناك.",
+			"arabicTashkeel": "سَيّارتي هْناك.",
+			"english": "My car is there.",
+			"transliteration": "sayyaarti hnaak.",
+			"wordAlignments": [
+				{
+					"arabic": "سيارتي",
+					"english": "My car is",
+					"transliteration": "sayyaarti"
+				},
+				{
+					"arabic": "هناك.",
+					"english": "there.",
+					"transliteration": "hnaak."
+				}
+			],
+			"targetWords": [
+				"There"
+			]
+		},
+		{
+			"arabic": "البحر قريب من الفندق.",
+			"arabicTashkeel": "البَحَر قَريب مِن الفُندِق.",
+			"english": "The beach is near the hotel.",
+			"transliteration": "il-ba7ar gareeb min il-fundig.",
+			"wordAlignments": [
+				{
+					"arabic": "البحر",
+					"english": "The beach is",
+					"transliteration": "il-ba7ar"
+				},
+				{
+					"arabic": "قريب",
+					"english": "near",
+					"transliteration": "gareeb"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفندق.",
+					"english": "the hotel.",
+					"transliteration": "il-fundig."
+				}
+			],
+			"targetWords": [
+				"Near"
+			]
+		},
+		{
+			"arabic": "المطار بعيد؟",
+			"arabicTashkeel": "المَطار بَعيد؟",
+			"english": "Is the airport far?",
+			"transliteration": "il-mataar ba3eed?",
+			"wordAlignments": [
+				{
+					"arabic": "المطار",
+					"english": "Is the airport",
+					"transliteration": "il-mataar"
+				},
+				{
+					"arabic": "بعيد؟",
+					"english": "far?",
+					"transliteration": "ba3eed?"
+				}
+			],
+			"targetWords": [
+				"Far"
+			]
+		},
+		{
+			"arabic": "روح سيدا لين الدوار.",
+			"arabicTashkeel": "رُوح سيدا لين الدَّوّار.",
+			"english": "Go straight to the roundabout.",
+			"transliteration": "rooh seeda leen id-dawwaar.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "سيدا",
+					"english": "straight",
+					"transliteration": "seeda"
+				},
+				{
+					"arabic": "لين",
+					"english": "until",
+					"transliteration": "leen"
+				},
+				{
+					"arabic": "الدوار.",
+					"english": "the roundabout.",
+					"transliteration": "id-dawwaar."
+				}
+			],
+			"targetWords": [
+				"Straight ahead"
+			]
+		},
+		{
+			"arabic": "لف هني.",
+			"arabicTashkeel": "لِف هِني.",
+			"english": "Turn here.",
+			"transliteration": "liff hini.",
+			"wordAlignments": [
+				{
+					"arabic": "لف",
+					"english": "Turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"Turn"
+			]
+		},
+		{
+			"arabic": "البيت بين المسجد والمحل.",
+			"arabicTashkeel": "البيت بين المَسجِد والمَحَل.",
+			"english": "The house is between the mosque and the shop.",
+			"transliteration": "il-beet been il-masjid w-il-ma7al.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "المسجد",
+					"english": "the mosque",
+					"transliteration": "il-masjid"
+				},
+				{
+					"arabic": "والمحل.",
+					"english": "and the shop.",
+					"transliteration": "w-il-ma7al."
+				}
+			],
+			"targetWords": [
+				"Between"
+			]
+		},
+		{
+			"arabic": "القطة فوق السطح.",
+			"arabicTashkeel": "القَطّة فوق السَّطح.",
+			"english": "The cat is on the roof.",
+			"transliteration": "il-gatta foog is-sat7.",
+			"wordAlignments": [
+				{
+					"arabic": "القطة",
+					"english": "The cat is",
+					"transliteration": "il-gatta"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "السطح.",
+					"english": "the roof.",
+					"transliteration": "is-sat7."
+				}
+			],
+			"targetWords": [
+				"On / above"
+			]
+		},
+		{
+			"arabic": "النعال تحت السرير.",
+			"arabicTashkeel": "النِّعال تَحت السَّرير.",
+			"english": "The shoes are under the bed.",
+			"transliteration": "in-ni3aal ta7t is-sareer.",
+			"wordAlignments": [
+				{
+					"arabic": "النعال",
+					"english": "The sandals are",
+					"transliteration": "in-ni3aal"
+				},
+				{
+					"arabic": "تحت",
+					"english": "under",
+					"transliteration": "ta7t"
+				},
+				{
+					"arabic": "السرير.",
+					"english": "the bed.",
+					"transliteration": "is-sareer."
+				}
+			],
+			"targetWords": [
+				"Under"
+			]
+		},
+		{
+			"arabic": "إقعد جنبي.",
+			"arabicTashkeel": "إقعِد جَنبي.",
+			"english": "Sit next to me.",
+			"transliteration": "ig3id yambi.",
+			"wordAlignments": [
+				{
+					"arabic": "إقعد",
+					"english": "Sit",
+					"transliteration": "ig3id"
+				},
+				{
+					"arabic": "جنبي.",
+					"english": "next to me.",
+					"transliteration": "yambi."
+				}
+			],
+			"targetWords": [
+				"Next to"
+			]
+		},
+		{
+			"arabic": "تعال داخل، الجو حار!",
+			"arabicTashkeel": "تْعال داخِل، الجَو حار!",
+			"english": "Come inside, it's hot!",
+			"transliteration": "t3aal daakhil, il-yaw 7aarr!",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "t3aal"
+				},
+				{
+					"arabic": "داخل،",
+					"english": "inside,",
+					"transliteration": "daakhil,"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "حار!",
+					"english": "hot!",
+					"transliteration": "7aarr!"
+				}
+			],
+			"targetWords": [
+				"Inside"
+			]
+		},
+		{
+			"arabic": "أنطرني برا.",
+			"arabicTashkeel": "أنطِرني بَرّا.",
+			"english": "Wait for me outside.",
+			"transliteration": "antirni barra.",
+			"wordAlignments": [
+				{
+					"arabic": "أنطرني",
+					"english": "Wait for me",
+					"transliteration": "antirni"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Outside"
+			]
+		},
+		{
+			"arabic": "التاكسي قدام الفندق.",
+			"arabicTashkeel": "التّاكسي قِدّام الفُندِق.",
+			"english": "The taxi is in front of the hotel.",
+			"transliteration": "it-taaksi giddaam il-fundig.",
+			"wordAlignments": [
+				{
+					"arabic": "التاكسي",
+					"english": "The taxi is",
+					"transliteration": "it-taaksi"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "الفندق.",
+					"english": "the hotel.",
+					"transliteration": "il-fundig."
+				}
+			],
+			"targetWords": [
+				"In front of"
+			]
+		},
+		{
+			"arabic": "الحديقة ورا البيت.",
+			"arabicTashkeel": "الحَديقة وَرا البيت.",
+			"english": "The garden is behind the house.",
+			"transliteration": "il-7adeega wara il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "الحديقة",
+					"english": "The garden is",
+					"transliteration": "il-7adeega"
+				},
+				{
+					"arabic": "ورا",
+					"english": "behind",
+					"transliteration": "wara"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Behind"
+			]
+		},
+		{
+			"arabic": "يمين لو يسار؟",
+			"arabicTashkeel": "يَمين لو يَسار؟",
+			"english": "Right or left?",
+			"transliteration": "yimeen law yisaar?",
+			"wordAlignments": [
+				{
+					"arabic": "يمين",
+					"english": "Right",
+					"transliteration": "yimeen"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "يسار؟",
+					"english": "left?",
+					"transliteration": "yisaar?"
+				}
+			],
+			"targetWords": [
+				"Right",
+				"Left"
+			]
+		},
+		{
+			"arabic": "المترو هناك.",
+			"arabicTashkeel": "المِترو هْناك.",
+			"english": "The metro is over there.",
+			"transliteration": "il-mitro hnaak.",
+			"wordAlignments": [
+				{
+					"arabic": "المترو",
+					"english": "The metro is",
+					"transliteration": "il-mitro"
+				},
+				{
+					"arabic": "هناك.",
+					"english": "over there.",
+					"transliteration": "hnaak."
+				}
+			],
+			"targetWords": [
+				"There"
+			]
+		},
+		{
+			"arabic": "السوبرماركت قريب وايد.",
+			"arabicTashkeel": "السّوبَرماركِت قَريب وايد.",
+			"english": "The supermarket is very near.",
+			"transliteration": "is-soobarmaarkit gareeb waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "السوبرماركت",
+					"english": "The supermarket is",
+					"transliteration": "is-soobarmaarkit"
+				},
+				{
+					"arabic": "قريب",
+					"english": "near",
+					"transliteration": "gareeb"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Near"
+			]
+		},
+		{
+			"arabic": "المستشفى بعيد من هني.",
+			"arabicTashkeel": "المُستَشفى بَعيد مِن هِني.",
+			"english": "The hospital is far from here.",
+			"transliteration": "il-mustashfa ba3eed min hini.",
+			"wordAlignments": [
+				{
+					"arabic": "المستشفى",
+					"english": "The hospital is",
+					"transliteration": "il-mustashfa"
+				},
+				{
+					"arabic": "بعيد",
+					"english": "far",
+					"transliteration": "ba3eed"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"Far"
+			]
+		},
+		{
+			"arabic": "سيدا، بعدين يسار.",
+			"arabicTashkeel": "سيدا، بَعدين يَسار.",
+			"english": "Straight ahead, then left.",
+			"transliteration": "seeda, ba3dain yisaar.",
+			"wordAlignments": [
+				{
+					"arabic": "سيدا،",
+					"english": "Straight ahead,",
+					"transliteration": "seeda,"
+				},
+				{
+					"arabic": "بعدين",
+					"english": "then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "يسار.",
+					"english": "left.",
+					"transliteration": "yisaar."
+				}
+			],
+			"targetWords": [
+				"Straight ahead",
+				"Left"
+			]
+		},
+		{
+			"arabic": "لف يسار عند الإشارة.",
+			"arabicTashkeel": "لِف يَسار عِند الإشارة.",
+			"english": "Turn left at the signal.",
+			"transliteration": "liff yisaar 3ind il-ishaara.",
+			"wordAlignments": [
+				{
+					"arabic": "لف",
+					"english": "Turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "يسار",
+					"english": "left",
+					"transliteration": "yisaar"
+				},
+				{
+					"arabic": "عند",
+					"english": "at",
+					"transliteration": "3ind"
+				},
+				{
+					"arabic": "الإشارة.",
+					"english": "the signal.",
+					"transliteration": "il-ishaara."
+				}
+			],
+			"targetWords": [
+				"Turn",
+				"Left"
+			]
+		},
+		{
+			"arabic": "الصيدلية بين البنك والمطعم.",
+			"arabicTashkeel": "الصَّيدَلية بين البَنك والمَطعَم.",
+			"english": "The pharmacy is between the bank and the restaurant.",
+			"transliteration": "is-saydaliyya been il-bank w-il-mat3am.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيدلية",
+					"english": "The pharmacy is",
+					"transliteration": "is-saydaliyya"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "البنك",
+					"english": "the bank",
+					"transliteration": "il-bank"
+				},
+				{
+					"arabic": "والمطعم.",
+					"english": "and the restaurant.",
+					"transliteration": "w-il-mat3am."
+				}
+			],
+			"targetWords": [
+				"Between"
+			]
+		},
+		{
+			"arabic": "المفاتيح فوق الطاولة.",
+			"arabicTashkeel": "المَفاتيح فوق الطّاوِلة.",
+			"english": "The keys are on the table.",
+			"transliteration": "il-mafaatee7 foog it-taawla.",
+			"wordAlignments": [
+				{
+					"arabic": "المفاتيح",
+					"english": "The keys are",
+					"transliteration": "il-mafaatee7"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الطاولة.",
+					"english": "the table.",
+					"transliteration": "it-taawla."
+				}
+			],
+			"targetWords": [
+				"On / above"
+			]
+		},
+		{
+			"arabic": "الشنطة تحت الطاولة.",
+			"arabicTashkeel": "الشَّنطة تَحت الطّاوِلة.",
+			"english": "The bag is under the table.",
+			"transliteration": "ish-shanta ta7t it-taawla.",
+			"wordAlignments": [
+				{
+					"arabic": "الشنطة",
+					"english": "The bag is",
+					"transliteration": "ish-shanta"
+				},
+				{
+					"arabic": "تحت",
+					"english": "under",
+					"transliteration": "ta7t"
+				},
+				{
+					"arabic": "الطاولة.",
+					"english": "the table.",
+					"transliteration": "it-taawla."
+				}
+			],
+			"targetWords": [
+				"Under"
+			]
+		},
+		{
+			"arabic": "المطعم جنب الفندق.",
+			"arabicTashkeel": "المَطعَم جَنب الفُندِق.",
+			"english": "The restaurant is next to the hotel.",
+			"transliteration": "il-mat3am yamb il-fundig.",
+			"wordAlignments": [
+				{
+					"arabic": "المطعم",
+					"english": "The restaurant is",
+					"transliteration": "il-mat3am"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "yamb"
+				},
+				{
+					"arabic": "الفندق.",
+					"english": "the hotel.",
+					"transliteration": "il-fundig."
+				}
+			],
+			"targetWords": [
+				"Next to"
+			]
+		},
+		{
+			"arabic": "أبوي داخل.",
+			"arabicTashkeel": "أبوي داخِل.",
+			"english": "My dad is inside.",
+			"transliteration": "abooy daakhil.",
+			"wordAlignments": [
+				{
+					"arabic": "أبوي",
+					"english": "My dad is",
+					"transliteration": "abooy"
+				},
+				{
+					"arabic": "داخل.",
+					"english": "inside.",
+					"transliteration": "daakhil."
+				}
+			],
+			"targetWords": [
+				"Inside"
+			]
+		},
+		{
+			"arabic": "برا بارد بالليل.",
+			"arabicTashkeel": "بَرّا بارِد بالليل.",
+			"english": "It's cool outside at night.",
+			"transliteration": "barra baarid bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "برا",
+					"english": "Outside",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "بارد",
+					"english": "it's cool",
+					"transliteration": "baarid"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Outside"
+			]
+		},
+		{
+			"arabic": "وقف قدام الباب.",
+			"arabicTashkeel": "وَقِّف قِدّام الباب.",
+			"english": "Park in front of the door.",
+			"transliteration": "waggif giddaam il-baab.",
+			"wordAlignments": [
+				{
+					"arabic": "وقف",
+					"english": "Park",
+					"transliteration": "waggif"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "الباب.",
+					"english": "the door.",
+					"transliteration": "il-baab."
+				}
+			],
+			"targetWords": [
+				"In front of"
+			]
+		},
+		{
+			"arabic": "منو وراك؟",
+			"arabicTashkeel": "مِنو وَراك؟",
+			"english": "Who is behind you?",
+			"transliteration": "minu waraak?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "وراك؟",
+					"english": "behind you?",
+					"transliteration": "waraak?"
+				}
+			],
+			"targetWords": [
+				"Behind"
+			]
+		},
+		{
+			"arabic": "المول على اليمين.",
+			"arabicTashkeel": "المول على اليَمين.",
+			"english": "The mall is on the right.",
+			"transliteration": "il-mool 3ala il-yimeen.",
+			"wordAlignments": [
+				{
+					"arabic": "المول",
+					"english": "The mall is",
+					"transliteration": "il-mool"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "اليمين.",
+					"english": "the right.",
+					"transliteration": "il-yimeen."
+				}
+			],
+			"targetWords": [
+				"Right"
+			]
+		},
+		{
+			"arabic": "البنك على اليسار.",
+			"arabicTashkeel": "البَنك على اليَسار.",
+			"english": "The bank is on the left side.",
+			"transliteration": "il-bank 3ala il-yisaar.",
+			"wordAlignments": [
+				{
+					"arabic": "البنك",
+					"english": "The bank is",
+					"transliteration": "il-bank"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "اليسار.",
+					"english": "the left.",
+					"transliteration": "il-yisaar."
+				}
+			],
+			"targetWords": [
+				"Left"
+			]
+		},
+		{
+			"arabic": "قريب لو بعيد؟",
+			"arabicTashkeel": "قَريب لو بَعيد؟",
+			"english": "Is it near or far?",
+			"transliteration": "gareeb law ba3eed?",
+			"wordAlignments": [
+				{
+					"arabic": "قريب",
+					"english": "Is it near",
+					"transliteration": "gareeb"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "بعيد؟",
+					"english": "far?",
+					"transliteration": "ba3eed?"
+				}
+			],
+			"targetWords": [
+				"Near",
+				"Far"
+			]
+		},
+		{
+			"arabic": "لف عند الشارع الثاني.",
+			"arabicTashkeel": "لِف عِند الشّارع الثّاني.",
+			"english": "Turn at the second street.",
+			"transliteration": "liff 3ind ish-shaari3 ith-thaani.",
+			"wordAlignments": [
+				{
+					"arabic": "لف",
+					"english": "Turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "عند",
+					"english": "at",
+					"transliteration": "3ind"
+				},
+				{
+					"arabic": "الشارع",
+					"english": "the street",
+					"transliteration": "ish-shaari3"
+				},
+				{
+					"arabic": "الثاني.",
+					"english": "second.",
+					"transliteration": "ith-thaani."
+				}
+			],
+			"targetWords": [
+				"Turn"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Finding the Pharmacy",
+			"sentences": [
+				{
+					"arabic": "لو سمحت، وين الصيدلية؟",
+					"arabicTashkeel": "لو سَمَحت، وين الصَّيدَلية؟",
+					"english": "Excuse me, where is the pharmacy?",
+					"transliteration": "law sama7t, ween is-saydaliyya?",
+					"wordAlignments": [
+						{
+							"arabic": "لو",
+							"english": "If",
+							"transliteration": "law"
+						},
+						{
+							"arabic": "سمحت،",
+							"english": "you permit,",
+							"transliteration": "sama7t,"
+						},
+						{
+							"arabic": "وين",
+							"english": "where is",
+							"transliteration": "ween"
+						},
+						{
+							"arabic": "الصيدلية؟",
+							"english": "the pharmacy?",
+							"transliteration": "is-saydaliyya?"
+						}
+					]
+				},
+				{
+					"arabic": "روح سيدا لين الدوار.",
+					"arabicTashkeel": "رُوح سيدا لين الدَّوّار.",
+					"english": "Go straight ahead to the roundabout.",
+					"transliteration": "rooh seeda leen id-dawwaar.",
+					"wordAlignments": [
+						{
+							"arabic": "روح",
+							"english": "Go",
+							"transliteration": "rooh"
+						},
+						{
+							"arabic": "سيدا",
+							"english": "straight ahead",
+							"transliteration": "seeda"
+						},
+						{
+							"arabic": "لين",
+							"english": "until",
+							"transliteration": "leen"
+						},
+						{
+							"arabic": "الدوار.",
+							"english": "the roundabout.",
+							"transliteration": "id-dawwaar."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين لف يمين.",
+					"arabicTashkeel": "بَعدين لِف يَمين.",
+					"english": "Then turn right.",
+					"transliteration": "ba3dain liff yimeen.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "لف",
+							"english": "turn",
+							"transliteration": "liff"
+						},
+						{
+							"arabic": "يمين.",
+							"english": "right.",
+							"transliteration": "yimeen."
+						}
+					]
+				},
+				{
+					"arabic": "الصيدلية جنب البنك.",
+					"arabicTashkeel": "الصَّيدَلية جَنب البَنك.",
+					"english": "The pharmacy is next to the bank.",
+					"transliteration": "is-saydaliyya yamb il-bank.",
+					"wordAlignments": [
+						{
+							"arabic": "الصيدلية",
+							"english": "The pharmacy is",
+							"transliteration": "is-saydaliyya"
+						},
+						{
+							"arabic": "جنب",
+							"english": "next to",
+							"transliteration": "yamb"
+						},
+						{
+							"arabic": "البنك.",
+							"english": "the bank.",
+							"transliteration": "il-bank."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Is It Far?",
+			"sentences": [
+				{
+					"arabic": "المول بعيد؟",
+					"arabicTashkeel": "المول بَعيد؟",
+					"english": "Is the mall far?",
+					"transliteration": "il-mool ba3eed?",
+					"wordAlignments": [
+						{
+							"arabic": "المول",
+							"english": "Is the mall",
+							"transliteration": "il-mool"
+						},
+						{
+							"arabic": "بعيد؟",
+							"english": "far?",
+							"transliteration": "ba3eed?"
+						}
+					]
+				},
+				{
+					"arabic": "لا، قريب، ورا المسجد.",
+					"arabicTashkeel": "لا، قَريب، وَرا المَسجِد.",
+					"english": "No, it's near, behind the mosque.",
+					"transliteration": "laa, gareeb, wara il-masjid.",
+					"wordAlignments": [
+						{
+							"arabic": "لا،",
+							"english": "No,",
+							"transliteration": "laa,"
+						},
+						{
+							"arabic": "قريب،",
+							"english": "it's near,",
+							"transliteration": "gareeb,"
+						},
+						{
+							"arabic": "ورا",
+							"english": "behind",
+							"transliteration": "wara"
+						},
+						{
+							"arabic": "المسجد.",
+							"english": "the mosque.",
+							"transliteration": "il-masjid."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is lost in Deira, Dubai, and needs to find a pharmacy before it closes.",
+		"studentRole": "A visitor learning Gulf Arabic.",
+		"otherRole": "A shopkeeper who gives directions with lots of landmarks and roundabouts.",
+		"goalEnglish": "Ask where the pharmacy is, follow directions (straight, right, left), and check whether it is near or far.",
+		"targetWords": [
+			"Straight ahead",
+			"Turn",
+			"Right",
+			"Left",
+			"Next to",
+			"In front of",
+			"Near",
+			"Far"
+		]
+	}
+}

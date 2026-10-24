@@ -1,0 +1,240 @@
+# Khaleeji — A1 — Numbers from 11 to 100 (base-a1-u06)
+
+@vocab
+number = Eleven
+إحدَعَش / i7da3ash / Eleven
+
+number = Twelve
+ثْنَعَش / thna3ash / Twelve
+
+number = Fifteen
+خَمستَعَش / khamista3ash / Fifteen
+
+number = Twenty
+عِشرين / 3ishreen / Twenty
+
+number = Thirty
+ثَلاثين / thalaatheen / Thirty
+
+number = Forty
+أربعين / arba3een / Forty
+
+number = Fifty
+خَمسين / khamseen / Fifty
+
+number = Sixty
+سِتّين / sitteen / Sixty
+
+number = Seventy
+سَبعين / sab3een / Seventy
+
+number = Eighty
+ثَمانين / thamaaneen / Eighty
+
+number = Ninety
+تِسعين / tis3een / Ninety
+
+number = Hundred
+مِيَة / miya / Hundred
+
+noun:m = Number
+رَقَم / ragam / Number
+
+noun:m = Phone
+تِلِفون / tilifoon / Phone
+
+noun:f = Year
+سَنة / sana / Year
+
+@pool
+I am twenty years old. = Twenty; Year
+عُمري / 3umri / My age is | عِشرين / 3ishreen / twenty | سَنة. / sana. / years.
+
+He is thirty years old. = Thirty; Year
+عُمرَه / 3umra / His age is | ثَلاثين / thalaatheen / thirty | سَنة. / sana. / years.
+
+She is forty years old. = Forty; Year
+عُمُرها / 3umurha / Her age is | أربعين / arba3een / forty | سَنة. / sana. / years.
+
+My uncle is fifty years old. = Fifty; Year
+عَمّي / 3ammi / My uncle | عُمرَه / 3umra / his age is | خَمسين / khamseen / fifty | سَنة. / sana. / years.
+
+My grandfather is seventy years old. = Seventy; Year
+جَدّي / yaddi / My grandfather | عُمرَه / 3umra / his age is | سَبعين / sab3een / seventy | سَنة. / sana. / years.
+
+My grandmother is eighty years old. = Eighty; Year
+جَدّتي / yaddati / My grandmother | عُمُرها / 3umurha / her age is | ثَمانين / thamaaneen / eighty | سَنة. / sana. / years.
+
+How much is this? Twenty dirhams. = Twenty
+بْكَم / b-cham / For how much is | هاذا؟ / haadha? / this? | بعِشرين / b-3ishreen / For twenty | دِرهَم. / dirham. / dirhams.
+
+This is fifty dirhams. = Fifty
+هاذا / haadha / This is | بخَمسين / b-khamseen / for fifty | دِرهَم. / dirham. / dirhams.
+
+What is your phone number? = Number; Phone
+شو / shu / What is | رَقَم / ragam / the number of | تِلِفونَك؟ / tilifoonak? / your phone?
+
+The house number is twelve. = Number; Twelve
+رَقَم / ragam / The number of | البيت / il-beet / the house is | ثْنَعَش. / thna3ash. / twelve.
+
+Room number eleven. = Number; Eleven
+الغُرفة / il-ghurfa / The room | رَقَم / ragam / number | إحدَعَش. / i7da3ash. / eleven.
+
+I have fifteen books. = Fifteen
+عِندي / 3indi / I have | خَمستَعَش / khamista3ash / fifteen | كِتاب. / kitaab. / books.
+
+There are twenty students in the class. = Twenty
+في / fee / There are | عِشرين / 3ishreen / twenty | طالِب / taalib / students | بالصَّف. / bis-saff. / in the class.
+
+Ten and ten is twenty. = Twenty
+عَشرة / 3ashra / Ten | وعَشرة / w-3ashra / and ten is | عِشرين. / 3ishreen. / twenty.
+
+Twenty and twenty is forty. = Twenty; Forty
+عِشرين / 3ishreen / Twenty | وعِشرين / w-3ishreen / and twenty is | أربعين. / arba3een. / forty.
+
+Thirty and thirty is sixty. = Thirty; Sixty
+ثَلاثين / thalaatheen / Thirty | وثَلاثين / w-thalaatheen / and thirty is | سِتّين. / sitteen. / sixty.
+
+Fifty and fifty is a hundred. = Fifty; Hundred
+خَمسين / khamseen / Fifty | وخَمسين / w-khamseen / and fifty is | مِيَة. / miya. / a hundred.
+
+Forty and fifty is ninety. = Forty; Fifty; Ninety
+أربعين / arba3een / Forty | وخَمسين / w-khamseen / and fifty is | تِسعين. / tis3een. / ninety.
+
+Sixty and twenty is eighty. = Sixty; Twenty; Eighty
+سِتّين / sitteen / Sixty | وعِشرين / w-3ishreen / and twenty is | ثَمانين. / thamaaneen. / eighty.
+
+Seventy and thirty is a hundred. = Seventy; Thirty; Hundred
+سَبعين / sab3een / Seventy | وثَلاثين / w-thalaatheen / and thirty is | مِيَة. / miya. / a hundred.
+
+Twenty-five. = Twenty
+خَمسة / khamsa / Five | وعِشرين. / w-3ishreen. / and twenty.
+
+Ninety dirhams. = Ninety
+تِسعين / tis3een / Ninety | دِرهَم. / dirham. / dirhams.
+
+The book is twelve dirhams. = Twelve
+الكِتاب / il-kitaab / The book is | بثْنَعَش / b-thna3ash / for twelve | دِرهَم. / dirham. / dirhams.
+
+I am eleven years old. = Eleven; Year
+عُمري / 3umri / My age is | إحدَعَش / i7da3ash / eleven | سَنة. / sana. / years.
+
+She is fifteen years old. = Fifteen; Year
+عُمُرها / 3umurha / Her age is | خَمستَعَش / khamista3ash / fifteen | سَنة. / sana. / years.
+
+A hundred dirhams. = Hundred
+مِيَة / miya / A hundred | دِرهَم. / dirham. / dirhams.
+
+Sixty minutes. = Sixty
+سِتّين / sitteen / Sixty | دَقيقة. / dageega. / minutes.
+
+An hour has sixty minutes. = Sixty
+السّاعة / is-saa3a / The hour | فيها / feeha / has in it | سِتّين / sitteen / sixty | دَقيقة. / dageega. / minutes.
+
+A year has twelve months. = Year; Twelve
+السَّنة / is-sana / The year | فيها / feeha / has in it | ثْنَعَش / thna3ash / twelve | شَهَر. / shahar. / months.
+
+What is your number? = Number
+شو / shu / What is | رَقمَك؟ / ragmak? / your number?
+
+My phone is new. = Phone
+تِلِفوني / tilifooni / My phone is | جْديد. / ydeed. / new.
+
+Where is the phone? = Phone
+وين / ween / Where is | التِّلِفون؟ / it-tilifoon? / the phone?
+
+The phone number is wrong. = Number; Phone
+رَقَم / ragam / The number of | التِّلِفون / it-tilifoon / the phone is | غَلَط. / ghalat. / wrong.
+
+Eighty dirhams, expensive! = Eighty
+ثَمانين / thamaaneen / Eighty | دِرهَم، / dirham, / dirhams, | غالي! / ghaali! / expensive!
+
+Ninety or a hundred? = Ninety; Hundred
+تِسعين / tis3een / Ninety | لو / law / or | مِيَة؟ / miya? / a hundred?
+
+Seventy, not eighty. = Seventy; Eighty
+سَبعين، / sab3een, / Seventy, | مو / moo / not | ثَمانين. / thamaaneen. / eighty.
+
+Only thirty dirhams. = Thirty
+ثَلاثين / thalaatheen / Thirty | دِرهَم / dirham / dirhams | بَس. / bas. / only.
+
+Eleven or twelve? = Eleven; Twelve
+إحدَعَش / i7da3ash / Eleven | لو / law / or | ثْنَعَش؟ / thna3ash? / twelve?
+
+There are forty students in the class. = Forty
+في / fee / There are | أربعين / arba3een / forty | طالِب / taalib / students | بالصَّف. / bis-saff. / in the class.
+
+Only fifteen minutes. = Fifteen
+خَمستَعَش / khamista3ash / Fifteen | دَقيقة / dageega / minutes | بَس. / bas. / only.
+
+Eleven players in the team. = Eleven
+إحدَعَش / i7da3ash / Eleven | لاعِب / laa3ib / players | بالفَريق. / bil-fareeg. / in the team.
+
+The phone is expensive, a hundred dinars. = Phone; Hundred
+التِّلِفون / it-tilifoon / The phone is | غالي، / ghaali, / expensive, | بمِيَة / b-miya / for a hundred | دينار. / deenaar. / dinars.
+
+Twelve and three is fifteen. = Twelve; Fifteen
+ثْنَعَش / thna3ash / Twelve | وثَلاثة / w-thalaatha / and three is | خَمستَعَش. / khamista3ash. / fifteen.
+
+My dad is sixty years old. = Sixty; Year
+أبوي / abooy / My dad | عُمرَه / 3umra / his age is | سِتّين / sitteen / sixty | سَنة. / sana. / years.
+
+My grandfather is ninety! = Ninety
+جَدّي / yaddi / My grandfather | عُمرَه / 3umra / his age is | تِسعين! / tis3een! / ninety!
+
+What is the house number? = Number
+شو / shu / What is | رَقَم / ragam / the number of | البيت؟ / il-beet? / the house?
+
+Eleven dirhams. = Eleven
+إحدَعَش / i7da3ash / Eleven | دِرهَم. / dirham. / dirhams.
+
+The book is fifteen. = Fifteen
+الكِتاب / il-kitaab / The book is | بخَمستَعَش. / b-khamista3ash. / for fifteen.
+
+The class has thirty students. = Thirty
+الصَّف / is-saff / The class | فيه / fee / has in it | ثَلاثين / thalaatheen / thirty | طالِب. / taalib. / students.
+
+Forty dirhams. = Forty
+أربعين / arba3een / Forty | دِرهَم. / dirham. / dirhams.
+
+Fifty minutes. = Fifty
+خَمسين / khamseen / Fifty | دَقيقة. / dageega. / minutes.
+
+Seventy dirhams. = Seventy
+سَبعين / sab3een / Seventy | دِرهَم. / dirham. / dirhams.
+
+There are seventy students in the school. = Seventy
+في / fee / There are | سَبعين / sab3een / seventy | طالِب / taalib / students | بالمَدرَسة. / bil-madrasa. / in the school.
+
+Eighty or ninety? = Eighty; Ninety
+ثَمانين / thamaaneen / Eighty | لو / law / or | تِسعين؟ / tis3een? / ninety?
+
+@passage My Family's Ages
+My grandfather is eighty years old.
+جَدّي / yaddi / My grandfather | عُمرَه / 3umra / his age is | ثَمانين / thamaaneen / eighty | سَنة. / sana. / years.
+
+My dad is fifty years old.
+أبوي / abooy / My dad | عُمرَه / 3umra / his age is | خَمسين / khamseen / fifty | سَنة. / sana. / years.
+
+I am twenty years old.
+أنا / ana / I | عُمري / 3umri / my age is | عِشرين / 3ishreen / twenty | سَنة. / sana. / years.
+
+@passage At the Phone Shop
+How much is this phone?
+بْكَم / b-cham / For how much is | هاذا / haadha / this | التِّلِفون؟ / it-tilifoon? / phone?
+
+This one is ninety dinars.
+هاذا / haadha / This one is | بتِسعين / b-tis3een / for ninety | دينار. / deenaar. / dinars.
+
+Expensive! Do you have one for sixty?
+غالي! / ghaali! / Expensive! | عِندَك / 3indak / Do you have | واحِد / waa7id / one | بسِتّين؟ / b-sitteen? / for sixty?
+
+Yes, here you are.
+إي، / ee, / Yes, | تْفَضَّل. / tfaddal. / here you are.
+
+@scenario
+situation: The student is in a phone shop in a Kuwait City mall, looking for a cheap phone.
+studentRole: A customer learning Gulf Arabic.
+otherRole: The shop assistant, who likes to bargain.
+goalEnglish: Ask the price of a phone, bargain it down using numbers in the tens, and give your phone number.
+targetWords: Phone; Number; Twenty; Fifty; Sixty; Ninety; Hundred

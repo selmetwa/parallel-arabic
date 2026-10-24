@@ -1,0 +1,2285 @@
+{
+	"vocab": [
+		{
+			"arabic": "إستقلال",
+			"arabicTashkeel": "إستِقلال",
+			"english": "Independence",
+			"transliteration": "istiglaal",
+			"wordAlignments": [
+				{
+					"arabic": "إستقلال",
+					"english": "Independence",
+					"transliteration": "istiglaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الملكية",
+			"arabicTashkeel": "المَلَكية",
+			"english": "The monarchy",
+			"transliteration": "il-malakiyya",
+			"wordAlignments": [
+				{
+					"arabic": "الملكية",
+					"english": "The monarchy",
+					"transliteration": "il-malakiyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "جمهورية",
+			"arabicTashkeel": "جُمهورية",
+			"english": "Republic",
+			"transliteration": "jumhooriyya",
+			"wordAlignments": [
+				{
+					"arabic": "جمهورية",
+					"english": "Republic",
+					"transliteration": "jumhooriyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ثورة",
+			"arabicTashkeel": "ثَورة",
+			"english": "Revolution",
+			"transliteration": "thawra",
+			"wordAlignments": [
+				{
+					"arabic": "ثورة",
+					"english": "Revolution",
+					"transliteration": "thawra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حرب",
+			"arabicTashkeel": "حَرُب",
+			"english": "War",
+			"transliteration": "7arub",
+			"wordAlignments": [
+				{
+					"arabic": "حرب",
+					"english": "War",
+					"transliteration": "7arub"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حصار",
+			"arabicTashkeel": "حِصار",
+			"english": "Sanctions (blockade)",
+			"transliteration": "7isaar",
+			"wordAlignments": [
+				{
+					"arabic": "حصار",
+					"english": "Blockade",
+					"transliteration": "7isaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "دستور",
+			"arabicTashkeel": "دُستور",
+			"english": "Constitution",
+			"transliteration": "dustoor",
+			"wordAlignments": [
+				{
+					"arabic": "دستور",
+					"english": "Constitution",
+					"transliteration": "dustoor"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تحرير",
+			"arabicTashkeel": "تَحرير",
+			"english": "Liberation",
+			"transliteration": "ta7reer",
+			"wordAlignments": [
+				{
+					"arabic": "تحرير",
+					"english": "Liberation",
+					"transliteration": "ta7reer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نازح",
+			"arabicTashkeel": "نازِح",
+			"english": "Displaced",
+			"transliteration": "naazi7",
+			"wordAlignments": [
+				{
+					"arabic": "نازح",
+					"english": "Displaced",
+					"transliteration": "naazi7"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "إعمار",
+			"arabicTashkeel": "إعمار",
+			"english": "Reconstruction",
+			"transliteration": "i3maar",
+			"wordAlignments": [
+				{
+					"arabic": "إعمار",
+					"english": "Building",
+					"transliteration": "i3maar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سلام",
+			"arabicTashkeel": "سَلام",
+			"english": "Peace",
+			"transliteration": "salaam",
+			"wordAlignments": [
+				{
+					"arabic": "سلام",
+					"english": "Peace",
+					"transliteration": "salaam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أمن",
+			"arabicTashkeel": "أمِن",
+			"english": "Security",
+			"transliteration": "amin",
+			"wordAlignments": [
+				{
+					"arabic": "أمن",
+					"english": "Security",
+					"transliteration": "amin"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جيل",
+			"arabicTashkeel": "جيل",
+			"english": "Generation",
+			"transliteration": "jeel",
+			"wordAlignments": [
+				{
+					"arabic": "جيل",
+					"english": "Generation",
+					"transliteration": "jeel"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ذكرى",
+			"arabicTashkeel": "ذِكرى",
+			"english": "Memory",
+			"transliteration": "thikra",
+			"wordAlignments": [
+				{
+					"arabic": "ذكرى",
+					"english": "Memory",
+					"transliteration": "thikra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حدث",
+			"arabicTashkeel": "حَدَث",
+			"english": "Event",
+			"transliteration": "7adath",
+			"wordAlignments": [
+				{
+					"arabic": "حدث",
+					"english": "Event",
+					"transliteration": "7adath"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "العراق أخذ إستقلاله سنة ألف وتسعمية وإثنين وثلاثين.",
+			"arabicTashkeel": "العِراق أخَذ إستِقلالَه سَنة ألف وتِسعمية وإثنَين وثْلاثين.",
+			"english": "Iraq got its independence in 1932.",
+			"transliteration": "il-3iraaq akhadh istiglaala sanat alf w-tis3imiyya w-ithnayn w-thlaatheen.",
+			"wordAlignments": [
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "أخذ",
+					"english": "took",
+					"transliteration": "akhadh"
+				},
+				{
+					"arabic": "إستقلاله",
+					"english": "its independence",
+					"transliteration": "istiglaala"
+				},
+				{
+					"arabic": "سنة",
+					"english": "in the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ألف",
+					"english": "one thousand",
+					"transliteration": "alf"
+				},
+				{
+					"arabic": "وتسعمية",
+					"english": "nine hundred",
+					"transliteration": "w-tis3imiyya"
+				},
+				{
+					"arabic": "وإثنين",
+					"english": "two",
+					"transliteration": "w-ithnayn"
+				},
+				{
+					"arabic": "وثلاثين.",
+					"english": "and thirty.",
+					"transliteration": "w-thlaatheen."
+				}
+			],
+			"targetWords": [
+				"Independence"
+			]
+		},
+		{
+			"arabic": "الملكية حكمت العراق لحد سنة ثمانية وخمسين.",
+			"arabicTashkeel": "المَلَكية حِكمَت العِراق لحَد سَنة ثْمانية وخَمسين.",
+			"english": "The monarchy ruled Iraq until 1958.",
+			"transliteration": "il-malakiyya 7ikmat il-3iraaq l-7add sanat thmaanya w-khamseen.",
+			"wordAlignments": [
+				{
+					"arabic": "الملكية",
+					"english": "The monarchy",
+					"transliteration": "il-malakiyya"
+				},
+				{
+					"arabic": "حكمت",
+					"english": "ruled",
+					"transliteration": "7ikmat"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "لحد",
+					"english": "until",
+					"transliteration": "l-7add"
+				},
+				{
+					"arabic": "سنة",
+					"english": "the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ثمانية",
+					"english": "eight",
+					"transliteration": "thmaanya"
+				},
+				{
+					"arabic": "وخمسين.",
+					"english": "and fifty.",
+					"transliteration": "w-khamseen."
+				}
+			],
+			"targetWords": [
+				"The monarchy"
+			]
+		},
+		{
+			"arabic": "العراق صار جمهورية بعد ثمانية وخمسين.",
+			"arabicTashkeel": "العِراق صار جُمهورية بَعد ثْمانية وخَمسين.",
+			"english": "Iraq became a republic after 1958.",
+			"transliteration": "il-3iraaq saar jumhooriyya ba3d thmaanya w-khamseen.",
+			"wordAlignments": [
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "صار",
+					"english": "became",
+					"transliteration": "saar"
+				},
+				{
+					"arabic": "جمهورية",
+					"english": "a republic",
+					"transliteration": "jumhooriyya"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "ثمانية",
+					"english": "eight",
+					"transliteration": "thmaanya"
+				},
+				{
+					"arabic": "وخمسين.",
+					"english": "and fifty.",
+					"transliteration": "w-khamseen."
+				}
+			],
+			"targetWords": [
+				"Republic"
+			]
+		},
+		{
+			"arabic": "ثورة تموز غيرت البلد.",
+			"arabicTashkeel": "ثَورة تَمّوز غَيرَت البَلَد.",
+			"english": "The July revolution changed the country.",
+			"transliteration": "thawrat tammooz ghayyrat il-balad.",
+			"wordAlignments": [
+				{
+					"arabic": "ثورة",
+					"english": "The revolution of",
+					"transliteration": "thawrat"
+				},
+				{
+					"arabic": "تموز",
+					"english": "July",
+					"transliteration": "tammooz"
+				},
+				{
+					"arabic": "غيرت",
+					"english": "changed",
+					"transliteration": "ghayyrat"
+				},
+				{
+					"arabic": "البلد.",
+					"english": "the country.",
+					"transliteration": "il-balad."
+				}
+			],
+			"targetWords": [
+				"Revolution"
+			]
+		},
+		{
+			"arabic": "الحرب ويا إيران بقت ثمان سنين.",
+			"arabicTashkeel": "الحَرُب ويّا إيران بِقَت ثْمان سِنين.",
+			"english": "The war with Iran lasted eight years.",
+			"transliteration": "il-7arub wiyya eeraan bigat thmaan sneen.",
+			"wordAlignments": [
+				{
+					"arabic": "الحرب",
+					"english": "The war",
+					"transliteration": "il-7arub"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "إيران",
+					"english": "Iran",
+					"transliteration": "eeraan"
+				},
+				{
+					"arabic": "بقت",
+					"english": "lasted",
+					"transliteration": "bigat"
+				},
+				{
+					"arabic": "ثمان",
+					"english": "eight",
+					"transliteration": "thmaan"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sneen."
+				}
+			],
+			"targetWords": [
+				"War"
+			]
+		},
+		{
+			"arabic": "أيام الحصار، الحياة كانت صعبة هواية.",
+			"arabicTashkeel": "أيّام الحِصار، الحَياة كانَت صَعبة هْوايَة.",
+			"english": "During the sanctions, life was very hard.",
+			"transliteration": "ayyaam il-7isaar, il-7ayaat chaanat sa3ba hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "أيام",
+					"english": "In the days of",
+					"transliteration": "ayyaam"
+				},
+				{
+					"arabic": "الحصار،",
+					"english": "the blockade,",
+					"transliteration": "il-7isaar,"
+				},
+				{
+					"arabic": "الحياة",
+					"english": "life",
+					"transliteration": "il-7ayaat"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "صعبة",
+					"english": "hard",
+					"transliteration": "sa3ba"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Sanctions (blockade)"
+			]
+		},
+		{
+			"arabic": "الدستور الجديد إنكتب سنة ألفين وخمسة.",
+			"arabicTashkeel": "الدُّستور الجْديد إنكِتَب سَنة ألفين وخَمسة.",
+			"english": "The new constitution was written in 2005.",
+			"transliteration": "id-dustoor ij-jdeed inkitab sanat alfeen w-khamsa.",
+			"wordAlignments": [
+				{
+					"arabic": "الدستور",
+					"english": "The constitution",
+					"transliteration": "id-dustoor"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new",
+					"transliteration": "ij-jdeed"
+				},
+				{
+					"arabic": "إنكتب",
+					"english": "was written",
+					"transliteration": "inkitab"
+				},
+				{
+					"arabic": "سنة",
+					"english": "in the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ألفين",
+					"english": "two thousand",
+					"transliteration": "alfeen"
+				},
+				{
+					"arabic": "وخمسة.",
+					"english": "and five.",
+					"transliteration": "w-khamsa."
+				}
+			],
+			"targetWords": [
+				"Constitution"
+			]
+		},
+		{
+			"arabic": "تحرير الموصل كان سنة ألفين وسبعطعش.",
+			"arabicTashkeel": "تَحرير المَوصِل كان سَنة ألفين وسَبعطَعَش.",
+			"english": "The liberation of Mosul was in 2017.",
+			"transliteration": "ta7reer il-mawsil chaan sanat alfeen w-saba3ta3ash.",
+			"wordAlignments": [
+				{
+					"arabic": "تحرير",
+					"english": "The liberation of",
+					"transliteration": "ta7reer"
+				},
+				{
+					"arabic": "الموصل",
+					"english": "Mosul",
+					"transliteration": "il-mawsil"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "سنة",
+					"english": "in the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ألفين",
+					"english": "two thousand",
+					"transliteration": "alfeen"
+				},
+				{
+					"arabic": "وسبعطعش.",
+					"english": "and seventeen.",
+					"transliteration": "w-saba3ta3ash."
+				}
+			],
+			"targetWords": [
+				"Liberation"
+			]
+		},
+		{
+			"arabic": "عوائل نازحة هواية رجعت لبيوتها.",
+			"arabicTashkeel": "عَوائل نازحة هْوايَة رِجعَت لبيوتها.",
+			"english": "Many displaced families returned to their homes.",
+			"transliteration": "3awaa2il naaz7a hwaaya rij3at l-byootha.",
+			"wordAlignments": [
+				{
+					"arabic": "عوائل",
+					"english": "Families",
+					"transliteration": "3awaa2il"
+				},
+				{
+					"arabic": "نازحة",
+					"english": "displaced",
+					"transliteration": "naaz7a"
+				},
+				{
+					"arabic": "هواية",
+					"english": "many",
+					"transliteration": "hwaaya"
+				},
+				{
+					"arabic": "رجعت",
+					"english": "returned",
+					"transliteration": "rij3at"
+				},
+				{
+					"arabic": "لبيوتها.",
+					"english": "to their homes.",
+					"transliteration": "l-byootha."
+				}
+			],
+			"targetWords": [
+				"Displaced"
+			]
+		},
+		{
+			"arabic": "إعمار المدينة القديمة ياخذ وكت.",
+			"arabicTashkeel": "إعمار المَدينة القَديمة ياخُذ وَكِت.",
+			"english": "Reconstruction of the old city takes time.",
+			"transliteration": "i3maar il-madeena il-gadeema yaakhudh wakit.",
+			"wordAlignments": [
+				{
+					"arabic": "إعمار",
+					"english": "The rebuilding of",
+					"transliteration": "i3maar"
+				},
+				{
+					"arabic": "المدينة",
+					"english": "the city",
+					"transliteration": "il-madeena"
+				},
+				{
+					"arabic": "القديمة",
+					"english": "old",
+					"transliteration": "il-gadeema"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhudh"
+				},
+				{
+					"arabic": "وكت.",
+					"english": "time.",
+					"transliteration": "wakit."
+				}
+			],
+			"targetWords": [
+				"Reconstruction"
+			]
+		},
+		{
+			"arabic": "الكل يريد السلام.",
+			"arabicTashkeel": "الكُل يْريد السَّلام.",
+			"english": "Everyone wants peace.",
+			"transliteration": "il-kull yreed is-salaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الكل",
+					"english": "Everyone",
+					"transliteration": "il-kull"
+				},
+				{
+					"arabic": "يريد",
+					"english": "wants",
+					"transliteration": "yreed"
+				},
+				{
+					"arabic": "السلام.",
+					"english": "peace.",
+					"transliteration": "is-salaam."
+				}
+			],
+			"targetWords": [
+				"Peace"
+			]
+		},
+		{
+			"arabic": "الأمن أحسن هسه.",
+			"arabicTashkeel": "الأمِن أحسَن هَسَّه.",
+			"english": "Security is better now.",
+			"transliteration": "il-amin a7san hassa.",
+			"wordAlignments": [
+				{
+					"arabic": "الأمن",
+					"english": "Security is",
+					"transliteration": "il-amin"
+				},
+				{
+					"arabic": "أحسن",
+					"english": "better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "هسه.",
+					"english": "now.",
+					"transliteration": "hassa."
+				}
+			],
+			"targetWords": [
+				"Security"
+			]
+		},
+		{
+			"arabic": "جيلي كبر أيام الحصار.",
+			"arabicTashkeel": "جيلي كِبَر أيّام الحِصار.",
+			"english": "My generation grew up during the sanctions.",
+			"transliteration": "jeeli kibar ayyaam il-7isaar.",
+			"wordAlignments": [
+				{
+					"arabic": "جيلي",
+					"english": "My generation",
+					"transliteration": "jeeli"
+				},
+				{
+					"arabic": "كبر",
+					"english": "grew up",
+					"transliteration": "kibar"
+				},
+				{
+					"arabic": "أيام",
+					"english": "in the days of",
+					"transliteration": "ayyaam"
+				},
+				{
+					"arabic": "الحصار.",
+					"english": "the blockade.",
+					"transliteration": "il-7isaar."
+				}
+			],
+			"targetWords": [
+				"Generation",
+				"Sanctions (blockade)"
+			]
+		},
+		{
+			"arabic": "عندي ذكرى حلوة عن بغداد القديمة.",
+			"arabicTashkeel": "عِندي ذِكرى حِلوة عَن بَغداد القَديمة.",
+			"english": "I have a beautiful memory of old Baghdad.",
+			"transliteration": "3indi thikra 7ilwa 3an baghdaad il-gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "ذكرى",
+					"english": "a memory",
+					"transliteration": "thikra"
+				},
+				{
+					"arabic": "حلوة",
+					"english": "beautiful",
+					"transliteration": "7ilwa"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "القديمة.",
+					"english": "old.",
+					"transliteration": "il-gadeema."
+				}
+			],
+			"targetWords": [
+				"Memory"
+			]
+		},
+		{
+			"arabic": "حدث مهم بتاريخ العراق.",
+			"arabicTashkeel": "حَدَث مُهِم بتاريخ العِراق.",
+			"english": "An important event in Iraq's history.",
+			"transliteration": "7adath muhimm b-taareekh il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "حدث",
+					"english": "An event",
+					"transliteration": "7adath"
+				},
+				{
+					"arabic": "مهم",
+					"english": "important",
+					"transliteration": "muhimm"
+				},
+				{
+					"arabic": "بتاريخ",
+					"english": "in the history of",
+					"transliteration": "b-taareekh"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Event"
+			]
+		},
+		{
+			"arabic": "يوم الإستقلال.",
+			"arabicTashkeel": "يوم الإستِقلال.",
+			"english": "Independence Day.",
+			"transliteration": "yoom il-istiglaal.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "The day of",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الإستقلال.",
+					"english": "independence.",
+					"transliteration": "il-istiglaal."
+				}
+			],
+			"targetWords": [
+				"Independence"
+			]
+		},
+		{
+			"arabic": "جدي يتذكر أيام الملكية.",
+			"arabicTashkeel": "جَدّي يِتذَكَّر أيّام المَلَكية.",
+			"english": "My grandfather remembers the days of the monarchy.",
+			"transliteration": "jiddi yithakkar ayyaam il-malakiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jiddi"
+				},
+				{
+					"arabic": "يتذكر",
+					"english": "remembers",
+					"transliteration": "yithakkar"
+				},
+				{
+					"arabic": "أيام",
+					"english": "the days of",
+					"transliteration": "ayyaam"
+				},
+				{
+					"arabic": "الملكية.",
+					"english": "the monarchy.",
+					"transliteration": "il-malakiyya."
+				}
+			],
+			"targetWords": [
+				"The monarchy"
+			]
+		},
+		{
+			"arabic": "جمهورية العراق.",
+			"arabicTashkeel": "جُمهورية العِراق.",
+			"english": "The Republic of Iraq.",
+			"transliteration": "jumhooriyyat il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "جمهورية",
+					"english": "The Republic of",
+					"transliteration": "jumhooriyyat"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Republic"
+			]
+		},
+		{
+			"arabic": "ثورة العشرين ضد الإنكليز.",
+			"arabicTashkeel": "ثَورة العِشرين ضِد الإنكليز.",
+			"english": "The 1920 revolution against the British.",
+			"transliteration": "thawrat il-3ishreen dhidd il-ingileez.",
+			"wordAlignments": [
+				{
+					"arabic": "ثورة",
+					"english": "The revolution of",
+					"transliteration": "thawrat"
+				},
+				{
+					"arabic": "العشرين",
+					"english": "the twenty",
+					"transliteration": "il-3ishreen"
+				},
+				{
+					"arabic": "ضد",
+					"english": "against",
+					"transliteration": "dhidd"
+				},
+				{
+					"arabic": "الإنكليز.",
+					"english": "the British.",
+					"transliteration": "il-ingileez."
+				}
+			],
+			"targetWords": [
+				"Revolution"
+			]
+		},
+		{
+			"arabic": "الحروب دمرت هواية.",
+			"arabicTashkeel": "الحُروب دَمّرَت هْوايَة.",
+			"english": "Wars destroyed a lot.",
+			"transliteration": "il-7uroob dammrat hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الحروب",
+					"english": "The wars",
+					"transliteration": "il-7uroob"
+				},
+				{
+					"arabic": "دمرت",
+					"english": "destroyed",
+					"transliteration": "dammrat"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "a lot.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"War"
+			]
+		},
+		{
+			"arabic": "الحصار بقى ثلطعش سنة.",
+			"arabicTashkeel": "الحِصار بِقى ثْلَطَّعَش سَنة.",
+			"english": "The sanctions lasted thirteen years.",
+			"transliteration": "il-7isaar biga thlatta3ash sana.",
+			"wordAlignments": [
+				{
+					"arabic": "الحصار",
+					"english": "The blockade",
+					"transliteration": "il-7isaar"
+				},
+				{
+					"arabic": "بقى",
+					"english": "lasted",
+					"transliteration": "biga"
+				},
+				{
+					"arabic": "ثلطعش",
+					"english": "thirteen",
+					"transliteration": "thlatta3ash"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "years.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Sanctions (blockade)"
+			]
+		},
+		{
+			"arabic": "الدستور يحمي الحقوق.",
+			"arabicTashkeel": "الدُّستور يِحمي الحُقوق.",
+			"english": "The constitution protects rights.",
+			"transliteration": "id-dustoor yi7mi il-7uqooq.",
+			"wordAlignments": [
+				{
+					"arabic": "الدستور",
+					"english": "The constitution",
+					"transliteration": "id-dustoor"
+				},
+				{
+					"arabic": "يحمي",
+					"english": "protects",
+					"transliteration": "yi7mi"
+				},
+				{
+					"arabic": "الحقوق.",
+					"english": "the rights.",
+					"transliteration": "il-7uqooq."
+				}
+			],
+			"targetWords": [
+				"Constitution"
+			]
+		},
+		{
+			"arabic": "يوم التحرير كان إحتفال.",
+			"arabicTashkeel": "يوم التَّحرير كان إحتِفال.",
+			"english": "The day of liberation was a celebration.",
+			"transliteration": "yoom it-ta7reer chaan i7tifaal.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "The day of",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "التحرير",
+					"english": "liberation",
+					"transliteration": "it-ta7reer"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "إحتفال.",
+					"english": "a celebration.",
+					"transliteration": "i7tifaal."
+				}
+			],
+			"targetWords": [
+				"Liberation"
+			]
+		},
+		{
+			"arabic": "مساعدة للنازحين.",
+			"arabicTashkeel": "مُساعَدة للنّازحين.",
+			"english": "Help for displaced people.",
+			"transliteration": "musaa3ada lin-naaz7een.",
+			"wordAlignments": [
+				{
+					"arabic": "مساعدة",
+					"english": "Help",
+					"transliteration": "musaa3ada"
+				},
+				{
+					"arabic": "للنازحين.",
+					"english": "for the displaced.",
+					"transliteration": "lin-naaz7een."
+				}
+			],
+			"targetWords": [
+				"Displaced"
+			]
+		},
+		{
+			"arabic": "إعمار جامع الموصل.",
+			"arabicTashkeel": "إعمار جامِع المَوصِل.",
+			"english": "The reconstruction of Mosul's mosque.",
+			"transliteration": "i3maar jaami3 il-mawsil.",
+			"wordAlignments": [
+				{
+					"arabic": "إعمار",
+					"english": "The rebuilding of",
+					"transliteration": "i3maar"
+				},
+				{
+					"arabic": "جامع",
+					"english": "the mosque of",
+					"transliteration": "jaami3"
+				},
+				{
+					"arabic": "الموصل.",
+					"english": "Mosul.",
+					"transliteration": "il-mawsil."
+				}
+			],
+			"targetWords": [
+				"Reconstruction"
+			]
+		},
+		{
+			"arabic": "السلام أهم شي.",
+			"arabicTashkeel": "السَّلام أهَم شي.",
+			"english": "Peace is the most important thing.",
+			"transliteration": "is-salaam aham shi.",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace is",
+					"transliteration": "is-salaam"
+				},
+				{
+					"arabic": "أهم",
+					"english": "the most important",
+					"transliteration": "aham"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shi."
+				}
+			],
+			"targetWords": [
+				"Peace"
+			]
+		},
+		{
+			"arabic": "الأمن رجع للشوارع.",
+			"arabicTashkeel": "الأمِن رِجَع للشَّوارِع.",
+			"english": "Security returned to the streets.",
+			"transliteration": "il-amin rija3 lish-shawaari3.",
+			"wordAlignments": [
+				{
+					"arabic": "الأمن",
+					"english": "Security",
+					"transliteration": "il-amin"
+				},
+				{
+					"arabic": "رجع",
+					"english": "returned",
+					"transliteration": "rija3"
+				},
+				{
+					"arabic": "للشوارع.",
+					"english": "to the streets.",
+					"transliteration": "lish-shawaari3."
+				}
+			],
+			"targetWords": [
+				"Security"
+			]
+		},
+		{
+			"arabic": "الجيل الجديد يريد مستقبل أحسن.",
+			"arabicTashkeel": "الجيل الجْديد يْريد مُستَقبَل أحسَن.",
+			"english": "The young generation wants a better future.",
+			"transliteration": "ij-jeel ij-jdeed yreed mustaqbal a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "الجيل",
+					"english": "The generation",
+					"transliteration": "ij-jeel"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new",
+					"transliteration": "ij-jdeed"
+				},
+				{
+					"arabic": "يريد",
+					"english": "wants",
+					"transliteration": "yreed"
+				},
+				{
+					"arabic": "مستقبل",
+					"english": "a future",
+					"transliteration": "mustaqbal"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"Generation"
+			]
+		},
+		{
+			"arabic": "ذكرى حزينة.",
+			"arabicTashkeel": "ذِكرى حَزينة.",
+			"english": "A sad memory.",
+			"transliteration": "thikra 7azeena.",
+			"wordAlignments": [
+				{
+					"arabic": "ذكرى",
+					"english": "A memory",
+					"transliteration": "thikra"
+				},
+				{
+					"arabic": "حزينة.",
+					"english": "sad.",
+					"transliteration": "7azeena."
+				}
+			],
+			"targetWords": [
+				"Memory"
+			]
+		},
+		{
+			"arabic": "شنو أكبر حدث؟",
+			"arabicTashkeel": "شِنو أكبَر حَدَث؟",
+			"english": "What was the biggest event?",
+			"transliteration": "shinu akbar 7adath?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What was",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "the biggest",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "حدث؟",
+					"english": "event?",
+					"transliteration": "7adath?"
+				}
+			],
+			"targetWords": [
+				"Event"
+			]
+		},
+		{
+			"arabic": "العراق بعد الإستقلال.",
+			"arabicTashkeel": "العِراق بَعد الإستِقلال.",
+			"english": "Iraq after independence.",
+			"transliteration": "il-3iraaq ba3d il-istiglaal.",
+			"wordAlignments": [
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الإستقلال.",
+					"english": "independence.",
+					"transliteration": "il-istiglaal."
+				}
+			],
+			"targetWords": [
+				"Independence"
+			]
+		},
+		{
+			"arabic": "الملك فيصل الأول كان أول ملك للعراق بالملكية.",
+			"arabicTashkeel": "المَلِك فَيصَل الأوَّل كان أوَّل مَلِك للعِراق بالمَلَكية.",
+			"english": "King Faisal I was the first king of Iraq.",
+			"transliteration": "il-malik faysal il-awwal chaan awwal malik lil-3iraaq bil-malakiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الملك",
+					"english": "King",
+					"transliteration": "il-malik"
+				},
+				{
+					"arabic": "فيصل",
+					"english": "Faisal",
+					"transliteration": "faysal"
+				},
+				{
+					"arabic": "الأول",
+					"english": "the first",
+					"transliteration": "il-awwal"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "أول",
+					"english": "the first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "ملك",
+					"english": "king",
+					"transliteration": "malik"
+				},
+				{
+					"arabic": "للعراق",
+					"english": "of Iraq",
+					"transliteration": "lil-3iraaq"
+				},
+				{
+					"arabic": "بالملكية.",
+					"english": "in the monarchy.",
+					"transliteration": "bil-malakiyya."
+				}
+			],
+			"targetWords": [
+				"The monarchy"
+			]
+		},
+		{
+			"arabic": "جمهورية شابة.",
+			"arabicTashkeel": "جُمهورية شابّة.",
+			"english": "A young republic.",
+			"transliteration": "jumhooriyya shaabba.",
+			"wordAlignments": [
+				{
+					"arabic": "جمهورية",
+					"english": "A republic",
+					"transliteration": "jumhooriyya"
+				},
+				{
+					"arabic": "شابة.",
+					"english": "young.",
+					"transliteration": "shaabba."
+				}
+			],
+			"targetWords": [
+				"Republic"
+			]
+		},
+		{
+			"arabic": "قادة الثورة.",
+			"arabicTashkeel": "قادة الثَّورة.",
+			"english": "The leaders of the revolution.",
+			"transliteration": "gaadat ith-thawra.",
+			"wordAlignments": [
+				{
+					"arabic": "قادة",
+					"english": "The leaders of",
+					"transliteration": "gaadat"
+				},
+				{
+					"arabic": "الثورة.",
+					"english": "the revolution.",
+					"transliteration": "ith-thawra."
+				}
+			],
+			"targetWords": [
+				"Revolution"
+			]
+		},
+		{
+			"arabic": "بعد الحرب، الناس رجعوا للإعمار.",
+			"arabicTashkeel": "بَعد الحَرُب، النّاس رِجعوا للإعمار.",
+			"english": "After the war, the people rebuilt.",
+			"transliteration": "ba3d il-7arub, in-naas rij3aw lil-i3maar.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الحرب،",
+					"english": "the war,",
+					"transliteration": "il-7arub,"
+				},
+				{
+					"arabic": "الناس",
+					"english": "the people",
+					"transliteration": "in-naas"
+				},
+				{
+					"arabic": "رجعوا",
+					"english": "went back to",
+					"transliteration": "rij3aw"
+				},
+				{
+					"arabic": "للإعمار.",
+					"english": "the rebuilding.",
+					"transliteration": "lil-i3maar."
+				}
+			],
+			"targetWords": [
+				"War",
+				"Reconstruction"
+			]
+		},
+		{
+			"arabic": "الحصار أثر عالأكل والدوا.",
+			"arabicTashkeel": "الحِصار أثَّر عالأكِل والدَّوا.",
+			"english": "The sanctions affected food and medicine.",
+			"transliteration": "il-7isaar aththar 3al-akil w-id-dawa.",
+			"wordAlignments": [
+				{
+					"arabic": "الحصار",
+					"english": "The blockade",
+					"transliteration": "il-7isaar"
+				},
+				{
+					"arabic": "أثر",
+					"english": "affected",
+					"transliteration": "aththar"
+				},
+				{
+					"arabic": "عالأكل",
+					"english": "food",
+					"transliteration": "3al-akil"
+				},
+				{
+					"arabic": "والدوا.",
+					"english": "and medicine.",
+					"transliteration": "w-id-dawa."
+				}
+			],
+			"targetWords": [
+				"Sanctions (blockade)"
+			]
+		},
+		{
+			"arabic": "تصويت عالدستور.",
+			"arabicTashkeel": "تَصويت عالدُّستور.",
+			"english": "A vote on the constitution.",
+			"transliteration": "taswiit 3ad-dustoor.",
+			"wordAlignments": [
+				{
+					"arabic": "تصويت",
+					"english": "A vote",
+					"transliteration": "taswiit"
+				},
+				{
+					"arabic": "عالدستور.",
+					"english": "on the constitution.",
+					"transliteration": "3ad-dustoor."
+				}
+			],
+			"targetWords": [
+				"Constitution"
+			]
+		},
+		{
+			"arabic": "ساحة التحرير يعني ساحة التحرير.",
+			"arabicTashkeel": "ساحة التَّحرير يَعني ساحة التَّحرير.",
+			"english": "Tahrir Square means Liberation Square.",
+			"transliteration": "saa7at it-ta7reer ya3ni saa7at it-ta7reer.",
+			"wordAlignments": [
+				{
+					"arabic": "ساحة",
+					"english": "The square of",
+					"transliteration": "saa7at"
+				},
+				{
+					"arabic": "التحرير",
+					"english": "Tahrir",
+					"transliteration": "it-ta7reer"
+				},
+				{
+					"arabic": "يعني",
+					"english": "means",
+					"transliteration": "ya3ni"
+				},
+				{
+					"arabic": "ساحة",
+					"english": "the square of",
+					"transliteration": "saa7at"
+				},
+				{
+					"arabic": "التحرير.",
+					"english": "liberation.",
+					"transliteration": "it-ta7reer."
+				}
+			],
+			"targetWords": [
+				"Liberation"
+			]
+		},
+		{
+			"arabic": "مخيمات النازحين.",
+			"arabicTashkeel": "مُخَيَّمات النّازحين.",
+			"english": "The displaced camps.",
+			"transliteration": "mukhayyamaat in-naaz7een.",
+			"wordAlignments": [
+				{
+					"arabic": "مخيمات",
+					"english": "The camps of",
+					"transliteration": "mukhayyamaat"
+				},
+				{
+					"arabic": "النازحين.",
+					"english": "the displaced.",
+					"transliteration": "in-naaz7een."
+				}
+			],
+			"targetWords": [
+				"Displaced"
+			]
+		},
+		{
+			"arabic": "الإعمار يحتاج فلوس ووكت.",
+			"arabicTashkeel": "الإعمار يِحتاج فْلوس ووَكِت.",
+			"english": "Reconstruction needs money and time.",
+			"transliteration": "il-i3maar yi7taaj floos w-wakit.",
+			"wordAlignments": [
+				{
+					"arabic": "الإعمار",
+					"english": "Rebuilding",
+					"transliteration": "il-i3maar"
+				},
+				{
+					"arabic": "يحتاج",
+					"english": "needs",
+					"transliteration": "yi7taaj"
+				},
+				{
+					"arabic": "فلوس",
+					"english": "money",
+					"transliteration": "floos"
+				},
+				{
+					"arabic": "ووكت.",
+					"english": "and time.",
+					"transliteration": "w-wakit."
+				}
+			],
+			"targetWords": [
+				"Reconstruction"
+			]
+		},
+		{
+			"arabic": "السلام والأمن.",
+			"arabicTashkeel": "السَّلام والأمِن.",
+			"english": "Peace and security.",
+			"transliteration": "is-salaam w-il-amin.",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaam"
+				},
+				{
+					"arabic": "والأمن.",
+					"english": "and security.",
+					"transliteration": "w-il-amin."
+				}
+			],
+			"targetWords": [
+				"Peace",
+				"Security"
+			]
+		},
+		{
+			"arabic": "السيطرات قلت.",
+			"arabicTashkeel": "السَّيطَرات قَلَّت.",
+			"english": "Security checkpoints decreased.",
+			"transliteration": "is-saytaraat gallat.",
+			"wordAlignments": [
+				{
+					"arabic": "السيطرات",
+					"english": "The checkpoints",
+					"transliteration": "is-saytaraat"
+				},
+				{
+					"arabic": "قلت.",
+					"english": "decreased.",
+					"transliteration": "gallat."
+				}
+			],
+			"targetWords": [
+				"Security"
+			]
+		},
+		{
+			"arabic": "جيل شاف هواية.",
+			"arabicTashkeel": "جيل شاف هْوايَة.",
+			"english": "A generation that saw a lot.",
+			"transliteration": "jeel shaaf hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "جيل",
+					"english": "A generation",
+					"transliteration": "jeel"
+				},
+				{
+					"arabic": "شاف",
+					"english": "that saw",
+					"transliteration": "shaaf"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "a lot.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Generation"
+			]
+		},
+		{
+			"arabic": "ذكرى الشهداء.",
+			"arabicTashkeel": "ذِكرى الشُّهَداء.",
+			"english": "The memory of the martyrs.",
+			"transliteration": "thikra ish-shuhadaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "ذكرى",
+					"english": "The memory of",
+					"transliteration": "thikra"
+				},
+				{
+					"arabic": "الشهداء.",
+					"english": "the martyrs.",
+					"transliteration": "ish-shuhadaa2."
+				}
+			],
+			"targetWords": [
+				"Memory"
+			]
+		},
+		{
+			"arabic": "حدث تاريخي.",
+			"arabicTashkeel": "حَدَث تاريخي.",
+			"english": "A historic event.",
+			"transliteration": "7adath taareekhi.",
+			"wordAlignments": [
+				{
+					"arabic": "حدث",
+					"english": "An event",
+					"transliteration": "7adath"
+				},
+				{
+					"arabic": "تاريخي.",
+					"english": "historic.",
+					"transliteration": "taareekhi."
+				}
+			],
+			"targetWords": [
+				"Event"
+			]
+		},
+		{
+			"arabic": "النضال من أجل الإستقلال.",
+			"arabicTashkeel": "النِّضال مِن أجِل الإستِقلال.",
+			"english": "The struggle for independence.",
+			"transliteration": "in-nidhaal min ajil il-istiglaal.",
+			"wordAlignments": [
+				{
+					"arabic": "النضال",
+					"english": "The struggle",
+					"transliteration": "in-nidhaal"
+				},
+				{
+					"arabic": "من",
+					"english": "for",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أجل",
+					"english": "the sake of",
+					"transliteration": "ajil"
+				},
+				{
+					"arabic": "الإستقلال.",
+					"english": "independence.",
+					"transliteration": "il-istiglaal."
+				}
+			],
+			"targetWords": [
+				"Independence"
+			]
+		},
+		{
+			"arabic": "نهاية الملكية.",
+			"arabicTashkeel": "نِهاية المَلَكية.",
+			"english": "The end of the monarchy.",
+			"transliteration": "nihaayat il-malakiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "نهاية",
+					"english": "The end of",
+					"transliteration": "nihaayat"
+				},
+				{
+					"arabic": "الملكية.",
+					"english": "the monarchy.",
+					"transliteration": "il-malakiyya."
+				}
+			],
+			"targetWords": [
+				"The monarchy"
+			]
+		},
+		{
+			"arabic": "الجمهورية الأولى.",
+			"arabicTashkeel": "الجُمهورية الأولى.",
+			"english": "The first republic.",
+			"transliteration": "ij-jumhooriyya il-oola.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمهورية",
+					"english": "The republic",
+					"transliteration": "ij-jumhooriyya"
+				},
+				{
+					"arabic": "الأولى.",
+					"english": "first.",
+					"transliteration": "il-oola."
+				}
+			],
+			"targetWords": [
+				"Republic"
+			]
+		},
+		{
+			"arabic": "ثورة ضد الظلم.",
+			"arabicTashkeel": "ثَورة ضِد الظُّلُم.",
+			"english": "A revolution against injustice.",
+			"transliteration": "thawra dhidd idh-dhulum.",
+			"wordAlignments": [
+				{
+					"arabic": "ثورة",
+					"english": "A revolution",
+					"transliteration": "thawra"
+				},
+				{
+					"arabic": "ضد",
+					"english": "against",
+					"transliteration": "dhidd"
+				},
+				{
+					"arabic": "الظلم.",
+					"english": "injustice.",
+					"transliteration": "idh-dhulum."
+				}
+			],
+			"targetWords": [
+				"Revolution"
+			]
+		},
+		{
+			"arabic": "بس عاد حرب.",
+			"arabicTashkeel": "بَس عاد حَرُب.",
+			"english": "No more war.",
+			"transliteration": "bas 3aad 7arub.",
+			"wordAlignments": [
+				{
+					"arabic": "بس",
+					"english": "Enough",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "عاد",
+					"english": "now",
+					"transliteration": "3aad"
+				},
+				{
+					"arabic": "حرب.",
+					"english": "war.",
+					"transliteration": "7arub."
+				}
+			],
+			"targetWords": [
+				"War"
+			]
+		},
+		{
+			"arabic": "سنين الحصار.",
+			"arabicTashkeel": "سِنين الحِصار.",
+			"english": "The years of sanctions.",
+			"transliteration": "sneen il-7isaar.",
+			"wordAlignments": [
+				{
+					"arabic": "سنين",
+					"english": "The years of",
+					"transliteration": "sneen"
+				},
+				{
+					"arabic": "الحصار.",
+					"english": "the blockade.",
+					"transliteration": "il-7isaar."
+				}
+			],
+			"targetWords": [
+				"Sanctions (blockade)"
+			]
+		},
+		{
+			"arabic": "إحترام الدستور.",
+			"arabicTashkeel": "إحتِرام الدُّستور.",
+			"english": "Respect for the constitution.",
+			"transliteration": "i7tiraam id-dustoor.",
+			"wordAlignments": [
+				{
+					"arabic": "إحترام",
+					"english": "Respect for",
+					"transliteration": "i7tiraam"
+				},
+				{
+					"arabic": "الدستور.",
+					"english": "the constitution.",
+					"transliteration": "id-dustoor."
+				}
+			],
+			"targetWords": [
+				"Constitution"
+			]
+		},
+		{
+			"arabic": "تحرير الأرض.",
+			"arabicTashkeel": "تَحرير الأرض.",
+			"english": "The liberation of the land.",
+			"transliteration": "ta7reer il-ardh.",
+			"wordAlignments": [
+				{
+					"arabic": "تحرير",
+					"english": "The liberation of",
+					"transliteration": "ta7reer"
+				},
+				{
+					"arabic": "الأرض.",
+					"english": "the land.",
+					"transliteration": "il-ardh."
+				}
+			],
+			"targetWords": [
+				"Liberation"
+			]
+		},
+		{
+			"arabic": "النازحين رجعوا.",
+			"arabicTashkeel": "النّازحين رِجعوا.",
+			"english": "The displaced have returned.",
+			"transliteration": "in-naaz7een rij3aw.",
+			"wordAlignments": [
+				{
+					"arabic": "النازحين",
+					"english": "The displaced",
+					"transliteration": "in-naaz7een"
+				},
+				{
+					"arabic": "رجعوا.",
+					"english": "returned.",
+					"transliteration": "rij3aw."
+				}
+			],
+			"targetWords": [
+				"Displaced"
+			]
+		},
+		{
+			"arabic": "السلام بالقلوب.",
+			"arabicTashkeel": "السَّلام بالقُلوب.",
+			"english": "Peace in the hearts.",
+			"transliteration": "is-salaam bil-guloob.",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaam"
+				},
+				{
+					"arabic": "بالقلوب.",
+					"english": "in the hearts.",
+					"transliteration": "bil-guloob."
+				}
+			],
+			"targetWords": [
+				"Peace"
+			]
+		},
+		{
+			"arabic": "جيل المستقبل.",
+			"arabicTashkeel": "جيل المُستَقبَل.",
+			"english": "The generation of the future.",
+			"transliteration": "jeel il-mustaqbal.",
+			"wordAlignments": [
+				{
+					"arabic": "جيل",
+					"english": "The generation of",
+					"transliteration": "jeel"
+				},
+				{
+					"arabic": "المستقبل.",
+					"english": "the future.",
+					"transliteration": "il-mustaqbal."
+				}
+			],
+			"targetWords": [
+				"Generation"
+			]
+		},
+		{
+			"arabic": "ذكريات المدرسة.",
+			"arabicTashkeel": "ذِكرَيات المَدرَسة.",
+			"english": "Memories of school.",
+			"transliteration": "thikrayaat il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "ذكريات",
+					"english": "Memories of",
+					"transliteration": "thikrayaat"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Memory"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Century of Change",
+			"sentences": [
+				{
+					"arabic": "العراق أخذ إستقلاله سنة إثنين وثلاثين، أيام الملكية.",
+					"arabicTashkeel": "العِراق أخَذ إستِقلالَه سَنة إثنَين وثْلاثين، أيّام المَلَكية.",
+					"english": "Iraq gained independence in 1932, under the monarchy.",
+					"transliteration": "il-3iraaq akhadh istiglaala sanat ithnayn w-thlaatheen, ayyaam il-malakiyya.",
+					"wordAlignments": [
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "أخذ",
+							"english": "took",
+							"transliteration": "akhadh"
+						},
+						{
+							"arabic": "إستقلاله",
+							"english": "its independence",
+							"transliteration": "istiglaala"
+						},
+						{
+							"arabic": "سنة",
+							"english": "in the year",
+							"transliteration": "sanat"
+						},
+						{
+							"arabic": "إثنين",
+							"english": "two",
+							"transliteration": "ithnayn"
+						},
+						{
+							"arabic": "وثلاثين،",
+							"english": "and thirty,",
+							"transliteration": "w-thlaatheen,"
+						},
+						{
+							"arabic": "أيام",
+							"english": "in the days of",
+							"transliteration": "ayyaam"
+						},
+						{
+							"arabic": "الملكية.",
+							"english": "the monarchy.",
+							"transliteration": "il-malakiyya."
+						}
+					]
+				},
+				{
+					"arabic": "سنة ثمانية وخمسين، ثورة تموز نهت الملكية والعراق صار جمهورية.",
+					"arabicTashkeel": "سَنة ثْمانية وخَمسين، ثَورة تَمّوز نَهَّت المَلَكية والعِراق صار جُمهورية.",
+					"english": "In 1958, the July revolution ended the monarchy and Iraq became a republic.",
+					"transliteration": "sanat thmaanya w-khamseen, thawrat tammooz nahhat il-malakiyya w-il-3iraaq saar jumhooriyya.",
+					"wordAlignments": [
+						{
+							"arabic": "سنة",
+							"english": "In the year",
+							"transliteration": "sanat"
+						},
+						{
+							"arabic": "ثمانية",
+							"english": "eight",
+							"transliteration": "thmaanya"
+						},
+						{
+							"arabic": "وخمسين،",
+							"english": "and fifty,",
+							"transliteration": "w-khamseen,"
+						},
+						{
+							"arabic": "ثورة",
+							"english": "the revolution of",
+							"transliteration": "thawrat"
+						},
+						{
+							"arabic": "تموز",
+							"english": "July",
+							"transliteration": "tammooz"
+						},
+						{
+							"arabic": "نهت",
+							"english": "ended",
+							"transliteration": "nahhat"
+						},
+						{
+							"arabic": "الملكية",
+							"english": "the monarchy",
+							"transliteration": "il-malakiyya"
+						},
+						{
+							"arabic": "والعراق",
+							"english": "and Iraq",
+							"transliteration": "w-il-3iraaq"
+						},
+						{
+							"arabic": "صار",
+							"english": "became",
+							"transliteration": "saar"
+						},
+						{
+							"arabic": "جمهورية.",
+							"english": "a republic.",
+							"transliteration": "jumhooriyya."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين إجت حروب طويلة وسنين حصار.",
+					"arabicTashkeel": "بَعدين إجَت حُروب طْويلة وسِنين حِصار.",
+					"english": "Then came long wars and years of sanctions.",
+					"transliteration": "ba3deen ijat 7uroob tweela w-sneen 7isaar.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3deen"
+						},
+						{
+							"arabic": "إجت",
+							"english": "came",
+							"transliteration": "ijat"
+						},
+						{
+							"arabic": "حروب",
+							"english": "wars",
+							"transliteration": "7uroob"
+						},
+						{
+							"arabic": "طويلة",
+							"english": "long",
+							"transliteration": "tweela"
+						},
+						{
+							"arabic": "وسنين",
+							"english": "and years of",
+							"transliteration": "w-sneen"
+						},
+						{
+							"arabic": "حصار.",
+							"english": "blockade.",
+							"transliteration": "7isaar."
+						}
+					]
+				},
+				{
+					"arabic": "جيل أهلي يتذكر ذيك الأيام الصعبة.",
+					"arabicTashkeel": "جيل أهلي يِتذَكَّر ذيك الأيّام الصَّعبة.",
+					"english": "My parents' generation remembers those hard days.",
+					"transliteration": "jeel ahli yithakkar theech il-ayyaam is-sa3ba.",
+					"wordAlignments": [
+						{
+							"arabic": "جيل",
+							"english": "The generation of",
+							"transliteration": "jeel"
+						},
+						{
+							"arabic": "أهلي",
+							"english": "my parents",
+							"transliteration": "ahli"
+						},
+						{
+							"arabic": "يتذكر",
+							"english": "remembers",
+							"transliteration": "yithakkar"
+						},
+						{
+							"arabic": "ذيك",
+							"english": "those",
+							"transliteration": "theech"
+						},
+						{
+							"arabic": "الأيام",
+							"english": "days",
+							"transliteration": "il-ayyaam"
+						},
+						{
+							"arabic": "الصعبة.",
+							"english": "hard.",
+							"transliteration": "is-sa3ba."
+						}
+					]
+				},
+				{
+					"arabic": "بعد ألفين وثلاثة صار دستور جديد وإنتخابات.",
+					"arabicTashkeel": "بَعد ألفين وثْلاثة صار دُستور جْديد وإنتِخابات.",
+					"english": "After 2003 there was a new constitution and elections.",
+					"transliteration": "ba3d alfeen w-thlaatha saar dustoor jdeed w-intikhaabaat.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "ألفين",
+							"english": "two thousand",
+							"transliteration": "alfeen"
+						},
+						{
+							"arabic": "وثلاثة",
+							"english": "and three",
+							"transliteration": "w-thlaatha"
+						},
+						{
+							"arabic": "صار",
+							"english": "there was",
+							"transliteration": "saar"
+						},
+						{
+							"arabic": "دستور",
+							"english": "a constitution",
+							"transliteration": "dustoor"
+						},
+						{
+							"arabic": "جديد",
+							"english": "new",
+							"transliteration": "jdeed"
+						},
+						{
+							"arabic": "وإنتخابات.",
+							"english": "and elections.",
+							"transliteration": "w-intikhaabaat."
+						}
+					]
+				},
+				{
+					"arabic": "اليوم، الجيل الجديد يتمنى السلام والأمن والإعمار.",
+					"arabicTashkeel": "اليوم، الجيل الجْديد يِتمَنّى السَّلام والأمِن والإعمار.",
+					"english": "Today, the young generation hopes for peace, security and reconstruction.",
+					"transliteration": "il-yoom, ij-jeel ij-jdeed yitmanna is-salaam w-il-amin w-il-i3maar.",
+					"wordAlignments": [
+						{
+							"arabic": "اليوم،",
+							"english": "Today,",
+							"transliteration": "il-yoom,"
+						},
+						{
+							"arabic": "الجيل",
+							"english": "the generation",
+							"transliteration": "ij-jeel"
+						},
+						{
+							"arabic": "الجديد",
+							"english": "new",
+							"transliteration": "ij-jdeed"
+						},
+						{
+							"arabic": "يتمنى",
+							"english": "hopes for",
+							"transliteration": "yitmanna"
+						},
+						{
+							"arabic": "السلام",
+							"english": "peace",
+							"transliteration": "is-salaam"
+						},
+						{
+							"arabic": "والأمن",
+							"english": "and security",
+							"transliteration": "w-il-amin"
+						},
+						{
+							"arabic": "والإعمار.",
+							"english": "and rebuilding.",
+							"transliteration": "w-il-i3maar."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Mosul Today",
+			"sentences": [
+				{
+					"arabic": "بعد التحرير، العوائل النازحة رجعت للموصل.",
+					"arabicTashkeel": "بَعد التَّحرير، العَوائل النّازحة رِجعَت للمَوصِل.",
+					"english": "After the liberation, displaced families returned to Mosul.",
+					"transliteration": "ba3d it-ta7reer, il-3awaa2il in-naaz7a rij3at lil-mawsil.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "التحرير،",
+							"english": "the liberation,",
+							"transliteration": "it-ta7reer,"
+						},
+						{
+							"arabic": "العوائل",
+							"english": "the families",
+							"transliteration": "il-3awaa2il"
+						},
+						{
+							"arabic": "النازحة",
+							"english": "displaced",
+							"transliteration": "in-naaz7a"
+						},
+						{
+							"arabic": "رجعت",
+							"english": "returned",
+							"transliteration": "rij3at"
+						},
+						{
+							"arabic": "للموصل.",
+							"english": "to Mosul.",
+							"transliteration": "lil-mawsil."
+						}
+					]
+				},
+				{
+					"arabic": "إعمار المدينة القديمة وجامعها المشهور بدا.",
+					"arabicTashkeel": "إعمار المَدينة القَديمة وجامِعها المَشهور بِدا.",
+					"english": "The reconstruction of the old city and its famous mosque has started.",
+					"transliteration": "i3maar il-madeena il-gadeema w-jaami3ha il-mash-hoor bida.",
+					"wordAlignments": [
+						{
+							"arabic": "إعمار",
+							"english": "The rebuilding of",
+							"transliteration": "i3maar"
+						},
+						{
+							"arabic": "المدينة",
+							"english": "the city",
+							"transliteration": "il-madeena"
+						},
+						{
+							"arabic": "القديمة",
+							"english": "old",
+							"transliteration": "il-gadeema"
+						},
+						{
+							"arabic": "وجامعها",
+							"english": "and its mosque",
+							"transliteration": "w-jaami3ha"
+						},
+						{
+							"arabic": "المشهور",
+							"english": "famous",
+							"transliteration": "il-mash-hoor"
+						},
+						{
+							"arabic": "بدا.",
+							"english": "has started.",
+							"transliteration": "bida."
+						}
+					]
+				},
+				{
+					"arabic": "الناس يقولون: الذكرى تبقى، بس الحياة تستمر.",
+					"arabicTashkeel": "النّاس يْقولون: الذِّكرى تِبقى، بَس الحَياة تِستِمِر.",
+					"english": "People say: the memory remains, but life goes on.",
+					"transliteration": "in-naas ygooloon: idh-dhikra tibga, bas il-7ayaat tistimirr.",
+					"wordAlignments": [
+						{
+							"arabic": "الناس",
+							"english": "People",
+							"transliteration": "in-naas"
+						},
+						{
+							"arabic": "يقولون:",
+							"english": "say:",
+							"transliteration": "ygooloon:"
+						},
+						{
+							"arabic": "الذكرى",
+							"english": "the memory",
+							"transliteration": "idh-dhikra"
+						},
+						{
+							"arabic": "تبقى،",
+							"english": "remains,",
+							"transliteration": "tibga,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الحياة",
+							"english": "life",
+							"transliteration": "il-7ayaat"
+						},
+						{
+							"arabic": "تستمر.",
+							"english": "continues.",
+							"transliteration": "tistimirr."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is talking with an older Iraqi neighbour who has lived through Iraq's modern history.",
+		"studentRole": "A neighbour learning Iraqi Arabic.",
+		"otherRole": "An older Iraqi man who remembers the monarchy, the wars and the sanctions years.",
+		"goalEnglish": "Ask respectfully about key events (independence, the revolution, the sanctions, rebuilding), what life was like for his generation, and his hopes for the future.",
+		"targetWords": [
+			"Independence",
+			"Revolution",
+			"War",
+			"Sanctions (blockade)",
+			"Generation",
+			"Memory",
+			"Reconstruction",
+			"Peace"
+		]
+	}
+}

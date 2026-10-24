@@ -1,0 +1,2169 @@
+{
+	"vocab": [
+		{
+			"arabic": "أبو",
+			"arabicTashkeel": "أبو",
+			"english": "Father",
+			"transliteration": "abu",
+			"wordAlignments": [
+				{
+					"arabic": "أبو",
+					"english": "Father",
+					"transliteration": "abu"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أم",
+			"arabicTashkeel": "أُم",
+			"english": "Mother",
+			"transliteration": "umm",
+			"wordAlignments": [
+				{
+					"arabic": "أم",
+					"english": "Mother",
+					"transliteration": "umm"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أخ",
+			"arabicTashkeel": "أخ",
+			"english": "Brother",
+			"transliteration": "akh",
+			"wordAlignments": [
+				{
+					"arabic": "أخ",
+					"english": "Brother",
+					"transliteration": "akh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أخت",
+			"arabicTashkeel": "أُخت",
+			"english": "Sister",
+			"transliteration": "ukht",
+			"wordAlignments": [
+				{
+					"arabic": "أخت",
+					"english": "Sister",
+					"transliteration": "ukht"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "جد",
+			"arabicTashkeel": "جَد",
+			"english": "Grandfather",
+			"transliteration": "jadd",
+			"wordAlignments": [
+				{
+					"arabic": "جد",
+					"english": "Grandfather",
+					"transliteration": "jadd"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جدة",
+			"arabicTashkeel": "جَدّة",
+			"english": "Grandmother",
+			"transliteration": "jadda",
+			"wordAlignments": [
+				{
+					"arabic": "جدة",
+					"english": "Grandmother",
+					"transliteration": "jadda"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عم",
+			"arabicTashkeel": "عَم",
+			"english": "Uncle (father's brother)",
+			"transliteration": "3amm",
+			"wordAlignments": [
+				{
+					"arabic": "عم",
+					"english": "Uncle",
+					"transliteration": "3amm"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خال",
+			"arabicTashkeel": "خال",
+			"english": "Uncle (mother's brother)",
+			"transliteration": "khaal",
+			"wordAlignments": [
+				{
+					"arabic": "خال",
+					"english": "Uncle",
+					"transliteration": "khaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عمة",
+			"arabicTashkeel": "عَمّة",
+			"english": "Aunt (father's sister)",
+			"transliteration": "3amma",
+			"wordAlignments": [
+				{
+					"arabic": "عمة",
+					"english": "Aunt",
+					"transliteration": "3amma"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "خالة",
+			"arabicTashkeel": "خالة",
+			"english": "Aunt (mother's sister)",
+			"transliteration": "khaala",
+			"wordAlignments": [
+				{
+					"arabic": "خالة",
+					"english": "Aunt",
+					"transliteration": "khaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ولد",
+			"arabicTashkeel": "وَلَد",
+			"english": "Son",
+			"transliteration": "walad",
+			"wordAlignments": [
+				{
+					"arabic": "ولد",
+					"english": "Son",
+					"transliteration": "walad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بنت",
+			"arabicTashkeel": "بِنت",
+			"english": "Daughter",
+			"transliteration": "bint",
+			"wordAlignments": [
+				{
+					"arabic": "بنت",
+					"english": "Daughter",
+					"transliteration": "bint"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عيلة",
+			"arabicTashkeel": "عيلة",
+			"english": "Family",
+			"transliteration": "3eela",
+			"wordAlignments": [
+				{
+					"arabic": "عيلة",
+					"english": "Family",
+					"transliteration": "3eela"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عيال",
+			"arabicTashkeel": "عِيال",
+			"english": "Kids",
+			"transliteration": "3iyaal",
+			"wordAlignments": [
+				{
+					"arabic": "عيال",
+					"english": "Kids",
+					"transliteration": "3iyaal"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "مرة",
+			"arabicTashkeel": "مَرَة",
+			"english": "Wife",
+			"transliteration": "mara",
+			"wordAlignments": [
+				{
+					"arabic": "مرة",
+					"english": "Wife",
+					"transliteration": "mara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "هادا أبويا.",
+			"arabicTashkeel": "هادا أبويا.",
+			"english": "This is my dad.",
+			"transliteration": "haada abooya.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "أبويا.",
+					"english": "my dad.",
+					"transliteration": "abooya."
+				}
+			],
+			"targetWords": [
+				"Father"
+			]
+		},
+		{
+			"arabic": "هادي أمي.",
+			"arabicTashkeel": "هادي أُمّي.",
+			"english": "This is my mom.",
+			"transliteration": "haadi ummi.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "أمي.",
+					"english": "my mom.",
+					"transliteration": "ummi."
+				}
+			],
+			"targetWords": [
+				"Mother"
+			]
+		},
+		{
+			"arabic": "عندي أخ واحد.",
+			"arabicTashkeel": "عِندي أخ واحِد.",
+			"english": "I have one brother.",
+			"transliteration": "3indi akh waa7id.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "أخ",
+					"english": "a brother",
+					"transliteration": "akh"
+				},
+				{
+					"arabic": "واحد.",
+					"english": "one.",
+					"transliteration": "waa7id."
+				}
+			],
+			"targetWords": [
+				"Brother"
+			]
+		},
+		{
+			"arabic": "عندي أخت وحدة.",
+			"arabicTashkeel": "عِندي أُخت وَحدة.",
+			"english": "I have one sister.",
+			"transliteration": "3indi ukht wa7da.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "أخت",
+					"english": "a sister",
+					"transliteration": "ukht"
+				},
+				{
+					"arabic": "وحدة.",
+					"english": "one.",
+					"transliteration": "wa7da."
+				}
+			],
+			"targetWords": [
+				"Sister"
+			]
+		},
+		{
+			"arabic": "جدي عمره سبعين سنة.",
+			"arabicTashkeel": "جَدّي عُمرُه سَبعين سَنة.",
+			"english": "My grandfather is seventy years old.",
+			"transliteration": "jaddi 3umru sab3een sana.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "عمره",
+					"english": "his age is",
+					"transliteration": "3umru"
+				},
+				{
+					"arabic": "سبعين",
+					"english": "seventy",
+					"transliteration": "sab3een"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "years.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Grandfather"
+			]
+		},
+		{
+			"arabic": "جدتي في البيت.",
+			"arabicTashkeel": "جَدّتي في البيت.",
+			"english": "My grandmother is at home.",
+			"transliteration": "jaddati fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother is",
+					"transliteration": "jaddati"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Grandmother"
+			]
+		},
+		{
+			"arabic": "عمي ساكن في مكة.",
+			"arabicTashkeel": "عَمّي ساكِن في مَكّة.",
+			"english": "My uncle lives in Mecca.",
+			"transliteration": "3ammi saakin fi makka.",
+			"wordAlignments": [
+				{
+					"arabic": "عمي",
+					"english": "My uncle",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "ساكن",
+					"english": "lives",
+					"transliteration": "saakin"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مكة.",
+					"english": "Mecca.",
+					"transliteration": "makka."
+				}
+			],
+			"targetWords": [
+				"Uncle (father's brother)"
+			]
+		},
+		{
+			"arabic": "خالي مدرس.",
+			"arabicTashkeel": "خالي مُدَرِّس.",
+			"english": "My uncle is a teacher.",
+			"transliteration": "khaali mudarris.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle is",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "مدرس.",
+					"english": "a teacher.",
+					"transliteration": "mudarris."
+				}
+			],
+			"targetWords": [
+				"Uncle (mother's brother)"
+			]
+		},
+		{
+			"arabic": "عمتي طيبة مرة.",
+			"arabicTashkeel": "عَمّتي طَيّبة مَرّة.",
+			"english": "My aunt is very kind.",
+			"transliteration": "3ammati tayyiba marra.",
+			"wordAlignments": [
+				{
+					"arabic": "عمتي",
+					"english": "My aunt is",
+					"transliteration": "3ammati"
+				},
+				{
+					"arabic": "طيبة",
+					"english": "kind",
+					"transliteration": "tayyiba"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Aunt (father's sister)"
+			]
+		},
+		{
+			"arabic": "خالتي في المدينة.",
+			"arabicTashkeel": "خالتي في المَدينة.",
+			"english": "My aunt is in Medina.",
+			"transliteration": "khaalati fi il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "خالتي",
+					"english": "My aunt is",
+					"transliteration": "khaalati"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المدينة.",
+					"english": "Medina.",
+					"transliteration": "il-madeena."
+				}
+			],
+			"targetWords": [
+				"Aunt (mother's sister)"
+			]
+		},
+		{
+			"arabic": "ولدي عمره خمس سنين.",
+			"arabicTashkeel": "وَلَدي عُمرُه خَمس سِنين.",
+			"english": "My son is five.",
+			"transliteration": "waladi 3umru khams sineen.",
+			"wordAlignments": [
+				{
+					"arabic": "ولدي",
+					"english": "My son",
+					"transliteration": "waladi"
+				},
+				{
+					"arabic": "عمره",
+					"english": "his age is",
+					"transliteration": "3umru"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sineen."
+				}
+			],
+			"targetWords": [
+				"Son"
+			]
+		},
+		{
+			"arabic": "بنتي طالبة.",
+			"arabicTashkeel": "بِنتي طالبة.",
+			"english": "My daughter is a student.",
+			"transliteration": "binti taaliba.",
+			"wordAlignments": [
+				{
+					"arabic": "بنتي",
+					"english": "My daughter is",
+					"transliteration": "binti"
+				},
+				{
+					"arabic": "طالبة.",
+					"english": "a student.",
+					"transliteration": "taaliba."
+				}
+			],
+			"targetWords": [
+				"Daughter"
+			]
+		},
+		{
+			"arabic": "عيلتي في الطايف.",
+			"arabicTashkeel": "عيلتي في الطّايِف.",
+			"english": "My family is in Taif.",
+			"transliteration": "3eelati fi it-taayif.",
+			"wordAlignments": [
+				{
+					"arabic": "عيلتي",
+					"english": "My family is",
+					"transliteration": "3eelati"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الطايف.",
+					"english": "Taif.",
+					"transliteration": "it-taayif."
+				}
+			],
+			"targetWords": [
+				"Family"
+			]
+		},
+		{
+			"arabic": "العيال في المدرسة.",
+			"arabicTashkeel": "العِيال في المَدرَسة.",
+			"english": "The kids are at school.",
+			"transliteration": "il-3iyaal fi il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids are",
+					"transliteration": "il-3iyaal"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "the school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Kids"
+			]
+		},
+		{
+			"arabic": "مرتي مدرسة.",
+			"arabicTashkeel": "مَرَتي مُدَرِّسة.",
+			"english": "My wife is a teacher.",
+			"transliteration": "marati mudarrisa.",
+			"wordAlignments": [
+				{
+					"arabic": "مرتي",
+					"english": "My wife is",
+					"transliteration": "marati"
+				},
+				{
+					"arabic": "مدرسة.",
+					"english": "a teacher.",
+					"transliteration": "mudarrisa."
+				}
+			],
+			"targetWords": [
+				"Wife"
+			]
+		},
+		{
+			"arabic": "أبويا وأمي في البيت.",
+			"arabicTashkeel": "أبويا وأُمّي في البيت.",
+			"english": "My dad and my mom are at home.",
+			"transliteration": "abooya w-ummi fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "وأمي",
+					"english": "and my mom are",
+					"transliteration": "w-ummi"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Father",
+				"Mother"
+			]
+		},
+		{
+			"arabic": "أخويا أكبر مني.",
+			"arabicTashkeel": "أخويا أكبَر مِنّي.",
+			"english": "My brother is older than me.",
+			"transliteration": "akhooya akbar minni.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويا",
+					"english": "My brother is",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "older",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "مني.",
+					"english": "than me.",
+					"transliteration": "minni."
+				}
+			],
+			"targetWords": [
+				"Brother"
+			]
+		},
+		{
+			"arabic": "أختي أصغر مني.",
+			"arabicTashkeel": "أُختي أصغَر مِنّي.",
+			"english": "My sister is younger than me.",
+			"transliteration": "ukhti asghar minni.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "أصغر",
+					"english": "younger",
+					"transliteration": "asghar"
+				},
+				{
+					"arabic": "مني.",
+					"english": "than me.",
+					"transliteration": "minni."
+				}
+			],
+			"targetWords": [
+				"Sister"
+			]
+		},
+		{
+			"arabic": "عندك إخوان؟",
+			"arabicTashkeel": "عِندَك إخوان؟",
+			"english": "Do you have brothers?",
+			"transliteration": "3indak ikhwaan?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "إخوان؟",
+					"english": "brothers?",
+					"transliteration": "ikhwaan?"
+				}
+			],
+			"targetWords": [
+				"Brother"
+			]
+		},
+		{
+			"arabic": "جدي وجدتي ساكنين معانا.",
+			"arabicTashkeel": "جَدّي وجَدّتي ساكنين مَعانا.",
+			"english": "My grandparents live with us.",
+			"transliteration": "jaddi w-jaddati saakneen ma3aana.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "وجدتي",
+					"english": "and my grandmother",
+					"transliteration": "w-jaddati"
+				},
+				{
+					"arabic": "ساكنين",
+					"english": "live",
+					"transliteration": "saakneen"
+				},
+				{
+					"arabic": "معانا.",
+					"english": "with us.",
+					"transliteration": "ma3aana."
+				}
+			],
+			"targetWords": [
+				"Grandfather",
+				"Grandmother"
+			]
+		},
+		{
+			"arabic": "هادا ولد عمي.",
+			"arabicTashkeel": "هادا وَلَد عَمّي.",
+			"english": "This is my cousin.",
+			"transliteration": "haada walad 3ammi.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "ولد",
+					"english": "the son of",
+					"transliteration": "walad"
+				},
+				{
+					"arabic": "عمي.",
+					"english": "my uncle.",
+					"transliteration": "3ammi."
+				}
+			],
+			"targetWords": [
+				"Son",
+				"Uncle (father's brother)"
+			]
+		},
+		{
+			"arabic": "هادي بنت خالتي.",
+			"arabicTashkeel": "هادي بِنت خالتي.",
+			"english": "This is my cousin.",
+			"transliteration": "haadi bint khaalati.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "بنت",
+					"english": "the daughter of",
+					"transliteration": "bint"
+				},
+				{
+					"arabic": "خالتي.",
+					"english": "my aunt.",
+					"transliteration": "khaalati."
+				}
+			],
+			"targetWords": [
+				"Daughter",
+				"Aunt (mother's sister)"
+			]
+		},
+		{
+			"arabic": "كيف عيلتك؟",
+			"arabicTashkeel": "كيف عيلتَك؟",
+			"english": "How is your family?",
+			"transliteration": "keef 3eelatak?",
+			"wordAlignments": [
+				{
+					"arabic": "كيف",
+					"english": "How is",
+					"transliteration": "keef"
+				},
+				{
+					"arabic": "عيلتك؟",
+					"english": "your family?",
+					"transliteration": "3eelatak?"
+				}
+			],
+			"targetWords": [
+				"Family"
+			]
+		},
+		{
+			"arabic": "عيلتي بخير، الحمد لله.",
+			"arabicTashkeel": "عيلتي بخير، الحَمدُ لله.",
+			"english": "My family is fine, praise be to God.",
+			"transliteration": "3eelati b-khair, il-7amdu lillaah.",
+			"wordAlignments": [
+				{
+					"arabic": "عيلتي",
+					"english": "My family is",
+					"transliteration": "3eelati"
+				},
+				{
+					"arabic": "بخير،",
+					"english": "well,",
+					"transliteration": "b-khair,"
+				},
+				{
+					"arabic": "الحمد",
+					"english": "praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله.",
+					"english": "be to God.",
+					"transliteration": "lillaah."
+				}
+			],
+			"targetWords": [
+				"Family"
+			]
+		},
+		{
+			"arabic": "عندك عيال؟",
+			"arabicTashkeel": "عِندَك عِيال؟",
+			"english": "Do you have kids?",
+			"transliteration": "3indak 3iyaal?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "عيال؟",
+					"english": "kids?",
+					"transliteration": "3iyaal?"
+				}
+			],
+			"targetWords": [
+				"Kids"
+			]
+		},
+		{
+			"arabic": "عندي تلاتة عيال.",
+			"arabicTashkeel": "عِندي تَلاتة عِيال.",
+			"english": "I have three kids.",
+			"transliteration": "3indi talaata 3iyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "تلاتة",
+					"english": "three",
+					"transliteration": "talaata"
+				},
+				{
+					"arabic": "عيال.",
+					"english": "kids.",
+					"transliteration": "3iyaal."
+				}
+			],
+			"targetWords": [
+				"Kids"
+			]
+		},
+		{
+			"arabic": "مرتي من جدة.",
+			"arabicTashkeel": "مَرَتي مِن جِدّة.",
+			"english": "My wife is from Jeddah.",
+			"transliteration": "marati min jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "مرتي",
+					"english": "My wife is",
+					"transliteration": "marati"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Wife"
+			]
+		},
+		{
+			"arabic": "أمي تحب الطبخ.",
+			"arabicTashkeel": "أُمّي تْحِب الطَّبخ.",
+			"english": "My mom loves cooking.",
+			"transliteration": "ummi t7ibb it-tabkh.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "تحب",
+					"english": "loves",
+					"transliteration": "t7ibb"
+				},
+				{
+					"arabic": "الطبخ.",
+					"english": "cooking.",
+					"transliteration": "it-tabkh."
+				}
+			],
+			"targetWords": [
+				"Mother"
+			]
+		},
+		{
+			"arabic": "أبويا يشتغل كتير.",
+			"arabicTashkeel": "أبويا يِشتَغَل كِتير.",
+			"english": "My dad works a lot.",
+			"transliteration": "abooya yishtaghal kteer.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "يشتغل",
+					"english": "works",
+					"transliteration": "yishtaghal"
+				},
+				{
+					"arabic": "كتير.",
+					"english": "a lot.",
+					"transliteration": "kteer."
+				}
+			],
+			"targetWords": [
+				"Father"
+			]
+		},
+		{
+			"arabic": "خالي وخالتي في البيت اليوم.",
+			"arabicTashkeel": "خالي وخالتي في البيت اليوم.",
+			"english": "My uncle and aunt are at home today.",
+			"transliteration": "khaali w-khaalati fi il-bait il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "وخالتي",
+					"english": "and my aunt are",
+					"transliteration": "w-khaalati"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Uncle (mother's brother)",
+				"Aunt (mother's sister)"
+			]
+		},
+		{
+			"arabic": "عمي وعمتي من ينبع.",
+			"arabicTashkeel": "عَمّي وعَمّتي مِن يَنبُع.",
+			"english": "My uncle and aunt are from Yanbu.",
+			"transliteration": "3ammi w-3ammati min yanbu3.",
+			"wordAlignments": [
+				{
+					"arabic": "عمي",
+					"english": "My uncle",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "وعمتي",
+					"english": "and my aunt are",
+					"transliteration": "w-3ammati"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "ينبع.",
+					"english": "Yanbu.",
+					"transliteration": "yanbu3."
+				}
+			],
+			"targetWords": [
+				"Uncle (father's brother)",
+				"Aunt (father's sister)"
+			]
+		},
+		{
+			"arabic": "ولدي وبنتي في المدرسة.",
+			"arabicTashkeel": "وَلَدي وبِنتي في المَدرَسة.",
+			"english": "My son and daughter are at school.",
+			"transliteration": "waladi w-binti fi il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "ولدي",
+					"english": "My son",
+					"transliteration": "waladi"
+				},
+				{
+					"arabic": "وبنتي",
+					"english": "and my daughter are",
+					"transliteration": "w-binti"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "the school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Son",
+				"Daughter"
+			]
+		},
+		{
+			"arabic": "جدتي تحكي قصص حلوة.",
+			"arabicTashkeel": "جَدّتي تِحكي قِصَص حِلوة.",
+			"english": "My grandmother tells nice stories.",
+			"transliteration": "jaddati ti7ki gisas 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother",
+					"transliteration": "jaddati"
+				},
+				{
+					"arabic": "تحكي",
+					"english": "tells",
+					"transliteration": "ti7ki"
+				},
+				{
+					"arabic": "قصص",
+					"english": "stories",
+					"transliteration": "gisas"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "nice.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Grandmother"
+			]
+		},
+		{
+			"arabic": "جدي كان صياد سمك.",
+			"arabicTashkeel": "جَدّي كان صَيّاد سَمَك.",
+			"english": "My grandfather was a fisherman.",
+			"transliteration": "jaddi kaan sayyaad samak.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "صياد",
+					"english": "a fisher",
+					"transliteration": "sayyaad"
+				},
+				{
+					"arabic": "سمك.",
+					"english": "of fish.",
+					"transliteration": "samak."
+				}
+			],
+			"targetWords": [
+				"Grandfather"
+			]
+		},
+		{
+			"arabic": "أختي متزوجة.",
+			"arabicTashkeel": "أُختي مِتزَوّجة.",
+			"english": "My sister is married.",
+			"transliteration": "ukhti mitzawwija.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "متزوجة.",
+					"english": "married.",
+					"transliteration": "mitzawwija."
+				}
+			],
+			"targetWords": [
+				"Sister"
+			]
+		},
+		{
+			"arabic": "العيال بيلعبوا برا.",
+			"arabicTashkeel": "العِيال بيِلعَبوا بَرّا.",
+			"english": "The kids are playing outside.",
+			"transliteration": "il-3iyaal biyil3abu barra.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids are",
+					"transliteration": "il-3iyaal"
+				},
+				{
+					"arabic": "بيلعبوا",
+					"english": "playing",
+					"transliteration": "biyil3abu"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Kids"
+			]
+		},
+		{
+			"arabic": "مرتك من فين؟",
+			"arabicTashkeel": "مَرَتَك مِن فين؟",
+			"english": "Where is your wife from?",
+			"transliteration": "maratak min feen?",
+			"wordAlignments": [
+				{
+					"arabic": "مرتك",
+					"english": "Your wife is",
+					"transliteration": "maratak"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين؟",
+					"english": "where?",
+					"transliteration": "feen?"
+				}
+			],
+			"targetWords": [
+				"Wife"
+			]
+		},
+		{
+			"arabic": "عمتي عندها بنت.",
+			"arabicTashkeel": "عَمّتي عِندَها بِنت.",
+			"english": "My aunt has a daughter.",
+			"transliteration": "3ammati 3indaha bint.",
+			"wordAlignments": [
+				{
+					"arabic": "عمتي",
+					"english": "My aunt",
+					"transliteration": "3ammati"
+				},
+				{
+					"arabic": "عندها",
+					"english": "has",
+					"transliteration": "3indaha"
+				},
+				{
+					"arabic": "بنت.",
+					"english": "a daughter.",
+					"transliteration": "bint."
+				}
+			],
+			"targetWords": [
+				"Aunt (father's sister)",
+				"Daughter"
+			]
+		},
+		{
+			"arabic": "خالي عنده ولد.",
+			"arabicTashkeel": "خالي عِندُه وَلَد.",
+			"english": "My uncle has a son.",
+			"transliteration": "khaali 3indu walad.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "ولد.",
+					"english": "a son.",
+					"transliteration": "walad."
+				}
+			],
+			"targetWords": [
+				"Uncle (mother's brother)",
+				"Son"
+			]
+		},
+		{
+			"arabic": "أبويا عمره ستين سنة.",
+			"arabicTashkeel": "أبويا عُمرُه سِتّين سَنة.",
+			"english": "My dad is sixty years old.",
+			"transliteration": "abooya 3umru sitteen sana.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "عمره",
+					"english": "his age is",
+					"transliteration": "3umru"
+				},
+				{
+					"arabic": "ستين",
+					"english": "sixty",
+					"transliteration": "sitteen"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "years.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Father"
+			]
+		},
+		{
+			"arabic": "أمي عمرها خمسين سنة.",
+			"arabicTashkeel": "أُمّي عُمرَها خَمسين سَنة.",
+			"english": "My mom is fifty years old.",
+			"transliteration": "ummi 3umraha khamseen sana.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "عمرها",
+					"english": "her age is",
+					"transliteration": "3umraha"
+				},
+				{
+					"arabic": "خمسين",
+					"english": "fifty",
+					"transliteration": "khamseen"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "years.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Mother"
+			]
+		},
+		{
+			"arabic": "أخويا طالب.",
+			"arabicTashkeel": "أخويا طالِب.",
+			"english": "My brother is a student.",
+			"transliteration": "akhooya taalib.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويا",
+					"english": "My brother is",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "طالب.",
+					"english": "a student.",
+					"transliteration": "taalib."
+				}
+			],
+			"targetWords": [
+				"Brother"
+			]
+		},
+		{
+			"arabic": "أختي مدرسة.",
+			"arabicTashkeel": "أُختي مُدَرِّسة.",
+			"english": "My sister is a teacher.",
+			"transliteration": "ukhti mudarrisa.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "مدرسة.",
+					"english": "a teacher.",
+					"transliteration": "mudarrisa."
+				}
+			],
+			"targetWords": [
+				"Sister"
+			]
+		},
+		{
+			"arabic": "عيلتي كلها في جدة.",
+			"arabicTashkeel": "عيلتي كُلّها في جِدّة.",
+			"english": "My whole family is in Jeddah.",
+			"transliteration": "3eelati kullaha fi jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "عيلتي",
+					"english": "My family",
+					"transliteration": "3eelati"
+				},
+				{
+					"arabic": "كلها",
+					"english": "all of it is",
+					"transliteration": "kullaha"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Family"
+			]
+		},
+		{
+			"arabic": "جدي مريض.",
+			"arabicTashkeel": "جَدّي مَريض.",
+			"english": "My grandfather is sick.",
+			"transliteration": "jaddi mareedh.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather is",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "مريض.",
+					"english": "sick.",
+					"transliteration": "mareedh."
+				}
+			],
+			"targetWords": [
+				"Grandfather"
+			]
+		},
+		{
+			"arabic": "جدتي عمرها تمانين.",
+			"arabicTashkeel": "جَدّتي عُمرَها تَمانين.",
+			"english": "My grandmother is eighty.",
+			"transliteration": "jaddati 3umraha tamaaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother",
+					"transliteration": "jaddati"
+				},
+				{
+					"arabic": "عمرها",
+					"english": "her age is",
+					"transliteration": "3umraha"
+				},
+				{
+					"arabic": "تمانين.",
+					"english": "eighty.",
+					"transliteration": "tamaaneen."
+				}
+			],
+			"targetWords": [
+				"Grandmother"
+			]
+		},
+		{
+			"arabic": "عمي عنده سيارة كبيرة.",
+			"arabicTashkeel": "عَمّي عِندُه سَيّارة كْبيرة.",
+			"english": "My uncle has a big car.",
+			"transliteration": "3ammi 3indu sayyaara kbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "عمي",
+					"english": "My uncle",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "سيارة",
+					"english": "a car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "kbeera."
+				}
+			],
+			"targetWords": [
+				"Uncle (father's brother)"
+			]
+		},
+		{
+			"arabic": "خالتي ساكنة معانا.",
+			"arabicTashkeel": "خالتي ساكنة مَعانا.",
+			"english": "My aunt lives with us.",
+			"transliteration": "khaalati saakna ma3aana.",
+			"wordAlignments": [
+				{
+					"arabic": "خالتي",
+					"english": "My aunt",
+					"transliteration": "khaalati"
+				},
+				{
+					"arabic": "ساكنة",
+					"english": "lives",
+					"transliteration": "saakna"
+				},
+				{
+					"arabic": "معانا.",
+					"english": "with us.",
+					"transliteration": "ma3aana."
+				}
+			],
+			"targetWords": [
+				"Aunt (mother's sister)"
+			]
+		},
+		{
+			"arabic": "عمتي مدرسة.",
+			"arabicTashkeel": "عَمّتي مُدَرِّسة.",
+			"english": "My aunt is a teacher.",
+			"transliteration": "3ammati mudarrisa.",
+			"wordAlignments": [
+				{
+					"arabic": "عمتي",
+					"english": "My aunt is",
+					"transliteration": "3ammati"
+				},
+				{
+					"arabic": "مدرسة.",
+					"english": "a teacher.",
+					"transliteration": "mudarrisa."
+				}
+			],
+			"targetWords": [
+				"Aunt (father's sister)"
+			]
+		},
+		{
+			"arabic": "بنتي عمرها عشر سنين.",
+			"arabicTashkeel": "بِنتي عُمرَها عَشَر سِنين.",
+			"english": "My daughter is ten.",
+			"transliteration": "binti 3umraha 3ashar sineen.",
+			"wordAlignments": [
+				{
+					"arabic": "بنتي",
+					"english": "My daughter",
+					"transliteration": "binti"
+				},
+				{
+					"arabic": "عمرها",
+					"english": "her age is",
+					"transliteration": "3umraha"
+				},
+				{
+					"arabic": "عشر",
+					"english": "ten",
+					"transliteration": "3ashar"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sineen."
+				}
+			],
+			"targetWords": [
+				"Daughter"
+			]
+		},
+		{
+			"arabic": "إيش إسم ولدك؟",
+			"arabicTashkeel": "إيش إسم وَلَدَك؟",
+			"english": "What is your son's name?",
+			"transliteration": "eesh ism waladak?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسم",
+					"english": "the name of",
+					"transliteration": "ism"
+				},
+				{
+					"arabic": "ولدك؟",
+					"english": "your son?",
+					"transliteration": "waladak?"
+				}
+			],
+			"targetWords": [
+				"Son"
+			]
+		},
+		{
+			"arabic": "مرتي والعيال في البيت.",
+			"arabicTashkeel": "مَرَتي والعِيال في البيت.",
+			"english": "My wife and kids are at home.",
+			"transliteration": "marati w-il-3iyaal fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "مرتي",
+					"english": "My wife",
+					"transliteration": "marati"
+				},
+				{
+					"arabic": "والعيال",
+					"english": "and the kids are",
+					"transliteration": "w-il-3iyaal"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Wife",
+				"Kids"
+			]
+		},
+		{
+			"arabic": "خالي يحب العيال.",
+			"arabicTashkeel": "خالي يْحِب العِيال.",
+			"english": "My uncle loves the kids.",
+			"transliteration": "khaali y7ibb il-3iyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "يحب",
+					"english": "loves",
+					"transliteration": "y7ibb"
+				},
+				{
+					"arabic": "العيال.",
+					"english": "the kids.",
+					"transliteration": "il-3iyaal."
+				}
+			],
+			"targetWords": [
+				"Uncle (mother's brother)",
+				"Kids"
+			]
+		},
+		{
+			"arabic": "مرتي تحب عيلتي.",
+			"arabicTashkeel": "مَرَتي تْحِب عيلتي.",
+			"english": "My wife loves my family.",
+			"transliteration": "marati t7ibb 3eelati.",
+			"wordAlignments": [
+				{
+					"arabic": "مرتي",
+					"english": "My wife",
+					"transliteration": "marati"
+				},
+				{
+					"arabic": "تحب",
+					"english": "loves",
+					"transliteration": "t7ibb"
+				},
+				{
+					"arabic": "عيلتي.",
+					"english": "my family.",
+					"transliteration": "3eelati."
+				}
+			],
+			"targetWords": [
+				"Wife",
+				"Family"
+			]
+		},
+		{
+			"arabic": "أبويا طيب.",
+			"arabicTashkeel": "أبويا طَيِّب.",
+			"english": "My dad is kind.",
+			"transliteration": "abooya tayyib.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad is",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "طيب.",
+					"english": "kind.",
+					"transliteration": "tayyib."
+				}
+			],
+			"targetWords": [
+				"Father"
+			]
+		},
+		{
+			"arabic": "أمي في المطبخ.",
+			"arabicTashkeel": "أُمّي في المَطبَخ.",
+			"english": "My mom is in the kitchen.",
+			"transliteration": "ummi fi il-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom is",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المطبخ.",
+					"english": "the kitchen.",
+					"transliteration": "il-matbakh."
+				}
+			],
+			"targetWords": [
+				"Mother"
+			]
+		},
+		{
+			"arabic": "أخويا ساكن في الرياض.",
+			"arabicTashkeel": "أخويا ساكِن في الرِّياض.",
+			"english": "My brother lives in Riyadh.",
+			"transliteration": "akhooya saakin fi ir-riyaadh.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويا",
+					"english": "My brother",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "ساكن",
+					"english": "lives",
+					"transliteration": "saakin"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الرياض.",
+					"english": "Riyadh.",
+					"transliteration": "ir-riyaadh."
+				}
+			],
+			"targetWords": [
+				"Brother"
+			]
+		},
+		{
+			"arabic": "أختي في الجامعة.",
+			"arabicTashkeel": "أُختي في الجامعة.",
+			"english": "My sister is at university.",
+			"transliteration": "ukhti fi ij-jaam3a.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجامعة.",
+					"english": "the university.",
+					"transliteration": "ij-jaam3a."
+				}
+			],
+			"targetWords": [
+				"Sister"
+			]
+		},
+		{
+			"arabic": "جدي يشرب قهوة كل صبح.",
+			"arabicTashkeel": "جَدّي يِشرَب قَهوة كُل صُبح.",
+			"english": "My grandfather drinks coffee every morning.",
+			"transliteration": "jaddi yishrab gahwa kull sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "يشرب",
+					"english": "drinks",
+					"transliteration": "yishrab"
+				},
+				{
+					"arabic": "قهوة",
+					"english": "coffee",
+					"transliteration": "gahwa"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "صبح.",
+					"english": "morning.",
+					"transliteration": "sub7."
+				}
+			],
+			"targetWords": [
+				"Grandfather"
+			]
+		},
+		{
+			"arabic": "جدتي ساكنة في مكة.",
+			"arabicTashkeel": "جَدّتي ساكنة في مَكّة.",
+			"english": "My grandmother lives in Mecca.",
+			"transliteration": "jaddati saakna fi makka.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother",
+					"transliteration": "jaddati"
+				},
+				{
+					"arabic": "ساكنة",
+					"english": "lives",
+					"transliteration": "saakna"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مكة.",
+					"english": "Mecca.",
+					"transliteration": "makka."
+				}
+			],
+			"targetWords": [
+				"Grandmother"
+			]
+		},
+		{
+			"arabic": "عمي مشغول.",
+			"arabicTashkeel": "عَمّي مَشغول.",
+			"english": "My uncle is busy.",
+			"transliteration": "3ammi mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "عمي",
+					"english": "My uncle is",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Uncle (father's brother)"
+			]
+		},
+		{
+			"arabic": "خالي ساكن في الطايف.",
+			"arabicTashkeel": "خالي ساكِن في الطّايِف.",
+			"english": "My uncle lives in Taif.",
+			"transliteration": "khaali saakin fi it-taayif.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "ساكن",
+					"english": "lives",
+					"transliteration": "saakin"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الطايف.",
+					"english": "Taif.",
+					"transliteration": "it-taayif."
+				}
+			],
+			"targetWords": [
+				"Uncle (mother's brother)"
+			]
+		},
+		{
+			"arabic": "عمتي تحب العيال.",
+			"arabicTashkeel": "عَمّتي تْحِب العِيال.",
+			"english": "My aunt loves the kids.",
+			"transliteration": "3ammati t7ibb il-3iyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "عمتي",
+					"english": "My aunt",
+					"transliteration": "3ammati"
+				},
+				{
+					"arabic": "تحب",
+					"english": "loves",
+					"transliteration": "t7ibb"
+				},
+				{
+					"arabic": "العيال.",
+					"english": "the kids.",
+					"transliteration": "il-3iyaal."
+				}
+			],
+			"targetWords": [
+				"Aunt (father's sister)",
+				"Kids"
+			]
+		},
+		{
+			"arabic": "خالتي عندها تلات بنات.",
+			"arabicTashkeel": "خالتي عِندَها تَلات بَنات.",
+			"english": "My aunt has three daughters.",
+			"transliteration": "khaalati 3indaha talaat banaat.",
+			"wordAlignments": [
+				{
+					"arabic": "خالتي",
+					"english": "My aunt",
+					"transliteration": "khaalati"
+				},
+				{
+					"arabic": "عندها",
+					"english": "has",
+					"transliteration": "3indaha"
+				},
+				{
+					"arabic": "تلات",
+					"english": "three",
+					"transliteration": "talaat"
+				},
+				{
+					"arabic": "بنات.",
+					"english": "daughters.",
+					"transliteration": "banaat."
+				}
+			],
+			"targetWords": [
+				"Aunt (mother's sister)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Family",
+			"sentences": [
+				{
+					"arabic": "عيلتي في جدة.",
+					"arabicTashkeel": "عيلتي في جِدّة.",
+					"english": "My family is in Jeddah.",
+					"transliteration": "3eelati fi jidda.",
+					"wordAlignments": [
+						{
+							"arabic": "عيلتي",
+							"english": "My family is",
+							"transliteration": "3eelati"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "جدة.",
+							"english": "Jeddah.",
+							"transliteration": "jidda."
+						}
+					]
+				},
+				{
+					"arabic": "أبويا مدرس وأمي في البيت.",
+					"arabicTashkeel": "أبويا مُدَرِّس وأُمّي في البيت.",
+					"english": "My dad is a teacher and my mom is at home.",
+					"transliteration": "abooya mudarris w-ummi fi il-bait.",
+					"wordAlignments": [
+						{
+							"arabic": "أبويا",
+							"english": "My dad is",
+							"transliteration": "abooya"
+						},
+						{
+							"arabic": "مدرس",
+							"english": "a teacher",
+							"transliteration": "mudarris"
+						},
+						{
+							"arabic": "وأمي",
+							"english": "and my mom is",
+							"transliteration": "w-ummi"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "البيت.",
+							"english": "the house.",
+							"transliteration": "il-bait."
+						}
+					]
+				},
+				{
+					"arabic": "عندي أخ وأخت.",
+					"arabicTashkeel": "عِندي أخ وأُخت.",
+					"english": "I have a brother and a sister.",
+					"transliteration": "3indi akh w-ukht.",
+					"wordAlignments": [
+						{
+							"arabic": "عندي",
+							"english": "I have",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "أخ",
+							"english": "a brother",
+							"transliteration": "akh"
+						},
+						{
+							"arabic": "وأخت.",
+							"english": "and a sister.",
+							"transliteration": "w-ukht."
+						}
+					]
+				},
+				{
+					"arabic": "جدي وجدتي ساكنين معانا.",
+					"arabicTashkeel": "جَدّي وجَدّتي ساكنين مَعانا.",
+					"english": "My grandparents live with us.",
+					"transliteration": "jaddi w-jaddati saakneen ma3aana.",
+					"wordAlignments": [
+						{
+							"arabic": "جدي",
+							"english": "My grandfather",
+							"transliteration": "jaddi"
+						},
+						{
+							"arabic": "وجدتي",
+							"english": "and my grandmother",
+							"transliteration": "w-jaddati"
+						},
+						{
+							"arabic": "ساكنين",
+							"english": "live",
+							"transliteration": "saakneen"
+						},
+						{
+							"arabic": "معانا.",
+							"english": "with us.",
+							"transliteration": "ma3aana."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Family Photo",
+			"sentences": [
+				{
+					"arabic": "مين هادا؟",
+					"arabicTashkeel": "مين هادا؟",
+					"english": "Who is this?",
+					"transliteration": "meen haada?",
+					"wordAlignments": [
+						{
+							"arabic": "مين",
+							"english": "Who is",
+							"transliteration": "meen"
+						},
+						{
+							"arabic": "هادا؟",
+							"english": "this?",
+							"transliteration": "haada?"
+						}
+					]
+				},
+				{
+					"arabic": "هادا عمي، وهادي عمتي.",
+					"arabicTashkeel": "هادا عَمّي، وهادي عَمّتي.",
+					"english": "This is my uncle, and this is my aunt.",
+					"transliteration": "haada 3ammi, w-haadi 3ammati.",
+					"wordAlignments": [
+						{
+							"arabic": "هادا",
+							"english": "This is",
+							"transliteration": "haada"
+						},
+						{
+							"arabic": "عمي،",
+							"english": "my uncle,",
+							"transliteration": "3ammi,"
+						},
+						{
+							"arabic": "وهادي",
+							"english": "and this is",
+							"transliteration": "w-haadi"
+						},
+						{
+							"arabic": "عمتي.",
+							"english": "my aunt.",
+							"transliteration": "3ammati."
+						}
+					]
+				},
+				{
+					"arabic": "والعيال؟",
+					"arabicTashkeel": "والعِيال؟",
+					"english": "And the kids?",
+					"transliteration": "w-il-3iyaal?",
+					"wordAlignments": [
+						{
+							"arabic": "والعيال؟",
+							"english": "And the kids?",
+							"transliteration": "w-il-3iyaal?"
+						}
+					]
+				},
+				{
+					"arabic": "دول عيال عمي.",
+					"arabicTashkeel": "دول عِيال عَمّي.",
+					"english": "These are my uncle's kids.",
+					"transliteration": "dool 3iyaal 3ammi.",
+					"wordAlignments": [
+						{
+							"arabic": "دول",
+							"english": "These are",
+							"transliteration": "dool"
+						},
+						{
+							"arabic": "عيال",
+							"english": "the kids of",
+							"transliteration": "3iyaal"
+						},
+						{
+							"arabic": "عمي.",
+							"english": "my uncle.",
+							"transliteration": "3ammi."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is visiting a Jeddawi friend's home and they are looking at family photos together.",
+		"studentRole": "A guest learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi host, proud of a big family.",
+		"goalEnglish": "Ask who people in the photos are, and talk about your own parents, brothers and sisters.",
+		"targetWords": [
+			"Father",
+			"Mother",
+			"Brother",
+			"Sister",
+			"Grandfather",
+			"Uncle (father's brother)",
+			"Kids",
+			"Family"
+		]
+	}
+}

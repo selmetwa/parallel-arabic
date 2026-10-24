@@ -1,0 +1,1976 @@
+{
+	"vocab": [
+		{
+			"arabic": "أكبر",
+			"arabicTashkeel": "أكبَر",
+			"english": "Bigger",
+			"transliteration": "akbar",
+			"wordAlignments": [
+				{
+					"arabic": "أكبر",
+					"english": "Bigger",
+					"transliteration": "akbar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أزغر",
+			"arabicTashkeel": "أزغَر",
+			"english": "Smaller",
+			"transliteration": "azghar",
+			"wordAlignments": [
+				{
+					"arabic": "أزغر",
+					"english": "Smaller",
+					"transliteration": "azghar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أحسن",
+			"arabicTashkeel": "أحسَن",
+			"english": "Better",
+			"transliteration": "a7san",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أشين",
+			"arabicTashkeel": "أشيَن",
+			"english": "Worse",
+			"transliteration": "ashyan",
+			"wordAlignments": [
+				{
+					"arabic": "أشين",
+					"english": "Worse",
+					"transliteration": "ashyan"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أطول",
+			"arabicTashkeel": "أطوَل",
+			"english": "Taller / longer",
+			"transliteration": "atwal",
+			"wordAlignments": [
+				{
+					"arabic": "أطول",
+					"english": "Taller",
+					"transliteration": "atwal"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أقصر",
+			"arabicTashkeel": "أقصَر",
+			"english": "Shorter",
+			"transliteration": "agsar",
+			"wordAlignments": [
+				{
+					"arabic": "أقصر",
+					"english": "Shorter",
+					"transliteration": "agsar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أغلى",
+			"arabicTashkeel": "أغلى",
+			"english": "More expensive",
+			"transliteration": "aghla",
+			"wordAlignments": [
+				{
+					"arabic": "أغلى",
+					"english": "More expensive",
+					"transliteration": "aghla"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أرخص",
+			"arabicTashkeel": "أرخَص",
+			"english": "Cheaper",
+			"transliteration": "arkhas",
+			"wordAlignments": [
+				{
+					"arabic": "أرخص",
+					"english": "Cheaper",
+					"transliteration": "arkhas"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أسرع",
+			"arabicTashkeel": "أسرَع",
+			"english": "Faster",
+			"transliteration": "asra3",
+			"wordAlignments": [
+				{
+					"arabic": "أسرع",
+					"english": "Faster",
+					"transliteration": "asra3"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أحلى",
+			"arabicTashkeel": "أحلى",
+			"english": "Nicer",
+			"transliteration": "a7la",
+			"wordAlignments": [
+				{
+					"arabic": "أحلى",
+					"english": "Nicer",
+					"transliteration": "a7la"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أكثر",
+			"arabicTashkeel": "أكثَر",
+			"english": "More",
+			"transliteration": "akthar",
+			"wordAlignments": [
+				{
+					"arabic": "أكثر",
+					"english": "More",
+					"transliteration": "akthar"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "أقل",
+			"arabicTashkeel": "أقَل",
+			"english": "Less",
+			"transliteration": "agall",
+			"wordAlignments": [
+				{
+					"arabic": "أقل",
+					"english": "Less",
+					"transliteration": "agall"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "من",
+			"arabicTashkeel": "مِن",
+			"english": "Than",
+			"transliteration": "min",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "Than",
+					"transliteration": "min"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "نفس",
+			"arabicTashkeel": "نَفس",
+			"english": "The same",
+			"transliteration": "nafs",
+			"wordAlignments": [
+				{
+					"arabic": "نفس",
+					"english": "The same",
+					"transliteration": "nafs"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "الأحسن",
+			"arabicTashkeel": "الأحسَن",
+			"english": "The best",
+			"transliteration": "il-a7san",
+			"wordAlignments": [
+				{
+					"arabic": "الأحسن",
+					"english": "The best",
+					"transliteration": "il-a7san"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "بغداد أكبر من البصرة.",
+			"arabicTashkeel": "بَغداد أكبَر مِن البَصرة.",
+			"english": "Baghdad is bigger than Basra.",
+			"transliteration": "baghdaad akbar min il-basra.",
+			"wordAlignments": [
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad is",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "bigger",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البصرة.",
+					"english": "Basra.",
+					"transliteration": "il-basra."
+				}
+			],
+			"targetWords": [
+				"Bigger",
+				"Than"
+			]
+		},
+		{
+			"arabic": "أختي أزغر مني.",
+			"arabicTashkeel": "أُختي أزغَر مِنّي.",
+			"english": "My sister is smaller than me.",
+			"transliteration": "ukhti azghar minni.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "أزغر",
+					"english": "smaller",
+					"transliteration": "azghar"
+				},
+				{
+					"arabic": "مني.",
+					"english": "than me.",
+					"transliteration": "minni."
+				}
+			],
+			"targetWords": [
+				"Smaller",
+				"Than"
+			]
+		},
+		{
+			"arabic": "الشاي أحسن من القهوة.",
+			"arabicTashkeel": "الشاي أحسَن مِن القَهوة.",
+			"english": "Tea is better than coffee.",
+			"transliteration": "ich-chaay a7san min il-gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاي",
+					"english": "Tea is",
+					"transliteration": "ich-chaay"
+				},
+				{
+					"arabic": "أحسن",
+					"english": "better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "القهوة.",
+					"english": "coffee.",
+					"transliteration": "il-gahwa."
+				}
+			],
+			"targetWords": [
+				"Better",
+				"Than"
+			]
+		},
+		{
+			"arabic": "الجو اليوم أشين من البارحة.",
+			"arabicTashkeel": "الجَو اليوم أشيَن مِن البارحة.",
+			"english": "Today's weather is worse than yesterday.",
+			"transliteration": "ij-jaw il-yoom ashyan min il-baar7a.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "أشين",
+					"english": "worse",
+					"transliteration": "ashyan"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البارحة.",
+					"english": "yesterday.",
+					"transliteration": "il-baar7a."
+				}
+			],
+			"targetWords": [
+				"Worse"
+			]
+		},
+		{
+			"arabic": "أخويه أطول من أبويه.",
+			"arabicTashkeel": "أخويَه أطوَل مِن أبويَه.",
+			"english": "My brother is taller than my dad.",
+			"transliteration": "akhooya atwal min abooya.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويه",
+					"english": "My brother is",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "أطول",
+					"english": "taller",
+					"transliteration": "atwal"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أبويه.",
+					"english": "my dad.",
+					"transliteration": "abooya."
+				}
+			],
+			"targetWords": [
+				"Taller / longer"
+			]
+		},
+		{
+			"arabic": "هذا الطريق أقصر.",
+			"arabicTashkeel": "هَذا الطَّريق أقصَر.",
+			"english": "This road is shorter.",
+			"transliteration": "haatha it-tareeg agsar.",
+			"wordAlignments": [
+				{
+					"arabic": "هذا",
+					"english": "This",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "الطريق",
+					"english": "road is",
+					"transliteration": "it-tareeg"
+				},
+				{
+					"arabic": "أقصر.",
+					"english": "shorter.",
+					"transliteration": "agsar."
+				}
+			],
+			"targetWords": [
+				"Shorter"
+			]
+		},
+		{
+			"arabic": "التلفون أغلى من الكمبيوتر.",
+			"arabicTashkeel": "التَّلَفون أغلى مِن الكُمبيوتَر.",
+			"english": "The phone is more expensive than the computer.",
+			"transliteration": "it-talafoon aghla min il-kombyootar.",
+			"wordAlignments": [
+				{
+					"arabic": "التلفون",
+					"english": "The phone is",
+					"transliteration": "it-talafoon"
+				},
+				{
+					"arabic": "أغلى",
+					"english": "more expensive",
+					"transliteration": "aghla"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الكمبيوتر.",
+					"english": "the computer.",
+					"transliteration": "il-kombyootar."
+				}
+			],
+			"targetWords": [
+				"More expensive",
+				"Than"
+			]
+		},
+		{
+			"arabic": "السوق أرخص من المول.",
+			"arabicTashkeel": "السّوق أرخَص مِن المول.",
+			"english": "The market is cheaper than the mall.",
+			"transliteration": "is-soog arkhas min il-mool.",
+			"wordAlignments": [
+				{
+					"arabic": "السوق",
+					"english": "The market is",
+					"transliteration": "is-soog"
+				},
+				{
+					"arabic": "أرخص",
+					"english": "cheaper",
+					"transliteration": "arkhas"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المول.",
+					"english": "the mall.",
+					"transliteration": "il-mool."
+				}
+			],
+			"targetWords": [
+				"Cheaper"
+			]
+		},
+		{
+			"arabic": "الطيارة أسرع من القطار.",
+			"arabicTashkeel": "الطَّيّارة أسرَع مِن القِطار.",
+			"english": "The plane is faster than the train.",
+			"transliteration": "it-tayyaara asra3 min il-gitaar.",
+			"wordAlignments": [
+				{
+					"arabic": "الطيارة",
+					"english": "The plane is",
+					"transliteration": "it-tayyaara"
+				},
+				{
+					"arabic": "أسرع",
+					"english": "faster",
+					"transliteration": "asra3"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "القطار.",
+					"english": "the train.",
+					"transliteration": "il-gitaar."
+				}
+			],
+			"targetWords": [
+				"Faster"
+			]
+		},
+		{
+			"arabic": "الربيع أحلى من الصيف.",
+			"arabicTashkeel": "الرَّبيع أحلى مِن الصّيف.",
+			"english": "Spring is nicer than summer.",
+			"transliteration": "ir-rabee3 a7la min is-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "الربيع",
+					"english": "Spring is",
+					"transliteration": "ir-rabee3"
+				},
+				{
+					"arabic": "أحلى",
+					"english": "nicer",
+					"transliteration": "a7la"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الصيف.",
+					"english": "summer.",
+					"transliteration": "is-seef."
+				}
+			],
+			"targetWords": [
+				"Nicer"
+			]
+		},
+		{
+			"arabic": "أريد تمن أكثر.",
+			"arabicTashkeel": "أريد تِمَّن أكثَر.",
+			"english": "I want more rice.",
+			"transliteration": "areed timman akthar.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "تمن",
+					"english": "rice",
+					"transliteration": "timman"
+				},
+				{
+					"arabic": "أكثر.",
+					"english": "more.",
+					"transliteration": "akthar."
+				}
+			],
+			"targetWords": [
+				"More"
+			]
+		},
+		{
+			"arabic": "شكر أقل رجاء.",
+			"arabicTashkeel": "شَكَر أقَل رَجاءً.",
+			"english": "Less sugar, please.",
+			"transliteration": "shakar agall rajaa2an.",
+			"wordAlignments": [
+				{
+					"arabic": "شكر",
+					"english": "Sugar",
+					"transliteration": "shakar"
+				},
+				{
+					"arabic": "أقل",
+					"english": "less",
+					"transliteration": "agall"
+				},
+				{
+					"arabic": "رجاء.",
+					"english": "please.",
+					"transliteration": "rajaa2an."
+				}
+			],
+			"targetWords": [
+				"Less"
+			]
+		},
+		{
+			"arabic": "القميصين نفس الشي.",
+			"arabicTashkeel": "القَميصَين نَفس الشي.",
+			"english": "The two shirts are the same.",
+			"transliteration": "il-gameeseen nafs ish-shi.",
+			"wordAlignments": [
+				{
+					"arabic": "القميصين",
+					"english": "The two shirts are",
+					"transliteration": "il-gameeseen"
+				},
+				{
+					"arabic": "نفس",
+					"english": "the same",
+					"transliteration": "nafs"
+				},
+				{
+					"arabic": "الشي.",
+					"english": "thing.",
+					"transliteration": "ish-shi."
+				}
+			],
+			"targetWords": [
+				"The same"
+			]
+		},
+		{
+			"arabic": "هذا المطعم الأحسن.",
+			"arabicTashkeel": "هَذا المَطعَم الأحسَن.",
+			"english": "This restaurant is the best.",
+			"transliteration": "haatha il-mat3am il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "هذا",
+					"english": "This",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "المطعم",
+					"english": "restaurant is",
+					"transliteration": "il-mat3am"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"The best"
+			]
+		},
+		{
+			"arabic": "ياهو الأكبر؟",
+			"arabicTashkeel": "ياهو الأكبَر؟",
+			"english": "Which is bigger?",
+			"transliteration": "yaahu il-akbar?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "الأكبر؟",
+					"english": "bigger?",
+					"transliteration": "il-akbar?"
+				}
+			],
+			"targetWords": [
+				"Bigger"
+			]
+		},
+		{
+			"arabic": "البيت الجديد أكبر من العتيق.",
+			"arabicTashkeel": "البيت الجْديد أكبَر مِن العَتيق.",
+			"english": "The new house is bigger than the old one.",
+			"transliteration": "il-beet ij-jdeed akbar min il-3ateeg.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jdeed"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "bigger",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "العتيق.",
+					"english": "the old one.",
+					"transliteration": "il-3ateeg."
+				}
+			],
+			"targetWords": [
+				"Bigger"
+			]
+		},
+		{
+			"arabic": "الغرفة أزغر من المطبخ.",
+			"arabicTashkeel": "الغُرفة أزغَر مِن المَطبَخ.",
+			"english": "The room is smaller than the kitchen.",
+			"transliteration": "il-ghurfa azghar min il-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرفة",
+					"english": "The room is",
+					"transliteration": "il-ghurfa"
+				},
+				{
+					"arabic": "أزغر",
+					"english": "smaller",
+					"transliteration": "azghar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المطبخ.",
+					"english": "the kitchen.",
+					"transliteration": "il-matbakh."
+				}
+			],
+			"targetWords": [
+				"Smaller"
+			]
+		},
+		{
+			"arabic": "آني أحسن.",
+			"arabicTashkeel": "آني أحسَن.",
+			"english": "I feel better.",
+			"transliteration": "aani a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "آني",
+					"english": "I am",
+					"transliteration": "aani"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		},
+		{
+			"arabic": "الزحمة أشين المسا.",
+			"arabicTashkeel": "الزَّحمة أشيَن المَسا.",
+			"english": "The traffic is worse in the evening.",
+			"transliteration": "iz-za7ma ashyan il-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "الزحمة",
+					"english": "The traffic is",
+					"transliteration": "iz-za7ma"
+				},
+				{
+					"arabic": "أشين",
+					"english": "worse",
+					"transliteration": "ashyan"
+				},
+				{
+					"arabic": "المسا.",
+					"english": "in the evening.",
+					"transliteration": "il-masa."
+				}
+			],
+			"targetWords": [
+				"Worse"
+			]
+		},
+		{
+			"arabic": "دجلة أطول من نهر مدينتنا.",
+			"arabicTashkeel": "دِجلة أطوَل مِن نَهَر مَدينتنا.",
+			"english": "The Tigris is longer than the river in our town.",
+			"transliteration": "dijla atwal min nahar madeenatna.",
+			"wordAlignments": [
+				{
+					"arabic": "دجلة",
+					"english": "The Tigris is",
+					"transliteration": "dijla"
+				},
+				{
+					"arabic": "أطول",
+					"english": "longer",
+					"transliteration": "atwal"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "نهر",
+					"english": "the river of",
+					"transliteration": "nahar"
+				},
+				{
+					"arabic": "مدينتنا.",
+					"english": "our town.",
+					"transliteration": "madeenatna."
+				}
+			],
+			"targetWords": [
+				"Taller / longer"
+			]
+		},
+		{
+			"arabic": "الشتا أقصر من الصيف.",
+			"arabicTashkeel": "الشِّتا أقصَر مِن الصّيف.",
+			"english": "Winter is shorter than summer.",
+			"transliteration": "ish-shita agsar min is-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "الشتا",
+					"english": "Winter is",
+					"transliteration": "ish-shita"
+				},
+				{
+					"arabic": "أقصر",
+					"english": "shorter",
+					"transliteration": "agsar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الصيف.",
+					"english": "summer.",
+					"transliteration": "is-seef."
+				}
+			],
+			"targetWords": [
+				"Shorter",
+				"Than"
+			]
+		},
+		{
+			"arabic": "اللحم أغلى من الدجاج.",
+			"arabicTashkeel": "اللَّحَم أغلى مِن الدِّجاج.",
+			"english": "Meat is more expensive than chicken.",
+			"transliteration": "il-la7am aghla min id-dijaaj.",
+			"wordAlignments": [
+				{
+					"arabic": "اللحم",
+					"english": "Meat is",
+					"transliteration": "il-la7am"
+				},
+				{
+					"arabic": "أغلى",
+					"english": "more expensive",
+					"transliteration": "aghla"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الدجاج.",
+					"english": "chicken.",
+					"transliteration": "id-dijaaj."
+				}
+			],
+			"targetWords": [
+				"More expensive"
+			]
+		},
+		{
+			"arabic": "الكيا أرخص من التكسي.",
+			"arabicTashkeel": "الكَيّا أرخَص مِن التَّكسي.",
+			"english": "The minibus is cheaper than the taxi.",
+			"transliteration": "il-kayya arkhas min it-taksi.",
+			"wordAlignments": [
+				{
+					"arabic": "الكيا",
+					"english": "The minibus is",
+					"transliteration": "il-kayya"
+				},
+				{
+					"arabic": "أرخص",
+					"english": "cheaper",
+					"transliteration": "arkhas"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "التكسي.",
+					"english": "the taxi.",
+					"transliteration": "it-taksi."
+				}
+			],
+			"targetWords": [
+				"Cheaper",
+				"Than"
+			]
+		},
+		{
+			"arabic": "منو أسرع؟",
+			"arabicTashkeel": "مِنو أسرَع؟",
+			"english": "Who is faster?",
+			"transliteration": "minu asra3?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "أسرع؟",
+					"english": "faster?",
+					"transliteration": "asra3?"
+				}
+			],
+			"targetWords": [
+				"Faster"
+			]
+		},
+		{
+			"arabic": "هذا النفنوف أحلى.",
+			"arabicTashkeel": "هَذا النَّفنوف أحلى.",
+			"english": "This dress is nicer.",
+			"transliteration": "haatha in-nafnoof a7la.",
+			"wordAlignments": [
+				{
+					"arabic": "هذا",
+					"english": "This",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "النفنوف",
+					"english": "dress is",
+					"transliteration": "in-nafnoof"
+				},
+				{
+					"arabic": "أحلى.",
+					"english": "nicer.",
+					"transliteration": "a7la."
+				}
+			],
+			"targetWords": [
+				"Nicer"
+			]
+		},
+		{
+			"arabic": "أحب الشاي أكثر من القهوة.",
+			"arabicTashkeel": "أحِب الشاي أكثَر مِن القَهوة.",
+			"english": "I like tea more than coffee.",
+			"transliteration": "a7ibb ich-chaay akthar min il-gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الشاي",
+					"english": "tea",
+					"transliteration": "ich-chaay"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "more",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "القهوة.",
+					"english": "coffee.",
+					"transliteration": "il-gahwa."
+				}
+			],
+			"targetWords": [
+				"More"
+			]
+		},
+		{
+			"arabic": "آكل أقل بالصيف.",
+			"arabicTashkeel": "آكُل أقَل بالصّيف.",
+			"english": "I eat less in summer.",
+			"transliteration": "aakul agall bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakul"
+				},
+				{
+					"arabic": "أقل",
+					"english": "less",
+					"transliteration": "agall"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Less"
+			]
+		},
+		{
+			"arabic": "نروح لنفس المدرسة.",
+			"arabicTashkeel": "نْروح لنَفس المَدرَسة.",
+			"english": "We go to the same school.",
+			"transliteration": "nrooh l-nafs il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "نروح",
+					"english": "We go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "لنفس",
+					"english": "to the same",
+					"transliteration": "l-nafs"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"The same"
+			]
+		},
+		{
+			"arabic": "أكل أمي الأحسن.",
+			"arabicTashkeel": "أكِل أُمّي الأحسَن.",
+			"english": "Mom's food is the best.",
+			"transliteration": "akil ummi il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "The food of",
+					"transliteration": "akil"
+				},
+				{
+					"arabic": "أمي",
+					"english": "my mom is",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"The best"
+			]
+		},
+		{
+			"arabic": "السيارة أكبر من الباص؟",
+			"arabicTashkeel": "السَّيّارة أكبَر مِن الباص؟",
+			"english": "Is the car bigger than the bus?",
+			"transliteration": "is-sayyaara akbar min il-paas?",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "Is the car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "bigger",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الباص؟",
+					"english": "the bus?",
+					"transliteration": "il-paas?"
+				}
+			],
+			"targetWords": [
+				"Bigger"
+			]
+		},
+		{
+			"arabic": "أزغر ولد بالصف.",
+			"arabicTashkeel": "أزغَر وَلَد بالصَّف.",
+			"english": "The smallest boy in the class.",
+			"transliteration": "azghar walad bis-saff.",
+			"wordAlignments": [
+				{
+					"arabic": "أزغر",
+					"english": "The smallest",
+					"transliteration": "azghar"
+				},
+				{
+					"arabic": "ولد",
+					"english": "boy",
+					"transliteration": "walad"
+				},
+				{
+					"arabic": "بالصف.",
+					"english": "in the class.",
+					"transliteration": "bis-saff."
+				}
+			],
+			"targetWords": [
+				"Smaller"
+			]
+		},
+		{
+			"arabic": "ياهو أحسن، السوق لو المول؟",
+			"arabicTashkeel": "ياهو أحسَن، السّوق لو المول؟",
+			"english": "Which is better, the market or the mall?",
+			"transliteration": "yaahu a7san, is-soog law il-mool?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "أحسن،",
+					"english": "better,",
+					"transliteration": "a7san,"
+				},
+				{
+					"arabic": "السوق",
+					"english": "the market",
+					"transliteration": "is-soog"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "المول؟",
+					"english": "the mall?",
+					"transliteration": "il-mool?"
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		},
+		{
+			"arabic": "النشلة أشين من الحرارة.",
+			"arabicTashkeel": "النَّشلة أشيَن مِن الحَرارة.",
+			"english": "The cold is worse than the fever.",
+			"transliteration": "in-nashla ashyan min il-7araara.",
+			"wordAlignments": [
+				{
+					"arabic": "النشلة",
+					"english": "The cold is",
+					"transliteration": "in-nashla"
+				},
+				{
+					"arabic": "أشين",
+					"english": "worse",
+					"transliteration": "ashyan"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الحرارة.",
+					"english": "the fever.",
+					"transliteration": "il-7araara."
+				}
+			],
+			"targetWords": [
+				"Worse"
+			]
+		},
+		{
+			"arabic": "الليل أطول بالشتا.",
+			"arabicTashkeel": "الليل أطوَل بالشِّتا.",
+			"english": "The night is longer in winter.",
+			"transliteration": "il-leel atwal bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "الليل",
+					"english": "The night is",
+					"transliteration": "il-leel"
+				},
+				{
+					"arabic": "أطول",
+					"english": "longer",
+					"transliteration": "atwal"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"Taller / longer"
+			]
+		},
+		{
+			"arabic": "شعري أقصر من شعرك.",
+			"arabicTashkeel": "شَعري أقصَر مِن شَعرَك.",
+			"english": "My hair is shorter than yours.",
+			"transliteration": "sha3ri agsar min sha3rak.",
+			"wordAlignments": [
+				{
+					"arabic": "شعري",
+					"english": "My hair is",
+					"transliteration": "sha3ri"
+				},
+				{
+					"arabic": "أقصر",
+					"english": "shorter",
+					"transliteration": "agsar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "شعرك.",
+					"english": "your hair.",
+					"transliteration": "sha3rak."
+				}
+			],
+			"targetWords": [
+				"Shorter"
+			]
+		},
+		{
+			"arabic": "كلشي أغلى هسه.",
+			"arabicTashkeel": "كُلشي أغلى هَسَّه.",
+			"english": "Everything is more expensive now.",
+			"transliteration": "kulshi aghla hassa.",
+			"wordAlignments": [
+				{
+					"arabic": "كلشي",
+					"english": "Everything is",
+					"transliteration": "kulshi"
+				},
+				{
+					"arabic": "أغلى",
+					"english": "more expensive",
+					"transliteration": "aghla"
+				},
+				{
+					"arabic": "هسه.",
+					"english": "now.",
+					"transliteration": "hassa."
+				}
+			],
+			"targetWords": [
+				"More expensive"
+			]
+		},
+		{
+			"arabic": "عندك شي أرخص؟",
+			"arabicTashkeel": "عِندَك شي أرخَص؟",
+			"english": "Do you have something cheaper?",
+			"transliteration": "3indak shi arkhas?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "شي",
+					"english": "something",
+					"transliteration": "shi"
+				},
+				{
+					"arabic": "أرخص؟",
+					"english": "cheaper?",
+					"transliteration": "arkhas?"
+				}
+			],
+			"targetWords": [
+				"Cheaper"
+			]
+		},
+		{
+			"arabic": "الطريق الجديد أسرع.",
+			"arabicTashkeel": "الطَّريق الجْديد أسرَع.",
+			"english": "The new road is faster.",
+			"transliteration": "it-tareeg ij-jdeed asra3.",
+			"wordAlignments": [
+				{
+					"arabic": "الطريق",
+					"english": "The road",
+					"transliteration": "it-tareeg"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jdeed"
+				},
+				{
+					"arabic": "أسرع.",
+					"english": "faster.",
+					"transliteration": "asra3."
+				}
+			],
+			"targetWords": [
+				"Faster"
+			]
+		},
+		{
+			"arabic": "البصرة أحلى بالشتا.",
+			"arabicTashkeel": "البَصرة أحلى بالشِّتا.",
+			"english": "Basra is nicer in winter.",
+			"transliteration": "il-basra a7la bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "البصرة",
+					"english": "Basra is",
+					"transliteration": "il-basra"
+				},
+				{
+					"arabic": "أحلى",
+					"english": "nicer",
+					"transliteration": "a7la"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"Nicer"
+			]
+		},
+		{
+			"arabic": "إدرس أكثر!",
+			"arabicTashkeel": "إدرُس أكثَر!",
+			"english": "Study more!",
+			"transliteration": "idrus akthar!",
+			"wordAlignments": [
+				{
+					"arabic": "إدرس",
+					"english": "Study",
+					"transliteration": "idrus"
+				},
+				{
+					"arabic": "أكثر!",
+					"english": "more!",
+					"transliteration": "akthar!"
+				}
+			],
+			"targetWords": [
+				"More"
+			]
+		},
+		{
+			"arabic": "أقل من عشر دقايق.",
+			"arabicTashkeel": "أقَل مِن عَشر دَقايِق.",
+			"english": "Less than ten minutes.",
+			"transliteration": "agall min 3ashir dagaayig.",
+			"wordAlignments": [
+				{
+					"arabic": "أقل",
+					"english": "Less",
+					"transliteration": "agall"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "عشر",
+					"english": "ten",
+					"transliteration": "3ashir"
+				},
+				{
+					"arabic": "دقايق.",
+					"english": "minutes.",
+					"transliteration": "dagaayig."
+				}
+			],
+			"targetWords": [
+				"Less",
+				"Than"
+			]
+		},
+		{
+			"arabic": "نفس السعر.",
+			"arabicTashkeel": "نَفس السِّعِر.",
+			"english": "The same price.",
+			"transliteration": "nafs is-si3ir.",
+			"wordAlignments": [
+				{
+					"arabic": "نفس",
+					"english": "The same",
+					"transliteration": "nafs"
+				},
+				{
+					"arabic": "السعر.",
+					"english": "price.",
+					"transliteration": "is-si3ir."
+				}
+			],
+			"targetWords": [
+				"The same"
+			]
+		},
+		{
+			"arabic": "أحسن يوم بالإسبوع الجمعة.",
+			"arabicTashkeel": "أحسَن يوم بالإسبوع الجُمعة.",
+			"english": "The best day of the week is Friday.",
+			"transliteration": "a7san yoom bil-isboo3 ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "The best",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "يوم",
+					"english": "day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "بالإسبوع",
+					"english": "in the week is",
+					"transliteration": "bil-isboo3"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"The best"
+			]
+		},
+		{
+			"arabic": "مدينتي أكبر من مدينتك.",
+			"arabicTashkeel": "مَدينتي أكبَر مِن مَدينتَك.",
+			"english": "My city is bigger than yours.",
+			"transliteration": "madeenti akbar min madeentak.",
+			"wordAlignments": [
+				{
+					"arabic": "مدينتي",
+					"english": "My city is",
+					"transliteration": "madeenti"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "bigger",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "مدينتك.",
+					"english": "your city.",
+					"transliteration": "madeentak."
+				}
+			],
+			"targetWords": [
+				"Bigger"
+			]
+		},
+		{
+			"arabic": "إنطيني قياس أزغر.",
+			"arabicTashkeel": "إنطيني قِياس أزغَر.",
+			"english": "Give me a smaller size.",
+			"transliteration": "inteeni giyaas azghar.",
+			"wordAlignments": [
+				{
+					"arabic": "إنطيني",
+					"english": "Give me",
+					"transliteration": "inteeni"
+				},
+				{
+					"arabic": "قياس",
+					"english": "a size",
+					"transliteration": "giyaas"
+				},
+				{
+					"arabic": "أزغر.",
+					"english": "smaller.",
+					"transliteration": "azghar."
+				}
+			],
+			"targetWords": [
+				"Smaller"
+			]
+		},
+		{
+			"arabic": "أحسن من ما يجي أبد.",
+			"arabicTashkeel": "أحسَن مِن ما يِجي أبَد.",
+			"english": "Better late than never.",
+			"transliteration": "a7san min ma yiji abad.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يجي",
+					"english": "it comes",
+					"transliteration": "yiji"
+				},
+				{
+					"arabic": "أبد.",
+					"english": "never.",
+					"transliteration": "abad."
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		},
+		{
+			"arabic": "أشين وأشين.",
+			"arabicTashkeel": "أشيَن وأشيَن.",
+			"english": "Worse and worse.",
+			"transliteration": "ashyan w-ashyan.",
+			"wordAlignments": [
+				{
+					"arabic": "أشين",
+					"english": "Worse",
+					"transliteration": "ashyan"
+				},
+				{
+					"arabic": "وأشين.",
+					"english": "and worse.",
+					"transliteration": "w-ashyan."
+				}
+			],
+			"targetWords": [
+				"Worse"
+			]
+		},
+		{
+			"arabic": "هو أطول منك؟",
+			"arabicTashkeel": "هوَّ أطوَل مِنَّك؟",
+			"english": "Is he taller than you?",
+			"transliteration": "huwwa atwal minnak?",
+			"wordAlignments": [
+				{
+					"arabic": "هو",
+					"english": "Is he",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "أطول",
+					"english": "taller",
+					"transliteration": "atwal"
+				},
+				{
+					"arabic": "منك؟",
+					"english": "than you?",
+					"transliteration": "minnak?"
+				}
+			],
+			"targetWords": [
+				"Taller / longer"
+			]
+		},
+		{
+			"arabic": "الطريق الأقصر.",
+			"arabicTashkeel": "الطَّريق الأقصَر.",
+			"english": "The shorter road.",
+			"transliteration": "it-tareeg il-agsar.",
+			"wordAlignments": [
+				{
+					"arabic": "الطريق",
+					"english": "The road",
+					"transliteration": "it-tareeg"
+				},
+				{
+					"arabic": "الأقصر.",
+					"english": "shorter.",
+					"transliteration": "il-agsar."
+				}
+			],
+			"targetWords": [
+				"Shorter"
+			]
+		},
+		{
+			"arabic": "الذهب أغلى من الفضة.",
+			"arabicTashkeel": "الذَّهَب أغلى مِن الفِضّة.",
+			"english": "Gold is more expensive than silver.",
+			"transliteration": "idh-dhahab aghla min il-fidhdha.",
+			"wordAlignments": [
+				{
+					"arabic": "الذهب",
+					"english": "Gold is",
+					"transliteration": "idh-dhahab"
+				},
+				{
+					"arabic": "أغلى",
+					"english": "more expensive",
+					"transliteration": "aghla"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفضة.",
+					"english": "silver.",
+					"transliteration": "il-fidhdha."
+				}
+			],
+			"targetWords": [
+				"More expensive"
+			]
+		},
+		{
+			"arabic": "أرخص مطعم.",
+			"arabicTashkeel": "أرخَص مَطعَم.",
+			"english": "The cheapest restaurant.",
+			"transliteration": "arkhas mat3am.",
+			"wordAlignments": [
+				{
+					"arabic": "أرخص",
+					"english": "The cheapest",
+					"transliteration": "arkhas"
+				},
+				{
+					"arabic": "مطعم.",
+					"english": "restaurant.",
+					"transliteration": "mat3am."
+				}
+			],
+			"targetWords": [
+				"Cheaper"
+			]
+		},
+		{
+			"arabic": "أسرع، تأخرنا!",
+			"arabicTashkeel": "أسرَع، تأخَّرنا!",
+			"english": "Faster, we're late!",
+			"transliteration": "asra3, t2akhkharna!",
+			"wordAlignments": [
+				{
+					"arabic": "أسرع،",
+					"english": "Faster,",
+					"transliteration": "asra3,"
+				},
+				{
+					"arabic": "تأخرنا!",
+					"english": "we're late!",
+					"transliteration": "t2akhkharna!"
+				}
+			],
+			"targetWords": [
+				"Faster"
+			]
+		},
+		{
+			"arabic": "أحلى مدينة.",
+			"arabicTashkeel": "أحلى مَدينة.",
+			"english": "The nicest city.",
+			"transliteration": "a7la madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "أحلى",
+					"english": "The nicest",
+					"transliteration": "a7la"
+				},
+				{
+					"arabic": "مدينة.",
+					"english": "city.",
+					"transliteration": "madeena."
+				}
+			],
+			"targetWords": [
+				"Nicer"
+			]
+		},
+		{
+			"arabic": "أكثر لو أقل؟",
+			"arabicTashkeel": "أكثَر لو أقَل؟",
+			"english": "More or less?",
+			"transliteration": "akthar law agall?",
+			"wordAlignments": [
+				{
+					"arabic": "أكثر",
+					"english": "More",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "أقل؟",
+					"english": "less?",
+					"transliteration": "agall?"
+				}
+			],
+			"targetWords": [
+				"More",
+				"Less"
+			]
+		},
+		{
+			"arabic": "إحنا نفس العمر.",
+			"arabicTashkeel": "إحنا نَفس العُمُر.",
+			"english": "We're the same age.",
+			"transliteration": "i7na nafs il-3umur.",
+			"wordAlignments": [
+				{
+					"arabic": "إحنا",
+					"english": "We are",
+					"transliteration": "i7na"
+				},
+				{
+					"arabic": "نفس",
+					"english": "the same",
+					"transliteration": "nafs"
+				},
+				{
+					"arabic": "العمر.",
+					"english": "age.",
+					"transliteration": "il-3umur."
+				}
+			],
+			"targetWords": [
+				"The same"
+			]
+		},
+		{
+			"arabic": "هو الأحسن.",
+			"arabicTashkeel": "هوَّ الأحسَن.",
+			"english": "He is the best player.",
+			"transliteration": "huwwa il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "هو",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"The best"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Baghdad or Basra?",
+			"sentences": [
+				{
+					"arabic": "بغداد أكبر من البصرة، والزحمة أشين.",
+					"arabicTashkeel": "بَغداد أكبَر مِن البَصرة، والزَّحمة أشيَن.",
+					"english": "Baghdad is bigger than Basra, and the traffic is worse.",
+					"transliteration": "baghdaad akbar min il-basra, w-iz-za7ma ashyan.",
+					"wordAlignments": [
+						{
+							"arabic": "بغداد",
+							"english": "Baghdad is",
+							"transliteration": "baghdaad"
+						},
+						{
+							"arabic": "أكبر",
+							"english": "bigger",
+							"transliteration": "akbar"
+						},
+						{
+							"arabic": "من",
+							"english": "than",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "البصرة،",
+							"english": "Basra,",
+							"transliteration": "il-basra,"
+						},
+						{
+							"arabic": "والزحمة",
+							"english": "and the traffic is",
+							"transliteration": "w-iz-za7ma"
+						},
+						{
+							"arabic": "أشين.",
+							"english": "worse.",
+							"transliteration": "ashyan."
+						}
+					]
+				},
+				{
+					"arabic": "بس الحياة بالبصرة أرخص وأهدى.",
+					"arabicTashkeel": "بَس الحَياة بالبَصرة أرخَص وأهدى.",
+					"english": "But life in Basra is cheaper and quieter.",
+					"transliteration": "bas il-7ayaat bil-basra arkhas w-ahda.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الحياة",
+							"english": "life",
+							"transliteration": "il-7ayaat"
+						},
+						{
+							"arabic": "بالبصرة",
+							"english": "in Basra is",
+							"transliteration": "bil-basra"
+						},
+						{
+							"arabic": "أرخص",
+							"english": "cheaper",
+							"transliteration": "arkhas"
+						},
+						{
+							"arabic": "وأهدى.",
+							"english": "and quieter.",
+							"transliteration": "w-ahda."
+						}
+					]
+				},
+				{
+					"arabic": "بالنسبة إلي، بغداد الأحسن.",
+					"arabicTashkeel": "بالنِّسبة إلي، بَغداد الأحسَن.",
+					"english": "For me, Baghdad is the best.",
+					"transliteration": "bin-nisba ili, baghdaad il-a7san.",
+					"wordAlignments": [
+						{
+							"arabic": "بالنسبة",
+							"english": "As for",
+							"transliteration": "bin-nisba"
+						},
+						{
+							"arabic": "إلي،",
+							"english": "me,",
+							"transliteration": "ili,"
+						},
+						{
+							"arabic": "بغداد",
+							"english": "Baghdad is",
+							"transliteration": "baghdaad"
+						},
+						{
+							"arabic": "الأحسن.",
+							"english": "the best.",
+							"transliteration": "il-a7san."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Two Phones",
+			"sentences": [
+				{
+					"arabic": "هذا التلفون أغلى، بس أسرع.",
+					"arabicTashkeel": "هَذا التَّلَفون أغلى، بَس أسرَع.",
+					"english": "This phone is more expensive, but it's faster.",
+					"transliteration": "haatha it-talafoon aghla, bas asra3.",
+					"wordAlignments": [
+						{
+							"arabic": "هذا",
+							"english": "This",
+							"transliteration": "haatha"
+						},
+						{
+							"arabic": "التلفون",
+							"english": "phone is",
+							"transliteration": "it-talafoon"
+						},
+						{
+							"arabic": "أغلى،",
+							"english": "more expensive,",
+							"transliteration": "aghla,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "أسرع.",
+							"english": "faster.",
+							"transliteration": "asra3."
+						}
+					]
+				},
+				{
+					"arabic": "والثاني أرخص وأحلى.",
+					"arabicTashkeel": "والثّاني أرخَص وأحلى.",
+					"english": "The other one is cheaper and nicer.",
+					"transliteration": "w-ith-thaani arkhas w-a7la.",
+					"wordAlignments": [
+						{
+							"arabic": "والثاني",
+							"english": "And the other is",
+							"transliteration": "w-ith-thaani"
+						},
+						{
+							"arabic": "أرخص",
+							"english": "cheaper",
+							"transliteration": "arkhas"
+						},
+						{
+							"arabic": "وأحلى.",
+							"english": "and nicer.",
+							"transliteration": "w-a7la."
+						}
+					]
+				},
+				{
+					"arabic": "أفضل الأرخص.",
+					"arabicTashkeel": "أفَضِّل الأرخَص.",
+					"english": "I prefer the cheaper one.",
+					"transliteration": "afadhdhil il-arkhas.",
+					"wordAlignments": [
+						{
+							"arabic": "أفضل",
+							"english": "I prefer",
+							"transliteration": "afadhdhil"
+						},
+						{
+							"arabic": "الأرخص.",
+							"english": "the cheaper one.",
+							"transliteration": "il-arkhas."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is deciding between two flats to rent in Baghdad and asks an Iraqi friend for advice.",
+		"studentRole": "Someone choosing a flat, learning Iraqi Arabic.",
+		"otherRole": "A practical Iraqi friend who compares everything.",
+		"goalEnglish": "Compare the two flats (bigger, cheaper, nicer, nearer) and decide which one is the best.",
+		"targetWords": [
+			"Bigger",
+			"Smaller",
+			"Cheaper",
+			"More expensive",
+			"Better",
+			"Nicer",
+			"Than",
+			"The best"
+		]
+	}
+}

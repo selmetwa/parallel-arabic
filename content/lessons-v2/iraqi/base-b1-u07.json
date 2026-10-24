@@ -1,0 +1,2098 @@
+{
+	"vocab": [
+		{
+			"arabic": "صلاة",
+			"arabicTashkeel": "صَلاة",
+			"english": "Prayer",
+			"transliteration": "salaat",
+			"wordAlignments": [
+				{
+					"arabic": "صلاة",
+					"english": "Prayer",
+					"transliteration": "salaat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "جامع",
+			"arabicTashkeel": "جامِع",
+			"english": "Mosque",
+			"transliteration": "jaami3",
+			"wordAlignments": [
+				{
+					"arabic": "جامع",
+					"english": "Mosque",
+					"transliteration": "jaami3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "كنيسة",
+			"arabicTashkeel": "كَنيسة",
+			"english": "Church",
+			"transliteration": "kaneesa",
+			"wordAlignments": [
+				{
+					"arabic": "كنيسة",
+					"english": "Church",
+					"transliteration": "kaneesa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صوم",
+			"arabicTashkeel": "صوم",
+			"english": "Fasting",
+			"transliteration": "soom",
+			"wordAlignments": [
+				{
+					"arabic": "صوم",
+					"english": "Fasting",
+					"transliteration": "soom"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "زيارة",
+			"arabicTashkeel": "زِيارة",
+			"english": "Pilgrimage (to shrines)",
+			"transliteration": "ziyaara",
+			"wordAlignments": [
+				{
+					"arabic": "زيارة",
+					"english": "Visit",
+					"transliteration": "ziyaara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عيد",
+			"arabicTashkeel": "عيد",
+			"english": "Eid (holiday)",
+			"transliteration": "3eed",
+			"wordAlignments": [
+				{
+					"arabic": "عيد",
+					"english": "Eid",
+					"transliteration": "3eed"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عيدية",
+			"arabicTashkeel": "عيدية",
+			"english": "Eid money",
+			"transliteration": "3eediyya",
+			"wordAlignments": [
+				{
+					"arabic": "عيدية",
+					"english": "Eid money",
+					"transliteration": "3eediyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عزيمة",
+			"arabicTashkeel": "عَزيمة",
+			"english": "Feast / invitation",
+			"transliteration": "3azeema",
+			"wordAlignments": [
+				{
+					"arabic": "عزيمة",
+					"english": "Invitation",
+					"transliteration": "3azeema"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "فاتحة",
+			"arabicTashkeel": "فاتِحة",
+			"english": "Wake (mourning)",
+			"transliteration": "faati7a",
+			"wordAlignments": [
+				{
+					"arabic": "فاتحة",
+					"english": "Wake",
+					"transliteration": "faati7a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عرس",
+			"arabicTashkeel": "عِرِس",
+			"english": "Wedding",
+			"transliteration": "3iris",
+			"wordAlignments": [
+				{
+					"arabic": "عرس",
+					"english": "Wedding",
+					"transliteration": "3iris"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خطوبة",
+			"arabicTashkeel": "خُطوبة",
+			"english": "Engagement",
+			"transliteration": "khutooba",
+			"wordAlignments": [
+				{
+					"arabic": "خطوبة",
+					"english": "Engagement",
+					"transliteration": "khutooba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ضيف",
+			"arabicTashkeel": "ضَيف",
+			"english": "Guest",
+			"transliteration": "dheef",
+			"wordAlignments": [
+				{
+					"arabic": "ضيف",
+					"english": "Guest",
+					"transliteration": "dheef"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ضيافة",
+			"arabicTashkeel": "ضِيافة",
+			"english": "Hospitality",
+			"transliteration": "dhiyaafa",
+			"wordAlignments": [
+				{
+					"arabic": "ضيافة",
+					"english": "Hospitality",
+					"transliteration": "dhiyaafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صدقة",
+			"arabicTashkeel": "صَدَقة",
+			"english": "Charity",
+			"transliteration": "sadaga",
+			"wordAlignments": [
+				{
+					"arabic": "صدقة",
+					"english": "Charity",
+					"transliteration": "sadaga"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دعاء",
+			"arabicTashkeel": "دُعاء",
+			"english": "Supplication",
+			"transliteration": "du3aa2",
+			"wordAlignments": [
+				{
+					"arabic": "دعاء",
+					"english": "Prayer",
+					"transliteration": "du3aa2"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "جدي يروح للجامع لكل صلاة.",
+			"arabicTashkeel": "جَدّي يْروح للجامِع لكُل صَلاة.",
+			"english": "My grandfather goes to the mosque for every prayer.",
+			"transliteration": "jiddi yrooh lij-jaami3 l-kull salaat.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jiddi"
+				},
+				{
+					"arabic": "يروح",
+					"english": "goes",
+					"transliteration": "yrooh"
+				},
+				{
+					"arabic": "للجامع",
+					"english": "to the mosque",
+					"transliteration": "lij-jaami3"
+				},
+				{
+					"arabic": "لكل",
+					"english": "for every",
+					"transliteration": "l-kull"
+				},
+				{
+					"arabic": "صلاة.",
+					"english": "prayer.",
+					"transliteration": "salaat."
+				}
+			],
+			"targetWords": [
+				"Prayer",
+				"Mosque"
+			]
+		},
+		{
+			"arabic": "الكنيسة اللي بمنطقتنا عتيقة هواية.",
+			"arabicTashkeel": "الكَنيسة اللي بمَنطِقتنا عَتيقة هْوايَة.",
+			"english": "The church in our neighbourhood is very old.",
+			"transliteration": "il-kaneesa illi b-mantigatna 3ateega hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الكنيسة",
+					"english": "The church",
+					"transliteration": "il-kaneesa"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that is",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "بمنطقتنا",
+					"english": "in our neighbourhood is",
+					"transliteration": "b-mantigatna"
+				},
+				{
+					"arabic": "عتيقة",
+					"english": "old",
+					"transliteration": "3ateega"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Church"
+			]
+		},
+		{
+			"arabic": "الصوم بالصيف صعب.",
+			"arabicTashkeel": "الصّوم بالصّيف صَعُب.",
+			"english": "Fasting in summer is hard.",
+			"transliteration": "is-soom bis-seef sa3ub.",
+			"wordAlignments": [
+				{
+					"arabic": "الصوم",
+					"english": "Fasting",
+					"transliteration": "is-soom"
+				},
+				{
+					"arabic": "بالصيف",
+					"english": "in summer is",
+					"transliteration": "bis-seef"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3ub."
+				}
+			],
+			"targetWords": [
+				"Fasting"
+			]
+		},
+		{
+			"arabic": "ملايين يمشون لكربلاء للزيارة.",
+			"arabicTashkeel": "مَلايين يِمشون لكَربَلاء للزِّيارة.",
+			"english": "Millions walk to Karbala for the pilgrimage.",
+			"transliteration": "malaayeen yimshoon l-karbalaa2 liz-ziyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "ملايين",
+					"english": "Millions",
+					"transliteration": "malaayeen"
+				},
+				{
+					"arabic": "يمشون",
+					"english": "walk",
+					"transliteration": "yimshoon"
+				},
+				{
+					"arabic": "لكربلاء",
+					"english": "to Karbala",
+					"transliteration": "l-karbalaa2"
+				},
+				{
+					"arabic": "للزيارة.",
+					"english": "for the pilgrimage.",
+					"transliteration": "liz-ziyaara."
+				}
+			],
+			"targetWords": [
+				"Pilgrimage (to shrines)"
+			]
+		},
+		{
+			"arabic": "عيد مبارك!",
+			"arabicTashkeel": "عيد مُبارَك!",
+			"english": "Happy Eid!",
+			"transliteration": "3eed mubaarak!",
+			"wordAlignments": [
+				{
+					"arabic": "عيد",
+					"english": "Eid",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "مبارك!",
+					"english": "blessed!",
+					"transliteration": "mubaarak!"
+				}
+			],
+			"targetWords": [
+				"Eid (holiday)"
+			]
+		},
+		{
+			"arabic": "الجهال ينتظرون العيدية.",
+			"arabicTashkeel": "الجْهال يِنتِظرون العيدية.",
+			"english": "The kids wait for their Eid money.",
+			"transliteration": "ij-jhaal yintidhroon il-3eediyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الجهال",
+					"english": "The kids",
+					"transliteration": "ij-jhaal"
+				},
+				{
+					"arabic": "ينتظرون",
+					"english": "wait for",
+					"transliteration": "yintidhroon"
+				},
+				{
+					"arabic": "العيدية.",
+					"english": "the Eid money.",
+					"transliteration": "il-3eediyya."
+				}
+			],
+			"targetWords": [
+				"Eid money"
+			]
+		},
+		{
+			"arabic": "عدنا عزيمة ببيت عمي الجمعة.",
+			"arabicTashkeel": "عِدنا عَزيمة ببيت عَمّي الجُمعة.",
+			"english": "We have a feast at my uncle's on Friday.",
+			"transliteration": "3idna 3azeema b-beet 3ammi ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "عدنا",
+					"english": "We have",
+					"transliteration": "3idna"
+				},
+				{
+					"arabic": "عزيمة",
+					"english": "a feast",
+					"transliteration": "3azeema"
+				},
+				{
+					"arabic": "ببيت",
+					"english": "at the house of",
+					"transliteration": "b-beet"
+				},
+				{
+					"arabic": "عمي",
+					"english": "my uncle",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "on Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"Feast / invitation"
+			]
+		},
+		{
+			"arabic": "الفاتحة تبقى ثلاث أيام.",
+			"arabicTashkeel": "الفاتِحة تِبقى ثْلاث أيّام.",
+			"english": "The wake lasts three days.",
+			"transliteration": "il-faati7a tibga thlath ayyaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الفاتحة",
+					"english": "The wake",
+					"transliteration": "il-faati7a"
+				},
+				{
+					"arabic": "تبقى",
+					"english": "lasts",
+					"transliteration": "tibga"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "أيام.",
+					"english": "days.",
+					"transliteration": "ayyaam."
+				}
+			],
+			"targetWords": [
+				"Wake (mourning)"
+			]
+		},
+		{
+			"arabic": "عرس إبن عمي الإسبوع الجاي.",
+			"arabicTashkeel": "عِرِس إبن عَمّي الإسبوع الجاي.",
+			"english": "My cousin's wedding is next week.",
+			"transliteration": "3iris ibin 3ammi il-isboo3 ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "عرس",
+					"english": "The wedding of",
+					"transliteration": "3iris"
+				},
+				{
+					"arabic": "إبن",
+					"english": "the son of",
+					"transliteration": "ibin"
+				},
+				{
+					"arabic": "عمي",
+					"english": "my uncle is",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "الإسبوع",
+					"english": "the week",
+					"transliteration": "il-isboo3"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Wedding"
+			]
+		},
+		{
+			"arabic": "الخطوبة كانت ببيت العروس.",
+			"arabicTashkeel": "الخُطوبة كانَت ببيت العَروس.",
+			"english": "The engagement was at the bride's house.",
+			"transliteration": "il-khutooba chaanat b-beet il-3aroos.",
+			"wordAlignments": [
+				{
+					"arabic": "الخطوبة",
+					"english": "The engagement",
+					"transliteration": "il-khutooba"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "ببيت",
+					"english": "at the house of",
+					"transliteration": "b-beet"
+				},
+				{
+					"arabic": "العروس.",
+					"english": "the bride.",
+					"transliteration": "il-3aroos."
+				}
+			],
+			"targetWords": [
+				"Engagement"
+			]
+		},
+		{
+			"arabic": "الضيف أول شي.",
+			"arabicTashkeel": "الضَّيف أوَّل شي.",
+			"english": "The guest comes first.",
+			"transliteration": "idh-dheef awwal shi.",
+			"wordAlignments": [
+				{
+					"arabic": "الضيف",
+					"english": "The guest",
+					"transliteration": "idh-dheef"
+				},
+				{
+					"arabic": "أول",
+					"english": "comes first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shi."
+				}
+			],
+			"targetWords": [
+				"Guest"
+			]
+		},
+		{
+			"arabic": "الضيافة العراقية مشهورة.",
+			"arabicTashkeel": "الضِّيافة العِراقية مَشهورة.",
+			"english": "Iraqi hospitality is famous.",
+			"transliteration": "idh-dhiyaafa il-3iraaqiyya mash-hoora.",
+			"wordAlignments": [
+				{
+					"arabic": "الضيافة",
+					"english": "Hospitality",
+					"transliteration": "idh-dhiyaafa"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "مشهورة.",
+					"english": "famous.",
+					"transliteration": "mash-hoora."
+				}
+			],
+			"targetWords": [
+				"Hospitality"
+			]
+		},
+		{
+			"arabic": "إنطي صدقة للفقرا.",
+			"arabicTashkeel": "إنطي صَدَقة للفُقَرا.",
+			"english": "Give charity to the poor.",
+			"transliteration": "inti sadaga lil-fugara.",
+			"wordAlignments": [
+				{
+					"arabic": "إنطي",
+					"english": "Give",
+					"transliteration": "inti"
+				},
+				{
+					"arabic": "صدقة",
+					"english": "charity",
+					"transliteration": "sadaga"
+				},
+				{
+					"arabic": "للفقرا.",
+					"english": "to the poor.",
+					"transliteration": "lil-fugara."
+				}
+			],
+			"targetWords": [
+				"Charity"
+			]
+		},
+		{
+			"arabic": "دعاء أمي يحميني.",
+			"arabicTashkeel": "دُعاء أُمّي يِحميني.",
+			"english": "My mother's supplication protects me.",
+			"transliteration": "du3aa2 ummi yi7meeni.",
+			"wordAlignments": [
+				{
+					"arabic": "دعاء",
+					"english": "The prayer of",
+					"transliteration": "du3aa2"
+				},
+				{
+					"arabic": "أمي",
+					"english": "my mother",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "يحميني.",
+					"english": "protects me.",
+					"transliteration": "yi7meeni."
+				}
+			],
+			"targetWords": [
+				"Supplication"
+			]
+		},
+		{
+			"arabic": "صلاة الجمعة الظهر.",
+			"arabicTashkeel": "صَلاة الجُمعة الظُّهُر.",
+			"english": "The Friday prayer is at noon.",
+			"transliteration": "salaat ij-jum3a idh-dhuhur.",
+			"wordAlignments": [
+				{
+					"arabic": "صلاة",
+					"english": "The prayer of",
+					"transliteration": "salaat"
+				},
+				{
+					"arabic": "الجمعة",
+					"english": "Friday is",
+					"transliteration": "ij-jum3a"
+				},
+				{
+					"arabic": "الظهر.",
+					"english": "at noon.",
+					"transliteration": "idh-dhuhur."
+				}
+			],
+			"targetWords": [
+				"Prayer"
+			]
+		},
+		{
+			"arabic": "الجامع مليان يوم الجمعة.",
+			"arabicTashkeel": "الجامِع مَليان يوم الجُمعة.",
+			"english": "The mosque is full on Friday.",
+			"transliteration": "ij-jaami3 malyaan yoom ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الجامع",
+					"english": "The mosque is",
+					"transliteration": "ij-jaami3"
+				},
+				{
+					"arabic": "مليان",
+					"english": "full",
+					"transliteration": "malyaan"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"Mosque"
+			]
+		},
+		{
+			"arabic": "المسيحيين يروحون للكنيسة يوم الأحد.",
+			"arabicTashkeel": "المَسيحيين يْروحون للكَنيسة يوم الأحَد.",
+			"english": "Christians go to church on Sunday.",
+			"transliteration": "il-masee7iyyeen yroo7oon lil-kaneesa yoom il-a7ad.",
+			"wordAlignments": [
+				{
+					"arabic": "المسيحيين",
+					"english": "Christians",
+					"transliteration": "il-masee7iyyeen"
+				},
+				{
+					"arabic": "يروحون",
+					"english": "go",
+					"transliteration": "yroo7oon"
+				},
+				{
+					"arabic": "للكنيسة",
+					"english": "to church",
+					"transliteration": "lil-kaneesa"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الأحد.",
+					"english": "Sunday.",
+					"transliteration": "il-a7ad."
+				}
+			],
+			"targetWords": [
+				"Church"
+			]
+		},
+		{
+			"arabic": "الصوم يبدي من الفجر.",
+			"arabicTashkeel": "الصّوم يِبدي مِن الفَجِر.",
+			"english": "Fasting starts at dawn.",
+			"transliteration": "is-soom yibdi min il-fajir.",
+			"wordAlignments": [
+				{
+					"arabic": "الصوم",
+					"english": "Fasting",
+					"transliteration": "is-soom"
+				},
+				{
+					"arabic": "يبدي",
+					"english": "starts",
+					"transliteration": "yibdi"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفجر.",
+					"english": "dawn.",
+					"transliteration": "il-fajir."
+				}
+			],
+			"targetWords": [
+				"Fasting"
+			]
+		},
+		{
+			"arabic": "رحنا زيارة للنجف.",
+			"arabicTashkeel": "رِحنا زِيارة للنَّجَف.",
+			"english": "We went on a pilgrimage to Najaf.",
+			"transliteration": "ri7na ziyaara lin-najaf.",
+			"wordAlignments": [
+				{
+					"arabic": "رحنا",
+					"english": "We went",
+					"transliteration": "ri7na"
+				},
+				{
+					"arabic": "زيارة",
+					"english": "on a pilgrimage",
+					"transliteration": "ziyaara"
+				},
+				{
+					"arabic": "للنجف.",
+					"english": "to Najaf.",
+					"transliteration": "lin-najaf."
+				}
+			],
+			"targetWords": [
+				"Pilgrimage (to shrines)"
+			]
+		},
+		{
+			"arabic": "بالعيد نلبس ملابس جديدة.",
+			"arabicTashkeel": "بالعيد نِلبَس مَلابِس جْديدة.",
+			"english": "On Eid we wear new clothes.",
+			"transliteration": "bil-3eed nilbas malaabis jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "بالعيد",
+					"english": "On Eid",
+					"transliteration": "bil-3eed"
+				},
+				{
+					"arabic": "نلبس",
+					"english": "we wear",
+					"transliteration": "nilbas"
+				},
+				{
+					"arabic": "ملابس",
+					"english": "clothes",
+					"transliteration": "malaabis"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Eid (holiday)"
+			]
+		},
+		{
+			"arabic": "جدتي تنطي كل واحد عيدية.",
+			"arabicTashkeel": "جِدَّتي تِنطي كُل واحِد عيدية.",
+			"english": "My grandmother gives everyone Eid money.",
+			"transliteration": "jiddati tinti kull waa7id 3eediyya.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother",
+					"transliteration": "jiddati"
+				},
+				{
+					"arabic": "تنطي",
+					"english": "gives",
+					"transliteration": "tinti"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "عيدية.",
+					"english": "Eid money.",
+					"transliteration": "3eediyya."
+				}
+			],
+			"targetWords": [
+				"Eid money"
+			]
+		},
+		{
+			"arabic": "العزيمة بيها دولمة وقوزي.",
+			"arabicTashkeel": "العَزيمة بيها دولمة وقوزي.",
+			"english": "The feast had dolma and quzi.",
+			"transliteration": "il-3azeema beeha dolma w-qoozi.",
+			"wordAlignments": [
+				{
+					"arabic": "العزيمة",
+					"english": "The feast",
+					"transliteration": "il-3azeema"
+				},
+				{
+					"arabic": "بيها",
+					"english": "had",
+					"transliteration": "beeha"
+				},
+				{
+					"arabic": "دولمة",
+					"english": "dolma",
+					"transliteration": "dolma"
+				},
+				{
+					"arabic": "وقوزي.",
+					"english": "and quzi.",
+					"transliteration": "w-qoozi."
+				}
+			],
+			"targetWords": [
+				"Feast / invitation"
+			]
+		},
+		{
+			"arabic": "رحنا للفاتحة نعزي.",
+			"arabicTashkeel": "رِحنا للفاتِحة نْعَزّي.",
+			"english": "We went to the wake to give condolences.",
+			"transliteration": "ri7na lil-faati7a n3azzi.",
+			"wordAlignments": [
+				{
+					"arabic": "رحنا",
+					"english": "We went",
+					"transliteration": "ri7na"
+				},
+				{
+					"arabic": "للفاتحة",
+					"english": "to the wake",
+					"transliteration": "lil-faati7a"
+				},
+				{
+					"arabic": "نعزي.",
+					"english": "to give condolences.",
+					"transliteration": "n3azzi."
+				}
+			],
+			"targetWords": [
+				"Wake (mourning)"
+			]
+		},
+		{
+			"arabic": "الأعراس العراقية طويلة.",
+			"arabicTashkeel": "الأعراس العِراقية طْويلة.",
+			"english": "Iraqi weddings are long.",
+			"transliteration": "il-a3raas il-3iraaqiyya tweela.",
+			"wordAlignments": [
+				{
+					"arabic": "الأعراس",
+					"english": "Weddings",
+					"transliteration": "il-a3raas"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi are",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "tweela."
+				}
+			],
+			"targetWords": [
+				"Wedding"
+			]
+		},
+		{
+			"arabic": "إشتروا المحابس للخطوبة.",
+			"arabicTashkeel": "إشتِروا المَحابِس للخُطوبة.",
+			"english": "They bought the rings for the engagement.",
+			"transliteration": "ishtiraw il-ma7aabis lil-khutooba.",
+			"wordAlignments": [
+				{
+					"arabic": "إشتروا",
+					"english": "They bought",
+					"transliteration": "ishtiraw"
+				},
+				{
+					"arabic": "المحابس",
+					"english": "the rings",
+					"transliteration": "il-ma7aabis"
+				},
+				{
+					"arabic": "للخطوبة.",
+					"english": "for the engagement.",
+					"transliteration": "lil-khutooba."
+				}
+			],
+			"targetWords": [
+				"Engagement"
+			]
+		},
+		{
+			"arabic": "أهلا بالضيف!",
+			"arabicTashkeel": "أهلاً بالضَّيف!",
+			"english": "Welcome, dear guest!",
+			"transliteration": "ahlan bidh-dheef!",
+			"wordAlignments": [
+				{
+					"arabic": "أهلا",
+					"english": "Welcome",
+					"transliteration": "ahlan"
+				},
+				{
+					"arabic": "بالضيف!",
+					"english": "to the guest!",
+					"transliteration": "bidh-dheef!"
+				}
+			],
+			"targetWords": [
+				"Guest"
+			]
+		},
+		{
+			"arabic": "شكرا على الضيافة.",
+			"arabicTashkeel": "شُكراً عَلى الضِّيافة.",
+			"english": "Thank you for your hospitality.",
+			"transliteration": "shukran 3ala idh-dhiyaafa.",
+			"wordAlignments": [
+				{
+					"arabic": "شكرا",
+					"english": "Thank you",
+					"transliteration": "shukran"
+				},
+				{
+					"arabic": "على",
+					"english": "for",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الضيافة.",
+					"english": "the hospitality.",
+					"transliteration": "idh-dhiyaafa."
+				}
+			],
+			"targetWords": [
+				"Hospitality"
+			]
+		},
+		{
+			"arabic": "الصدقة برمضان.",
+			"arabicTashkeel": "الصَّدَقة برَمَضان.",
+			"english": "Charity in Ramadan.",
+			"transliteration": "is-sadaga b-ramadhaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الصدقة",
+					"english": "Charity",
+					"transliteration": "is-sadaga"
+				},
+				{
+					"arabic": "برمضان.",
+					"english": "in Ramadan.",
+					"transliteration": "b-ramadhaan."
+				}
+			],
+			"targetWords": [
+				"Charity"
+			]
+		},
+		{
+			"arabic": "إدعيلي.",
+			"arabicTashkeel": "إدعيلي.",
+			"english": "Pray for me.",
+			"transliteration": "id3eeli.",
+			"wordAlignments": [
+				{
+					"arabic": "إدعيلي.",
+					"english": "Pray for me.",
+					"transliteration": "id3eeli."
+				}
+			],
+			"targetWords": [
+				"Supplication"
+			]
+		},
+		{
+			"arabic": "بعد الصلاة نشرب شاي.",
+			"arabicTashkeel": "بَعد الصَّلاة نِشرَب شاي.",
+			"english": "After the prayer we drink tea.",
+			"transliteration": "ba3d is-salaat nishrab chaay.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الصلاة",
+					"english": "the prayer",
+					"transliteration": "is-salaat"
+				},
+				{
+					"arabic": "نشرب",
+					"english": "we drink",
+					"transliteration": "nishrab"
+				},
+				{
+					"arabic": "شاي.",
+					"english": "tea.",
+					"transliteration": "chaay."
+				}
+			],
+			"targetWords": [
+				"Prayer"
+			]
+		},
+		{
+			"arabic": "الحضرة قريبة من الجامع.",
+			"arabicTashkeel": "الحَضرة قْريبة مِن الجامِع.",
+			"english": "The Kadhimiya shrine is near the mosque.",
+			"transliteration": "il-7adhra greeba min ij-jaami3.",
+			"wordAlignments": [
+				{
+					"arabic": "الحضرة",
+					"english": "The shrine",
+					"transliteration": "il-7adhra"
+				},
+				{
+					"arabic": "قريبة",
+					"english": "is near",
+					"transliteration": "greeba"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الجامع.",
+					"english": "the mosque.",
+					"transliteration": "ij-jaami3."
+				}
+			],
+			"targetWords": [
+				"Mosque"
+			]
+		},
+		{
+			"arabic": "جوقة الكنيسة تغني حلو.",
+			"arabicTashkeel": "جَوقة الكَنيسة تْغَنّي حِلو.",
+			"english": "The church choir sings beautifully.",
+			"transliteration": "jawgat il-kaneesa tghanni 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "جوقة",
+					"english": "The choir of",
+					"transliteration": "jawgat"
+				},
+				{
+					"arabic": "الكنيسة",
+					"english": "the church",
+					"transliteration": "il-kaneesa"
+				},
+				{
+					"arabic": "تغني",
+					"english": "sings",
+					"transliteration": "tghanni"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautifully.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Church"
+			]
+		},
+		{
+			"arabic": "إنت صايم اليوم؟",
+			"arabicTashkeel": "إنتَ صايِم اليوم؟",
+			"english": "Are you fasting today?",
+			"transliteration": "inta saayim il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "صايم",
+					"english": "fasting",
+					"transliteration": "saayim"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Fasting"
+			]
+		},
+		{
+			"arabic": "زيارة الأربعين.",
+			"arabicTashkeel": "زِيارة الأربَعين.",
+			"english": "The Arbaeen pilgrimage.",
+			"transliteration": "ziyaarat il-arba3een.",
+			"wordAlignments": [
+				{
+					"arabic": "زيارة",
+					"english": "The pilgrimage of",
+					"transliteration": "ziyaarat"
+				},
+				{
+					"arabic": "الأربعين.",
+					"english": "the Arbaeen.",
+					"transliteration": "il-arba3een."
+				}
+			],
+			"targetWords": [
+				"Pilgrimage (to shrines)"
+			]
+		},
+		{
+			"arabic": "عيد الأضحى بالصيف هالسنة.",
+			"arabicTashkeel": "عيد الأضحى بالصّيف هالسَّنة.",
+			"english": "Eid al-Adha is in summer this year.",
+			"transliteration": "3eed il-adh7a bis-seef has-sana.",
+			"wordAlignments": [
+				{
+					"arabic": "عيد",
+					"english": "Eid",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "الأضحى",
+					"english": "al-Adha is",
+					"transliteration": "il-adh7a"
+				},
+				{
+					"arabic": "بالصيف",
+					"english": "in summer",
+					"transliteration": "bis-seef"
+				},
+				{
+					"arabic": "هالسنة.",
+					"english": "this year.",
+					"transliteration": "has-sana."
+				}
+			],
+			"targetWords": [
+				"Eid (holiday)"
+			]
+		},
+		{
+			"arabic": "شكد عيدية أخذت؟",
+			"arabicTashkeel": "شْكَد عيدية أخَذِت؟",
+			"english": "How much Eid money did you get?",
+			"transliteration": "shgadd 3eediyya akhadhit?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "عيدية",
+					"english": "Eid money",
+					"transliteration": "3eediyya"
+				},
+				{
+					"arabic": "أخذت؟",
+					"english": "did you get?",
+					"transliteration": "akhadhit?"
+				}
+			],
+			"targetWords": [
+				"Eid money"
+			]
+		},
+		{
+			"arabic": "عزيمة كبيرة للضيوف.",
+			"arabicTashkeel": "عَزيمة كْبيرة للضّيوف.",
+			"english": "A big feast for the guests.",
+			"transliteration": "3azeema chbeera lidh-dhyoof.",
+			"wordAlignments": [
+				{
+					"arabic": "عزيمة",
+					"english": "A feast",
+					"transliteration": "3azeema"
+				},
+				{
+					"arabic": "كبيرة",
+					"english": "big",
+					"transliteration": "chbeera"
+				},
+				{
+					"arabic": "للضيوف.",
+					"english": "for the guests.",
+					"transliteration": "lidh-dhyoof."
+				}
+			],
+			"targetWords": [
+				"Feast / invitation",
+				"Guest"
+			]
+		},
+		{
+			"arabic": "الفاتحة بالجامع.",
+			"arabicTashkeel": "الفاتِحة بالجامِع.",
+			"english": "The wake is at the mosque.",
+			"transliteration": "il-faati7a bij-jaami3.",
+			"wordAlignments": [
+				{
+					"arabic": "الفاتحة",
+					"english": "The wake is",
+					"transliteration": "il-faati7a"
+				},
+				{
+					"arabic": "بالجامع.",
+					"english": "at the mosque.",
+					"transliteration": "bij-jaami3."
+				}
+			],
+			"targetWords": [
+				"Wake (mourning)",
+				"Mosque"
+			]
+		},
+		{
+			"arabic": "العرس بقاعة.",
+			"arabicTashkeel": "العِرِس بقاعة.",
+			"english": "The wedding is in a hall.",
+			"transliteration": "il-3iris b-gaa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "العرس",
+					"english": "The wedding is",
+					"transliteration": "il-3iris"
+				},
+				{
+					"arabic": "بقاعة.",
+					"english": "in a hall.",
+					"transliteration": "b-gaa3a."
+				}
+			],
+			"targetWords": [
+				"Wedding"
+			]
+		},
+		{
+			"arabic": "خطوبة طويلة.",
+			"arabicTashkeel": "خُطوبة طْويلة.",
+			"english": "A long engagement.",
+			"transliteration": "khutooba tweela.",
+			"wordAlignments": [
+				{
+					"arabic": "خطوبة",
+					"english": "An engagement",
+					"transliteration": "khutooba"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "tweela."
+				}
+			],
+			"targetWords": [
+				"Engagement"
+			]
+		},
+		{
+			"arabic": "الضيوف بالديوانية.",
+			"arabicTashkeel": "الضّيوف بالدّيوانية.",
+			"english": "The guests are in the guest room.",
+			"transliteration": "idh-dhyoof bid-deewaaniyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الضيوف",
+					"english": "The guests are",
+					"transliteration": "idh-dhyoof"
+				},
+				{
+					"arabic": "بالديوانية.",
+					"english": "in the guest room.",
+					"transliteration": "bid-deewaaniyya."
+				}
+			],
+			"targetWords": [
+				"Guest"
+			]
+		},
+		{
+			"arabic": "الضيافة جزء من ثقافتنا.",
+			"arabicTashkeel": "الضِّيافة جُزء مِن ثَقافتنا.",
+			"english": "Hospitality is part of our culture.",
+			"transliteration": "idh-dhiyaafa juz2 min thagaafatna.",
+			"wordAlignments": [
+				{
+					"arabic": "الضيافة",
+					"english": "Hospitality is",
+					"transliteration": "idh-dhiyaafa"
+				},
+				{
+					"arabic": "جزء",
+					"english": "part",
+					"transliteration": "juz2"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "ثقافتنا.",
+					"english": "our culture.",
+					"transliteration": "thagaafatna."
+				}
+			],
+			"targetWords": [
+				"Hospitality"
+			]
+		},
+		{
+			"arabic": "الصدقة ما تنقص الفلوس.",
+			"arabicTashkeel": "الصَّدَقة ما تْنَقِّص الفْلوس.",
+			"english": "Charity doesn't reduce money.",
+			"transliteration": "is-sadaga ma tnaggis il-floos.",
+			"wordAlignments": [
+				{
+					"arabic": "الصدقة",
+					"english": "Charity",
+					"transliteration": "is-sadaga"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تنقص",
+					"english": "reduces",
+					"transliteration": "tnaggis"
+				},
+				{
+					"arabic": "الفلوس.",
+					"english": "money.",
+					"transliteration": "il-floos."
+				}
+			],
+			"targetWords": [
+				"Charity"
+			]
+		},
+		{
+			"arabic": "الدعاء بالليل.",
+			"arabicTashkeel": "الدُّعاء بالليل.",
+			"english": "Supplication at night.",
+			"transliteration": "id-du3aa2 bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "الدعاء",
+					"english": "Prayer",
+					"transliteration": "id-du3aa2"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Supplication"
+			]
+		},
+		{
+			"arabic": "صلاة الفجر.",
+			"arabicTashkeel": "صَلاة الفَجِر.",
+			"english": "The dawn prayer.",
+			"transliteration": "salaat il-fajir.",
+			"wordAlignments": [
+				{
+					"arabic": "صلاة",
+					"english": "The prayer of",
+					"transliteration": "salaat"
+				},
+				{
+					"arabic": "الفجر.",
+					"english": "dawn.",
+					"transliteration": "il-fajir."
+				}
+			],
+			"targetWords": [
+				"Prayer"
+			]
+		},
+		{
+			"arabic": "الجامع الجديد كبير.",
+			"arabicTashkeel": "الجامِع الجْديد كْبير.",
+			"english": "The new mosque is big.",
+			"transliteration": "ij-jaami3 ij-jdeed chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "الجامع",
+					"english": "The mosque",
+					"transliteration": "ij-jaami3"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jdeed"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Mosque"
+			]
+		},
+		{
+			"arabic": "قداس الميلاد بالكنيسة.",
+			"arabicTashkeel": "قُدّاس الميلاد بالكَنيسة.",
+			"english": "The Christmas mass at the church.",
+			"transliteration": "guddaas il-meelaad bil-kaneesa.",
+			"wordAlignments": [
+				{
+					"arabic": "قداس",
+					"english": "The mass of",
+					"transliteration": "guddaas"
+				},
+				{
+					"arabic": "الميلاد",
+					"english": "Christmas",
+					"transliteration": "il-meelaad"
+				},
+				{
+					"arabic": "بالكنيسة.",
+					"english": "at the church.",
+					"transliteration": "bil-kaneesa."
+				}
+			],
+			"targetWords": [
+				"Church"
+			]
+		},
+		{
+			"arabic": "الفطور وقت المغرب.",
+			"arabicTashkeel": "الفُطور وَقت المَغرِب.",
+			"english": "Breaking the fast at sunset.",
+			"transliteration": "il-futoor wagt il-maghrib.",
+			"wordAlignments": [
+				{
+					"arabic": "الفطور",
+					"english": "Breaking the fast",
+					"transliteration": "il-futoor"
+				},
+				{
+					"arabic": "وقت",
+					"english": "at the time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "المغرب.",
+					"english": "sunset.",
+					"transliteration": "il-maghrib."
+				}
+			],
+			"targetWords": [
+				"Fasting"
+			]
+		},
+		{
+			"arabic": "الزوار يمشون أيام.",
+			"arabicTashkeel": "الزّوّار يِمشون أيّام.",
+			"english": "The pilgrims walk for days.",
+			"transliteration": "iz-zuwwaar yimshoon ayyaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الزوار",
+					"english": "The pilgrims",
+					"transliteration": "iz-zuwwaar"
+				},
+				{
+					"arabic": "يمشون",
+					"english": "walk",
+					"transliteration": "yimshoon"
+				},
+				{
+					"arabic": "أيام.",
+					"english": "days.",
+					"transliteration": "ayyaam."
+				}
+			],
+			"targetWords": [
+				"Pilgrimage (to shrines)"
+			]
+		},
+		{
+			"arabic": "صلاة العيد الصبح.",
+			"arabicTashkeel": "صَلاة العيد الصُّبُح.",
+			"english": "Eid prayers in the morning.",
+			"transliteration": "salaat il-3eed is-subu7.",
+			"wordAlignments": [
+				{
+					"arabic": "صلاة",
+					"english": "The prayer of",
+					"transliteration": "salaat"
+				},
+				{
+					"arabic": "العيد",
+					"english": "Eid",
+					"transliteration": "il-3eed"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-subu7."
+				}
+			],
+			"targetWords": [
+				"Eid (holiday)",
+				"Prayer"
+			]
+		},
+		{
+			"arabic": "العيدية بالظرف.",
+			"arabicTashkeel": "العيدية بالظَّرِف.",
+			"english": "The Eid money is in the envelope.",
+			"transliteration": "il-3eediyya bidh-dharif.",
+			"wordAlignments": [
+				{
+					"arabic": "العيدية",
+					"english": "The Eid money is",
+					"transliteration": "il-3eediyya"
+				},
+				{
+					"arabic": "بالظرف.",
+					"english": "in the envelope.",
+					"transliteration": "bidh-dharif."
+				}
+			],
+			"targetWords": [
+				"Eid money"
+			]
+		},
+		{
+			"arabic": "شكرا على العزيمة.",
+			"arabicTashkeel": "شُكراً عَلى العَزيمة.",
+			"english": "Thank you for the invitation.",
+			"transliteration": "shukran 3ala il-3azeema.",
+			"wordAlignments": [
+				{
+					"arabic": "شكرا",
+					"english": "Thank you",
+					"transliteration": "shukran"
+				},
+				{
+					"arabic": "على",
+					"english": "for",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "العزيمة.",
+					"english": "the invitation.",
+					"transliteration": "il-3azeema."
+				}
+			],
+			"targetWords": [
+				"Feast / invitation"
+			]
+		},
+		{
+			"arabic": "الله يرحمه.",
+			"arabicTashkeel": "الله يِرحَمَه.",
+			"english": "May God have mercy on him. (at a wake)",
+			"transliteration": "allah yir7ama.",
+			"wordAlignments": [
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "يرحمه.",
+					"english": "have mercy on him.",
+					"transliteration": "yir7ama."
+				}
+			],
+			"targetWords": [
+				"Wake (mourning)"
+			]
+		},
+		{
+			"arabic": "مبروك العرس!",
+			"arabicTashkeel": "مَبروك العِرِس!",
+			"english": "Congratulations on the wedding!",
+			"transliteration": "mabrook il-3iris!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "العرس!",
+					"english": "on the wedding!",
+					"transliteration": "il-3iris!"
+				}
+			],
+			"targetWords": [
+				"Wedding"
+			]
+		},
+		{
+			"arabic": "مبروك الخطوبة.",
+			"arabicTashkeel": "مَبروك الخُطوبة.",
+			"english": "Congratulations on the engagement.",
+			"transliteration": "mabrook il-khutooba.",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "الخطوبة.",
+					"english": "on the engagement.",
+					"transliteration": "il-khutooba."
+				}
+			],
+			"targetWords": [
+				"Engagement"
+			]
+		},
+		{
+			"arabic": "الضيف هدية من الله.",
+			"arabicTashkeel": "الضَّيف هِدية مِن الله.",
+			"english": "The guest is a gift from God.",
+			"transliteration": "idh-dheef hidiyya min allah.",
+			"wordAlignments": [
+				{
+					"arabic": "الضيف",
+					"english": "The guest is",
+					"transliteration": "idh-dheef"
+				},
+				{
+					"arabic": "هدية",
+					"english": "a gift",
+					"transliteration": "hidiyya"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الله.",
+					"english": "God.",
+					"transliteration": "allah."
+				}
+			],
+			"targetWords": [
+				"Guest"
+			]
+		},
+		{
+			"arabic": "ضيافتهم كانت تجنن.",
+			"arabicTashkeel": "ضِيافتهُم كانَت تِجَنِّن.",
+			"english": "Their hospitality was wonderful.",
+			"transliteration": "dhiyaafathum chaanat tijannin.",
+			"wordAlignments": [
+				{
+					"arabic": "ضيافتهم",
+					"english": "Their hospitality",
+					"transliteration": "dhiyaafathum"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "تجنن.",
+					"english": "wonderful.",
+					"transliteration": "tijannin."
+				}
+			],
+			"targetWords": [
+				"Hospitality"
+			]
+		},
+		{
+			"arabic": "صدقة ودعاء.",
+			"arabicTashkeel": "صَدَقة ودُعاء.",
+			"english": "Charity and supplication.",
+			"transliteration": "sadaga w-du3aa2.",
+			"wordAlignments": [
+				{
+					"arabic": "صدقة",
+					"english": "Charity",
+					"transliteration": "sadaga"
+				},
+				{
+					"arabic": "ودعاء.",
+					"english": "and prayer.",
+					"transliteration": "w-du3aa2."
+				}
+			],
+			"targetWords": [
+				"Charity",
+				"Supplication"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Eid in Baghdad",
+			"sentences": [
+				{
+					"arabic": "صبح العيد، الرجال يروحون للجامع لصلاة العيد.",
+					"arabicTashkeel": "صُبُح العيد، الرْجال يْروحون للجامِع لصَلاة العيد.",
+					"english": "On the morning of Eid, the men go to the mosque for the Eid prayer.",
+					"transliteration": "subu7 il-3eed, ir-rjaal yroo7oon lij-jaami3 l-salaat il-3eed.",
+					"wordAlignments": [
+						{
+							"arabic": "صبح",
+							"english": "On the morning of",
+							"transliteration": "subu7"
+						},
+						{
+							"arabic": "العيد،",
+							"english": "Eid,",
+							"transliteration": "il-3eed,"
+						},
+						{
+							"arabic": "الرجال",
+							"english": "the men",
+							"transliteration": "ir-rjaal"
+						},
+						{
+							"arabic": "يروحون",
+							"english": "go",
+							"transliteration": "yroo7oon"
+						},
+						{
+							"arabic": "للجامع",
+							"english": "to the mosque",
+							"transliteration": "lij-jaami3"
+						},
+						{
+							"arabic": "لصلاة",
+							"english": "for the prayer of",
+							"transliteration": "l-salaat"
+						},
+						{
+							"arabic": "العيد.",
+							"english": "Eid.",
+							"transliteration": "il-3eed."
+						}
+					]
+				},
+				{
+					"arabic": "الجهال يلبسون ملابس جديدة وينتظرون العيدية.",
+					"arabicTashkeel": "الجْهال يِلبسون مَلابِس جْديدة ويِنتِظرون العيدية.",
+					"english": "The kids wear new clothes and wait for their Eid money.",
+					"transliteration": "ij-jhaal yilbisoon malaabis jdeeda w-yintidhroon il-3eediyya.",
+					"wordAlignments": [
+						{
+							"arabic": "الجهال",
+							"english": "The kids",
+							"transliteration": "ij-jhaal"
+						},
+						{
+							"arabic": "يلبسون",
+							"english": "wear",
+							"transliteration": "yilbisoon"
+						},
+						{
+							"arabic": "ملابس",
+							"english": "clothes",
+							"transliteration": "malaabis"
+						},
+						{
+							"arabic": "جديدة",
+							"english": "new",
+							"transliteration": "jdeeda"
+						},
+						{
+							"arabic": "وينتظرون",
+							"english": "and wait for",
+							"transliteration": "w-yintidhroon"
+						},
+						{
+							"arabic": "العيدية.",
+							"english": "the Eid money.",
+							"transliteration": "il-3eediyya."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين العائلة كلها تروح لبيت الجدة لعزيمة كبيرة.",
+					"arabicTashkeel": "بَعدين العائلة كُلها تْروح لبيت الجِدّة لعَزيمة كْبيرة.",
+					"english": "Then the whole family goes to grandmother's house for a big feast.",
+					"transliteration": "ba3deen il-3aa2ila kullha trooh l-beet ij-jidda l-3azeema chbeera.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3deen"
+						},
+						{
+							"arabic": "العائلة",
+							"english": "the family",
+							"transliteration": "il-3aa2ila"
+						},
+						{
+							"arabic": "كلها",
+							"english": "all of it",
+							"transliteration": "kullha"
+						},
+						{
+							"arabic": "تروح",
+							"english": "goes",
+							"transliteration": "trooh"
+						},
+						{
+							"arabic": "لبيت",
+							"english": "to the house of",
+							"transliteration": "l-beet"
+						},
+						{
+							"arabic": "الجدة",
+							"english": "the grandmother",
+							"transliteration": "ij-jidda"
+						},
+						{
+							"arabic": "لعزيمة",
+							"english": "for a feast",
+							"transliteration": "l-3azeema"
+						},
+						{
+							"arabic": "كبيرة.",
+							"english": "big.",
+							"transliteration": "chbeera."
+						}
+					]
+				},
+				{
+					"arabic": "الضيوف يجون طول اليوم، والضيافة ما توقف.",
+					"arabicTashkeel": "الضّيوف يِجون طول اليوم، والضِّيافة ما توقَف.",
+					"english": "Guests come all day, and the hospitality never stops.",
+					"transliteration": "idh-dhyoof yijoon tool il-yoom, w-idh-dhiyaafa ma toogaf.",
+					"wordAlignments": [
+						{
+							"arabic": "الضيوف",
+							"english": "The guests",
+							"transliteration": "idh-dhyoof"
+						},
+						{
+							"arabic": "يجون",
+							"english": "come",
+							"transliteration": "yijoon"
+						},
+						{
+							"arabic": "طول",
+							"english": "all",
+							"transliteration": "tool"
+						},
+						{
+							"arabic": "اليوم،",
+							"english": "day,",
+							"transliteration": "il-yoom,"
+						},
+						{
+							"arabic": "والضيافة",
+							"english": "and the hospitality",
+							"transliteration": "w-idh-dhiyaafa"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "توقف.",
+							"english": "stops.",
+							"transliteration": "toogaf."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Wedding",
+			"sentences": [
+				{
+					"arabic": "خطوبة إبن عمي كانت السنة الفاتت، والعرس هالإسبوع.",
+					"arabicTashkeel": "خُطوبة إبن عَمّي كانَت السَّنة الفاتَت، والعِرِس هالإسبوع.",
+					"english": "My cousin's engagement was last year, and the wedding is this week.",
+					"transliteration": "khutoobat ibin 3ammi chaanat is-sana il-faatat, w-il-3iris hal-isboo3.",
+					"wordAlignments": [
+						{
+							"arabic": "خطوبة",
+							"english": "The engagement of",
+							"transliteration": "khutoobat"
+						},
+						{
+							"arabic": "إبن",
+							"english": "the son of",
+							"transliteration": "ibin"
+						},
+						{
+							"arabic": "عمي",
+							"english": "my uncle",
+							"transliteration": "3ammi"
+						},
+						{
+							"arabic": "كانت",
+							"english": "was",
+							"transliteration": "chaanat"
+						},
+						{
+							"arabic": "السنة",
+							"english": "the year",
+							"transliteration": "is-sana"
+						},
+						{
+							"arabic": "الفاتت،",
+							"english": "last,",
+							"transliteration": "il-faatat,"
+						},
+						{
+							"arabic": "والعرس",
+							"english": "and the wedding is",
+							"transliteration": "w-il-3iris"
+						},
+						{
+							"arabic": "هالإسبوع.",
+							"english": "this week.",
+							"transliteration": "hal-isboo3."
+						}
+					]
+				},
+				{
+					"arabic": "العرس بقاعة كبيرة، ويا موسيقى ورقص.",
+					"arabicTashkeel": "العِرِس بقاعة كْبيرة، ويّا موسيقى ورَقِص.",
+					"english": "The wedding is in a big hall, with music and dancing.",
+					"transliteration": "il-3iris b-gaa3a chbeera, wiyya mooseega w-ragis.",
+					"wordAlignments": [
+						{
+							"arabic": "العرس",
+							"english": "The wedding is",
+							"transliteration": "il-3iris"
+						},
+						{
+							"arabic": "بقاعة",
+							"english": "in a hall",
+							"transliteration": "b-gaa3a"
+						},
+						{
+							"arabic": "كبيرة،",
+							"english": "big,",
+							"transliteration": "chbeera,"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "موسيقى",
+							"english": "music",
+							"transliteration": "mooseega"
+						},
+						{
+							"arabic": "ورقص.",
+							"english": "and dancing.",
+							"transliteration": "w-ragis."
+						}
+					]
+				},
+				{
+					"arabic": "الكل يقول: مبروك!",
+					"arabicTashkeel": "الكُل يْقول: مَبروك!",
+					"english": "Everyone says: Congratulations!",
+					"transliteration": "il-kull ygool: mabrook!",
+					"wordAlignments": [
+						{
+							"arabic": "الكل",
+							"english": "Everyone",
+							"transliteration": "il-kull"
+						},
+						{
+							"arabic": "يقول:",
+							"english": "says:",
+							"transliteration": "ygool:"
+						},
+						{
+							"arabic": "مبروك!",
+							"english": "Congratulations!",
+							"transliteration": "mabrook!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student has been invited to an Iraqi family's Eid feast in Baghdad and is chatting with the host about customs.",
+		"studentRole": "A guest learning Iraqi Arabic.",
+		"otherRole": "The host, who loves explaining Iraqi traditions.",
+		"goalEnglish": "Wish them a happy Eid, ask about Eid customs (prayer, Eid money, the feast), and talk about weddings and hospitality.",
+		"targetWords": [
+			"Eid (holiday)",
+			"Eid money",
+			"Feast / invitation",
+			"Prayer",
+			"Guest",
+			"Hospitality",
+			"Wedding",
+			"Pilgrimage (to shrines)"
+		]
+	}
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "whats-the-weather-like",
+  "dialect": "saudi",
+  "english": "what's the weather like?",
+  "arabic": "كيف الجَو؟",
+  "arabicPlain": "كيف الجو؟",
+  "transliteration": "kaif ij-jaw?",
+  "franco": "kaif ij-jaw?",
+  "literal": "how is the weather?",
+  "usage": "Weather talk in Jeddah is mostly about heat and humidity; winter is the pleasant season.",
+  "variants": [
+    {
+      "label": "today",
+      "arabic": "كيف الجَو اليوم؟",
+      "transliteration": "kaif ij-jaw il-yoom?",
+      "english": "how's the weather today?",
+      "note": "Asking about today."
+    },
+    {
+      "label": "humid",
+      "arabic": "رُطوبة",
+      "transliteration": "rutooba",
+      "english": "humidity",
+      "note": "A constant Jeddah topic."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "حَر مَرّة",
+      "transliteration": "7arr marra",
+      "english": "very hot"
+    },
+    {
+      "arabic": "الجَو حِلو",
+      "transliteration": "ij-jaw 7ilu",
+      "english": "the weather is nice"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "كيف الجَو في جِدّة؟",
+      "transliteration": "kaif ij-jaw fi jidda?",
+      "english": "What's the weather like in Jeddah?"
+    },
+    {
+      "arabic": "الجَو حِلو في الشِّتا",
+      "transliteration": "ij-jaw 7ilu fish-shita",
+      "english": "The weather is nice in winter"
+    },
+    {
+      "arabic": "اليوم فيه غُبار",
+      "transliteration": "il-yoom feeh ghubaar",
+      "english": "Today there's dust"
+    }
+  ]
+}

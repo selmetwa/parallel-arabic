@@ -1,0 +1,318 @@
+{
+  "slug": "harrak",
+  "arabic": "حرك",
+  "transliteration": "7arrak",
+  "english": "to move (something)",
+  "wordId": null,
+  "rootLetters": "ح ر ك",
+  "verbClass": "sound",
+  "notes": "Past 7arrak, present ba7arrik (I move (something)).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حركت",
+          "transliteration": "7arrakt",
+          "english": "I moved"
+        },
+        {
+          "person": "enta",
+          "arabic": "حركت",
+          "transliteration": "7arrakt",
+          "english": "you (m) moved"
+        },
+        {
+          "person": "enti",
+          "arabic": "حركتي",
+          "transliteration": "7arrakti",
+          "english": "you (f) moved"
+        },
+        {
+          "person": "howa",
+          "arabic": "حرك",
+          "transliteration": "7arrak",
+          "english": "he moved"
+        },
+        {
+          "person": "heya",
+          "arabic": "حركت",
+          "transliteration": "7arrakat",
+          "english": "she moved"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حركنا",
+          "transliteration": "7arrakna",
+          "english": "we moved"
+        },
+        {
+          "person": "entu",
+          "arabic": "حركتوا",
+          "transliteration": "7arraktu",
+          "english": "you (pl) moved"
+        },
+        {
+          "person": "homma",
+          "arabic": "حركوا",
+          "transliteration": "7arraku",
+          "english": "they moved"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حركت",
+          "transliteration": "ma 7arrakt",
+          "english": "I didn't move"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حركت",
+          "transliteration": "ma 7arrakt",
+          "english": "you (m) didn't move"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حركتي",
+          "transliteration": "ma 7arrakti",
+          "english": "you (f) didn't move"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حرك",
+          "transliteration": "ma 7arrak",
+          "english": "he didn't move"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حركت",
+          "transliteration": "ma 7arrakat",
+          "english": "she didn't move"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حركنا",
+          "transliteration": "ma 7arrakna",
+          "english": "we didn't move"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حركتوا",
+          "transliteration": "ma 7arraktu",
+          "english": "you (pl) didn't move"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حركوا",
+          "transliteration": "ma 7arraku",
+          "english": "they didn't move"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باحرك",
+          "transliteration": "ba7arrik",
+          "english": "I move"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتحرك",
+          "transliteration": "bt7arrik",
+          "english": "you (m) move"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتحركي",
+          "transliteration": "bt7arriki",
+          "english": "you (f) move"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيحرك",
+          "transliteration": "by7arrik",
+          "english": "he moves"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتحرك",
+          "transliteration": "bt7arrik",
+          "english": "she moves"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنحرك",
+          "transliteration": "bn7arrik",
+          "english": "we move"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتحركوا",
+          "transliteration": "bt7arriku",
+          "english": "you (pl) move"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيحركوا",
+          "transliteration": "by7arriku",
+          "english": "they move"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باحرك",
+          "transliteration": "ma ba7arrik",
+          "english": "I don't move"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتحرك",
+          "transliteration": "ma bt7arrik",
+          "english": "you (m) don't move"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتحركي",
+          "transliteration": "ma bt7arriki",
+          "english": "you (f) don't move"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيحرك",
+          "transliteration": "ma by7arrik",
+          "english": "he doesn't move"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتحرك",
+          "transliteration": "ma bt7arrik",
+          "english": "she doesn't move"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنحرك",
+          "transliteration": "ma bn7arrik",
+          "english": "we don't move"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتحركوا",
+          "transliteration": "ma bt7arriku",
+          "english": "you (pl) don't move"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيحركوا",
+          "transliteration": "ma by7arriku",
+          "english": "they don't move"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاحرك",
+          "transliteration": "7a7arrik",
+          "english": "I will move"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتحرك",
+          "transliteration": "7at7arrik",
+          "english": "you (m) will move"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتحركي",
+          "transliteration": "7at7arriki",
+          "english": "you (f) will move"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيحرك",
+          "transliteration": "7ay7arrik",
+          "english": "he will move"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتحرك",
+          "transliteration": "7at7arrik",
+          "english": "she will move"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنحرك",
+          "transliteration": "7an7arrik",
+          "english": "we will move"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتحركوا",
+          "transliteration": "7at7arriku",
+          "english": "you (pl) will move"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيحركوا",
+          "transliteration": "7ay7arriku",
+          "english": "they will move"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاحرك",
+          "transliteration": "ma 7a7arrik",
+          "english": "I won't move"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتحرك",
+          "transliteration": "ma 7at7arrik",
+          "english": "you (m) won't move"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتحركي",
+          "transliteration": "ma 7at7arriki",
+          "english": "you (f) won't move"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيحرك",
+          "transliteration": "ma 7ay7arrik",
+          "english": "he won't move"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتحرك",
+          "transliteration": "ma 7at7arrik",
+          "english": "she won't move"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنحرك",
+          "transliteration": "ma 7an7arrik",
+          "english": "we won't move"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتحركوا",
+          "transliteration": "ma 7at7arriku",
+          "english": "you (pl) won't move"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيحركوا",
+          "transliteration": "ma 7ay7arriku",
+          "english": "they won't move"
+        }
+      ]
+    }
+  }
+}

@@ -51,7 +51,7 @@ const DIALECT_PHONOLOGY: Record<string, string> = {
 
 	iraqi: `Write in authentic IRAQI ARABIC (Baghdadi) as actually spoken — NOT Modern Standard Arabic.
 - No case inflection; word endings do not change for case.
-- qaf is often g and kaf is often ch in everyday words; write those as گ and چ where Iraqis do (گال، چان، باچر), otherwise keep ق and ك.
+- qaf is often g and kaf is often ch in everyday words (gaal, chaan, baachir), but keep the standard spelling (ق، ك) so learners can type it; show the pronunciation in transliteration only.
 - Ongoing actions take da- (دا يروح / ديروح); future uses راح (راح أروح).
 - Everyday words: now = هسّه, what = شنو, how = شلون, there is / isn't = أكو / ماكو, very = كلش, good = زين.
 - Negation with ما for verbs (ما أعرف) and مو for everything else (مو زين); conversational word order.`,
@@ -138,7 +138,7 @@ const MSA_TO_DIALECT: Record<string, [msa: string, dialect: string][]> = {
 		['كثير', 'هواية'],
 		['جيد', 'زين'],
 		['أيضاً', 'هم'],
-		['غداً', 'باچر'],
+		['غداً', 'باكر (baachir)'],
 		['الذي / التي', 'اللي']
 	],
 	khaleeji: [
@@ -194,7 +194,7 @@ const DIALECT_EXAMPLES: Record<string, string> = {
 
 	iraqi: `- وين رايح هسّه؟ (Where are you going now?)
 - ما أعرف شسوّي، أكو شغل هواية اليوم. (I don't know what to do, there's so much work today.)
-- باچر راح نطلع نتغدى برّه. (We'll go out for lunch tomorrow.)
+- باكر راح نطلع نتغدى برّه. (We'll go out for lunch tomorrow.)
 - Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: شتريد تاكل هسّه؟`,
 
 	khaleeji: `- وين رايح الحين؟ (Where are you going now?)

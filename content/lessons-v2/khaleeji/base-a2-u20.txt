@@ -1,0 +1,250 @@
+# Khaleeji — A2 — Directions and Transport in the City (base-a2-u20)
+# Gulf: مَوقِف (mawgif) = stop, خَط = route / metro line, أُجرة = fare, مِشوار = trip / errand.
+
+@vocab
+noun:m = Stop (bus)
+مَوقِف / mawgif / Stop
+
+noun:f = Bus terminal
+مَحَطّة / ma7attat / Station of | الباصات / il-baasaat / the buses
+
+noun:m = Route / line
+خَط / khatt / Route
+
+noun:f = Fare
+أُجرة / ujra / Fare
+
+phrase = Main street
+الشّارع / ish-shaari3 / The street | الرَّئيسي / ir-ra2eesi / main
+
+noun:m = Tunnel
+نَفَق / nafag / Tunnel
+
+verb = It passes by
+يْمُر / ymurr / It passes
+
+verb = It takes (time)
+ياخِذ / yaakhidh / It takes
+
+noun:f = Distance
+مَسافة / masaafa / Distance
+
+adjective = Direct
+مُباشِر / mubaashir / Direct
+
+verb = Change (vehicles)!
+بَدِّل / baddil / Change
+
+verb = Ask!
+إسأل / is2al / Ask
+
+verb = Get off!
+إنزِل / inzil / Get off
+
+verb = Take!
+خُذ / khudh / Take
+
+phrase = On the way
+بالطَّريق / bit-tareeg / On the way
+
+@pool
+Where is the bus stop? = Stop (bus)
+وين / ween / Where is | مَوقِف / mawgif / the stop of | الباص؟ / il-baas? / the bus?
+
+The buses leave from the Gold Souk terminal. = Bus terminal
+الباصات / il-baasaat / The buses | تِطلَع / titla3 / leave | مِن / min / from | مَحَطّة / ma7attat / the station of | الباصات / il-baasaat / the buses | بسوق / b-soog / at the souk of | الذَّهَب. / idh-dhahab. / gold.
+
+Which line goes to the airport? = Route / line
+أيّ / ayy / Which | خَط / khatt / line | يْروح / yrooh / goes | المَطار؟ / il-mataar? / to the airport?
+
+How much is the fare? = Fare
+كَم / cham / How much is | الأُجرة؟ / il-ujra? / the fare?
+
+Walk along the main street. = Main street
+إمشِ / imshi / Walk | بالشّارع / bish-shaari3 / along the street | الرَّئيسي. / ir-ra2eesi. / main.
+
+Go through the tunnel. = Tunnel
+خُش / khush / Go into | النَّفَق. / in-nafag. / the tunnel.
+
+The bus passes by the university. = It passes by
+الباص / il-baas / The bus | يْمُر / ymurr / passes | على / 3ala / by | الجامعة. / il-yaam3a. / the university.
+
+The trip takes half an hour. = It takes (time)
+المِشوار / il-mishwaar / The trip | ياخِذ / yaakhidh / takes | نُص / nuss / half | ساعة. / saa3a. / an hour.
+
+What is the distance? = Distance
+كَم / cham / How much is | المَسافة؟ / il-masaafa? / the distance?
+
+Is there a direct bus? = Direct
+في / fee / Is there | باص / baas / a bus | مُباشِر؟ / mubaashir? / direct?
+
+Change at Union station. = Change (vehicles)!
+بَدِّل / baddil / Change | بمَحَطّة / b-ma7attat / at the station of | الإتّحاد. / il-itti7aad. / Union.
+
+Ask the driver. = Ask!
+إسأل / is2al / Ask | الدْرَيوِل. / id-draywil. / the driver.
+
+Get off at the second stop. = Get off!; Stop (bus)
+إنزِل / inzil / Get off | بالمَوقِف / bil-mawgif / at the stop | الثّاني. / ith-thaani. / second.
+
+Take a taxi from here. = Take!
+خُذ / khudh / Take | تاكسي / taaksi / a taxi | مِن / min / from | هِني. / hini. / here.
+
+The supermarket is on the way. = On the way
+الجَمعية / il-jam3iyya / The co-op is | بالطَّريق. / bit-tareeg. / on the way.
+
+The stop is in front of the bank. = Stop (bus)
+المَوقِف / il-mawgif / The stop is | قِدّام / giddaam / in front of | البَنك. / il-bank. / the bank.
+
+The terminal is crowded in the morning. = Bus terminal
+مَحَطّة / ma7attat / The station of | الباصات / il-baasaat / the buses is | زَحمة / za7ma / crowded | الصُّبح. / is-sub7. / in the morning.
+
+The red line is long. = Route / line
+الخَط / il-khatt / The line | الأحمَر / il-a7mar / red is | طْويل. / tweel. / long.
+
+The fare is five dirhams. = Fare
+الأُجرة / il-ujra / The fare is | خَمس / khams / five | دَراهِم. / daraahim. / dirhams.
+
+The shops are on the main street. = Main street
+المَحَلّات / il-ma7allaat / The shops are | بالشّارع / bish-shaari3 / on the street | الرَّئيسي. / ir-ra2eesi. / main.
+
+The tunnel is closed today. = Tunnel
+النَّفَق / in-nafag / The tunnel is | مْسَكَّر / msakkar / closed | اليوم. / il-yoom. / today.
+
+Does it pass by the hospital? = It passes by
+يْمُر / ymurr / Does it pass | على / 3ala / by | المُستَشفى؟ / il-mustashfa? / the hospital?
+
+How long does it take? = It takes (time)
+كَم / cham / How much | ياخِذ / yaakhidh / does it take | وَقت؟ / wagt? / time?
+
+The distance is short. = Distance
+المَسافة / il-masaafa / The distance is | قْصَيّرة. / gsayyra. / short.
+
+The direct line is faster. = Direct; Route / line
+الخَط / il-khatt / The line | المُباشِر / il-mubaashir / direct is | أسرَع. / asra3. / faster.
+
+Do I need to change? = Change (vehicles)!
+لازِم / laazim / Must | أبَدِّل؟ / abaddil? / I change?
+
+Ask someone on the street. = Ask!
+إسأل / is2al / Ask | أحَد / a7ad / someone | بالشّارع. / bish-shaari3. / on the street.
+
+Get off here, please. = Get off!
+إنزِل / inzil / Get off | هِني / hini / here | لو / law / if | سَمَحت. / sama7t. / you please.
+
+Take the bus from the terminal. = Take!; Bus terminal
+خُذ / khudh / Take | الباص / il-baas / the bus | مِن / min / from | مَحَطّة / ma7attat / the station of | الباصات. / il-baasaat. / the buses.
+
+I'll buy bread on the way. = On the way
+بَشتِري / bashtiri / I'll buy | خُبُز / khubuz / bread | بالطَّريق. / bit-tareeg. / on the way.
+
+Wait at the stop. = Stop (bus)
+أنطِر / antir / Wait | بالمَوقِف. / bil-mawgif. / at the stop.
+
+The terminal is far from here. = Bus terminal
+مَحَطّة / ma7attat / The station of | الباصات / il-baasaat / the buses is | بَعيدة / ba3eeda / far | مِن / min / from | هِني. / hini. / here.
+
+The green line. = Route / line
+الخَط / il-khatt / The line | الأخضَر. / il-akhdhar. / green.
+
+The fare went up. = Fare
+الأُجرة / il-ujra / The fare | زادَت. / zaadat. / went up.
+
+The main street is crowded. = Main street
+الشّارع / ish-shaari3 / The street | الرَّئيسي / ir-ra2eesi / main is | زَحمة. / za7ma. / crowded.
+
+After the tunnel, turn right. = Tunnel
+بَعد / ba3d / After | النَّفَق، / in-nafag, / the tunnel, | لِف / liff / turn | يَمين. / yimeen. / right.
+
+The bus passes by every ten minutes. = It passes by
+الباص / il-baas / The bus | يْمُر / ymurr / passes | كِل / kil / every | عَشر / 3ashar / ten | دَقايِق. / dagaayig. / minutes.
+
+The trip takes two hours. = It takes (time)
+المِشوار / il-mishwaar / The trip | ياخِذ / yaakhidh / takes | ساعتين. / saa3teen. / two hours.
+
+The distance between Dubai and Abu Dhabi is long. = Distance
+المَسافة / il-masaafa / The distance | بين / been / between | دُبَي / dubay / Dubai | وأبوظَبي / w-abudhabi / and Abu Dhabi is | طْويلة. / tweela. / long.
+
+A direct flight. = Direct
+رِحلة / ri7la / A flight | مُباشرة. / mubaashra. / direct.
+
+Change buses at the terminal. = Change (vehicles)!; Bus terminal
+بَدِّل / baddil / Change | الباص / il-baas / the bus | بمَحَطّة / b-ma7attat / at the station of | الباصات. / il-baasaat. / the buses.
+
+Ask about the fare first. = Ask!; Fare
+إسأل / is2al / Ask | عَن / 3an / about | الأُجرة / il-ujra / the fare | أوَّل. / awwal. / first.
+
+Get off after the bridge. = Get off!
+إنزِل / inzil / Get off | بَعد / ba3d / after | الجِسر. / il-yisir. / the bridge.
+
+Take the first line. = Take!; Route / line
+خُذ / khudh / Take | أوَّل / awwal / the first | خَط. / khatt. / line.
+
+Is the pharmacy on the way? = On the way
+الصَّيدَلية / is-saydaliyya / Is the pharmacy | بالطَّريق؟ / bit-tareeg? / on the way?
+
+The stop is near. = Stop (bus)
+المَوقِف / il-mawgif / The stop is | قَريب. / gareeb. / near.
+
+The new terminal. = Bus terminal
+مَحَطّة / ma7attat / The station of | الباصات / il-baasaat / the buses | الجْديدة. / il-ydeeda. / new.
+
+Pay the fare with the card. = Fare
+إدفَع / idfa3 / Pay | الأُجرة / il-ujra / the fare | بالبِطاقة. / bil-bitaaga. / with the card.
+
+Take the main street, it's faster. = Main street; Take!
+خُذ / khudh / Take | الشّارع / ish-shaari3 / the street | الرَّئيسي، / ir-ra2eesi, / main, | أسرَع. / asra3. / it's faster.
+
+The tunnel is long. = Tunnel
+النَّفَق / in-nafag / The tunnel is | طْويل. / tweel. / long.
+
+The bus passes by our house. = It passes by
+الباص / il-baas / The bus | يْمُر / ymurr / passes | جَنب / yamb / next to | بيتنا. / beetna. / our house.
+
+It takes ten minutes on foot. = It takes (time)
+ياخِذ / yaakhidh / It takes | عَشر / 3ashar / ten | دَقايِق / dagaayig / minutes | مَشي. / mashi. / on foot.
+
+A short distance. = Distance
+مَسافة / masaafa / A distance | قْصَيّرة. / gsayyra. / short.
+
+Not direct, you have to change. = Direct; Change (vehicles)!
+مو / moo / Not | مُباشِر، / mubaashir, / direct, | لازِم / laazim / you must | تبَدِّل. / tbaddil. / change.
+
+Ask at the terminal. = Ask!
+إسأل / is2al / Ask | بالمَحَطّة. / bil-ma7atta. / at the station.
+
+Get off at the last stop. = Get off!; Stop (bus)
+إنزِل / inzil / Get off | بآخِر / b-aakhir / at the last | مَوقِف. / mawgif. / stop.
+
+We talked on the way. = On the way
+تكَلَّمنا / tkallamna / We talked | بالطَّريق. / bit-tareeg. / on the way.
+
+@passage To Dubai Mall
+Take the red line from Union station.
+خُذ / khudh / Take | الخَط / il-khatt / the line | الأحمَر / il-a7mar / red | مِن / min / from | مَحَطّة / ma7attat / the station of | الإتّحاد. / il-itti7aad. / Union.
+
+It's direct, you don't need to change.
+مُباشِر، / mubaashir, / It's direct, | ما / ma / not | تحتاج / t7taaj / you need | تبَدِّل. / tbaddil. / to change.
+
+The trip takes twenty minutes, and the fare is six dirhams.
+المِشوار / il-mishwaar / The trip | ياخِذ / yaakhidh / takes | عِشرين / 3ishreen / twenty | دَقيقة، / dageega, / minutes, | والأُجرة / w-il-ujra / and the fare is | سِت / sitt / six | دَراهِم. / daraahim. / dirhams.
+
+Get off at the Burj Khalifa stop.
+إنزِل / inzil / Get off | بمَوقِف / b-mawgif / at the stop of | بُرج / burj / Burj | خَليفة. / khaleefa. / Khalifa.
+
+@passage A Short Walk
+The bookshop isn't far, the distance is short.
+المَكتَبة / il-maktaba / The bookshop is | مو / moo / not | بَعيدة، / ba3eeda, / far, | المَسافة / il-masaafa / the distance is | قْصَيّرة. / gsayyra. / short.
+
+Walk along the main street and go through the tunnel.
+إمشِ / imshi / Walk | بالشّارع / bish-shaari3 / along the street | الرَّئيسي / ir-ra2eesi / main | وخُش / w-khush / and go into | النَّفَق. / in-nafag. / the tunnel.
+
+On the way there's a café, ask there.
+بالطَّريق / bit-tareeg / On the way | في / fee / there is | كوفي، / koofi, / a café, | إسأل / is2al / ask | هْناك. / hnaak. / there.
+
+@scenario
+situation: The student wants to get from their hotel in Deira to Dubai Mall by public transport and asks a hotel receptionist for help.
+studentRole: A tourist learning Gulf Arabic.
+otherRole: The helpful hotel receptionist.
+goalEnglish: Ask which line or bus to take, whether it is direct or you need to change, how long it takes, the fare, and where to get off.
+targetWords: Route / line; Stop (bus); Fare; Direct; Change (vehicles)!; It takes (time); Get off!; On the way

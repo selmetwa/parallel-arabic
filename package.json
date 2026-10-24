@@ -26,6 +26,7 @@
     "populate:words:dry": "vite-node scripts/populate-words.ts --dry-run",
     "screenshots:features": "vite-node scripts/capture-feature-screenshots.ts",
     "seed:wotd": "vite-node scripts/seed-word-of-the-day.ts",
+    "build:lessons-v2": "vite-node scripts/build-lessons-v2.ts",
     "seed:wotd:dry": "vite-node scripts/seed-word-of-the-day.ts --dry-run",
     "upload:lessons": "vite-node scripts/upload-lessons-to-storage.ts",
     "upload:lessons:dry": "vite-node scripts/upload-lessons-to-storage.ts --dry-run",

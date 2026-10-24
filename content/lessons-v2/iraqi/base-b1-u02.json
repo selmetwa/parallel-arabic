@@ -1,0 +1,2340 @@
+{
+	"vocab": [
+		{
+			"arabic": "إذا",
+			"arabicTashkeel": "إذا",
+			"english": "If",
+			"transliteration": "itha",
+			"wordAlignments": [
+				{
+					"arabic": "إذا",
+					"english": "If",
+					"transliteration": "itha"
+				}
+			],
+			"partOfSpeech": "conjunction"
+		},
+		{
+			"arabic": "لو",
+			"arabicTashkeel": "لو",
+			"english": "If (hypothetical)",
+			"transliteration": "law",
+			"wordAlignments": [
+				{
+					"arabic": "لو",
+					"english": "If",
+					"transliteration": "law"
+				}
+			],
+			"partOfSpeech": "conjunction"
+		},
+		{
+			"arabic": "إلا إذا",
+			"arabicTashkeel": "إلّا إذا",
+			"english": "Unless",
+			"transliteration": "illa itha",
+			"wordAlignments": [
+				{
+					"arabic": "إلا",
+					"english": "Except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "إذا",
+					"english": "if",
+					"transliteration": "itha"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "لولا",
+			"arabicTashkeel": "لولا",
+			"english": "If not for",
+			"transliteration": "lawla",
+			"wordAlignments": [
+				{
+					"arabic": "لولا",
+					"english": "If not for",
+					"transliteration": "lawla"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "كان",
+			"arabicTashkeel": "كان",
+			"english": "Would",
+			"transliteration": "chaan",
+			"wordAlignments": [
+				{
+					"arabic": "كان",
+					"english": "Would",
+					"transliteration": "chaan"
+				}
+			],
+			"partOfSpeech": "particle"
+		},
+		{
+			"arabic": "اللي",
+			"arabicTashkeel": "اللي",
+			"english": "Who / which / that",
+			"transliteration": "illi",
+			"wordAlignments": [
+				{
+					"arabic": "اللي",
+					"english": "That",
+					"transliteration": "illi"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "شوكت ما",
+			"arabicTashkeel": "شْوَكِت ما",
+			"english": "Whenever",
+			"transliteration": "shwakit ma",
+			"wordAlignments": [
+				{
+					"arabic": "شوكت",
+					"english": "When",
+					"transliteration": "shwakit"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "وين ما",
+			"arabicTashkeel": "وين ما",
+			"english": "Wherever",
+			"transliteration": "ween ma",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "شما",
+			"arabicTashkeel": "شْما",
+			"english": "Whatever",
+			"transliteration": "shma",
+			"wordAlignments": [
+				{
+					"arabic": "شما",
+					"english": "Whatever",
+					"transliteration": "shma"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بشرط",
+			"arabicTashkeel": "بشَرِط",
+			"english": "On condition that",
+			"transliteration": "b-sharit",
+			"wordAlignments": [
+				{
+					"arabic": "بشرط",
+					"english": "On condition",
+					"transliteration": "b-sharit"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بحالة",
+			"arabicTashkeel": "بحالة",
+			"english": "In case",
+			"transliteration": "b-7aala",
+			"wordAlignments": [
+				{
+					"arabic": "بحالة",
+					"english": "In case",
+					"transliteration": "b-7aala"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "وإلا",
+			"arabicTashkeel": "وإلّا",
+			"english": "Otherwise",
+			"transliteration": "w-illa",
+			"wordAlignments": [
+				{
+					"arabic": "وإلا",
+					"english": "Otherwise",
+					"transliteration": "w-illa"
+				}
+			],
+			"partOfSpeech": "conjunction"
+		},
+		{
+			"arabic": "لعد",
+			"arabicTashkeel": "لَعَد",
+			"english": "So / then",
+			"transliteration": "la3ad",
+			"wordAlignments": [
+				{
+					"arabic": "لعد",
+					"english": "So",
+					"transliteration": "la3ad"
+				}
+			],
+			"partOfSpeech": "conjunction"
+		},
+		{
+			"arabic": "لازم",
+			"arabicTashkeel": "لازِم",
+			"english": "Must",
+			"transliteration": "laazim",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "ممكن",
+			"arabicTashkeel": "مُمكِن",
+			"english": "Possible",
+			"transliteration": "mumkin",
+			"wordAlignments": [
+				{
+					"arabic": "ممكن",
+					"english": "Possible",
+					"transliteration": "mumkin"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "إذا تمطر، نبقى بالبيت.",
+			"arabicTashkeel": "إذا تُمطُر، نِبقى بالبيت.",
+			"english": "If it rains, we'll stay home.",
+			"transliteration": "itha tumtur, nibga bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "إذا",
+					"english": "If",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "تمطر،",
+					"english": "it rains,",
+					"transliteration": "tumtur,"
+				},
+				{
+					"arabic": "نبقى",
+					"english": "we'll stay",
+					"transliteration": "nibga"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"If"
+			]
+		},
+		{
+			"arabic": "لو عندي فلوس، كان إشتريت بيت.",
+			"arabicTashkeel": "لو عِندي فْلوس، كان إشتِريت بيت.",
+			"english": "If I had money, I would buy a house.",
+			"transliteration": "law 3indi floos, chaan ishtireet beet.",
+			"wordAlignments": [
+				{
+					"arabic": "لو",
+					"english": "If",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I had",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "فلوس،",
+					"english": "money,",
+					"transliteration": "floos,"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "إشتريت",
+					"english": "I buy",
+					"transliteration": "ishtireet"
+				},
+				{
+					"arabic": "بيت.",
+					"english": "a house.",
+					"transliteration": "beet."
+				}
+			],
+			"targetWords": [
+				"If (hypothetical)",
+				"Would"
+			]
+		},
+		{
+			"arabic": "ما أجي إلا إذا تجي ويايه.",
+			"arabicTashkeel": "ما أجي إلّا إذا تِجي ويّايَه.",
+			"english": "I won't come unless you come with me.",
+			"transliteration": "ma aji illa itha tiji wiyyaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أجي",
+					"english": "I come",
+					"transliteration": "aji"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "إذا",
+					"english": "if",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "تجي",
+					"english": "you come",
+					"transliteration": "tiji"
+				},
+				{
+					"arabic": "ويايه.",
+					"english": "with me.",
+					"transliteration": "wiyyaaya."
+				}
+			],
+			"targetWords": [
+				"Unless"
+			]
+		},
+		{
+			"arabic": "لولا أمي ما كان درست.",
+			"arabicTashkeel": "لولا أُمّي ما كان دِرَسِت.",
+			"english": "If not for my mother, I wouldn't have studied.",
+			"transliteration": "lawla ummi ma chaan dirasit.",
+			"wordAlignments": [
+				{
+					"arabic": "لولا",
+					"english": "If not for",
+					"transliteration": "lawla"
+				},
+				{
+					"arabic": "أمي",
+					"english": "my mother,",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "درست.",
+					"english": "I have studied.",
+					"transliteration": "dirasit."
+				}
+			],
+			"targetWords": [
+				"If not for",
+				"Would"
+			]
+		},
+		{
+			"arabic": "الرجال اللي يسكن يمنا دكتور.",
+			"arabicTashkeel": "الرَّجّال اللي يِسكُن يَمنا دِكتور.",
+			"english": "The man who lives next to us is a doctor.",
+			"transliteration": "ir-rajjaal illi yiskun yamna diktoor.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The man",
+					"transliteration": "ir-rajjaal"
+				},
+				{
+					"arabic": "اللي",
+					"english": "who",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "يسكن",
+					"english": "lives",
+					"transliteration": "yiskun"
+				},
+				{
+					"arabic": "يمنا",
+					"english": "next to us is",
+					"transliteration": "yamna"
+				},
+				{
+					"arabic": "دكتور.",
+					"english": "a doctor.",
+					"transliteration": "diktoor."
+				}
+			],
+			"targetWords": [
+				"Who / which / that"
+			]
+		},
+		{
+			"arabic": "شوكت ما أشوفه، يضحك.",
+			"arabicTashkeel": "شْوَكِت ما أشوفَه، يِضحَك.",
+			"english": "Whenever I see him, he's laughing.",
+			"transliteration": "shwakit ma ashoofa, yidh7ak.",
+			"wordAlignments": [
+				{
+					"arabic": "شوكت",
+					"english": "When",
+					"transliteration": "shwakit"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أشوفه،",
+					"english": "I see him,",
+					"transliteration": "ashoofa,"
+				},
+				{
+					"arabic": "يضحك.",
+					"english": "he's laughing.",
+					"transliteration": "yidh7ak."
+				}
+			],
+			"targetWords": [
+				"Whenever"
+			]
+		},
+		{
+			"arabic": "وين ما تروح، إتصل بيا.",
+			"arabicTashkeel": "وين ما تْروح، إتَّصِل بيّا.",
+			"english": "Wherever you go, call me.",
+			"transliteration": "ween ma trooh, ittasil biyya.",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تروح،",
+					"english": "you go,",
+					"transliteration": "trooh,"
+				},
+				{
+					"arabic": "إتصل",
+					"english": "call",
+					"transliteration": "ittasil"
+				},
+				{
+					"arabic": "بيا.",
+					"english": "me.",
+					"transliteration": "biyya."
+				}
+			],
+			"targetWords": [
+				"Wherever"
+			]
+		},
+		{
+			"arabic": "شما تريد، قولي",
+			"arabicTashkeel": "شْما تْريد، قولّي",
+			"english": "Whatever you want, tell me.",
+			"transliteration": "shma treed, goolli",
+			"wordAlignments": [
+				{
+					"arabic": "شما",
+					"english": "Whatever",
+					"transliteration": "shma"
+				},
+				{
+					"arabic": "تريد،",
+					"english": "you want,",
+					"transliteration": "treed,"
+				},
+				{
+					"arabic": "قولي",
+					"english": "tell me.",
+					"transliteration": "goolli"
+				}
+			],
+			"targetWords": [
+				"Whatever"
+			]
+		},
+		{
+			"arabic": "أساعدك بشرط تدرس.",
+			"arabicTashkeel": "أساعدَك بشَرِط تِدرُس.",
+			"english": "I'll help you on condition that you study.",
+			"transliteration": "asaa3dak b-sharit tidrus.",
+			"wordAlignments": [
+				{
+					"arabic": "أساعدك",
+					"english": "I'll help you",
+					"transliteration": "asaa3dak"
+				},
+				{
+					"arabic": "بشرط",
+					"english": "on condition",
+					"transliteration": "b-sharit"
+				},
+				{
+					"arabic": "تدرس.",
+					"english": "you study.",
+					"transliteration": "tidrus."
+				}
+			],
+			"targetWords": [
+				"On condition that"
+			]
+		},
+		{
+			"arabic": "خذ شمسية بحالة مطرت.",
+			"arabicTashkeel": "خُذ شَمسية بحالة مُطَرَت.",
+			"english": "Take an umbrella in case it rains.",
+			"transliteration": "khudh shamsiyya b-7aala mutarat.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "شمسية",
+					"english": "an umbrella",
+					"transliteration": "shamsiyya"
+				},
+				{
+					"arabic": "بحالة",
+					"english": "in case",
+					"transliteration": "b-7aala"
+				},
+				{
+					"arabic": "مطرت.",
+					"english": "it rained.",
+					"transliteration": "mutarat."
+				}
+			],
+			"targetWords": [
+				"In case"
+			]
+		},
+		{
+			"arabic": "إستعجل، وإلا نتأخر.",
+			"arabicTashkeel": "إستَعجِل، وإلّا نِتأخَّر.",
+			"english": "Hurry up, otherwise we'll be late.",
+			"transliteration": "ista3jil, w-illa nit2akhkhar.",
+			"wordAlignments": [
+				{
+					"arabic": "إستعجل،",
+					"english": "Hurry up,",
+					"transliteration": "ista3jil,"
+				},
+				{
+					"arabic": "وإلا",
+					"english": "otherwise",
+					"transliteration": "w-illa"
+				},
+				{
+					"arabic": "نتأخر.",
+					"english": "we'll be late.",
+					"transliteration": "nit2akhkhar."
+				}
+			],
+			"targetWords": [
+				"Otherwise"
+			]
+		},
+		{
+			"arabic": "لعد، جاي لو لا؟",
+			"arabicTashkeel": "لَعَد، جاي لو لا؟",
+			"english": "So, are you coming or not?",
+			"transliteration": "la3ad, jaay law laa?",
+			"wordAlignments": [
+				{
+					"arabic": "لعد،",
+					"english": "So,",
+					"transliteration": "la3ad,"
+				},
+				{
+					"arabic": "جاي",
+					"english": "are you coming",
+					"transliteration": "jaay"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "لا؟",
+					"english": "not?",
+					"transliteration": "laa?"
+				}
+			],
+			"targetWords": [
+				"So / then"
+			]
+		},
+		{
+			"arabic": "لازم تدرس للإمتحان.",
+			"arabicTashkeel": "لازِم تِدرُس للإمتِحان.",
+			"english": "You must study for the exam.",
+			"transliteration": "laazim tidrus lil-imti7aan.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "You must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "تدرس",
+					"english": "study",
+					"transliteration": "tidrus"
+				},
+				{
+					"arabic": "للإمتحان.",
+					"english": "for the exam.",
+					"transliteration": "lil-imti7aan."
+				}
+			],
+			"targetWords": [
+				"Must"
+			]
+		},
+		{
+			"arabic": "ممكن تجي باكر؟",
+			"arabicTashkeel": "مُمكِن تِجي باكِر؟",
+			"english": "Is it possible to come tomorrow?",
+			"transliteration": "mumkin tiji baachir?",
+			"wordAlignments": [
+				{
+					"arabic": "ممكن",
+					"english": "Is it possible",
+					"transliteration": "mumkin"
+				},
+				{
+					"arabic": "تجي",
+					"english": "you come",
+					"transliteration": "tiji"
+				},
+				{
+					"arabic": "باكر؟",
+					"english": "tomorrow?",
+					"transliteration": "baachir?"
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "إذا تعبان، إرتاح.",
+			"arabicTashkeel": "إذا تَعبان، إرتاح.",
+			"english": "If you're tired, rest.",
+			"transliteration": "itha ta3baan, irtaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "إذا",
+					"english": "If",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "تعبان،",
+					"english": "you're tired,",
+					"transliteration": "ta3baan,"
+				},
+				{
+					"arabic": "إرتاح.",
+					"english": "rest.",
+					"transliteration": "irtaa7."
+				}
+			],
+			"targetWords": [
+				"If"
+			]
+		},
+		{
+			"arabic": "لو آني مكانك، كان سافرت.",
+			"arabicTashkeel": "لو آني مَكانَك، كان سافَرِت.",
+			"english": "If I were you, I would travel.",
+			"transliteration": "law aani makaanak, chaan saafarit.",
+			"wordAlignments": [
+				{
+					"arabic": "لو",
+					"english": "If",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "آني",
+					"english": "I were",
+					"transliteration": "aani"
+				},
+				{
+					"arabic": "مكانك،",
+					"english": "in your place,",
+					"transliteration": "makaanak,"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "سافرت.",
+					"english": "I travel.",
+					"transliteration": "saafarit."
+				}
+			],
+			"targetWords": [
+				"If (hypothetical)",
+				"Would"
+			]
+		},
+		{
+			"arabic": "ما آكل لحم إلا إذا دجاج.",
+			"arabicTashkeel": "ما آكُل لَحَم إلّا إذا دِجاج.",
+			"english": "I don't eat meat unless it's chicken.",
+			"transliteration": "ma aakul la7am illa itha dijaaj.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakul"
+				},
+				{
+					"arabic": "لحم",
+					"english": "meat",
+					"transliteration": "la7am"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "إذا",
+					"english": "if",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "دجاج.",
+					"english": "chicken.",
+					"transliteration": "dijaaj."
+				}
+			],
+			"targetWords": [
+				"Unless"
+			]
+		},
+		{
+			"arabic": "لولا الزحمة، كان وصلنا بكير.",
+			"arabicTashkeel": "لولا الزَّحمة، كان وِصَلنا بَكّير.",
+			"english": "If not for the traffic, we'd have arrived early.",
+			"transliteration": "lawla iz-za7ma, chaan wisalna bachcheer.",
+			"wordAlignments": [
+				{
+					"arabic": "لولا",
+					"english": "If not for",
+					"transliteration": "lawla"
+				},
+				{
+					"arabic": "الزحمة،",
+					"english": "the traffic,",
+					"transliteration": "iz-za7ma,"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "وصلنا",
+					"english": "we have arrived",
+					"transliteration": "wisalna"
+				},
+				{
+					"arabic": "بكير.",
+					"english": "early.",
+					"transliteration": "bachcheer."
+				}
+			],
+			"targetWords": [
+				"If not for"
+			]
+		},
+		{
+			"arabic": "الكتاب اللي إشتريته حلو.",
+			"arabicTashkeel": "الكْتاب اللي إشتِريتَه حِلو.",
+			"english": "The book that I bought is nice.",
+			"transliteration": "il-ktaab illi ishtireeta 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book",
+					"transliteration": "il-ktaab"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "إشتريته",
+					"english": "I bought",
+					"transliteration": "ishtireeta"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "is nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Who / which / that"
+			]
+		},
+		{
+			"arabic": "شوكت ما تفرغ، خابرني.",
+			"arabicTashkeel": "شْوَكِت ما تِفرَغ، خابُرني.",
+			"english": "Whenever you're free, call me.",
+			"transliteration": "shwakit ma tifragh, khaaburni.",
+			"wordAlignments": [
+				{
+					"arabic": "شوكت",
+					"english": "When",
+					"transliteration": "shwakit"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تفرغ،",
+					"english": "you're free,",
+					"transliteration": "tifragh,"
+				},
+				{
+					"arabic": "خابرني.",
+					"english": "call me.",
+					"transliteration": "khaaburni."
+				}
+			],
+			"targetWords": [
+				"Whenever"
+			]
+		},
+		{
+			"arabic": "وين ما أروح، ألقى عراقيين.",
+			"arabicTashkeel": "وين ما أروح، ألقى عِراقيين.",
+			"english": "Wherever I go, I find Iraqis.",
+			"transliteration": "ween ma arooh, algi 3iraaqiyyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أروح،",
+					"english": "I go,",
+					"transliteration": "arooh,"
+				},
+				{
+					"arabic": "ألقى",
+					"english": "I find",
+					"transliteration": "algi"
+				},
+				{
+					"arabic": "عراقيين.",
+					"english": "Iraqis.",
+					"transliteration": "3iraaqiyyeen."
+				}
+			],
+			"targetWords": [
+				"Wherever"
+			]
+		},
+		{
+			"arabic": "شما يصير، آني وياك.",
+			"arabicTashkeel": "شْما يْصير، آني ويّاك.",
+			"english": "Whatever happens, I'm with you.",
+			"transliteration": "shma yseer, aani wiyyaak.",
+			"wordAlignments": [
+				{
+					"arabic": "شما",
+					"english": "Whatever",
+					"transliteration": "shma"
+				},
+				{
+					"arabic": "يصير،",
+					"english": "happens,",
+					"transliteration": "yseer,"
+				},
+				{
+					"arabic": "آني",
+					"english": "I am",
+					"transliteration": "aani"
+				},
+				{
+					"arabic": "وياك.",
+					"english": "with you.",
+					"transliteration": "wiyyaak."
+				}
+			],
+			"targetWords": [
+				"Whatever"
+			]
+		},
+		{
+			"arabic": "تقدر تطلع بشرط ترجع بكير.",
+			"arabicTashkeel": "تِقدَر تِطلَع بشَرِط تِرجَع بَكّير.",
+			"english": "You can go out on condition that you come back early.",
+			"transliteration": "tigdar titla3 b-sharit tirja3 bachcheer.",
+			"wordAlignments": [
+				{
+					"arabic": "تقدر",
+					"english": "You can",
+					"transliteration": "tigdar"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "go out",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "بشرط",
+					"english": "on condition",
+					"transliteration": "b-sharit"
+				},
+				{
+					"arabic": "ترجع",
+					"english": "you come back",
+					"transliteration": "tirja3"
+				},
+				{
+					"arabic": "بكير.",
+					"english": "early.",
+					"transliteration": "bachcheer."
+				}
+			],
+			"targetWords": [
+				"On condition that"
+			]
+		},
+		{
+			"arabic": "إتصل بيا بحالة إحتاجيت شي.",
+			"arabicTashkeel": "إتَّصِل بيّا بحالة إحتاجيت شي.",
+			"english": "Call me in case you need anything.",
+			"transliteration": "ittasil biyya b-7aala i7taajeet shi.",
+			"wordAlignments": [
+				{
+					"arabic": "إتصل",
+					"english": "Call",
+					"transliteration": "ittasil"
+				},
+				{
+					"arabic": "بيا",
+					"english": "me",
+					"transliteration": "biyya"
+				},
+				{
+					"arabic": "بحالة",
+					"english": "in case",
+					"transliteration": "b-7aala"
+				},
+				{
+					"arabic": "إحتاجيت",
+					"english": "you needed",
+					"transliteration": "i7taajeet"
+				},
+				{
+					"arabic": "شي.",
+					"english": "anything.",
+					"transliteration": "shi."
+				}
+			],
+			"targetWords": [
+				"In case"
+			]
+		},
+		{
+			"arabic": "أكل، وإلا تجوع.",
+			"arabicTashkeel": "أُكُل، وإلّا تِجوع.",
+			"english": "Eat, otherwise you'll get hungry.",
+			"transliteration": "ukul, w-illa tijoo3.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل،",
+					"english": "Eat,",
+					"transliteration": "ukul,"
+				},
+				{
+					"arabic": "وإلا",
+					"english": "otherwise",
+					"transliteration": "w-illa"
+				},
+				{
+					"arabic": "تجوع.",
+					"english": "you'll get hungry.",
+					"transliteration": "tijoo3."
+				}
+			],
+			"targetWords": [
+				"Otherwise"
+			]
+		},
+		{
+			"arabic": "لعد شنسوي هسه؟",
+			"arabicTashkeel": "لَعَد شْنِسَوّي هَسَّه؟",
+			"english": "So what do we do now?",
+			"transliteration": "la3ad shnisawwi hassa?",
+			"wordAlignments": [
+				{
+					"arabic": "لعد",
+					"english": "So",
+					"transliteration": "la3ad"
+				},
+				{
+					"arabic": "شنسوي",
+					"english": "what do we do",
+					"transliteration": "shnisawwi"
+				},
+				{
+					"arabic": "هسه؟",
+					"english": "now?",
+					"transliteration": "hassa?"
+				}
+			],
+			"targetWords": [
+				"So / then"
+			]
+		},
+		{
+			"arabic": "لازم أروح هسه.",
+			"arabicTashkeel": "لازِم أروح هَسَّه.",
+			"english": "I must go now.",
+			"transliteration": "laazim arooh hassa.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "I must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "أروح",
+					"english": "go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "هسه.",
+					"english": "now.",
+					"transliteration": "hassa."
+				}
+			],
+			"targetWords": [
+				"Must"
+			]
+		},
+		{
+			"arabic": "هذا مو ممكن!",
+			"arabicTashkeel": "هَذا مو مُمكِن!",
+			"english": "That's not possible!",
+			"transliteration": "haatha moo mumkin!",
+			"wordAlignments": [
+				{
+					"arabic": "هذا",
+					"english": "That is",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "ممكن!",
+					"english": "possible!",
+					"transliteration": "mumkin!"
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "إذا شفت علي، سلم عليه.",
+			"arabicTashkeel": "إذا شِفِت عَلي، سَلِّم عَليه.",
+			"english": "If you see Ali, say hello to him.",
+			"transliteration": "itha shifit 3ali, sallim 3alee.",
+			"wordAlignments": [
+				{
+					"arabic": "إذا",
+					"english": "If",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "شفت",
+					"english": "you saw",
+					"transliteration": "shifit"
+				},
+				{
+					"arabic": "علي،",
+					"english": "Ali,",
+					"transliteration": "3ali,"
+				},
+				{
+					"arabic": "سلم",
+					"english": "greet",
+					"transliteration": "sallim"
+				},
+				{
+					"arabic": "عليه.",
+					"english": "him.",
+					"transliteration": "3alee."
+				}
+			],
+			"targetWords": [
+				"If"
+			]
+		},
+		{
+			"arabic": "لو أعرف، كان قلتلك.",
+			"arabicTashkeel": "لو أعرُف، كان قِلتلَك.",
+			"english": "If I knew, I would have told you.",
+			"transliteration": "law a3ruf, chaan giltlak.",
+			"wordAlignments": [
+				{
+					"arabic": "لو",
+					"english": "If",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "أعرف،",
+					"english": "I knew,",
+					"transliteration": "a3ruf,"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "قلتلك.",
+					"english": "I have told you.",
+					"transliteration": "giltlak."
+				}
+			],
+			"targetWords": [
+				"If (hypothetical)",
+				"Would"
+			]
+		},
+		{
+			"arabic": "ما يجي إلا إذا إتصلت بيه.",
+			"arabicTashkeel": "ما يِجي إلّا إذا إتصِلت بيه.",
+			"english": "He won't come unless you call him.",
+			"transliteration": "ma yiji illa itha ittisalit bee.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يجي",
+					"english": "he comes",
+					"transliteration": "yiji"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "إذا",
+					"english": "if",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "إتصلت",
+					"english": "you called",
+					"transliteration": "ittisalit"
+				},
+				{
+					"arabic": "بيه.",
+					"english": "him.",
+					"transliteration": "bee."
+				}
+			],
+			"targetWords": [
+				"Unless"
+			]
+		},
+		{
+			"arabic": "لولاك كان ضعت.",
+			"arabicTashkeel": "لولاك كان ضِعِت.",
+			"english": "If not for you, I would have got lost.",
+			"transliteration": "lawlaak chaan dhi3it.",
+			"wordAlignments": [
+				{
+					"arabic": "لولاك",
+					"english": "If not for you",
+					"transliteration": "lawlaak"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "ضعت.",
+					"english": "I have got lost.",
+					"transliteration": "dhi3it."
+				}
+			],
+			"targetWords": [
+				"If not for"
+			]
+		},
+		{
+			"arabic": "البنية اللي غلبت أختي.",
+			"arabicTashkeel": "البْنَيّة اللي غِلبَت أُختي.",
+			"english": "The girl who won is my sister.",
+			"transliteration": "il-bnayya illi ghilbat ukhti.",
+			"wordAlignments": [
+				{
+					"arabic": "البنية",
+					"english": "The girl",
+					"transliteration": "il-bnayya"
+				},
+				{
+					"arabic": "اللي",
+					"english": "who",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "غلبت",
+					"english": "won",
+					"transliteration": "ghilbat"
+				},
+				{
+					"arabic": "أختي.",
+					"english": "is my sister.",
+					"transliteration": "ukhti."
+				}
+			],
+			"targetWords": [
+				"Who / which / that"
+			]
+		},
+		{
+			"arabic": "شوكت ما أتعب، أشرب شاي.",
+			"arabicTashkeel": "شْوَكِت ما أتعَب، أشرَب شاي.",
+			"english": "Whenever I'm tired, I drink tea.",
+			"transliteration": "shwakit ma at3ab, ashrab chaay.",
+			"wordAlignments": [
+				{
+					"arabic": "شوكت",
+					"english": "When",
+					"transliteration": "shwakit"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتعب،",
+					"english": "I get tired,",
+					"transliteration": "at3ab,"
+				},
+				{
+					"arabic": "أشرب",
+					"english": "I drink",
+					"transliteration": "ashrab"
+				},
+				{
+					"arabic": "شاي.",
+					"english": "tea.",
+					"transliteration": "chaay."
+				}
+			],
+			"targetWords": [
+				"Whenever"
+			]
+		},
+		{
+			"arabic": "إقعد وين ما تريد.",
+			"arabicTashkeel": "إقعُد وين ما تْريد.",
+			"english": "Sit wherever you like.",
+			"transliteration": "ig3ud ween ma treed.",
+			"wordAlignments": [
+				{
+					"arabic": "إقعد",
+					"english": "Sit",
+					"transliteration": "ig3ud"
+				},
+				{
+					"arabic": "وين",
+					"english": "where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تريد.",
+					"english": "you want.",
+					"transliteration": "treed."
+				}
+			],
+			"targetWords": [
+				"Wherever"
+			]
+		},
+		{
+			"arabic": "سوي شما تريد.",
+			"arabicTashkeel": "سَوّي شْما تْريد.",
+			"english": "Do whatever you like.",
+			"transliteration": "sawwi shma treed.",
+			"wordAlignments": [
+				{
+					"arabic": "سوي",
+					"english": "Do",
+					"transliteration": "sawwi"
+				},
+				{
+					"arabic": "شما",
+					"english": "whatever",
+					"transliteration": "shma"
+				},
+				{
+					"arabic": "تريد.",
+					"english": "you want.",
+					"transliteration": "treed."
+				}
+			],
+			"targetWords": [
+				"Whatever"
+			]
+		},
+		{
+			"arabic": "بشرط تدفع النص.",
+			"arabicTashkeel": "بشَرِط تِدفَع النُّص.",
+			"english": "On condition that you pay half.",
+			"transliteration": "b-sharit tidfa3 in-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "بشرط",
+					"english": "On condition",
+					"transliteration": "b-sharit"
+				},
+				{
+					"arabic": "تدفع",
+					"english": "you pay",
+					"transliteration": "tidfa3"
+				},
+				{
+					"arabic": "النص.",
+					"english": "the half.",
+					"transliteration": "in-nuss."
+				}
+			],
+			"targetWords": [
+				"On condition that"
+			]
+		},
+		{
+			"arabic": "بحالة الطوارئ إتصل بهذا الرقم.",
+			"arabicTashkeel": "بحالة الطَّوارِئ إتَّصِل بهَذا الرَّقَم.",
+			"english": "In case of emergency, call this number.",
+			"transliteration": "b-7aala it-tawaari2 ittasil b-haatha ir-ragam.",
+			"wordAlignments": [
+				{
+					"arabic": "بحالة",
+					"english": "In case of",
+					"transliteration": "b-7aala"
+				},
+				{
+					"arabic": "الطوارئ",
+					"english": "emergency,",
+					"transliteration": "it-tawaari2"
+				},
+				{
+					"arabic": "إتصل",
+					"english": "call",
+					"transliteration": "ittasil"
+				},
+				{
+					"arabic": "بهذا",
+					"english": "this",
+					"transliteration": "b-haatha"
+				},
+				{
+					"arabic": "الرقم.",
+					"english": "number.",
+					"transliteration": "ir-ragam."
+				}
+			],
+			"targetWords": [
+				"In case"
+			]
+		},
+		{
+			"arabic": "إدرس، وإلا ترسب.",
+			"arabicTashkeel": "إدرُس، وإلّا تِرسِب.",
+			"english": "Study, otherwise you'll fail.",
+			"transliteration": "idrus, w-illa tirsib.",
+			"wordAlignments": [
+				{
+					"arabic": "إدرس،",
+					"english": "Study,",
+					"transliteration": "idrus,"
+				},
+				{
+					"arabic": "وإلا",
+					"english": "otherwise",
+					"transliteration": "w-illa"
+				},
+				{
+					"arabic": "ترسب.",
+					"english": "you'll fail.",
+					"transliteration": "tirsib."
+				}
+			],
+			"targetWords": [
+				"Otherwise"
+			]
+		},
+		{
+			"arabic": "لعد ما جاي؟",
+			"arabicTashkeel": "لَعَد ما جاي؟",
+			"english": "So you're not coming?",
+			"transliteration": "la3ad ma jaay?",
+			"wordAlignments": [
+				{
+					"arabic": "لعد",
+					"english": "So",
+					"transliteration": "la3ad"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "جاي؟",
+					"english": "you're coming?",
+					"transliteration": "jaay?"
+				}
+			],
+			"targetWords": [
+				"So / then"
+			]
+		},
+		{
+			"arabic": "لازم نروح هسه؟",
+			"arabicTashkeel": "لازِم نْروح هَسَّه؟",
+			"english": "Must we go now?",
+			"transliteration": "laazim nrooh hassa?",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "هسه؟",
+					"english": "now?",
+					"transliteration": "hassa?"
+				}
+			],
+			"targetWords": [
+				"Must"
+			]
+		},
+		{
+			"arabic": "ممكن أدفع بالكارت؟",
+			"arabicTashkeel": "مُمكِن أدفَع بالكارت؟",
+			"english": "Is it possible to pay by card?",
+			"transliteration": "mumkin adfa3 bil-kaart?",
+			"wordAlignments": [
+				{
+					"arabic": "ممكن",
+					"english": "Is it possible",
+					"transliteration": "mumkin"
+				},
+				{
+					"arabic": "أدفع",
+					"english": "I pay",
+					"transliteration": "adfa3"
+				},
+				{
+					"arabic": "بالكارت؟",
+					"english": "by card?",
+					"transliteration": "bil-kaart?"
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "إذا تريد، نروح سوية.",
+			"arabicTashkeel": "إذا تْريد، نْروح سْوَيّة.",
+			"english": "If you want, we'll go together.",
+			"transliteration": "itha treed, nrooh swayya.",
+			"wordAlignments": [
+				{
+					"arabic": "إذا",
+					"english": "If",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "تريد،",
+					"english": "you want,",
+					"transliteration": "treed,"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "سوية.",
+					"english": "together.",
+					"transliteration": "swayya."
+				}
+			],
+			"targetWords": [
+				"If"
+			]
+		},
+		{
+			"arabic": "لو الجو مو حار، كان طلعنا.",
+			"arabicTashkeel": "لو الجَو مو حار، كان طِلَعنا.",
+			"english": "If it weren't hot, we would have gone out.",
+			"transliteration": "law ij-jaw moo 7aarr, chaan tila3na.",
+			"wordAlignments": [
+				{
+					"arabic": "لو",
+					"english": "If",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather were",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "حار،",
+					"english": "hot,",
+					"transliteration": "7aarr,"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "طلعنا.",
+					"english": "we have gone out.",
+					"transliteration": "tila3na."
+				}
+			],
+			"targetWords": [
+				"If (hypothetical)",
+				"Would"
+			]
+		},
+		{
+			"arabic": "لا تفتح الباب إلا إذا تعرف منو.",
+			"arabicTashkeel": "لا تِفتَح الباب إلّا إذا تِعرُف مِنو.",
+			"english": "Don't open the door unless you know who it is.",
+			"transliteration": "la tifta7 il-baab illa itha ti3ruf minu.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تفتح",
+					"english": "open",
+					"transliteration": "tifta7"
+				},
+				{
+					"arabic": "الباب",
+					"english": "the door",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "إذا",
+					"english": "if",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "تعرف",
+					"english": "you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "منو.",
+					"english": "who.",
+					"transliteration": "minu."
+				}
+			],
+			"targetWords": [
+				"Unless"
+			]
+		},
+		{
+			"arabic": "لولا الله كان متنا.",
+			"arabicTashkeel": "لولا الله كان مِتنا.",
+			"english": "If not for God, we'd have died.",
+			"transliteration": "lawla allah chaan mitna.",
+			"wordAlignments": [
+				{
+					"arabic": "لولا",
+					"english": "If not for",
+					"transliteration": "lawla"
+				},
+				{
+					"arabic": "الله",
+					"english": "God,",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "كان",
+					"english": "would",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "متنا.",
+					"english": "we have died.",
+					"transliteration": "mitna."
+				}
+			],
+			"targetWords": [
+				"If not for"
+			]
+		},
+		{
+			"arabic": "السيارة اللي قدام البيت جديدة.",
+			"arabicTashkeel": "السَّيّارة اللي قِدّام البيت جْديدة.",
+			"english": "The car that's in front of the house is new.",
+			"transliteration": "is-sayyaara illi giddaam il-beet jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that is",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house is",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Who / which / that"
+			]
+		},
+		{
+			"arabic": "شوكت ما تجي، الباب مفتوح.",
+			"arabicTashkeel": "شْوَكِت ما تِجي، الباب مَفتوح.",
+			"english": "Whenever you come, the door is open.",
+			"transliteration": "shwakit ma tiji, il-baab maftoo7.",
+			"wordAlignments": [
+				{
+					"arabic": "شوكت",
+					"english": "When",
+					"transliteration": "shwakit"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تجي،",
+					"english": "you come,",
+					"transliteration": "tiji,"
+				},
+				{
+					"arabic": "الباب",
+					"english": "the door is",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "مفتوح.",
+					"english": "open.",
+					"transliteration": "maftoo7."
+				}
+			],
+			"targetWords": [
+				"Whenever"
+			]
+		},
+		{
+			"arabic": "وين ما تكون، أجيك.",
+			"arabicTashkeel": "وين ما تكون، أجيك.",
+			"english": "Wherever you are, I'll come.",
+			"transliteration": "ween ma tkoon, ajeek.",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ما",
+					"english": "ever",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تكون،",
+					"english": "you are,",
+					"transliteration": "tkoon,"
+				},
+				{
+					"arabic": "أجيك.",
+					"english": "I'll come to you.",
+					"transliteration": "ajeek."
+				}
+			],
+			"targetWords": [
+				"Wherever"
+			]
+		},
+		{
+			"arabic": "شما يكون السعر، أشتريه.",
+			"arabicTashkeel": "شْما يكون السِّعِر، أشتِريه.",
+			"english": "Whatever the price, I'll buy it.",
+			"transliteration": "shma ykoon is-si3ir, ashtiree.",
+			"wordAlignments": [
+				{
+					"arabic": "شما",
+					"english": "Whatever",
+					"transliteration": "shma"
+				},
+				{
+					"arabic": "يكون",
+					"english": "is",
+					"transliteration": "ykoon"
+				},
+				{
+					"arabic": "السعر،",
+					"english": "the price,",
+					"transliteration": "is-si3ir,"
+				},
+				{
+					"arabic": "أشتريه.",
+					"english": "I'll buy it.",
+					"transliteration": "ashtiree."
+				}
+			],
+			"targetWords": [
+				"Whatever"
+			]
+		},
+		{
+			"arabic": "أنطيك السيارة بشرط تسوق على مهل.",
+			"arabicTashkeel": "أنطيك السَّيّارة بشَرِط تْسوق عَلى مَهَل.",
+			"english": "I'll lend you the car on condition that you drive slowly.",
+			"transliteration": "anteek is-sayyaara b-sharit tsoog 3ala mahal.",
+			"wordAlignments": [
+				{
+					"arabic": "أنطيك",
+					"english": "I'll give you",
+					"transliteration": "anteek"
+				},
+				{
+					"arabic": "السيارة",
+					"english": "the car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "بشرط",
+					"english": "on condition",
+					"transliteration": "b-sharit"
+				},
+				{
+					"arabic": "تسوق",
+					"english": "you drive",
+					"transliteration": "tsoog"
+				},
+				{
+					"arabic": "على",
+					"english": "with",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "مهل.",
+					"english": "slowness.",
+					"transliteration": "mahal."
+				}
+			],
+			"targetWords": [
+				"On condition that"
+			]
+		},
+		{
+			"arabic": "جيب قبوط بحالة بردت.",
+			"arabicTashkeel": "جيب قَبّوط بحالة بِرَدَت.",
+			"english": "Bring a coat in case it gets cold.",
+			"transliteration": "jeeb gabboot b-7aala biradat.",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				},
+				{
+					"arabic": "قبوط",
+					"english": "a coat",
+					"transliteration": "gabboot"
+				},
+				{
+					"arabic": "بحالة",
+					"english": "in case",
+					"transliteration": "b-7aala"
+				},
+				{
+					"arabic": "بردت.",
+					"english": "it got cold.",
+					"transliteration": "biradat."
+				}
+			],
+			"targetWords": [
+				"In case"
+			]
+		},
+		{
+			"arabic": "إسمع كلامي، وإلا تندم.",
+			"arabicTashkeel": "إسمَع كَلامي، وإلّا تِندَم.",
+			"english": "Listen to me, otherwise you'll regret it.",
+			"transliteration": "isma3 kalaami, w-illa tindam.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمع",
+					"english": "Listen",
+					"transliteration": "isma3"
+				},
+				{
+					"arabic": "كلامي،",
+					"english": "to my words,",
+					"transliteration": "kalaami,"
+				},
+				{
+					"arabic": "وإلا",
+					"english": "otherwise",
+					"transliteration": "w-illa"
+				},
+				{
+					"arabic": "تندم.",
+					"english": "you'll regret.",
+					"transliteration": "tindam."
+				}
+			],
+			"targetWords": [
+				"Otherwise"
+			]
+		},
+		{
+			"arabic": "لعد إتفقنا، باكر الساعة ثمانية.",
+			"arabicTashkeel": "لَعَد إتِّفَقنا، باكِر السّاعة ثْمانية.",
+			"english": "So it's settled, tomorrow at eight.",
+			"transliteration": "la3ad ittifagna, baachir is-saa3a thmaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "لعد",
+					"english": "So",
+					"transliteration": "la3ad"
+				},
+				{
+					"arabic": "إتفقنا،",
+					"english": "we agreed,",
+					"transliteration": "ittifagna,"
+				},
+				{
+					"arabic": "باكر",
+					"english": "tomorrow",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثمانية.",
+					"english": "eight.",
+					"transliteration": "thmaanya."
+				}
+			],
+			"targetWords": [
+				"So / then"
+			]
+		},
+		{
+			"arabic": "كلشي ممكن.",
+			"arabicTashkeel": "كُلشي مُمكِن.",
+			"english": "Everything is possible.",
+			"transliteration": "kulshi mumkin.",
+			"wordAlignments": [
+				{
+					"arabic": "كلشي",
+					"english": "Everything is",
+					"transliteration": "kulshi"
+				},
+				{
+					"arabic": "ممكن.",
+					"english": "possible.",
+					"transliteration": "mumkin."
+				}
+			],
+			"targetWords": [
+				"Possible"
+			]
+		},
+		{
+			"arabic": "لازم ترتاح إذا مريض.",
+			"arabicTashkeel": "لازِم تِرتاح إذا مَريض.",
+			"english": "You must rest if you're sick.",
+			"transliteration": "laazim tirtaa7 itha mareedh.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "You must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "ترتاح",
+					"english": "rest",
+					"transliteration": "tirtaa7"
+				},
+				{
+					"arabic": "إذا",
+					"english": "if",
+					"transliteration": "itha"
+				},
+				{
+					"arabic": "مريض.",
+					"english": "you're sick.",
+					"transliteration": "mareedh."
+				}
+			],
+			"targetWords": [
+				"Must",
+				"If"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Day Off",
+			"sentences": [
+				{
+					"arabic": "إذا الجو حلو باكر، نطلع سيران.",
+					"arabicTashkeel": "إذا الجَو حِلو باكِر، نِطلَع سَيران.",
+					"english": "If the weather is nice tomorrow, we'll go on a picnic.",
+					"transliteration": "itha ij-jaw 7ilu baachir, nitla3 sayraan.",
+					"wordAlignments": [
+						{
+							"arabic": "إذا",
+							"english": "If",
+							"transliteration": "itha"
+						},
+						{
+							"arabic": "الجو",
+							"english": "the weather is",
+							"transliteration": "ij-jaw"
+						},
+						{
+							"arabic": "حلو",
+							"english": "nice",
+							"transliteration": "7ilu"
+						},
+						{
+							"arabic": "باكر،",
+							"english": "tomorrow,",
+							"transliteration": "baachir,"
+						},
+						{
+							"arabic": "نطلع",
+							"english": "we go out",
+							"transliteration": "nitla3"
+						},
+						{
+							"arabic": "سيران.",
+							"english": "on a picnic.",
+							"transliteration": "sayraan."
+						}
+					]
+				},
+				{
+					"arabic": "بس إذا مطرت، نبقى بالبيت ونشوف فلم.",
+					"arabicTashkeel": "بَس إذا مُطَرَت، نِبقى بالبيت ونْشوف فِلِم.",
+					"english": "But if it rains, we'll stay home and watch a film.",
+					"transliteration": "bas itha mutarat, nibga bil-beet w-nshoof filim.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "إذا",
+							"english": "if",
+							"transliteration": "itha"
+						},
+						{
+							"arabic": "مطرت،",
+							"english": "it rained,",
+							"transliteration": "mutarat,"
+						},
+						{
+							"arabic": "نبقى",
+							"english": "we stay",
+							"transliteration": "nibga"
+						},
+						{
+							"arabic": "بالبيت",
+							"english": "at home",
+							"transliteration": "bil-beet"
+						},
+						{
+							"arabic": "ونشوف",
+							"english": "and watch",
+							"transliteration": "w-nshoof"
+						},
+						{
+							"arabic": "فلم.",
+							"english": "a film.",
+							"transliteration": "filim."
+						}
+					]
+				},
+				{
+					"arabic": "أخويه ما يجي إلا إذا رفيجه يجي هم.",
+					"arabicTashkeel": "أخويَه ما يِجي إلّا إذا رَفيجَه يِجي هَم.",
+					"english": "My brother won't come unless his friend comes too.",
+					"transliteration": "akhooya ma yiji illa itha rafeega yiji ham.",
+					"wordAlignments": [
+						{
+							"arabic": "أخويه",
+							"english": "My brother",
+							"transliteration": "akhooya"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "يجي",
+							"english": "comes",
+							"transliteration": "yiji"
+						},
+						{
+							"arabic": "إلا",
+							"english": "except",
+							"transliteration": "illa"
+						},
+						{
+							"arabic": "إذا",
+							"english": "if",
+							"transliteration": "itha"
+						},
+						{
+							"arabic": "رفيجه",
+							"english": "his friend",
+							"transliteration": "rafeega"
+						},
+						{
+							"arabic": "يجي",
+							"english": "comes",
+							"transliteration": "yiji"
+						},
+						{
+							"arabic": "هم.",
+							"english": "too.",
+							"transliteration": "ham."
+						}
+					]
+				},
+				{
+					"arabic": "لو عندي سيارة، كان أسهل.",
+					"arabicTashkeel": "لو عِندي سَيّارة، كان أسهَل.",
+					"english": "If I had a car, it would be easier.",
+					"transliteration": "law 3indi sayyaara, chaan ashal.",
+					"wordAlignments": [
+						{
+							"arabic": "لو",
+							"english": "If",
+							"transliteration": "law"
+						},
+						{
+							"arabic": "عندي",
+							"english": "I had",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "سيارة،",
+							"english": "a car,",
+							"transliteration": "sayyaara,"
+						},
+						{
+							"arabic": "كان",
+							"english": "would",
+							"transliteration": "chaan"
+						},
+						{
+							"arabic": "أسهل.",
+							"english": "be easier.",
+							"transliteration": "ashal."
+						}
+					]
+				},
+				{
+					"arabic": "لعد لازم نطلع بكير.",
+					"arabicTashkeel": "لَعَد لازِم نِطلَع بَكّير.",
+					"english": "So we must leave early.",
+					"transliteration": "la3ad laazim nitla3 bachcheer.",
+					"wordAlignments": [
+						{
+							"arabic": "لعد",
+							"english": "So",
+							"transliteration": "la3ad"
+						},
+						{
+							"arabic": "لازم",
+							"english": "we must",
+							"transliteration": "laazim"
+						},
+						{
+							"arabic": "نطلع",
+							"english": "leave",
+							"transliteration": "nitla3"
+						},
+						{
+							"arabic": "بكير.",
+							"english": "early.",
+							"transliteration": "bachcheer."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Neighbour",
+			"sentences": [
+				{
+					"arabic": "الرجال اللي يسكن يمنا طيب هواية.",
+					"arabicTashkeel": "الرَّجّال اللي يِسكُن يَمنا طَيِّب هْوايَة.",
+					"english": "The man who lives next to us is very kind.",
+					"transliteration": "ir-rajjaal illi yiskun yamna tayyib hwaaya.",
+					"wordAlignments": [
+						{
+							"arabic": "الرجال",
+							"english": "The man",
+							"transliteration": "ir-rajjaal"
+						},
+						{
+							"arabic": "اللي",
+							"english": "who",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "يسكن",
+							"english": "lives",
+							"transliteration": "yiskun"
+						},
+						{
+							"arabic": "يمنا",
+							"english": "next to us is",
+							"transliteration": "yamna"
+						},
+						{
+							"arabic": "طيب",
+							"english": "kind",
+							"transliteration": "tayyib"
+						},
+						{
+							"arabic": "هواية.",
+							"english": "very.",
+							"transliteration": "hwaaya."
+						}
+					]
+				},
+				{
+					"arabic": "شوكت ما نحتاج شي، يساعدنا.",
+					"arabicTashkeel": "شْوَكِت ما نِحتاج شي، يْساعِدنا.",
+					"english": "Whenever we need something, he helps us.",
+					"transliteration": "shwakit ma ni7taaj shi, ysaa3idna.",
+					"wordAlignments": [
+						{
+							"arabic": "شوكت",
+							"english": "When",
+							"transliteration": "shwakit"
+						},
+						{
+							"arabic": "ما",
+							"english": "ever",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "نحتاج",
+							"english": "we need",
+							"transliteration": "ni7taaj"
+						},
+						{
+							"arabic": "شي،",
+							"english": "something,",
+							"transliteration": "shi,"
+						},
+						{
+							"arabic": "يساعدنا.",
+							"english": "he helps us.",
+							"transliteration": "ysaa3idna."
+						}
+					]
+				},
+				{
+					"arabic": "لولاه كان تعبنا هواية.",
+					"arabicTashkeel": "لولاه كان تِعَبنا هْوايَة.",
+					"english": "If not for him, we would have suffered a lot.",
+					"transliteration": "lawlaah chaan ti3abna hwaaya.",
+					"wordAlignments": [
+						{
+							"arabic": "لولاه",
+							"english": "If not for him",
+							"transliteration": "lawlaah"
+						},
+						{
+							"arabic": "كان",
+							"english": "would",
+							"transliteration": "chaan"
+						},
+						{
+							"arabic": "تعبنا",
+							"english": "we have suffered",
+							"transliteration": "ti3abna"
+						},
+						{
+							"arabic": "هواية.",
+							"english": "a lot.",
+							"transliteration": "hwaaya."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student and an Iraqi friend are planning a weekend, but the plans depend on the weather, money and who else can come.",
+		"studentRole": "A friend learning Iraqi Arabic.",
+		"otherRole": "An Iraqi friend who keeps adding \"if\" and \"unless\" to every plan.",
+		"goalEnglish": "Make plans with conditions (if it rains, unless, in case), say what you would do if you had more money or time, and agree on a final plan.",
+		"targetWords": [
+			"If",
+			"If (hypothetical)",
+			"Would",
+			"Unless",
+			"In case",
+			"Otherwise",
+			"So / then",
+			"Must"
+		]
+	}
+}

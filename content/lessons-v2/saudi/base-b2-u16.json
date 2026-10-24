@@ -1,0 +1,1993 @@
+{
+	"vocab": [
+		{
+			"arabic": "قانون",
+			"arabicTashkeel": "قانون",
+			"english": "Law",
+			"transliteration": "gaanoon",
+			"wordAlignments": [
+				{
+					"arabic": "قانون",
+					"english": "Law",
+					"transliteration": "gaanoon"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حقوق",
+			"arabicTashkeel": "حُقوق",
+			"english": "Rights",
+			"transliteration": "7ugoog",
+			"wordAlignments": [
+				{
+					"arabic": "حقوق",
+					"english": "Rights",
+					"transliteration": "7ugoog"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "واجبات",
+			"arabicTashkeel": "واجِبات",
+			"english": "Duties",
+			"transliteration": "waajibaat",
+			"wordAlignments": [
+				{
+					"arabic": "واجبات",
+					"english": "Duties",
+					"transliteration": "waajibaat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "محكمة",
+			"arabicTashkeel": "مَحكَمة",
+			"english": "Court",
+			"transliteration": "ma7kama",
+			"wordAlignments": [
+				{
+					"arabic": "محكمة",
+					"english": "Court",
+					"transliteration": "ma7kama"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "قاضي",
+			"arabicTashkeel": "قاضي",
+			"english": "Judge",
+			"transliteration": "gaadhi",
+			"wordAlignments": [
+				{
+					"arabic": "قاضي",
+					"english": "Judge",
+					"transliteration": "gaadhi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شرطة",
+			"arabicTashkeel": "شُرطة",
+			"english": "Police",
+			"transliteration": "shurta",
+			"wordAlignments": [
+				{
+					"arabic": "شرطة",
+					"english": "Police",
+					"transliteration": "shurta"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "جريمة",
+			"arabicTashkeel": "جَريمة",
+			"english": "Crime",
+			"transliteration": "jareema",
+			"wordAlignments": [
+				{
+					"arabic": "جريمة",
+					"english": "Crime",
+					"transliteration": "jareema"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "سرقة",
+			"arabicTashkeel": "سَرقة",
+			"english": "Theft",
+			"transliteration": "sarga",
+			"wordAlignments": [
+				{
+					"arabic": "سرقة",
+					"english": "Theft",
+					"transliteration": "sarga"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "متهم",
+			"arabicTashkeel": "مُتَّهَم",
+			"english": "The accused",
+			"transliteration": "muttaham",
+			"wordAlignments": [
+				{
+					"arabic": "متهم",
+					"english": "Accused",
+					"transliteration": "muttaham"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شاهد",
+			"arabicTashkeel": "شاهِد",
+			"english": "Witness",
+			"transliteration": "shaahid",
+			"wordAlignments": [
+				{
+					"arabic": "شاهد",
+					"english": "Witness",
+					"transliteration": "shaahid"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عدالة",
+			"arabicTashkeel": "عَدالة",
+			"english": "Justice",
+			"transliteration": "3adaala",
+			"wordAlignments": [
+				{
+					"arabic": "عدالة",
+					"english": "Justice",
+					"transliteration": "3adaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مواطن",
+			"arabicTashkeel": "مُواطِن",
+			"english": "Citizen",
+			"transliteration": "muwaatin",
+			"wordAlignments": [
+				{
+					"arabic": "مواطن",
+					"english": "Citizen",
+					"transliteration": "muwaatin"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مخالفة",
+			"arabicTashkeel": "مُخالَفة",
+			"english": "Fine (penalty)",
+			"transliteration": "mukhaalafa",
+			"wordAlignments": [
+				{
+					"arabic": "مخالفة",
+					"english": "Violation",
+					"transliteration": "mukhaalafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "سجن",
+			"arabicTashkeel": "سِجن",
+			"english": "Prison",
+			"transliteration": "sijn",
+			"wordAlignments": [
+				{
+					"arabic": "سجن",
+					"english": "Prison",
+					"transliteration": "sijn"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بريء",
+			"arabicTashkeel": "بَريء",
+			"english": "Innocent",
+			"transliteration": "baree2",
+			"wordAlignments": [
+				{
+					"arabic": "بريء",
+					"english": "Innocent",
+					"transliteration": "baree2"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "القانون ينطبق على الكل.",
+			"arabicTashkeel": "القانون يِنطَبِق على الكُل.",
+			"english": "The law applies to everyone.",
+			"transliteration": "il-gaanoon yintabig 3ala il-kull.",
+			"wordAlignments": [
+				{
+					"arabic": "القانون",
+					"english": "The law",
+					"transliteration": "il-gaanoon"
+				},
+				{
+					"arabic": "ينطبق",
+					"english": "applies",
+					"transliteration": "yintabig"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الكل.",
+					"english": "everyone.",
+					"transliteration": "il-kull."
+				}
+			],
+			"targetWords": [
+				"Law"
+			]
+		},
+		{
+			"arabic": "كل إنسان له حقوق.",
+			"arabicTashkeel": "كُل إنسان لُه حُقوق.",
+			"english": "Every person has rights.",
+			"transliteration": "kull insaan lu 7ugoog.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "إنسان",
+					"english": "person",
+					"transliteration": "insaan"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "حقوق.",
+					"english": "rights.",
+					"transliteration": "7ugoog."
+				}
+			],
+			"targetWords": [
+				"Rights"
+			]
+		},
+		{
+			"arabic": "الحقوق والواجبات ماشية مع بعض.",
+			"arabicTashkeel": "الحُقوق والواجِبات ماشية مَعَ بَعض.",
+			"english": "Rights and duties go together.",
+			"transliteration": "il-7ugoog w-il-waajibaat maashya ma3a ba3dh.",
+			"wordAlignments": [
+				{
+					"arabic": "الحقوق",
+					"english": "The rights",
+					"transliteration": "il-7ugoog"
+				},
+				{
+					"arabic": "والواجبات",
+					"english": "and the duties",
+					"transliteration": "w-il-waajibaat"
+				},
+				{
+					"arabic": "ماشية",
+					"english": "go",
+					"transliteration": "maashya"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "بعض.",
+					"english": "each other.",
+					"transliteration": "ba3dh."
+				}
+			],
+			"targetWords": [
+				"Rights",
+				"Duties"
+			]
+		},
+		{
+			"arabic": "المحكمة في نص البلد.",
+			"arabicTashkeel": "المَحكَمة في نُص البَلَد.",
+			"english": "The court is in the city centre.",
+			"transliteration": "il-ma7kama fi nuss il-balad.",
+			"wordAlignments": [
+				{
+					"arabic": "المحكمة",
+					"english": "The court is",
+					"transliteration": "il-ma7kama"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "نص",
+					"english": "the middle of",
+					"transliteration": "nuss"
+				},
+				{
+					"arabic": "البلد.",
+					"english": "the city.",
+					"transliteration": "il-balad."
+				}
+			],
+			"targetWords": [
+				"Court"
+			]
+		},
+		{
+			"arabic": "القاضي سمع الطرفين.",
+			"arabicTashkeel": "القاضي سِمِع الطَّرَفين.",
+			"english": "The judge listened to both sides.",
+			"transliteration": "il-gaadhi simi3 it-tarafain.",
+			"wordAlignments": [
+				{
+					"arabic": "القاضي",
+					"english": "The judge",
+					"transliteration": "il-gaadhi"
+				},
+				{
+					"arabic": "سمع",
+					"english": "listened to",
+					"transliteration": "simi3"
+				},
+				{
+					"arabic": "الطرفين.",
+					"english": "the two sides.",
+					"transliteration": "it-tarafain."
+				}
+			],
+			"targetWords": [
+				"Judge"
+			]
+		},
+		{
+			"arabic": "كلم الشرطة!",
+			"arabicTashkeel": "كَلِّم الشُّرطة!",
+			"english": "Call the police!",
+			"transliteration": "kallim ish-shurta!",
+			"wordAlignments": [
+				{
+					"arabic": "كلم",
+					"english": "Call",
+					"transliteration": "kallim"
+				},
+				{
+					"arabic": "الشرطة!",
+					"english": "the police!",
+					"transliteration": "ish-shurta!"
+				}
+			],
+			"targetWords": [
+				"Police"
+			]
+		},
+		{
+			"arabic": "الجريمة في المملكة قليلة.",
+			"arabicTashkeel": "الجَريمة في المَملَكة قَليلة.",
+			"english": "Crime in the Kingdom is low.",
+			"transliteration": "ij-jareema fi il-mamlaka galeela.",
+			"wordAlignments": [
+				{
+					"arabic": "الجريمة",
+					"english": "Crime",
+					"transliteration": "ij-jareema"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المملكة",
+					"english": "the Kingdom is",
+					"transliteration": "il-mamlaka"
+				},
+				{
+					"arabic": "قليلة.",
+					"english": "low.",
+					"transliteration": "galeela."
+				}
+			],
+			"targetWords": [
+				"Crime"
+			]
+		},
+		{
+			"arabic": "سيارتي انسرقت أمس.",
+			"arabicTashkeel": "سَيّارتي اِنسَرَقَت أمس.",
+			"english": "My car was stolen yesterday.",
+			"transliteration": "sayyaarati insaragat ams.",
+			"wordAlignments": [
+				{
+					"arabic": "سيارتي",
+					"english": "My car",
+					"transliteration": "sayyaarati"
+				},
+				{
+					"arabic": "انسرقت",
+					"english": "was stolen",
+					"transliteration": "insaragat"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Theft"
+			]
+		},
+		{
+			"arabic": "المتهم أنكر كل شي.",
+			"arabicTashkeel": "المُتَّهَم أنكَر كُل شي.",
+			"english": "The accused denied everything.",
+			"transliteration": "il-muttaham ankar kull shay.",
+			"wordAlignments": [
+				{
+					"arabic": "المتهم",
+					"english": "The accused",
+					"transliteration": "il-muttaham"
+				},
+				{
+					"arabic": "أنكر",
+					"english": "denied",
+					"transliteration": "ankar"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shay."
+				}
+			],
+			"targetWords": [
+				"The accused"
+			]
+		},
+		{
+			"arabic": "كان فيه شاهد؟",
+			"arabicTashkeel": "كان فيه شاهِد؟",
+			"english": "Was there a witness?",
+			"transliteration": "kaan feeh shaahid?",
+			"wordAlignments": [
+				{
+					"arabic": "كان",
+					"english": "Was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "شاهد؟",
+					"english": "a witness?",
+					"transliteration": "shaahid?"
+				}
+			],
+			"targetWords": [
+				"Witness"
+			]
+		},
+		{
+			"arabic": "نبغى العدالة.",
+			"arabicTashkeel": "نِبغى العَدالة.",
+			"english": "We want justice.",
+			"transliteration": "nibgha il-3adaala.",
+			"wordAlignments": [
+				{
+					"arabic": "نبغى",
+					"english": "We want",
+					"transliteration": "nibgha"
+				},
+				{
+					"arabic": "العدالة.",
+					"english": "the justice.",
+					"transliteration": "il-3adaala."
+				}
+			],
+			"targetWords": [
+				"Justice"
+			]
+		},
+		{
+			"arabic": "كل مواطن لازم يحترم القانون.",
+			"arabicTashkeel": "كُل مُواطِن لازِم يِحتَرِم القانون.",
+			"english": "Every citizen must respect the law.",
+			"transliteration": "kull muwaatin laazim yi7tarim il-gaanoon.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "مواطن",
+					"english": "citizen",
+					"transliteration": "muwaatin"
+				},
+				{
+					"arabic": "لازم",
+					"english": "must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "يحترم",
+					"english": "respect",
+					"transliteration": "yi7tarim"
+				},
+				{
+					"arabic": "القانون.",
+					"english": "the law.",
+					"transliteration": "il-gaanoon."
+				}
+			],
+			"targetWords": [
+				"Citizen",
+				"Law"
+			]
+		},
+		{
+			"arabic": "جاتني مخالفة سرعة من ساهر.",
+			"arabicTashkeel": "جاتني مُخالَفة سُرعة مِن ساهِر.",
+			"english": "I got a speeding fine from Saher.",
+			"transliteration": "jaatni mukhaalafat sur3a min saahir.",
+			"wordAlignments": [
+				{
+					"arabic": "جاتني",
+					"english": "Came to me",
+					"transliteration": "jaatni"
+				},
+				{
+					"arabic": "مخالفة",
+					"english": "a fine of",
+					"transliteration": "mukhaalafat"
+				},
+				{
+					"arabic": "سرعة",
+					"english": "speed",
+					"transliteration": "sur3a"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "ساهر.",
+					"english": "Saher.",
+					"transliteration": "saahir."
+				}
+			],
+			"targetWords": [
+				"Fine (penalty)"
+			]
+		},
+		{
+			"arabic": "الحرامي دخل السجن.",
+			"arabicTashkeel": "الحَرامي دَخَل السِّجن.",
+			"english": "The thief went to prison.",
+			"transliteration": "il-7araami dakhal is-sijn.",
+			"wordAlignments": [
+				{
+					"arabic": "الحرامي",
+					"english": "The thief",
+					"transliteration": "il-7araami"
+				},
+				{
+					"arabic": "دخل",
+					"english": "went into",
+					"transliteration": "dakhal"
+				},
+				{
+					"arabic": "السجن.",
+					"english": "the prison.",
+					"transliteration": "is-sijn."
+				}
+			],
+			"targetWords": [
+				"Prison"
+			]
+		},
+		{
+			"arabic": "هوا بريء لين تتبت التهمة.",
+			"arabicTashkeel": "هوّا بَريء لِين تِتبِت التُّهمة.",
+			"english": "He's innocent until proven guilty.",
+			"transliteration": "huwwa baree2 lain titbit it-tuhma.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "بريء",
+					"english": "innocent",
+					"transliteration": "baree2"
+				},
+				{
+					"arabic": "لين",
+					"english": "until",
+					"transliteration": "lain"
+				},
+				{
+					"arabic": "تتبت",
+					"english": "is proven",
+					"transliteration": "titbit"
+				},
+				{
+					"arabic": "التهمة.",
+					"english": "the charge.",
+					"transliteration": "it-tuhma."
+				}
+			],
+			"targetWords": [
+				"Innocent"
+			]
+		},
+		{
+			"arabic": "قانون المرور الجديد صارم.",
+			"arabicTashkeel": "قانون المُرور الجَديد صارِم.",
+			"english": "The new traffic law is strict.",
+			"transliteration": "gaanoon il-muroor ij-jadeed saarim.",
+			"wordAlignments": [
+				{
+					"arabic": "قانون",
+					"english": "The law of",
+					"transliteration": "gaanoon"
+				},
+				{
+					"arabic": "المرور",
+					"english": "traffic",
+					"transliteration": "il-muroor"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jadeed"
+				},
+				{
+					"arabic": "صارم.",
+					"english": "strict.",
+					"transliteration": "saarim."
+				}
+			],
+			"targetWords": [
+				"Law"
+			]
+		},
+		{
+			"arabic": "اعرف حقوقك.",
+			"arabicTashkeel": "اِعرِف حُقوقَك.",
+			"english": "Know your rights.",
+			"transliteration": "i3rif 7ugoogak.",
+			"wordAlignments": [
+				{
+					"arabic": "اعرف",
+					"english": "Know",
+					"transliteration": "i3rif"
+				},
+				{
+					"arabic": "حقوقك.",
+					"english": "your rights.",
+					"transliteration": "7ugoogak."
+				}
+			],
+			"targetWords": [
+				"Rights"
+			]
+		},
+		{
+			"arabic": "واجباتنا تجاه المجتمع.",
+			"arabicTashkeel": "واجِباتنا تِجاه المُجتَمَع.",
+			"english": "Our duties towards society.",
+			"transliteration": "waajibaatna tijaah il-mujtama3.",
+			"wordAlignments": [
+				{
+					"arabic": "واجباتنا",
+					"english": "Our duties",
+					"transliteration": "waajibaatna"
+				},
+				{
+					"arabic": "تجاه",
+					"english": "towards",
+					"transliteration": "tijaah"
+				},
+				{
+					"arabic": "المجتمع.",
+					"english": "the society.",
+					"transliteration": "il-mujtama3."
+				}
+			],
+			"targetWords": [
+				"Duties"
+			]
+		},
+		{
+			"arabic": "القضية راحت المحكمة.",
+			"arabicTashkeel": "القَضية راحَت المَحكَمة.",
+			"english": "The case went to court.",
+			"transliteration": "il-gadhiyya raa7at il-ma7kama.",
+			"wordAlignments": [
+				{
+					"arabic": "القضية",
+					"english": "The case",
+					"transliteration": "il-gadhiyya"
+				},
+				{
+					"arabic": "راحت",
+					"english": "went",
+					"transliteration": "raa7at"
+				},
+				{
+					"arabic": "المحكمة.",
+					"english": "to the court.",
+					"transliteration": "il-ma7kama."
+				}
+			],
+			"targetWords": [
+				"Court"
+			]
+		},
+		{
+			"arabic": "قرار القاضي نهائي.",
+			"arabicTashkeel": "قَرار القاضي نِهائي.",
+			"english": "The judge's decision is final.",
+			"transliteration": "garaar il-gaadhi nihaa2i.",
+			"wordAlignments": [
+				{
+					"arabic": "قرار",
+					"english": "The decision of",
+					"transliteration": "garaar"
+				},
+				{
+					"arabic": "القاضي",
+					"english": "the judge is",
+					"transliteration": "il-gaadhi"
+				},
+				{
+					"arabic": "نهائي.",
+					"english": "final.",
+					"transliteration": "nihaa2i."
+				}
+			],
+			"targetWords": [
+				"Judge"
+			]
+		},
+		{
+			"arabic": "الشرطة وصلت بسرعة.",
+			"arabicTashkeel": "الشُّرطة وَصَلَت بسُرعة.",
+			"english": "The police arrived quickly.",
+			"transliteration": "ish-shurta wasalat b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الشرطة",
+					"english": "The police",
+					"transliteration": "ish-shurta"
+				},
+				{
+					"arabic": "وصلت",
+					"english": "arrived",
+					"transliteration": "wasalat"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "quickly.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"Police"
+			]
+		},
+		{
+			"arabic": "جريمة كبيرة.",
+			"arabicTashkeel": "جَريمة كبيرة.",
+			"english": "A big crime.",
+			"transliteration": "jareema kbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "جريمة",
+					"english": "A crime",
+					"transliteration": "jareema"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "kbeera."
+				}
+			],
+			"targetWords": [
+				"Crime"
+			]
+		},
+		{
+			"arabic": "السرقة جريمة.",
+			"arabicTashkeel": "السَّرقة جَريمة.",
+			"english": "Theft is a crime.",
+			"transliteration": "is-sarga jareema.",
+			"wordAlignments": [
+				{
+					"arabic": "السرقة",
+					"english": "Theft is",
+					"transliteration": "is-sarga"
+				},
+				{
+					"arabic": "جريمة.",
+					"english": "a crime.",
+					"transliteration": "jareema."
+				}
+			],
+			"targetWords": [
+				"Theft",
+				"Crime"
+			]
+		},
+		{
+			"arabic": "المتهم عنده محامي.",
+			"arabicTashkeel": "المُتَّهَم عِندُه مُحامي.",
+			"english": "The accused has a lawyer.",
+			"transliteration": "il-muttaham 3indu mu7aami.",
+			"wordAlignments": [
+				{
+					"arabic": "المتهم",
+					"english": "The accused",
+					"transliteration": "il-muttaham"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "محامي.",
+					"english": "a lawyer.",
+					"transliteration": "mu7aami."
+				}
+			],
+			"targetWords": [
+				"The accused"
+			]
+		},
+		{
+			"arabic": "الشاهد شاف كل شي.",
+			"arabicTashkeel": "الشّاهِد شاف كُل شي.",
+			"english": "The witness saw everything.",
+			"transliteration": "ish-shaahid shaaf kull shay.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاهد",
+					"english": "The witness",
+					"transliteration": "ish-shaahid"
+				},
+				{
+					"arabic": "شاف",
+					"english": "saw",
+					"transliteration": "shaaf"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shay."
+				}
+			],
+			"targetWords": [
+				"Witness"
+			]
+		},
+		{
+			"arabic": "العدالة تاخد وقت.",
+			"arabicTashkeel": "العَدالة تاخُد وَقت.",
+			"english": "Justice takes time.",
+			"transliteration": "il-3adaala taakhud wagt.",
+			"wordAlignments": [
+				{
+					"arabic": "العدالة",
+					"english": "Justice",
+					"transliteration": "il-3adaala"
+				},
+				{
+					"arabic": "تاخد",
+					"english": "takes",
+					"transliteration": "taakhud"
+				},
+				{
+					"arabic": "وقت.",
+					"english": "time.",
+					"transliteration": "wagt."
+				}
+			],
+			"targetWords": [
+				"Justice"
+			]
+		},
+		{
+			"arabic": "مواطن صالح.",
+			"arabicTashkeel": "مُواطِن صالِح.",
+			"english": "A good citizen.",
+			"transliteration": "muwaatin saali7.",
+			"wordAlignments": [
+				{
+					"arabic": "مواطن",
+					"english": "A citizen",
+					"transliteration": "muwaatin"
+				},
+				{
+					"arabic": "صالح.",
+					"english": "good.",
+					"transliteration": "saali7."
+				}
+			],
+			"targetWords": [
+				"Citizen"
+			]
+		},
+		{
+			"arabic": "ادفع المخالفة أونلاين.",
+			"arabicTashkeel": "اِدفَع المُخالَفة أونلاين.",
+			"english": "Pay the fine online.",
+			"transliteration": "idfa3 il-mukhaalafa onlain.",
+			"wordAlignments": [
+				{
+					"arabic": "ادفع",
+					"english": "Pay",
+					"transliteration": "idfa3"
+				},
+				{
+					"arabic": "المخالفة",
+					"english": "the fine",
+					"transliteration": "il-mukhaalafa"
+				},
+				{
+					"arabic": "أونلاين.",
+					"english": "online.",
+					"transliteration": "onlain."
+				}
+			],
+			"targetWords": [
+				"Fine (penalty)"
+			]
+		},
+		{
+			"arabic": "قضى خمس سنين في السجن.",
+			"arabicTashkeel": "قَضّى خَمس سِنين في السِّجن.",
+			"english": "He spent five years in prison.",
+			"transliteration": "gadhdha khams sineen fi is-sijn.",
+			"wordAlignments": [
+				{
+					"arabic": "قضى",
+					"english": "He spent",
+					"transliteration": "gadhdha"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "سنين",
+					"english": "years",
+					"transliteration": "sineen"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السجن.",
+					"english": "the prison.",
+					"transliteration": "is-sijn."
+				}
+			],
+			"targetWords": [
+				"Prison"
+			]
+		},
+		{
+			"arabic": "المحكمة حكمت إنه بريء.",
+			"arabicTashkeel": "المَحكَمة حَكَمَت إنُّه بَريء.",
+			"english": "The court declared him innocent.",
+			"transliteration": "il-ma7kama 7akamat innu baree2.",
+			"wordAlignments": [
+				{
+					"arabic": "المحكمة",
+					"english": "The court",
+					"transliteration": "il-ma7kama"
+				},
+				{
+					"arabic": "حكمت",
+					"english": "ruled",
+					"transliteration": "7akamat"
+				},
+				{
+					"arabic": "إنه",
+					"english": "that he is",
+					"transliteration": "innu"
+				},
+				{
+					"arabic": "بريء.",
+					"english": "innocent.",
+					"transliteration": "baree2."
+				}
+			],
+			"targetWords": [
+				"Innocent",
+				"Court"
+			]
+		},
+		{
+			"arabic": "احترم القانون.",
+			"arabicTashkeel": "اِحتَرِم القانون.",
+			"english": "Respect the law.",
+			"transliteration": "i7tarim il-gaanoon.",
+			"wordAlignments": [
+				{
+					"arabic": "احترم",
+					"english": "Respect",
+					"transliteration": "i7tarim"
+				},
+				{
+					"arabic": "القانون.",
+					"english": "the law.",
+					"transliteration": "il-gaanoon."
+				}
+			],
+			"targetWords": [
+				"Law"
+			]
+		},
+		{
+			"arabic": "حقوق المرأة.",
+			"arabicTashkeel": "حُقوق المَرأة.",
+			"english": "Women's rights.",
+			"transliteration": "7ugoog il-mar2a.",
+			"wordAlignments": [
+				{
+					"arabic": "حقوق",
+					"english": "The rights of",
+					"transliteration": "7ugoog"
+				},
+				{
+					"arabic": "المرأة.",
+					"english": "the woman.",
+					"transliteration": "il-mar2a."
+				}
+			],
+			"targetWords": [
+				"Rights"
+			]
+		},
+		{
+			"arabic": "سوي واجباتك أول.",
+			"arabicTashkeel": "سَوّي واجِباتَك أوَّل.",
+			"english": "Fulfil your duties first.",
+			"transliteration": "sawwi waajibaatak awwal.",
+			"wordAlignments": [
+				{
+					"arabic": "سوي",
+					"english": "Do",
+					"transliteration": "sawwi"
+				},
+				{
+					"arabic": "واجباتك",
+					"english": "your duties",
+					"transliteration": "waajibaatak"
+				},
+				{
+					"arabic": "أول.",
+					"english": "first.",
+					"transliteration": "awwal."
+				}
+			],
+			"targetWords": [
+				"Duties"
+			]
+		},
+		{
+			"arabic": "محكمة الأحوال الشخصية.",
+			"arabicTashkeel": "مَحكَمة الأحوال الشَّخصية.",
+			"english": "The family court.",
+			"transliteration": "ma7kamat il-a7waal ish-shakhsiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "محكمة",
+					"english": "The court of",
+					"transliteration": "ma7kamat"
+				},
+				{
+					"arabic": "الأحوال",
+					"english": "the affairs",
+					"transliteration": "il-a7waal"
+				},
+				{
+					"arabic": "الشخصية.",
+					"english": "personal.",
+					"transliteration": "ish-shakhsiyya."
+				}
+			],
+			"targetWords": [
+				"Court"
+			]
+		},
+		{
+			"arabic": "قاضي عادل.",
+			"arabicTashkeel": "قاضي عادِل.",
+			"english": "A fair judge.",
+			"transliteration": "gaadhi 3aadil.",
+			"wordAlignments": [
+				{
+					"arabic": "قاضي",
+					"english": "A judge",
+					"transliteration": "gaadhi"
+				},
+				{
+					"arabic": "عادل.",
+					"english": "fair.",
+					"transliteration": "3aadil."
+				}
+			],
+			"targetWords": [
+				"Judge"
+			]
+		},
+		{
+			"arabic": "مركز الشرطة قريب.",
+			"arabicTashkeel": "مَركَز الشُّرطة قَريب.",
+			"english": "The police station is near.",
+			"transliteration": "markaz ish-shurta gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "مركز",
+					"english": "The centre of",
+					"transliteration": "markaz"
+				},
+				{
+					"arabic": "الشرطة",
+					"english": "the police is",
+					"transliteration": "ish-shurta"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "near.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Police"
+			]
+		},
+		{
+			"arabic": "الجريمة ما تفيد.",
+			"arabicTashkeel": "الجَريمة ما تِفيد.",
+			"english": "Crime doesn't pay.",
+			"transliteration": "ij-jareema ma tifeed.",
+			"wordAlignments": [
+				{
+					"arabic": "الجريمة",
+					"english": "Crime",
+					"transliteration": "ij-jareema"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تفيد.",
+					"english": "benefits.",
+					"transliteration": "tifeed."
+				}
+			],
+			"targetWords": [
+				"Crime"
+			]
+		},
+		{
+			"arabic": "سرقة في المول.",
+			"arabicTashkeel": "سَرقة في المول.",
+			"english": "A theft at the mall.",
+			"transliteration": "sarga fi il-mool.",
+			"wordAlignments": [
+				{
+					"arabic": "سرقة",
+					"english": "A theft",
+					"transliteration": "sarga"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المول.",
+					"english": "the mall.",
+					"transliteration": "il-mool."
+				}
+			],
+			"targetWords": [
+				"Theft"
+			]
+		},
+		{
+			"arabic": "المتهم في المحكمة.",
+			"arabicTashkeel": "المُتَّهَم في المَحكَمة.",
+			"english": "The accused is in court.",
+			"transliteration": "il-muttaham fi il-ma7kama.",
+			"wordAlignments": [
+				{
+					"arabic": "المتهم",
+					"english": "The accused is",
+					"transliteration": "il-muttaham"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المحكمة.",
+					"english": "the court.",
+					"transliteration": "il-ma7kama."
+				}
+			],
+			"targetWords": [
+				"The accused",
+				"Court"
+			]
+		},
+		{
+			"arabic": "الشاهد كان خايف.",
+			"arabicTashkeel": "الشّاهِد كان خايِف.",
+			"english": "The witness was afraid.",
+			"transliteration": "ish-shaahid kaan khaayif.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاهد",
+					"english": "The witness",
+					"transliteration": "ish-shaahid"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "خايف.",
+					"english": "afraid.",
+					"transliteration": "khaayif."
+				}
+			],
+			"targetWords": [
+				"Witness"
+			]
+		},
+		{
+			"arabic": "العدالة للكل.",
+			"arabicTashkeel": "العَدالة لِلكُل.",
+			"english": "Justice for everyone.",
+			"transliteration": "il-3adaala lil-kull.",
+			"wordAlignments": [
+				{
+					"arabic": "العدالة",
+					"english": "Justice",
+					"transliteration": "il-3adaala"
+				},
+				{
+					"arabic": "للكل.",
+					"english": "for everyone.",
+					"transliteration": "lil-kull."
+				}
+			],
+			"targetWords": [
+				"Justice"
+			]
+		},
+		{
+			"arabic": "المواطنين والمقيمين.",
+			"arabicTashkeel": "المُواطِنين والمُقيمين.",
+			"english": "Citizens and residents.",
+			"transliteration": "il-muwaatineen w-il-mugeemeen.",
+			"wordAlignments": [
+				{
+					"arabic": "المواطنين",
+					"english": "The citizens",
+					"transliteration": "il-muwaatineen"
+				},
+				{
+					"arabic": "والمقيمين.",
+					"english": "and the residents.",
+					"transliteration": "w-il-mugeemeen."
+				}
+			],
+			"targetWords": [
+				"Citizen"
+			]
+		},
+		{
+			"arabic": "مخالفة وقوف.",
+			"arabicTashkeel": "مُخالَفة وُقوف.",
+			"english": "A parking fine.",
+			"transliteration": "mukhaalafat wugoof.",
+			"wordAlignments": [
+				{
+					"arabic": "مخالفة",
+					"english": "A fine of",
+					"transliteration": "mukhaalafat"
+				},
+				{
+					"arabic": "وقوف.",
+					"english": "parking.",
+					"transliteration": "wugoof."
+				}
+			],
+			"targetWords": [
+				"Fine (penalty)"
+			]
+		},
+		{
+			"arabic": "السجن برا المدينة.",
+			"arabicTashkeel": "السِّجن بَرّا المَدينة.",
+			"english": "The prison is outside the city.",
+			"transliteration": "is-sijn barra il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "السجن",
+					"english": "The prison is",
+					"transliteration": "is-sijn"
+				},
+				{
+					"arabic": "برا",
+					"english": "outside",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "المدينة.",
+					"english": "the city.",
+					"transliteration": "il-madeena."
+				}
+			],
+			"targetWords": [
+				"Prison"
+			]
+		},
+		{
+			"arabic": "أنا بريء!",
+			"arabicTashkeel": "أنا بَريء!",
+			"english": "I'm innocent!",
+			"transliteration": "ana baree2!",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "بريء!",
+					"english": "innocent!",
+					"transliteration": "baree2!"
+				}
+			],
+			"targetWords": [
+				"Innocent"
+			]
+		},
+		{
+			"arabic": "القانون يحمي المواطن.",
+			"arabicTashkeel": "القانون يِحمي المُواطِن.",
+			"english": "The law protects the citizen.",
+			"transliteration": "il-gaanoon yi7mi il-muwaatin.",
+			"wordAlignments": [
+				{
+					"arabic": "القانون",
+					"english": "The law",
+					"transliteration": "il-gaanoon"
+				},
+				{
+					"arabic": "يحمي",
+					"english": "protects",
+					"transliteration": "yi7mi"
+				},
+				{
+					"arabic": "المواطن.",
+					"english": "the citizen.",
+					"transliteration": "il-muwaatin."
+				}
+			],
+			"targetWords": [
+				"Law",
+				"Citizen"
+			]
+		},
+		{
+			"arabic": "حقوق الإنسان.",
+			"arabicTashkeel": "حُقوق الإنسان.",
+			"english": "Human rights.",
+			"transliteration": "7ugoog il-insaan.",
+			"wordAlignments": [
+				{
+					"arabic": "حقوق",
+					"english": "The rights of",
+					"transliteration": "7ugoog"
+				},
+				{
+					"arabic": "الإنسان.",
+					"english": "the human.",
+					"transliteration": "il-insaan."
+				}
+			],
+			"targetWords": [
+				"Rights"
+			]
+		},
+		{
+			"arabic": "واجبات الموظف.",
+			"arabicTashkeel": "واجِبات المُوَظَّف.",
+			"english": "The duties of the employee.",
+			"transliteration": "waajibaat il-muwadhdhaf.",
+			"wordAlignments": [
+				{
+					"arabic": "واجبات",
+					"english": "The duties of",
+					"transliteration": "waajibaat"
+				},
+				{
+					"arabic": "الموظف.",
+					"english": "the employee.",
+					"transliteration": "il-muwadhdhaf."
+				}
+			],
+			"targetWords": [
+				"Duties"
+			]
+		},
+		{
+			"arabic": "القاضي أجل القضية.",
+			"arabicTashkeel": "القاضي أجَّل القَضية.",
+			"english": "The judge postponed the case.",
+			"transliteration": "il-gaadhi ajjal il-gadhiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "القاضي",
+					"english": "The judge",
+					"transliteration": "il-gaadhi"
+				},
+				{
+					"arabic": "أجل",
+					"english": "postponed",
+					"transliteration": "ajjal"
+				},
+				{
+					"arabic": "القضية.",
+					"english": "the case.",
+					"transliteration": "il-gadhiyya."
+				}
+			],
+			"targetWords": [
+				"Judge"
+			]
+		},
+		{
+			"arabic": "شرطة المرور.",
+			"arabicTashkeel": "شُرطة المُرور.",
+			"english": "The traffic police.",
+			"transliteration": "shurtat il-muroor.",
+			"wordAlignments": [
+				{
+					"arabic": "شرطة",
+					"english": "The police of",
+					"transliteration": "shurtat"
+				},
+				{
+					"arabic": "المرور.",
+					"english": "traffic.",
+					"transliteration": "il-muroor."
+				}
+			],
+			"targetWords": [
+				"Police"
+			]
+		},
+		{
+			"arabic": "جريمة ضد البيئة.",
+			"arabicTashkeel": "جَريمة ضِد البيئة.",
+			"english": "A crime against the environment.",
+			"transliteration": "jareema dhidd il-bee2a.",
+			"wordAlignments": [
+				{
+					"arabic": "جريمة",
+					"english": "A crime",
+					"transliteration": "jareema"
+				},
+				{
+					"arabic": "ضد",
+					"english": "against",
+					"transliteration": "dhidd"
+				},
+				{
+					"arabic": "البيئة.",
+					"english": "the environment.",
+					"transliteration": "il-bee2a."
+				}
+			],
+			"targetWords": [
+				"Crime"
+			]
+		},
+		{
+			"arabic": "سرقة الجوال.",
+			"arabicTashkeel": "سَرقة الجَوّال.",
+			"english": "The theft of the phone.",
+			"transliteration": "sargat ij-jawwaal.",
+			"wordAlignments": [
+				{
+					"arabic": "سرقة",
+					"english": "The theft of",
+					"transliteration": "sargat"
+				},
+				{
+					"arabic": "الجوال.",
+					"english": "the mobile.",
+					"transliteration": "ij-jawwaal."
+				}
+			],
+			"targetWords": [
+				"Theft"
+			]
+		},
+		{
+			"arabic": "أقوال الشاهد.",
+			"arabicTashkeel": "أقوال الشّاهِد.",
+			"english": "The witness's statement.",
+			"transliteration": "agwaal ish-shaahid.",
+			"wordAlignments": [
+				{
+					"arabic": "أقوال",
+					"english": "The statements of",
+					"transliteration": "agwaal"
+				},
+				{
+					"arabic": "الشاهد.",
+					"english": "the witness.",
+					"transliteration": "ish-shaahid."
+				}
+			],
+			"targetWords": [
+				"Witness"
+			]
+		},
+		{
+			"arabic": "العدالة الإجتماعية.",
+			"arabicTashkeel": "العَدالة الإجتِماعية.",
+			"english": "Social justice.",
+			"transliteration": "il-3adaala il-ijtimaa3iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "العدالة",
+					"english": "Justice",
+					"transliteration": "il-3adaala"
+				},
+				{
+					"arabic": "الإجتماعية.",
+					"english": "social.",
+					"transliteration": "il-ijtimaa3iyya."
+				}
+			],
+			"targetWords": [
+				"Justice"
+			]
+		},
+		{
+			"arabic": "دفعت تلات مخالفات هادا الشهر.",
+			"arabicTashkeel": "دَفَعت تَلات مُخالَفات هادا الشَّهر.",
+			"english": "I paid three fines this month.",
+			"transliteration": "dafa3t talaat mukhaalafaat haada ish-shahr.",
+			"wordAlignments": [
+				{
+					"arabic": "دفعت",
+					"english": "I paid",
+					"transliteration": "dafa3t"
+				},
+				{
+					"arabic": "تلات",
+					"english": "three",
+					"transliteration": "talaat"
+				},
+				{
+					"arabic": "مخالفات",
+					"english": "fines",
+					"transliteration": "mukhaalafaat"
+				},
+				{
+					"arabic": "هادا",
+					"english": "this",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "الشهر.",
+					"english": "month.",
+					"transliteration": "ish-shahr."
+				}
+			],
+			"targetWords": [
+				"Fine (penalty)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Stolen Car",
+			"sentences": [
+				{
+					"arabic": "الشهر اللي فات سيارتي انسرقت قدام البيت.",
+					"arabicTashkeel": "الشَّهر اللي فات سَيّارتي اِنسَرَقَت قُدّام البيت.",
+					"english": "Last month my car was stolen in front of the house.",
+					"transliteration": "ish-shahr illi faat sayyaarati insaragat guddaam il-bait.",
+					"wordAlignments": [
+						{
+							"arabic": "الشهر",
+							"english": "The month",
+							"transliteration": "ish-shahr"
+						},
+						{
+							"arabic": "اللي",
+							"english": "that",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "فات",
+							"english": "passed",
+							"transliteration": "faat"
+						},
+						{
+							"arabic": "سيارتي",
+							"english": "my car",
+							"transliteration": "sayyaarati"
+						},
+						{
+							"arabic": "انسرقت",
+							"english": "was stolen",
+							"transliteration": "insaragat"
+						},
+						{
+							"arabic": "قدام",
+							"english": "in front of",
+							"transliteration": "guddaam"
+						},
+						{
+							"arabic": "البيت.",
+							"english": "the house.",
+							"transliteration": "il-bait."
+						}
+					]
+				},
+				{
+					"arabic": "كلمت الشرطة، وجوا في عشر دقايق.",
+					"arabicTashkeel": "كَلَّمت الشُّرطة، وجوا في عَشَر دَقايِق.",
+					"english": "I called the police, and they came in ten minutes.",
+					"transliteration": "kallamt ish-shurta, w-joo fi 3ashar dagaayig.",
+					"wordAlignments": [
+						{
+							"arabic": "كلمت",
+							"english": "I called",
+							"transliteration": "kallamt"
+						},
+						{
+							"arabic": "الشرطة،",
+							"english": "the police,",
+							"transliteration": "ish-shurta,"
+						},
+						{
+							"arabic": "وجوا",
+							"english": "and they came",
+							"transliteration": "w-joo"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "عشر",
+							"english": "ten",
+							"transliteration": "3ashar"
+						},
+						{
+							"arabic": "دقايق.",
+							"english": "minutes.",
+							"transliteration": "dagaayig."
+						}
+					]
+				},
+				{
+					"arabic": "جار كان شاهد، شاف الحرامي.",
+					"arabicTashkeel": "جار كان شاهِد، شاف الحَرامي.",
+					"english": "A neighbour was a witness; he saw the thief.",
+					"transliteration": "jaar kaan shaahid, shaaf il-7araami.",
+					"wordAlignments": [
+						{
+							"arabic": "جار",
+							"english": "A neighbour",
+							"transliteration": "jaar"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "شاهد،",
+							"english": "a witness,",
+							"transliteration": "shaahid,"
+						},
+						{
+							"arabic": "شاف",
+							"english": "he saw",
+							"transliteration": "shaaf"
+						},
+						{
+							"arabic": "الحرامي.",
+							"english": "the thief.",
+							"transliteration": "il-7araami."
+						}
+					]
+				},
+				{
+					"arabic": "الشرطة مسكت المتهم، والقضية راحت المحكمة.",
+					"arabicTashkeel": "الشُّرطة مَسَكَت المُتَّهَم، والقَضية راحَت المَحكَمة.",
+					"english": "The police caught the accused, and the case went to court.",
+					"transliteration": "ish-shurta masakat il-muttaham, w-il-gadhiyya raa7at il-ma7kama.",
+					"wordAlignments": [
+						{
+							"arabic": "الشرطة",
+							"english": "The police",
+							"transliteration": "ish-shurta"
+						},
+						{
+							"arabic": "مسكت",
+							"english": "caught",
+							"transliteration": "masakat"
+						},
+						{
+							"arabic": "المتهم،",
+							"english": "the accused,",
+							"transliteration": "il-muttaham,"
+						},
+						{
+							"arabic": "والقضية",
+							"english": "and the case",
+							"transliteration": "w-il-gadhiyya"
+						},
+						{
+							"arabic": "راحت",
+							"english": "went",
+							"transliteration": "raa7at"
+						},
+						{
+							"arabic": "المحكمة.",
+							"english": "to the court.",
+							"transliteration": "il-ma7kama."
+						}
+					]
+				},
+				{
+					"arabic": "القاضي حكم عليه بالسجن. حسيت إن فيه عدالة.",
+					"arabicTashkeel": "القاضي حَكَم عَلَيه بالسِّجن. حَسّيت إنّ فيه عَدالة.",
+					"english": "The judge sent him to prison. I felt there is justice.",
+					"transliteration": "il-gaadhi 7akam 3alaih bis-sijn. 7asseet inn feeh 3adaala.",
+					"wordAlignments": [
+						{
+							"arabic": "القاضي",
+							"english": "The judge",
+							"transliteration": "il-gaadhi"
+						},
+						{
+							"arabic": "حكم",
+							"english": "sentenced",
+							"transliteration": "7akam"
+						},
+						{
+							"arabic": "عليه",
+							"english": "him",
+							"transliteration": "3alaih"
+						},
+						{
+							"arabic": "بالسجن.",
+							"english": "to the prison.",
+							"transliteration": "bis-sijn."
+						},
+						{
+							"arabic": "حسيت",
+							"english": "I felt",
+							"transliteration": "7asseet"
+						},
+						{
+							"arabic": "إن",
+							"english": "that",
+							"transliteration": "inn"
+						},
+						{
+							"arabic": "فيه",
+							"english": "there is",
+							"transliteration": "feeh"
+						},
+						{
+							"arabic": "عدالة.",
+							"english": "justice.",
+							"transliteration": "3adaala."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Rights and Duties",
+			"sentences": [
+				{
+					"arabic": "كل مواطن له حقوق، بس كمان عليه واجبات.",
+					"arabicTashkeel": "كُل مُواطِن لُه حُقوق، بَس كَمان عَلَيه واجِبات.",
+					"english": "Every citizen has rights, but also duties.",
+					"transliteration": "kull muwaatin lu 7ugoog, bas kamaan 3alaih waajibaat.",
+					"wordAlignments": [
+						{
+							"arabic": "كل",
+							"english": "Every",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "مواطن",
+							"english": "citizen",
+							"transliteration": "muwaatin"
+						},
+						{
+							"arabic": "له",
+							"english": "has",
+							"transliteration": "lu"
+						},
+						{
+							"arabic": "حقوق،",
+							"english": "rights,",
+							"transliteration": "7ugoog,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "كمان",
+							"english": "also",
+							"transliteration": "kamaan"
+						},
+						{
+							"arabic": "عليه",
+							"english": "on him are",
+							"transliteration": "3alaih"
+						},
+						{
+							"arabic": "واجبات.",
+							"english": "duties.",
+							"transliteration": "waajibaat."
+						}
+					]
+				},
+				{
+					"arabic": "إحترام القانون أول واجب، ولو خالفته، تدفع مخالفة.",
+					"arabicTashkeel": "إحتِرام القانون أوَّل واجِب، ولَو خالَفتُه، تِدفَع مُخالَفة.",
+					"english": "Respecting the law is the first duty, and if you break it, you pay a fine.",
+					"transliteration": "i7tiraam il-gaanoon awwal waajib, w-law khaalaftu, tidfa3 mukhaalafa.",
+					"wordAlignments": [
+						{
+							"arabic": "إحترام",
+							"english": "Respecting",
+							"transliteration": "i7tiraam"
+						},
+						{
+							"arabic": "القانون",
+							"english": "the law is",
+							"transliteration": "il-gaanoon"
+						},
+						{
+							"arabic": "أول",
+							"english": "the first",
+							"transliteration": "awwal"
+						},
+						{
+							"arabic": "واجب،",
+							"english": "duty,",
+							"transliteration": "waajib,"
+						},
+						{
+							"arabic": "ولو",
+							"english": "and if",
+							"transliteration": "w-law"
+						},
+						{
+							"arabic": "خالفته،",
+							"english": "you broke it,",
+							"transliteration": "khaalaftu,"
+						},
+						{
+							"arabic": "تدفع",
+							"english": "you pay",
+							"transliteration": "tidfa3"
+						},
+						{
+							"arabic": "مخالفة.",
+							"english": "a fine.",
+							"transliteration": "mukhaalafa."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student's car was scratched in a Jeddah mall car park, and they go to the police station to report it.",
+		"studentRole": "A driver learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The police officer who takes the report and explains the procedure.",
+		"goalEnglish": "Explain what happened, answer questions about witnesses, and ask about your rights, fines and what happens next.",
+		"targetWords": [
+			"Police",
+			"Law",
+			"Rights",
+			"Witness",
+			"Theft",
+			"Fine (penalty)",
+			"Court",
+			"Justice"
+		]
+	}
+}

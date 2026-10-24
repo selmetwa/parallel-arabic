@@ -29,6 +29,36 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Share your name and where you are from.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'New friend',
+        lines: [
+          { speaker: 'student', arabic: 'هلا، آني اسمي عمر.', transliteration: 'hala, aani ismi Omar.', english: "Hi, my name is Omar." },
+          { speaker: 'other', arabic: 'هلا بيك عمر، تشرفنا. آني علي.', transliteration: 'hala beek Omar, tsharrafna. aani Ali.', english: "Hi Omar, nice to meet you. I'm Ali." },
+          { speaker: 'student', arabic: 'آني من كندا. إنت منين؟', transliteration: 'aani min Canada. inta mineen?', english: "I'm from Canada. Where are you from?" },
+          { speaker: 'other', arabic: 'آني من العراق، من بغداد.', transliteration: 'aani min il-3iraag, min Baghdad.', english: "I'm from Iraq, from Baghdad." },
+          { speaker: 'student', arabic: 'تشرفت بيك يا علي!', transliteration: 'tsharrafit beek ya Ali!', english: "Nice to meet you, Ali!" }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'New friend',
+        lines: [
+          { speaker: 'student', arabic: 'هلا، أنا اسمي عمر.', transliteration: 'hala, ana ismi Omar.', english: "Hi, my name is Omar." },
+          { speaker: 'other', arabic: 'هلا والله عمر، تشرفنا. أنا سالم.', transliteration: 'hala walla Omar, tsharrafna. ana Salem.', english: "Hi Omar, nice to meet you. I'm Salem." },
+          { speaker: 'student', arabic: 'أنا من كندا. إنت منين؟', transliteration: 'ana min Canada. inta mneen?', english: "I'm from Canada. Where are you from?" },
+          { speaker: 'other', arabic: 'أنا من الإمارات، من دبي.', transliteration: 'ana min il-imaraat, min Dubai.', english: "I'm from the UAE, from Dubai." },
+          { speaker: 'student', arabic: 'تشرفت فيك يا سالم!', transliteration: 'tsharraft feek ya Salem!', english: "Nice to meet you, Salem!" }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'New friend',
+        lines: [
+          { speaker: 'student', arabic: 'أهلين، أنا اسمي عمر.', transliteration: 'ahlain, ana ismi Omar.', english: "Hi, my name is Omar." },
+          { speaker: 'other', arabic: 'يا هلا عمر، تشرفنا. أنا فيصل.', transliteration: 'ya hala Omar, tsharrafna. ana Faisal.', english: "Hi Omar, nice to meet you. I'm Faisal." },
+          { speaker: 'student', arabic: 'أنا من كندا. وإنت من فين؟', transliteration: 'ana min Canada. w-inta min feen?', english: "I'm from Canada. Where are you from?" },
+          { speaker: 'other', arabic: 'أنا من السعودية، من جدة.', transliteration: 'ana min is-su3oodiyya, min Jidda.', english: "I'm from Saudi Arabia, from Jeddah." },
+          { speaker: 'student', arabic: 'تشرفت بيك يا فيصل!', transliteration: 'tsharraft beek ya Faisal!', english: "Nice to meet you, Faisal!" }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'New friend',
         lines: [
@@ -78,6 +108,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Say hello, ask how someone is, and say goodbye.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'student', arabic: 'هلا! شلونك؟', transliteration: 'hala! shloonak?', english: "Hi! How are you?" },
+          { speaker: 'other', arabic: 'الحمد لله، زين. وإنت؟', transliteration: 'il-7amdilla, zein. w-inta?', english: "Thank God, I'm good. And you?" },
+          { speaker: 'student', arabic: 'آني هم زين، شكراً.', transliteration: 'aani hamm zein, shukran.', english: "I'm also good, thanks." },
+          { speaker: 'other', arabic: 'يلا، مع السلامة! أشوفك باكر.', transliteration: 'yalla, ma3a is-salaama! ashoofak baachir.', english: "Okay, goodbye! See you tomorrow." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'student', arabic: 'هلا! شلونك؟', transliteration: 'hala! shloonak?', english: "Hi! How are you?" },
+          { speaker: 'other', arabic: 'بخير، الحمد لله. وإنت شلونك؟', transliteration: 'b-khair, il-7amdilla. w-inta shloonak?', english: "I'm well, thank God. And how are you?" },
+          { speaker: 'student', arabic: 'أنا بعد زين، مشكور.', transliteration: 'ana ba3ad zain, mashkoor.', english: "I'm also good, thanks." },
+          { speaker: 'other', arabic: 'يلا، في أمان الله! أشوفك باكر.', transliteration: 'yalla, fi amaan alla! ashoofak baachir.', english: "Okay, take care! See you tomorrow." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'student', arabic: 'أهلين! كيفك؟', transliteration: 'ahlain! kaifak?', english: "Hi! How are you?" },
+          { speaker: 'other', arabic: 'الحمد لله، تمام. وإنت؟', transliteration: 'il-7amdulillah, tamaam. w-inta?', english: "Thank God, I'm fine. And you?" },
+          { speaker: 'student', arabic: 'أنا كمان كويس، شكراً.', transliteration: 'ana kamaan kwayyis, shukran.', english: "I'm also good, thanks." },
+          { speaker: 'other', arabic: 'يلا، مع السلامة! أشوفك بكرة.', transliteration: 'yalla, ma3a is-salaama! ashoofak bukra.', english: "Okay, goodbye! See you tomorrow." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'A friend',
         lines: [
@@ -114,6 +171,39 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Order coffee or tea and pay the bill.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'Café server',
+        lines: [
+          { speaker: 'other', arabic: 'هلا بيك، شتشرب؟', transliteration: 'hala beek, shtishrab?', english: "Welcome, what would you like to drink?" },
+          { speaker: 'student', arabic: 'أريد قهوة رجاءً.', transliteration: 'areed gahwa rajaa2an.', english: "I want a coffee, please." },
+          { speaker: 'other', arabic: 'ويا شكر؟', transliteration: 'wiyya shakar?', english: "With sugar?" },
+          { speaker: 'student', arabic: 'شوية شكر، شكراً.', transliteration: 'shwayya shakar, shukran.', english: "A little sugar, thanks." },
+          { speaker: 'other', arabic: 'تريد شي لاخ؟', transliteration: 'treed shi laakh?', english: "Do you want anything else?" },
+          { speaker: 'student', arabic: 'لا، بس هيجي. شكراً!', transliteration: 'la, bass heechi. shukran!', english: "No, that's it. Thanks!" }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'Café server',
+        lines: [
+          { speaker: 'other', arabic: 'حياك الله، شو تبي تشرب؟', transliteration: '7ayyaak alla, shu tabi tishrab?', english: "Welcome, what would you like to drink?" },
+          { speaker: 'student', arabic: 'أبي قهوة لو سمحت.', transliteration: 'abi gahwa law sama7t.', english: "I want a coffee, please." },
+          { speaker: 'other', arabic: 'مع سكر؟', transliteration: 'ma3a sukkar?', english: "With sugar?" },
+          { speaker: 'student', arabic: 'شوي سكر، مشكور.', transliteration: 'shway sukkar, mashkoor.', english: "A little sugar, thanks." },
+          { speaker: 'other', arabic: 'تبي شي ثاني؟', transliteration: 'tabi shay thaani?', english: "Do you want anything else?" },
+          { speaker: 'student', arabic: 'لا، بس جذي. مشكور!', transliteration: 'la, bas chidhi. mashkoor!', english: "No, that's it. Thanks!" }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'Café server',
+        lines: [
+          { speaker: 'other', arabic: 'حياك الله، إيش تبغى تشرب؟', transliteration: '7ayyaak allah, eesh tibgha tishrab?', english: "Welcome, what would you like to drink?" },
+          { speaker: 'student', arabic: 'أبغى قهوة لو سمحت.', transliteration: 'abgha gahwa law sama7t.', english: "I want a coffee, please." },
+          { speaker: 'other', arabic: 'بسكر؟', transliteration: 'b-sukkar?', english: "With sugar?" },
+          { speaker: 'student', arabic: 'شوية سكر، شكراً.', transliteration: 'shwayya sukkar, shukran.', english: "A little sugar, thanks." },
+          { speaker: 'other', arabic: 'تبغى شي تاني؟', transliteration: 'tibgha shay taani?', english: "Do you want anything else?" },
+          { speaker: 'student', arabic: 'لا، بس كدا. شكراً!', transliteration: 'la, bas kida. shukran!', english: "No, that's it. Thanks!" }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'Café server',
         lines: [
@@ -168,6 +258,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Ask how to get somewhere on the street.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'Passerby',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، وين المتحف؟', transliteration: 'law sima7it, wein il-mat7af?', english: "Excuse me, where is the museum?" },
+          { speaker: 'other', arabic: 'سيدا، وبعدين لف يسار.', transliteration: 'seeda, w-ba3dein liff yisaar.', english: "Straight ahead, then left." },
+          { speaker: 'student', arabic: 'بعيد من هنا؟', transliteration: 'ba3eed min hna?', english: "Is it far from here?" },
+          { speaker: 'other', arabic: 'لا، قريب. عشر دقايق.', transliteration: 'la, gareeb. 3ashir dagaayig.', english: "No, it's close. Ten minutes." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'Passerby',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، وين المتحف؟', transliteration: 'law sama7t, wain il-mat7af?', english: "Excuse me, where is the museum?" },
+          { speaker: 'other', arabic: 'سيده، وبعدين لف يسار.', transliteration: 'seeda, w-ba3dain liff yisaar.', english: "Straight ahead, then left." },
+          { speaker: 'student', arabic: 'بعيد عن هني؟', transliteration: 'ba3eed 3an hni?', english: "Is it far from here?" },
+          { speaker: 'other', arabic: 'لا، قريب. عشر دقايق.', transliteration: 'la, gareeb. 3ashar dagaayig.', english: "No, it's close. Ten minutes." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'Passerby',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، فين المتحف؟', transliteration: 'law sama7t, feen il-mat7af?', english: "Excuse me, where is the museum?" },
+          { speaker: 'other', arabic: 'دغري، وبعدين لف يسار.', transliteration: 'dughri, w-ba3dain liff yasaar.', english: "Straight ahead, then left." },
+          { speaker: 'student', arabic: 'بعيد من هنا؟', transliteration: 'ba3eed min hina?', english: "Is it far from here?" },
+          { speaker: 'other', arabic: 'لا، قريب. عشر دقايق.', transliteration: 'la, gareeb. 3ashar dagaayig.', english: "No, it's close. Ten minutes." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'Passerby',
         lines: [
@@ -204,6 +321,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Tell the driver where to go and ask the price.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'Taxi driver',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، آني رايح للمطار.', transliteration: 'law sima7it, aani raayi7 lil-mataar.', english: "Excuse me, I'm going to the airport." },
+          { speaker: 'other', arabic: 'اصعد. الأجرة خمسطعش ألف دينار.', transliteration: 'is3ad. il-ujra khamusta3ash alf deenaar.', english: "Get in. The fare is fifteen thousand dinars." },
+          { speaker: 'student', arabic: 'شكد ياخذ الطريق؟', transliteration: 'shgadd yaakhudh it-tareeg?', english: "How long does the trip take?" },
+          { speaker: 'other', arabic: 'تقريباً نص ساعة.', transliteration: 'tagreeban nuss saa3a.', english: "About half an hour." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'Taxi driver',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، أنا رايح المطار.', transliteration: 'law sama7t, ana raayi7 il-mataar.', english: "Excuse me, I'm going to the airport." },
+          { speaker: 'other', arabic: 'اركب. الأجرة سبعين درهم.', transliteration: 'irkab. il-ujra sab3een dirham.', english: "Get in. The fare is seventy dirhams." },
+          { speaker: 'student', arabic: 'كم ياخذ المشوار؟', transliteration: 'cham yaakhidh il-mishwaar?', english: "How long does the trip take?" },
+          { speaker: 'other', arabic: 'تقريباً أربعين دقيقة.', transliteration: 'tagreeban arba3een dageega.', english: "About forty minutes." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'Taxi driver',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، أبغى أروح المطار.', transliteration: 'law sama7t, abgha arooh il-mataar.', english: "Excuse me, I want to go to the airport." },
+          { speaker: 'other', arabic: 'اركب. المشوار بستين ريال.', transliteration: 'irkab. il-mishwaar b-sitteen riyaal.', english: "Get in. The trip is sixty riyals." },
+          { speaker: 'student', arabic: 'كم ياخد المشوار؟', transliteration: 'kam yaakhud il-mishwaar?', english: "How long does the trip take?" },
+          { speaker: 'other', arabic: 'تقريباً أربعين دقيقة، حسب الزحمة.', transliteration: 'tagreeban arba3een dageega, 7asab iz-za7ma.', english: "About forty minutes, depending on traffic." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'Taxi driver',
         lines: [
@@ -240,6 +384,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Ask how much something costs at a shop.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'Shopkeeper',
+        lines: [
+          { speaker: 'student', arabic: 'بيش هاذا؟', transliteration: 'beesh haadha?', english: "How much is this?" },
+          { speaker: 'other', arabic: 'بخمسة وعشرين ألف.', transliteration: 'b-khamsa w-3ishreen alf.', english: "Twenty-five thousand." },
+          { speaker: 'student', arabic: 'شوية غالي. يرخص؟', transliteration: 'shwayya ghaali. yirkhas?', english: "A bit expensive. Can it be less?" },
+          { speaker: 'other', arabic: 'عشرين ألف، آخر كلام.', transliteration: '3ishreen alf, aakhir kalaam.', english: "Twenty thousand, final word." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'Shopkeeper',
+        lines: [
+          { speaker: 'student', arabic: 'بكم هاذا؟', transliteration: 'bikam haadha?', english: "How much is this?" },
+          { speaker: 'other', arabic: 'بخمسين درهم.', transliteration: 'b-khamseen dirham.', english: "Fifty dirhams." },
+          { speaker: 'student', arabic: 'شوي غالي. في خصم؟', transliteration: 'shway ghaali. fi khasm?', english: "A bit expensive. Is there a discount?" },
+          { speaker: 'other', arabic: 'أربعين، آخر سعر.', transliteration: 'arba3een, aakhir si3r.', english: "Forty, final price." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'Shopkeeper',
+        lines: [
+          { speaker: 'student', arabic: 'بكم دا؟', transliteration: 'bikam da?', english: "How much is this?" },
+          { speaker: 'other', arabic: 'بخمسين ريال.', transliteration: 'b-khamseen riyaal.', english: "Fifty riyals." },
+          { speaker: 'student', arabic: 'غالي شوية. ينفع أقل؟', transliteration: 'ghaali shwayya. yinfa3 agall?', english: "A bit expensive. Can it be less?" },
+          { speaker: 'other', arabic: 'أربعين، آخر كلام.', transliteration: 'arba3een, aakhir kalaam.', english: "Forty, final word." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'Shopkeeper',
         lines: [
@@ -276,6 +447,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: "Say you don't understand and ask for help.",
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'A helpful local',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، تكدر تساعدني؟', transliteration: 'law sima7it, tigdar tsaa3idni?', english: "Excuse me, can you help me?" },
+          { speaker: 'other', arabic: 'أكيد، شتحتاج؟', transliteration: 'akeed, shti7taaj?', english: "Sure, what do you need?" },
+          { speaker: 'student', arabic: 'ضعت. ما أفتهم زين.', transliteration: 'dhi3it. ma aftihim zein.', english: "I'm lost. I don't understand well." },
+          { speaker: 'other', arabic: 'لا تخاف، أساعدك.', transliteration: 'la tkhaaf, asaa3dak.', english: "Don't worry, I'll help you." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'A helpful local',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، تقدر تساعدني؟', transliteration: 'law sama7t, tigdar tsaa3idni?', english: "Excuse me, can you help me?" },
+          { speaker: 'other', arabic: 'أكيد، شو تحتاج؟', transliteration: 'akeed, shu ti7taaj?', english: "Sure, what do you need?" },
+          { speaker: 'student', arabic: 'ضعت. ما أفهم زين.', transliteration: 'dhi3t. ma afham zain.', english: "I'm lost. I don't understand well." },
+          { speaker: 'other', arabic: 'لا تخاف، بساعدك.', transliteration: 'la tkhaaf, b-saa3dak.', english: "Don't worry, I'll help you." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'A helpful local',
+        lines: [
+          { speaker: 'student', arabic: 'لو سمحت، ممكن تساعدني؟', transliteration: 'law sama7t, mumkin tsaa3idni?', english: "Excuse me, can you help me?" },
+          { speaker: 'other', arabic: 'أكيد، إيش تحتاج؟', transliteration: 'akeed, eesh ti7taaj?', english: "Sure, what do you need?" },
+          { speaker: 'student', arabic: 'ضعت. ما أفهم كويس.', transliteration: 'dhi3t. ma afham kwayyis.', english: "I'm lost. I don't understand well." },
+          { speaker: 'other', arabic: 'لا تخاف، حساعدك.', transliteration: 'la tikhaaf, 7asaa3dak.', english: "Don't worry, I'll help you." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'A helpful local',
         lines: [
@@ -312,6 +510,39 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Talk about your family — brothers, sisters, parents.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'other', arabic: 'عندك إخوان؟', transliteration: '3indak ikhwaan?', english: "Do you have siblings?" },
+          { speaker: 'student', arabic: 'عندي أخ وأخت.', transliteration: '3indi akh w-ukht.', english: "I have a brother and a sister." },
+          { speaker: 'other', arabic: 'وين ساكنين؟', transliteration: 'wein saakneen?', english: "Where do they live?" },
+          { speaker: 'student', arabic: 'ساكنين ويا أهلي بكندا.', transliteration: 'saakneen wiyya ahli b-Canada.', english: "They live with my parents in Canada." },
+          { speaker: 'other', arabic: 'أخوك شيشتغل؟', transliteration: 'akhook shyishtighil?', english: "What does your brother do?" },
+          { speaker: 'student', arabic: 'أخوي مدرس، وأختي بعدها طالبة.', transliteration: 'akhooya mudarris, w-ukhti ba3adha taaliba.', english: "My brother is a teacher, and my sister is still a student." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'other', arabic: 'عندك إخوان؟', transliteration: '3indak ikhwaan?', english: "Do you have siblings?" },
+          { speaker: 'student', arabic: 'عندي أخ وأخت.', transliteration: '3indi akh w-ukht.', english: "I have a brother and a sister." },
+          { speaker: 'other', arabic: 'وين ساكنين؟', transliteration: 'wain saakneen?', english: "Where do they live?" },
+          { speaker: 'student', arabic: 'ساكنين مع أهلي في كندا.', transliteration: 'saakneen ma3a ahli fi Canada.', english: "They live with my parents in Canada." },
+          { speaker: 'other', arabic: 'أخوك شو يشتغل؟', transliteration: 'akhook shu yishtighil?', english: "What does your brother do?" },
+          { speaker: 'student', arabic: 'أخوي مدرس، وأختي لين الحين طالبة.', transliteration: 'akhooy mudarris, w-ukhti lain il-7een taaliba.', english: "My brother is a teacher, and my sister is still a student." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'other', arabic: 'عندك إخوان؟', transliteration: '3indak ikhwaan?', english: "Do you have siblings?" },
+          { speaker: 'student', arabic: 'عندي أخ وأخت.', transliteration: '3indi akh w-ukht.', english: "I have a brother and a sister." },
+          { speaker: 'other', arabic: 'فين ساكنين؟', transliteration: 'feen saakneen?', english: "Where do they live?" },
+          { speaker: 'student', arabic: 'ساكنين مع أهلي في كندا.', transliteration: 'saakneen ma3a ahli fi Canada.', english: "They live with my parents in Canada." },
+          { speaker: 'other', arabic: 'أخوك إيش يشتغل؟', transliteration: 'akhook eesh yishtaghil?', english: "What does your brother do?" },
+          { speaker: 'student', arabic: 'أخويا مدرس، وأختي لسا طالبة.', transliteration: 'akhooya mudarris, w-ukhti lissa taaliba.', english: "My brother is a teacher, and my sister is still a student." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'A friend',
         lines: [
@@ -366,6 +597,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Order food and ask for the bill.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'Waiter',
+        lines: [
+          { speaker: 'other', arabic: 'شتريد تاكل اليوم؟', transliteration: 'shtreed taakul il-yoom?', english: "What would you like to eat today?" },
+          { speaker: 'student', arabic: 'أريد تمن ومرق رجاءً.', transliteration: 'areed timman w-marag rajaa2an.', english: "I want rice and stew, please." },
+          { speaker: 'other', arabic: 'وشتشرب؟', transliteration: 'w-shtishrab?', english: "And what would you like to drink?" },
+          { speaker: 'student', arabic: 'ماي، شكراً. والحساب رجاءً.', transliteration: 'maay, shukran. wil-7isaab rajaa2an.', english: "Water, thanks. And the bill, please." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'Waiter',
+        lines: [
+          { speaker: 'other', arabic: 'شو تبي تاكل اليوم؟', transliteration: 'shu tabi taakil il-yoom?', english: "What would you like to eat today?" },
+          { speaker: 'student', arabic: 'أبي مجبوس دياي لو سمحت.', transliteration: 'abi machboos diyaay law sama7t.', english: "I want chicken machboos, please." },
+          { speaker: 'other', arabic: 'وشو تبي تشرب؟', transliteration: 'w-shu tabi tishrab?', english: "And what would you like to drink?" },
+          { speaker: 'student', arabic: 'ماي، مشكور. والحساب لو سمحت.', transliteration: 'maay, mashkoor. wil-7saab law sama7t.', english: "Water, thanks. And the bill, please." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'Waiter',
+        lines: [
+          { speaker: 'other', arabic: 'إيش تبغى تاكل اليوم؟', transliteration: 'eesh tibgha taakul il-yoom?', english: "What would you like to eat today?" },
+          { speaker: 'student', arabic: 'أبغى كبسة دجاج لو سمحت.', transliteration: 'abgha kabsat dajaaj law sama7t.', english: "I want chicken kabsa, please." },
+          { speaker: 'other', arabic: 'وإيش تبغى تشرب؟', transliteration: 'w-eesh tibgha tishrab?', english: "And what would you like to drink?" },
+          { speaker: 'student', arabic: 'موية، شكراً. والحساب لو سمحت.', transliteration: 'mooya, shukran. wil-7isaab law sama7t.', english: "Water, thanks. And the bill, please." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'Waiter',
         lines: [
@@ -402,6 +660,33 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     description: 'Ask what time it is and answer about your day.',
     level: 'beginner',
     dialogs: {
+      'iraqi': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'student', arabic: 'الساعة بيش هسة؟', transliteration: 'is-saa3a beesh hassa?', english: "What time is it now?" },
+          { speaker: 'other', arabic: 'الساعة ثلاثة وربع.', transliteration: 'is-saa3a thlaatha w-rubu3.', english: "It's three fifteen." },
+          { speaker: 'student', arabic: 'لازم أروح، عندي دوام.', transliteration: 'laazim aroo7, 3indi dawaam.', english: "I have to go, I have work." },
+          { speaker: 'other', arabic: 'زين، أشوفك بعدين.', transliteration: 'zein, ashoofak ba3dein.', english: "Okay, see you later." }
+        ]
+      },
+      'khaleeji': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'student', arabic: 'كم الساعة الحين؟', transliteration: 'cham is-saa3a il-7een?', english: "What time is it now?" },
+          { speaker: 'other', arabic: 'الساعة ثلاث وربع.', transliteration: 'is-saa3a thalaath w-rubu3.', english: "It's three fifteen." },
+          { speaker: 'student', arabic: 'لازم أروح، عندي دوام.', transliteration: 'laazim aroo7, 3indi dawaam.', english: "I have to go, I have work." },
+          { speaker: 'other', arabic: 'زين، أشوفك بعدين.', transliteration: 'zain, ashoofak ba3dain.', english: "Okay, see you later." }
+        ]
+      },
+      'saudi': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'student', arabic: 'كم الساعة دحين؟', transliteration: 'kam is-saa3a da7een?', english: "What time is it now?" },
+          { speaker: 'other', arabic: 'الساعة تلاتة وربع.', transliteration: 'is-saa3a talaata w-rub3.', english: "It's three fifteen." },
+          { speaker: 'student', arabic: 'لازم أروح، عندي دوام.', transliteration: 'laazim arooh, 3indi dawaam.', english: "I have to go, I have work." },
+          { speaker: 'other', arabic: 'طيب، أشوفك بعدين.', transliteration: 'tayyib, ashoofak ba3dain.', english: "Okay, see you later." }
+        ]
+      },
       'levantine': {
         otherRoleEnglish: 'A friend',
         lines: [

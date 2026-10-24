@@ -26,8 +26,8 @@ const dialectToLanguageCode: Record<string, string> = {
   'fusha': 'ar-SA',
   'darija': 'ar-MA',
   'khaleeji': 'ar-AE',
-  // ar-IQ: Google's chirp_3 docs disagree on whether this is Arabic (Iraq); verify before launch.
-  'iraqi': 'ar-IQ',
+  // chirp_3 has no ar-IQ; Kuwaiti is the closest locale it has (g for ق, ch for ك, shared Gulf vocabulary).
+  'iraqi': 'ar-KW',
   'saudi': 'ar-SA',
   'ar': 'ar-EG',
   'en': 'en-US'

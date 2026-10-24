@@ -1,0 +1,318 @@
+{
+  "slug": "nigih",
+  "arabic": "نجح",
+  "transliteration": "niya7",
+  "english": "to succeed",
+  "wordId": null,
+  "rootLetters": "ن ج ح",
+  "verbClass": "sound",
+  "notes": "Past niya7, present anya7 (I succeed).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نجحت",
+          "transliteration": "niya7t",
+          "english": "I succeeded"
+        },
+        {
+          "person": "enta",
+          "arabic": "نجحت",
+          "transliteration": "niya7t",
+          "english": "you (m) succeeded"
+        },
+        {
+          "person": "enti",
+          "arabic": "نجحتي",
+          "transliteration": "niya7ti",
+          "english": "you (f) succeeded"
+        },
+        {
+          "person": "howa",
+          "arabic": "نجح",
+          "transliteration": "niya7",
+          "english": "he succeeded"
+        },
+        {
+          "person": "heya",
+          "arabic": "نجحت",
+          "transliteration": "niy7at",
+          "english": "she succeeded"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نجحنا",
+          "transliteration": "niya7na",
+          "english": "we succeeded"
+        },
+        {
+          "person": "entu",
+          "arabic": "نجحتوا",
+          "transliteration": "niya7taw",
+          "english": "you (pl) succeeded"
+        },
+        {
+          "person": "homma",
+          "arabic": "نجحوا",
+          "transliteration": "niy7aw",
+          "english": "they succeeded"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما نجحت",
+          "transliteration": "ma niya7t",
+          "english": "I didn't succeed"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما نجحت",
+          "transliteration": "ma niya7t",
+          "english": "you (m) didn't succeed"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما نجحتي",
+          "transliteration": "ma niya7ti",
+          "english": "you (f) didn't succeed"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما نجح",
+          "transliteration": "ma niya7",
+          "english": "he didn't succeed"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما نجحت",
+          "transliteration": "ma niy7at",
+          "english": "she didn't succeed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نجحنا",
+          "transliteration": "ma niya7na",
+          "english": "we didn't succeed"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما نجحتوا",
+          "transliteration": "ma niya7taw",
+          "english": "you (pl) didn't succeed"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما نجحوا",
+          "transliteration": "ma niy7aw",
+          "english": "they didn't succeed"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "انجح",
+          "transliteration": "anya7",
+          "english": "I succeed"
+        },
+        {
+          "person": "enta",
+          "arabic": "تنجح",
+          "transliteration": "tinya7",
+          "english": "you (m) succeed"
+        },
+        {
+          "person": "enti",
+          "arabic": "تنجحين",
+          "transliteration": "tinya7een",
+          "english": "you (f) succeed"
+        },
+        {
+          "person": "howa",
+          "arabic": "ينجح",
+          "transliteration": "yinya7",
+          "english": "he succeeds"
+        },
+        {
+          "person": "heya",
+          "arabic": "تنجح",
+          "transliteration": "tinya7",
+          "english": "she succeeds"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ننجح",
+          "transliteration": "ninya7",
+          "english": "we succeed"
+        },
+        {
+          "person": "entu",
+          "arabic": "تنجحون",
+          "transliteration": "tinya7oon",
+          "english": "you (pl) succeed"
+        },
+        {
+          "person": "homma",
+          "arabic": "ينجحون",
+          "transliteration": "yinya7oon",
+          "english": "they succeed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما انجح",
+          "transliteration": "ma anya7",
+          "english": "I don't succeed"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تنجح",
+          "transliteration": "ma tinya7",
+          "english": "you (m) don't succeed"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تنجحين",
+          "transliteration": "ma tinya7een",
+          "english": "you (f) don't succeed"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ينجح",
+          "transliteration": "ma yinya7",
+          "english": "he doesn't succeed"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تنجح",
+          "transliteration": "ma tinya7",
+          "english": "she doesn't succeed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ننجح",
+          "transliteration": "ma ninya7",
+          "english": "we don't succeed"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تنجحون",
+          "transliteration": "ma tinya7oon",
+          "english": "you (pl) don't succeed"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ينجحون",
+          "transliteration": "ma yinya7oon",
+          "english": "they don't succeed"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح انجح",
+          "transliteration": "raa7 anya7",
+          "english": "I will succeed"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تنجح",
+          "transliteration": "raa7 tinya7",
+          "english": "you (m) will succeed"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تنجحين",
+          "transliteration": "raa7 tinya7een",
+          "english": "you (f) will succeed"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح ينجح",
+          "transliteration": "raa7 yinya7",
+          "english": "he will succeed"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تنجح",
+          "transliteration": "raa7 tinya7",
+          "english": "she will succeed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح ننجح",
+          "transliteration": "raa7 ninya7",
+          "english": "we will succeed"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تنجحون",
+          "transliteration": "raa7 tinya7oon",
+          "english": "you (pl) will succeed"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح ينجحون",
+          "transliteration": "raa7 yinya7oon",
+          "english": "they will succeed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح انجح",
+          "transliteration": "ma raa7 anya7",
+          "english": "I won't succeed"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تنجح",
+          "transliteration": "ma raa7 tinya7",
+          "english": "you (m) won't succeed"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تنجحين",
+          "transliteration": "ma raa7 tinya7een",
+          "english": "you (f) won't succeed"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح ينجح",
+          "transliteration": "ma raa7 yinya7",
+          "english": "he won't succeed"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تنجح",
+          "transliteration": "ma raa7 tinya7",
+          "english": "she won't succeed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح ننجح",
+          "transliteration": "ma raa7 ninya7",
+          "english": "we won't succeed"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تنجحون",
+          "transliteration": "ma raa7 tinya7oon",
+          "english": "you (pl) won't succeed"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح ينجحون",
+          "transliteration": "ma raa7 yinya7oon",
+          "english": "they won't succeed"
+        }
+      ]
+    }
+  }
+}

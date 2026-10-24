@@ -1,0 +1,1887 @@
+{
+	"vocab": [
+		{
+			"arabic": "الجو",
+			"arabicTashkeel": "الجَو",
+			"english": "Weather",
+			"transliteration": "il-yaw",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather",
+					"transliteration": "il-yaw"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حار",
+			"arabicTashkeel": "حار",
+			"english": "Hot",
+			"transliteration": "7aarr",
+			"wordAlignments": [
+				{
+					"arabic": "حار",
+					"english": "Hot",
+					"transliteration": "7aarr"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "بارد",
+			"arabicTashkeel": "بارِد",
+			"english": "Cold",
+			"transliteration": "baarid",
+			"wordAlignments": [
+				{
+					"arabic": "بارد",
+					"english": "Cold",
+					"transliteration": "baarid"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "دافي",
+			"arabicTashkeel": "دافي",
+			"english": "Warm",
+			"transliteration": "daafi",
+			"wordAlignments": [
+				{
+					"arabic": "دافي",
+					"english": "Warm",
+					"transliteration": "daafi"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "شمس",
+			"arabicTashkeel": "شَمس",
+			"english": "Sun",
+			"transliteration": "shams",
+			"wordAlignments": [
+				{
+					"arabic": "شمس",
+					"english": "Sun",
+					"transliteration": "shams"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مطر",
+			"arabicTashkeel": "مَطَر",
+			"english": "Rain",
+			"transliteration": "matar",
+			"wordAlignments": [
+				{
+					"arabic": "مطر",
+					"english": "Rain",
+					"transliteration": "matar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "غيم",
+			"arabicTashkeel": "غيم",
+			"english": "Clouds",
+			"transliteration": "gheem",
+			"wordAlignments": [
+				{
+					"arabic": "غيم",
+					"english": "Clouds",
+					"transliteration": "gheem"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "هوا",
+			"arabicTashkeel": "هَوا",
+			"english": "Wind",
+			"transliteration": "hawa",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "Wind",
+					"transliteration": "hawa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "غبار",
+			"arabicTashkeel": "غُبار",
+			"english": "Dust storm",
+			"transliteration": "ghubaar",
+			"wordAlignments": [
+				{
+					"arabic": "غبار",
+					"english": "Dust storm",
+					"transliteration": "ghubaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "رطوبة",
+			"arabicTashkeel": "رُطوبة",
+			"english": "Humidity",
+			"transliteration": "rutooba",
+			"wordAlignments": [
+				{
+					"arabic": "رطوبة",
+					"english": "Humidity",
+					"transliteration": "rutooba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صيف",
+			"arabicTashkeel": "صيف",
+			"english": "Summer",
+			"transliteration": "seef",
+			"wordAlignments": [
+				{
+					"arabic": "صيف",
+					"english": "Summer",
+					"transliteration": "seef"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شتا",
+			"arabicTashkeel": "شِتا",
+			"english": "Winter",
+			"transliteration": "shita",
+			"wordAlignments": [
+				{
+					"arabic": "شتا",
+					"english": "Winter",
+					"transliteration": "shita"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ربيع",
+			"arabicTashkeel": "رَبيع",
+			"english": "Spring",
+			"transliteration": "rabee3",
+			"wordAlignments": [
+				{
+					"arabic": "ربيع",
+					"english": "Spring",
+					"transliteration": "rabee3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خريف",
+			"arabicTashkeel": "خَريف",
+			"english": "Autumn",
+			"transliteration": "khareef",
+			"wordAlignments": [
+				{
+					"arabic": "خريف",
+					"english": "Autumn",
+					"transliteration": "khareef"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "درجة",
+			"arabicTashkeel": "دَرَجة",
+			"english": "Degree",
+			"transliteration": "daraja",
+			"wordAlignments": [
+				{
+					"arabic": "درجة",
+					"english": "Degree",
+					"transliteration": "daraja"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شلون الجو اليوم؟",
+			"arabicTashkeel": "شْلون الجَو اليوم؟",
+			"english": "How is the weather today?",
+			"transliteration": "shloon il-yaw il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How is",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Weather"
+			]
+		},
+		{
+			"arabic": "اليوم حار وايد.",
+			"arabicTashkeel": "اليوم حار وايد.",
+			"english": "It's very hot today.",
+			"transliteration": "il-yoom 7aarr waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "حار",
+					"english": "it's hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Hot"
+			]
+		},
+		{
+			"arabic": "بالليل بارد بالبر.",
+			"arabicTashkeel": "بالليل بارِد بالبَر.",
+			"english": "At night it's cold in the desert.",
+			"transliteration": "bil-leel baarid bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "بالليل",
+					"english": "At night",
+					"transliteration": "bil-leel"
+				},
+				{
+					"arabic": "بارد",
+					"english": "it's cold",
+					"transliteration": "baarid"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Cold"
+			]
+		},
+		{
+			"arabic": "الجو دافي بالربيع.",
+			"arabicTashkeel": "الجَو دافي بالرَّبيع.",
+			"english": "The weather is warm in spring.",
+			"transliteration": "il-yaw daafi bir-rabee3.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "دافي",
+					"english": "warm",
+					"transliteration": "daafi"
+				},
+				{
+					"arabic": "بالربيع.",
+					"english": "in spring.",
+					"transliteration": "bir-rabee3."
+				}
+			],
+			"targetWords": [
+				"Warm",
+				"Spring"
+			]
+		},
+		{
+			"arabic": "الشمس قوية.",
+			"arabicTashkeel": "الشَّمس قَوية.",
+			"english": "The sun is strong.",
+			"transliteration": "ish-shams gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الشمس",
+					"english": "The sun is",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Sun"
+			]
+		},
+		{
+			"arabic": "اليوم بيجي مطر.",
+			"arabicTashkeel": "اليوم بِيجي مَطَر.",
+			"english": "Rain is coming today.",
+			"transliteration": "il-yoom biyi matar.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "بيجي",
+					"english": "will come",
+					"transliteration": "biyi"
+				},
+				{
+					"arabic": "مطر.",
+					"english": "rain.",
+					"transliteration": "matar."
+				}
+			],
+			"targetWords": [
+				"Rain"
+			]
+		},
+		{
+			"arabic": "في غيم وايد.",
+			"arabicTashkeel": "في غيم وايد.",
+			"english": "There are a lot of clouds.",
+			"transliteration": "fee gheem waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "There are",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "غيم",
+					"english": "clouds",
+					"transliteration": "gheem"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Clouds"
+			]
+		},
+		{
+			"arabic": "الهوا قوي.",
+			"arabicTashkeel": "الهَوا قَوي.",
+			"english": "The wind is strong.",
+			"transliteration": "il-hawa gawi.",
+			"wordAlignments": [
+				{
+					"arabic": "الهوا",
+					"english": "The wind is",
+					"transliteration": "il-hawa"
+				},
+				{
+					"arabic": "قوي.",
+					"english": "strong.",
+					"transliteration": "gawi."
+				}
+			],
+			"targetWords": [
+				"Wind"
+			]
+		},
+		{
+			"arabic": "اليوم في غبار.",
+			"arabicTashkeel": "اليوم في غُبار.",
+			"english": "Today there is a dust storm.",
+			"transliteration": "il-yoom fee ghubaar.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "غبار.",
+					"english": "a dust storm.",
+					"transliteration": "ghubaar."
+				}
+			],
+			"targetWords": [
+				"Dust storm"
+			]
+		},
+		{
+			"arabic": "الرطوبة عالية وايد.",
+			"arabicTashkeel": "الرُّطوبة عالية وايد.",
+			"english": "The humidity is very high.",
+			"transliteration": "ir-rutooba 3aalya waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الرطوبة",
+					"english": "The humidity is",
+					"transliteration": "ir-rutooba"
+				},
+				{
+					"arabic": "عالية",
+					"english": "high",
+					"transliteration": "3aalya"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Humidity"
+			]
+		},
+		{
+			"arabic": "الصيف بالخليج حار وايد.",
+			"arabicTashkeel": "الصّيف بالخَليج حار وايد.",
+			"english": "Summer in the Gulf is very hot.",
+			"transliteration": "is-seef bil-khaleej 7aarr waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيف",
+					"english": "Summer",
+					"transliteration": "is-seef"
+				},
+				{
+					"arabic": "بالخليج",
+					"english": "in the Gulf is",
+					"transliteration": "bil-khaleej"
+				},
+				{
+					"arabic": "حار",
+					"english": "hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Summer",
+				"Hot"
+			]
+		},
+		{
+			"arabic": "الشتا قصير.",
+			"arabicTashkeel": "الشِّتا قْصَيِّر.",
+			"english": "Winter is short.",
+			"transliteration": "ish-shita gsayyir.",
+			"wordAlignments": [
+				{
+					"arabic": "الشتا",
+					"english": "Winter is",
+					"transliteration": "ish-shita"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gsayyir."
+				}
+			],
+			"targetWords": [
+				"Winter"
+			]
+		},
+		{
+			"arabic": "أحب الربيع.",
+			"arabicTashkeel": "أحِب الرَّبيع.",
+			"english": "I love spring.",
+			"transliteration": "a7ibb ir-rabee3.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الربيع.",
+					"english": "spring.",
+					"transliteration": "ir-rabee3."
+				}
+			],
+			"targetWords": [
+				"Spring"
+			]
+		},
+		{
+			"arabic": "الخريف حلو.",
+			"arabicTashkeel": "الخَريف حِلو.",
+			"english": "Autumn is nice.",
+			"transliteration": "il-khareef 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الخريف",
+					"english": "Autumn is",
+					"transliteration": "il-khareef"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Autumn"
+			]
+		},
+		{
+			"arabic": "اليوم ثمان وأربعين درجة!",
+			"arabicTashkeel": "اليوم ثَمان وأربعين دَرَجة!",
+			"english": "Today it's forty-eight degrees!",
+			"transliteration": "il-yoom thamaan w-arba3een daraja!",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "ثمان",
+					"english": "eight",
+					"transliteration": "thamaan"
+				},
+				{
+					"arabic": "وأربعين",
+					"english": "and forty",
+					"transliteration": "w-arba3een"
+				},
+				{
+					"arabic": "درجة!",
+					"english": "degrees!",
+					"transliteration": "daraja!"
+				}
+			],
+			"targetWords": [
+				"Degree"
+			]
+		},
+		{
+			"arabic": "الجو حلو اليوم.",
+			"arabicTashkeel": "الجَو حِلو اليوم.",
+			"english": "The weather is nice today.",
+			"transliteration": "il-yaw 7ilu il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "حلو",
+					"english": "nice",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Weather"
+			]
+		},
+		{
+			"arabic": "الماي بارد.",
+			"arabicTashkeel": "الماي بارِد.",
+			"english": "The water is cold.",
+			"transliteration": "il-maay baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "الماي",
+					"english": "The water is",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "بارد.",
+					"english": "cold.",
+					"transliteration": "baarid."
+				}
+			],
+			"targetWords": [
+				"Cold"
+			]
+		},
+		{
+			"arabic": "شاي حار بالشتا.",
+			"arabicTashkeel": "شاي حار بالشِّتا.",
+			"english": "Hot tea in winter.",
+			"transliteration": "chaay 7aarr bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "شاي",
+					"english": "Tea",
+					"transliteration": "chaay"
+				},
+				{
+					"arabic": "حار",
+					"english": "hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"Hot",
+				"Winter"
+			]
+		},
+		{
+			"arabic": "ماي دافي.",
+			"arabicTashkeel": "ماي دافي.",
+			"english": "Warm water.",
+			"transliteration": "maay daafi.",
+			"wordAlignments": [
+				{
+					"arabic": "ماي",
+					"english": "Water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "دافي.",
+					"english": "warm.",
+					"transliteration": "daafi."
+				}
+			],
+			"targetWords": [
+				"Warm"
+			]
+		},
+		{
+			"arabic": "إلبس كاب، الشمس حارة.",
+			"arabicTashkeel": "إلبَس كاب، الشَّمس حارّة.",
+			"english": "Wear a cap, the sun is hot.",
+			"transliteration": "ilbas kaab, ish-shams 7aarra.",
+			"wordAlignments": [
+				{
+					"arabic": "إلبس",
+					"english": "Wear",
+					"transliteration": "ilbas"
+				},
+				{
+					"arabic": "كاب،",
+					"english": "a cap,",
+					"transliteration": "kaab,"
+				},
+				{
+					"arabic": "الشمس",
+					"english": "the sun is",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "حارة.",
+					"english": "hot.",
+					"transliteration": "7aarra."
+				}
+			],
+			"targetWords": [
+				"Sun"
+			]
+		},
+		{
+			"arabic": "المطر بدبي قليل.",
+			"arabicTashkeel": "المَطَر بدُبَي قَليل.",
+			"english": "Rain in Dubai is rare.",
+			"transliteration": "il-matar b-dubay galeel.",
+			"wordAlignments": [
+				{
+					"arabic": "المطر",
+					"english": "Rain",
+					"transliteration": "il-matar"
+				},
+				{
+					"arabic": "بدبي",
+					"english": "in Dubai is",
+					"transliteration": "b-dubay"
+				},
+				{
+					"arabic": "قليل.",
+					"english": "rare.",
+					"transliteration": "galeel."
+				}
+			],
+			"targetWords": [
+				"Rain"
+			]
+		},
+		{
+			"arabic": "السما كلها غيم.",
+			"arabicTashkeel": "السَّما كِلها غيم.",
+			"english": "The sky is full of clouds.",
+			"transliteration": "is-sama kilha gheem.",
+			"wordAlignments": [
+				{
+					"arabic": "السما",
+					"english": "The sky is",
+					"transliteration": "is-sama"
+				},
+				{
+					"arabic": "كلها",
+					"english": "all of it",
+					"transliteration": "kilha"
+				},
+				{
+					"arabic": "غيم.",
+					"english": "clouds.",
+					"transliteration": "gheem."
+				}
+			],
+			"targetWords": [
+				"Clouds"
+			]
+		},
+		{
+			"arabic": "الهوا بارد بالمسا.",
+			"arabicTashkeel": "الهَوا بارِد بالمَسا.",
+			"english": "The wind is cool in the evening.",
+			"transliteration": "il-hawa baarid bil-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "الهوا",
+					"english": "The wind is",
+					"transliteration": "il-hawa"
+				},
+				{
+					"arabic": "بارد",
+					"english": "cool",
+					"transliteration": "baarid"
+				},
+				{
+					"arabic": "بالمسا.",
+					"english": "in the evening.",
+					"transliteration": "bil-masa."
+				}
+			],
+			"targetWords": [
+				"Wind"
+			]
+		},
+		{
+			"arabic": "سكر الدرايش، في غبار!",
+			"arabicTashkeel": "سَكِّر الدَّرايِش، في غُبار!",
+			"english": "Close the windows, there's a dust storm!",
+			"transliteration": "sakkir id-daraayish, fee ghubaar!",
+			"wordAlignments": [
+				{
+					"arabic": "سكر",
+					"english": "Close",
+					"transliteration": "sakkir"
+				},
+				{
+					"arabic": "الدرايش،",
+					"english": "the windows,",
+					"transliteration": "id-daraayish,"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "غبار!",
+					"english": "a dust storm!",
+					"transliteration": "ghubaar!"
+				}
+			],
+			"targetWords": [
+				"Dust storm"
+			]
+		},
+		{
+			"arabic": "الرطوبة شينة بشهر ثمانية.",
+			"arabicTashkeel": "الرُّطوبة شينة بشَهَر ثَمانية.",
+			"english": "The humidity is bad in August.",
+			"transliteration": "ir-rutooba sheena b-shahar thamaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "الرطوبة",
+					"english": "The humidity is",
+					"transliteration": "ir-rutooba"
+				},
+				{
+					"arabic": "شينة",
+					"english": "bad",
+					"transliteration": "sheena"
+				},
+				{
+					"arabic": "بشهر",
+					"english": "in month",
+					"transliteration": "b-shahar"
+				},
+				{
+					"arabic": "ثمانية.",
+					"english": "eight.",
+					"transliteration": "thamaanya."
+				}
+			],
+			"targetWords": [
+				"Humidity"
+			]
+		},
+		{
+			"arabic": "بالصيف نسافر.",
+			"arabicTashkeel": "بالصّيف نسافِر.",
+			"english": "In summer we travel.",
+			"transliteration": "bis-seef nsaafir.",
+			"wordAlignments": [
+				{
+					"arabic": "بالصيف",
+					"english": "In summer",
+					"transliteration": "bis-seef"
+				},
+				{
+					"arabic": "نسافر.",
+					"english": "we travel.",
+					"transliteration": "nsaafir."
+				}
+			],
+			"targetWords": [
+				"Summer"
+			]
+		},
+		{
+			"arabic": "بالشتا نروح كشتة بالبر.",
+			"arabicTashkeel": "بالشِّتا نْروح كَشتة بالبَر.",
+			"english": "In winter we go camping in the desert.",
+			"transliteration": "bish-shita nrooh kashta bil-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "بالشتا",
+					"english": "In winter",
+					"transliteration": "bish-shita"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "كشتة",
+					"english": "camping",
+					"transliteration": "kashta"
+				},
+				{
+					"arabic": "بالبر.",
+					"english": "in the desert.",
+					"transliteration": "bil-barr."
+				}
+			],
+			"targetWords": [
+				"Winter"
+			]
+		},
+		{
+			"arabic": "الربيع هني قصير.",
+			"arabicTashkeel": "الرَّبيع هِني قْصَيِّر.",
+			"english": "Spring here is short.",
+			"transliteration": "ir-rabee3 hini gsayyir.",
+			"wordAlignments": [
+				{
+					"arabic": "الربيع",
+					"english": "Spring",
+					"transliteration": "ir-rabee3"
+				},
+				{
+					"arabic": "هني",
+					"english": "here is",
+					"transliteration": "hini"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gsayyir."
+				}
+			],
+			"targetWords": [
+				"Spring"
+			]
+		},
+		{
+			"arabic": "بالخريف الجو دافي.",
+			"arabicTashkeel": "بالخَريف الجَو دافي.",
+			"english": "In autumn the weather is warm.",
+			"transliteration": "bil-khareef il-yaw daafi.",
+			"wordAlignments": [
+				{
+					"arabic": "بالخريف",
+					"english": "In autumn",
+					"transliteration": "bil-khareef"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "دافي.",
+					"english": "warm.",
+					"transliteration": "daafi."
+				}
+			],
+			"targetWords": [
+				"Autumn",
+				"Warm"
+			]
+		},
+		{
+			"arabic": "كم درجة اليوم؟",
+			"arabicTashkeel": "كَم دَرَجة اليوم؟",
+			"english": "How many degrees today?",
+			"transliteration": "cham daraja il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "درجة",
+					"english": "degrees",
+					"transliteration": "daraja"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Degree"
+			]
+		},
+		{
+			"arabic": "الجو تغير.",
+			"arabicTashkeel": "الجَو تغَيَّر.",
+			"english": "The weather changed.",
+			"transliteration": "il-yaw tghayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "تغير.",
+					"english": "changed.",
+					"transliteration": "tghayyar."
+				}
+			],
+			"targetWords": [
+				"Weather"
+			]
+		},
+		{
+			"arabic": "الأكل حار.",
+			"arabicTashkeel": "الأكل حار.",
+			"english": "The food is hot.",
+			"transliteration": "il-akl 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "The food is",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Hot"
+			]
+		},
+		{
+			"arabic": "أنا بردان.",
+			"arabicTashkeel": "أنا بَردان.",
+			"english": "I'm cold.",
+			"transliteration": "ana bardaan.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "بردان.",
+					"english": "cold.",
+					"transliteration": "bardaan."
+				}
+			],
+			"targetWords": [
+				"Cold"
+			]
+		},
+		{
+			"arabic": "البيت دافي.",
+			"arabicTashkeel": "البيت دافي.",
+			"english": "The house is warm.",
+			"transliteration": "il-beet daafi.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "دافي.",
+					"english": "warm.",
+					"transliteration": "daafi."
+				}
+			],
+			"targetWords": [
+				"Warm"
+			]
+		},
+		{
+			"arabic": "الشمس تطلع بدري بالصيف.",
+			"arabicTashkeel": "الشَّمس تِطلَع بَدري بالصّيف.",
+			"english": "The sun rises early in summer.",
+			"transliteration": "ish-shams titla3 badri bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "الشمس",
+					"english": "The sun",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "rises",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "بدري",
+					"english": "early",
+					"transliteration": "badri"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Sun",
+				"Summer"
+			]
+		},
+		{
+			"arabic": "مطر قوي أمس.",
+			"arabicTashkeel": "مَطَر قَوي أمس.",
+			"english": "Heavy rain yesterday.",
+			"transliteration": "matar gawi ams.",
+			"wordAlignments": [
+				{
+					"arabic": "مطر",
+					"english": "Rain",
+					"transliteration": "matar"
+				},
+				{
+					"arabic": "قوي",
+					"english": "heavy",
+					"transliteration": "gawi"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Rain"
+			]
+		},
+		{
+			"arabic": "غيم أسود.",
+			"arabicTashkeel": "غيم أسوَد.",
+			"english": "Black clouds.",
+			"transliteration": "gheem aswad.",
+			"wordAlignments": [
+				{
+					"arabic": "غيم",
+					"english": "Clouds",
+					"transliteration": "gheem"
+				},
+				{
+					"arabic": "أسود.",
+					"english": "black.",
+					"transliteration": "aswad."
+				}
+			],
+			"targetWords": [
+				"Clouds"
+			]
+		},
+		{
+			"arabic": "ما في هوا اليوم.",
+			"arabicTashkeel": "ما في هَوا اليوم.",
+			"english": "There's no wind today.",
+			"transliteration": "ma fee hawa il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "هوا",
+					"english": "wind",
+					"transliteration": "hawa"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Wind"
+			]
+		},
+		{
+			"arabic": "الغبار راح.",
+			"arabicTashkeel": "الغُبار راح.",
+			"english": "The dust storm is over.",
+			"transliteration": "il-ghubaar raa7.",
+			"wordAlignments": [
+				{
+					"arabic": "الغبار",
+					"english": "The dust storm",
+					"transliteration": "il-ghubaar"
+				},
+				{
+					"arabic": "راح.",
+					"english": "is gone.",
+					"transliteration": "raa7."
+				}
+			],
+			"targetWords": [
+				"Dust storm"
+			]
+		},
+		{
+			"arabic": "رطوبة وحر.",
+			"arabicTashkeel": "رُطوبة وحَر.",
+			"english": "Humidity and heat.",
+			"transliteration": "rutooba w-7arr.",
+			"wordAlignments": [
+				{
+					"arabic": "رطوبة",
+					"english": "Humidity",
+					"transliteration": "rutooba"
+				},
+				{
+					"arabic": "وحر.",
+					"english": "and heat.",
+					"transliteration": "w-7arr."
+				}
+			],
+			"targetWords": [
+				"Humidity",
+				"Hot"
+			]
+		},
+		{
+			"arabic": "الصيف طويل.",
+			"arabicTashkeel": "الصّيف طْويل.",
+			"english": "Summer is long.",
+			"transliteration": "is-seef tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيف",
+					"english": "Summer is",
+					"transliteration": "is-seef"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Summer"
+			]
+		},
+		{
+			"arabic": "الشتا بالبر بارد وايد.",
+			"arabicTashkeel": "الشِّتا بالبَر بارِد وايد.",
+			"english": "Winter in the desert is very cold.",
+			"transliteration": "ish-shita bil-barr baarid waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الشتا",
+					"english": "Winter",
+					"transliteration": "ish-shita"
+				},
+				{
+					"arabic": "بالبر",
+					"english": "in the desert is",
+					"transliteration": "bil-barr"
+				},
+				{
+					"arabic": "بارد",
+					"english": "cold",
+					"transliteration": "baarid"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Winter",
+				"Cold"
+			]
+		},
+		{
+			"arabic": "الورد يطلع بالربيع.",
+			"arabicTashkeel": "الوَرد يِطلَع بالرَّبيع.",
+			"english": "The flowers come out in spring.",
+			"transliteration": "il-ward yitla3 bir-rabee3.",
+			"wordAlignments": [
+				{
+					"arabic": "الورد",
+					"english": "The flowers",
+					"transliteration": "il-ward"
+				},
+				{
+					"arabic": "يطلع",
+					"english": "come out",
+					"transliteration": "yitla3"
+				},
+				{
+					"arabic": "بالربيع.",
+					"english": "in spring.",
+					"transliteration": "bir-rabee3."
+				}
+			],
+			"targetWords": [
+				"Spring"
+			]
+		},
+		{
+			"arabic": "الخريف يبدا بشهر تسعة.",
+			"arabicTashkeel": "الخَريف يِبدا بشَهَر تِسعة.",
+			"english": "Autumn starts in September.",
+			"transliteration": "il-khareef yibda b-shahar tis3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الخريف",
+					"english": "Autumn",
+					"transliteration": "il-khareef"
+				},
+				{
+					"arabic": "يبدا",
+					"english": "starts",
+					"transliteration": "yibda"
+				},
+				{
+					"arabic": "بشهر",
+					"english": "in month",
+					"transliteration": "b-shahar"
+				},
+				{
+					"arabic": "تسعة.",
+					"english": "nine.",
+					"transliteration": "tis3a."
+				}
+			],
+			"targetWords": [
+				"Autumn"
+			]
+		},
+		{
+			"arabic": "ثلاثين درجة، مو شين.",
+			"arabicTashkeel": "ثَلاثين دَرَجة، مو شين.",
+			"english": "Thirty degrees, not bad.",
+			"transliteration": "thalaatheen daraja, moo sheen.",
+			"wordAlignments": [
+				{
+					"arabic": "ثلاثين",
+					"english": "Thirty",
+					"transliteration": "thalaatheen"
+				},
+				{
+					"arabic": "درجة،",
+					"english": "degrees,",
+					"transliteration": "daraja,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "شين.",
+					"english": "bad.",
+					"transliteration": "sheen."
+				}
+			],
+			"targetWords": [
+				"Degree"
+			]
+		},
+		{
+			"arabic": "الجو شين اليوم.",
+			"arabicTashkeel": "الجَو شين اليوم.",
+			"english": "The weather is bad today.",
+			"transliteration": "il-yaw sheen il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "شين",
+					"english": "bad",
+					"transliteration": "sheen"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Weather"
+			]
+		},
+		{
+			"arabic": "حار وفي غبار.",
+			"arabicTashkeel": "حار وفي غُبار.",
+			"english": "It's hot and there's a dust storm.",
+			"transliteration": "7aarr w-fee ghubaar.",
+			"wordAlignments": [
+				{
+					"arabic": "حار",
+					"english": "It's hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "وفي",
+					"english": "and there is",
+					"transliteration": "w-fee"
+				},
+				{
+					"arabic": "غبار.",
+					"english": "a dust storm.",
+					"transliteration": "ghubaar."
+				}
+			],
+			"targetWords": [
+				"Hot",
+				"Dust storm"
+			]
+		},
+		{
+			"arabic": "ماي بارد لو سمحت.",
+			"arabicTashkeel": "ماي بارِد لو سَمَحت.",
+			"english": "Cold water, please.",
+			"transliteration": "maay baarid law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "ماي",
+					"english": "Water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "بارد",
+					"english": "cold",
+					"transliteration": "baarid"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Cold"
+			]
+		},
+		{
+			"arabic": "هدوم دافية.",
+			"arabicTashkeel": "هْدوم دافية.",
+			"english": "Warm clothes.",
+			"transliteration": "hdoom daafya.",
+			"wordAlignments": [
+				{
+					"arabic": "هدوم",
+					"english": "Clothes",
+					"transliteration": "hdoom"
+				},
+				{
+					"arabic": "دافية.",
+					"english": "warm.",
+					"transliteration": "daafya."
+				}
+			],
+			"targetWords": [
+				"Warm"
+			]
+		},
+		{
+			"arabic": "إقعد بالظل، مو بالشمس.",
+			"arabicTashkeel": "إقعِد بالظِّل، مو بالشَّمس.",
+			"english": "Sit in the shade, not in the sun.",
+			"transliteration": "ig3id bidh-dhill, moo bish-shams.",
+			"wordAlignments": [
+				{
+					"arabic": "إقعد",
+					"english": "Sit",
+					"transliteration": "ig3id"
+				},
+				{
+					"arabic": "بالظل،",
+					"english": "in the shade,",
+					"transliteration": "bidh-dhill,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "بالشمس.",
+					"english": "in the sun.",
+					"transliteration": "bish-shams."
+				}
+			],
+			"targetWords": [
+				"Sun"
+			]
+		},
+		{
+			"arabic": "أحب المطر.",
+			"arabicTashkeel": "أحِب المَطَر.",
+			"english": "I love the rain.",
+			"transliteration": "a7ibb il-matar.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "المطر.",
+					"english": "the rain.",
+					"transliteration": "il-matar."
+				}
+			],
+			"targetWords": [
+				"Rain"
+			]
+		},
+		{
+			"arabic": "غيم ومطر.",
+			"arabicTashkeel": "غيم ومَطَر.",
+			"english": "Clouds and rain.",
+			"transliteration": "gheem w-matar.",
+			"wordAlignments": [
+				{
+					"arabic": "غيم",
+					"english": "Clouds",
+					"transliteration": "gheem"
+				},
+				{
+					"arabic": "ومطر.",
+					"english": "and rain.",
+					"transliteration": "w-matar."
+				}
+			],
+			"targetWords": [
+				"Clouds",
+				"Rain"
+			]
+		},
+		{
+			"arabic": "هوا بارد.",
+			"arabicTashkeel": "هَوا بارِد.",
+			"english": "A cool wind.",
+			"transliteration": "hawa baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "A wind",
+					"transliteration": "hawa"
+				},
+				{
+					"arabic": "بارد.",
+					"english": "cool.",
+					"transliteration": "baarid."
+				}
+			],
+			"targetWords": [
+				"Wind"
+			]
+		},
+		{
+			"arabic": "الصيف، الشتا، الربيع والخريف.",
+			"arabicTashkeel": "الصّيف، الشِّتا، الرَّبيع والخَريف.",
+			"english": "Summer, winter, spring and autumn.",
+			"transliteration": "is-seef, ish-shita, ir-rabee3 w-il-khareef.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيف،",
+					"english": "Summer,",
+					"transliteration": "is-seef,"
+				},
+				{
+					"arabic": "الشتا،",
+					"english": "winter,",
+					"transliteration": "ish-shita,"
+				},
+				{
+					"arabic": "الربيع",
+					"english": "spring",
+					"transliteration": "ir-rabee3"
+				},
+				{
+					"arabic": "والخريف.",
+					"english": "and autumn.",
+					"transliteration": "w-il-khareef."
+				}
+			],
+			"targetWords": [
+				"Summer",
+				"Winter",
+				"Spring",
+				"Autumn"
+			]
+		},
+		{
+			"arabic": "خمستعش درجة بالليل.",
+			"arabicTashkeel": "خَمستَعَش دَرَجة بالليل.",
+			"english": "Fifteen degrees at night.",
+			"transliteration": "khamista3ash daraja bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "خمستعش",
+					"english": "Fifteen",
+					"transliteration": "khamista3ash"
+				},
+				{
+					"arabic": "درجة",
+					"english": "degrees",
+					"transliteration": "daraja"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Degree"
+			]
+		},
+		{
+			"arabic": "نظارتي غبشت من الرطوبة.",
+			"arabicTashkeel": "نَظّارتي غَبشَت مِن الرُّطوبة.",
+			"english": "My glasses are foggy from the humidity.",
+			"transliteration": "nadhdhaarti ghabshat min ir-rutooba.",
+			"wordAlignments": [
+				{
+					"arabic": "نظارتي",
+					"english": "My glasses",
+					"transliteration": "nadhdhaarti"
+				},
+				{
+					"arabic": "غبشت",
+					"english": "fogged up",
+					"transliteration": "ghabshat"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الرطوبة.",
+					"english": "the humidity.",
+					"transliteration": "ir-rutooba."
+				}
+			],
+			"targetWords": [
+				"Humidity"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Summer in Dubai",
+			"sentences": [
+				{
+					"arabic": "الصيف بدبي حار وايد.",
+					"arabicTashkeel": "الصّيف بدُبَي حار وايد.",
+					"english": "Summer in Dubai is very hot.",
+					"transliteration": "is-seef b-dubay 7aarr waayid.",
+					"wordAlignments": [
+						{
+							"arabic": "الصيف",
+							"english": "Summer",
+							"transliteration": "is-seef"
+						},
+						{
+							"arabic": "بدبي",
+							"english": "in Dubai is",
+							"transliteration": "b-dubay"
+						},
+						{
+							"arabic": "حار",
+							"english": "hot",
+							"transliteration": "7aarr"
+						},
+						{
+							"arabic": "وايد.",
+							"english": "very.",
+							"transliteration": "waayid."
+						}
+					]
+				},
+				{
+					"arabic": "أحيانا يوصل خمسين درجة، والرطوبة عالية.",
+					"arabicTashkeel": "أحياناً يوصَل خَمسين دَرَجة، والرُّطوبة عالية.",
+					"english": "Sometimes it reaches fifty degrees, and the humidity is high.",
+					"transliteration": "a7yaanan yoosal khamseen daraja, w-ir-rutooba 3aalya.",
+					"wordAlignments": [
+						{
+							"arabic": "أحيانا",
+							"english": "Sometimes",
+							"transliteration": "a7yaanan"
+						},
+						{
+							"arabic": "يوصل",
+							"english": "it reaches",
+							"transliteration": "yoosal"
+						},
+						{
+							"arabic": "خمسين",
+							"english": "fifty",
+							"transliteration": "khamseen"
+						},
+						{
+							"arabic": "درجة،",
+							"english": "degrees,",
+							"transliteration": "daraja,"
+						},
+						{
+							"arabic": "والرطوبة",
+							"english": "and the humidity is",
+							"transliteration": "w-ir-rutooba"
+						},
+						{
+							"arabic": "عالية.",
+							"english": "high.",
+							"transliteration": "3aalya."
+						}
+					]
+				},
+				{
+					"arabic": "الناس يقعدون بالمولات العصر.",
+					"arabicTashkeel": "النّاس يِقعِدون بالمولات العَصر.",
+					"english": "People stay in the malls in the afternoon.",
+					"transliteration": "in-naas yig3idoon bil-moolaat il-3asr.",
+					"wordAlignments": [
+						{
+							"arabic": "الناس",
+							"english": "People",
+							"transliteration": "in-naas"
+						},
+						{
+							"arabic": "يقعدون",
+							"english": "stay",
+							"transliteration": "yig3idoon"
+						},
+						{
+							"arabic": "بالمولات",
+							"english": "in the malls",
+							"transliteration": "bil-moolaat"
+						},
+						{
+							"arabic": "العصر.",
+							"english": "in the afternoon.",
+							"transliteration": "il-3asr."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Winter in the Desert",
+			"sentences": [
+				{
+					"arabic": "بالشتا الجو حلو.",
+					"arabicTashkeel": "بالشِّتا الجَو حِلو.",
+					"english": "In winter the weather is nice.",
+					"transliteration": "bish-shita il-yaw 7ilu.",
+					"wordAlignments": [
+						{
+							"arabic": "بالشتا",
+							"english": "In winter",
+							"transliteration": "bish-shita"
+						},
+						{
+							"arabic": "الجو",
+							"english": "the weather is",
+							"transliteration": "il-yaw"
+						},
+						{
+							"arabic": "حلو.",
+							"english": "nice.",
+							"transliteration": "7ilu."
+						}
+					]
+				},
+				{
+					"arabic": "نروح كشتة بالبر، وبالليل بارد.",
+					"arabicTashkeel": "نْروح كَشتة بالبَر، وبالليل بارِد.",
+					"english": "We go camping in the desert, and at night it's cold.",
+					"transliteration": "nrooh kashta bil-barr, w-bil-leel baarid.",
+					"wordAlignments": [
+						{
+							"arabic": "نروح",
+							"english": "We go",
+							"transliteration": "nrooh"
+						},
+						{
+							"arabic": "كشتة",
+							"english": "camping",
+							"transliteration": "kashta"
+						},
+						{
+							"arabic": "بالبر،",
+							"english": "in the desert,",
+							"transliteration": "bil-barr,"
+						},
+						{
+							"arabic": "وبالليل",
+							"english": "and at night",
+							"transliteration": "w-bil-leel"
+						},
+						{
+							"arabic": "بارد.",
+							"english": "it's cold.",
+							"transliteration": "baarid."
+						}
+					]
+				},
+				{
+					"arabic": "نقعد جنب الضو ونشرب شاي حار.",
+					"arabicTashkeel": "نِقعِد جَنب الضّو ونِشرَب شاي حار.",
+					"english": "We sit by the fire and drink hot tea.",
+					"transliteration": "nig3id yamb idh-dhaw w-nishrab chaay 7aarr.",
+					"wordAlignments": [
+						{
+							"arabic": "نقعد",
+							"english": "We sit",
+							"transliteration": "nig3id"
+						},
+						{
+							"arabic": "جنب",
+							"english": "next to",
+							"transliteration": "yamb"
+						},
+						{
+							"arabic": "الضو",
+							"english": "the fire",
+							"transliteration": "idh-dhaw"
+						},
+						{
+							"arabic": "ونشرب",
+							"english": "and drink",
+							"transliteration": "w-nishrab"
+						},
+						{
+							"arabic": "شاي",
+							"english": "tea",
+							"transliteration": "chaay"
+						},
+						{
+							"arabic": "حار.",
+							"english": "hot.",
+							"transliteration": "7aarr."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is planning a winter desert camping trip (kashta) with an Emirati friend and they are checking the weather forecast.",
+		"studentRole": "A friend learning Gulf Arabic.",
+		"otherRole": "The Emirati friend, who loves the desert in winter.",
+		"goalEnglish": "Ask about the weather and temperature, talk about wind, rain and dust, and decide what to bring and which day to go.",
+		"targetWords": [
+			"Weather",
+			"Cold",
+			"Warm",
+			"Wind",
+			"Rain",
+			"Dust storm",
+			"Winter",
+			"Degree"
+		]
+	}
+}

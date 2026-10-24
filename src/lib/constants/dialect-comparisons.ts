@@ -1,3 +1,5 @@
+import { isSelectableDialect } from './dialects';
+
 /**
  * Data for the /{a}-vs-{b} comparison pages.
  *
@@ -66,6 +68,39 @@ export const DIALECT_CONTRASTS: Record<string, Record<string, string>> = {
 		now: 'الآن (al-aan)',
 		want: 'أريد (ureed)',
 		good: 'جيّد (jayyid)'
+	},
+	iraqi: {
+		qaf: 'Hard g — قلب is galub, قهوة is gahwa',
+		jim: 'Soft j — جديد is jideed; ك often becomes ch: كلب is chalib',
+		present: 'Bare form, or da- for right now: اكتب (aktib), دا اكتب (da-aktib)',
+		future: 'راح (raa7): راح اكتب',
+		negation: 'ما before the verb: ما أدري; مو before adjectives',
+		what: 'شنو (shinu) / شكو (shaku)',
+		now: 'هسّة (hassa)',
+		want: 'أريد (areed)',
+		good: 'زين (zein)'
+	},
+	khaleeji: {
+		qaf: 'Hard g — قهوة is gahwa',
+		jim: 'Often y — جديد is yideed, دجاج is diyaay',
+		present: 'Bare form: اكتب (aktib), "I write"',
+		future: 'بـ (ba-/bi-) or راح: بكتب, راح اكتب',
+		negation: 'ما before the verb: ما أدري; مو before adjectives',
+		what: 'شو (shu) / شنو (shinu)',
+		now: 'الحين (il-7een)',
+		want: 'أبي (abi)',
+		good: 'زين (zain)'
+	},
+	saudi: {
+		qaf: 'Hard g — قلب is galb, قهوة is gahwa',
+		jim: 'Soft j — جديد is jadeed; ث and ذ become ت and د',
+		present: 'b- prefix: باكتب (baktub), "I write"',
+		future: 'ح- prefix: حاكتب (7aktub), "I will write"',
+		negation: 'ما before the verb: ما أدري; مو before adjectives',
+		what: 'إيش (eesh)',
+		now: 'دحين (da7een)',
+		want: 'أبغى (abgha)',
+		good: 'كويس (kwayyis)'
 	}
 };
 
@@ -78,7 +113,7 @@ export interface ComparisonPair {
 	whichToLearn: string;
 }
 
-export const DIALECT_COMPARISONS: ComparisonPair[] = [
+const ALL_COMPARISONS: ComparisonPair[] = [
 	{
 		a: 'egyptian-arabic',
 		b: 'levantine',
@@ -126,8 +161,45 @@ export const DIALECT_COMPARISONS: ComparisonPair[] = [
 			'Moroccans are schooled in Fusha and use it for writing, news and official business, but Darija is the spoken language and the distance between them is the widest of any Arabic-speaking country. A strong Fusha speaker arriving in Casablanca will be understood and will understand very little in return.',
 		whichToLearn:
 			'Fusha travels further and unlocks written Arabic everywhere. Darija is the only thing that works in a Moroccan street. If Morocco is the goal, learn Darija and treat Fusha as the reading language alongside it.'
+	},
+	{
+		a: 'iraqi',
+		b: 'khaleeji',
+		intelligibility:
+			'Very close. Iraqis and Gulf speakers understand each other easily: both say g for ق, ch for ك in many words, and share everyday words like zein (good), shloon (how) and ma adri (I don\'t know). The give-aways are Iraqi aku/maku and hassa against Gulf il-7een, and the Gulf y for ج.',
+		whichToLearn:
+			'Follow your people and your plans. Iraqi if your family, friends or work are tied to Iraq; Khaleeji if you live or work in the UAE, Kuwait, Qatar or Bahrain. Either one makes the other easy.'
+	},
+	{
+		a: 'khaleeji',
+		b: 'saudi',
+		intelligibility:
+			'Good, with some adjustment. Gulf speakers and Hijazis understand each other well, but Hijazi sounds closer to Egyptian: b- for the present, 7a- for the future, eesh for "what" and da7een for "now". Gulf Arabic has abi, waayid and il-7een instead.',
+		whichToLearn:
+			'Hijazi if you are heading to Jeddah, Mecca or Medina. Khaleeji for the UAE and the smaller Gulf states. For Riyadh and eastern Saudi Arabia, Khaleeji is actually the closer of the two.'
+	},
+	{
+		a: 'saudi',
+		b: 'egyptian-arabic',
+		intelligibility:
+			'High. Hijazi and Egyptian share the b- present and the ha-/7a- future, and Jeddah has always been full of Egyptians, so many words overlap. The main differences are ق (a g in Hijazi, a glottal stop in Cairo), the question words (eesh against eh) and words like da7een and abgha.',
+		whichToLearn:
+			'Egyptian Arabic for the widest reach across the Arab world. Hijazi if Saudi Arabia, and especially the west of the country, is where you will live, work or travel. Knowing one makes the other quick to pick up.'
+	},
+	{
+		a: 'iraqi',
+		b: 'levantine',
+		intelligibility:
+			'Moderate. Levantine media is widely watched in Iraq, so Iraqis follow Levantine well; Levantines need some exposure to Iraqi. Iraqi keeps a hard g for ق, says ch for many ك, and has its own words like hassa, shaku maku and hwaaya.',
+		whichToLearn:
+			'Iraqi if Iraq is your connection. Levantine if you are heading to Syria, Lebanon, Jordan or Palestine. Their sound systems differ enough that it is better to commit to one first.'
 	}
 ];
+
+/** Pages go live only when both dialects can be chosen in the app. */
+export const DIALECT_COMPARISONS: ComparisonPair[] = ALL_COMPARISONS.filter(
+	(pair) => isSelectableDialect(pair.a) && isSelectableDialect(pair.b)
+);
 
 export function comparisonSlug(pair: ComparisonPair): string {
 	return `${pair.a}-vs-${pair.b}`;

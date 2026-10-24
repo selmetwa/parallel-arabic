@@ -1,0 +1,1675 @@
+{
+	"vocab": [
+		{
+			"arabic": "السبت",
+			"arabicTashkeel": "السِّبِت",
+			"english": "Saturday",
+			"transliteration": "is-sibit",
+			"wordAlignments": [
+				{
+					"arabic": "السبت",
+					"english": "Saturday",
+					"transliteration": "is-sibit"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الأحد",
+			"arabicTashkeel": "الأحَد",
+			"english": "Sunday",
+			"transliteration": "il-a7ad",
+			"wordAlignments": [
+				{
+					"arabic": "الأحد",
+					"english": "Sunday",
+					"transliteration": "il-a7ad"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الإثنين",
+			"arabicTashkeel": "الإثنين",
+			"english": "Monday",
+			"transliteration": "il-ithneen",
+			"wordAlignments": [
+				{
+					"arabic": "الإثنين",
+					"english": "Monday",
+					"transliteration": "il-ithneen"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الثلاثاء",
+			"arabicTashkeel": "الثُّلاثاء",
+			"english": "Tuesday",
+			"transliteration": "ith-thilaathaa",
+			"wordAlignments": [
+				{
+					"arabic": "الثلاثاء",
+					"english": "Tuesday",
+					"transliteration": "ith-thilaathaa"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الأربعاء",
+			"arabicTashkeel": "الأربِعاء",
+			"english": "Wednesday",
+			"transliteration": "il-arbi3aa",
+			"wordAlignments": [
+				{
+					"arabic": "الأربعاء",
+					"english": "Wednesday",
+					"transliteration": "il-arbi3aa"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الخميس",
+			"arabicTashkeel": "الخَميس",
+			"english": "Thursday",
+			"transliteration": "il-khamees",
+			"wordAlignments": [
+				{
+					"arabic": "الخميس",
+					"english": "Thursday",
+					"transliteration": "il-khamees"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الجمعة",
+			"arabicTashkeel": "الجُمعة",
+			"english": "Friday",
+			"transliteration": "ij-jum3a",
+			"wordAlignments": [
+				{
+					"arabic": "الجمعة",
+					"english": "Friday",
+					"transliteration": "ij-jum3a"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "اليوم",
+			"arabicTashkeel": "اليوم",
+			"english": "Today",
+			"transliteration": "il-yoom",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "باكر",
+			"arabicTashkeel": "باكِر",
+			"english": "Tomorrow",
+			"transliteration": "baachir",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow",
+					"transliteration": "baachir"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "البارحة",
+			"arabicTashkeel": "البارحة",
+			"english": "Yesterday",
+			"transliteration": "il-baar7a",
+			"wordAlignments": [
+				{
+					"arabic": "البارحة",
+					"english": "Yesterday",
+					"transliteration": "il-baar7a"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "إسبوع",
+			"arabicTashkeel": "إسبوع",
+			"english": "Week",
+			"transliteration": "isboo3",
+			"wordAlignments": [
+				{
+					"arabic": "إسبوع",
+					"english": "Week",
+					"transliteration": "isboo3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شهر",
+			"arabicTashkeel": "شَهَر",
+			"english": "Month",
+			"transliteration": "shahar",
+			"wordAlignments": [
+				{
+					"arabic": "شهر",
+					"english": "Month",
+					"transliteration": "shahar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "موعد",
+			"arabicTashkeel": "مَوعِد",
+			"english": "Appointment",
+			"transliteration": "maw3id",
+			"wordAlignments": [
+				{
+					"arabic": "موعد",
+					"english": "Appointment",
+					"transliteration": "maw3id"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عطلة",
+			"arabicTashkeel": "عُطلة",
+			"english": "Holiday",
+			"transliteration": "3utla",
+			"wordAlignments": [
+				{
+					"arabic": "عطلة",
+					"english": "Holiday",
+					"transliteration": "3utla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دوام",
+			"arabicTashkeel": "دَوام",
+			"english": "Work (job hours)",
+			"transliteration": "dawaam",
+			"wordAlignments": [
+				{
+					"arabic": "دوام",
+					"english": "Work",
+					"transliteration": "dawaam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "اليوم السبت.",
+			"arabicTashkeel": "اليوم السِّبِت.",
+			"english": "Today is Saturday.",
+			"transliteration": "il-yoom is-sibit.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "السبت.",
+					"english": "Saturday.",
+					"transliteration": "is-sibit."
+				}
+			],
+			"targetWords": [
+				"Today",
+				"Saturday"
+			]
+		},
+		{
+			"arabic": "باكر الأحد.",
+			"arabicTashkeel": "باكِر الأحَد.",
+			"english": "Tomorrow is Sunday.",
+			"transliteration": "baachir il-a7ad.",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow is",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "الأحد.",
+					"english": "Sunday.",
+					"transliteration": "il-a7ad."
+				}
+			],
+			"targetWords": [
+				"Tomorrow",
+				"Sunday"
+			]
+		},
+		{
+			"arabic": "البارحة الجمعة.",
+			"arabicTashkeel": "البارحة الجُمعة.",
+			"english": "Yesterday was Friday.",
+			"transliteration": "il-baar7a ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "البارحة",
+					"english": "Yesterday was",
+					"transliteration": "il-baar7a"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"Yesterday",
+				"Friday"
+			]
+		},
+		{
+			"arabic": "عندي موعد يوم الإثنين.",
+			"arabicTashkeel": "عِندي مَوعِد يوم الإثنين.",
+			"english": "I have an appointment on Monday.",
+			"transliteration": "3indi maw3id yoom il-ithneen.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "موعد",
+					"english": "an appointment",
+					"transliteration": "maw3id"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الإثنين.",
+					"english": "Monday.",
+					"transliteration": "il-ithneen."
+				}
+			],
+			"targetWords": [
+				"Appointment",
+				"Monday"
+			]
+		},
+		{
+			"arabic": "الجمعة عطلة.",
+			"arabicTashkeel": "الجُمعة عُطلة.",
+			"english": "Friday is a holiday.",
+			"transliteration": "ij-jum3a 3utla.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمعة",
+					"english": "Friday is",
+					"transliteration": "ij-jum3a"
+				},
+				{
+					"arabic": "عطلة.",
+					"english": "a holiday.",
+					"transliteration": "3utla."
+				}
+			],
+			"targetWords": [
+				"Friday",
+				"Holiday"
+			]
+		},
+		{
+			"arabic": "شنو اليوم؟",
+			"arabicTashkeel": "شِنو اليوم؟",
+			"english": "What day is it today?",
+			"transliteration": "shinu il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What is",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Today"
+			]
+		},
+		{
+			"arabic": "اليوم الثلاثاء.",
+			"arabicTashkeel": "اليوم الثُّلاثاء.",
+			"english": "Today is Tuesday.",
+			"transliteration": "il-yoom ith-thilaathaa.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "الثلاثاء.",
+					"english": "Tuesday.",
+					"transliteration": "ith-thilaathaa."
+				}
+			],
+			"targetWords": [
+				"Today",
+				"Tuesday"
+			]
+		},
+		{
+			"arabic": "الموعد يوم الأربعاء.",
+			"arabicTashkeel": "المَوعِد يوم الأربِعاء.",
+			"english": "The appointment is on Wednesday.",
+			"transliteration": "il-maw3id yoom il-arbi3aa.",
+			"wordAlignments": [
+				{
+					"arabic": "الموعد",
+					"english": "The appointment is",
+					"transliteration": "il-maw3id"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الأربعاء.",
+					"english": "Wednesday.",
+					"transliteration": "il-arbi3aa."
+				}
+			],
+			"targetWords": [
+				"Appointment",
+				"Wednesday"
+			]
+		},
+		{
+			"arabic": "الخميس نروح للسوق.",
+			"arabicTashkeel": "الخَميس نْروح للسّوق.",
+			"english": "On Thursday we go to the market.",
+			"transliteration": "il-khamees nrooh lis-soog.",
+			"wordAlignments": [
+				{
+					"arabic": "الخميس",
+					"english": "On Thursday",
+					"transliteration": "il-khamees"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "للسوق.",
+					"english": "to the market.",
+					"transliteration": "lis-soog."
+				}
+			],
+			"targetWords": [
+				"Thursday"
+			]
+		},
+		{
+			"arabic": "الإسبوع بيه سبع أيام.",
+			"arabicTashkeel": "الإسبوع بيه سَبع أيّام.",
+			"english": "The week has seven days.",
+			"transliteration": "il-isboo3 bee saba3 ayyaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الإسبوع",
+					"english": "The week",
+					"transliteration": "il-isboo3"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has in it",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "سبع",
+					"english": "seven",
+					"transliteration": "saba3"
+				},
+				{
+					"arabic": "أيام.",
+					"english": "days.",
+					"transliteration": "ayyaam."
+				}
+			],
+			"targetWords": [
+				"Week"
+			]
+		},
+		{
+			"arabic": "الشهر الجاي عندي عطلة.",
+			"arabicTashkeel": "الشَّهَر الجاي عِندي عُطلة.",
+			"english": "Next month I have a holiday.",
+			"transliteration": "ish-shahar ij-jaay 3indi 3utla.",
+			"wordAlignments": [
+				{
+					"arabic": "الشهر",
+					"english": "The month",
+					"transliteration": "ish-shahar"
+				},
+				{
+					"arabic": "الجاي",
+					"english": "next",
+					"transliteration": "ij-jaay"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "عطلة.",
+					"english": "a holiday.",
+					"transliteration": "3utla."
+				}
+			],
+			"targetWords": [
+				"Month",
+				"Holiday"
+			]
+		},
+		{
+			"arabic": "باكر عندي موعد.",
+			"arabicTashkeel": "باكِر عِندي مَوعِد.",
+			"english": "Tomorrow I have an appointment.",
+			"transliteration": "baachir 3indi maw3id.",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "موعد.",
+					"english": "an appointment.",
+					"transliteration": "maw3id."
+				}
+			],
+			"targetWords": [
+				"Tomorrow",
+				"Appointment"
+			]
+		},
+		{
+			"arabic": "البارحة كنت مشغول.",
+			"arabicTashkeel": "البارحة كِنِت مَشغول.",
+			"english": "Yesterday I was busy.",
+			"transliteration": "il-baar7a chinit mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "البارحة",
+					"english": "Yesterday",
+					"transliteration": "il-baar7a"
+				},
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "chinit"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Yesterday"
+			]
+		},
+		{
+			"arabic": "السبت أروح للدوام.",
+			"arabicTashkeel": "السِّبِت أروح للدَّوام.",
+			"english": "On Saturday I go to work.",
+			"transliteration": "is-sibit arooh lid-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "السبت",
+					"english": "On Saturday",
+					"transliteration": "is-sibit"
+				},
+				{
+					"arabic": "أروح",
+					"english": "I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "للدوام.",
+					"english": "to work.",
+					"transliteration": "lid-dawaam."
+				}
+			],
+			"targetWords": [
+				"Saturday",
+				"Work (job hours)"
+			]
+		},
+		{
+			"arabic": "الأحد عندي إمتحان.",
+			"arabicTashkeel": "الأحَد عِندي إمتِحان.",
+			"english": "On Sunday I have an exam.",
+			"transliteration": "il-a7ad 3indi imti7aan.",
+			"wordAlignments": [
+				{
+					"arabic": "الأحد",
+					"english": "On Sunday",
+					"transliteration": "il-a7ad"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "إمتحان.",
+					"english": "an exam.",
+					"transliteration": "imti7aan."
+				}
+			],
+			"targetWords": [
+				"Sunday"
+			]
+		},
+		{
+			"arabic": "الإثنين والثلاثاء مشغول.",
+			"arabicTashkeel": "الإثنين والثُّلاثاء مَشغول.",
+			"english": "On Monday and Tuesday I'm busy.",
+			"transliteration": "il-ithneen w-ith-thilaathaa mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "الإثنين",
+					"english": "Monday",
+					"transliteration": "il-ithneen"
+				},
+				{
+					"arabic": "والثلاثاء",
+					"english": "and Tuesday",
+					"transliteration": "w-ith-thilaathaa"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "I'm busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Monday",
+				"Tuesday"
+			]
+		},
+		{
+			"arabic": "نشوفك الأربعاء.",
+			"arabicTashkeel": "نْشوفَك الأربِعاء.",
+			"english": "See you on Wednesday.",
+			"transliteration": "nshoofak il-arbi3aa.",
+			"wordAlignments": [
+				{
+					"arabic": "نشوفك",
+					"english": "We'll see you",
+					"transliteration": "nshoofak"
+				},
+				{
+					"arabic": "الأربعاء.",
+					"english": "on Wednesday.",
+					"transliteration": "il-arbi3aa."
+				}
+			],
+			"targetWords": [
+				"Wednesday"
+			]
+		},
+		{
+			"arabic": "الخميس عطلة؟ لا، الجمعة.",
+			"arabicTashkeel": "الخَميس عُطلة؟ لا، الجُمعة.",
+			"english": "Is Thursday a holiday? No, Friday.",
+			"transliteration": "il-khamees 3utla? laa, ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الخميس",
+					"english": "Is Thursday",
+					"transliteration": "il-khamees"
+				},
+				{
+					"arabic": "عطلة؟",
+					"english": "a holiday?",
+					"transliteration": "3utla?"
+				},
+				{
+					"arabic": "لا،",
+					"english": "No,",
+					"transliteration": "laa,"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"Thursday",
+				"Holiday",
+				"Friday"
+			]
+		},
+		{
+			"arabic": "الإسبوع الجاي عندي موعد.",
+			"arabicTashkeel": "الإسبوع الجاي عِندي مَوعِد.",
+			"english": "Next week I have an appointment.",
+			"transliteration": "il-isboo3 ij-jaay 3indi maw3id.",
+			"wordAlignments": [
+				{
+					"arabic": "الإسبوع",
+					"english": "The week",
+					"transliteration": "il-isboo3"
+				},
+				{
+					"arabic": "الجاي",
+					"english": "next",
+					"transliteration": "ij-jaay"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "موعد.",
+					"english": "an appointment.",
+					"transliteration": "maw3id."
+				}
+			],
+			"targetWords": [
+				"Week",
+				"Appointment"
+			]
+		},
+		{
+			"arabic": "هذا الشهر حزيران.",
+			"arabicTashkeel": "هَذا الشَّهَر حْزَيران.",
+			"english": "This month is June.",
+			"transliteration": "haatha ish-shahar 7zayraan.",
+			"wordAlignments": [
+				{
+					"arabic": "هذا",
+					"english": "This",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "الشهر",
+					"english": "month is",
+					"transliteration": "ish-shahar"
+				},
+				{
+					"arabic": "حزيران.",
+					"english": "June.",
+					"transliteration": "7zayraan."
+				}
+			],
+			"targetWords": [
+				"Month"
+			]
+		},
+		{
+			"arabic": "تموز شهر حار.",
+			"arabicTashkeel": "تَمّوز شَهَر حار.",
+			"english": "July is a hot month.",
+			"transliteration": "tammooz shahar 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "تموز",
+					"english": "July is",
+					"transliteration": "tammooz"
+				},
+				{
+					"arabic": "شهر",
+					"english": "a month",
+					"transliteration": "shahar"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Month"
+			]
+		},
+		{
+			"arabic": "كم يوم بالشهر؟",
+			"arabicTashkeel": "كَم يوم بالشَّهَر؟",
+			"english": "How many days are in the month?",
+			"transliteration": "cham yoom bish-shahar?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "يوم",
+					"english": "days are",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "بالشهر؟",
+					"english": "in the month?",
+					"transliteration": "bish-shahar?"
+				}
+			],
+			"targetWords": [
+				"Month"
+			]
+		},
+		{
+			"arabic": "باكر الخميس.",
+			"arabicTashkeel": "باكِر الخَميس.",
+			"english": "Tomorrow is Thursday.",
+			"transliteration": "baachir il-khamees.",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow is",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "الخميس.",
+					"english": "Thursday.",
+					"transliteration": "il-khamees."
+				}
+			],
+			"targetWords": [
+				"Tomorrow",
+				"Thursday"
+			]
+		},
+		{
+			"arabic": "البارحة الأربعاء.",
+			"arabicTashkeel": "البارحة الأربِعاء.",
+			"english": "Yesterday was Wednesday.",
+			"transliteration": "il-baar7a il-arbi3aa.",
+			"wordAlignments": [
+				{
+					"arabic": "البارحة",
+					"english": "Yesterday was",
+					"transliteration": "il-baar7a"
+				},
+				{
+					"arabic": "الأربعاء.",
+					"english": "Wednesday.",
+					"transliteration": "il-arbi3aa."
+				}
+			],
+			"targetWords": [
+				"Yesterday",
+				"Wednesday"
+			]
+		},
+		{
+			"arabic": "اليوم الأحد.",
+			"arabicTashkeel": "اليوم الأحَد.",
+			"english": "Today is Sunday.",
+			"transliteration": "il-yoom il-a7ad.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "الأحد.",
+					"english": "Sunday.",
+					"transliteration": "il-a7ad."
+				}
+			],
+			"targetWords": [
+				"Today",
+				"Sunday"
+			]
+		},
+		{
+			"arabic": "العطلة الجمعة والسبت.",
+			"arabicTashkeel": "العُطلة الجُمعة والسِّبِت.",
+			"english": "The holiday is Friday and Saturday.",
+			"transliteration": "il-3utla ij-jum3a w-is-sibit.",
+			"wordAlignments": [
+				{
+					"arabic": "العطلة",
+					"english": "The holiday is",
+					"transliteration": "il-3utla"
+				},
+				{
+					"arabic": "الجمعة",
+					"english": "Friday",
+					"transliteration": "ij-jum3a"
+				},
+				{
+					"arabic": "والسبت.",
+					"english": "and Saturday.",
+					"transliteration": "w-is-sibit."
+				}
+			],
+			"targetWords": [
+				"Holiday",
+				"Friday",
+				"Saturday"
+			]
+		},
+		{
+			"arabic": "موعد الطبيب الثلاثاء.",
+			"arabicTashkeel": "مَوعِد الطَّبيب الثُّلاثاء.",
+			"english": "The doctor's appointment is on Tuesday.",
+			"transliteration": "maw3id it-tabeeb ith-thilaathaa.",
+			"wordAlignments": [
+				{
+					"arabic": "موعد",
+					"english": "The appointment of",
+					"transliteration": "maw3id"
+				},
+				{
+					"arabic": "الطبيب",
+					"english": "the doctor is",
+					"transliteration": "it-tabeeb"
+				},
+				{
+					"arabic": "الثلاثاء.",
+					"english": "Tuesday.",
+					"transliteration": "ith-thilaathaa."
+				}
+			],
+			"targetWords": [
+				"Appointment",
+				"Tuesday"
+			]
+		},
+		{
+			"arabic": "الأحد أول يوم بالإسبوع.",
+			"arabicTashkeel": "الأحَد أوَّل يوم بالإسبوع.",
+			"english": "Sunday is the first day of the week.",
+			"transliteration": "il-a7ad awwal yoom bil-isboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "الأحد",
+					"english": "Sunday is",
+					"transliteration": "il-a7ad"
+				},
+				{
+					"arabic": "أول",
+					"english": "the first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "يوم",
+					"english": "day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "بالإسبوع.",
+					"english": "of the week.",
+					"transliteration": "bil-isboo3."
+				}
+			],
+			"targetWords": [
+				"Sunday",
+				"Week"
+			]
+		},
+		{
+			"arabic": "موعدك يمتى؟",
+			"arabicTashkeel": "مَوعدَك يَمتى؟",
+			"english": "When is your appointment?",
+			"transliteration": "maw3idak yamta?",
+			"wordAlignments": [
+				{
+					"arabic": "موعدك",
+					"english": "Your appointment is",
+					"transliteration": "maw3idak"
+				},
+				{
+					"arabic": "يمتى؟",
+					"english": "when?",
+					"transliteration": "yamta?"
+				}
+			],
+			"targetWords": [
+				"Appointment"
+			]
+		},
+		{
+			"arabic": "الإسبوع الماضي كنت بالبصرة.",
+			"arabicTashkeel": "الإسبوع الماضي كِنِت بالبَصرة.",
+			"english": "Last week I was in Basra.",
+			"transliteration": "il-isboo3 il-maadhi chinit bil-basra.",
+			"wordAlignments": [
+				{
+					"arabic": "الإسبوع",
+					"english": "The week",
+					"transliteration": "il-isboo3"
+				},
+				{
+					"arabic": "الماضي",
+					"english": "last",
+					"transliteration": "il-maadhi"
+				},
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "chinit"
+				},
+				{
+					"arabic": "بالبصرة.",
+					"english": "in Basra.",
+					"transliteration": "bil-basra."
+				}
+			],
+			"targetWords": [
+				"Week"
+			]
+		},
+		{
+			"arabic": "الشهر الماضي رحت لأربيل.",
+			"arabicTashkeel": "الشَّهَر الماضي رِحِت لأربيل.",
+			"english": "Last month I went to Erbil.",
+			"transliteration": "ish-shahar il-maadhi ri7it l-arbeel.",
+			"wordAlignments": [
+				{
+					"arabic": "الشهر",
+					"english": "The month",
+					"transliteration": "ish-shahar"
+				},
+				{
+					"arabic": "الماضي",
+					"english": "last",
+					"transliteration": "il-maadhi"
+				},
+				{
+					"arabic": "رحت",
+					"english": "I went",
+					"transliteration": "ri7it"
+				},
+				{
+					"arabic": "لأربيل.",
+					"english": "to Erbil.",
+					"transliteration": "l-arbeel."
+				}
+			],
+			"targetWords": [
+				"Month"
+			]
+		},
+		{
+			"arabic": "اليوم عطلة!",
+			"arabicTashkeel": "اليوم عُطلة!",
+			"english": "Today is a holiday!",
+			"transliteration": "il-yoom 3utla!",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "عطلة!",
+					"english": "a holiday!",
+					"transliteration": "3utla!"
+				}
+			],
+			"targetWords": [
+				"Today",
+				"Holiday"
+			]
+		},
+		{
+			"arabic": "باكر الإثنين، عندي دوام.",
+			"arabicTashkeel": "باكِر الإثنين، عِندي دَوام.",
+			"english": "Tomorrow is Monday, I have work.",
+			"transliteration": "baachir il-ithneen, 3indi dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow is",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "الإثنين،",
+					"english": "Monday,",
+					"transliteration": "il-ithneen,"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "دوام.",
+					"english": "work.",
+					"transliteration": "dawaam."
+				}
+			],
+			"targetWords": [
+				"Tomorrow",
+				"Monday",
+				"Work (job hours)"
+			]
+		},
+		{
+			"arabic": "البارحة السبت.",
+			"arabicTashkeel": "البارحة السِّبِت.",
+			"english": "Yesterday was Saturday.",
+			"transliteration": "il-baar7a is-sibit.",
+			"wordAlignments": [
+				{
+					"arabic": "البارحة",
+					"english": "Yesterday was",
+					"transliteration": "il-baar7a"
+				},
+				{
+					"arabic": "السبت.",
+					"english": "Saturday.",
+					"transliteration": "is-sibit."
+				}
+			],
+			"targetWords": [
+				"Yesterday",
+				"Saturday"
+			]
+		},
+		{
+			"arabic": "الخميس عندي موعد.",
+			"arabicTashkeel": "الخَميس عِندي مَوعِد.",
+			"english": "On Thursday I have an appointment.",
+			"transliteration": "il-khamees 3indi maw3id.",
+			"wordAlignments": [
+				{
+					"arabic": "الخميس",
+					"english": "On Thursday",
+					"transliteration": "il-khamees"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "موعد.",
+					"english": "an appointment.",
+					"transliteration": "maw3id."
+				}
+			],
+			"targetWords": [
+				"Thursday",
+				"Appointment"
+			]
+		},
+		{
+			"arabic": "نيسان شهر حلو.",
+			"arabicTashkeel": "نيسان شَهَر حِلو.",
+			"english": "April is a nice month.",
+			"transliteration": "neesaan shahar 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "نيسان",
+					"english": "April is",
+					"transliteration": "neesaan"
+				},
+				{
+					"arabic": "شهر",
+					"english": "a month",
+					"transliteration": "shahar"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Month"
+			]
+		},
+		{
+			"arabic": "إسبوع كامل عطلة!",
+			"arabicTashkeel": "إسبوع كامِل عُطلة!",
+			"english": "A whole week off!",
+			"transliteration": "isboo3 kaamil 3utla!",
+			"wordAlignments": [
+				{
+					"arabic": "إسبوع",
+					"english": "A week",
+					"transliteration": "isboo3"
+				},
+				{
+					"arabic": "كامل",
+					"english": "whole",
+					"transliteration": "kaamil"
+				},
+				{
+					"arabic": "عطلة!",
+					"english": "off!",
+					"transliteration": "3utla!"
+				}
+			],
+			"targetWords": [
+				"Week",
+				"Holiday"
+			]
+		},
+		{
+			"arabic": "الأربعاء نروح للسينما.",
+			"arabicTashkeel": "الأربِعاء نْروح للسّينَما.",
+			"english": "On Wednesday we go to the cinema.",
+			"transliteration": "il-arbi3aa nrooh lis-seenama.",
+			"wordAlignments": [
+				{
+					"arabic": "الأربعاء",
+					"english": "On Wednesday",
+					"transliteration": "il-arbi3aa"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "للسينما.",
+					"english": "to the cinema.",
+					"transliteration": "lis-seenama."
+				}
+			],
+			"targetWords": [
+				"Wednesday"
+			]
+		},
+		{
+			"arabic": "الثلاثاء باكر؟",
+			"arabicTashkeel": "الثُّلاثاء باكِر؟",
+			"english": "Is Tuesday tomorrow?",
+			"transliteration": "ith-thilaathaa baachir?",
+			"wordAlignments": [
+				{
+					"arabic": "الثلاثاء",
+					"english": "Is Tuesday",
+					"transliteration": "ith-thilaathaa"
+				},
+				{
+					"arabic": "باكر؟",
+					"english": "tomorrow?",
+					"transliteration": "baachir?"
+				}
+			],
+			"targetWords": [
+				"Tuesday",
+				"Tomorrow"
+			]
+		},
+		{
+			"arabic": "الجمعة نروح لبيت جدي.",
+			"arabicTashkeel": "الجُمعة نْروح لبيت جَدّي.",
+			"english": "On Friday we go to my grandfather's house.",
+			"transliteration": "ij-jum3a nrooh l-beet jiddi.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمعة",
+					"english": "On Friday",
+					"transliteration": "ij-jum3a"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "لبيت",
+					"english": "to the house of",
+					"transliteration": "l-beet"
+				},
+				{
+					"arabic": "جدي.",
+					"english": "my grandfather.",
+					"transliteration": "jiddi."
+				}
+			],
+			"targetWords": [
+				"Friday"
+			]
+		},
+		{
+			"arabic": "البارحة الإثنين.",
+			"arabicTashkeel": "البارحة الإثنين.",
+			"english": "Yesterday was Monday.",
+			"transliteration": "il-baar7a il-ithneen.",
+			"wordAlignments": [
+				{
+					"arabic": "البارحة",
+					"english": "Yesterday was",
+					"transliteration": "il-baar7a"
+				},
+				{
+					"arabic": "الإثنين.",
+					"english": "Monday.",
+					"transliteration": "il-ithneen."
+				}
+			],
+			"targetWords": [
+				"Yesterday",
+				"Monday"
+			]
+		},
+		{
+			"arabic": "الأحد والإثنين عندي دوام.",
+			"arabicTashkeel": "الأحَد والإثنين عِندي دَوام.",
+			"english": "On Sunday and Monday I have work.",
+			"transliteration": "il-a7ad w-il-ithneen 3indi dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الأحد",
+					"english": "Sunday",
+					"transliteration": "il-a7ad"
+				},
+				{
+					"arabic": "والإثنين",
+					"english": "and Monday",
+					"transliteration": "w-il-ithneen"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "دوام.",
+					"english": "work.",
+					"transliteration": "dawaam."
+				}
+			],
+			"targetWords": [
+				"Sunday",
+				"Monday",
+				"Work (job hours)"
+			]
+		},
+		{
+			"arabic": "السبت لو الأحد؟",
+			"arabicTashkeel": "السِّبِت لو الأحَد؟",
+			"english": "Saturday or Sunday?",
+			"transliteration": "is-sibit law il-a7ad?",
+			"wordAlignments": [
+				{
+					"arabic": "السبت",
+					"english": "Saturday",
+					"transliteration": "is-sibit"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "الأحد؟",
+					"english": "Sunday?",
+					"transliteration": "il-a7ad?"
+				}
+			],
+			"targetWords": [
+				"Saturday",
+				"Sunday"
+			]
+		},
+		{
+			"arabic": "الثلاثاء مشغول هواية.",
+			"arabicTashkeel": "الثُّلاثاء مَشغول هْوايَة.",
+			"english": "On Tuesday I'm very busy.",
+			"transliteration": "ith-thilaathaa mashghool hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الثلاثاء",
+					"english": "On Tuesday",
+					"transliteration": "ith-thilaathaa"
+				},
+				{
+					"arabic": "مشغول",
+					"english": "I'm busy",
+					"transliteration": "mashghool"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Tuesday"
+			]
+		},
+		{
+			"arabic": "الموعد الأربعاء الجاي.",
+			"arabicTashkeel": "المَوعِد الأربِعاء الجاي.",
+			"english": "The appointment is next Wednesday.",
+			"transliteration": "il-maw3id il-arbi3aa ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "الموعد",
+					"english": "The appointment is",
+					"transliteration": "il-maw3id"
+				},
+				{
+					"arabic": "الأربعاء",
+					"english": "Wednesday",
+					"transliteration": "il-arbi3aa"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Appointment",
+				"Wednesday"
+			]
+		},
+		{
+			"arabic": "الخميس الجاي عطلة.",
+			"arabicTashkeel": "الخَميس الجاي عُطلة.",
+			"english": "Next Thursday is a holiday.",
+			"transliteration": "il-khamees ij-jaay 3utla.",
+			"wordAlignments": [
+				{
+					"arabic": "الخميس",
+					"english": "Thursday",
+					"transliteration": "il-khamees"
+				},
+				{
+					"arabic": "الجاي",
+					"english": "next is",
+					"transliteration": "ij-jaay"
+				},
+				{
+					"arabic": "عطلة.",
+					"english": "a holiday.",
+					"transliteration": "3utla."
+				}
+			],
+			"targetWords": [
+				"Thursday",
+				"Holiday"
+			]
+		},
+		{
+			"arabic": "الدوام يبدي الساعة ثمانية.",
+			"arabicTashkeel": "الدَّوام يِبدي الساعة ثْمانية.",
+			"english": "Work starts at eight.",
+			"transliteration": "id-dawaam yibdi is-saa3a thmaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "الدوام",
+					"english": "Work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "يبدي",
+					"english": "starts",
+					"transliteration": "yibdi"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثمانية.",
+					"english": "eight.",
+					"transliteration": "thmaanya."
+				}
+			],
+			"targetWords": [
+				"Work (job hours)"
+			]
+		},
+		{
+			"arabic": "اليوم ماكو دوام.",
+			"arabicTashkeel": "اليوم ماكو دَوام.",
+			"english": "Today I have no work.",
+			"transliteration": "il-yoom maaku dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "ماكو",
+					"english": "there is no",
+					"transliteration": "maaku"
+				},
+				{
+					"arabic": "دوام.",
+					"english": "work.",
+					"transliteration": "dawaam."
+				}
+			],
+			"targetWords": [
+				"Today",
+				"Work (job hours)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Week",
+			"sentences": [
+				{
+					"arabic": "السبت والأحد عندي دوام.",
+					"arabicTashkeel": "السِّبِت والأحَد عِندي دَوام.",
+					"english": "On Saturday and Sunday I have work.",
+					"transliteration": "is-sibit w-il-a7ad 3indi dawaam.",
+					"wordAlignments": [
+						{
+							"arabic": "السبت",
+							"english": "Saturday",
+							"transliteration": "is-sibit"
+						},
+						{
+							"arabic": "والأحد",
+							"english": "and Sunday",
+							"transliteration": "w-il-a7ad"
+						},
+						{
+							"arabic": "عندي",
+							"english": "I have",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "دوام.",
+							"english": "work.",
+							"transliteration": "dawaam."
+						}
+					]
+				},
+				{
+					"arabic": "الخميس أروح للسوق.",
+					"arabicTashkeel": "الخَميس أروح للسّوق.",
+					"english": "On Thursday I go to the market.",
+					"transliteration": "il-khamees arooh lis-soog.",
+					"wordAlignments": [
+						{
+							"arabic": "الخميس",
+							"english": "On Thursday",
+							"transliteration": "il-khamees"
+						},
+						{
+							"arabic": "أروح",
+							"english": "I go",
+							"transliteration": "arooh"
+						},
+						{
+							"arabic": "للسوق.",
+							"english": "to the market.",
+							"transliteration": "lis-soog."
+						}
+					]
+				},
+				{
+					"arabic": "الجمعة عطلة، أروح لبيت جدي.",
+					"arabicTashkeel": "الجُمعة عُطلة، أروح لبيت جَدّي.",
+					"english": "Friday is a holiday; I go to my grandfather's house.",
+					"transliteration": "ij-jum3a 3utla, arooh l-beet jiddi.",
+					"wordAlignments": [
+						{
+							"arabic": "الجمعة",
+							"english": "Friday is",
+							"transliteration": "ij-jum3a"
+						},
+						{
+							"arabic": "عطلة،",
+							"english": "a holiday,",
+							"transliteration": "3utla,"
+						},
+						{
+							"arabic": "أروح",
+							"english": "I go",
+							"transliteration": "arooh"
+						},
+						{
+							"arabic": "لبيت",
+							"english": "to the house of",
+							"transliteration": "l-beet"
+						},
+						{
+							"arabic": "جدي.",
+							"english": "my grandfather.",
+							"transliteration": "jiddi."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "An Appointment",
+			"sentences": [
+				{
+					"arabic": "عندي موعد ويا الطبيب.",
+					"arabicTashkeel": "عِندي مَوعِد وِيّا الطَّبيب.",
+					"english": "I have an appointment with the doctor.",
+					"transliteration": "3indi maw3id wiyya it-tabeeb.",
+					"wordAlignments": [
+						{
+							"arabic": "عندي",
+							"english": "I have",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "موعد",
+							"english": "an appointment",
+							"transliteration": "maw3id"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "الطبيب.",
+							"english": "the doctor.",
+							"transliteration": "it-tabeeb."
+						}
+					]
+				},
+				{
+					"arabic": "الموعد يوم الثلاثاء؟",
+					"arabicTashkeel": "المَوعِد يوم الثُّلاثاء؟",
+					"english": "Is the appointment on Tuesday?",
+					"transliteration": "il-maw3id yoom ith-thilaathaa?",
+					"wordAlignments": [
+						{
+							"arabic": "الموعد",
+							"english": "Is the appointment",
+							"transliteration": "il-maw3id"
+						},
+						{
+							"arabic": "يوم",
+							"english": "on",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الثلاثاء؟",
+							"english": "Tuesday?",
+							"transliteration": "ith-thilaathaa?"
+						}
+					]
+				},
+				{
+					"arabic": "لا، باكر الأربعاء.",
+					"arabicTashkeel": "لا، باكِر الأربِعاء.",
+					"english": "No, tomorrow, Wednesday.",
+					"transliteration": "laa, baachir il-arbi3aa.",
+					"wordAlignments": [
+						{
+							"arabic": "لا،",
+							"english": "No,",
+							"transliteration": "laa,"
+						},
+						{
+							"arabic": "باكر",
+							"english": "tomorrow,",
+							"transliteration": "baachir"
+						},
+						{
+							"arabic": "الأربعاء.",
+							"english": "Wednesday.",
+							"transliteration": "il-arbi3aa."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student calls a clinic in Baghdad to book an appointment with a doctor.",
+		"studentRole": "A patient learning Iraqi Arabic.",
+		"otherRole": "The clinic receptionist, who checks which days are free.",
+		"goalEnglish": "Ask for an appointment, agree on a day of the week, and confirm whether it is today, tomorrow or next week.",
+		"targetWords": [
+			"Appointment",
+			"Today",
+			"Tomorrow",
+			"Week",
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Holiday"
+		]
+	}
+}

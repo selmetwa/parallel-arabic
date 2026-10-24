@@ -1,4 +1,5 @@
 import type { VerbConjugationData } from '$lib/types/index';
+import { isSelectableDialect } from '$lib/constants/dialects';
 
 export interface VerbIndexEntry {
 	slug: string;
@@ -29,7 +30,8 @@ for (const [path, mod] of Object.entries(indexes)) {
 /** The full tables, loaded one verb at a time. */
 const files = import.meta.glob<{ default: VerbConjugationData }>('./*/*.json');
 
-export const VERB_DIALECTS = [...byDialect.keys()];
+// Dialects still being built out stay off the sitemap and prerendered pages until launch.
+export const VERB_DIALECTS = [...byDialect.keys()].filter(isSelectableDialect);
 
 export function verbIndexFor(dialect: string): VerbIndexEntry[] {
 	return byDialect.get(dialect) ?? [];

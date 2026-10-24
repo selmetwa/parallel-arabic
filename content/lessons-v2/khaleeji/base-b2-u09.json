@@ -1,0 +1,2171 @@
+{
+	"vocab": [
+		{
+			"arabic": "إنترنت",
+			"arabicTashkeel": "إنتَرنِت",
+			"english": "Internet",
+			"transliteration": "intarnet",
+			"wordAlignments": [
+				{
+					"arabic": "إنترنت",
+					"english": "Internet",
+					"transliteration": "intarnet"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "موبايل",
+			"arabicTashkeel": "موبايل",
+			"english": "Mobile phone",
+			"transliteration": "mobaayl",
+			"wordAlignments": [
+				{
+					"arabic": "موبايل",
+					"english": "Mobile",
+					"transliteration": "mobaayl"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تطبيق",
+			"arabicTashkeel": "تَطبيق",
+			"english": "App",
+			"transliteration": "tatbeeg",
+			"wordAlignments": [
+				{
+					"arabic": "تطبيق",
+					"english": "App",
+					"transliteration": "tatbeeg"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "السوشيال ميديا",
+			"arabicTashkeel": "السّوشيال ميديا",
+			"english": "Social media",
+			"transliteration": "is-sooshyal meedya",
+			"wordAlignments": [
+				{
+					"arabic": "السوشيال",
+					"english": "The social",
+					"transliteration": "is-sooshyal"
+				},
+				{
+					"arabic": "ميديا",
+					"english": "media",
+					"transliteration": "meedya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "حساب",
+			"arabicTashkeel": "حْساب",
+			"english": "Account",
+			"transliteration": "7saab",
+			"wordAlignments": [
+				{
+					"arabic": "حساب",
+					"english": "Account",
+					"transliteration": "7saab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "باسوورد",
+			"arabicTashkeel": "باسوورد",
+			"english": "Password",
+			"transliteration": "baaswoord",
+			"wordAlignments": [
+				{
+					"arabic": "باسوورد",
+					"english": "Password",
+					"transliteration": "baaswoord"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ينزل",
+			"arabicTashkeel": "يْنَزِّل",
+			"english": "He downloads",
+			"transliteration": "ynazzil",
+			"wordAlignments": [
+				{
+					"arabic": "ينزل",
+					"english": "He downloads",
+					"transliteration": "ynazzil"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "شاشة",
+			"arabicTashkeel": "شاشة",
+			"english": "Screen",
+			"transliteration": "shaasha",
+			"wordAlignments": [
+				{
+					"arabic": "شاشة",
+					"english": "Screen",
+					"transliteration": "shaasha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أونلاين",
+			"arabicTashkeel": "أونلاين",
+			"english": "Online",
+			"transliteration": "onlain",
+			"wordAlignments": [
+				{
+					"arabic": "أونلاين",
+					"english": "Online",
+					"transliteration": "onlain"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "مسجات",
+			"arabicTashkeel": "مَسجات",
+			"english": "Messages",
+			"transliteration": "masjaat",
+			"wordAlignments": [
+				{
+					"arabic": "مسجات",
+					"english": "Messages",
+					"transliteration": "masjaat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "إدمان",
+			"arabicTashkeel": "إدمان",
+			"english": "Addiction",
+			"transliteration": "idmaan",
+			"wordAlignments": [
+				{
+					"arabic": "إدمان",
+					"english": "Addiction",
+					"transliteration": "idmaan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خصوصية",
+			"arabicTashkeel": "خُصوصية",
+			"english": "Privacy",
+			"transliteration": "khusoosiyya",
+			"wordAlignments": [
+				{
+					"arabic": "خصوصية",
+					"english": "Privacy",
+					"transliteration": "khusoosiyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "فوايد",
+			"arabicTashkeel": "فَوايِد",
+			"english": "Advantages",
+			"transliteration": "fawaayid",
+			"wordAlignments": [
+				{
+					"arabic": "فوايد",
+					"english": "Benefits",
+					"transliteration": "fawaayid"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "أضرار",
+			"arabicTashkeel": "أضرار",
+			"english": "Disadvantages",
+			"transliteration": "adhraar",
+			"wordAlignments": [
+				{
+					"arabic": "أضرار",
+					"english": "Harms",
+					"transliteration": "adhraar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "تكنولوجيا",
+			"arabicTashkeel": "تِكنولوجيا",
+			"english": "Technology",
+			"transliteration": "tiknoloojya",
+			"wordAlignments": [
+				{
+					"arabic": "تكنولوجيا",
+					"english": "Technology",
+					"transliteration": "tiknoloojya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "الإنترنت بطيء اليوم.",
+			"arabicTashkeel": "الإنتَرنِت بَطيء اليوم.",
+			"english": "The internet is slow today.",
+			"transliteration": "il-intarnet batee2 il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "الإنترنت",
+					"english": "The internet is",
+					"transliteration": "il-intarnet"
+				},
+				{
+					"arabic": "بطيء",
+					"english": "slow",
+					"transliteration": "batee2"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Internet"
+			]
+		},
+		{
+			"arabic": "الكل عنده موبايل الحين.",
+			"arabicTashkeel": "الكِل عِندَه موبايل الحين.",
+			"english": "Everyone has a mobile phone now.",
+			"transliteration": "il-kill 3inda mobaayl il-7een.",
+			"wordAlignments": [
+				{
+					"arabic": "الكل",
+					"english": "Everyone",
+					"transliteration": "il-kill"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "موبايل",
+					"english": "a mobile",
+					"transliteration": "mobaayl"
+				},
+				{
+					"arabic": "الحين.",
+					"english": "now.",
+					"transliteration": "il-7een."
+				}
+			],
+			"targetWords": [
+				"Mobile phone"
+			]
+		},
+		{
+			"arabic": "نزل التطبيق، ببلاش.",
+			"arabicTashkeel": "نَزِّل التَّطبيق، بَبلاش.",
+			"english": "Download the app, it's free.",
+			"transliteration": "nazzil it-tatbeeg, b-balaash.",
+			"wordAlignments": [
+				{
+					"arabic": "نزل",
+					"english": "Download",
+					"transliteration": "nazzil"
+				},
+				{
+					"arabic": "التطبيق،",
+					"english": "the app,",
+					"transliteration": "it-tatbeeg,"
+				},
+				{
+					"arabic": "ببلاش.",
+					"english": "it's free.",
+					"transliteration": "b-balaash."
+				}
+			],
+			"targetWords": [
+				"App",
+				"He downloads"
+			]
+		},
+		{
+			"arabic": "الشباب يقضون ساعات على السوشيال ميديا.",
+			"arabicTashkeel": "الشَّباب يْقَضّون ساعات على السّوشيال ميديا.",
+			"english": "Young people spend hours on social media.",
+			"transliteration": "ish-shabaab ygadhdhoon saa3aat 3ala is-sooshyal meedya.",
+			"wordAlignments": [
+				{
+					"arabic": "الشباب",
+					"english": "Young people",
+					"transliteration": "ish-shabaab"
+				},
+				{
+					"arabic": "يقضون",
+					"english": "spend",
+					"transliteration": "ygadhdhoon"
+				},
+				{
+					"arabic": "ساعات",
+					"english": "hours",
+					"transliteration": "saa3aat"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السوشيال",
+					"english": "the social",
+					"transliteration": "is-sooshyal"
+				},
+				{
+					"arabic": "ميديا.",
+					"english": "media.",
+					"transliteration": "meedya."
+				}
+			],
+			"targetWords": [
+				"Social media"
+			]
+		},
+		{
+			"arabic": "سويت حساب جديد.",
+			"arabicTashkeel": "سَوّيت حْساب جْديد.",
+			"english": "I made a new account.",
+			"transliteration": "sawweet 7saab ydeed.",
+			"wordAlignments": [
+				{
+					"arabic": "سويت",
+					"english": "I made",
+					"transliteration": "sawweet"
+				},
+				{
+					"arabic": "حساب",
+					"english": "an account",
+					"transliteration": "7saab"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "ydeed."
+				}
+			],
+			"targetWords": [
+				"Account"
+			]
+		},
+		{
+			"arabic": "نسيت الباسوورد.",
+			"arabicTashkeel": "نِسيت الباسوورد.",
+			"english": "I forgot my password.",
+			"transliteration": "niseet il-baaswoord.",
+			"wordAlignments": [
+				{
+					"arabic": "نسيت",
+					"english": "I forgot",
+					"transliteration": "niseet"
+				},
+				{
+					"arabic": "الباسوورد.",
+					"english": "the password.",
+					"transliteration": "il-baaswoord."
+				}
+			],
+			"targetWords": [
+				"Password"
+			]
+		},
+		{
+			"arabic": "شاشة التلفون مكسرة.",
+			"arabicTashkeel": "شاشة التِّلِفون مْكَسَّرة.",
+			"english": "The phone screen is broken.",
+			"transliteration": "shaashat it-tilifoon mkassara.",
+			"wordAlignments": [
+				{
+					"arabic": "شاشة",
+					"english": "The screen of",
+					"transliteration": "shaashat"
+				},
+				{
+					"arabic": "التلفون",
+					"english": "the phone is",
+					"transliteration": "it-tilifoon"
+				},
+				{
+					"arabic": "مكسرة.",
+					"english": "broken.",
+					"transliteration": "mkassara."
+				}
+			],
+			"targetWords": [
+				"Screen"
+			]
+		},
+		{
+			"arabic": "أدرس أونلاين.",
+			"arabicTashkeel": "أدرِس أونلاين.",
+			"english": "I study online.",
+			"transliteration": "adris onlain.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				},
+				{
+					"arabic": "أونلاين.",
+					"english": "online.",
+					"transliteration": "onlain."
+				}
+			],
+			"targetWords": [
+				"Online"
+			]
+		},
+		{
+			"arabic": "عندي مسجات وايد.",
+			"arabicTashkeel": "عِندي مَسجات وايد.",
+			"english": "I have a lot of messages.",
+			"transliteration": "3indi masjaat waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "مسجات",
+					"english": "messages",
+					"transliteration": "masjaat"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Messages"
+			]
+		},
+		{
+			"arabic": "إدمان التلفون مشكلة كبيرة.",
+			"arabicTashkeel": "إدمان التِّلِفون مُشكِلة كْبيرة.",
+			"english": "Phone addiction is a big problem.",
+			"transliteration": "idmaan it-tilifoon mushkila chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "إدمان",
+					"english": "Addiction to",
+					"transliteration": "idmaan"
+				},
+				{
+					"arabic": "التلفون",
+					"english": "the phone is",
+					"transliteration": "it-tilifoon"
+				},
+				{
+					"arabic": "مشكلة",
+					"english": "a problem",
+					"transliteration": "mushkila"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Addiction"
+			]
+		},
+		{
+			"arabic": "الخصوصية على الإنترنت مهمة.",
+			"arabicTashkeel": "الخُصوصية على الإنتَرنِت مُهِمّة.",
+			"english": "Privacy on the internet is important.",
+			"transliteration": "il-khusoosiyya 3ala il-intarnet muhimma.",
+			"wordAlignments": [
+				{
+					"arabic": "الخصوصية",
+					"english": "Privacy",
+					"transliteration": "il-khusoosiyya"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الإنترنت",
+					"english": "the internet is",
+					"transliteration": "il-intarnet"
+				},
+				{
+					"arabic": "مهمة.",
+					"english": "important.",
+					"transliteration": "muhimma."
+				}
+			],
+			"targetWords": [
+				"Privacy",
+				"Internet"
+			]
+		},
+		{
+			"arabic": "فوايد التكنولوجيا وايد.",
+			"arabicTashkeel": "فَوايِد التِّكنولوجيا وايد.",
+			"english": "The advantages of technology are many.",
+			"transliteration": "fawaayid it-tiknoloojya waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "فوايد",
+					"english": "The benefits of",
+					"transliteration": "fawaayid"
+				},
+				{
+					"arabic": "التكنولوجيا",
+					"english": "technology are",
+					"transliteration": "it-tiknoloojya"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "many.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Advantages",
+				"Technology"
+			]
+		},
+		{
+			"arabic": "شو أضرار السوشيال ميديا؟",
+			"arabicTashkeel": "شو أضرار السّوشيال ميديا؟",
+			"english": "What are the disadvantages of social media?",
+			"transliteration": "shu adhraar is-sooshyal meedya?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What are",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "أضرار",
+					"english": "the harms of",
+					"transliteration": "adhraar"
+				},
+				{
+					"arabic": "السوشيال",
+					"english": "the social",
+					"transliteration": "is-sooshyal"
+				},
+				{
+					"arabic": "ميديا؟",
+					"english": "media?",
+					"transliteration": "meedya?"
+				}
+			],
+			"targetWords": [
+				"Disadvantages",
+				"Social media"
+			]
+		},
+		{
+			"arabic": "التكنولوجيا تسهل الحياة.",
+			"arabicTashkeel": "التِّكنولوجيا تسَهِّل الحَياة.",
+			"english": "Technology makes life easier.",
+			"transliteration": "it-tiknoloojya tsahhil il-7ayaa.",
+			"wordAlignments": [
+				{
+					"arabic": "التكنولوجيا",
+					"english": "Technology",
+					"transliteration": "it-tiknoloojya"
+				},
+				{
+					"arabic": "تسهل",
+					"english": "makes easier",
+					"transliteration": "tsahhil"
+				},
+				{
+					"arabic": "الحياة.",
+					"english": "life.",
+					"transliteration": "il-7ayaa."
+				}
+			],
+			"targetWords": [
+				"Technology"
+			]
+		},
+		{
+			"arabic": "في إنترنت بالمخيم؟",
+			"arabicTashkeel": "في إنتَرنِت بالمُخَيَّم؟",
+			"english": "Is there internet in the desert camp?",
+			"transliteration": "fee intarnet bil-mukhayyam?",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "Is there",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "إنترنت",
+					"english": "internet",
+					"transliteration": "intarnet"
+				},
+				{
+					"arabic": "بالمخيم؟",
+					"english": "at the camp?",
+					"transliteration": "bil-mukhayyam?"
+				}
+			],
+			"targetWords": [
+				"Internet"
+			]
+		},
+		{
+			"arabic": "بطارية الموبايل خلصت.",
+			"arabicTashkeel": "بَطّارية الموبايل خَلصَت.",
+			"english": "My mobile battery is dead.",
+			"transliteration": "battaariyyat il-mobaayl khalsat.",
+			"wordAlignments": [
+				{
+					"arabic": "بطارية",
+					"english": "The battery of",
+					"transliteration": "battaariyyat"
+				},
+				{
+					"arabic": "الموبايل",
+					"english": "the mobile",
+					"transliteration": "il-mobaayl"
+				},
+				{
+					"arabic": "خلصت.",
+					"english": "ran out.",
+					"transliteration": "khalsat."
+				}
+			],
+			"targetWords": [
+				"Mobile phone"
+			]
+		},
+		{
+			"arabic": "تطبيق خدمات الحكومة.",
+			"arabicTashkeel": "تَطبيق خَدَمات الحُكومة.",
+			"english": "A government services app.",
+			"transliteration": "tatbeeg khadamaat il-7ukooma.",
+			"wordAlignments": [
+				{
+					"arabic": "تطبيق",
+					"english": "An app of",
+					"transliteration": "tatbeeg"
+				},
+				{
+					"arabic": "خدمات",
+					"english": "services of",
+					"transliteration": "khadamaat"
+				},
+				{
+					"arabic": "الحكومة.",
+					"english": "the government.",
+					"transliteration": "il-7ukooma."
+				}
+			],
+			"targetWords": [
+				"App"
+			]
+		},
+		{
+			"arabic": "مسحت حساباتي بالسوشيال ميديا.",
+			"arabicTashkeel": "مَسَحت حْساباتي بالسّوشيال ميديا.",
+			"english": "I deleted my social media accounts.",
+			"transliteration": "masa7t 7saabaati bis-sooshyal meedya.",
+			"wordAlignments": [
+				{
+					"arabic": "مسحت",
+					"english": "I deleted",
+					"transliteration": "masa7t"
+				},
+				{
+					"arabic": "حساباتي",
+					"english": "my accounts",
+					"transliteration": "7saabaati"
+				},
+				{
+					"arabic": "بالسوشيال",
+					"english": "on the social",
+					"transliteration": "bis-sooshyal"
+				},
+				{
+					"arabic": "ميديا.",
+					"english": "media.",
+					"transliteration": "meedya."
+				}
+			],
+			"targetWords": [
+				"Social media",
+				"Account"
+			]
+		},
+		{
+			"arabic": "حسابك إنهكر.",
+			"arabicTashkeel": "حْسابَك إنهَكَر.",
+			"english": "Your account was hacked.",
+			"transliteration": "7saabak inhakar.",
+			"wordAlignments": [
+				{
+					"arabic": "حسابك",
+					"english": "Your account",
+					"transliteration": "7saabak"
+				},
+				{
+					"arabic": "إنهكر.",
+					"english": "was hacked.",
+					"transliteration": "inhakar."
+				}
+			],
+			"targetWords": [
+				"Account"
+			]
+		},
+		{
+			"arabic": "إستخدم باسوورد قوي.",
+			"arabicTashkeel": "إستَخدِم باسوورد قَوي.",
+			"english": "Use a strong password.",
+			"transliteration": "istakhdim baaswoord gawi.",
+			"wordAlignments": [
+				{
+					"arabic": "إستخدم",
+					"english": "Use",
+					"transliteration": "istakhdim"
+				},
+				{
+					"arabic": "باسوورد",
+					"english": "a password",
+					"transliteration": "baaswoord"
+				},
+				{
+					"arabic": "قوي.",
+					"english": "strong.",
+					"transliteration": "gawi."
+				}
+			],
+			"targetWords": [
+				"Password"
+			]
+		},
+		{
+			"arabic": "العيال ينزلون ألعاب.",
+			"arabicTashkeel": "العْيال يْنَزّلون ألعاب.",
+			"english": "The kids download games.",
+			"transliteration": "il-3yaal ynazzloon al3aab.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "ينزلون",
+					"english": "download",
+					"transliteration": "ynazzloon"
+				},
+				{
+					"arabic": "ألعاب.",
+					"english": "games.",
+					"transliteration": "al3aab."
+				}
+			],
+			"targetWords": [
+				"He downloads"
+			]
+		},
+		{
+			"arabic": "الشاشة وايد تضر العيون.",
+			"arabicTashkeel": "الشّاشة وايد تضُر العيون.",
+			"english": "Too much screen time hurts the eyes.",
+			"transliteration": "ish-shaasha waayid tdhurr il-3yoon.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاشة",
+					"english": "The screen",
+					"transliteration": "ish-shaasha"
+				},
+				{
+					"arabic": "وايد",
+					"english": "a lot",
+					"transliteration": "waayid"
+				},
+				{
+					"arabic": "تضر",
+					"english": "harms",
+					"transliteration": "tdhurr"
+				},
+				{
+					"arabic": "العيون.",
+					"english": "the eyes.",
+					"transliteration": "il-3yoon."
+				}
+			],
+			"targetWords": [
+				"Screen"
+			]
+		},
+		{
+			"arabic": "إشتر أونلاين ووفر وقت.",
+			"arabicTashkeel": "إشتِر أونلاين ووَفِّر وَقت.",
+			"english": "Buy online and save time.",
+			"transliteration": "ishtir onlain w-waffir wagt.",
+			"wordAlignments": [
+				{
+					"arabic": "إشتر",
+					"english": "Buy",
+					"transliteration": "ishtir"
+				},
+				{
+					"arabic": "أونلاين",
+					"english": "online",
+					"transliteration": "onlain"
+				},
+				{
+					"arabic": "ووفر",
+					"english": "and save",
+					"transliteration": "w-waffir"
+				},
+				{
+					"arabic": "وقت.",
+					"english": "time.",
+					"transliteration": "wagt."
+				}
+			],
+			"targetWords": [
+				"Online"
+			]
+		},
+		{
+			"arabic": "ما شفت مسجاتك.",
+			"arabicTashkeel": "ما شِفت مَسجاتَك.",
+			"english": "I didn't see your messages.",
+			"transliteration": "ma shift masjaatak.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "شفت",
+					"english": "I saw",
+					"transliteration": "shift"
+				},
+				{
+					"arabic": "مسجاتك.",
+					"english": "your messages.",
+					"transliteration": "masjaatak."
+				}
+			],
+			"targetWords": [
+				"Messages"
+			]
+		},
+		{
+			"arabic": "إدمان الإنترنت عند الشباب.",
+			"arabicTashkeel": "إدمان الإنتَرنِت عِند الشَّباب.",
+			"english": "Internet addiction among young people.",
+			"transliteration": "idmaan il-intarnet 3ind ish-shabaab.",
+			"wordAlignments": [
+				{
+					"arabic": "إدمان",
+					"english": "Addiction to",
+					"transliteration": "idmaan"
+				},
+				{
+					"arabic": "الإنترنت",
+					"english": "the internet",
+					"transliteration": "il-intarnet"
+				},
+				{
+					"arabic": "عند",
+					"english": "among",
+					"transliteration": "3ind"
+				},
+				{
+					"arabic": "الشباب.",
+					"english": "young people.",
+					"transliteration": "ish-shabaab."
+				}
+			],
+			"targetWords": [
+				"Addiction",
+				"Internet"
+			]
+		},
+		{
+			"arabic": "إحترم خصوصية الناس.",
+			"arabicTashkeel": "إحتَرِم خُصوصية النّاس.",
+			"english": "Respect people's privacy.",
+			"transliteration": "i7tarim khusoosiyyat in-naas.",
+			"wordAlignments": [
+				{
+					"arabic": "إحترم",
+					"english": "Respect",
+					"transliteration": "i7tarim"
+				},
+				{
+					"arabic": "خصوصية",
+					"english": "the privacy of",
+					"transliteration": "khusoosiyyat"
+				},
+				{
+					"arabic": "الناس.",
+					"english": "people.",
+					"transliteration": "in-naas."
+				}
+			],
+			"targetWords": [
+				"Privacy"
+			]
+		},
+		{
+			"arabic": "فوايد الدراسة أونلاين.",
+			"arabicTashkeel": "فَوايِد الدِّراسة أونلاين.",
+			"english": "The advantages of online learning.",
+			"transliteration": "fawaayid id-diraasa onlain.",
+			"wordAlignments": [
+				{
+					"arabic": "فوايد",
+					"english": "The benefits of",
+					"transliteration": "fawaayid"
+				},
+				{
+					"arabic": "الدراسة",
+					"english": "studying",
+					"transliteration": "id-diraasa"
+				},
+				{
+					"arabic": "أونلاين.",
+					"english": "online.",
+					"transliteration": "onlain."
+				}
+			],
+			"targetWords": [
+				"Advantages",
+				"Online"
+			]
+		},
+		{
+			"arabic": "الأضرار أكثر من الفوايد.",
+			"arabicTashkeel": "الأضرار أكثَر مِن الفَوايِد.",
+			"english": "The disadvantages outweigh the advantages.",
+			"transliteration": "il-adhraar akthar min il-fawaayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الأضرار",
+					"english": "The harms are",
+					"transliteration": "il-adhraar"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "more",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفوايد.",
+					"english": "the benefits.",
+					"transliteration": "il-fawaayid."
+				}
+			],
+			"targetWords": [
+				"Disadvantages",
+				"Advantages"
+			]
+		},
+		{
+			"arabic": "تكنولوجيا حديثة بالمستشفيات.",
+			"arabicTashkeel": "تِكنولوجيا حَديثة بالمُستَشفَيات.",
+			"english": "Modern technology in hospitals.",
+			"transliteration": "tiknoloojya 7adeetha bil-mustashfayaat.",
+			"wordAlignments": [
+				{
+					"arabic": "تكنولوجيا",
+					"english": "Technology",
+					"transliteration": "tiknoloojya"
+				},
+				{
+					"arabic": "حديثة",
+					"english": "modern",
+					"transliteration": "7adeetha"
+				},
+				{
+					"arabic": "بالمستشفيات.",
+					"english": "in the hospitals.",
+					"transliteration": "bil-mustashfayaat."
+				}
+			],
+			"targetWords": [
+				"Technology"
+			]
+		},
+		{
+			"arabic": "الإنترنت السريع بكل مكان بالإمارات.",
+			"arabicTashkeel": "الإنتَرنِت السَّريع بكِل مَكان بالإمارات.",
+			"english": "Fast internet is everywhere in the UAE.",
+			"transliteration": "il-intarnet is-saree3 b-kil makaan bil-imaaraat.",
+			"wordAlignments": [
+				{
+					"arabic": "الإنترنت",
+					"english": "The internet",
+					"transliteration": "il-intarnet"
+				},
+				{
+					"arabic": "السريع",
+					"english": "fast is",
+					"transliteration": "is-saree3"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "مكان",
+					"english": "place",
+					"transliteration": "makaan"
+				},
+				{
+					"arabic": "بالإمارات.",
+					"english": "in the UAE.",
+					"transliteration": "bil-imaaraat."
+				}
+			],
+			"targetWords": [
+				"Internet"
+			]
+		},
+		{
+			"arabic": "موبايل جديد شاشته كبيرة.",
+			"arabicTashkeel": "موبايل جْديد شاشتَه كْبيرة.",
+			"english": "A new mobile with a big screen.",
+			"transliteration": "mobaayl ydeed shaashata chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "موبايل",
+					"english": "A mobile",
+					"transliteration": "mobaayl"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "ydeed"
+				},
+				{
+					"arabic": "شاشته",
+					"english": "its screen is",
+					"transliteration": "shaashata"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Mobile phone",
+				"Screen"
+			]
+		},
+		{
+			"arabic": "هالتطبيق يساعدني أتعلم لغات.",
+			"arabicTashkeel": "هالتَّطبيق يساعِدني أتعَلَّم لُغات.",
+			"english": "This app helps me learn languages.",
+			"transliteration": "hat-tatbeeg ysaa3idni at3allam lughaat.",
+			"wordAlignments": [
+				{
+					"arabic": "هالتطبيق",
+					"english": "This app",
+					"transliteration": "hat-tatbeeg"
+				},
+				{
+					"arabic": "يساعدني",
+					"english": "helps me",
+					"transliteration": "ysaa3idni"
+				},
+				{
+					"arabic": "أتعلم",
+					"english": "learn",
+					"transliteration": "at3allam"
+				},
+				{
+					"arabic": "لغات.",
+					"english": "languages.",
+					"transliteration": "lughaat."
+				}
+			],
+			"targetWords": [
+				"App"
+			]
+		},
+		{
+			"arabic": "السوشيال ميديا تنشر الأخبار بسرعة.",
+			"arabicTashkeel": "السّوشيال ميديا تِنشُر الأخبار بسُرعة.",
+			"english": "Social media spreads news quickly.",
+			"transliteration": "is-sooshyal meedya tinshur il-akhbaar b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "السوشيال",
+					"english": "The social",
+					"transliteration": "is-sooshyal"
+				},
+				{
+					"arabic": "ميديا",
+					"english": "media",
+					"transliteration": "meedya"
+				},
+				{
+					"arabic": "تنشر",
+					"english": "spreads",
+					"transliteration": "tinshur"
+				},
+				{
+					"arabic": "الأخبار",
+					"english": "the news",
+					"transliteration": "il-akhbaar"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "quickly.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"Social media"
+			]
+		},
+		{
+			"arabic": "حساب بزنس.",
+			"arabicTashkeel": "حْساب بِزنِس.",
+			"english": "A business account.",
+			"transliteration": "7saab biznis.",
+			"wordAlignments": [
+				{
+					"arabic": "حساب",
+					"english": "An account of",
+					"transliteration": "7saab"
+				},
+				{
+					"arabic": "بزنس.",
+					"english": "business.",
+					"transliteration": "biznis."
+				}
+			],
+			"targetWords": [
+				"Account"
+			]
+		},
+		{
+			"arabic": "غير الباسوورد كل شهر.",
+			"arabicTashkeel": "غَيِّر الباسوورد كِل شَهَر.",
+			"english": "Change your password every month.",
+			"transliteration": "ghayyir il-baaswoord kil shahar.",
+			"wordAlignments": [
+				{
+					"arabic": "غير",
+					"english": "Change",
+					"transliteration": "ghayyir"
+				},
+				{
+					"arabic": "الباسوورد",
+					"english": "the password",
+					"transliteration": "il-baaswoord"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "شهر.",
+					"english": "month.",
+					"transliteration": "shahar."
+				}
+			],
+			"targetWords": [
+				"Password"
+			]
+		},
+		{
+			"arabic": "نزل الملف.",
+			"arabicTashkeel": "نَزِّل المَلَف.",
+			"english": "Download the file.",
+			"transliteration": "nazzil il-malaf.",
+			"wordAlignments": [
+				{
+					"arabic": "نزل",
+					"english": "Download",
+					"transliteration": "nazzil"
+				},
+				{
+					"arabic": "الملف.",
+					"english": "the file.",
+					"transliteration": "il-malaf."
+				}
+			],
+			"targetWords": [
+				"He downloads"
+			]
+		},
+		{
+			"arabic": "الشاشة ساطعة وايد.",
+			"arabicTashkeel": "الشّاشة ساطعة وايد.",
+			"english": "The screen is too bright.",
+			"transliteration": "ish-shaasha saat3a waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاشة",
+					"english": "The screen is",
+					"transliteration": "ish-shaasha"
+				},
+				{
+					"arabic": "ساطعة",
+					"english": "bright",
+					"transliteration": "saat3a"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "too.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Screen"
+			]
+		},
+		{
+			"arabic": "أنا أونلاين الحين.",
+			"arabicTashkeel": "أنا أونلاين الحين.",
+			"english": "I'm online now.",
+			"transliteration": "ana onlain il-7een.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "أونلاين",
+					"english": "online",
+					"transliteration": "onlain"
+				},
+				{
+					"arabic": "الحين.",
+					"english": "now.",
+					"transliteration": "il-7een."
+				}
+			],
+			"targetWords": [
+				"Online"
+			]
+		},
+		{
+			"arabic": "مسجات صوتية.",
+			"arabicTashkeel": "مَسجات صَوتية.",
+			"english": "Voice messages.",
+			"transliteration": "masjaat sawtiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "مسجات",
+					"english": "Messages",
+					"transliteration": "masjaat"
+				},
+				{
+					"arabic": "صوتية.",
+					"english": "voice.",
+					"transliteration": "sawtiyya."
+				}
+			],
+			"targetWords": [
+				"Messages"
+			]
+		},
+		{
+			"arabic": "إدمان الألعاب.",
+			"arabicTashkeel": "إدمان الألعاب.",
+			"english": "Gaming addiction.",
+			"transliteration": "idmaan il-al3aab.",
+			"wordAlignments": [
+				{
+					"arabic": "إدمان",
+					"english": "Addiction to",
+					"transliteration": "idmaan"
+				},
+				{
+					"arabic": "الألعاب.",
+					"english": "games.",
+					"transliteration": "il-al3aab."
+				}
+			],
+			"targetWords": [
+				"Addiction"
+			]
+		},
+		{
+			"arabic": "إعدادات الخصوصية.",
+			"arabicTashkeel": "إعدادات الخُصوصية.",
+			"english": "Privacy settings.",
+			"transliteration": "i3daadaat il-khusoosiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "إعدادات",
+					"english": "The settings of",
+					"transliteration": "i3daadaat"
+				},
+				{
+					"arabic": "الخصوصية.",
+					"english": "privacy.",
+					"transliteration": "il-khusoosiyya."
+				}
+			],
+			"targetWords": [
+				"Privacy"
+			]
+		},
+		{
+			"arabic": "التكنولوجيا لها فوايد وأضرار.",
+			"arabicTashkeel": "التِّكنولوجيا لها فَوايِد وأضرار.",
+			"english": "Technology has advantages and disadvantages.",
+			"transliteration": "it-tiknoloojya laha fawaayid w-adhraar.",
+			"wordAlignments": [
+				{
+					"arabic": "التكنولوجيا",
+					"english": "Technology",
+					"transliteration": "it-tiknoloojya"
+				},
+				{
+					"arabic": "لها",
+					"english": "has",
+					"transliteration": "laha"
+				},
+				{
+					"arabic": "فوايد",
+					"english": "benefits",
+					"transliteration": "fawaayid"
+				},
+				{
+					"arabic": "وأضرار.",
+					"english": "and harms.",
+					"transliteration": "w-adhraar."
+				}
+			],
+			"targetWords": [
+				"Technology",
+				"Advantages",
+				"Disadvantages"
+			]
+		},
+		{
+			"arabic": "أضرار التلفونات على العيال.",
+			"arabicTashkeel": "أضرار التِّلِفونات على العْيال.",
+			"english": "The disadvantages of phones for children.",
+			"transliteration": "adhraar it-tilifoonaat 3ala il-3yaal.",
+			"wordAlignments": [
+				{
+					"arabic": "أضرار",
+					"english": "The harms of",
+					"transliteration": "adhraar"
+				},
+				{
+					"arabic": "التلفونات",
+					"english": "phones",
+					"transliteration": "it-tilifoonaat"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "العيال.",
+					"english": "the children.",
+					"transliteration": "il-3yaal."
+				}
+			],
+			"targetWords": [
+				"Disadvantages"
+			]
+		},
+		{
+			"arabic": "الإنترنت ربط العالم.",
+			"arabicTashkeel": "الإنتَرنِت رَبَط العالَم.",
+			"english": "The internet connected the world.",
+			"transliteration": "il-intarnet rabat il-3aalam.",
+			"wordAlignments": [
+				{
+					"arabic": "الإنترنت",
+					"english": "The internet",
+					"transliteration": "il-intarnet"
+				},
+				{
+					"arabic": "ربط",
+					"english": "connected",
+					"transliteration": "rabat"
+				},
+				{
+					"arabic": "العالم.",
+					"english": "the world.",
+					"transliteration": "il-3aalam."
+				}
+			],
+			"targetWords": [
+				"Internet"
+			]
+		},
+		{
+			"arabic": "بند موبايلك بالصف.",
+			"arabicTashkeel": "بَنِّد موبايلَك بالصَّف.",
+			"english": "Turn off your mobile in class.",
+			"transliteration": "bannid mobaaylak bis-saff.",
+			"wordAlignments": [
+				{
+					"arabic": "بند",
+					"english": "Turn off",
+					"transliteration": "bannid"
+				},
+				{
+					"arabic": "موبايلك",
+					"english": "your mobile",
+					"transliteration": "mobaaylak"
+				},
+				{
+					"arabic": "بالصف.",
+					"english": "in class.",
+					"transliteration": "bis-saff."
+				}
+			],
+			"targetWords": [
+				"Mobile phone"
+			]
+		},
+		{
+			"arabic": "تطبيق حق طلب التاكسي.",
+			"arabicTashkeel": "تَطبيق حَق طَلَب التّاكسي.",
+			"english": "An app for ordering taxis.",
+			"transliteration": "tatbeeg 7agg talab it-taaksi.",
+			"wordAlignments": [
+				{
+					"arabic": "تطبيق",
+					"english": "An app",
+					"transliteration": "tatbeeg"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "طلب",
+					"english": "ordering",
+					"transliteration": "talab"
+				},
+				{
+					"arabic": "التاكسي.",
+					"english": "taxis.",
+					"transliteration": "it-taaksi."
+				}
+			],
+			"targetWords": [
+				"App"
+			]
+		},
+		{
+			"arabic": "هو مشهور بالسناب.",
+			"arabicTashkeel": "هو مَشهور بالسْناب.",
+			"english": "He's famous on Snapchat.",
+			"transliteration": "hu mash-hoor bis-snaab.",
+			"wordAlignments": [
+				{
+					"arabic": "هو",
+					"english": "He is",
+					"transliteration": "hu"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "famous",
+					"transliteration": "mash-hoor"
+				},
+				{
+					"arabic": "بالسناب.",
+					"english": "on Snap.",
+					"transliteration": "bis-snaab."
+				}
+			],
+			"targetWords": [
+				"Social media"
+			]
+		},
+		{
+			"arabic": "دش على حسابك.",
+			"arabicTashkeel": "دِش على حْسابَك.",
+			"english": "Log in to your account.",
+			"transliteration": "dish 3ala 7saabak.",
+			"wordAlignments": [
+				{
+					"arabic": "دش",
+					"english": "Enter",
+					"transliteration": "dish"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "حسابك.",
+					"english": "your account.",
+					"transliteration": "7saabak."
+				}
+			],
+			"targetWords": [
+				"Account"
+			]
+		},
+		{
+			"arabic": "لا تعطي أحد الباسوورد.",
+			"arabicTashkeel": "لا تعَطي أحَد الباسوورد.",
+			"english": "Don't share your password.",
+			"transliteration": "la t3ati a7ad il-baaswoord.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تعطي",
+					"english": "give",
+					"transliteration": "t3ati"
+				},
+				{
+					"arabic": "أحد",
+					"english": "anyone",
+					"transliteration": "a7ad"
+				},
+				{
+					"arabic": "الباسوورد.",
+					"english": "the password.",
+					"transliteration": "il-baaswoord."
+				}
+			],
+			"targetWords": [
+				"Password"
+			]
+		},
+		{
+			"arabic": "التنزيل ياخذ وقت طويل.",
+			"arabicTashkeel": "التَّنزيل ياخِذ وَقت طْويل.",
+			"english": "The download takes a long time.",
+			"transliteration": "it-tanzeel yaakhidh wagt tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "التنزيل",
+					"english": "The download",
+					"transliteration": "it-tanzeel"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "وقت",
+					"english": "time",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"He downloads"
+			]
+		},
+		{
+			"arabic": "شاشة تلفزيون كبيرة.",
+			"arabicTashkeel": "شاشة تِلِفِزيون كْبيرة.",
+			"english": "A big TV screen.",
+			"transliteration": "shaasha tilifizyoon chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "شاشة",
+					"english": "A screen",
+					"transliteration": "shaasha"
+				},
+				{
+					"arabic": "تلفزيون",
+					"english": "of TV",
+					"transliteration": "tilifizyoon"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Screen"
+			]
+		},
+		{
+			"arabic": "الشرا أونلاين مشهور الحين.",
+			"arabicTashkeel": "الشِّرا أونلاين مَشهور الحين.",
+			"english": "Online shopping is popular now.",
+			"transliteration": "ish-shira onlain mash-hoor il-7een.",
+			"wordAlignments": [
+				{
+					"arabic": "الشرا",
+					"english": "Buying",
+					"transliteration": "ish-shira"
+				},
+				{
+					"arabic": "أونلاين",
+					"english": "online is",
+					"transliteration": "onlain"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "popular",
+					"transliteration": "mash-hoor"
+				},
+				{
+					"arabic": "الحين.",
+					"english": "now.",
+					"transliteration": "il-7een."
+				}
+			],
+			"targetWords": [
+				"Online"
+			]
+		},
+		{
+			"arabic": "مسجات قديمة.",
+			"arabicTashkeel": "مَسجات قَديمة.",
+			"english": "Old messages.",
+			"transliteration": "masjaat gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "مسجات",
+					"english": "Messages",
+					"transliteration": "masjaat"
+				},
+				{
+					"arabic": "قديمة.",
+					"english": "old.",
+					"transliteration": "gadeema."
+				}
+			],
+			"targetWords": [
+				"Messages"
+			]
+		},
+		{
+			"arabic": "علاج الإدمان.",
+			"arabicTashkeel": "عِلاج الإدمان.",
+			"english": "The cure for addiction.",
+			"transliteration": "3ilaaj il-idmaan.",
+			"wordAlignments": [
+				{
+					"arabic": "علاج",
+					"english": "The cure of",
+					"transliteration": "3ilaaj"
+				},
+				{
+					"arabic": "الإدمان.",
+					"english": "addiction.",
+					"transliteration": "il-idmaan."
+				}
+			],
+			"targetWords": [
+				"Addiction"
+			]
+		},
+		{
+			"arabic": "ما في خصوصية بعد الحين.",
+			"arabicTashkeel": "ما في خُصوصية بَعَد الحين.",
+			"english": "There's no privacy anymore.",
+			"transliteration": "ma fee khusoosiyya ba3ad il-7een.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "خصوصية",
+					"english": "privacy",
+					"transliteration": "khusoosiyya"
+				},
+				{
+					"arabic": "بعد",
+					"english": "anymore",
+					"transliteration": "ba3ad"
+				},
+				{
+					"arabic": "الحين.",
+					"english": "now.",
+					"transliteration": "il-7een."
+				}
+			],
+			"targetWords": [
+				"Privacy"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Phone and Me",
+			"sentences": [
+				{
+					"arabic": "أنا على الموبايل طول اليوم.",
+					"arabicTashkeel": "أنا على الموبايل طول اليوم.",
+					"english": "I'm on my mobile phone all day.",
+					"transliteration": "ana 3ala il-mobaayl tool il-yoom.",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I am",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الموبايل",
+							"english": "the mobile",
+							"transliteration": "il-mobaayl"
+						},
+						{
+							"arabic": "طول",
+							"english": "all",
+							"transliteration": "tool"
+						},
+						{
+							"arabic": "اليوم.",
+							"english": "day.",
+							"transliteration": "il-yoom."
+						}
+					]
+				},
+				{
+					"arabic": "الصبح أقرا الأخبار، وبالدوام أرد على المسجات.",
+					"arabicTashkeel": "الصُّبح أقرا الأخبار، وبالدَّوام أرُد على المَسجات.",
+					"english": "In the morning I read the news, and at work I answer messages.",
+					"transliteration": "is-sub7 agra il-akhbaar, w-bid-dawaam arudd 3ala il-masjaat.",
+					"wordAlignments": [
+						{
+							"arabic": "الصبح",
+							"english": "In the morning",
+							"transliteration": "is-sub7"
+						},
+						{
+							"arabic": "أقرا",
+							"english": "I read",
+							"transliteration": "agra"
+						},
+						{
+							"arabic": "الأخبار،",
+							"english": "the news,",
+							"transliteration": "il-akhbaar,"
+						},
+						{
+							"arabic": "وبالدوام",
+							"english": "and at work",
+							"transliteration": "w-bid-dawaam"
+						},
+						{
+							"arabic": "أرد",
+							"english": "I answer",
+							"transliteration": "arudd"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "المسجات.",
+							"english": "the messages.",
+							"transliteration": "il-masjaat."
+						}
+					]
+				},
+				{
+					"arabic": "بالليل أقضي ساعات على السوشيال ميديا.",
+					"arabicTashkeel": "بالليل أقَضّي ساعات على السّوشيال ميديا.",
+					"english": "At night I spend hours on social media.",
+					"transliteration": "bil-leel agadhdhi saa3aat 3ala is-sooshyal meedya.",
+					"wordAlignments": [
+						{
+							"arabic": "بالليل",
+							"english": "At night",
+							"transliteration": "bil-leel"
+						},
+						{
+							"arabic": "أقضي",
+							"english": "I spend",
+							"transliteration": "agadhdhi"
+						},
+						{
+							"arabic": "ساعات",
+							"english": "hours",
+							"transliteration": "saa3aat"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "السوشيال",
+							"english": "the social",
+							"transliteration": "is-sooshyal"
+						},
+						{
+							"arabic": "ميديا.",
+							"english": "media.",
+							"transliteration": "meedya."
+						}
+					]
+				},
+				{
+					"arabic": "التكنولوجيا لها فوايد وايد: أدرس أونلاين وأكلم أهلي برا.",
+					"arabicTashkeel": "التِّكنولوجيا لها فَوايِد وايد: أدرِس أونلاين وأكَلِّم أهلي بَرّا.",
+					"english": "Technology has many advantages: I study online and talk to my family abroad.",
+					"transliteration": "it-tiknoloojya laha fawaayid waayid: adris onlain w-akallim ahli barra.",
+					"wordAlignments": [
+						{
+							"arabic": "التكنولوجيا",
+							"english": "Technology",
+							"transliteration": "it-tiknoloojya"
+						},
+						{
+							"arabic": "لها",
+							"english": "has",
+							"transliteration": "laha"
+						},
+						{
+							"arabic": "فوايد",
+							"english": "benefits",
+							"transliteration": "fawaayid"
+						},
+						{
+							"arabic": "وايد:",
+							"english": "many:",
+							"transliteration": "waayid:"
+						},
+						{
+							"arabic": "أدرس",
+							"english": "I study",
+							"transliteration": "adris"
+						},
+						{
+							"arabic": "أونلاين",
+							"english": "online",
+							"transliteration": "onlain"
+						},
+						{
+							"arabic": "وأكلم",
+							"english": "and I talk to",
+							"transliteration": "w-akallim"
+						},
+						{
+							"arabic": "أهلي",
+							"english": "my family",
+							"transliteration": "ahli"
+						},
+						{
+							"arabic": "برا.",
+							"english": "abroad.",
+							"transliteration": "barra."
+						}
+					]
+				},
+				{
+					"arabic": "بس في أضرار بعد: الإدمان، تعب العيون وما في خصوصية.",
+					"arabicTashkeel": "بَس في أضرار بَعَد: الإدمان، تَعَب العيون وما في خُصوصية.",
+					"english": "But there are disadvantages too: addiction, tired eyes and no privacy.",
+					"transliteration": "bas fee adhraar ba3ad: il-idmaan, ta3ab il-3yoon w-ma fee khusoosiyya.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "في",
+							"english": "there are",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "أضرار",
+							"english": "harms",
+							"transliteration": "adhraar"
+						},
+						{
+							"arabic": "بعد:",
+							"english": "too:",
+							"transliteration": "ba3ad:"
+						},
+						{
+							"arabic": "الإدمان،",
+							"english": "addiction,",
+							"transliteration": "il-idmaan,"
+						},
+						{
+							"arabic": "تعب",
+							"english": "tiredness of",
+							"transliteration": "ta3ab"
+						},
+						{
+							"arabic": "العيون",
+							"english": "the eyes",
+							"transliteration": "il-3yoon"
+						},
+						{
+							"arabic": "وما",
+							"english": "and no",
+							"transliteration": "w-ma"
+						},
+						{
+							"arabic": "في",
+							"english": "there is",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "خصوصية.",
+							"english": "privacy.",
+							"transliteration": "khusoosiyya."
+						}
+					]
+				},
+				{
+					"arabic": "عشان كذي قررت أبند التلفون ساعة قبل النوم.",
+					"arabicTashkeel": "عَشان كِذي قَرَّرت أبَنِّد التِّلِفون ساعة قَبل النّوم.",
+					"english": "So I decided to turn off the phone one hour before sleeping.",
+					"transliteration": "3ashaan chidhi garrart abannid it-tilifoon saa3a gabil in-noom.",
+					"wordAlignments": [
+						{
+							"arabic": "عشان",
+							"english": "Because of",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "كذي",
+							"english": "this",
+							"transliteration": "chidhi"
+						},
+						{
+							"arabic": "قررت",
+							"english": "I decided",
+							"transliteration": "garrart"
+						},
+						{
+							"arabic": "أبند",
+							"english": "to turn off",
+							"transliteration": "abannid"
+						},
+						{
+							"arabic": "التلفون",
+							"english": "the phone",
+							"transliteration": "it-tilifoon"
+						},
+						{
+							"arabic": "ساعة",
+							"english": "an hour",
+							"transliteration": "saa3a"
+						},
+						{
+							"arabic": "قبل",
+							"english": "before",
+							"transliteration": "gabil"
+						},
+						{
+							"arabic": "النوم.",
+							"english": "sleeping.",
+							"transliteration": "in-noom."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "My Grandmother Goes Online",
+			"sentences": [
+				{
+					"arabic": "جدتي نزلت تطبيق مكالمات فيديو.",
+					"arabicTashkeel": "جَدّتي نَزَّلَت تَطبيق مُكالمات فيديو.",
+					"english": "My grandmother downloaded a video-call app.",
+					"transliteration": "yaddati nazzalat tatbeeg mukaalamaat veedyo.",
+					"wordAlignments": [
+						{
+							"arabic": "جدتي",
+							"english": "My grandmother",
+							"transliteration": "yaddati"
+						},
+						{
+							"arabic": "نزلت",
+							"english": "downloaded",
+							"transliteration": "nazzalat"
+						},
+						{
+							"arabic": "تطبيق",
+							"english": "an app",
+							"transliteration": "tatbeeg"
+						},
+						{
+							"arabic": "مكالمات",
+							"english": "of calls",
+							"transliteration": "mukaalamaat"
+						},
+						{
+							"arabic": "فيديو.",
+							"english": "video.",
+							"transliteration": "veedyo."
+						}
+					]
+				},
+				{
+					"arabic": "سويت لها حساب وكتبت الباسوورد على ورقة.",
+					"arabicTashkeel": "سَوّيت لها حْساب وكِتَبت الباسوورد على وَرَقة.",
+					"english": "I made her an account and wrote the password on a paper.",
+					"transliteration": "sawweet laha 7saab w-kitabt il-baaswoord 3ala waraga.",
+					"wordAlignments": [
+						{
+							"arabic": "سويت",
+							"english": "I made",
+							"transliteration": "sawweet"
+						},
+						{
+							"arabic": "لها",
+							"english": "for her",
+							"transliteration": "laha"
+						},
+						{
+							"arabic": "حساب",
+							"english": "an account",
+							"transliteration": "7saab"
+						},
+						{
+							"arabic": "وكتبت",
+							"english": "and wrote",
+							"transliteration": "w-kitabt"
+						},
+						{
+							"arabic": "الباسوورد",
+							"english": "the password",
+							"transliteration": "il-baaswoord"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "ورقة.",
+							"english": "a paper.",
+							"transliteration": "waraga."
+						}
+					]
+				},
+				{
+					"arabic": "الحين تكلم خالي بلندن كل يوم!",
+					"arabicTashkeel": "الحين تكَلِّم خالي بلَندَن كِل يوم!",
+					"english": "Now she talks to my uncle in London every day!",
+					"transliteration": "il-7een tkallim khaali b-landan kil yoom!",
+					"wordAlignments": [
+						{
+							"arabic": "الحين",
+							"english": "Now",
+							"transliteration": "il-7een"
+						},
+						{
+							"arabic": "تكلم",
+							"english": "she talks to",
+							"transliteration": "tkallim"
+						},
+						{
+							"arabic": "خالي",
+							"english": "my uncle",
+							"transliteration": "khaali"
+						},
+						{
+							"arabic": "بلندن",
+							"english": "in London",
+							"transliteration": "b-landan"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "يوم!",
+							"english": "day!",
+							"transliteration": "yoom!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student and an Emirati friend argue about whether teenagers should have smartphones, at a family gathering.",
+		"studentRole": "A friend learning Gulf Arabic.",
+		"otherRole": "The Emirati friend, a parent worried about screen time.",
+		"goalEnglish": "Discuss the advantages and disadvantages of technology and social media, talk about privacy and addiction, and suggest rules for kids.",
+		"targetWords": [
+			"Technology",
+			"Social media",
+			"Mobile phone",
+			"App",
+			"Advantages",
+			"Disadvantages",
+			"Addiction",
+			"Privacy"
+		]
+	}
+}

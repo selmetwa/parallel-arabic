@@ -1,0 +1,2290 @@
+{
+	"vocab": [
+		{
+			"arabic": "أقوم",
+			"arabicTashkeel": "أقوم",
+			"english": "I wake up",
+			"transliteration": "agoom",
+			"wordAlignments": [
+				{
+					"arabic": "أقوم",
+					"english": "I wake up",
+					"transliteration": "agoom"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أتسبح",
+			"arabicTashkeel": "أتسَبَّح",
+			"english": "I shower",
+			"transliteration": "atsabba7",
+			"wordAlignments": [
+				{
+					"arabic": "أتسبح",
+					"english": "I shower",
+					"transliteration": "atsabba7"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أغسل",
+			"arabicTashkeel": "أغسِل",
+			"english": "I wash",
+			"transliteration": "aghsil",
+			"wordAlignments": [
+				{
+					"arabic": "أغسل",
+					"english": "I wash",
+					"transliteration": "aghsil"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "ألبس",
+			"arabicTashkeel": "ألبَس",
+			"english": "I get dressed",
+			"transliteration": "albas",
+			"wordAlignments": [
+				{
+					"arabic": "ألبس",
+					"english": "I get dressed",
+					"transliteration": "albas"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أتريق",
+			"arabicTashkeel": "أتريَّق",
+			"english": "I have breakfast",
+			"transliteration": "atrayyag",
+			"wordAlignments": [
+				{
+					"arabic": "أتريق",
+					"english": "I have breakfast",
+					"transliteration": "atrayyag"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أطلع",
+			"arabicTashkeel": "أطلَع",
+			"english": "I leave the house",
+			"transliteration": "atla3",
+			"wordAlignments": [
+				{
+					"arabic": "أطلع",
+					"english": "I go out",
+					"transliteration": "atla3"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أوصل",
+			"arabicTashkeel": "أوصَل",
+			"english": "I arrive",
+			"transliteration": "awsal",
+			"wordAlignments": [
+				{
+					"arabic": "أوصل",
+					"english": "I arrive",
+					"transliteration": "awsal"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أتغدى",
+			"arabicTashkeel": "أتغَدّى",
+			"english": "I have lunch",
+			"transliteration": "atghadda",
+			"wordAlignments": [
+				{
+					"arabic": "أتغدى",
+					"english": "I have lunch",
+					"transliteration": "atghadda"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أرد",
+			"arabicTashkeel": "أرِد",
+			"english": "I come back",
+			"transliteration": "aridd",
+			"wordAlignments": [
+				{
+					"arabic": "أرد",
+					"english": "I come back",
+					"transliteration": "aridd"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أرتاح",
+			"arabicTashkeel": "أرتاح",
+			"english": "I rest",
+			"transliteration": "artaa7",
+			"wordAlignments": [
+				{
+					"arabic": "أرتاح",
+					"english": "I rest",
+					"transliteration": "artaa7"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أتعشى",
+			"arabicTashkeel": "أتعَشّى",
+			"english": "I have dinner",
+			"transliteration": "at3ashsha",
+			"wordAlignments": [
+				{
+					"arabic": "أتعشى",
+					"english": "I have dinner",
+					"transliteration": "at3ashsha"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "كل يوم",
+			"arabicTashkeel": "كِل يوم",
+			"english": "Every day",
+			"transliteration": "kil yoom",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم",
+					"english": "day",
+					"transliteration": "yoom"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "عادة",
+			"arabicTashkeel": "عادةً",
+			"english": "Usually",
+			"transliteration": "3aadatan",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Usually",
+					"transliteration": "3aadatan"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "بعدين",
+			"arabicTashkeel": "بَعدين",
+			"english": "Then / after that",
+			"transliteration": "ba3dain",
+			"wordAlignments": [
+				{
+					"arabic": "بعدين",
+					"english": "Then",
+					"transliteration": "ba3dain"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "قبل",
+			"arabicTashkeel": "قَبل",
+			"english": "Before",
+			"transliteration": "gabil",
+			"wordAlignments": [
+				{
+					"arabic": "قبل",
+					"english": "Before",
+					"transliteration": "gabil"
+				}
+			],
+			"partOfSpeech": "adverb"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أقوم الساعة ست كل يوم.",
+			"arabicTashkeel": "أقوم السّاعة سِت كِل يوم.",
+			"english": "I wake up at six every day.",
+			"transliteration": "agoom is-saa3a sitt kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أقوم",
+					"english": "I wake up",
+					"transliteration": "agoom"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ست",
+					"english": "six",
+					"transliteration": "sitt"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"I wake up",
+				"Every day"
+			]
+		},
+		{
+			"arabic": "أتسبح الصبح.",
+			"arabicTashkeel": "أتسَبَّح الصُّبح.",
+			"english": "I shower in the morning.",
+			"transliteration": "atsabba7 is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "أتسبح",
+					"english": "I shower",
+					"transliteration": "atsabba7"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"I shower"
+			]
+		},
+		{
+			"arabic": "أغسل وجهي وأغسل سنوني.",
+			"arabicTashkeel": "أغسِل وَجهي وأغسِل سْنوني.",
+			"english": "I wash my face and brush my teeth.",
+			"transliteration": "aghsil wayhi w-aghsil snooni.",
+			"wordAlignments": [
+				{
+					"arabic": "أغسل",
+					"english": "I wash",
+					"transliteration": "aghsil"
+				},
+				{
+					"arabic": "وجهي",
+					"english": "my face",
+					"transliteration": "wayhi"
+				},
+				{
+					"arabic": "وأغسل",
+					"english": "and I wash",
+					"transliteration": "w-aghsil"
+				},
+				{
+					"arabic": "سنوني.",
+					"english": "my teeth.",
+					"transliteration": "snooni."
+				}
+			],
+			"targetWords": [
+				"I wash"
+			]
+		},
+		{
+			"arabic": "ألبس بسرعة.",
+			"arabicTashkeel": "ألبَس بسُرعة.",
+			"english": "I get dressed quickly.",
+			"transliteration": "albas b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "ألبس",
+					"english": "I get dressed",
+					"transliteration": "albas"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "quickly.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"I get dressed"
+			]
+		},
+		{
+			"arabic": "أتريق ويا أهلي.",
+			"arabicTashkeel": "أتريَّق وِيّا أهلي.",
+			"english": "I have breakfast with my family.",
+			"transliteration": "atrayyag wiyya ahli.",
+			"wordAlignments": [
+				{
+					"arabic": "أتريق",
+					"english": "I have breakfast",
+					"transliteration": "atrayyag"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "أهلي.",
+					"english": "my family.",
+					"transliteration": "ahli."
+				}
+			],
+			"targetWords": [
+				"I have breakfast"
+			]
+		},
+		{
+			"arabic": "أطلع من البيت سبع ونص.",
+			"arabicTashkeel": "أطلَع مِن البيت سَبع ونُص.",
+			"english": "I leave the house at half past seven.",
+			"transliteration": "atla3 min il-beet saba3 w-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "أطلع",
+					"english": "I leave",
+					"transliteration": "atla3"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "سبع",
+					"english": "seven",
+					"transliteration": "saba3"
+				},
+				{
+					"arabic": "ونص.",
+					"english": "and a half.",
+					"transliteration": "w-nuss."
+				}
+			],
+			"targetWords": [
+				"I leave the house"
+			]
+		},
+		{
+			"arabic": "أوصل الدوام الساعة ثمان.",
+			"arabicTashkeel": "أوصَل الدَّوام السّاعة ثَمان.",
+			"english": "I arrive at work at eight.",
+			"transliteration": "awsal id-dawaam is-saa3a thamaan.",
+			"wordAlignments": [
+				{
+					"arabic": "أوصل",
+					"english": "I arrive",
+					"transliteration": "awsal"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "at work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثمان.",
+					"english": "eight.",
+					"transliteration": "thamaan."
+				}
+			],
+			"targetWords": [
+				"I arrive"
+			]
+		},
+		{
+			"arabic": "أتغدى الساعة ثنتين.",
+			"arabicTashkeel": "أتغَدّى السّاعة ثِنتين.",
+			"english": "I have lunch at two.",
+			"transliteration": "atghadda is-saa3a thinteen.",
+			"wordAlignments": [
+				{
+					"arabic": "أتغدى",
+					"english": "I have lunch",
+					"transliteration": "atghadda"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثنتين.",
+					"english": "two.",
+					"transliteration": "thinteen."
+				}
+			],
+			"targetWords": [
+				"I have lunch"
+			]
+		},
+		{
+			"arabic": "أرد البيت العصر.",
+			"arabicTashkeel": "أرِد البيت العَصر.",
+			"english": "I come back home in the afternoon.",
+			"transliteration": "aridd il-beet il-3asr.",
+			"wordAlignments": [
+				{
+					"arabic": "أرد",
+					"english": "I come back",
+					"transliteration": "aridd"
+				},
+				{
+					"arabic": "البيت",
+					"english": "home",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "العصر.",
+					"english": "in the afternoon.",
+					"transliteration": "il-3asr."
+				}
+			],
+			"targetWords": [
+				"I come back"
+			]
+		},
+		{
+			"arabic": "أرتاح شوي بعد الدوام.",
+			"arabicTashkeel": "أرتاح شْوَي بَعد الدَّوام.",
+			"english": "I rest a little after work.",
+			"transliteration": "artaa7 shway ba3d id-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "أرتاح",
+					"english": "I rest",
+					"transliteration": "artaa7"
+				},
+				{
+					"arabic": "شوي",
+					"english": "a little",
+					"transliteration": "shway"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الدوام.",
+					"english": "work.",
+					"transliteration": "id-dawaam."
+				}
+			],
+			"targetWords": [
+				"I rest"
+			]
+		},
+		{
+			"arabic": "أتعشى الساعة تسع.",
+			"arabicTashkeel": "أتعَشّى السّاعة تِسع.",
+			"english": "I have dinner at nine.",
+			"transliteration": "at3ashsha is-saa3a tisa3.",
+			"wordAlignments": [
+				{
+					"arabic": "أتعشى",
+					"english": "I have dinner",
+					"transliteration": "at3ashsha"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسع.",
+					"english": "nine.",
+					"transliteration": "tisa3."
+				}
+			],
+			"targetWords": [
+				"I have dinner"
+			]
+		},
+		{
+			"arabic": "عادة أنام الساعة إحدعش.",
+			"arabicTashkeel": "عادةً أنام السّاعة إحدَعَش.",
+			"english": "I usually sleep at eleven.",
+			"transliteration": "3aadatan anaam is-saa3a i7da3ash.",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Usually",
+					"transliteration": "3aadatan"
+				},
+				{
+					"arabic": "أنام",
+					"english": "I sleep",
+					"transliteration": "anaam"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "إحدعش.",
+					"english": "eleven.",
+					"transliteration": "i7da3ash."
+				}
+			],
+			"targetWords": [
+				"Usually"
+			]
+		},
+		{
+			"arabic": "أقوم، بعدين أتسبح.",
+			"arabicTashkeel": "أقوم، بَعدين أتسَبَّح.",
+			"english": "I wake up, then I shower.",
+			"transliteration": "agoom, ba3dain atsabba7.",
+			"wordAlignments": [
+				{
+					"arabic": "أقوم،",
+					"english": "I wake up,",
+					"transliteration": "agoom,"
+				},
+				{
+					"arabic": "بعدين",
+					"english": "then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "أتسبح.",
+					"english": "I shower.",
+					"transliteration": "atsabba7."
+				}
+			],
+			"targetWords": [
+				"I wake up",
+				"Then / after that",
+				"I shower"
+			]
+		},
+		{
+			"arabic": "أغسل إيدي قبل الأكل.",
+			"arabicTashkeel": "أغسِل إيدي قَبل الأكل.",
+			"english": "I wash my hands before eating.",
+			"transliteration": "aghsil eedi gabil il-akl.",
+			"wordAlignments": [
+				{
+					"arabic": "أغسل",
+					"english": "I wash",
+					"transliteration": "aghsil"
+				},
+				{
+					"arabic": "إيدي",
+					"english": "my hands",
+					"transliteration": "eedi"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "الأكل.",
+					"english": "eating.",
+					"transliteration": "il-akl."
+				}
+			],
+			"targetWords": [
+				"I wash",
+				"Before"
+			]
+		},
+		{
+			"arabic": "أي ساعة تقوم؟",
+			"arabicTashkeel": "أيّ ساعة تْقوم؟",
+			"english": "What time do you wake up?",
+			"transliteration": "ayy saa3a tgoom?",
+			"wordAlignments": [
+				{
+					"arabic": "أي",
+					"english": "What",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "ساعة",
+					"english": "time",
+					"transliteration": "saa3a"
+				},
+				{
+					"arabic": "تقوم؟",
+					"english": "do you wake up?",
+					"transliteration": "tgoom?"
+				}
+			],
+			"targetWords": [
+				"I wake up"
+			]
+		},
+		{
+			"arabic": "تتسبح الصبح لو بالليل؟",
+			"arabicTashkeel": "تِتسَبَّح الصُّبح لو بالليل؟",
+			"english": "Do you shower in the morning or at night?",
+			"transliteration": "titsabba7 is-sub7 law bil-leel?",
+			"wordAlignments": [
+				{
+					"arabic": "تتسبح",
+					"english": "Do you shower",
+					"transliteration": "titsabba7"
+				},
+				{
+					"arabic": "الصبح",
+					"english": "in the morning",
+					"transliteration": "is-sub7"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "بالليل؟",
+					"english": "at night?",
+					"transliteration": "bil-leel?"
+				}
+			],
+			"targetWords": [
+				"I shower"
+			]
+		},
+		{
+			"arabic": "تلبس وتروح المدرسة.",
+			"arabicTashkeel": "تِلبَس وتْروح المَدرَسة.",
+			"english": "She gets dressed and goes to school.",
+			"transliteration": "tilbas w-trooh il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "تلبس",
+					"english": "She gets dressed",
+					"transliteration": "tilbas"
+				},
+				{
+					"arabic": "وتروح",
+					"english": "and goes",
+					"transliteration": "w-trooh"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "to school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"I get dressed"
+			]
+		},
+		{
+			"arabic": "نتريق سوا.",
+			"arabicTashkeel": "نِتريَّق سَوا.",
+			"english": "We have breakfast together.",
+			"transliteration": "nitrayyag sawa.",
+			"wordAlignments": [
+				{
+					"arabic": "نتريق",
+					"english": "We have breakfast",
+					"transliteration": "nitrayyag"
+				},
+				{
+					"arabic": "سوا.",
+					"english": "together.",
+					"transliteration": "sawa."
+				}
+			],
+			"targetWords": [
+				"I have breakfast"
+			]
+		},
+		{
+			"arabic": "أي ساعة تطلع من البيت؟",
+			"arabicTashkeel": "أيّ ساعة تِطلَع مِن البيت؟",
+			"english": "What time do you leave the house?",
+			"transliteration": "ayy saa3a titla3 min il-beet?",
+			"wordAlignments": [
+				{
+					"arabic": "أي",
+					"english": "What",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "ساعة",
+					"english": "time",
+					"transliteration": "saa3a"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "do you leave",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البيت؟",
+					"english": "the house?",
+					"transliteration": "il-beet?"
+				}
+			],
+			"targetWords": [
+				"I leave the house"
+			]
+		},
+		{
+			"arabic": "يوصل متأخر كل يوم.",
+			"arabicTashkeel": "يوصَل مِتأخِّر كِل يوم.",
+			"english": "He arrives late every day.",
+			"transliteration": "yoosal mit2akhkhir kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "يوصل",
+					"english": "He arrives",
+					"transliteration": "yoosal"
+				},
+				{
+					"arabic": "متأخر",
+					"english": "late",
+					"transliteration": "mit2akhkhir"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"I arrive",
+				"Every day"
+			]
+		},
+		{
+			"arabic": "نتغدى بالبيت.",
+			"arabicTashkeel": "نِتغَدّى بالبيت.",
+			"english": "We have lunch at home.",
+			"transliteration": "nitghadda bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "نتغدى",
+					"english": "We have lunch",
+					"transliteration": "nitghadda"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"I have lunch"
+			]
+		},
+		{
+			"arabic": "متى ترد؟",
+			"arabicTashkeel": "مِتى تْرِد؟",
+			"english": "When do you come back?",
+			"transliteration": "mita tridd?",
+			"wordAlignments": [
+				{
+					"arabic": "متى",
+					"english": "When",
+					"transliteration": "mita"
+				},
+				{
+					"arabic": "ترد؟",
+					"english": "do you come back?",
+					"transliteration": "tridd?"
+				}
+			],
+			"targetWords": [
+				"I come back"
+			]
+		},
+		{
+			"arabic": "أبوي يرتاح العصر.",
+			"arabicTashkeel": "أبوي يِرتاح العَصر.",
+			"english": "My dad rests in the afternoon.",
+			"transliteration": "abooy yirtaa7 il-3asr.",
+			"wordAlignments": [
+				{
+					"arabic": "أبوي",
+					"english": "My dad",
+					"transliteration": "abooy"
+				},
+				{
+					"arabic": "يرتاح",
+					"english": "rests",
+					"transliteration": "yirtaa7"
+				},
+				{
+					"arabic": "العصر.",
+					"english": "in the afternoon.",
+					"transliteration": "il-3asr."
+				}
+			],
+			"targetWords": [
+				"I rest"
+			]
+		},
+		{
+			"arabic": "يتعشون متأخر.",
+			"arabicTashkeel": "يِتعَشّون مِتأخِّر.",
+			"english": "They have dinner late.",
+			"transliteration": "yit3ashshoon mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "يتعشون",
+					"english": "They have dinner",
+					"transliteration": "yit3ashshoon"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"I have dinner"
+			]
+		},
+		{
+			"arabic": "كل يوم أروح الدوام.",
+			"arabicTashkeel": "كِل يوم أروح الدَّوام.",
+			"english": "Every day I go to work.",
+			"transliteration": "kil yoom arooh id-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم",
+					"english": "day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "أروح",
+					"english": "I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "الدوام.",
+					"english": "to work.",
+					"transliteration": "id-dawaam."
+				}
+			],
+			"targetWords": [
+				"Every day"
+			]
+		},
+		{
+			"arabic": "عادة أشرب كرك الصبح.",
+			"arabicTashkeel": "عادةً أشرَب كَرَك الصُّبح.",
+			"english": "I usually drink karak in the morning.",
+			"transliteration": "3aadatan ashrab karak is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Usually",
+					"transliteration": "3aadatan"
+				},
+				{
+					"arabic": "أشرب",
+					"english": "I drink",
+					"transliteration": "ashrab"
+				},
+				{
+					"arabic": "كرك",
+					"english": "karak",
+					"transliteration": "karak"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Usually"
+			]
+		},
+		{
+			"arabic": "أتغدى، بعدين أرتاح.",
+			"arabicTashkeel": "أتغَدّى، بَعدين أرتاح.",
+			"english": "I have lunch, then I rest.",
+			"transliteration": "atghadda, ba3dain artaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "أتغدى،",
+					"english": "I have lunch,",
+					"transliteration": "atghadda,"
+				},
+				{
+					"arabic": "بعدين",
+					"english": "then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "أرتاح.",
+					"english": "I rest.",
+					"transliteration": "artaa7."
+				}
+			],
+			"targetWords": [
+				"I have lunch",
+				"Then / after that",
+				"I rest"
+			]
+		},
+		{
+			"arabic": "قبل لا أنام أقرا.",
+			"arabicTashkeel": "قَبل لا أنام أقرا.",
+			"english": "Before I sleep, I read.",
+			"transliteration": "gabil la anaam agra.",
+			"wordAlignments": [
+				{
+					"arabic": "قبل",
+					"english": "Before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "لا",
+					"english": "that",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "أنام",
+					"english": "I sleep",
+					"transliteration": "anaam"
+				},
+				{
+					"arabic": "أقرا.",
+					"english": "I read.",
+					"transliteration": "agra."
+				}
+			],
+			"targetWords": [
+				"Before"
+			]
+		},
+		{
+			"arabic": "أقوم بدري يوم الأحد.",
+			"arabicTashkeel": "أقوم بَدري يوم الأحَد.",
+			"english": "I wake up early on Sunday.",
+			"transliteration": "agoom badri yoom il-a7ad.",
+			"wordAlignments": [
+				{
+					"arabic": "أقوم",
+					"english": "I wake up",
+					"transliteration": "agoom"
+				},
+				{
+					"arabic": "بدري",
+					"english": "early",
+					"transliteration": "badri"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الأحد.",
+					"english": "Sunday.",
+					"transliteration": "il-a7ad."
+				}
+			],
+			"targetWords": [
+				"I wake up"
+			]
+		},
+		{
+			"arabic": "أتسبح بعد الجيم.",
+			"arabicTashkeel": "أتسَبَّح بَعد الجيم.",
+			"english": "I shower after the gym.",
+			"transliteration": "atsabba7 ba3d il-jeem.",
+			"wordAlignments": [
+				{
+					"arabic": "أتسبح",
+					"english": "I shower",
+					"transliteration": "atsabba7"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الجيم.",
+					"english": "the gym.",
+					"transliteration": "il-jeem."
+				}
+			],
+			"targetWords": [
+				"I shower"
+			]
+		},
+		{
+			"arabic": "إغسل المواعين لو سمحت.",
+			"arabicTashkeel": "إغسِل المَواعين لو سَمَحت.",
+			"english": "Wash the dishes, please.",
+			"transliteration": "ighsil il-mawaa3een law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "إغسل",
+					"english": "Wash",
+					"transliteration": "ighsil"
+				},
+				{
+					"arabic": "المواعين",
+					"english": "the dishes",
+					"transliteration": "il-mawaa3een"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"I wash"
+			]
+		},
+		{
+			"arabic": "شو بتلبس اليوم؟",
+			"arabicTashkeel": "شو بِتلبَس اليوم؟",
+			"english": "What are you wearing today?",
+			"transliteration": "shu bitilbas il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "بتلبس",
+					"english": "will you wear",
+					"transliteration": "bitilbas"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"I get dressed"
+			]
+		},
+		{
+			"arabic": "ما أتريق، بس أشرب قهوة.",
+			"arabicTashkeel": "ما أتريَّق، بَس أشرَب قَهوة.",
+			"english": "I don't have breakfast, I only drink coffee.",
+			"transliteration": "ma atrayyag, bas ashrab gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتريق،",
+					"english": "I have breakfast,",
+					"transliteration": "atrayyag,"
+				},
+				{
+					"arabic": "بس",
+					"english": "only",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "أشرب",
+					"english": "I drink",
+					"transliteration": "ashrab"
+				},
+				{
+					"arabic": "قهوة.",
+					"english": "coffee.",
+					"transliteration": "gahwa."
+				}
+			],
+			"targetWords": [
+				"I have breakfast"
+			]
+		},
+		{
+			"arabic": "أطلع من الدوام الساعة ثلاث.",
+			"arabicTashkeel": "أطلَع مِن الدَّوام السّاعة ثَلاث.",
+			"english": "I leave work at three.",
+			"transliteration": "atla3 min id-dawaam is-saa3a thalaath.",
+			"wordAlignments": [
+				{
+					"arabic": "أطلع",
+					"english": "I leave",
+					"transliteration": "atla3"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثلاث.",
+					"english": "three.",
+					"transliteration": "thalaath."
+				}
+			],
+			"targetWords": [
+				"I leave the house"
+			]
+		},
+		{
+			"arabic": "متى توصل دبي؟",
+			"arabicTashkeel": "مِتى توصَل دُبَي؟",
+			"english": "When do you arrive in Dubai?",
+			"transliteration": "mita toosal dubay?",
+			"wordAlignments": [
+				{
+					"arabic": "متى",
+					"english": "When",
+					"transliteration": "mita"
+				},
+				{
+					"arabic": "توصل",
+					"english": "do you arrive",
+					"transliteration": "toosal"
+				},
+				{
+					"arabic": "دبي؟",
+					"english": "in Dubai?",
+					"transliteration": "dubay?"
+				}
+			],
+			"targetWords": [
+				"I arrive"
+			]
+		},
+		{
+			"arabic": "شو تغديت؟",
+			"arabicTashkeel": "شو تغَدّيت؟",
+			"english": "What did you have for lunch?",
+			"transliteration": "shu tghaddeet?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "تغديت؟",
+					"english": "did you have for lunch?",
+					"transliteration": "tghaddeet?"
+				}
+			],
+			"targetWords": [
+				"I have lunch"
+			]
+		},
+		{
+			"arabic": "أرد متأخر يوم الخميس.",
+			"arabicTashkeel": "أرِد مِتأخِّر يوم الخَميس.",
+			"english": "I come back late on Thursday.",
+			"transliteration": "aridd mit2akhkhir yoom il-khamees.",
+			"wordAlignments": [
+				{
+					"arabic": "أرد",
+					"english": "I come back",
+					"transliteration": "aridd"
+				},
+				{
+					"arabic": "متأخر",
+					"english": "late",
+					"transliteration": "mit2akhkhir"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الخميس.",
+					"english": "Thursday.",
+					"transliteration": "il-khamees."
+				}
+			],
+			"targetWords": [
+				"I come back"
+			]
+		},
+		{
+			"arabic": "يوم السبت أرتاح طول اليوم.",
+			"arabicTashkeel": "يوم السَّبت أرتاح طول اليوم.",
+			"english": "On Saturday I rest all day.",
+			"transliteration": "yoom is-sabt artaa7 tool il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "On",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "السبت",
+					"english": "Saturday",
+					"transliteration": "is-sabt"
+				},
+				{
+					"arabic": "أرتاح",
+					"english": "I rest",
+					"transliteration": "artaa7"
+				},
+				{
+					"arabic": "طول",
+					"english": "all",
+					"transliteration": "tool"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "day.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"I rest"
+			]
+		},
+		{
+			"arabic": "نتعشى في بيت جدتي.",
+			"arabicTashkeel": "نِتعَشّى في بيت جَدّتي.",
+			"english": "We have dinner at grandma's house.",
+			"transliteration": "nit3ashsha fi beet yaddati.",
+			"wordAlignments": [
+				{
+					"arabic": "نتعشى",
+					"english": "We have dinner",
+					"transliteration": "nit3ashsha"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "بيت",
+					"english": "the house of",
+					"transliteration": "beet"
+				},
+				{
+					"arabic": "جدتي.",
+					"english": "my grandmother.",
+					"transliteration": "yaddati."
+				}
+			],
+			"targetWords": [
+				"I have dinner"
+			]
+		},
+		{
+			"arabic": "تدرس كل يوم.",
+			"arabicTashkeel": "تِدرِس كِل يوم.",
+			"english": "She studies every day.",
+			"transliteration": "tidris kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "تدرس",
+					"english": "She studies",
+					"transliteration": "tidris"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"Every day"
+			]
+		},
+		{
+			"arabic": "عادة يرد الساعة أربع.",
+			"arabicTashkeel": "عادةً يْرِد السّاعة أربَع.",
+			"english": "He usually comes back at four.",
+			"transliteration": "3aadatan yridd is-saa3a arba3.",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Usually",
+					"transliteration": "3aadatan"
+				},
+				{
+					"arabic": "يرد",
+					"english": "he comes back",
+					"transliteration": "yridd"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "أربع.",
+					"english": "four.",
+					"transliteration": "arba3."
+				}
+			],
+			"targetWords": [
+				"Usually",
+				"I come back"
+			]
+		},
+		{
+			"arabic": "ألبس، بعدين أتريق.",
+			"arabicTashkeel": "ألبَس، بَعدين أتريَّق.",
+			"english": "I get dressed, then I have breakfast.",
+			"transliteration": "albas, ba3dain atrayyag.",
+			"wordAlignments": [
+				{
+					"arabic": "ألبس،",
+					"english": "I get dressed,",
+					"transliteration": "albas,"
+				},
+				{
+					"arabic": "بعدين",
+					"english": "then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "أتريق.",
+					"english": "I have breakfast.",
+					"transliteration": "atrayyag."
+				}
+			],
+			"targetWords": [
+				"I get dressed",
+				"Then / after that",
+				"I have breakfast"
+			]
+		},
+		{
+			"arabic": "قبل الدوام أشرب قهوة.",
+			"arabicTashkeel": "قَبل الدَّوام أشرَب قَهوة.",
+			"english": "Before work I drink coffee.",
+			"transliteration": "gabil id-dawaam ashrab gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "قبل",
+					"english": "Before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "أشرب",
+					"english": "I drink",
+					"transliteration": "ashrab"
+				},
+				{
+					"arabic": "قهوة.",
+					"english": "coffee.",
+					"transliteration": "gahwa."
+				}
+			],
+			"targetWords": [
+				"Before"
+			]
+		},
+		{
+			"arabic": "العيال يقومون متأخر يوم السبت.",
+			"arabicTashkeel": "العْيال يْقومون مِتأخِّر يوم السَّبت.",
+			"english": "The kids wake up late on Saturday.",
+			"transliteration": "il-3yaal ygoomoon mit2akhkhir yoom is-sabt.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يقومون",
+					"english": "wake up",
+					"transliteration": "ygoomoon"
+				},
+				{
+					"arabic": "متأخر",
+					"english": "late",
+					"transliteration": "mit2akhkhir"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "السبت.",
+					"english": "Saturday.",
+					"transliteration": "is-sabt."
+				}
+			],
+			"targetWords": [
+				"I wake up"
+			]
+		},
+		{
+			"arabic": "تسبح بسرعة، تأخرنا!",
+			"arabicTashkeel": "تْسَبَّح بسُرعة، تأخَّرنا!",
+			"english": "Shower quickly, we're late!",
+			"transliteration": "tsabba7 b-sur3a, t2akhkharna!",
+			"wordAlignments": [
+				{
+					"arabic": "تسبح",
+					"english": "Shower",
+					"transliteration": "tsabba7"
+				},
+				{
+					"arabic": "بسرعة،",
+					"english": "quickly,",
+					"transliteration": "b-sur3a,"
+				},
+				{
+					"arabic": "تأخرنا!",
+					"english": "we're late!",
+					"transliteration": "t2akhkharna!"
+				}
+			],
+			"targetWords": [
+				"I shower"
+			]
+		},
+		{
+			"arabic": "إغسل إيدك.",
+			"arabicTashkeel": "إغسِل إيدَك.",
+			"english": "Wash your hands.",
+			"transliteration": "ighsil eedak.",
+			"wordAlignments": [
+				{
+					"arabic": "إغسل",
+					"english": "Wash",
+					"transliteration": "ighsil"
+				},
+				{
+					"arabic": "إيدك.",
+					"english": "your hands.",
+					"transliteration": "eedak."
+				}
+			],
+			"targetWords": [
+				"I wash"
+			]
+		},
+		{
+			"arabic": "ألبس كندورة حق الدوام.",
+			"arabicTashkeel": "ألبَس كَندورة حَق الدَّوام.",
+			"english": "I wear a kandura to work.",
+			"transliteration": "albas kandoora 7agg id-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "ألبس",
+					"english": "I wear",
+					"transliteration": "albas"
+				},
+				{
+					"arabic": "كندورة",
+					"english": "a kandura",
+					"transliteration": "kandoora"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الدوام.",
+					"english": "work.",
+					"transliteration": "id-dawaam."
+				}
+			],
+			"targetWords": [
+				"I get dressed"
+			]
+		},
+		{
+			"arabic": "شو تتريق؟",
+			"arabicTashkeel": "شو تِتريَّق؟",
+			"english": "What do you have for breakfast?",
+			"transliteration": "shu titrayyag?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "تتريق؟",
+					"english": "do you have for breakfast?",
+					"transliteration": "titrayyag?"
+				}
+			],
+			"targetWords": [
+				"I have breakfast"
+			]
+		},
+		{
+			"arabic": "نطلع بالمسا.",
+			"arabicTashkeel": "نِطلَع بالمَسا.",
+			"english": "We go out in the evening.",
+			"transliteration": "nitla3 bil-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "نطلع",
+					"english": "We go out",
+					"transliteration": "nitla3"
+				},
+				{
+					"arabic": "بالمسا.",
+					"english": "in the evening.",
+					"transliteration": "bil-masa."
+				}
+			],
+			"targetWords": [
+				"I leave the house"
+			]
+		},
+		{
+			"arabic": "الباص يوصل الساعة تسع.",
+			"arabicTashkeel": "الباص يوصَل السّاعة تِسع.",
+			"english": "The bus arrives at nine.",
+			"transliteration": "il-baas yoosal is-saa3a tisa3.",
+			"wordAlignments": [
+				{
+					"arabic": "الباص",
+					"english": "The bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "يوصل",
+					"english": "arrives",
+					"transliteration": "yoosal"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسع.",
+					"english": "nine.",
+					"transliteration": "tisa3."
+				}
+			],
+			"targetWords": [
+				"I arrive"
+			]
+		},
+		{
+			"arabic": "العيال يتغدون بالمدرسة.",
+			"arabicTashkeel": "العْيال يِتغَدّون بالمَدرَسة.",
+			"english": "The kids have lunch at school.",
+			"transliteration": "il-3yaal yitghaddoon bil-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يتغدون",
+					"english": "have lunch",
+					"transliteration": "yitghaddoon"
+				},
+				{
+					"arabic": "بالمدرسة.",
+					"english": "at school.",
+					"transliteration": "bil-madrasa."
+				}
+			],
+			"targetWords": [
+				"I have lunch"
+			]
+		},
+		{
+			"arabic": "يرد من الكويت باكر.",
+			"arabicTashkeel": "يْرِد مِن الكُوَيت باكِر.",
+			"english": "He comes back from Kuwait tomorrow.",
+			"transliteration": "yridd min il-kuwayt baachir.",
+			"wordAlignments": [
+				{
+					"arabic": "يرد",
+					"english": "He comes back",
+					"transliteration": "yridd"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الكويت",
+					"english": "Kuwait",
+					"transliteration": "il-kuwayt"
+				},
+				{
+					"arabic": "باكر.",
+					"english": "tomorrow.",
+					"transliteration": "baachir."
+				}
+			],
+			"targetWords": [
+				"I come back"
+			]
+		},
+		{
+			"arabic": "إرتاح شوي.",
+			"arabicTashkeel": "إرتاح شْوَي.",
+			"english": "Rest a little.",
+			"transliteration": "irtaa7 shway.",
+			"wordAlignments": [
+				{
+					"arabic": "إرتاح",
+					"english": "Rest",
+					"transliteration": "irtaa7"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"I rest"
+			]
+		},
+		{
+			"arabic": "شو تعشيت؟",
+			"arabicTashkeel": "شو تعَشّيت؟",
+			"english": "What did you have for dinner?",
+			"transliteration": "shu t3ashsheet?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "تعشيت؟",
+					"english": "did you have for dinner?",
+					"transliteration": "t3ashsheet?"
+				}
+			],
+			"targetWords": [
+				"I have dinner"
+			]
+		},
+		{
+			"arabic": "عادة آخذ المترو حق الدوام.",
+			"arabicTashkeel": "عادةً آخِذ المِترو حَق الدَّوام.",
+			"english": "I usually take the metro to work.",
+			"transliteration": "3aadatan aakhidh il-mitro 7agg id-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Usually",
+					"transliteration": "3aadatan"
+				},
+				{
+					"arabic": "آخذ",
+					"english": "I take",
+					"transliteration": "aakhidh"
+				},
+				{
+					"arabic": "المترو",
+					"english": "the metro",
+					"transliteration": "il-mitro"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الدوام.",
+					"english": "work.",
+					"transliteration": "id-dawaam."
+				}
+			],
+			"targetWords": [
+				"Usually"
+			]
+		},
+		{
+			"arabic": "آكل، بعدين أنام.",
+			"arabicTashkeel": "آكِل، بَعدين أنام.",
+			"english": "I eat, then I sleep.",
+			"transliteration": "aakil, ba3dain anaam.",
+			"wordAlignments": [
+				{
+					"arabic": "آكل،",
+					"english": "I eat,",
+					"transliteration": "aakil,"
+				},
+				{
+					"arabic": "بعدين",
+					"english": "then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "أنام.",
+					"english": "I sleep.",
+					"transliteration": "anaam."
+				}
+			],
+			"targetWords": [
+				"Then / after that"
+			]
+		},
+		{
+			"arabic": "إتصل فيني قبل لا تجي.",
+			"arabicTashkeel": "إتَّصِل فيني قَبل لا تِجي.",
+			"english": "Call me before you come.",
+			"transliteration": "ittasil feeni gabil la tiyi.",
+			"wordAlignments": [
+				{
+					"arabic": "إتصل",
+					"english": "Call",
+					"transliteration": "ittasil"
+				},
+				{
+					"arabic": "فيني",
+					"english": "me",
+					"transliteration": "feeni"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "لا",
+					"english": "that",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تجي.",
+					"english": "you come.",
+					"transliteration": "tiyi."
+				}
+			],
+			"targetWords": [
+				"Before"
+			]
+		},
+		{
+			"arabic": "ما يقوم بدري.",
+			"arabicTashkeel": "ما يْقوم بَدري.",
+			"english": "He doesn't wake up early.",
+			"transliteration": "ma ygoom badri.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يقوم",
+					"english": "he wakes up",
+					"transliteration": "ygoom"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"I wake up"
+			]
+		},
+		{
+			"arabic": "أروح الجمعية كل يوم.",
+			"arabicTashkeel": "أروح الجَمعية كِل يوم.",
+			"english": "I go to the supermarket every day.",
+			"transliteration": "arooh il-jam3iyya kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أروح",
+					"english": "I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "الجمعية",
+					"english": "to the co-op",
+					"transliteration": "il-jam3iyya"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"Every day"
+			]
+		},
+		{
+			"arabic": "عادة نتعشى سوا.",
+			"arabicTashkeel": "عادةً نِتعَشّى سَوا.",
+			"english": "We usually have dinner together.",
+			"transliteration": "3aadatan nit3ashsha sawa.",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Usually",
+					"transliteration": "3aadatan"
+				},
+				{
+					"arabic": "نتعشى",
+					"english": "we have dinner",
+					"transliteration": "nit3ashsha"
+				},
+				{
+					"arabic": "سوا.",
+					"english": "together.",
+					"transliteration": "sawa."
+				}
+			],
+			"targetWords": [
+				"Usually",
+				"I have dinner"
+			]
+		},
+		{
+			"arabic": "بعدين نشوف تلفزيون.",
+			"arabicTashkeel": "بَعدين نْشوف تِلِفِزيون.",
+			"english": "Then we watch TV.",
+			"transliteration": "ba3dain nshoof tilifizyoon.",
+			"wordAlignments": [
+				{
+					"arabic": "بعدين",
+					"english": "Then",
+					"transliteration": "ba3dain"
+				},
+				{
+					"arabic": "نشوف",
+					"english": "we watch",
+					"transliteration": "nshoof"
+				},
+				{
+					"arabic": "تلفزيون.",
+					"english": "TV.",
+					"transliteration": "tilifizyoon."
+				}
+			],
+			"targetWords": [
+				"Then / after that"
+			]
+		},
+		{
+			"arabic": "قبل المدرسة أتريق.",
+			"arabicTashkeel": "قَبل المَدرَسة أتريَّق.",
+			"english": "Before school I have breakfast.",
+			"transliteration": "gabil il-madrasa atrayyag.",
+			"wordAlignments": [
+				{
+					"arabic": "قبل",
+					"english": "Before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "المدرسة",
+					"english": "school",
+					"transliteration": "il-madrasa"
+				},
+				{
+					"arabic": "أتريق.",
+					"english": "I have breakfast.",
+					"transliteration": "atrayyag."
+				}
+			],
+			"targetWords": [
+				"Before",
+				"I have breakfast"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Ahmed's Day",
+			"sentences": [
+				{
+					"arabic": "أحمد يقوم الساعة ست كل يوم.",
+					"arabicTashkeel": "أحمَد يْقوم السّاعة سِت كِل يوم.",
+					"english": "Ahmed wakes up at six every day.",
+					"transliteration": "a7mad ygoom is-saa3a sitt kil yoom.",
+					"wordAlignments": [
+						{
+							"arabic": "أحمد",
+							"english": "Ahmed",
+							"transliteration": "a7mad"
+						},
+						{
+							"arabic": "يقوم",
+							"english": "wakes up",
+							"transliteration": "ygoom"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "ست",
+							"english": "six",
+							"transliteration": "sitt"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "يوم.",
+							"english": "day.",
+							"transliteration": "yoom."
+						}
+					]
+				},
+				{
+					"arabic": "يتسبح، يلبس ويتريق ويا أهله.",
+					"arabicTashkeel": "يِتسَبَّح، يِلبَس ويِتريَّق وِيّا أهلَه.",
+					"english": "He showers, gets dressed and has breakfast with his family.",
+					"transliteration": "yitsabba7, yilbas w-yitrayyag wiyya ahla.",
+					"wordAlignments": [
+						{
+							"arabic": "يتسبح،",
+							"english": "He showers,",
+							"transliteration": "yitsabba7,"
+						},
+						{
+							"arabic": "يلبس",
+							"english": "gets dressed",
+							"transliteration": "yilbas"
+						},
+						{
+							"arabic": "ويتريق",
+							"english": "and has breakfast",
+							"transliteration": "w-yitrayyag"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "أهله.",
+							"english": "his family.",
+							"transliteration": "ahla."
+						}
+					]
+				},
+				{
+					"arabic": "يطلع من البيت سبع ويوصل الدوام ثمان.",
+					"arabicTashkeel": "يِطلَع مِن البيت سَبع ويوصَل الدَّوام ثَمان.",
+					"english": "He leaves the house at seven and arrives at work at eight.",
+					"transliteration": "yitla3 min il-beet saba3 w-yoosal id-dawaam thamaan.",
+					"wordAlignments": [
+						{
+							"arabic": "يطلع",
+							"english": "He leaves",
+							"transliteration": "yitla3"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "البيت",
+							"english": "the house",
+							"transliteration": "il-beet"
+						},
+						{
+							"arabic": "سبع",
+							"english": "at seven",
+							"transliteration": "saba3"
+						},
+						{
+							"arabic": "ويوصل",
+							"english": "and arrives",
+							"transliteration": "w-yoosal"
+						},
+						{
+							"arabic": "الدوام",
+							"english": "at work",
+							"transliteration": "id-dawaam"
+						},
+						{
+							"arabic": "ثمان.",
+							"english": "at eight.",
+							"transliteration": "thamaan."
+						}
+					]
+				},
+				{
+					"arabic": "يرد العصر ويرتاح.",
+					"arabicTashkeel": "يْرِد العَصر ويِرتاح.",
+					"english": "He comes back in the afternoon and rests.",
+					"transliteration": "yridd il-3asr w-yirtaa7.",
+					"wordAlignments": [
+						{
+							"arabic": "يرد",
+							"english": "He comes back",
+							"transliteration": "yridd"
+						},
+						{
+							"arabic": "العصر",
+							"english": "in the afternoon",
+							"transliteration": "il-3asr"
+						},
+						{
+							"arabic": "ويرتاح.",
+							"english": "and rests.",
+							"transliteration": "w-yirtaa7."
+						}
+					]
+				},
+				{
+					"arabic": "عادة يتعشى الساعة تسع، بعدين ينام.",
+					"arabicTashkeel": "عادةً يِتعَشّى السّاعة تِسع، بَعدين يْنام.",
+					"english": "He usually has dinner at nine, then he sleeps.",
+					"transliteration": "3aadatan yit3ashsha is-saa3a tisa3, ba3dain ynaam.",
+					"wordAlignments": [
+						{
+							"arabic": "عادة",
+							"english": "Usually",
+							"transliteration": "3aadatan"
+						},
+						{
+							"arabic": "يتعشى",
+							"english": "he has dinner",
+							"transliteration": "yit3ashsha"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "تسع،",
+							"english": "nine,",
+							"transliteration": "tisa3,"
+						},
+						{
+							"arabic": "بعدين",
+							"english": "then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "ينام.",
+							"english": "he sleeps.",
+							"transliteration": "ynaam."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "My Saturday",
+			"sentences": [
+				{
+					"arabic": "يوم السبت أقوم متأخر.",
+					"arabicTashkeel": "يوم السَّبت أقوم مِتأخِّر.",
+					"english": "On Saturday I wake up late.",
+					"transliteration": "yoom is-sabt agoom mit2akhkhir.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "السبت",
+							"english": "Saturday",
+							"transliteration": "is-sabt"
+						},
+						{
+							"arabic": "أقوم",
+							"english": "I wake up",
+							"transliteration": "agoom"
+						},
+						{
+							"arabic": "متأخر.",
+							"english": "late.",
+							"transliteration": "mit2akhkhir."
+						}
+					]
+				},
+				{
+					"arabic": "أتريق، بعدين أطلع ويا ربعي.",
+					"arabicTashkeel": "أتريَّق، بَعدين أطلَع وِيّا رَبعي.",
+					"english": "I have breakfast, then I go out with my friends.",
+					"transliteration": "atrayyag, ba3dain atla3 wiyya rab3i.",
+					"wordAlignments": [
+						{
+							"arabic": "أتريق،",
+							"english": "I have breakfast,",
+							"transliteration": "atrayyag,"
+						},
+						{
+							"arabic": "بعدين",
+							"english": "then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "أطلع",
+							"english": "I go out",
+							"transliteration": "atla3"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "ربعي.",
+							"english": "my friends.",
+							"transliteration": "rab3i."
+						}
+					]
+				},
+				{
+					"arabic": "نتغدى في بيت جدتي.",
+					"arabicTashkeel": "نِتغَدّى في بيت جَدّتي.",
+					"english": "We have lunch at my grandma's house.",
+					"transliteration": "nitghadda fi beet yaddati.",
+					"wordAlignments": [
+						{
+							"arabic": "نتغدى",
+							"english": "We have lunch",
+							"transliteration": "nitghadda"
+						},
+						{
+							"arabic": "في",
+							"english": "at",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "بيت",
+							"english": "the house of",
+							"transliteration": "beet"
+						},
+						{
+							"arabic": "جدتي.",
+							"english": "my grandmother.",
+							"transliteration": "yaddati."
+						}
+					]
+				},
+				{
+					"arabic": "بالمسا أرتاح بالبيت.",
+					"arabicTashkeel": "بالمَسا أرتاح بالبيت.",
+					"english": "In the evening I rest at home.",
+					"transliteration": "bil-masa artaa7 bil-beet.",
+					"wordAlignments": [
+						{
+							"arabic": "بالمسا",
+							"english": "In the evening",
+							"transliteration": "bil-masa"
+						},
+						{
+							"arabic": "أرتاح",
+							"english": "I rest",
+							"transliteration": "artaa7"
+						},
+						{
+							"arabic": "بالبيت.",
+							"english": "at home.",
+							"transliteration": "bil-beet."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student has a new Emirati flatmate in Abu Dhabi, and they are working out a morning schedule so they don't clash over the bathroom.",
+		"studentRole": "A flatmate learning Gulf Arabic.",
+		"otherRole": "The Emirati flatmate, who wakes up very early for dawn prayer.",
+		"goalEnglish": "Describe your daily routine (waking up, showering, breakfast, leaving, coming back) and agree who showers first.",
+		"targetWords": [
+			"I wake up",
+			"I shower",
+			"I have breakfast",
+			"I leave the house",
+			"I come back",
+			"Usually",
+			"Before",
+			"Then / after that"
+		]
+	}
+}

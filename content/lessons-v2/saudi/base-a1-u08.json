@@ -1,0 +1,1856 @@
+{
+	"vocab": [
+		{
+			"arabic": "أحمر",
+			"arabicTashkeel": "أحمَر",
+			"english": "Red",
+			"transliteration": "a7mar",
+			"wordAlignments": [
+				{
+					"arabic": "أحمر",
+					"english": "Red",
+					"transliteration": "a7mar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أزرق",
+			"arabicTashkeel": "أزرَق",
+			"english": "Blue",
+			"transliteration": "azrag",
+			"wordAlignments": [
+				{
+					"arabic": "أزرق",
+					"english": "Blue",
+					"transliteration": "azrag"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أخضر",
+			"arabicTashkeel": "أخضَر",
+			"english": "Green",
+			"transliteration": "akhdhar",
+			"wordAlignments": [
+				{
+					"arabic": "أخضر",
+					"english": "Green",
+					"transliteration": "akhdhar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أصفر",
+			"arabicTashkeel": "أصفَر",
+			"english": "Yellow",
+			"transliteration": "asfar",
+			"wordAlignments": [
+				{
+					"arabic": "أصفر",
+					"english": "Yellow",
+					"transliteration": "asfar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أبيض",
+			"arabicTashkeel": "أبيَض",
+			"english": "White",
+			"transliteration": "abyadh",
+			"wordAlignments": [
+				{
+					"arabic": "أبيض",
+					"english": "White",
+					"transliteration": "abyadh"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أسود",
+			"arabicTashkeel": "أسوَد",
+			"english": "Black",
+			"transliteration": "aswad",
+			"wordAlignments": [
+				{
+					"arabic": "أسود",
+					"english": "Black",
+					"transliteration": "aswad"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "لون",
+			"arabicTashkeel": "لون",
+			"english": "Color",
+			"transliteration": "loon",
+			"wordAlignments": [
+				{
+					"arabic": "لون",
+					"english": "Color",
+					"transliteration": "loon"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جديد",
+			"arabicTashkeel": "جَديد",
+			"english": "New",
+			"transliteration": "jadeed",
+			"wordAlignments": [
+				{
+					"arabic": "جديد",
+					"english": "New",
+					"transliteration": "jadeed"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "قديم",
+			"arabicTashkeel": "قَديم",
+			"english": "Old (for things)",
+			"transliteration": "gadeem",
+			"wordAlignments": [
+				{
+					"arabic": "قديم",
+					"english": "Old",
+					"transliteration": "gadeem"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "طويل",
+			"arabicTashkeel": "طَويل",
+			"english": "Tall",
+			"transliteration": "taweel",
+			"wordAlignments": [
+				{
+					"arabic": "طويل",
+					"english": "Tall",
+					"transliteration": "taweel"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "قصير",
+			"arabicTashkeel": "قَصير",
+			"english": "Short",
+			"transliteration": "gaseer",
+			"wordAlignments": [
+				{
+					"arabic": "قصير",
+					"english": "Short",
+					"transliteration": "gaseer"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "غالي",
+			"arabicTashkeel": "غالي",
+			"english": "Expensive",
+			"transliteration": "ghaali",
+			"wordAlignments": [
+				{
+					"arabic": "غالي",
+					"english": "Expensive",
+					"transliteration": "ghaali"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "رخيص",
+			"arabicTashkeel": "رَخيص",
+			"english": "Cheap",
+			"transliteration": "rakhees",
+			"wordAlignments": [
+				{
+					"arabic": "رخيص",
+					"english": "Cheap",
+					"transliteration": "rakhees"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "نظيف",
+			"arabicTashkeel": "نَظيف",
+			"english": "Clean",
+			"transliteration": "nadheef",
+			"wordAlignments": [
+				{
+					"arabic": "نظيف",
+					"english": "Clean",
+					"transliteration": "nadheef"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "حلو",
+			"arabicTashkeel": "حِلو",
+			"english": "Nice",
+			"transliteration": "7ilu",
+			"wordAlignments": [
+				{
+					"arabic": "حلو",
+					"english": "Nice",
+					"transliteration": "7ilu"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "السيارة حمرا.",
+			"arabicTashkeel": "السَّيّارة حَمرا.",
+			"english": "The car is red.",
+			"transliteration": "is-sayyaara 7amra.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car is",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "حمرا.",
+					"english": "red.",
+					"transliteration": "7amra."
+				}
+			],
+			"targetWords": [
+				"Red"
+			]
+		},
+		{
+			"arabic": "القلم أحمر.",
+			"arabicTashkeel": "القَلَم أحمَر.",
+			"english": "The pen is red.",
+			"transliteration": "il-galam a7mar.",
+			"wordAlignments": [
+				{
+					"arabic": "القلم",
+					"english": "The pen is",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "أحمر.",
+					"english": "red.",
+					"transliteration": "a7mar."
+				}
+			],
+			"targetWords": [
+				"Red"
+			]
+		},
+		{
+			"arabic": "البيت أبيض.",
+			"arabicTashkeel": "البيت أبيَض.",
+			"english": "The house is white.",
+			"transliteration": "il-bait abyadh.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "أبيض.",
+					"english": "white.",
+					"transliteration": "abyadh."
+				}
+			],
+			"targetWords": [
+				"White"
+			]
+		},
+		{
+			"arabic": "السيارة بيضا.",
+			"arabicTashkeel": "السَّيّارة بيضا.",
+			"english": "The car is white.",
+			"transliteration": "is-sayyaara baidha.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car is",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "بيضا.",
+					"english": "white.",
+					"transliteration": "baidha."
+				}
+			],
+			"targetWords": [
+				"White"
+			]
+		},
+		{
+			"arabic": "الكتاب أزرق.",
+			"arabicTashkeel": "الكِتاب أزرَق.",
+			"english": "The book is blue.",
+			"transliteration": "il-kitaab azrag.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book is",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "أزرق.",
+					"english": "blue.",
+					"transliteration": "azrag."
+				}
+			],
+			"targetWords": [
+				"Blue"
+			]
+		},
+		{
+			"arabic": "الباب أخضر.",
+			"arabicTashkeel": "الباب أخضَر.",
+			"english": "The door is green.",
+			"transliteration": "il-baab akhdhar.",
+			"wordAlignments": [
+				{
+					"arabic": "الباب",
+					"english": "The door is",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "أخضر.",
+					"english": "green.",
+					"transliteration": "akhdhar."
+				}
+			],
+			"targetWords": [
+				"Green"
+			]
+		},
+		{
+			"arabic": "الشمس صفرا.",
+			"arabicTashkeel": "الشَّمس صَفرا.",
+			"english": "The sun is yellow.",
+			"transliteration": "ish-shams safra.",
+			"wordAlignments": [
+				{
+					"arabic": "الشمس",
+					"english": "The sun is",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "صفرا.",
+					"english": "yellow.",
+					"transliteration": "safra."
+				}
+			],
+			"targetWords": [
+				"Yellow"
+			]
+		},
+		{
+			"arabic": "البسة سودا.",
+			"arabicTashkeel": "البِسّة سودا.",
+			"english": "The cat is black.",
+			"transliteration": "il-bissa sooda.",
+			"wordAlignments": [
+				{
+					"arabic": "البسة",
+					"english": "The cat is",
+					"transliteration": "il-bissa"
+				},
+				{
+					"arabic": "سودا.",
+					"english": "black.",
+					"transliteration": "sooda."
+				}
+			],
+			"targetWords": [
+				"Black"
+			]
+		},
+		{
+			"arabic": "إيش لون السيارة؟",
+			"arabicTashkeel": "إيش لون السَّيّارة؟",
+			"english": "What color is the car?",
+			"transliteration": "eesh loon is-sayyaara?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "لون",
+					"english": "the color of",
+					"transliteration": "loon"
+				},
+				{
+					"arabic": "السيارة؟",
+					"english": "the car?",
+					"transliteration": "is-sayyaara?"
+				}
+			],
+			"targetWords": [
+				"Color"
+			]
+		},
+		{
+			"arabic": "لونها أزرق.",
+			"arabicTashkeel": "لونها أزرَق.",
+			"english": "Its color is blue.",
+			"transliteration": "loonaha azrag.",
+			"wordAlignments": [
+				{
+					"arabic": "لونها",
+					"english": "Its color is",
+					"transliteration": "loonaha"
+				},
+				{
+					"arabic": "أزرق.",
+					"english": "blue.",
+					"transliteration": "azrag."
+				}
+			],
+			"targetWords": [
+				"Color",
+				"Blue"
+			]
+		},
+		{
+			"arabic": "هادا الجوال جديد.",
+			"arabicTashkeel": "هادا الجَوّال جَديد.",
+			"english": "This mobile is new.",
+			"transliteration": "haada il-jawwaal jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "الجوال",
+					"english": "mobile is",
+					"transliteration": "il-jawwaal"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jadeed."
+				}
+			],
+			"targetWords": [
+				"New"
+			]
+		},
+		{
+			"arabic": "السيارة جديدة.",
+			"arabicTashkeel": "السَّيّارة جَديدة.",
+			"english": "The car is new.",
+			"transliteration": "is-sayyaara jadeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car is",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jadeeda."
+				}
+			],
+			"targetWords": [
+				"New"
+			]
+		},
+		{
+			"arabic": "البيت قديم.",
+			"arabicTashkeel": "البيت قَديم.",
+			"english": "The house is old.",
+			"transliteration": "il-bait gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "قديم.",
+					"english": "old.",
+					"transliteration": "gadeem."
+				}
+			],
+			"targetWords": [
+				"Old (for things)"
+			]
+		},
+		{
+			"arabic": "أخويا طويل.",
+			"arabicTashkeel": "أخويا طَويل.",
+			"english": "My brother is tall.",
+			"transliteration": "akhooya taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويا",
+					"english": "My brother is",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "tall.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"Tall"
+			]
+		},
+		{
+			"arabic": "أختي قصيرة.",
+			"arabicTashkeel": "أُختي قَصيرة.",
+			"english": "My sister is short.",
+			"transliteration": "ukhti gaseera.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "قصيرة.",
+					"english": "short.",
+					"transliteration": "gaseera."
+				}
+			],
+			"targetWords": [
+				"Short"
+			]
+		},
+		{
+			"arabic": "هادا غالي مرة.",
+			"arabicTashkeel": "هادا غالي مَرّة.",
+			"english": "This is very expensive.",
+			"transliteration": "haada ghaali marra.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "غالي",
+					"english": "expensive",
+					"transliteration": "ghaali"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Expensive"
+			]
+		},
+		{
+			"arabic": "العيش رخيص.",
+			"arabicTashkeel": "العيش رَخيص.",
+			"english": "Bread is cheap.",
+			"transliteration": "il-3eesh rakhees.",
+			"wordAlignments": [
+				{
+					"arabic": "العيش",
+					"english": "Bread is",
+					"transliteration": "il-3eesh"
+				},
+				{
+					"arabic": "رخيص.",
+					"english": "cheap.",
+					"transliteration": "rakhees."
+				}
+			],
+			"targetWords": [
+				"Cheap"
+			]
+		},
+		{
+			"arabic": "الغرفة نظيفة.",
+			"arabicTashkeel": "الغُرفة نَظيفة.",
+			"english": "The room is clean.",
+			"transliteration": "il-ghurfa nadheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرفة",
+					"english": "The room is",
+					"transliteration": "il-ghurfa"
+				},
+				{
+					"arabic": "نظيفة.",
+					"english": "clean.",
+					"transliteration": "nadheefa."
+				}
+			],
+			"targetWords": [
+				"Clean"
+			]
+		},
+		{
+			"arabic": "أبغى فستان أحمر.",
+			"arabicTashkeel": "أبغى فُستان أحمَر.",
+			"english": "I want a red dress.",
+			"transliteration": "abgha fustaan a7mar.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "فستان",
+					"english": "a dress",
+					"transliteration": "fustaan"
+				},
+				{
+					"arabic": "أحمر.",
+					"english": "red.",
+					"transliteration": "a7mar."
+				}
+			],
+			"targetWords": [
+				"Red"
+			]
+		},
+		{
+			"arabic": "عندك قلم أسود؟",
+			"arabicTashkeel": "عِندَك قَلَم أسوَد؟",
+			"english": "Do you have a black pen?",
+			"transliteration": "3indak galam aswad?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "قلم",
+					"english": "a pen",
+					"transliteration": "galam"
+				},
+				{
+					"arabic": "أسود؟",
+					"english": "black?",
+					"transliteration": "aswad?"
+				}
+			],
+			"targetWords": [
+				"Black"
+			]
+		},
+		{
+			"arabic": "السما زرقا.",
+			"arabicTashkeel": "السَّما زَرقا.",
+			"english": "The sky is blue.",
+			"transliteration": "is-sama zarga.",
+			"wordAlignments": [
+				{
+					"arabic": "السما",
+					"english": "The sky is",
+					"transliteration": "is-sama"
+				},
+				{
+					"arabic": "زرقا.",
+					"english": "blue.",
+					"transliteration": "zarga."
+				}
+			],
+			"targetWords": [
+				"Blue"
+			]
+		},
+		{
+			"arabic": "الشجرة خضرا.",
+			"arabicTashkeel": "الشَّجَرة خَضرا.",
+			"english": "The tree is green.",
+			"transliteration": "ish-shajara khadhra.",
+			"wordAlignments": [
+				{
+					"arabic": "الشجرة",
+					"english": "The tree is",
+					"transliteration": "ish-shajara"
+				},
+				{
+					"arabic": "خضرا.",
+					"english": "green.",
+					"transliteration": "khadhra."
+				}
+			],
+			"targetWords": [
+				"Green"
+			]
+		},
+		{
+			"arabic": "الموز أصفر.",
+			"arabicTashkeel": "المَوز أصفَر.",
+			"english": "Bananas are yellow.",
+			"transliteration": "il-mooz asfar.",
+			"wordAlignments": [
+				{
+					"arabic": "الموز",
+					"english": "Bananas are",
+					"transliteration": "il-mooz"
+				},
+				{
+					"arabic": "أصفر.",
+					"english": "yellow.",
+					"transliteration": "asfar."
+				}
+			],
+			"targetWords": [
+				"Yellow"
+			]
+		},
+		{
+			"arabic": "الحليب أبيض.",
+			"arabicTashkeel": "الحَليب أبيَض.",
+			"english": "Milk is white.",
+			"transliteration": "il-7aleeb abyadh.",
+			"wordAlignments": [
+				{
+					"arabic": "الحليب",
+					"english": "Milk is",
+					"transliteration": "il-7aleeb"
+				},
+				{
+					"arabic": "أبيض.",
+					"english": "white.",
+					"transliteration": "abyadh."
+				}
+			],
+			"targetWords": [
+				"White"
+			]
+		},
+		{
+			"arabic": "لوني المفضل الأخضر.",
+			"arabicTashkeel": "لوني المُفَضَّل الأخضَر.",
+			"english": "My favourite color is green.",
+			"transliteration": "looni il-mufadhdhal il-akhdhar.",
+			"wordAlignments": [
+				{
+					"arabic": "لوني",
+					"english": "My color",
+					"transliteration": "looni"
+				},
+				{
+					"arabic": "المفضل",
+					"english": "favourite is",
+					"transliteration": "il-mufadhdhal"
+				},
+				{
+					"arabic": "الأخضر.",
+					"english": "green.",
+					"transliteration": "il-akhdhar."
+				}
+			],
+			"targetWords": [
+				"Color",
+				"Green"
+			]
+		},
+		{
+			"arabic": "إيش لونك المفضل؟",
+			"arabicTashkeel": "إيش لونَك المُفَضَّل؟",
+			"english": "What is your favourite color?",
+			"transliteration": "eesh loonak il-mufadhdhal?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "لونك",
+					"english": "your color",
+					"transliteration": "loonak"
+				},
+				{
+					"arabic": "المفضل؟",
+					"english": "favourite?",
+					"transliteration": "il-mufadhdhal?"
+				}
+			],
+			"targetWords": [
+				"Color"
+			]
+		},
+		{
+			"arabic": "الكتاب الجديد غالي.",
+			"arabicTashkeel": "الكِتاب الجَديد غالي.",
+			"english": "The new book is expensive.",
+			"transliteration": "il-kitaab ij-jadeed ghaali.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jadeed"
+				},
+				{
+					"arabic": "غالي.",
+					"english": "expensive.",
+					"transliteration": "ghaali."
+				}
+			],
+			"targetWords": [
+				"New",
+				"Expensive"
+			]
+		},
+		{
+			"arabic": "السيارة القديمة رخيصة.",
+			"arabicTashkeel": "السَّيّارة القَديمة رَخيصة.",
+			"english": "The old car is cheap.",
+			"transliteration": "is-sayyaara il-gadeema rakheesa.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "القديمة",
+					"english": "old is",
+					"transliteration": "il-gadeema"
+				},
+				{
+					"arabic": "رخيصة.",
+					"english": "cheap.",
+					"transliteration": "rakheesa."
+				}
+			],
+			"targetWords": [
+				"Old (for things)",
+				"Cheap"
+			]
+		},
+		{
+			"arabic": "البنت طويلة.",
+			"arabicTashkeel": "البِنت طَويلة.",
+			"english": "The girl is tall.",
+			"transliteration": "il-bint taweela.",
+			"wordAlignments": [
+				{
+					"arabic": "البنت",
+					"english": "The girl is",
+					"transliteration": "il-bint"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "tall.",
+					"transliteration": "taweela."
+				}
+			],
+			"targetWords": [
+				"Tall"
+			]
+		},
+		{
+			"arabic": "الولد قصير.",
+			"arabicTashkeel": "الوَلَد قَصير.",
+			"english": "The boy is short.",
+			"transliteration": "il-walad gaseer.",
+			"wordAlignments": [
+				{
+					"arabic": "الولد",
+					"english": "The boy is",
+					"transliteration": "il-walad"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gaseer."
+				}
+			],
+			"targetWords": [
+				"Short"
+			]
+		},
+		{
+			"arabic": "البيت نظيف مرة.",
+			"arabicTashkeel": "البيت نَظيف مَرّة.",
+			"english": "The house is very clean.",
+			"transliteration": "il-bait nadheef marra.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "نظيف",
+					"english": "clean",
+					"transliteration": "nadheef"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Clean"
+			]
+		},
+		{
+			"arabic": "السيارة السودا غالية.",
+			"arabicTashkeel": "السَّيّارة السّودا غالية.",
+			"english": "The black car is expensive.",
+			"transliteration": "is-sayyaara is-sooda ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "السودا",
+					"english": "black is",
+					"transliteration": "is-sooda"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Black",
+				"Expensive"
+			]
+		},
+		{
+			"arabic": "التوب الأبيض نظيف.",
+			"arabicTashkeel": "التّوب الأبيَض نَظيف.",
+			"english": "The white thobe is clean.",
+			"transliteration": "it-toob il-abyadh nadheef.",
+			"wordAlignments": [
+				{
+					"arabic": "التوب",
+					"english": "The thobe",
+					"transliteration": "it-toob"
+				},
+				{
+					"arabic": "الأبيض",
+					"english": "white is",
+					"transliteration": "il-abyadh"
+				},
+				{
+					"arabic": "نظيف.",
+					"english": "clean.",
+					"transliteration": "nadheef."
+				}
+			],
+			"targetWords": [
+				"White",
+				"Clean"
+			]
+		},
+		{
+			"arabic": "هادا القلم رخيص.",
+			"arabicTashkeel": "هادا القَلَم رَخيص.",
+			"english": "This pen is cheap.",
+			"transliteration": "haada il-galam rakhees.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "القلم",
+					"english": "pen is",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "رخيص.",
+					"english": "cheap.",
+					"transliteration": "rakhees."
+				}
+			],
+			"targetWords": [
+				"Cheap"
+			]
+		},
+		{
+			"arabic": "الباب أحمر ولا أزرق؟",
+			"arabicTashkeel": "الباب أحمَر وَلّا أزرَق؟",
+			"english": "Is the door red or blue?",
+			"transliteration": "il-baab a7mar walla azrag?",
+			"wordAlignments": [
+				{
+					"arabic": "الباب",
+					"english": "Is the door",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "أحمر",
+					"english": "red",
+					"transliteration": "a7mar"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "أزرق؟",
+					"english": "blue?",
+					"transliteration": "azrag?"
+				}
+			],
+			"targetWords": [
+				"Red",
+				"Blue"
+			]
+		},
+		{
+			"arabic": "أبغى سيارة صفرا.",
+			"arabicTashkeel": "أبغى سَيّارة صَفرا.",
+			"english": "I want a yellow car.",
+			"transliteration": "abgha sayyaara safra.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "سيارة",
+					"english": "a car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "صفرا.",
+					"english": "yellow.",
+					"transliteration": "safra."
+				}
+			],
+			"targetWords": [
+				"Yellow"
+			]
+		},
+		{
+			"arabic": "الجوال القديم أسود.",
+			"arabicTashkeel": "الجَوّال القَديم أسوَد.",
+			"english": "The old mobile is black.",
+			"transliteration": "il-jawwaal il-gadeem aswad.",
+			"wordAlignments": [
+				{
+					"arabic": "الجوال",
+					"english": "The mobile",
+					"transliteration": "il-jawwaal"
+				},
+				{
+					"arabic": "القديم",
+					"english": "old is",
+					"transliteration": "il-gadeem"
+				},
+				{
+					"arabic": "أسود.",
+					"english": "black.",
+					"transliteration": "aswad."
+				}
+			],
+			"targetWords": [
+				"Old (for things)",
+				"Black"
+			]
+		},
+		{
+			"arabic": "الأخضر لون حلو.",
+			"arabicTashkeel": "الأخضَر لون حِلو.",
+			"english": "Green is a nice color.",
+			"transliteration": "il-akhdhar loon 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الأخضر",
+					"english": "Green is",
+					"transliteration": "il-akhdhar"
+				},
+				{
+					"arabic": "لون",
+					"english": "a color",
+					"transliteration": "loon"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Green",
+				"Color",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "هادا مو جديد، هادا قديم.",
+			"arabicTashkeel": "هادا مو جَديد، هادا قَديم.",
+			"english": "This isn't new, it's old.",
+			"transliteration": "haada moo jadeed, haada gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "جديد،",
+					"english": "new,",
+					"transliteration": "jadeed,"
+				},
+				{
+					"arabic": "هادا",
+					"english": "this is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "قديم.",
+					"english": "old.",
+					"transliteration": "gadeem."
+				}
+			],
+			"targetWords": [
+				"New",
+				"Old (for things)"
+			]
+		},
+		{
+			"arabic": "أبويا طويل وأمي قصيرة.",
+			"arabicTashkeel": "أبويا طَويل وأُمّي قَصيرة.",
+			"english": "My dad is tall and my mom is short.",
+			"transliteration": "abooya taweel w-ummi gaseera.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad is",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "طويل",
+					"english": "tall",
+					"transliteration": "taweel"
+				},
+				{
+					"arabic": "وأمي",
+					"english": "and my mom is",
+					"transliteration": "w-ummi"
+				},
+				{
+					"arabic": "قصيرة.",
+					"english": "short.",
+					"transliteration": "gaseera."
+				}
+			],
+			"targetWords": [
+				"Tall",
+				"Short"
+			]
+		},
+		{
+			"arabic": "الغرفة مو نظيفة.",
+			"arabicTashkeel": "الغُرفة مو نَظيفة.",
+			"english": "The room is not clean.",
+			"transliteration": "il-ghurfa moo nadheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرفة",
+					"english": "The room is",
+					"transliteration": "il-ghurfa"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "نظيفة.",
+					"english": "clean.",
+					"transliteration": "nadheefa."
+				}
+			],
+			"targetWords": [
+				"Clean"
+			]
+		},
+		{
+			"arabic": "الأكل غالي؟ لا، رخيص.",
+			"arabicTashkeel": "الأكل غالي؟ لا، رَخيص.",
+			"english": "Is the food expensive? No, cheap.",
+			"transliteration": "il-akl ghaali? laa, rakhees.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "Is the food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "غالي؟",
+					"english": "expensive?",
+					"transliteration": "ghaali?"
+				},
+				{
+					"arabic": "لا،",
+					"english": "No,",
+					"transliteration": "laa,"
+				},
+				{
+					"arabic": "رخيص.",
+					"english": "cheap.",
+					"transliteration": "rakhees."
+				}
+			],
+			"targetWords": [
+				"Expensive",
+				"Cheap"
+			]
+		},
+		{
+			"arabic": "البسة البيضا حلوة.",
+			"arabicTashkeel": "البِسّة البيضا حِلوة.",
+			"english": "The white cat is nice.",
+			"transliteration": "il-bissa il-baidha 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "البسة",
+					"english": "The cat",
+					"transliteration": "il-bissa"
+				},
+				{
+					"arabic": "البيضا",
+					"english": "white is",
+					"transliteration": "il-baidha"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "nice.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"White",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "الكتاب الأزرق حقي.",
+			"arabicTashkeel": "الكِتاب الأزرَق حَقّي.",
+			"english": "The blue book is mine.",
+			"transliteration": "il-kitaab il-azrag 7aggi.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "الأزرق",
+					"english": "blue is",
+					"transliteration": "il-azrag"
+				},
+				{
+					"arabic": "حقي.",
+					"english": "mine.",
+					"transliteration": "7aggi."
+				}
+			],
+			"targetWords": [
+				"Blue"
+			]
+		},
+		{
+			"arabic": "السيارة الحمرا جديدة.",
+			"arabicTashkeel": "السَّيّارة الحَمرا جَديدة.",
+			"english": "The red car is new.",
+			"transliteration": "is-sayyaara il-7amra jadeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "الحمرا",
+					"english": "red is",
+					"transliteration": "il-7amra"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jadeeda."
+				}
+			],
+			"targetWords": [
+				"Red",
+				"New"
+			]
+		},
+		{
+			"arabic": "أخضر ولا أصفر؟",
+			"arabicTashkeel": "أخضَر وَلّا أصفَر؟",
+			"english": "Green or yellow?",
+			"transliteration": "akhdhar walla asfar?",
+			"wordAlignments": [
+				{
+					"arabic": "أخضر",
+					"english": "Green",
+					"transliteration": "akhdhar"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "أصفر؟",
+					"english": "yellow?",
+					"transliteration": "asfar?"
+				}
+			],
+			"targetWords": [
+				"Green",
+				"Yellow"
+			]
+		},
+		{
+			"arabic": "البيت الكبير قديم.",
+			"arabicTashkeel": "البيت الكْبير قَديم.",
+			"english": "The big house is old.",
+			"transliteration": "il-bait il-kbeer gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "الكبير",
+					"english": "big is",
+					"transliteration": "il-kbeer"
+				},
+				{
+					"arabic": "قديم.",
+					"english": "old.",
+					"transliteration": "gadeem."
+				}
+			],
+			"targetWords": [
+				"Old (for things)"
+			]
+		},
+		{
+			"arabic": "الولد طويل مرة.",
+			"arabicTashkeel": "الوَلَد طَويل مَرّة.",
+			"english": "The boy is very tall.",
+			"transliteration": "il-walad taweel marra.",
+			"wordAlignments": [
+				{
+					"arabic": "الولد",
+					"english": "The boy is",
+					"transliteration": "il-walad"
+				},
+				{
+					"arabic": "طويل",
+					"english": "tall",
+					"transliteration": "taweel"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Tall"
+			]
+		},
+		{
+			"arabic": "الفستان قصير.",
+			"arabicTashkeel": "الفُستان قَصير.",
+			"english": "The dress is short.",
+			"transliteration": "il-fustaan gaseer.",
+			"wordAlignments": [
+				{
+					"arabic": "الفستان",
+					"english": "The dress is",
+					"transliteration": "il-fustaan"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gaseer."
+				}
+			],
+			"targetWords": [
+				"Short"
+			]
+		},
+		{
+			"arabic": "الشارع نظيف.",
+			"arabicTashkeel": "الشّارع نَظيف.",
+			"english": "The street is clean.",
+			"transliteration": "ish-shaari3 nadheef.",
+			"wordAlignments": [
+				{
+					"arabic": "الشارع",
+					"english": "The street is",
+					"transliteration": "ish-shaari3"
+				},
+				{
+					"arabic": "نظيف.",
+					"english": "clean.",
+					"transliteration": "nadheef."
+				}
+			],
+			"targetWords": [
+				"Clean"
+			]
+		},
+		{
+			"arabic": "هادا اللون حلو.",
+			"arabicTashkeel": "هادا اللون حِلو.",
+			"english": "This color is nice.",
+			"transliteration": "haada il-loon 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "اللون",
+					"english": "color is",
+					"transliteration": "il-loon"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Color",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "أسود ولا أبيض؟",
+			"arabicTashkeel": "أسوَد وَلّا أبيَض؟",
+			"english": "Black or white?",
+			"transliteration": "aswad walla abyadh?",
+			"wordAlignments": [
+				{
+					"arabic": "أسود",
+					"english": "Black",
+					"transliteration": "aswad"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "أبيض؟",
+					"english": "white?",
+					"transliteration": "abyadh?"
+				}
+			],
+			"targetWords": [
+				"Black",
+				"White"
+			]
+		},
+		{
+			"arabic": "الليمون أصفر.",
+			"arabicTashkeel": "اللَّيمون أصفَر.",
+			"english": "Lemons are yellow.",
+			"transliteration": "il-laimoon asfar.",
+			"wordAlignments": [
+				{
+					"arabic": "الليمون",
+					"english": "Lemons are",
+					"transliteration": "il-laimoon"
+				},
+				{
+					"arabic": "أصفر.",
+					"english": "yellow.",
+					"transliteration": "asfar."
+				}
+			],
+			"targetWords": [
+				"Yellow"
+			]
+		},
+		{
+			"arabic": "المدرس طويل.",
+			"arabicTashkeel": "المُدَرِّس طَويل.",
+			"english": "The teacher is tall.",
+			"transliteration": "il-mudarris taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرس",
+					"english": "The teacher is",
+					"transliteration": "il-mudarris"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "tall.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"Tall"
+			]
+		},
+		{
+			"arabic": "جدتي قصيرة.",
+			"arabicTashkeel": "جَدّتي قَصيرة.",
+			"english": "My grandmother is short.",
+			"transliteration": "jaddati gaseera.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother is",
+					"transliteration": "jaddati"
+				},
+				{
+					"arabic": "قصيرة.",
+					"english": "short.",
+					"transliteration": "gaseera."
+				}
+			],
+			"targetWords": [
+				"Short"
+			]
+		},
+		{
+			"arabic": "الجوال غالي.",
+			"arabicTashkeel": "الجَوّال غالي.",
+			"english": "The mobile is expensive.",
+			"transliteration": "il-jawwaal ghaali.",
+			"wordAlignments": [
+				{
+					"arabic": "الجوال",
+					"english": "The mobile is",
+					"transliteration": "il-jawwaal"
+				},
+				{
+					"arabic": "غالي.",
+					"english": "expensive.",
+					"transliteration": "ghaali."
+				}
+			],
+			"targetWords": [
+				"Expensive"
+			]
+		},
+		{
+			"arabic": "الفواكه رخيصة في السوق.",
+			"arabicTashkeel": "الفَواكِه رَخيصة في السّوق.",
+			"english": "Fruit is cheap at the market.",
+			"transliteration": "il-fawaakih rakheesa fi is-soog.",
+			"wordAlignments": [
+				{
+					"arabic": "الفواكه",
+					"english": "Fruit is",
+					"transliteration": "il-fawaakih"
+				},
+				{
+					"arabic": "رخيصة",
+					"english": "cheap",
+					"transliteration": "rakheesa"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السوق.",
+					"english": "the market.",
+					"transliteration": "is-soog."
+				}
+			],
+			"targetWords": [
+				"Cheap"
+			]
+		},
+		{
+			"arabic": "البيت حلو وجديد.",
+			"arabicTashkeel": "البيت حِلو وجَديد.",
+			"english": "The house is nice and new.",
+			"transliteration": "il-bait 7ilu w-jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "حلو",
+					"english": "nice",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "وجديد.",
+					"english": "and new.",
+					"transliteration": "w-jadeed."
+				}
+			],
+			"targetWords": [
+				"Nice",
+				"New"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Room",
+			"sentences": [
+				{
+					"arabic": "غرفتي صغيرة بس نظيفة.",
+					"arabicTashkeel": "غُرفتي صُغَيَّرة بَس نَظيفة.",
+					"english": "My room is small but clean.",
+					"transliteration": "ghurfati sughayyara bas nadheefa.",
+					"wordAlignments": [
+						{
+							"arabic": "غرفتي",
+							"english": "My room is",
+							"transliteration": "ghurfati"
+						},
+						{
+							"arabic": "صغيرة",
+							"english": "small",
+							"transliteration": "sughayyara"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "نظيفة.",
+							"english": "clean.",
+							"transliteration": "nadheefa."
+						}
+					]
+				},
+				{
+					"arabic": "الباب أبيض والكرسي أزرق.",
+					"arabicTashkeel": "الباب أبيَض والكُرسي أزرَق.",
+					"english": "The door is white and the chair is blue.",
+					"transliteration": "il-baab abyadh w-il-kursi azrag.",
+					"wordAlignments": [
+						{
+							"arabic": "الباب",
+							"english": "The door is",
+							"transliteration": "il-baab"
+						},
+						{
+							"arabic": "أبيض",
+							"english": "white",
+							"transliteration": "abyadh"
+						},
+						{
+							"arabic": "والكرسي",
+							"english": "and the chair is",
+							"transliteration": "w-il-kursi"
+						},
+						{
+							"arabic": "أزرق.",
+							"english": "blue.",
+							"transliteration": "azrag."
+						}
+					]
+				},
+				{
+					"arabic": "الشنطة حمرا.",
+					"arabicTashkeel": "الشَّنطة حَمرا.",
+					"english": "The bag is red.",
+					"transliteration": "ish-shanta 7amra.",
+					"wordAlignments": [
+						{
+							"arabic": "الشنطة",
+							"english": "The bag is",
+							"transliteration": "ish-shanta"
+						},
+						{
+							"arabic": "حمرا.",
+							"english": "red.",
+							"transliteration": "7amra."
+						}
+					]
+				},
+				{
+					"arabic": "الغرفة حلوة.",
+					"arabicTashkeel": "الغُرفة حِلوة.",
+					"english": "The room is nice.",
+					"transliteration": "il-ghurfa 7ilwa.",
+					"wordAlignments": [
+						{
+							"arabic": "الغرفة",
+							"english": "The room is",
+							"transliteration": "il-ghurfa"
+						},
+						{
+							"arabic": "حلوة.",
+							"english": "nice.",
+							"transliteration": "7ilwa."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Car Showroom",
+			"sentences": [
+				{
+					"arabic": "هادي السيارة السودا غالية.",
+					"arabicTashkeel": "هادي السَّيّارة السّودا غالية.",
+					"english": "This black car is expensive.",
+					"transliteration": "haadi is-sayyaara is-sooda ghaalya.",
+					"wordAlignments": [
+						{
+							"arabic": "هادي",
+							"english": "This",
+							"transliteration": "haadi"
+						},
+						{
+							"arabic": "السيارة",
+							"english": "car",
+							"transliteration": "is-sayyaara"
+						},
+						{
+							"arabic": "السودا",
+							"english": "black is",
+							"transliteration": "is-sooda"
+						},
+						{
+							"arabic": "غالية.",
+							"english": "expensive.",
+							"transliteration": "ghaalya."
+						}
+					]
+				},
+				{
+					"arabic": "إيش لون السيارة الرخيصة؟",
+					"arabicTashkeel": "إيش لون السَّيّارة الرَّخيصة؟",
+					"english": "What color is the cheap car?",
+					"transliteration": "eesh loon is-sayyaara ir-rakheesa?",
+					"wordAlignments": [
+						{
+							"arabic": "إيش",
+							"english": "What is",
+							"transliteration": "eesh"
+						},
+						{
+							"arabic": "لون",
+							"english": "the color of",
+							"transliteration": "loon"
+						},
+						{
+							"arabic": "السيارة",
+							"english": "the car",
+							"transliteration": "is-sayyaara"
+						},
+						{
+							"arabic": "الرخيصة؟",
+							"english": "cheap?",
+							"transliteration": "ir-rakheesa?"
+						}
+					]
+				},
+				{
+					"arabic": "لونها أبيض.",
+					"arabicTashkeel": "لونها أبيَض.",
+					"english": "Its color is white.",
+					"transliteration": "loonaha abyadh.",
+					"wordAlignments": [
+						{
+							"arabic": "لونها",
+							"english": "Its color is",
+							"transliteration": "loonaha"
+						},
+						{
+							"arabic": "أبيض.",
+							"english": "white.",
+							"transliteration": "abyadh."
+						}
+					]
+				},
+				{
+					"arabic": "طيب، أبغى البيضا.",
+					"arabicTashkeel": "طَيِّب، أبغى البيضا.",
+					"english": "Okay, I want the white one.",
+					"transliteration": "tayyib, abgha il-baidha.",
+					"wordAlignments": [
+						{
+							"arabic": "طيب،",
+							"english": "Okay,",
+							"transliteration": "tayyib,"
+						},
+						{
+							"arabic": "أبغى",
+							"english": "I want",
+							"transliteration": "abgha"
+						},
+						{
+							"arabic": "البيضا.",
+							"english": "the white one.",
+							"transliteration": "il-baidha."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is shopping for clothes in a Jeddah mall and wants something in a particular color and price.",
+		"studentRole": "A shopper learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The shop assistant, who has many colors.",
+		"goalEnglish": "Ask for a shirt or dress in your favourite color, ask if it is new, and say whether it is expensive or cheap.",
+		"targetWords": [
+			"Color",
+			"Red",
+			"Blue",
+			"White",
+			"Black",
+			"New",
+			"Expensive",
+			"Cheap"
+		]
+	}
+}

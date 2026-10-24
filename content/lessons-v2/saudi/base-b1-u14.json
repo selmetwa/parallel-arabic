@@ -1,0 +1,2061 @@
+{
+	"vocab": [
+		{
+			"arabic": "أخبار",
+			"arabicTashkeel": "أخبار",
+			"english": "News",
+			"transliteration": "akhbaar",
+			"wordAlignments": [
+				{
+					"arabic": "أخبار",
+					"english": "News",
+					"transliteration": "akhbaar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "نشرة",
+			"arabicTashkeel": "نَشرة",
+			"english": "Bulletin",
+			"transliteration": "nashra",
+			"wordAlignments": [
+				{
+					"arabic": "نشرة",
+					"english": "Bulletin",
+					"transliteration": "nashra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مذيع",
+			"arabicTashkeel": "مُذيع",
+			"english": "Presenter",
+			"transliteration": "muzee3",
+			"wordAlignments": [
+				{
+					"arabic": "مذيع",
+					"english": "Presenter",
+					"transliteration": "muzee3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خبر",
+			"arabicTashkeel": "خَبَر",
+			"english": "News item",
+			"transliteration": "khabar",
+			"wordAlignments": [
+				{
+					"arabic": "خبر",
+					"english": "News item",
+					"transliteration": "khabar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عاجل",
+			"arabicTashkeel": "عاجِل",
+			"english": "Breaking (news)",
+			"transliteration": "3aajil",
+			"wordAlignments": [
+				{
+					"arabic": "عاجل",
+					"english": "Urgent",
+					"transliteration": "3aajil"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "حكومة",
+			"arabicTashkeel": "حُكومة",
+			"english": "Government",
+			"transliteration": "7ukooma",
+			"wordAlignments": [
+				{
+					"arabic": "حكومة",
+					"english": "Government",
+					"transliteration": "7ukooma"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أمير",
+			"arabicTashkeel": "أمير",
+			"english": "Governor (emir)",
+			"transliteration": "ameer",
+			"wordAlignments": [
+				{
+					"arabic": "أمير",
+					"english": "Emir",
+					"transliteration": "ameer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "وزير",
+			"arabicTashkeel": "وَزير",
+			"english": "Minister",
+			"transliteration": "wazeer",
+			"wordAlignments": [
+				{
+					"arabic": "وزير",
+					"english": "Minister",
+					"transliteration": "wazeer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قرار",
+			"arabicTashkeel": "قَرار",
+			"english": "Decision / decree",
+			"transliteration": "garaar",
+			"wordAlignments": [
+				{
+					"arabic": "قرار",
+					"english": "Decision",
+					"transliteration": "garaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مجلس الشورى",
+			"arabicTashkeel": "مَجلِس الشّورى",
+			"english": "Shura Council",
+			"transliteration": "majlis ish-shoora",
+			"wordAlignments": [
+				{
+					"arabic": "مجلس",
+					"english": "Council of",
+					"transliteration": "majlis"
+				},
+				{
+					"arabic": "الشورى",
+					"english": "consultation",
+					"transliteration": "ish-shoora"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إقتصاد",
+			"arabicTashkeel": "إقتِصاد",
+			"english": "Economy",
+			"transliteration": "igtisaad",
+			"wordAlignments": [
+				{
+					"arabic": "إقتصاد",
+					"english": "Economy",
+					"transliteration": "igtisaad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حادث",
+			"arabicTashkeel": "حادِث",
+			"english": "Accident",
+			"transliteration": "7aadis",
+			"wordAlignments": [
+				{
+					"arabic": "حادث",
+					"english": "Accident",
+					"transliteration": "7aadis"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "النشرة الجوية",
+			"arabicTashkeel": "النَّشرة الجَوّية",
+			"english": "Weather forecast",
+			"transliteration": "in-nashra il-jawwiyya",
+			"wordAlignments": [
+				{
+					"arabic": "النشرة",
+					"english": "The bulletin",
+					"transliteration": "in-nashra"
+				},
+				{
+					"arabic": "الجوية",
+					"english": "of the weather",
+					"transliteration": "il-jawwiyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "قناة",
+			"arabicTashkeel": "قَناة",
+			"english": "Channel",
+			"transliteration": "ganaat",
+			"wordAlignments": [
+				{
+					"arabic": "قناة",
+					"english": "Channel",
+					"transliteration": "ganaat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ملخص",
+			"arabicTashkeel": "مُلَخَّص",
+			"english": "Summary",
+			"transliteration": "mulakhkhas",
+			"wordAlignments": [
+				{
+					"arabic": "ملخص",
+					"english": "Summary",
+					"transliteration": "mulakhkhas"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أتفرج على الأخبار كل مسا.",
+			"arabicTashkeel": "أتفَرَّج على الأخبار كُل مَسا.",
+			"english": "I watch the news every evening.",
+			"transliteration": "atfarraj 3ala il-akhbaar kull masa.",
+			"wordAlignments": [
+				{
+					"arabic": "أتفرج",
+					"english": "I watch",
+					"transliteration": "atfarraj"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الأخبار",
+					"english": "the news",
+					"transliteration": "il-akhbaar"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "مسا.",
+					"english": "evening.",
+					"transliteration": "masa."
+				}
+			],
+			"targetWords": [
+				"News"
+			]
+		},
+		{
+			"arabic": "النشرة الساعة تسعة.",
+			"arabicTashkeel": "النَّشرة السّاعة تِسعة.",
+			"english": "The bulletin is at nine.",
+			"transliteration": "in-nashra is-saa3a tis3a.",
+			"wordAlignments": [
+				{
+					"arabic": "النشرة",
+					"english": "The bulletin is",
+					"transliteration": "in-nashra"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسعة.",
+					"english": "nine.",
+					"transliteration": "tis3a."
+				}
+			],
+			"targetWords": [
+				"Bulletin"
+			]
+		},
+		{
+			"arabic": "المذيع يتكلم بوضوح.",
+			"arabicTashkeel": "المُذيع يِتكَلَّم بِوُضوح.",
+			"english": "The presenter speaks clearly.",
+			"transliteration": "il-muzee3 yitkallam bi-wudhoo7.",
+			"wordAlignments": [
+				{
+					"arabic": "المذيع",
+					"english": "The presenter",
+					"transliteration": "il-muzee3"
+				},
+				{
+					"arabic": "يتكلم",
+					"english": "speaks",
+					"transliteration": "yitkallam"
+				},
+				{
+					"arabic": "بوضوح.",
+					"english": "clearly.",
+					"transliteration": "bi-wudhoo7."
+				}
+			],
+			"targetWords": [
+				"Presenter"
+			]
+		},
+		{
+			"arabic": "سمعت خبر غريب.",
+			"arabicTashkeel": "سِمِعت خَبَر غَريب.",
+			"english": "I heard a strange news item.",
+			"transliteration": "simi3t khabar ghareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "سمعت",
+					"english": "I heard",
+					"transliteration": "simi3t"
+				},
+				{
+					"arabic": "خبر",
+					"english": "a news item",
+					"transliteration": "khabar"
+				},
+				{
+					"arabic": "غريب.",
+					"english": "strange.",
+					"transliteration": "ghareeb."
+				}
+			],
+			"targetWords": [
+				"News item"
+			]
+		},
+		{
+			"arabic": "خبر عاجل!",
+			"arabicTashkeel": "خَبَر عاجِل!",
+			"english": "Breaking news!",
+			"transliteration": "khabar 3aajil!",
+			"wordAlignments": [
+				{
+					"arabic": "خبر",
+					"english": "A news item",
+					"transliteration": "khabar"
+				},
+				{
+					"arabic": "عاجل!",
+					"english": "urgent!",
+					"transliteration": "3aajil!"
+				}
+			],
+			"targetWords": [
+				"Breaking (news)"
+			]
+		},
+		{
+			"arabic": "الحكومة أعلنت مشروع جديد.",
+			"arabicTashkeel": "الحُكومة أعلَنَت مَشروع جَديد.",
+			"english": "The government announced a new project.",
+			"transliteration": "il-7ukooma a3lanat mashroo3 jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "الحكومة",
+					"english": "The government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "أعلنت",
+					"english": "announced",
+					"transliteration": "a3lanat"
+				},
+				{
+					"arabic": "مشروع",
+					"english": "a project",
+					"transliteration": "mashroo3"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jadeed."
+				}
+			],
+			"targetWords": [
+				"Government"
+			]
+		},
+		{
+			"arabic": "أمير منطقة مكة زار جدة.",
+			"arabicTashkeel": "أمير مَنطِقة مَكّة زار جِدّة.",
+			"english": "The governor of Mecca region visited Jeddah.",
+			"transliteration": "ameer mantigat makka zaar jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "أمير",
+					"english": "The emir of",
+					"transliteration": "ameer"
+				},
+				{
+					"arabic": "منطقة",
+					"english": "the region of",
+					"transliteration": "mantigat"
+				},
+				{
+					"arabic": "مكة",
+					"english": "Mecca",
+					"transliteration": "makka"
+				},
+				{
+					"arabic": "زار",
+					"english": "visited",
+					"transliteration": "zaar"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Governor (emir)"
+			]
+		},
+		{
+			"arabic": "الوزير قابل رجال الأعمال.",
+			"arabicTashkeel": "الوَزير قابَل رِجال الأعمال.",
+			"english": "The minister met the businessmen.",
+			"transliteration": "il-wazeer gaabal rijaal il-a3maal.",
+			"wordAlignments": [
+				{
+					"arabic": "الوزير",
+					"english": "The minister",
+					"transliteration": "il-wazeer"
+				},
+				{
+					"arabic": "قابل",
+					"english": "met",
+					"transliteration": "gaabal"
+				},
+				{
+					"arabic": "رجال",
+					"english": "the men of",
+					"transliteration": "rijaal"
+				},
+				{
+					"arabic": "الأعمال.",
+					"english": "business.",
+					"transliteration": "il-a3maal."
+				}
+			],
+			"targetWords": [
+				"Minister"
+			]
+		},
+		{
+			"arabic": "قرار جديد عن المدارس.",
+			"arabicTashkeel": "قَرار جَديد عَن المَدارِس.",
+			"english": "A new decision about schools.",
+			"transliteration": "garaar jadeed 3an il-madaaris.",
+			"wordAlignments": [
+				{
+					"arabic": "قرار",
+					"english": "A decision",
+					"transliteration": "garaar"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "jadeed"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "المدارس.",
+					"english": "the schools.",
+					"transliteration": "il-madaaris."
+				}
+			],
+			"targetWords": [
+				"Decision / decree"
+			]
+		},
+		{
+			"arabic": "مجلس الشورى اجتمع اليوم.",
+			"arabicTashkeel": "مَجلِس الشّورى اِجتَمَع اليوم.",
+			"english": "The Shura Council met today.",
+			"transliteration": "majlis ish-shoora ijtama3 il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "مجلس",
+					"english": "The council of",
+					"transliteration": "majlis"
+				},
+				{
+					"arabic": "الشورى",
+					"english": "consultation",
+					"transliteration": "ish-shoora"
+				},
+				{
+					"arabic": "اجتمع",
+					"english": "met",
+					"transliteration": "ijtama3"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Shura Council"
+			]
+		},
+		{
+			"arabic": "الإقتصاد يكبر.",
+			"arabicTashkeel": "الإقتِصاد يِكبَر.",
+			"english": "The economy is growing.",
+			"transliteration": "il-igtisaad yikbar.",
+			"wordAlignments": [
+				{
+					"arabic": "الإقتصاد",
+					"english": "The economy",
+					"transliteration": "il-igtisaad"
+				},
+				{
+					"arabic": "يكبر.",
+					"english": "is growing.",
+					"transliteration": "yikbar."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "صار حادث على الطريق السريع.",
+			"arabicTashkeel": "صار حادِث على الطَّريق السَّريع.",
+			"english": "There was an accident on the highway.",
+			"transliteration": "saar 7aadis 3ala it-tareeg is-saree3.",
+			"wordAlignments": [
+				{
+					"arabic": "صار",
+					"english": "Happened",
+					"transliteration": "saar"
+				},
+				{
+					"arabic": "حادث",
+					"english": "an accident",
+					"transliteration": "7aadis"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الطريق",
+					"english": "the road",
+					"transliteration": "it-tareeg"
+				},
+				{
+					"arabic": "السريع.",
+					"english": "fast.",
+					"transliteration": "is-saree3."
+				}
+			],
+			"targetWords": [
+				"Accident"
+			]
+		},
+		{
+			"arabic": "النشرة الجوية تقول حتمطر.",
+			"arabicTashkeel": "النَّشرة الجَوّية تِقول حَتمَطِّر.",
+			"english": "The weather forecast says it will rain.",
+			"transliteration": "in-nashra il-jawwiyya tigool 7atmattir.",
+			"wordAlignments": [
+				{
+					"arabic": "النشرة",
+					"english": "The bulletin",
+					"transliteration": "in-nashra"
+				},
+				{
+					"arabic": "الجوية",
+					"english": "of the weather",
+					"transliteration": "il-jawwiyya"
+				},
+				{
+					"arabic": "تقول",
+					"english": "says",
+					"transliteration": "tigool"
+				},
+				{
+					"arabic": "حتمطر.",
+					"english": "it will rain.",
+					"transliteration": "7atmattir."
+				}
+			],
+			"targetWords": [
+				"Weather forecast"
+			]
+		},
+		{
+			"arabic": "أي قناة؟",
+			"arabicTashkeel": "أيّ قَناة؟",
+			"english": "Which channel?",
+			"transliteration": "ayy ganaa?",
+			"wordAlignments": [
+				{
+					"arabic": "أي",
+					"english": "Which",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "قناة؟",
+					"english": "channel?",
+					"transliteration": "ganaa?"
+				}
+			],
+			"targetWords": [
+				"Channel"
+			]
+		},
+		{
+			"arabic": "إديني ملخص الأخبار.",
+			"arabicTashkeel": "إدّيني مُلَخَّص الأخبار.",
+			"english": "Give me a summary of the news.",
+			"transliteration": "iddeeni mulakhkhas il-akhbaar.",
+			"wordAlignments": [
+				{
+					"arabic": "إديني",
+					"english": "Give me",
+					"transliteration": "iddeeni"
+				},
+				{
+					"arabic": "ملخص",
+					"english": "a summary of",
+					"transliteration": "mulakhkhas"
+				},
+				{
+					"arabic": "الأخبار.",
+					"english": "the news.",
+					"transliteration": "il-akhbaar."
+				}
+			],
+			"targetWords": [
+				"Summary",
+				"News"
+			]
+		},
+		{
+			"arabic": "إيش الأخبار اليوم؟",
+			"arabicTashkeel": "إيش الأخبار اليوم؟",
+			"english": "What's the news today?",
+			"transliteration": "eesh il-akhbaar il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What are",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "الأخبار",
+					"english": "the news",
+					"transliteration": "il-akhbaar"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"News"
+			]
+		},
+		{
+			"arabic": "نشرة الصبح.",
+			"arabicTashkeel": "نَشرة الصُّبح.",
+			"english": "The morning bulletin.",
+			"transliteration": "nashrat is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "نشرة",
+					"english": "The bulletin of",
+					"transliteration": "nashrat"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Bulletin"
+			]
+		},
+		{
+			"arabic": "المذيع جديد في القناة.",
+			"arabicTashkeel": "المُذيع جَديد في القَناة.",
+			"english": "The presenter is new on the channel.",
+			"transliteration": "il-muzee3 jadeed fi il-ganaa.",
+			"wordAlignments": [
+				{
+					"arabic": "المذيع",
+					"english": "The presenter is",
+					"transliteration": "il-muzee3"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "jadeed"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "القناة.",
+					"english": "the channel.",
+					"transliteration": "il-ganaa."
+				}
+			],
+			"targetWords": [
+				"Presenter",
+				"Channel"
+			]
+		},
+		{
+			"arabic": "خبر يفرح.",
+			"arabicTashkeel": "خَبَر يِفَرِّح.",
+			"english": "A happy news item.",
+			"transliteration": "khabar yifarri7.",
+			"wordAlignments": [
+				{
+					"arabic": "خبر",
+					"english": "A news item",
+					"transliteration": "khabar"
+				},
+				{
+					"arabic": "يفرح.",
+					"english": "that makes happy.",
+					"transliteration": "yifarri7."
+				}
+			],
+			"targetWords": [
+				"News item"
+			]
+		},
+		{
+			"arabic": "خبر عاجل عن الإقتصاد.",
+			"arabicTashkeel": "خَبَر عاجِل عَن الإقتِصاد.",
+			"english": "Breaking news about the economy.",
+			"transliteration": "khabar 3aajil 3an il-igtisaad.",
+			"wordAlignments": [
+				{
+					"arabic": "خبر",
+					"english": "A news item",
+					"transliteration": "khabar"
+				},
+				{
+					"arabic": "عاجل",
+					"english": "urgent",
+					"transliteration": "3aajil"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "الإقتصاد.",
+					"english": "the economy.",
+					"transliteration": "il-igtisaad."
+				}
+			],
+			"targetWords": [
+				"Breaking (news)",
+				"Economy"
+			]
+		},
+		{
+			"arabic": "مبنى الحكومة في جدة.",
+			"arabicTashkeel": "مَبنى الحُكومة في جِدّة.",
+			"english": "The government building in Jeddah.",
+			"transliteration": "mabna il-7ukooma fi jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "مبنى",
+					"english": "The building of",
+					"transliteration": "mabna"
+				},
+				{
+					"arabic": "الحكومة",
+					"english": "the government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Government"
+			]
+		},
+		{
+			"arabic": "الأمير افتتح المستشفى الجديد.",
+			"arabicTashkeel": "الأمير اِفتَتَح المُستَشفى الجَديد.",
+			"english": "The governor opened the new hospital.",
+			"transliteration": "il-ameer iftata7 il-mustashfa ij-jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "الأمير",
+					"english": "The emir",
+					"transliteration": "il-ameer"
+				},
+				{
+					"arabic": "افتتح",
+					"english": "opened",
+					"transliteration": "iftata7"
+				},
+				{
+					"arabic": "المستشفى",
+					"english": "the hospital",
+					"transliteration": "il-mustashfa"
+				},
+				{
+					"arabic": "الجديد.",
+					"english": "new.",
+					"transliteration": "ij-jadeed."
+				}
+			],
+			"targetWords": [
+				"Governor (emir)"
+			]
+		},
+		{
+			"arabic": "وزير الصحة تكلم عن الفايروس.",
+			"arabicTashkeel": "وَزير الصِّحّة تِكَلَّم عَن الفايروس.",
+			"english": "The Minister of Health spoke about the virus.",
+			"transliteration": "wazeer is-si77a tkallam 3an il-faayroos.",
+			"wordAlignments": [
+				{
+					"arabic": "وزير",
+					"english": "The minister of",
+					"transliteration": "wazeer"
+				},
+				{
+					"arabic": "الصحة",
+					"english": "health",
+					"transliteration": "is-si77a"
+				},
+				{
+					"arabic": "تكلم",
+					"english": "spoke",
+					"transliteration": "tkallam"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "الفايروس.",
+					"english": "the virus.",
+					"transliteration": "il-faayroos."
+				}
+			],
+			"targetWords": [
+				"Minister"
+			]
+		},
+		{
+			"arabic": "القرار يبدا الشهر الجاي.",
+			"arabicTashkeel": "القَرار يِبدا الشَّهر الجاي.",
+			"english": "The decision starts next month.",
+			"transliteration": "il-garaar yibda ish-shahr ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "القرار",
+					"english": "The decision",
+					"transliteration": "il-garaar"
+				},
+				{
+					"arabic": "يبدا",
+					"english": "starts",
+					"transliteration": "yibda"
+				},
+				{
+					"arabic": "الشهر",
+					"english": "the month",
+					"transliteration": "ish-shahr"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Decision / decree"
+			]
+		},
+		{
+			"arabic": "فيه سيدات في مجلس الشورى.",
+			"arabicTashkeel": "فيه سَيِّدات في مَجلِس الشّورى.",
+			"english": "Women are members of the Shura Council.",
+			"transliteration": "feeh sayyidaat fi majlis ish-shoora.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There are",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "سيدات",
+					"english": "ladies",
+					"transliteration": "sayyidaat"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مجلس",
+					"english": "the council of",
+					"transliteration": "majlis"
+				},
+				{
+					"arabic": "الشورى.",
+					"english": "consultation.",
+					"transliteration": "ish-shoora."
+				}
+			],
+			"targetWords": [
+				"Shura Council"
+			]
+		},
+		{
+			"arabic": "السياحة تساعد الإقتصاد.",
+			"arabicTashkeel": "السِّياحة تِساعِد الإقتِصاد.",
+			"english": "Tourism helps the economy.",
+			"transliteration": "is-siyaa7a tisaa3id il-igtisaad.",
+			"wordAlignments": [
+				{
+					"arabic": "السياحة",
+					"english": "Tourism",
+					"transliteration": "is-siyaa7a"
+				},
+				{
+					"arabic": "تساعد",
+					"english": "helps",
+					"transliteration": "tisaa3id"
+				},
+				{
+					"arabic": "الإقتصاد.",
+					"english": "the economy.",
+					"transliteration": "il-igtisaad."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "الحادث سوى زحمة.",
+			"arabicTashkeel": "الحادِث سَوّى زَحمة.",
+			"english": "The accident caused traffic.",
+			"transliteration": "il-7aadis sawwa za7ma.",
+			"wordAlignments": [
+				{
+					"arabic": "الحادث",
+					"english": "The accident",
+					"transliteration": "il-7aadis"
+				},
+				{
+					"arabic": "سوى",
+					"english": "made",
+					"transliteration": "sawwa"
+				},
+				{
+					"arabic": "زحمة.",
+					"english": "traffic.",
+					"transliteration": "za7ma."
+				}
+			],
+			"targetWords": [
+				"Accident"
+			]
+		},
+		{
+			"arabic": "إيش تقول النشرة الجوية؟",
+			"arabicTashkeel": "إيش تِقول النَّشرة الجَوّية؟",
+			"english": "What does the weather forecast say?",
+			"transliteration": "eesh tigool in-nashra il-jawwiyya?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "تقول",
+					"english": "says",
+					"transliteration": "tigool"
+				},
+				{
+					"arabic": "النشرة",
+					"english": "the bulletin",
+					"transliteration": "in-nashra"
+				},
+				{
+					"arabic": "الجوية؟",
+					"english": "of the weather?",
+					"transliteration": "il-jawwiyya?"
+				}
+			],
+			"targetWords": [
+				"Weather forecast"
+			]
+		},
+		{
+			"arabic": "غير القناة.",
+			"arabicTashkeel": "غَيِّر القَناة.",
+			"english": "Change the channel.",
+			"transliteration": "ghayyir il-ganaa.",
+			"wordAlignments": [
+				{
+					"arabic": "غير",
+					"english": "Change",
+					"transliteration": "ghayyir"
+				},
+				{
+					"arabic": "القناة.",
+					"english": "the channel.",
+					"transliteration": "il-ganaa."
+				}
+			],
+			"targetWords": [
+				"Channel"
+			]
+		},
+		{
+			"arabic": "ملخص قصير.",
+			"arabicTashkeel": "مُلَخَّص قَصير.",
+			"english": "A short summary.",
+			"transliteration": "mulakhkhas gaseer.",
+			"wordAlignments": [
+				{
+					"arabic": "ملخص",
+					"english": "A summary",
+					"transliteration": "mulakhkhas"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gaseer."
+				}
+			],
+			"targetWords": [
+				"Summary"
+			]
+		},
+		{
+			"arabic": "أقرا الأخبار في الجوال.",
+			"arabicTashkeel": "أقرا الأخبار في الجَوّال.",
+			"english": "I read the news on my phone.",
+			"transliteration": "agra il-akhbaar fi ij-jawwaal.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "الأخبار",
+					"english": "the news",
+					"transliteration": "il-akhbaar"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجوال.",
+					"english": "the mobile.",
+					"transliteration": "ij-jawwaal."
+				}
+			],
+			"targetWords": [
+				"News"
+			]
+		},
+		{
+			"arabic": "النشرة كانت طويلة اليوم.",
+			"arabicTashkeel": "النَّشرة كانَت طَويلة اليوم.",
+			"english": "The bulletin was long today.",
+			"transliteration": "in-nashra kaanat taweela il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "النشرة",
+					"english": "The bulletin",
+					"transliteration": "in-nashra"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "طويلة",
+					"english": "long",
+					"transliteration": "taweela"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Bulletin"
+			]
+		},
+		{
+			"arabic": "مذيع مشهور.",
+			"arabicTashkeel": "مُذيع مَشهور.",
+			"english": "A famous presenter.",
+			"transliteration": "muzee3 mashhoor.",
+			"wordAlignments": [
+				{
+					"arabic": "مذيع",
+					"english": "A presenter",
+					"transliteration": "muzee3"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mashhoor."
+				}
+			],
+			"targetWords": [
+				"Presenter"
+			]
+		},
+		{
+			"arabic": "سمعت الخبر؟",
+			"arabicTashkeel": "سِمِعت الخَبَر؟",
+			"english": "Did you hear the news item?",
+			"transliteration": "simi3t il-khabar?",
+			"wordAlignments": [
+				{
+					"arabic": "سمعت",
+					"english": "Did you hear",
+					"transliteration": "simi3t"
+				},
+				{
+					"arabic": "الخبر؟",
+					"english": "the news item?",
+					"transliteration": "il-khabar?"
+				}
+			],
+			"targetWords": [
+				"News item"
+			]
+		},
+		{
+			"arabic": "وقفوا البرنامج عشان خبر عاجل.",
+			"arabicTashkeel": "وَقَّفوا البَرنامِج عَشان خَبَر عاجِل.",
+			"english": "They stopped the programme for breaking news.",
+			"transliteration": "waggafu il-barnaamij 3ashaan khabar 3aajil.",
+			"wordAlignments": [
+				{
+					"arabic": "وقفوا",
+					"english": "They stopped",
+					"transliteration": "waggafu"
+				},
+				{
+					"arabic": "البرنامج",
+					"english": "the programme",
+					"transliteration": "il-barnaamij"
+				},
+				{
+					"arabic": "عشان",
+					"english": "for",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "خبر",
+					"english": "a news item",
+					"transliteration": "khabar"
+				},
+				{
+					"arabic": "عاجل.",
+					"english": "urgent.",
+					"transliteration": "3aajil."
+				}
+			],
+			"targetWords": [
+				"Breaking (news)"
+			]
+		},
+		{
+			"arabic": "الحكومة تبني بيوت جديدة.",
+			"arabicTashkeel": "الحُكومة تِبني بُيوت جَديدة.",
+			"english": "The government is building new houses.",
+			"transliteration": "il-7ukooma tibni buyoot jadeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "الحكومة",
+					"english": "The government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "تبني",
+					"english": "builds",
+					"transliteration": "tibni"
+				},
+				{
+					"arabic": "بيوت",
+					"english": "houses",
+					"transliteration": "buyoot"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jadeeda."
+				}
+			],
+			"targetWords": [
+				"Government"
+			]
+		},
+		{
+			"arabic": "مكتب الأمير.",
+			"arabicTashkeel": "مَكتَب الأمير.",
+			"english": "The governor's office.",
+			"transliteration": "maktab il-ameer.",
+			"wordAlignments": [
+				{
+					"arabic": "مكتب",
+					"english": "The office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "الأمير.",
+					"english": "the emir.",
+					"transliteration": "il-ameer."
+				}
+			],
+			"targetWords": [
+				"Governor (emir)"
+			]
+		},
+		{
+			"arabic": "وزير جديد.",
+			"arabicTashkeel": "وَزير جَديد.",
+			"english": "A new minister.",
+			"transliteration": "wazeer jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "وزير",
+					"english": "A minister",
+					"transliteration": "wazeer"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jadeed."
+				}
+			],
+			"targetWords": [
+				"Minister"
+			]
+		},
+		{
+			"arabic": "الناس مبسوطين بالقرار.",
+			"arabicTashkeel": "النّاس مَبسوطين بالقَرار.",
+			"english": "People are happy with the decision.",
+			"transliteration": "in-naas mabsooteen bil-garaar.",
+			"wordAlignments": [
+				{
+					"arabic": "الناس",
+					"english": "The people are",
+					"transliteration": "in-naas"
+				},
+				{
+					"arabic": "مبسوطين",
+					"english": "pleased",
+					"transliteration": "mabsooteen"
+				},
+				{
+					"arabic": "بالقرار.",
+					"english": "with the decision.",
+					"transliteration": "bil-garaar."
+				}
+			],
+			"targetWords": [
+				"Decision / decree"
+			]
+		},
+		{
+			"arabic": "مجلس الشورى ناقش الإقتصاد.",
+			"arabicTashkeel": "مَجلِس الشّورى ناقَش الإقتِصاد.",
+			"english": "The Shura Council discussed the economy.",
+			"transliteration": "majlis ish-shoora naagash il-igtisaad.",
+			"wordAlignments": [
+				{
+					"arabic": "مجلس",
+					"english": "The council of",
+					"transliteration": "majlis"
+				},
+				{
+					"arabic": "الشورى",
+					"english": "consultation",
+					"transliteration": "ish-shoora"
+				},
+				{
+					"arabic": "ناقش",
+					"english": "discussed",
+					"transliteration": "naagash"
+				},
+				{
+					"arabic": "الإقتصاد.",
+					"english": "the economy.",
+					"transliteration": "il-igtisaad."
+				}
+			],
+			"targetWords": [
+				"Shura Council",
+				"Economy"
+			]
+		},
+		{
+			"arabic": "الإقتصاد السعودي كبير.",
+			"arabicTashkeel": "الإقتِصاد السُّعودي كبير.",
+			"english": "The Saudi economy is big.",
+			"transliteration": "il-igtisaad is-su3oodi kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "الإقتصاد",
+					"english": "The economy",
+					"transliteration": "il-igtisaad"
+				},
+				{
+					"arabic": "السعودي",
+					"english": "Saudi is",
+					"transliteration": "is-su3oodi"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "محد انصاب في الحادث.",
+			"arabicTashkeel": "مَحَد اِنصاب في الحادِث.",
+			"english": "Nobody was hurt in the accident.",
+			"transliteration": "ma7ad insaab fi il-7aadis.",
+			"wordAlignments": [
+				{
+					"arabic": "محد",
+					"english": "Nobody",
+					"transliteration": "ma7ad"
+				},
+				{
+					"arabic": "انصاب",
+					"english": "was hurt",
+					"transliteration": "insaab"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الحادث.",
+					"english": "the accident.",
+					"transliteration": "il-7aadis."
+				}
+			],
+			"targetWords": [
+				"Accident"
+			]
+		},
+		{
+			"arabic": "النشرة الجوية كانت غلط.",
+			"arabicTashkeel": "النَّشرة الجَوّية كانَت غَلَط.",
+			"english": "The weather forecast was wrong.",
+			"transliteration": "in-nashra il-jawwiyya kaanat ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "النشرة",
+					"english": "The bulletin",
+					"transliteration": "in-nashra"
+				},
+				{
+					"arabic": "الجوية",
+					"english": "of the weather",
+					"transliteration": "il-jawwiyya"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "غلط.",
+					"english": "wrong.",
+					"transliteration": "ghalat."
+				}
+			],
+			"targetWords": [
+				"Weather forecast"
+			]
+		},
+		{
+			"arabic": "قناة رياضة.",
+			"arabicTashkeel": "قَناة رِياضة.",
+			"english": "A sports channel.",
+			"transliteration": "ganaat riyaadha.",
+			"wordAlignments": [
+				{
+					"arabic": "قناة",
+					"english": "A channel of",
+					"transliteration": "ganaat"
+				},
+				{
+					"arabic": "رياضة.",
+					"english": "sport.",
+					"transliteration": "riyaadha."
+				}
+			],
+			"targetWords": [
+				"Channel"
+			]
+		},
+		{
+			"arabic": "الملخص في آخر النشرة.",
+			"arabicTashkeel": "المُلَخَّص في آخِر النَّشرة.",
+			"english": "The summary is at the end of the bulletin.",
+			"transliteration": "il-mulakhkhas fi aakhir in-nashra.",
+			"wordAlignments": [
+				{
+					"arabic": "الملخص",
+					"english": "The summary is",
+					"transliteration": "il-mulakhkhas"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "آخر",
+					"english": "the end of",
+					"transliteration": "aakhir"
+				},
+				{
+					"arabic": "النشرة.",
+					"english": "the bulletin.",
+					"transliteration": "in-nashra."
+				}
+			],
+			"targetWords": [
+				"Summary",
+				"Bulletin"
+			]
+		},
+		{
+			"arabic": "أخبار حلوة، الحمد لله.",
+			"arabicTashkeel": "أخبار حِلوة، الحَمدُ لِله.",
+			"english": "Good news, thank God.",
+			"transliteration": "akhbaar 7ilwa, il-7amdu lillah.",
+			"wordAlignments": [
+				{
+					"arabic": "أخبار",
+					"english": "News",
+					"transliteration": "akhbaar"
+				},
+				{
+					"arabic": "حلوة،",
+					"english": "good,",
+					"transliteration": "7ilwa,"
+				},
+				{
+					"arabic": "الحمد",
+					"english": "praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله.",
+					"english": "be to God.",
+					"transliteration": "lillah."
+				}
+			],
+			"targetWords": [
+				"News"
+			]
+		},
+		{
+			"arabic": "نشرة المسا.",
+			"arabicTashkeel": "نَشرة المَسا.",
+			"english": "The evening bulletin.",
+			"transliteration": "nashrat il-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "نشرة",
+					"english": "The bulletin of",
+					"transliteration": "nashrat"
+				},
+				{
+					"arabic": "المسا.",
+					"english": "the evening.",
+					"transliteration": "il-masa."
+				}
+			],
+			"targetWords": [
+				"Bulletin"
+			]
+		},
+		{
+			"arabic": "المذيع سأل الوزير.",
+			"arabicTashkeel": "المُذيع سأل الوَزير.",
+			"english": "The presenter asked the minister.",
+			"transliteration": "il-muzee3 sa2al il-wazeer.",
+			"wordAlignments": [
+				{
+					"arabic": "المذيع",
+					"english": "The presenter",
+					"transliteration": "il-muzee3"
+				},
+				{
+					"arabic": "سأل",
+					"english": "asked",
+					"transliteration": "sa2al"
+				},
+				{
+					"arabic": "الوزير.",
+					"english": "the minister.",
+					"transliteration": "il-wazeer."
+				}
+			],
+			"targetWords": [
+				"Presenter",
+				"Minister"
+			]
+		},
+		{
+			"arabic": "الخبر انتشر بسرعة.",
+			"arabicTashkeel": "الخَبَر اِنتَشَر بسُرعة.",
+			"english": "The news item spread fast.",
+			"transliteration": "il-khabar intashar b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الخبر",
+					"english": "The news item",
+					"transliteration": "il-khabar"
+				},
+				{
+					"arabic": "انتشر",
+					"english": "spread",
+					"transliteration": "intashar"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "fast.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"News item"
+			]
+		},
+		{
+			"arabic": "قرار عاجل.",
+			"arabicTashkeel": "قَرار عاجِل.",
+			"english": "An urgent decision.",
+			"transliteration": "garaar 3aajil.",
+			"wordAlignments": [
+				{
+					"arabic": "قرار",
+					"english": "A decision",
+					"transliteration": "garaar"
+				},
+				{
+					"arabic": "عاجل.",
+					"english": "urgent.",
+					"transliteration": "3aajil."
+				}
+			],
+			"targetWords": [
+				"Breaking (news)",
+				"Decision / decree"
+			]
+		},
+		{
+			"arabic": "خطة الحكومة الجديدة.",
+			"arabicTashkeel": "خُطّة الحُكومة الجَديدة.",
+			"english": "The government's new plan.",
+			"transliteration": "khuttat il-7ukooma ij-jadeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "خطة",
+					"english": "The plan of",
+					"transliteration": "khuttat"
+				},
+				{
+					"arabic": "الحكومة",
+					"english": "the government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "الجديدة.",
+					"english": "new.",
+					"transliteration": "ij-jadeeda."
+				}
+			],
+			"targetWords": [
+				"Government"
+			]
+		},
+		{
+			"arabic": "أمير منطقة مكة.",
+			"arabicTashkeel": "أمير مَنطِقة مَكّة.",
+			"english": "The governor of Mecca region.",
+			"transliteration": "ameer mantigat makka.",
+			"wordAlignments": [
+				{
+					"arabic": "أمير",
+					"english": "The emir of",
+					"transliteration": "ameer"
+				},
+				{
+					"arabic": "منطقة",
+					"english": "the region of",
+					"transliteration": "mantigat"
+				},
+				{
+					"arabic": "مكة.",
+					"english": "Mecca.",
+					"transliteration": "makka."
+				}
+			],
+			"targetWords": [
+				"Governor (emir)"
+			]
+		},
+		{
+			"arabic": "وزير التعليم.",
+			"arabicTashkeel": "وَزير التَّعليم.",
+			"english": "The Minister of Education.",
+			"transliteration": "wazeer it-ta3leem.",
+			"wordAlignments": [
+				{
+					"arabic": "وزير",
+					"english": "The minister of",
+					"transliteration": "wazeer"
+				},
+				{
+					"arabic": "التعليم.",
+					"english": "education.",
+					"transliteration": "it-ta3leem."
+				}
+			],
+			"targetWords": [
+				"Minister"
+			]
+		},
+		{
+			"arabic": "حادث كبير.",
+			"arabicTashkeel": "حادِث كبير.",
+			"english": "A big accident.",
+			"transliteration": "7aadis kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "حادث",
+					"english": "An accident",
+					"transliteration": "7aadis"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Accident"
+			]
+		},
+		{
+			"arabic": "القناة المحلية.",
+			"arabicTashkeel": "القَناة المَحَلّية.",
+			"english": "The local channel.",
+			"transliteration": "il-ganaa il-ma7alliyya.",
+			"wordAlignments": [
+				{
+					"arabic": "القناة",
+					"english": "The channel",
+					"transliteration": "il-ganaa"
+				},
+				{
+					"arabic": "المحلية.",
+					"english": "local.",
+					"transliteration": "il-ma7alliyya."
+				}
+			],
+			"targetWords": [
+				"Channel"
+			]
+		},
+		{
+			"arabic": "أبغى ملخص بس.",
+			"arabicTashkeel": "أبغى مُلَخَّص بَس.",
+			"english": "I want a summary only.",
+			"transliteration": "abgha mulakhkhas bas.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "ملخص",
+					"english": "a summary",
+					"transliteration": "mulakhkhas"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Summary"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Evening Bulletin",
+			"sentences": [
+				{
+					"arabic": "في نشرة الليلة، المذيع بدا بخبر عاجل.",
+					"arabicTashkeel": "في نَشرة الليلة، المُذيع بَدا بِخَبَر عاجِل.",
+					"english": "In tonight's bulletin, the presenter started with breaking news.",
+					"transliteration": "fi nashrat il-laila, il-muzee3 bada bi-khabar 3aajil.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "In",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "نشرة",
+							"english": "the bulletin of",
+							"transliteration": "nashrat"
+						},
+						{
+							"arabic": "الليلة،",
+							"english": "tonight,",
+							"transliteration": "il-laila,"
+						},
+						{
+							"arabic": "المذيع",
+							"english": "the presenter",
+							"transliteration": "il-muzee3"
+						},
+						{
+							"arabic": "بدا",
+							"english": "started",
+							"transliteration": "bada"
+						},
+						{
+							"arabic": "بخبر",
+							"english": "with a news item",
+							"transliteration": "bi-khabar"
+						},
+						{
+							"arabic": "عاجل.",
+							"english": "urgent.",
+							"transliteration": "3aajil."
+						}
+					]
+				},
+				{
+					"arabic": "الحكومة أعلنت قرار جديد عن الإقتصاد.",
+					"arabicTashkeel": "الحُكومة أعلَنَت قَرار جَديد عَن الإقتِصاد.",
+					"english": "The government announced a new decision about the economy.",
+					"transliteration": "il-7ukooma a3lanat garaar jadeed 3an il-igtisaad.",
+					"wordAlignments": [
+						{
+							"arabic": "الحكومة",
+							"english": "The government",
+							"transliteration": "il-7ukooma"
+						},
+						{
+							"arabic": "أعلنت",
+							"english": "announced",
+							"transliteration": "a3lanat"
+						},
+						{
+							"arabic": "قرار",
+							"english": "a decision",
+							"transliteration": "garaar"
+						},
+						{
+							"arabic": "جديد",
+							"english": "new",
+							"transliteration": "jadeed"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "الإقتصاد.",
+							"english": "the economy.",
+							"transliteration": "il-igtisaad."
+						}
+					]
+				},
+				{
+					"arabic": "أمير منطقة مكة زار الميناء الجديد في جدة.",
+					"arabicTashkeel": "أمير مَنطِقة مَكّة زار الميناء الجَديد في جِدّة.",
+					"english": "The governor of Mecca region visited the new port in Jeddah.",
+					"transliteration": "ameer mantigat makka zaar il-meena ij-jadeed fi jidda.",
+					"wordAlignments": [
+						{
+							"arabic": "أمير",
+							"english": "The emir of",
+							"transliteration": "ameer"
+						},
+						{
+							"arabic": "منطقة",
+							"english": "the region of",
+							"transliteration": "mantigat"
+						},
+						{
+							"arabic": "مكة",
+							"english": "Mecca",
+							"transliteration": "makka"
+						},
+						{
+							"arabic": "زار",
+							"english": "visited",
+							"transliteration": "zaar"
+						},
+						{
+							"arabic": "الميناء",
+							"english": "the port",
+							"transliteration": "il-meena"
+						},
+						{
+							"arabic": "الجديد",
+							"english": "new",
+							"transliteration": "ij-jadeed"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "جدة.",
+							"english": "Jeddah.",
+							"transliteration": "jidda."
+						}
+					]
+				},
+				{
+					"arabic": "صار حادث على طريق مكة، بس محد انصاب.",
+					"arabicTashkeel": "صار حادِث على طَريق مَكّة، بَس مَحَد اِنصاب.",
+					"english": "There was an accident on the Mecca road, but nobody was hurt.",
+					"transliteration": "saar 7aadis 3ala tareeg makka, bas ma7ad insaab.",
+					"wordAlignments": [
+						{
+							"arabic": "صار",
+							"english": "Happened",
+							"transliteration": "saar"
+						},
+						{
+							"arabic": "حادث",
+							"english": "an accident",
+							"transliteration": "7aadis"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "طريق",
+							"english": "the road of",
+							"transliteration": "tareeg"
+						},
+						{
+							"arabic": "مكة،",
+							"english": "Mecca,",
+							"transliteration": "makka,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "محد",
+							"english": "nobody",
+							"transliteration": "ma7ad"
+						},
+						{
+							"arabic": "انصاب.",
+							"english": "was hurt.",
+							"transliteration": "insaab."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Weather",
+			"sentences": [
+				{
+					"arabic": "في الآخر، النشرة الجوية قالت: مطر بكرة في جدة.",
+					"arabicTashkeel": "في الآخِر، النَّشرة الجَوّية قالَت: مَطَر بُكرة في جِدّة.",
+					"english": "At the end, the weather forecast said: rain tomorrow in Jeddah.",
+					"transliteration": "fi il-aakhir, in-nashra il-jawwiyya gaalat: matar bukra fi jidda.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "At",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "الآخر،",
+							"english": "the end,",
+							"transliteration": "il-aakhir,"
+						},
+						{
+							"arabic": "النشرة",
+							"english": "the bulletin",
+							"transliteration": "in-nashra"
+						},
+						{
+							"arabic": "الجوية",
+							"english": "of the weather",
+							"transliteration": "il-jawwiyya"
+						},
+						{
+							"arabic": "قالت:",
+							"english": "said:",
+							"transliteration": "gaalat:"
+						},
+						{
+							"arabic": "مطر",
+							"english": "rain",
+							"transliteration": "matar"
+						},
+						{
+							"arabic": "بكرة",
+							"english": "tomorrow",
+							"transliteration": "bukra"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "جدة.",
+							"english": "Jeddah.",
+							"transliteration": "jidda."
+						}
+					]
+				},
+				{
+					"arabic": "جدي طلب مني ملخص الأخبار.",
+					"arabicTashkeel": "جِدّي طَلَب مِنّي مُلَخَّص الأخبار.",
+					"english": "My grandfather asked me for a summary of the news.",
+					"transliteration": "jiddi talab minni mulakhkhas il-akhbaar.",
+					"wordAlignments": [
+						{
+							"arabic": "جدي",
+							"english": "My grandfather",
+							"transliteration": "jiddi"
+						},
+						{
+							"arabic": "طلب",
+							"english": "asked",
+							"transliteration": "talab"
+						},
+						{
+							"arabic": "مني",
+							"english": "from me",
+							"transliteration": "minni"
+						},
+						{
+							"arabic": "ملخص",
+							"english": "a summary of",
+							"transliteration": "mulakhkhas"
+						},
+						{
+							"arabic": "الأخبار.",
+							"english": "the news.",
+							"transliteration": "il-akhbaar."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student's elderly Jeddawi host missed the evening news and asks the student to tell them what happened.",
+		"studentRole": "A guest learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The elderly host, who asks follow-up questions about every story.",
+		"goalEnglish": "Summarise the main news (the government, a new decision, the economy, an accident and the weather) and answer questions about it.",
+		"targetWords": [
+			"News",
+			"Bulletin",
+			"Breaking (news)",
+			"Government",
+			"Decision / decree",
+			"Economy",
+			"Accident",
+			"Weather forecast"
+		]
+	}
+}

@@ -1,0 +1,2427 @@
+{
+	"vocab": [
+		{
+			"arabic": "تاريخ",
+			"arabicTashkeel": "تاريخ",
+			"english": "History",
+			"transliteration": "taareekh",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "History",
+					"transliteration": "taareekh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تراث",
+			"arabicTashkeel": "تُراث",
+			"english": "Heritage",
+			"transliteration": "turaath",
+			"wordAlignments": [
+				{
+					"arabic": "تراث",
+					"english": "Heritage",
+					"transliteration": "turaath"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "آثار",
+			"arabicTashkeel": "آثار",
+			"english": "Ruins / antiquities",
+			"transliteration": "aathaar",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "Antiquities",
+					"transliteration": "aathaar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "ملك",
+			"arabicTashkeel": "مَلِك",
+			"english": "King",
+			"transliteration": "malik",
+			"wordAlignments": [
+				{
+					"arabic": "ملك",
+					"english": "King",
+					"transliteration": "malik"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إمبراطورية",
+			"arabicTashkeel": "إمبَراطورية",
+			"english": "Empire",
+			"transliteration": "imbaraatooriyya",
+			"wordAlignments": [
+				{
+					"arabic": "إمبراطورية",
+					"english": "Empire",
+					"transliteration": "imbaraatooriyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "شريعة",
+			"arabicTashkeel": "شَريعة",
+			"english": "Law code",
+			"transliteration": "sharee3a",
+			"wordAlignments": [
+				{
+					"arabic": "شريعة",
+					"english": "Code",
+					"transliteration": "sharee3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "السومريين",
+			"arabicTashkeel": "السّومَريين",
+			"english": "The Sumerians",
+			"transliteration": "is-soomariyyeen",
+			"wordAlignments": [
+				{
+					"arabic": "السومريين",
+					"english": "The Sumerians",
+					"transliteration": "is-soomariyyeen"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "الكتابة المسمارية",
+			"arabicTashkeel": "الكِتابة المِسمارية",
+			"english": "Cuneiform writing",
+			"transliteration": "il-kitaaba il-mismaariyya",
+			"wordAlignments": [
+				{
+					"arabic": "الكتابة",
+					"english": "The writing",
+					"transliteration": "il-kitaaba"
+				},
+				{
+					"arabic": "المسمارية",
+					"english": "of nails",
+					"transliteration": "il-mismaariyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "العصر العباسي",
+			"arabicTashkeel": "العَصِر العَبّاسي",
+			"english": "The Abbasid era",
+			"transliteration": "il-3asir il-3abbaasi",
+			"wordAlignments": [
+				{
+					"arabic": "العصر",
+					"english": "The era",
+					"transliteration": "il-3asir"
+				},
+				{
+					"arabic": "العباسي",
+					"english": "Abbasid",
+					"transliteration": "il-3abbaasi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بيت الحكمة",
+			"arabicTashkeel": "بيت الحِكمة",
+			"english": "The House of Wisdom",
+			"transliteration": "beet il-7ikma",
+			"wordAlignments": [
+				{
+					"arabic": "بيت",
+					"english": "The house of",
+					"transliteration": "beet"
+				},
+				{
+					"arabic": "الحكمة",
+					"english": "wisdom",
+					"transliteration": "il-7ikma"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "خليفة",
+			"arabicTashkeel": "خَليفة",
+			"english": "Caliph",
+			"transliteration": "khaleefa",
+			"wordAlignments": [
+				{
+					"arabic": "خليفة",
+					"english": "Caliph",
+					"transliteration": "khaleefa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مخطوطة",
+			"arabicTashkeel": "مَخطوطة",
+			"english": "Manuscript",
+			"transliteration": "makhtoota",
+			"wordAlignments": [
+				{
+					"arabic": "مخطوطة",
+					"english": "Manuscript",
+					"transliteration": "makhtoota"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "قرن",
+			"arabicTashkeel": "قَرِن",
+			"english": "Century",
+			"transliteration": "garin",
+			"wordAlignments": [
+				{
+					"arabic": "قرن",
+					"english": "Century",
+					"transliteration": "garin"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يحافظ",
+			"arabicTashkeel": "يْحافِظ",
+			"english": "He preserves",
+			"transliteration": "y7aafidh",
+			"wordAlignments": [
+				{
+					"arabic": "يحافظ",
+					"english": "He preserves",
+					"transliteration": "y7aafidh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "عالم آثار",
+			"arabicTashkeel": "عالِم آثار",
+			"english": "Archaeologist",
+			"transliteration": "3aalim aathaar",
+			"wordAlignments": [
+				{
+					"arabic": "عالم",
+					"english": "Scholar of",
+					"transliteration": "3aalim"
+				},
+				{
+					"arabic": "آثار",
+					"english": "antiquities",
+					"transliteration": "aathaar"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "تاريخ العراق آلاف السنين.",
+			"arabicTashkeel": "تاريخ العِراق آلاف السِّنين.",
+			"english": "Iraq's history is thousands of years long.",
+			"transliteration": "taareekh il-3iraaq aalaaf is-sneen.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "The history of",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq is",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "آلاف",
+					"english": "thousands of",
+					"transliteration": "aalaaf"
+				},
+				{
+					"arabic": "السنين.",
+					"english": "years.",
+					"transliteration": "is-sneen."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "تراثنا كنزنا.",
+			"arabicTashkeel": "تُراثنا كَنزنا.",
+			"english": "Our heritage is our treasure.",
+			"transliteration": "turaathna kanzna.",
+			"wordAlignments": [
+				{
+					"arabic": "تراثنا",
+					"english": "Our heritage is",
+					"transliteration": "turaathna"
+				},
+				{
+					"arabic": "كنزنا.",
+					"english": "our treasure.",
+					"transliteration": "kanzna."
+				}
+			],
+			"targetWords": [
+				"Heritage"
+			]
+		},
+		{
+			"arabic": "آثار بابل جنوب بغداد.",
+			"arabicTashkeel": "آثار بابِل جَنوب بَغداد.",
+			"english": "The ruins of Babylon are south of Baghdad.",
+			"transliteration": "aathaar baabil janoob baghdaad.",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "The antiquities of",
+					"transliteration": "aathaar"
+				},
+				{
+					"arabic": "بابل",
+					"english": "Babylon are",
+					"transliteration": "baabil"
+				},
+				{
+					"arabic": "جنوب",
+					"english": "south of",
+					"transliteration": "janoob"
+				},
+				{
+					"arabic": "بغداد.",
+					"english": "Baghdad.",
+					"transliteration": "baghdaad."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "نبوخذ نصر كان ملك بابل مشهور.",
+			"arabicTashkeel": "نَبوخَذ نَصَّر كان مَلِك بابِل مَشهور.",
+			"english": "Nebuchadnezzar was a famous king of Babylon.",
+			"transliteration": "nabookhadh nassar chaan malik baabil mash-hoor.",
+			"wordAlignments": [
+				{
+					"arabic": "نبوخذ",
+					"english": "Nebuchad",
+					"transliteration": "nabookhadh"
+				},
+				{
+					"arabic": "نصر",
+					"english": "nezzar",
+					"transliteration": "nassar"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "ملك",
+					"english": "a king of",
+					"transliteration": "malik"
+				},
+				{
+					"arabic": "بابل",
+					"english": "Babylon",
+					"transliteration": "baabil"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mash-hoor."
+				}
+			],
+			"targetWords": [
+				"King"
+			]
+		},
+		{
+			"arabic": "الإمبراطورية الآشورية كانت بشمال العراق.",
+			"arabicTashkeel": "الإمبَراطورية الآشورية كانَت بشَمال العِراق.",
+			"english": "The Assyrian Empire was in the north of Iraq.",
+			"transliteration": "il-imbaraatooriyya il-aashooriyya chaanat b-shamaal il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "الإمبراطورية",
+					"english": "The empire",
+					"transliteration": "il-imbaraatooriyya"
+				},
+				{
+					"arabic": "الآشورية",
+					"english": "Assyrian",
+					"transliteration": "il-aashooriyya"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "بشمال",
+					"english": "in the north of",
+					"transliteration": "b-shamaal"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Empire"
+			]
+		},
+		{
+			"arabic": "شريعة حمورابي من أقدم القوانين.",
+			"arabicTashkeel": "شَريعة حَمورابي مِن أقدَم القَوانين.",
+			"english": "Hammurabi's code is one of the oldest laws.",
+			"transliteration": "sharee3at 7amooraabi min agdam il-gawaaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "شريعة",
+					"english": "The code of",
+					"transliteration": "sharee3at"
+				},
+				{
+					"arabic": "حمورابي",
+					"english": "Hammurabi is",
+					"transliteration": "7amooraabi"
+				},
+				{
+					"arabic": "من",
+					"english": "among",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أقدم",
+					"english": "the oldest",
+					"transliteration": "agdam"
+				},
+				{
+					"arabic": "القوانين.",
+					"english": "laws.",
+					"transliteration": "il-gawaaneen."
+				}
+			],
+			"targetWords": [
+				"Law code"
+			]
+		},
+		{
+			"arabic": "السومريين عاشوا بجنوب العراق.",
+			"arabicTashkeel": "السّومَريين عاشوا بجَنوب العِراق.",
+			"english": "The Sumerians lived in southern Iraq.",
+			"transliteration": "is-soomariyyeen 3aashaw b-janoob il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "السومريين",
+					"english": "The Sumerians",
+					"transliteration": "is-soomariyyeen"
+				},
+				{
+					"arabic": "عاشوا",
+					"english": "lived",
+					"transliteration": "3aashaw"
+				},
+				{
+					"arabic": "بجنوب",
+					"english": "in the south of",
+					"transliteration": "b-janoob"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"The Sumerians"
+			]
+		},
+		{
+			"arabic": "السومريين إخترعوا الكتابة المسمارية.",
+			"arabicTashkeel": "السّومَريين إختِرعوا الكِتابة المِسمارية.",
+			"english": "The Sumerians invented cuneiform writing.",
+			"transliteration": "is-soomariyyeen ikhtir3aw il-kitaaba il-mismaariyya.",
+			"wordAlignments": [
+				{
+					"arabic": "السومريين",
+					"english": "The Sumerians",
+					"transliteration": "is-soomariyyeen"
+				},
+				{
+					"arabic": "إخترعوا",
+					"english": "invented",
+					"transliteration": "ikhtir3aw"
+				},
+				{
+					"arabic": "الكتابة",
+					"english": "the writing",
+					"transliteration": "il-kitaaba"
+				},
+				{
+					"arabic": "المسمارية.",
+					"english": "of nails.",
+					"transliteration": "il-mismaariyya."
+				}
+			],
+			"targetWords": [
+				"The Sumerians",
+				"Cuneiform writing"
+			]
+		},
+		{
+			"arabic": "بغداد كانت عاصمة العالم بالعصر العباسي.",
+			"arabicTashkeel": "بَغداد كانَت عاصِمة العالَم بالعَصِر العَبّاسي.",
+			"english": "Baghdad was the capital of the world in the Abbasid era.",
+			"transliteration": "baghdaad chaanat 3aasimat il-3aalam bil-3asir il-3abbaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "عاصمة",
+					"english": "the capital of",
+					"transliteration": "3aasimat"
+				},
+				{
+					"arabic": "العالم",
+					"english": "the world",
+					"transliteration": "il-3aalam"
+				},
+				{
+					"arabic": "بالعصر",
+					"english": "in the era",
+					"transliteration": "bil-3asir"
+				},
+				{
+					"arabic": "العباسي.",
+					"english": "Abbasid.",
+					"transliteration": "il-3abbaasi."
+				}
+			],
+			"targetWords": [
+				"The Abbasid era"
+			]
+		},
+		{
+			"arabic": "بيت الحكمة كان مكتبة عظيمة.",
+			"arabicTashkeel": "بيت الحِكمة كان مَكتَبة عَظيمة.",
+			"english": "The House of Wisdom was a great library.",
+			"transliteration": "beet il-7ikma chaan maktaba 3adheema.",
+			"wordAlignments": [
+				{
+					"arabic": "بيت",
+					"english": "The house of",
+					"transliteration": "beet"
+				},
+				{
+					"arabic": "الحكمة",
+					"english": "wisdom",
+					"transliteration": "il-7ikma"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "مكتبة",
+					"english": "a library",
+					"transliteration": "maktaba"
+				},
+				{
+					"arabic": "عظيمة.",
+					"english": "great.",
+					"transliteration": "3adheema."
+				}
+			],
+			"targetWords": [
+				"The House of Wisdom"
+			]
+		},
+		{
+			"arabic": "هارون الرشيد أشهر خليفة عباسي.",
+			"arabicTashkeel": "هارون الرَّشيد أشهَر خَليفة عَبّاسي.",
+			"english": "Harun al-Rashid is the most famous Abbasid caliph.",
+			"transliteration": "haaroon ir-rasheed ash-har khaleefa 3abbaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "هارون",
+					"english": "Harun",
+					"transliteration": "haaroon"
+				},
+				{
+					"arabic": "الرشيد",
+					"english": "al-Rashid is",
+					"transliteration": "ir-rasheed"
+				},
+				{
+					"arabic": "أشهر",
+					"english": "the most famous",
+					"transliteration": "ash-har"
+				},
+				{
+					"arabic": "خليفة",
+					"english": "caliph",
+					"transliteration": "khaleefa"
+				},
+				{
+					"arabic": "عباسي.",
+					"english": "Abbasid.",
+					"transliteration": "3abbaasi."
+				}
+			],
+			"targetWords": [
+				"Caliph"
+			]
+		},
+		{
+			"arabic": "المتحف بيه مخطوطات عربية عتيقة.",
+			"arabicTashkeel": "المَتحَف بيه مَخطوطات عَرَبية عَتيقة.",
+			"english": "The museum has old Arabic manuscripts.",
+			"transliteration": "il-mat7af bee makhtootaat 3arabiyya 3ateega.",
+			"wordAlignments": [
+				{
+					"arabic": "المتحف",
+					"english": "The museum",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "مخطوطات",
+					"english": "manuscripts",
+					"transliteration": "makhtootaat"
+				},
+				{
+					"arabic": "عربية",
+					"english": "Arabic",
+					"transliteration": "3arabiyya"
+				},
+				{
+					"arabic": "عتيقة.",
+					"english": "old.",
+					"transliteration": "3ateega."
+				}
+			],
+			"targetWords": [
+				"Manuscript"
+			]
+		},
+		{
+			"arabic": "بغداد إنبنت بالقرن الثامن.",
+			"arabicTashkeel": "بَغداد إنبنَت بالقَرِن الثّامِن.",
+			"english": "Baghdad was founded in the eighth century.",
+			"transliteration": "baghdaad inbinat bil-garin ith-thaamin.",
+			"wordAlignments": [
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "إنبنت",
+					"english": "was built",
+					"transliteration": "inbinat"
+				},
+				{
+					"arabic": "بالقرن",
+					"english": "in the century",
+					"transliteration": "bil-garin"
+				},
+				{
+					"arabic": "الثامن.",
+					"english": "eighth.",
+					"transliteration": "ith-thaamin."
+				}
+			],
+			"targetWords": [
+				"Century"
+			]
+		},
+		{
+			"arabic": "لازم نحافظ على تراثنا.",
+			"arabicTashkeel": "لازِم نْحافِظ عَلى تُراثنا.",
+			"english": "We must preserve our heritage.",
+			"transliteration": "laazim n7aafidh 3ala turaathna.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "We must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "نحافظ",
+					"english": "preserve",
+					"transliteration": "n7aafidh"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "تراثنا.",
+					"english": "our heritage.",
+					"transliteration": "turaathna."
+				}
+			],
+			"targetWords": [
+				"He preserves",
+				"Heritage"
+			]
+		},
+		{
+			"arabic": "عالم الآثار لقى لوح طين.",
+			"arabicTashkeel": "عالِم الآثار لِقى لَوح طين.",
+			"english": "The archaeologist found a clay tablet.",
+			"transliteration": "3aalim il-aathaar liga loo7 teen.",
+			"wordAlignments": [
+				{
+					"arabic": "عالم",
+					"english": "The scholar of",
+					"transliteration": "3aalim"
+				},
+				{
+					"arabic": "الآثار",
+					"english": "antiquities",
+					"transliteration": "il-aathaar"
+				},
+				{
+					"arabic": "لقى",
+					"english": "found",
+					"transliteration": "liga"
+				},
+				{
+					"arabic": "لوح",
+					"english": "a tablet",
+					"transliteration": "loo7"
+				},
+				{
+					"arabic": "طين.",
+					"english": "of clay.",
+					"transliteration": "teen."
+				}
+			],
+			"targetWords": [
+				"Archaeologist"
+			]
+		},
+		{
+			"arabic": "التاريخ يعيد نفسه.",
+			"arabicTashkeel": "التّاريخ يْعيد نَفسَه.",
+			"english": "History repeats itself.",
+			"transliteration": "it-taareekh y3eed nafsa.",
+			"wordAlignments": [
+				{
+					"arabic": "التاريخ",
+					"english": "History",
+					"transliteration": "it-taareekh"
+				},
+				{
+					"arabic": "يعيد",
+					"english": "repeats",
+					"transliteration": "y3eed"
+				},
+				{
+					"arabic": "نفسه.",
+					"english": "itself.",
+					"transliteration": "nafsa."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "التراث البغدادي ببيوتها العتيقة.",
+			"arabicTashkeel": "التُّراث البَغدادي ببيوتها العَتيقة.",
+			"english": "Baghdadi heritage is in its old houses.",
+			"transliteration": "it-turaath il-baghdaadi b-byootha il-3ateega.",
+			"wordAlignments": [
+				{
+					"arabic": "التراث",
+					"english": "The heritage",
+					"transliteration": "it-turaath"
+				},
+				{
+					"arabic": "البغدادي",
+					"english": "Baghdadi is",
+					"transliteration": "il-baghdaadi"
+				},
+				{
+					"arabic": "ببيوتها",
+					"english": "in its houses",
+					"transliteration": "b-byootha"
+				},
+				{
+					"arabic": "العتيقة.",
+					"english": "old.",
+					"transliteration": "il-3ateega."
+				}
+			],
+			"targetWords": [
+				"Heritage"
+			]
+		},
+		{
+			"arabic": "الآثار بخطر.",
+			"arabicTashkeel": "الآثار بخَطَر.",
+			"english": "The ruins are in danger.",
+			"transliteration": "il-aathaar b-khatar.",
+			"wordAlignments": [
+				{
+					"arabic": "الآثار",
+					"english": "The antiquities are",
+					"transliteration": "il-aathaar"
+				},
+				{
+					"arabic": "بخطر.",
+					"english": "in danger.",
+					"transliteration": "b-khatar."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "الملك بنى قصر كبير.",
+			"arabicTashkeel": "المَلِك بِنى قَصِر كْبير.",
+			"english": "The king built a big palace.",
+			"transliteration": "il-malik bina gasir chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "الملك",
+					"english": "The king",
+					"transliteration": "il-malik"
+				},
+				{
+					"arabic": "بنى",
+					"english": "built",
+					"transliteration": "bina"
+				},
+				{
+					"arabic": "قصر",
+					"english": "a palace",
+					"transliteration": "gasir"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"King"
+			]
+		},
+		{
+			"arabic": "الإمبراطورية البابلية كانت قوية.",
+			"arabicTashkeel": "الإمبَراطورية البابِلية كانَت قَويّة.",
+			"english": "The Babylonian Empire was strong.",
+			"transliteration": "il-imbaraatooriyya il-baabiliyya chaanat gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الإمبراطورية",
+					"english": "The empire",
+					"transliteration": "il-imbaraatooriyya"
+				},
+				{
+					"arabic": "البابلية",
+					"english": "Babylonian",
+					"transliteration": "il-baabiliyya"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Empire"
+			]
+		},
+		{
+			"arabic": "الشريعة إنكتبت على مسلة حجر.",
+			"arabicTashkeel": "الشَّريعة إنكِتبَت عَلى مِسَلّة حَجَر.",
+			"english": "The law code was written on a stone stele.",
+			"transliteration": "ish-sharee3a inkitbat 3ala misalla 7ajar.",
+			"wordAlignments": [
+				{
+					"arabic": "الشريعة",
+					"english": "The code",
+					"transliteration": "ish-sharee3a"
+				},
+				{
+					"arabic": "إنكتبت",
+					"english": "was written",
+					"transliteration": "inkitbat"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "مسلة",
+					"english": "a stele",
+					"transliteration": "misalla"
+				},
+				{
+					"arabic": "حجر.",
+					"english": "of stone.",
+					"transliteration": "7ajar."
+				}
+			],
+			"targetWords": [
+				"Law code"
+			]
+		},
+		{
+			"arabic": "السومريين بنوا أول المدن.",
+			"arabicTashkeel": "السّومَريين بِنوا أوَّل المُدُن.",
+			"english": "The Sumerians built the first cities.",
+			"transliteration": "is-soomariyyeen binaw awwal il-mudun.",
+			"wordAlignments": [
+				{
+					"arabic": "السومريين",
+					"english": "The Sumerians",
+					"transliteration": "is-soomariyyeen"
+				},
+				{
+					"arabic": "بنوا",
+					"english": "built",
+					"transliteration": "binaw"
+				},
+				{
+					"arabic": "أول",
+					"english": "the first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "المدن.",
+					"english": "cities.",
+					"transliteration": "il-mudun."
+				}
+			],
+			"targetWords": [
+				"The Sumerians"
+			]
+		},
+		{
+			"arabic": "تكدر تقرا الكتابة المسمارية؟",
+			"arabicTashkeel": "تِكدَر تِقرا الكِتابة المِسمارية؟",
+			"english": "Can you read cuneiform writing?",
+			"transliteration": "tigdar tigra il-kitaaba il-mismaariyya?",
+			"wordAlignments": [
+				{
+					"arabic": "تكدر",
+					"english": "Can you",
+					"transliteration": "tigdar"
+				},
+				{
+					"arabic": "تقرا",
+					"english": "read",
+					"transliteration": "tigra"
+				},
+				{
+					"arabic": "الكتابة",
+					"english": "the writing",
+					"transliteration": "il-kitaaba"
+				},
+				{
+					"arabic": "المسمارية؟",
+					"english": "of nails?",
+					"transliteration": "il-mismaariyya?"
+				}
+			],
+			"targetWords": [
+				"Cuneiform writing"
+			]
+		},
+		{
+			"arabic": "العلم إزدهر بالعصر العباسي.",
+			"arabicTashkeel": "العِلِم إزدَهَر بالعَصِر العَبّاسي.",
+			"english": "Science flourished in the Abbasid era.",
+			"transliteration": "il-3ilim izdahar bil-3asir il-3abbaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "العلم",
+					"english": "Science",
+					"transliteration": "il-3ilim"
+				},
+				{
+					"arabic": "إزدهر",
+					"english": "flourished",
+					"transliteration": "izdahar"
+				},
+				{
+					"arabic": "بالعصر",
+					"english": "in the era",
+					"transliteration": "bil-3asir"
+				},
+				{
+					"arabic": "العباسي.",
+					"english": "Abbasid.",
+					"transliteration": "il-3abbaasi."
+				}
+			],
+			"targetWords": [
+				"The Abbasid era"
+			]
+		},
+		{
+			"arabic": "العلماء ترجموا كتب ببيت الحكمة.",
+			"arabicTashkeel": "العُلَماء تَرجموا كُتُب ببيت الحِكمة.",
+			"english": "Scholars translated books at the House of Wisdom.",
+			"transliteration": "il-3ulamaa2 tarjamaw kutub b-beet il-7ikma.",
+			"wordAlignments": [
+				{
+					"arabic": "العلماء",
+					"english": "The scholars",
+					"transliteration": "il-3ulamaa2"
+				},
+				{
+					"arabic": "ترجموا",
+					"english": "translated",
+					"transliteration": "tarjamaw"
+				},
+				{
+					"arabic": "كتب",
+					"english": "books",
+					"transliteration": "kutub"
+				},
+				{
+					"arabic": "ببيت",
+					"english": "at the house of",
+					"transliteration": "b-beet"
+				},
+				{
+					"arabic": "الحكمة.",
+					"english": "wisdom.",
+					"transliteration": "il-7ikma."
+				}
+			],
+			"targetWords": [
+				"The House of Wisdom"
+			]
+		},
+		{
+			"arabic": "الخليفة كان يحب العلم والشعر.",
+			"arabicTashkeel": "الخَليفة كان يْحِب العِلِم والشِّعِر.",
+			"english": "The caliph loved science and poetry.",
+			"transliteration": "il-khaleefa chaan y7ibb il-3ilim w-ish-shi3ir.",
+			"wordAlignments": [
+				{
+					"arabic": "الخليفة",
+					"english": "The caliph",
+					"transliteration": "il-khaleefa"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "يحب",
+					"english": "loving",
+					"transliteration": "y7ibb"
+				},
+				{
+					"arabic": "العلم",
+					"english": "science",
+					"transliteration": "il-3ilim"
+				},
+				{
+					"arabic": "والشعر.",
+					"english": "and poetry.",
+					"transliteration": "w-ish-shi3ir."
+				}
+			],
+			"targetWords": [
+				"Caliph"
+			]
+		},
+		{
+			"arabic": "مخطوطة عتيقة من القرن الثاني عشر.",
+			"arabicTashkeel": "مَخطوطة عَتيقة مِن القَرِن الثّاني عَشَر.",
+			"english": "An old manuscript from the twelfth century.",
+			"transliteration": "makhtoota 3ateega min il-garin ith-thaani 3ashar.",
+			"wordAlignments": [
+				{
+					"arabic": "مخطوطة",
+					"english": "A manuscript",
+					"transliteration": "makhtoota"
+				},
+				{
+					"arabic": "عتيقة",
+					"english": "old",
+					"transliteration": "3ateega"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "القرن",
+					"english": "the century",
+					"transliteration": "il-garin"
+				},
+				{
+					"arabic": "الثاني",
+					"english": "second",
+					"transliteration": "ith-thaani"
+				},
+				{
+					"arabic": "عشر.",
+					"english": "ten.",
+					"transliteration": "3ashar."
+				}
+			],
+			"targetWords": [
+				"Manuscript",
+				"Century"
+			]
+		},
+		{
+			"arabic": "عشر قرون تاريخ.",
+			"arabicTashkeel": "عَشِر قُرون تاريخ.",
+			"english": "Ten centuries of history.",
+			"transliteration": "3ashir guroon taareekh.",
+			"wordAlignments": [
+				{
+					"arabic": "عشر",
+					"english": "Ten",
+					"transliteration": "3ashir"
+				},
+				{
+					"arabic": "قرون",
+					"english": "centuries of",
+					"transliteration": "guroon"
+				},
+				{
+					"arabic": "تاريخ.",
+					"english": "history.",
+					"transliteration": "taareekh."
+				}
+			],
+			"targetWords": [
+				"Century",
+				"History"
+			]
+		},
+		{
+			"arabic": "المتحف يحافظ عالآثار.",
+			"arabicTashkeel": "المَتحَف يْحافِظ عالآثار.",
+			"english": "The museum preserves the antiquities.",
+			"transliteration": "il-mat7af y7aafidh 3al-aathaar.",
+			"wordAlignments": [
+				{
+					"arabic": "المتحف",
+					"english": "The museum",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "يحافظ",
+					"english": "preserves",
+					"transliteration": "y7aafidh"
+				},
+				{
+					"arabic": "عالآثار.",
+					"english": "the antiquities.",
+					"transliteration": "3al-aathaar."
+				}
+			],
+			"targetWords": [
+				"He preserves",
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "علماء الآثار يشتغلون بالشمس طول اليوم.",
+			"arabicTashkeel": "عُلَماء الآثار يِشتُغلون بالشَّمس طول اليوم.",
+			"english": "Archaeologists work in the sun all day.",
+			"transliteration": "3ulamaa2 il-aathaar yishtughloon bish-shams tool il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "علماء",
+					"english": "The scholars of",
+					"transliteration": "3ulamaa2"
+				},
+				{
+					"arabic": "الآثار",
+					"english": "antiquities",
+					"transliteration": "il-aathaar"
+				},
+				{
+					"arabic": "يشتغلون",
+					"english": "work",
+					"transliteration": "yishtughloon"
+				},
+				{
+					"arabic": "بالشمس",
+					"english": "in the sun",
+					"transliteration": "bish-shams"
+				},
+				{
+					"arabic": "طول",
+					"english": "all",
+					"transliteration": "tool"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "day.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Archaeologist"
+			]
+		},
+		{
+			"arabic": "أحب أقرا كتب تاريخ.",
+			"arabicTashkeel": "أحِب أقرا كُتُب تاريخ.",
+			"english": "I love reading history books.",
+			"transliteration": "a7ibb agra kutub taareekh.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "أقرا",
+					"english": "to read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "كتب",
+					"english": "books of",
+					"transliteration": "kutub"
+				},
+				{
+					"arabic": "تاريخ.",
+					"english": "history.",
+					"transliteration": "taareekh."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "التراث العراقي يشمل الموسيقى والشعر.",
+			"arabicTashkeel": "التُّراث العِراقي يِشمَل الموسيقى والشِّعِر.",
+			"english": "Iraqi heritage includes music and poetry.",
+			"transliteration": "it-turaath il-3iraaqi yishmal il-mooseega w-ish-shi3ir.",
+			"wordAlignments": [
+				{
+					"arabic": "التراث",
+					"english": "The heritage",
+					"transliteration": "it-turaath"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "يشمل",
+					"english": "includes",
+					"transliteration": "yishmal"
+				},
+				{
+					"arabic": "الموسيقى",
+					"english": "music",
+					"transliteration": "il-mooseega"
+				},
+				{
+					"arabic": "والشعر.",
+					"english": "and poetry.",
+					"transliteration": "w-ish-shi3ir."
+				}
+			],
+			"targetWords": [
+				"Heritage"
+			]
+		},
+		{
+			"arabic": "الحرامية باقوا آثار من المتحف.",
+			"arabicTashkeel": "الحَرامية باقوا آثار مِن المَتحَف.",
+			"english": "Thieves stole antiquities from the museum.",
+			"transliteration": "il-7araamiyya baagaw aathaar min il-mat7af.",
+			"wordAlignments": [
+				{
+					"arabic": "الحرامية",
+					"english": "The thieves",
+					"transliteration": "il-7araamiyya"
+				},
+				{
+					"arabic": "باقوا",
+					"english": "stole",
+					"transliteration": "baagaw"
+				},
+				{
+					"arabic": "آثار",
+					"english": "antiquities",
+					"transliteration": "aathaar"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المتحف.",
+					"english": "the museum.",
+					"transliteration": "il-mat7af."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "تمثال الملك.",
+			"arabicTashkeel": "تِمثال المَلِك.",
+			"english": "The king's statue.",
+			"transliteration": "timthaal il-malik.",
+			"wordAlignments": [
+				{
+					"arabic": "تمثال",
+					"english": "The statue of",
+					"transliteration": "timthaal"
+				},
+				{
+					"arabic": "الملك.",
+					"english": "the king.",
+					"transliteration": "il-malik."
+				}
+			],
+			"targetWords": [
+				"King"
+			]
+		},
+		{
+			"arabic": "سقوط الإمبراطورية.",
+			"arabicTashkeel": "سُقوط الإمبَراطورية.",
+			"english": "The fall of the empire.",
+			"transliteration": "suqoot il-imbaraatooriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "سقوط",
+					"english": "The fall of",
+					"transliteration": "suqoot"
+				},
+				{
+					"arabic": "الإمبراطورية.",
+					"english": "the empire.",
+					"transliteration": "il-imbaraatooriyya."
+				}
+			],
+			"targetWords": [
+				"Empire"
+			]
+		},
+		{
+			"arabic": "شريعة حمورابي باللوفر هسه.",
+			"arabicTashkeel": "شَريعة حَمورابي باللّوفَر هَسَّه.",
+			"english": "Hammurabi's law code is in the Louvre now.",
+			"transliteration": "sharee3at 7amooraabi bil-loofar hassa.",
+			"wordAlignments": [
+				{
+					"arabic": "شريعة",
+					"english": "The code of",
+					"transliteration": "sharee3at"
+				},
+				{
+					"arabic": "حمورابي",
+					"english": "Hammurabi is",
+					"transliteration": "7amooraabi"
+				},
+				{
+					"arabic": "باللوفر",
+					"english": "in the Louvre",
+					"transliteration": "bil-loofar"
+				},
+				{
+					"arabic": "هسه.",
+					"english": "now.",
+					"transliteration": "hassa."
+				}
+			],
+			"targetWords": [
+				"Law code"
+			]
+		},
+		{
+			"arabic": "السومريين كانوا يحبون القصص.",
+			"arabicTashkeel": "السّومَريين كانوا يْحِبّون القِصَص.",
+			"english": "The Sumerians loved stories.",
+			"transliteration": "is-soomariyyeen chaanaw y7ibboon il-gisas.",
+			"wordAlignments": [
+				{
+					"arabic": "السومريين",
+					"english": "The Sumerians",
+					"transliteration": "is-soomariyyeen"
+				},
+				{
+					"arabic": "كانوا",
+					"english": "were",
+					"transliteration": "chaanaw"
+				},
+				{
+					"arabic": "يحبون",
+					"english": "loving",
+					"transliteration": "y7ibboon"
+				},
+				{
+					"arabic": "القصص.",
+					"english": "stories.",
+					"transliteration": "il-gisas."
+				}
+			],
+			"targetWords": [
+				"The Sumerians"
+			]
+		},
+		{
+			"arabic": "الكتابة المسمارية على ألواح الطين.",
+			"arabicTashkeel": "الكِتابة المِسمارية عَلى ألواح الطّين.",
+			"english": "Cuneiform writing on clay tablets.",
+			"transliteration": "il-kitaaba il-mismaariyya 3ala alwaa7 it-teen.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتابة",
+					"english": "The writing",
+					"transliteration": "il-kitaaba"
+				},
+				{
+					"arabic": "المسمارية",
+					"english": "of nails",
+					"transliteration": "il-mismaariyya"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "ألواح",
+					"english": "tablets of",
+					"transliteration": "alwaa7"
+				},
+				{
+					"arabic": "الطين.",
+					"english": "clay.",
+					"transliteration": "it-teen."
+				}
+			],
+			"targetWords": [
+				"Cuneiform writing"
+			]
+		},
+		{
+			"arabic": "شعراء العصر العباسي.",
+			"arabicTashkeel": "شُعَراء العَصِر العَبّاسي.",
+			"english": "The poets of the Abbasid era.",
+			"transliteration": "shu3araa2 il-3asir il-3abbaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "شعراء",
+					"english": "The poets of",
+					"transliteration": "shu3araa2"
+				},
+				{
+					"arabic": "العصر",
+					"english": "the era",
+					"transliteration": "il-3asir"
+				},
+				{
+					"arabic": "العباسي.",
+					"english": "Abbasid.",
+					"transliteration": "il-3abbaasi."
+				}
+			],
+			"targetWords": [
+				"The Abbasid era"
+			]
+		},
+		{
+			"arabic": "بيت الحكمة إنهدم سنة ألف وميتين وثمانية وخمسين.",
+			"arabicTashkeel": "بيت الحِكمة إنهِدَم سَنة ألف ومِيتين وثْمانية وخَمسين.",
+			"english": "The House of Wisdom was destroyed in 1258.",
+			"transliteration": "beet il-7ikma inhidam sanat alf w-miteen w-thmaanya w-khamseen.",
+			"wordAlignments": [
+				{
+					"arabic": "بيت",
+					"english": "The house of",
+					"transliteration": "beet"
+				},
+				{
+					"arabic": "الحكمة",
+					"english": "wisdom",
+					"transliteration": "il-7ikma"
+				},
+				{
+					"arabic": "إنهدم",
+					"english": "was destroyed",
+					"transliteration": "inhidam"
+				},
+				{
+					"arabic": "سنة",
+					"english": "in the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ألف",
+					"english": "one thousand",
+					"transliteration": "alf"
+				},
+				{
+					"arabic": "وميتين",
+					"english": "two hundred",
+					"transliteration": "w-miteen"
+				},
+				{
+					"arabic": "وثمانية",
+					"english": "eight",
+					"transliteration": "w-thmaanya"
+				},
+				{
+					"arabic": "وخمسين.",
+					"english": "and fifty.",
+					"transliteration": "w-khamseen."
+				}
+			],
+			"targetWords": [
+				"The House of Wisdom"
+			]
+		},
+		{
+			"arabic": "قصر الخليفة كان على دجلة.",
+			"arabicTashkeel": "قَصِر الخَليفة كان عَلى دِجلة.",
+			"english": "The caliph's palace was by the Tigris.",
+			"transliteration": "gasir il-khaleefa chaan 3ala dijla.",
+			"wordAlignments": [
+				{
+					"arabic": "قصر",
+					"english": "The palace of",
+					"transliteration": "gasir"
+				},
+				{
+					"arabic": "الخليفة",
+					"english": "the caliph",
+					"transliteration": "il-khaleefa"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "دجلة.",
+					"english": "the Tigris.",
+					"transliteration": "dijla."
+				}
+			],
+			"targetWords": [
+				"Caliph"
+			]
+		},
+		{
+			"arabic": "المخطوطات تحتاج عناية خاصة.",
+			"arabicTashkeel": "المَخطوطات تِحتاج عِناية خاصّة.",
+			"english": "Manuscripts need special care.",
+			"transliteration": "il-makhtootaat ti7taaj 3inaaya khaassa.",
+			"wordAlignments": [
+				{
+					"arabic": "المخطوطات",
+					"english": "Manuscripts",
+					"transliteration": "il-makhtootaat"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "need",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "عناية",
+					"english": "care",
+					"transliteration": "3inaaya"
+				},
+				{
+					"arabic": "خاصة.",
+					"english": "special.",
+					"transliteration": "khaassa."
+				}
+			],
+			"targetWords": [
+				"Manuscript",
+				"He preserves"
+			]
+		},
+		{
+			"arabic": "القرن العشرين.",
+			"arabicTashkeel": "القَرِن العِشرين.",
+			"english": "The twentieth century.",
+			"transliteration": "il-garin il-3ishreen.",
+			"wordAlignments": [
+				{
+					"arabic": "القرن",
+					"english": "The century",
+					"transliteration": "il-garin"
+				},
+				{
+					"arabic": "العشرين.",
+					"english": "twentieth.",
+					"transliteration": "il-3ishreen."
+				}
+			],
+			"targetWords": [
+				"Century"
+			]
+		},
+		{
+			"arabic": "حافظوا عالبيوت العتيقة.",
+			"arabicTashkeel": "حافِظوا عالبيوت العَتيقة.",
+			"english": "Preserve the old houses.",
+			"transliteration": "7aafidhu 3al-byoot il-3ateega.",
+			"wordAlignments": [
+				{
+					"arabic": "حافظوا",
+					"english": "Preserve",
+					"transliteration": "7aafidhu"
+				},
+				{
+					"arabic": "عالبيوت",
+					"english": "the houses",
+					"transliteration": "3al-byoot"
+				},
+				{
+					"arabic": "العتيقة.",
+					"english": "old.",
+					"transliteration": "il-3ateega."
+				}
+			],
+			"targetWords": [
+				"He preserves"
+			]
+		},
+		{
+			"arabic": "خالي عالم آثار.",
+			"arabicTashkeel": "خالي عالِم آثار.",
+			"english": "My uncle is an archaeologist.",
+			"transliteration": "khaali 3aalim aathaar.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle is",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "عالم",
+					"english": "a scholar of",
+					"transliteration": "3aalim"
+				},
+				{
+					"arabic": "آثار.",
+					"english": "antiquities.",
+					"transliteration": "aathaar."
+				}
+			],
+			"targetWords": [
+				"Archaeologist"
+			]
+		},
+		{
+			"arabic": "تاريخ بغداد طويل وغني.",
+			"arabicTashkeel": "تاريخ بَغداد طْويل وغَني.",
+			"english": "The history of Baghdad is long and rich.",
+			"transliteration": "taareekh baghdaad tweel w-ghani.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "The history of",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad is",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "طويل",
+					"english": "long",
+					"transliteration": "tweel"
+				},
+				{
+					"arabic": "وغني.",
+					"english": "and rich.",
+					"transliteration": "w-ghani."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "التراث غير المادي، مثل المقام.",
+			"arabicTashkeel": "التُّراث غَير المادّي، مِثل المَقام.",
+			"english": "Intangible heritage, like the maqam.",
+			"transliteration": "it-turaath gheer il-maaddi, mithil il-maqaam.",
+			"wordAlignments": [
+				{
+					"arabic": "التراث",
+					"english": "The heritage",
+					"transliteration": "it-turaath"
+				},
+				{
+					"arabic": "غير",
+					"english": "not",
+					"transliteration": "gheer"
+				},
+				{
+					"arabic": "المادي،",
+					"english": "material,",
+					"transliteration": "il-maaddi,"
+				},
+				{
+					"arabic": "مثل",
+					"english": "like",
+					"transliteration": "mithil"
+				},
+				{
+					"arabic": "المقام.",
+					"english": "the maqam.",
+					"transliteration": "il-maqaam."
+				}
+			],
+			"targetWords": [
+				"Heritage"
+			]
+		},
+		{
+			"arabic": "آثار نينوى.",
+			"arabicTashkeel": "آثار نَينَوى.",
+			"english": "Antiquities of Nineveh.",
+			"transliteration": "aathaar naynawa.",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "The antiquities of",
+					"transliteration": "aathaar"
+				},
+				{
+					"arabic": "نينوى.",
+					"english": "Nineveh.",
+					"transliteration": "naynawa."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "ملوك آشور.",
+			"arabicTashkeel": "مُلوك آشور.",
+			"english": "The kings of Assyria.",
+			"transliteration": "mulook aashoor.",
+			"wordAlignments": [
+				{
+					"arabic": "ملوك",
+					"english": "The kings of",
+					"transliteration": "mulook"
+				},
+				{
+					"arabic": "آشور.",
+					"english": "Assyria.",
+					"transliteration": "aashoor."
+				}
+			],
+			"targetWords": [
+				"King"
+			]
+		},
+		{
+			"arabic": "إمبراطورية عظيمة.",
+			"arabicTashkeel": "إمبَراطورية عَظيمة.",
+			"english": "A great empire.",
+			"transliteration": "imbaraatooriyya 3adheema.",
+			"wordAlignments": [
+				{
+					"arabic": "إمبراطورية",
+					"english": "An empire",
+					"transliteration": "imbaraatooriyya"
+				},
+				{
+					"arabic": "عظيمة.",
+					"english": "great.",
+					"transliteration": "3adheema."
+				}
+			],
+			"targetWords": [
+				"Empire"
+			]
+		},
+		{
+			"arabic": "أول شريعة مكتوبة.",
+			"arabicTashkeel": "أوَّل شَريعة مَكتوبة.",
+			"english": "The first written law code.",
+			"transliteration": "awwal sharee3a maktooba.",
+			"wordAlignments": [
+				{
+					"arabic": "أول",
+					"english": "The first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "شريعة",
+					"english": "code",
+					"transliteration": "sharee3a"
+				},
+				{
+					"arabic": "مكتوبة.",
+					"english": "written.",
+					"transliteration": "maktooba."
+				}
+			],
+			"targetWords": [
+				"Law code"
+			]
+		},
+		{
+			"arabic": "حضارة السومريين.",
+			"arabicTashkeel": "حَضارة السّومَريين.",
+			"english": "The Sumerian civilization.",
+			"transliteration": "7adhaarat is-soomariyyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "حضارة",
+					"english": "The civilization of",
+					"transliteration": "7adhaarat"
+				},
+				{
+					"arabic": "السومريين.",
+					"english": "the Sumerians.",
+					"transliteration": "is-soomariyyeen."
+				}
+			],
+			"targetWords": [
+				"The Sumerians"
+			]
+		},
+		{
+			"arabic": "تعلم الكتابة المسمارية صعب.",
+			"arabicTashkeel": "تَعَلُّم الكِتابة المِسمارية صَعُب.",
+			"english": "Learning cuneiform writing is hard.",
+			"transliteration": "ta3allum il-kitaaba il-mismaariyya sa3ub.",
+			"wordAlignments": [
+				{
+					"arabic": "تعلم",
+					"english": "Learning",
+					"transliteration": "ta3allum"
+				},
+				{
+					"arabic": "الكتابة",
+					"english": "the writing",
+					"transliteration": "il-kitaaba"
+				},
+				{
+					"arabic": "المسمارية",
+					"english": "of nails is",
+					"transliteration": "il-mismaariyya"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3ub."
+				}
+			],
+			"targetWords": [
+				"Cuneiform writing"
+			]
+		},
+		{
+			"arabic": "العصر الذهبي: العصر العباسي.",
+			"arabicTashkeel": "العَصِر الذَّهَبي: العَصِر العَبّاسي.",
+			"english": "The golden age: the Abbasid era.",
+			"transliteration": "il-3asir idh-dhahabi: il-3asir il-3abbaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "العصر",
+					"english": "The era",
+					"transliteration": "il-3asir"
+				},
+				{
+					"arabic": "الذهبي:",
+					"english": "golden:",
+					"transliteration": "idh-dhahabi:"
+				},
+				{
+					"arabic": "العصر",
+					"english": "the era",
+					"transliteration": "il-3asir"
+				},
+				{
+					"arabic": "العباسي.",
+					"english": "Abbasid.",
+					"transliteration": "il-3abbaasi."
+				}
+			],
+			"targetWords": [
+				"The Abbasid era"
+			]
+		},
+		{
+			"arabic": "الخليفة المأمون أسس بيت الحكمة.",
+			"arabicTashkeel": "الخَليفة المأمون أسَّس بيت الحِكمة.",
+			"english": "The caliph Al-Ma'mun founded the House of Wisdom.",
+			"transliteration": "il-khaleefa il-ma2moon assas beet il-7ikma.",
+			"wordAlignments": [
+				{
+					"arabic": "الخليفة",
+					"english": "The caliph",
+					"transliteration": "il-khaleefa"
+				},
+				{
+					"arabic": "المأمون",
+					"english": "Al-Ma'mun",
+					"transliteration": "il-ma2moon"
+				},
+				{
+					"arabic": "أسس",
+					"english": "founded",
+					"transliteration": "assas"
+				},
+				{
+					"arabic": "بيت",
+					"english": "the house of",
+					"transliteration": "beet"
+				},
+				{
+					"arabic": "الحكمة.",
+					"english": "wisdom.",
+					"transliteration": "il-7ikma."
+				}
+			],
+			"targetWords": [
+				"Caliph",
+				"The House of Wisdom"
+			]
+		},
+		{
+			"arabic": "مخطوطة نادرة.",
+			"arabicTashkeel": "مَخطوطة نادرة.",
+			"english": "A rare manuscript.",
+			"transliteration": "makhtoota naadra.",
+			"wordAlignments": [
+				{
+					"arabic": "مخطوطة",
+					"english": "A manuscript",
+					"transliteration": "makhtoota"
+				},
+				{
+					"arabic": "نادرة.",
+					"english": "rare.",
+					"transliteration": "naadra."
+				}
+			],
+			"targetWords": [
+				"Manuscript"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Cradle of Civilization",
+			"sentences": [
+				{
+					"arabic": "تاريخ العراق من أقدم التواريخ بالعالم.",
+					"arabicTashkeel": "تاريخ العِراق مِن أقدَم التَّواريخ بالعالَم.",
+					"english": "Iraq's history is one of the oldest in the world.",
+					"transliteration": "taareekh il-3iraaq min agdam it-tawaareekh bil-3aalam.",
+					"wordAlignments": [
+						{
+							"arabic": "تاريخ",
+							"english": "The history of",
+							"transliteration": "taareekh"
+						},
+						{
+							"arabic": "العراق",
+							"english": "Iraq is",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "من",
+							"english": "among",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "أقدم",
+							"english": "the oldest",
+							"transliteration": "agdam"
+						},
+						{
+							"arabic": "التواريخ",
+							"english": "histories",
+							"transliteration": "it-tawaareekh"
+						},
+						{
+							"arabic": "بالعالم.",
+							"english": "in the world.",
+							"transliteration": "bil-3aalam."
+						}
+					]
+				},
+				{
+					"arabic": "قبل أكثر من خمس آلاف سنة، السومريين إخترعوا الكتابة المسمارية.",
+					"arabicTashkeel": "قَبُل أكثَر مِن خَمس آلاف سَنة، السّومَريين إختِرعوا الكِتابة المِسمارية.",
+					"english": "More than five thousand years ago, the Sumerians invented cuneiform writing.",
+					"transliteration": "gabul akthar min khams aalaaf sana, is-soomariyyeen ikhtir3aw il-kitaaba il-mismaariyya.",
+					"wordAlignments": [
+						{
+							"arabic": "قبل",
+							"english": "Before",
+							"transliteration": "gabul"
+						},
+						{
+							"arabic": "أكثر",
+							"english": "more",
+							"transliteration": "akthar"
+						},
+						{
+							"arabic": "من",
+							"english": "than",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "خمس",
+							"english": "five",
+							"transliteration": "khams"
+						},
+						{
+							"arabic": "آلاف",
+							"english": "thousand",
+							"transliteration": "aalaaf"
+						},
+						{
+							"arabic": "سنة،",
+							"english": "years,",
+							"transliteration": "sana,"
+						},
+						{
+							"arabic": "السومريين",
+							"english": "the Sumerians",
+							"transliteration": "is-soomariyyeen"
+						},
+						{
+							"arabic": "إخترعوا",
+							"english": "invented",
+							"transliteration": "ikhtir3aw"
+						},
+						{
+							"arabic": "الكتابة",
+							"english": "the writing",
+							"transliteration": "il-kitaaba"
+						},
+						{
+							"arabic": "المسمارية.",
+							"english": "of nails.",
+							"transliteration": "il-mismaariyya."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين، الملك حمورابي كتب وحدة من أول الشرايع.",
+					"arabicTashkeel": "بَعدين، المَلِك حَمورابي كِتَب وِحدة مِن أوَّل الشَّرايِع.",
+					"english": "Later, King Hammurabi wrote one of the first law codes.",
+					"transliteration": "ba3deen, il-malik 7amooraabi kitab wi7da min awwal ish-sharaayi3.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين،",
+							"english": "Later,",
+							"transliteration": "ba3deen,"
+						},
+						{
+							"arabic": "الملك",
+							"english": "King",
+							"transliteration": "il-malik"
+						},
+						{
+							"arabic": "حمورابي",
+							"english": "Hammurabi",
+							"transliteration": "7amooraabi"
+						},
+						{
+							"arabic": "كتب",
+							"english": "wrote",
+							"transliteration": "kitab"
+						},
+						{
+							"arabic": "وحدة",
+							"english": "one",
+							"transliteration": "wi7da"
+						},
+						{
+							"arabic": "من",
+							"english": "of",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "أول",
+							"english": "the first",
+							"transliteration": "awwal"
+						},
+						{
+							"arabic": "الشرايع.",
+							"english": "law codes.",
+							"transliteration": "ish-sharaayi3."
+						}
+					]
+				},
+				{
+					"arabic": "بالعصر العباسي، بغداد صارت عاصمة العلم والثقافة.",
+					"arabicTashkeel": "بالعَصِر العَبّاسي، بَغداد صارَت عاصِمة العِلِم والثَّقافة.",
+					"english": "In the Abbasid era, Baghdad became the capital of science and culture.",
+					"transliteration": "bil-3asir il-3abbaasi, baghdaad saarat 3aasimat il-3ilim w-ith-thagaafa.",
+					"wordAlignments": [
+						{
+							"arabic": "بالعصر",
+							"english": "In the era",
+							"transliteration": "bil-3asir"
+						},
+						{
+							"arabic": "العباسي،",
+							"english": "Abbasid,",
+							"transliteration": "il-3abbaasi,"
+						},
+						{
+							"arabic": "بغداد",
+							"english": "Baghdad",
+							"transliteration": "baghdaad"
+						},
+						{
+							"arabic": "صارت",
+							"english": "became",
+							"transliteration": "saarat"
+						},
+						{
+							"arabic": "عاصمة",
+							"english": "the capital of",
+							"transliteration": "3aasimat"
+						},
+						{
+							"arabic": "العلم",
+							"english": "science",
+							"transliteration": "il-3ilim"
+						},
+						{
+							"arabic": "والثقافة.",
+							"english": "and culture.",
+							"transliteration": "w-ith-thagaafa."
+						}
+					]
+				},
+				{
+					"arabic": "العلماء إجوا من كل العالم لبيت الحكمة.",
+					"arabicTashkeel": "العُلَماء إجَوا مِن كُل العالَم لبيت الحِكمة.",
+					"english": "Scholars from all over the world came to the House of Wisdom.",
+					"transliteration": "il-3ulamaa2 ijaw min kull il-3aalam l-beet il-7ikma.",
+					"wordAlignments": [
+						{
+							"arabic": "العلماء",
+							"english": "The scholars",
+							"transliteration": "il-3ulamaa2"
+						},
+						{
+							"arabic": "إجوا",
+							"english": "came",
+							"transliteration": "ijaw"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "كل",
+							"english": "all",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "العالم",
+							"english": "the world",
+							"transliteration": "il-3aalam"
+						},
+						{
+							"arabic": "لبيت",
+							"english": "to the house of",
+							"transliteration": "l-beet"
+						},
+						{
+							"arabic": "الحكمة.",
+							"english": "wisdom.",
+							"transliteration": "il-7ikma."
+						}
+					]
+				},
+				{
+					"arabic": "اليوم، علماء الآثار بعدهم يكتشفون آثار جديدة، ولازم نحافظ عليها.",
+					"arabicTashkeel": "اليوم، عُلَماء الآثار بَعَدهُم يِكتِشفون آثار جْديدة، ولازِم نْحافِظ عَليها.",
+					"english": "Today, archaeologists are still discovering new antiquities, and we must preserve them.",
+					"transliteration": "il-yoom, 3ulamaa2 il-aathaar ba3adhum yiktishfoon aathaar jdeeda, w-laazim n7aafidh 3aleeha.",
+					"wordAlignments": [
+						{
+							"arabic": "اليوم،",
+							"english": "Today,",
+							"transliteration": "il-yoom,"
+						},
+						{
+							"arabic": "علماء",
+							"english": "the scholars of",
+							"transliteration": "3ulamaa2"
+						},
+						{
+							"arabic": "الآثار",
+							"english": "antiquities",
+							"transliteration": "il-aathaar"
+						},
+						{
+							"arabic": "بعدهم",
+							"english": "are still",
+							"transliteration": "ba3adhum"
+						},
+						{
+							"arabic": "يكتشفون",
+							"english": "discovering",
+							"transliteration": "yiktishfoon"
+						},
+						{
+							"arabic": "آثار",
+							"english": "antiquities",
+							"transliteration": "aathaar"
+						},
+						{
+							"arabic": "جديدة،",
+							"english": "new,",
+							"transliteration": "jdeeda,"
+						},
+						{
+							"arabic": "ولازم",
+							"english": "and we must",
+							"transliteration": "w-laazim"
+						},
+						{
+							"arabic": "نحافظ",
+							"english": "preserve",
+							"transliteration": "n7aafidh"
+						},
+						{
+							"arabic": "عليها.",
+							"english": "them.",
+							"transliteration": "3aleeha."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Visit to the Iraq Museum",
+			"sentences": [
+				{
+					"arabic": "بالمتحف العراقي شفت تماثيل سومرية وألواح طين.",
+					"arabicTashkeel": "بالمَتحَف العِراقي شِفِت تَماثيل سومَرية وألواح طين.",
+					"english": "At the Iraq Museum I saw Sumerian statues and clay tablets.",
+					"transliteration": "bil-mat7af il-3iraaqi shifit tamaatheel soomariyya w-alwaa7 teen.",
+					"wordAlignments": [
+						{
+							"arabic": "بالمتحف",
+							"english": "At the museum",
+							"transliteration": "bil-mat7af"
+						},
+						{
+							"arabic": "العراقي",
+							"english": "Iraqi",
+							"transliteration": "il-3iraaqi"
+						},
+						{
+							"arabic": "شفت",
+							"english": "I saw",
+							"transliteration": "shifit"
+						},
+						{
+							"arabic": "تماثيل",
+							"english": "statues",
+							"transliteration": "tamaatheel"
+						},
+						{
+							"arabic": "سومرية",
+							"english": "Sumerian",
+							"transliteration": "soomariyya"
+						},
+						{
+							"arabic": "وألواح",
+							"english": "and tablets",
+							"transliteration": "w-alwaa7"
+						},
+						{
+							"arabic": "طين.",
+							"english": "of clay.",
+							"transliteration": "teen."
+						}
+					]
+				},
+				{
+					"arabic": "وكانت أكو مخطوطة عباسية من القرن التاسع.",
+					"arabicTashkeel": "وكانَت أكو مَخطوطة عَبّاسية مِن القَرِن التّاسِع.",
+					"english": "There was also an Abbasid manuscript from the ninth century.",
+					"transliteration": "w-chaanat aku makhtoota 3abbaasiyya min il-garin it-taasi3.",
+					"wordAlignments": [
+						{
+							"arabic": "وكانت",
+							"english": "And there was",
+							"transliteration": "w-chaanat"
+						},
+						{
+							"arabic": "أكو",
+							"english": "also",
+							"transliteration": "aku"
+						},
+						{
+							"arabic": "مخطوطة",
+							"english": "a manuscript",
+							"transliteration": "makhtoota"
+						},
+						{
+							"arabic": "عباسية",
+							"english": "Abbasid",
+							"transliteration": "3abbaasiyya"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "القرن",
+							"english": "the century",
+							"transliteration": "il-garin"
+						},
+						{
+							"arabic": "التاسع.",
+							"english": "ninth.",
+							"transliteration": "it-taasi3."
+						}
+					]
+				},
+				{
+					"arabic": "الدليل قال: هذا تراث البشرية كلها.",
+					"arabicTashkeel": "الدَّليل قال: هَذا تُراث البَشَرية كُلها.",
+					"english": "The guide said: This is the heritage of all humanity.",
+					"transliteration": "id-daleel gaal: haatha turaath il-bashariyya kullha.",
+					"wordAlignments": [
+						{
+							"arabic": "الدليل",
+							"english": "The guide",
+							"transliteration": "id-daleel"
+						},
+						{
+							"arabic": "قال:",
+							"english": "said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "هذا",
+							"english": "this is",
+							"transliteration": "haatha"
+						},
+						{
+							"arabic": "تراث",
+							"english": "the heritage of",
+							"transliteration": "turaath"
+						},
+						{
+							"arabic": "البشرية",
+							"english": "humanity",
+							"transliteration": "il-bashariyya"
+						},
+						{
+							"arabic": "كلها.",
+							"english": "all of it.",
+							"transliteration": "kullha."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is on a guided tour of the Iraq Museum in Baghdad.",
+		"studentRole": "A visitor learning Iraqi Arabic.",
+		"otherRole": "A knowledgeable Iraqi museum guide.",
+		"goalEnglish": "Ask about the Sumerians and cuneiform, Hammurabi's law code, Babylon's kings, and the Abbasid era and the House of Wisdom, and discuss why preserving heritage matters.",
+		"targetWords": [
+			"History",
+			"Heritage",
+			"Ruins / antiquities",
+			"The Sumerians",
+			"Cuneiform writing",
+			"The Abbasid era",
+			"The House of Wisdom",
+			"He preserves"
+		]
+	}
+}

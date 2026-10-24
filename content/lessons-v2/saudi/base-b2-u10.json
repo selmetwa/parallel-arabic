@@ -1,0 +1,2134 @@
+{
+	"vocab": [
+		{
+			"arabic": "إعلام",
+			"arabicTashkeel": "إعلام",
+			"english": "Media",
+			"transliteration": "i3laam",
+			"wordAlignments": [
+				{
+					"arabic": "إعلام",
+					"english": "Media",
+					"transliteration": "i3laam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "صحافة",
+			"arabicTashkeel": "صَحافة",
+			"english": "Press",
+			"transliteration": "sa7aafa",
+			"wordAlignments": [
+				{
+					"arabic": "صحافة",
+					"english": "Press",
+					"transliteration": "sa7aafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "راديو",
+			"arabicTashkeel": "راديو",
+			"english": "Radio",
+			"transliteration": "raadyo",
+			"wordAlignments": [
+				{
+					"arabic": "راديو",
+					"english": "Radio",
+					"transliteration": "raadyo"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مراسل",
+			"arabicTashkeel": "مُراسِل",
+			"english": "Reporter",
+			"transliteration": "muraasil",
+			"wordAlignments": [
+				{
+					"arabic": "مراسل",
+					"english": "Reporter",
+					"transliteration": "muraasil"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "برنامج",
+			"arabicTashkeel": "بَرنامِج",
+			"english": "Programme",
+			"transliteration": "barnaamij",
+			"wordAlignments": [
+				{
+					"arabic": "برنامج",
+					"english": "Programme",
+					"transliteration": "barnaamij"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بث مباشر",
+			"arabicTashkeel": "بَث مُباشِر",
+			"english": "Live broadcast",
+			"transliteration": "bass mubaashir",
+			"wordAlignments": [
+				{
+					"arabic": "بث",
+					"english": "Broadcast",
+					"transliteration": "bass"
+				},
+				{
+					"arabic": "مباشر",
+					"english": "direct",
+					"transliteration": "mubaashir"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "عنوان",
+			"arabicTashkeel": "عُنوان",
+			"english": "Headline",
+			"transliteration": "3unwaan",
+			"wordAlignments": [
+				{
+					"arabic": "عنوان",
+					"english": "Title",
+					"transliteration": "3unwaan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مقال",
+			"arabicTashkeel": "مَقال",
+			"english": "Article",
+			"transliteration": "magaal",
+			"wordAlignments": [
+				{
+					"arabic": "مقال",
+					"english": "Article",
+					"transliteration": "magaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مصدر",
+			"arabicTashkeel": "مَصدَر",
+			"english": "Source",
+			"transliteration": "masdar",
+			"wordAlignments": [
+				{
+					"arabic": "مصدر",
+					"english": "Source",
+					"transliteration": "masdar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إشاعة",
+			"arabicTashkeel": "إشاعة",
+			"english": "Rumour",
+			"transliteration": "ishaa3a",
+			"wordAlignments": [
+				{
+					"arabic": "إشاعة",
+					"english": "Rumour",
+					"transliteration": "ishaa3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مؤثر",
+			"arabicTashkeel": "مُؤَثِّر",
+			"english": "Influencer",
+			"transliteration": "mu2assir",
+			"wordAlignments": [
+				{
+					"arabic": "مؤثر",
+					"english": "Influencer",
+					"transliteration": "mu2assir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "موضوعي",
+			"arabicTashkeel": "مَوضوعي",
+			"english": "Objective",
+			"transliteration": "mawdhoo3i",
+			"wordAlignments": [
+				{
+					"arabic": "موضوعي",
+					"english": "Objective",
+					"transliteration": "mawdhoo3i"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "الرأي العام",
+			"arabicTashkeel": "الرّأي العام",
+			"english": "Public opinion",
+			"transliteration": "ir-ra2y il-3aam",
+			"wordAlignments": [
+				{
+					"arabic": "الرأي",
+					"english": "The opinion",
+					"transliteration": "ir-ra2y"
+				},
+				{
+					"arabic": "العام",
+					"english": "public",
+					"transliteration": "il-3aam"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "محرر",
+			"arabicTashkeel": "مُحَرِّر",
+			"english": "Editor",
+			"transliteration": "mu7arrir",
+			"wordAlignments": [
+				{
+					"arabic": "محرر",
+					"english": "Editor",
+					"transliteration": "mu7arrir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تغطية",
+			"arabicTashkeel": "تَغطية",
+			"english": "Coverage",
+			"transliteration": "taghtiya",
+			"wordAlignments": [
+				{
+					"arabic": "تغطية",
+					"english": "Coverage",
+					"transliteration": "taghtiya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "الإعلام له دور كبير في المجتمع.",
+			"arabicTashkeel": "الإعلام لُه دور كبير في المُجتَمَع.",
+			"english": "The media has a big role in society.",
+			"transliteration": "il-i3laam lu door kbeer fi il-mujtama3.",
+			"wordAlignments": [
+				{
+					"arabic": "الإعلام",
+					"english": "The media",
+					"transliteration": "il-i3laam"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "دور",
+					"english": "a role",
+					"transliteration": "door"
+				},
+				{
+					"arabic": "كبير",
+					"english": "big",
+					"transliteration": "kbeer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المجتمع.",
+					"english": "the society.",
+					"transliteration": "il-mujtama3."
+				}
+			],
+			"targetWords": [
+				"Media"
+			]
+		},
+		{
+			"arabic": "الصحافة تتغير بسبب الإنترنت.",
+			"arabicTashkeel": "الصَّحافة تِتغَيَّر بسَبَب الإنتَرنِت.",
+			"english": "The press is changing because of the internet.",
+			"transliteration": "is-sa7aafa titghayyar b-sabab il-intarnet.",
+			"wordAlignments": [
+				{
+					"arabic": "الصحافة",
+					"english": "The press",
+					"transliteration": "is-sa7aafa"
+				},
+				{
+					"arabic": "تتغير",
+					"english": "is changing",
+					"transliteration": "titghayyar"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "الإنترنت.",
+					"english": "the internet.",
+					"transliteration": "il-intarnet."
+				}
+			],
+			"targetWords": [
+				"Press"
+			]
+		},
+		{
+			"arabic": "أسمع الراديو في السيارة.",
+			"arabicTashkeel": "أسمَع الرّاديو في السَّيّارة.",
+			"english": "I listen to the radio in the car.",
+			"transliteration": "asma3 ir-raadyo fi is-sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "أسمع",
+					"english": "I listen to",
+					"transliteration": "asma3"
+				},
+				{
+					"arabic": "الراديو",
+					"english": "the radio",
+					"transliteration": "ir-raadyo"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السيارة.",
+					"english": "the car.",
+					"transliteration": "is-sayyaara."
+				}
+			],
+			"targetWords": [
+				"Radio"
+			]
+		},
+		{
+			"arabic": "المراسل في الرياض دحين.",
+			"arabicTashkeel": "المُراسِل في الرِّياض دحين.",
+			"english": "The reporter is in Riyadh now.",
+			"transliteration": "il-muraasil fi ir-riyaadh da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "المراسل",
+					"english": "The reporter is",
+					"transliteration": "il-muraasil"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الرياض",
+					"english": "Riyadh",
+					"transliteration": "ir-riyaadh"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"Reporter"
+			]
+		},
+		{
+			"arabic": "البرنامج دا مشهور مرة.",
+			"arabicTashkeel": "البَرنامِج دا مَشهور مَرّة.",
+			"english": "This programme is very popular.",
+			"transliteration": "il-barnaamij da mashhoor marra.",
+			"wordAlignments": [
+				{
+					"arabic": "البرنامج",
+					"english": "The programme",
+					"transliteration": "il-barnaamij"
+				},
+				{
+					"arabic": "دا",
+					"english": "this is",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "popular",
+					"transliteration": "mashhoor"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Programme"
+			]
+		},
+		{
+			"arabic": "المباراة بث مباشر.",
+			"arabicTashkeel": "المُباراة بَث مُباشِر.",
+			"english": "The match is on live broadcast.",
+			"transliteration": "il-mubaaraa bass mubaashir.",
+			"wordAlignments": [
+				{
+					"arabic": "المباراة",
+					"english": "The match is",
+					"transliteration": "il-mubaaraa"
+				},
+				{
+					"arabic": "بث",
+					"english": "broadcast",
+					"transliteration": "bass"
+				},
+				{
+					"arabic": "مباشر.",
+					"english": "direct.",
+					"transliteration": "mubaashir."
+				}
+			],
+			"targetWords": [
+				"Live broadcast"
+			]
+		},
+		{
+			"arabic": "العنوان كان مبالغ فيه.",
+			"arabicTashkeel": "العُنوان كان مُبالَغ فيه.",
+			"english": "The headline was exaggerated.",
+			"transliteration": "il-3unwaan kaan mubaalagh feeh.",
+			"wordAlignments": [
+				{
+					"arabic": "العنوان",
+					"english": "The headline",
+					"transliteration": "il-3unwaan"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "مبالغ",
+					"english": "exaggerated",
+					"transliteration": "mubaalagh"
+				},
+				{
+					"arabic": "فيه.",
+					"english": "in it.",
+					"transliteration": "feeh."
+				}
+			],
+			"targetWords": [
+				"Headline"
+			]
+		},
+		{
+			"arabic": "قريت مقال حلو.",
+			"arabicTashkeel": "قَرَيت مَقال حِلو.",
+			"english": "I read an interesting article.",
+			"transliteration": "garait magaal 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "قريت",
+					"english": "I read",
+					"transliteration": "garait"
+				},
+				{
+					"arabic": "مقال",
+					"english": "an article",
+					"transliteration": "magaal"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Article"
+			]
+		},
+		{
+			"arabic": "إيش مصدر الخبر؟",
+			"arabicTashkeel": "إيش مَصدَر الخَبَر؟",
+			"english": "What is the source of the news?",
+			"transliteration": "eesh masdar il-khabar?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "مصدر",
+					"english": "the source of",
+					"transliteration": "masdar"
+				},
+				{
+					"arabic": "الخبر؟",
+					"english": "the news?",
+					"transliteration": "il-khabar?"
+				}
+			],
+			"targetWords": [
+				"Source"
+			]
+		},
+		{
+			"arabic": "دي إشاعة بس.",
+			"arabicTashkeel": "دي إشاعة بَس.",
+			"english": "That's just a rumour.",
+			"transliteration": "di ishaa3a bas.",
+			"wordAlignments": [
+				{
+					"arabic": "دي",
+					"english": "This is",
+					"transliteration": "di"
+				},
+				{
+					"arabic": "إشاعة",
+					"english": "a rumour",
+					"transliteration": "ishaa3a"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Rumour"
+			]
+		},
+		{
+			"arabic": "هيا مؤثرة مشهورة على السناب.",
+			"arabicTashkeel": "هيّا مُؤَثِّرة مَشهورة على السناب.",
+			"english": "She's a famous influencer on Snapchat.",
+			"transliteration": "hiyya mu2assira mashhoora 3ala is-snaab.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "مؤثرة",
+					"english": "an influencer",
+					"transliteration": "mu2assira"
+				},
+				{
+					"arabic": "مشهورة",
+					"english": "famous",
+					"transliteration": "mashhoora"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السناب.",
+					"english": "the Snap.",
+					"transliteration": "is-snaab."
+				}
+			],
+			"targetWords": [
+				"Influencer"
+			]
+		},
+		{
+			"arabic": "المراسل لازم يكون موضوعي.",
+			"arabicTashkeel": "المُراسِل لازِم يِكون مَوضوعي.",
+			"english": "The reporter must be objective.",
+			"transliteration": "il-muraasil laazim yikoon mawdhoo3i.",
+			"wordAlignments": [
+				{
+					"arabic": "المراسل",
+					"english": "The reporter",
+					"transliteration": "il-muraasil"
+				},
+				{
+					"arabic": "لازم",
+					"english": "must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "يكون",
+					"english": "be",
+					"transliteration": "yikoon"
+				},
+				{
+					"arabic": "موضوعي.",
+					"english": "objective.",
+					"transliteration": "mawdhoo3i."
+				}
+			],
+			"targetWords": [
+				"Objective",
+				"Reporter"
+			]
+		},
+		{
+			"arabic": "السوشيال ميديا تأثر على الرأي العام.",
+			"arabicTashkeel": "السّوشيال ميديا تأثِّر على الرّأي العام.",
+			"english": "Social media affects public opinion.",
+			"transliteration": "is-sooshyal meedya ta2assir 3ala ir-ra2y il-3aam.",
+			"wordAlignments": [
+				{
+					"arabic": "السوشيال",
+					"english": "The social",
+					"transliteration": "is-sooshyal"
+				},
+				{
+					"arabic": "ميديا",
+					"english": "media",
+					"transliteration": "meedya"
+				},
+				{
+					"arabic": "تأثر",
+					"english": "affects",
+					"transliteration": "ta2assir"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الرأي",
+					"english": "the opinion",
+					"transliteration": "ir-ra2y"
+				},
+				{
+					"arabic": "العام.",
+					"english": "public.",
+					"transliteration": "il-3aam."
+				}
+			],
+			"targetWords": [
+				"Public opinion"
+			]
+		},
+		{
+			"arabic": "المحرر غير العنوان.",
+			"arabicTashkeel": "المُحَرِّر غَيَّر العُنوان.",
+			"english": "The editor changed the headline.",
+			"transliteration": "il-mu7arrir ghayyar il-3unwaan.",
+			"wordAlignments": [
+				{
+					"arabic": "المحرر",
+					"english": "The editor",
+					"transliteration": "il-mu7arrir"
+				},
+				{
+					"arabic": "غير",
+					"english": "changed",
+					"transliteration": "ghayyar"
+				},
+				{
+					"arabic": "العنوان.",
+					"english": "the headline.",
+					"transliteration": "il-3unwaan."
+				}
+			],
+			"targetWords": [
+				"Editor",
+				"Headline"
+			]
+		},
+		{
+			"arabic": "تغطية الحدث كانت ممتازة.",
+			"arabicTashkeel": "تَغطية الحَدَث كانَت مُمتازة.",
+			"english": "The coverage of the event was excellent.",
+			"transliteration": "taghtiyat il-7adas kaanat mumtaaza.",
+			"wordAlignments": [
+				{
+					"arabic": "تغطية",
+					"english": "The coverage of",
+					"transliteration": "taghtiyat"
+				},
+				{
+					"arabic": "الحدث",
+					"english": "the event",
+					"transliteration": "il-7adas"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "ممتازة.",
+					"english": "excellent.",
+					"transliteration": "mumtaaza."
+				}
+			],
+			"targetWords": [
+				"Coverage"
+			]
+		},
+		{
+			"arabic": "الإعلام العربي يغطي أخبار العالم.",
+			"arabicTashkeel": "الإعلام العَرَبي يِغَطّي أخبار العالَم.",
+			"english": "Arab media covers the world's news.",
+			"transliteration": "il-i3laam il-3arabi yighatti akhbaar il-3aalam.",
+			"wordAlignments": [
+				{
+					"arabic": "الإعلام",
+					"english": "The media",
+					"transliteration": "il-i3laam"
+				},
+				{
+					"arabic": "العربي",
+					"english": "Arab",
+					"transliteration": "il-3arabi"
+				},
+				{
+					"arabic": "يغطي",
+					"english": "covers",
+					"transliteration": "yighatti"
+				},
+				{
+					"arabic": "أخبار",
+					"english": "the news of",
+					"transliteration": "akhbaar"
+				},
+				{
+					"arabic": "العالم.",
+					"english": "the world.",
+					"transliteration": "il-3aalam."
+				}
+			],
+			"targetWords": [
+				"Media"
+			]
+		},
+		{
+			"arabic": "أدرس صحافة في الجامعة.",
+			"arabicTashkeel": "أدرُس صَحافة في الجامعة.",
+			"english": "I study press at university.",
+			"transliteration": "adrus sa7aafa fi ij-jaam3a.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adrus"
+				},
+				{
+					"arabic": "صحافة",
+					"english": "press",
+					"transliteration": "sa7aafa"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجامعة.",
+					"english": "the university.",
+					"transliteration": "ij-jaam3a."
+				}
+			],
+			"targetWords": [
+				"Press"
+			]
+		},
+		{
+			"arabic": "أبويا يسمع إذاعة القرآن.",
+			"arabicTashkeel": "أبويا يِسمَع إذاعة القُرآن.",
+			"english": "My father listens to the Quran radio.",
+			"transliteration": "abooya yisma3 izaa3at il-gur2aan.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My father",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "يسمع",
+					"english": "listens to",
+					"transliteration": "yisma3"
+				},
+				{
+					"arabic": "إذاعة",
+					"english": "the radio of",
+					"transliteration": "izaa3at"
+				},
+				{
+					"arabic": "القرآن.",
+					"english": "the Quran.",
+					"transliteration": "il-gur2aan."
+				}
+			],
+			"targetWords": [
+				"Radio"
+			]
+		},
+		{
+			"arabic": "المراسل سأل الناس في الشارع.",
+			"arabicTashkeel": "المُراسِل سأل النّاس في الشّارِع.",
+			"english": "The reporter asked people in the street.",
+			"transliteration": "il-muraasil sa2al in-naas fi ish-shaari3.",
+			"wordAlignments": [
+				{
+					"arabic": "المراسل",
+					"english": "The reporter",
+					"transliteration": "il-muraasil"
+				},
+				{
+					"arabic": "سأل",
+					"english": "asked",
+					"transliteration": "sa2al"
+				},
+				{
+					"arabic": "الناس",
+					"english": "the people",
+					"transliteration": "in-naas"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشارع.",
+					"english": "the street.",
+					"transliteration": "ish-shaari3."
+				}
+			],
+			"targetWords": [
+				"Reporter"
+			]
+		},
+		{
+			"arabic": "برنامج صباحي.",
+			"arabicTashkeel": "بَرنامِج صَباحي.",
+			"english": "A morning programme.",
+			"transliteration": "barnaamij sabaa7i.",
+			"wordAlignments": [
+				{
+					"arabic": "برنامج",
+					"english": "A programme",
+					"transliteration": "barnaamij"
+				},
+				{
+					"arabic": "صباحي.",
+					"english": "of the morning.",
+					"transliteration": "sabaa7i."
+				}
+			],
+			"targetWords": [
+				"Programme"
+			]
+		},
+		{
+			"arabic": "الحفلة كانت بث مباشر.",
+			"arabicTashkeel": "الحَفلة كانَت بَث مُباشِر.",
+			"english": "The concert was live broadcast.",
+			"transliteration": "il-7afla kaanat bass mubaashir.",
+			"wordAlignments": [
+				{
+					"arabic": "الحفلة",
+					"english": "The concert",
+					"transliteration": "il-7afla"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "بث",
+					"english": "broadcast",
+					"transliteration": "bass"
+				},
+				{
+					"arabic": "مباشر.",
+					"english": "direct.",
+					"transliteration": "mubaashir."
+				}
+			],
+			"targetWords": [
+				"Live broadcast"
+			]
+		},
+		{
+			"arabic": "اقرا المقال، مو بس العنوان.",
+			"arabicTashkeel": "اِقرا المَقال، مو بَس العُنوان.",
+			"english": "Read the article, not just the headline.",
+			"transliteration": "igra il-magaal, moo bas il-3unwaan.",
+			"wordAlignments": [
+				{
+					"arabic": "اقرا",
+					"english": "Read",
+					"transliteration": "igra"
+				},
+				{
+					"arabic": "المقال،",
+					"english": "the article,",
+					"transliteration": "il-magaal,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "بس",
+					"english": "only",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "العنوان.",
+					"english": "the headline.",
+					"transliteration": "il-3unwaan."
+				}
+			],
+			"targetWords": [
+				"Headline",
+				"Article"
+			]
+		},
+		{
+			"arabic": "يكتب مقال أسبوعي في الجريدة.",
+			"arabicTashkeel": "يِكتُب مَقال أُسبوعي في الجَريدة.",
+			"english": "He writes a weekly article in the newspaper.",
+			"transliteration": "yiktub magaal usboo3i fi ij-jareeda.",
+			"wordAlignments": [
+				{
+					"arabic": "يكتب",
+					"english": "He writes",
+					"transliteration": "yiktub"
+				},
+				{
+					"arabic": "مقال",
+					"english": "an article",
+					"transliteration": "magaal"
+				},
+				{
+					"arabic": "أسبوعي",
+					"english": "weekly",
+					"transliteration": "usboo3i"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجريدة.",
+					"english": "the newspaper.",
+					"transliteration": "ij-jareeda."
+				}
+			],
+			"targetWords": [
+				"Article"
+			]
+		},
+		{
+			"arabic": "مصدر موثوق.",
+			"arabicTashkeel": "مَصدَر مَوثوق.",
+			"english": "A reliable source.",
+			"transliteration": "masdar mawsoog.",
+			"wordAlignments": [
+				{
+					"arabic": "مصدر",
+					"english": "A source",
+					"transliteration": "masdar"
+				},
+				{
+					"arabic": "موثوق.",
+					"english": "reliable.",
+					"transliteration": "mawsoog."
+				}
+			],
+			"targetWords": [
+				"Source"
+			]
+		},
+		{
+			"arabic": "لا تنشر الإشاعات.",
+			"arabicTashkeel": "لا تِنشُر الإشاعات.",
+			"english": "Don't spread rumours.",
+			"transliteration": "la tinshur il-ishaa3aat.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تنشر",
+					"english": "spread",
+					"transliteration": "tinshur"
+				},
+				{
+					"arabic": "الإشاعات.",
+					"english": "the rumours.",
+					"transliteration": "il-ishaa3aat."
+				}
+			],
+			"targetWords": [
+				"Rumour"
+			]
+		},
+		{
+			"arabic": "المؤثرين يكسبوا فلوس كتير.",
+			"arabicTashkeel": "المُؤَثِّرين يِكسَبوا فُلوس كِتير.",
+			"english": "Influencers earn a lot of money.",
+			"transliteration": "il-mu2assireen yiksabu fuloos kteer.",
+			"wordAlignments": [
+				{
+					"arabic": "المؤثرين",
+					"english": "The influencers",
+					"transliteration": "il-mu2assireen"
+				},
+				{
+					"arabic": "يكسبوا",
+					"english": "earn",
+					"transliteration": "yiksabu"
+				},
+				{
+					"arabic": "فلوس",
+					"english": "money",
+					"transliteration": "fuloos"
+				},
+				{
+					"arabic": "كتير.",
+					"english": "a lot.",
+					"transliteration": "kteer."
+				}
+			],
+			"targetWords": [
+				"Influencer"
+			]
+		},
+		{
+			"arabic": "المقال مو موضوعي.",
+			"arabicTashkeel": "المَقال مو مَوضوعي.",
+			"english": "The article is not objective.",
+			"transliteration": "il-magaal moo mawdhoo3i.",
+			"wordAlignments": [
+				{
+					"arabic": "المقال",
+					"english": "The article is",
+					"transliteration": "il-magaal"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "موضوعي.",
+					"english": "objective.",
+					"transliteration": "mawdhoo3i."
+				}
+			],
+			"targetWords": [
+				"Objective",
+				"Article"
+			]
+		},
+		{
+			"arabic": "الرأي العام مع القرار.",
+			"arabicTashkeel": "الرّأي العام مَعَ القَرار.",
+			"english": "Public opinion is with the decision.",
+			"transliteration": "ir-ra2y il-3aam ma3a il-garaar.",
+			"wordAlignments": [
+				{
+					"arabic": "الرأي",
+					"english": "The opinion",
+					"transliteration": "ir-ra2y"
+				},
+				{
+					"arabic": "العام",
+					"english": "public is",
+					"transliteration": "il-3aam"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "القرار.",
+					"english": "the decision.",
+					"transliteration": "il-garaar."
+				}
+			],
+			"targetWords": [
+				"Public opinion"
+			]
+		},
+		{
+			"arabic": "المحرر يراجع المقالات.",
+			"arabicTashkeel": "المُحَرِّر يِراجِع المَقالات.",
+			"english": "The editor reviews the articles.",
+			"transliteration": "il-mu7arrir yiraaji3 il-magaalaat.",
+			"wordAlignments": [
+				{
+					"arabic": "المحرر",
+					"english": "The editor",
+					"transliteration": "il-mu7arrir"
+				},
+				{
+					"arabic": "يراجع",
+					"english": "reviews",
+					"transliteration": "yiraaji3"
+				},
+				{
+					"arabic": "المقالات.",
+					"english": "the articles.",
+					"transliteration": "il-magaalaat."
+				}
+			],
+			"targetWords": [
+				"Editor"
+			]
+		},
+		{
+			"arabic": "تغطية مباشرة للحج.",
+			"arabicTashkeel": "تَغطية مُباشِرة للحَج.",
+			"english": "Live coverage of the Hajj.",
+			"transliteration": "taghtiya mubaashira lil-7ajj.",
+			"wordAlignments": [
+				{
+					"arabic": "تغطية",
+					"english": "Coverage",
+					"transliteration": "taghtiya"
+				},
+				{
+					"arabic": "مباشرة",
+					"english": "live",
+					"transliteration": "mubaashira"
+				},
+				{
+					"arabic": "للحج.",
+					"english": "of the Hajj.",
+					"transliteration": "lil-7ajj."
+				}
+			],
+			"targetWords": [
+				"Coverage"
+			]
+		},
+		{
+			"arabic": "الإعلام والإعلانات.",
+			"arabicTashkeel": "الإعلام والإعلانات.",
+			"english": "Media and advertising.",
+			"transliteration": "il-i3laam w-il-i3laanaat.",
+			"wordAlignments": [
+				{
+					"arabic": "الإعلام",
+					"english": "The media",
+					"transliteration": "il-i3laam"
+				},
+				{
+					"arabic": "والإعلانات.",
+					"english": "and the advertisements.",
+					"transliteration": "w-il-i3laanaat."
+				}
+			],
+			"targetWords": [
+				"Media"
+			]
+		},
+		{
+			"arabic": "صحافة زمان.",
+			"arabicTashkeel": "صَحافة زَمان.",
+			"english": "The press of the past.",
+			"transliteration": "sa7aafat zamaan.",
+			"wordAlignments": [
+				{
+					"arabic": "صحافة",
+					"english": "The press of",
+					"transliteration": "sa7aafat"
+				},
+				{
+					"arabic": "زمان.",
+					"english": "long ago.",
+					"transliteration": "zamaan."
+				}
+			],
+			"targetWords": [
+				"Press"
+			]
+		},
+		{
+			"arabic": "إذاعة محلية.",
+			"arabicTashkeel": "إذاعة مَحَلّية.",
+			"english": "A local radio station.",
+			"transliteration": "izaa3a ma7alliyya.",
+			"wordAlignments": [
+				{
+					"arabic": "إذاعة",
+					"english": "A radio station",
+					"transliteration": "izaa3a"
+				},
+				{
+					"arabic": "محلية.",
+					"english": "local.",
+					"transliteration": "ma7alliyya."
+				}
+			],
+			"targetWords": [
+				"Radio"
+			]
+		},
+		{
+			"arabic": "مراسل حربي.",
+			"arabicTashkeel": "مُراسِل حَربي.",
+			"english": "A war reporter.",
+			"transliteration": "muraasil 7arbi.",
+			"wordAlignments": [
+				{
+					"arabic": "مراسل",
+					"english": "A reporter",
+					"transliteration": "muraasil"
+				},
+				{
+					"arabic": "حربي.",
+					"english": "of war.",
+					"transliteration": "7arbi."
+				}
+			],
+			"targetWords": [
+				"Reporter"
+			]
+		},
+		{
+			"arabic": "برنامج كوميدي.",
+			"arabicTashkeel": "بَرنامِج كوميدي.",
+			"english": "A comedy programme.",
+			"transliteration": "barnaamij koomeedi.",
+			"wordAlignments": [
+				{
+					"arabic": "برنامج",
+					"english": "A programme",
+					"transliteration": "barnaamij"
+				},
+				{
+					"arabic": "كوميدي.",
+					"english": "comedy.",
+					"transliteration": "koomeedi."
+				}
+			],
+			"targetWords": [
+				"Programme"
+			]
+		},
+		{
+			"arabic": "هوا يسوي بث مباشر في التيك توك.",
+			"arabicTashkeel": "هوّا يِسَوّي بَث مُباشِر في التّيك توك.",
+			"english": "He's doing a live broadcast on TikTok.",
+			"transliteration": "huwwa yisawwi bass mubaashir fi it-teek took.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "يسوي",
+					"english": "doing",
+					"transliteration": "yisawwi"
+				},
+				{
+					"arabic": "بث",
+					"english": "a broadcast",
+					"transliteration": "bass"
+				},
+				{
+					"arabic": "مباشر",
+					"english": "direct",
+					"transliteration": "mubaashir"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "التيك",
+					"english": "the Tik",
+					"transliteration": "it-teek"
+				},
+				{
+					"arabic": "توك.",
+					"english": "Tok.",
+					"transliteration": "took."
+				}
+			],
+			"targetWords": [
+				"Live broadcast"
+			]
+		},
+		{
+			"arabic": "عناوين اليوم.",
+			"arabicTashkeel": "عَناوين اليوم.",
+			"english": "The headlines today.",
+			"transliteration": "3anaaween il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "عناوين",
+					"english": "The headlines of",
+					"transliteration": "3anaaween"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Headline"
+			]
+		},
+		{
+			"arabic": "مقال طويل.",
+			"arabicTashkeel": "مَقال طَويل.",
+			"english": "A long article.",
+			"transliteration": "magaal taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "مقال",
+					"english": "An article",
+					"transliteration": "magaal"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"Article"
+			]
+		},
+		{
+			"arabic": "تأكد من المصدر أول.",
+			"arabicTashkeel": "تأكَّد مِن المَصدَر أوَّل.",
+			"english": "Check the source first.",
+			"transliteration": "ta2akkad min il-masdar awwal.",
+			"wordAlignments": [
+				{
+					"arabic": "تأكد",
+					"english": "Check",
+					"transliteration": "ta2akkad"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المصدر",
+					"english": "the source",
+					"transliteration": "il-masdar"
+				},
+				{
+					"arabic": "أول.",
+					"english": "first.",
+					"transliteration": "awwal."
+				}
+			],
+			"targetWords": [
+				"Source"
+			]
+		},
+		{
+			"arabic": "الإشاعة انتشرت على الواتساب.",
+			"arabicTashkeel": "الإشاعة اِنتَشَرَت على الواتساب.",
+			"english": "The rumour spread on WhatsApp.",
+			"transliteration": "il-ishaa3a intasharat 3ala il-waatsaab.",
+			"wordAlignments": [
+				{
+					"arabic": "الإشاعة",
+					"english": "The rumour",
+					"transliteration": "il-ishaa3a"
+				},
+				{
+					"arabic": "انتشرت",
+					"english": "spread",
+					"transliteration": "intasharat"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الواتساب.",
+					"english": "the WhatsApp.",
+					"transliteration": "il-waatsaab."
+				}
+			],
+			"targetWords": [
+				"Rumour"
+			]
+		},
+		{
+			"arabic": "أختي تبغى تصير مؤثرة.",
+			"arabicTashkeel": "أُختي تِبغى تِصير مُؤَثِّرة.",
+			"english": "My sister wants to become an influencer.",
+			"transliteration": "ukhti tibgha tiseer mu2assira.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "تبغى",
+					"english": "wants",
+					"transliteration": "tibgha"
+				},
+				{
+					"arabic": "تصير",
+					"english": "she becomes",
+					"transliteration": "tiseer"
+				},
+				{
+					"arabic": "مؤثرة.",
+					"english": "an influencer.",
+					"transliteration": "mu2assira."
+				}
+			],
+			"targetWords": [
+				"Influencer"
+			]
+		},
+		{
+			"arabic": "رأي موضوعي.",
+			"arabicTashkeel": "رأي مَوضوعي.",
+			"english": "An objective opinion.",
+			"transliteration": "ra2y mawdhoo3i.",
+			"wordAlignments": [
+				{
+					"arabic": "رأي",
+					"english": "An opinion",
+					"transliteration": "ra2y"
+				},
+				{
+					"arabic": "موضوعي.",
+					"english": "objective.",
+					"transliteration": "mawdhoo3i."
+				}
+			],
+			"targetWords": [
+				"Objective"
+			]
+		},
+		{
+			"arabic": "الرأي العام تغير.",
+			"arabicTashkeel": "الرّأي العام تِغَيَّر.",
+			"english": "Public opinion changed.",
+			"transliteration": "ir-ra2y il-3aam tighayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "الرأي",
+					"english": "The opinion",
+					"transliteration": "ir-ra2y"
+				},
+				{
+					"arabic": "العام",
+					"english": "public",
+					"transliteration": "il-3aam"
+				},
+				{
+					"arabic": "تغير.",
+					"english": "changed.",
+					"transliteration": "tighayyar."
+				}
+			],
+			"targetWords": [
+				"Public opinion"
+			]
+		},
+		{
+			"arabic": "رئيس التحرير في الجريدة.",
+			"arabicTashkeel": "رَئيس التَّحرير في الجَريدة.",
+			"english": "The newspaper's editor-in-chief.",
+			"transliteration": "ra2ees it-ta7reer fi ij-jareeda.",
+			"wordAlignments": [
+				{
+					"arabic": "رئيس",
+					"english": "The head of",
+					"transliteration": "ra2ees"
+				},
+				{
+					"arabic": "التحرير",
+					"english": "the editing",
+					"transliteration": "it-ta7reer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجريدة.",
+					"english": "the newspaper.",
+					"transliteration": "ij-jareeda."
+				}
+			],
+			"targetWords": [
+				"Editor"
+			]
+		},
+		{
+			"arabic": "تغطية ضعيفة.",
+			"arabicTashkeel": "تَغطية ضَعيفة.",
+			"english": "Weak coverage.",
+			"transliteration": "taghtiya dha3eefa.",
+			"wordAlignments": [
+				{
+					"arabic": "تغطية",
+					"english": "Coverage",
+					"transliteration": "taghtiya"
+				},
+				{
+					"arabic": "ضعيفة.",
+					"english": "weak.",
+					"transliteration": "dha3eefa."
+				}
+			],
+			"targetWords": [
+				"Coverage"
+			]
+		},
+		{
+			"arabic": "الإعلام الجديد الإنترنت.",
+			"arabicTashkeel": "الإعلام الجَديد الإنتَرنِت.",
+			"english": "The new media is the internet.",
+			"transliteration": "il-i3laam ij-jadeed il-intarnet.",
+			"wordAlignments": [
+				{
+					"arabic": "الإعلام",
+					"english": "The media",
+					"transliteration": "il-i3laam"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jadeed"
+				},
+				{
+					"arabic": "الإنترنت.",
+					"english": "the internet.",
+					"transliteration": "il-intarnet."
+				}
+			],
+			"targetWords": [
+				"Media"
+			]
+		},
+		{
+			"arabic": "حرية الصحافة.",
+			"arabicTashkeel": "حُرّية الصَّحافة.",
+			"english": "Freedom of the press.",
+			"transliteration": "7urriyyat is-sa7aafa.",
+			"wordAlignments": [
+				{
+					"arabic": "حرية",
+					"english": "The freedom of",
+					"transliteration": "7urriyyat"
+				},
+				{
+					"arabic": "الصحافة.",
+					"english": "the press.",
+					"transliteration": "is-sa7aafa."
+				}
+			],
+			"targetWords": [
+				"Press"
+			]
+		},
+		{
+			"arabic": "الراديو قديم بس لسا عايش.",
+			"arabicTashkeel": "الرّاديو قَديم بَس لِسّا عايِش.",
+			"english": "The radio is old but still alive.",
+			"transliteration": "ir-raadyo gadeem bas lissa 3aayish.",
+			"wordAlignments": [
+				{
+					"arabic": "الراديو",
+					"english": "The radio is",
+					"transliteration": "ir-raadyo"
+				},
+				{
+					"arabic": "قديم",
+					"english": "old",
+					"transliteration": "gadeem"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "لسا",
+					"english": "still",
+					"transliteration": "lissa"
+				},
+				{
+					"arabic": "عايش.",
+					"english": "alive.",
+					"transliteration": "3aayish."
+				}
+			],
+			"targetWords": [
+				"Radio"
+			]
+		},
+		{
+			"arabic": "تقرير المراسل.",
+			"arabicTashkeel": "تَقرير المُراسِل.",
+			"english": "The reporter's report.",
+			"transliteration": "tagreer il-muraasil.",
+			"wordAlignments": [
+				{
+					"arabic": "تقرير",
+					"english": "The report of",
+					"transliteration": "tagreer"
+				},
+				{
+					"arabic": "المراسل.",
+					"english": "the reporter.",
+					"transliteration": "il-muraasil."
+				}
+			],
+			"targetWords": [
+				"Reporter"
+			]
+		},
+		{
+			"arabic": "برنامج جديد في رمضان.",
+			"arabicTashkeel": "بَرنامِج جَديد في رَمَضان.",
+			"english": "A new programme in Ramadan.",
+			"transliteration": "barnaamij jadeed fi ramadhaan.",
+			"wordAlignments": [
+				{
+					"arabic": "برنامج",
+					"english": "A programme",
+					"transliteration": "barnaamij"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "jadeed"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "رمضان.",
+					"english": "Ramadan.",
+					"transliteration": "ramadhaan."
+				}
+			],
+			"targetWords": [
+				"Programme"
+			]
+		},
+		{
+			"arabic": "البث المباشر وقف.",
+			"arabicTashkeel": "البَث المُباشِر وِقِف.",
+			"english": "The live broadcast stopped.",
+			"transliteration": "il-bass il-mubaashir wigif.",
+			"wordAlignments": [
+				{
+					"arabic": "البث",
+					"english": "The broadcast",
+					"transliteration": "il-bass"
+				},
+				{
+					"arabic": "المباشر",
+					"english": "direct",
+					"transliteration": "il-mubaashir"
+				},
+				{
+					"arabic": "وقف.",
+					"english": "stopped.",
+					"transliteration": "wigif."
+				}
+			],
+			"targetWords": [
+				"Live broadcast"
+			]
+		},
+		{
+			"arabic": "عنوان غريب.",
+			"arabicTashkeel": "عُنوان غَريب.",
+			"english": "A strange headline.",
+			"transliteration": "3unwaan ghareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "عنوان",
+					"english": "A headline",
+					"transliteration": "3unwaan"
+				},
+				{
+					"arabic": "غريب.",
+					"english": "strange.",
+					"transliteration": "ghareeb."
+				}
+			],
+			"targetWords": [
+				"Headline"
+			]
+		},
+		{
+			"arabic": "المصدر مجهول.",
+			"arabicTashkeel": "المَصدَر مَجهول.",
+			"english": "The source is unknown.",
+			"transliteration": "il-masdar majhool.",
+			"wordAlignments": [
+				{
+					"arabic": "المصدر",
+					"english": "The source is",
+					"transliteration": "il-masdar"
+				},
+				{
+					"arabic": "مجهول.",
+					"english": "unknown.",
+					"transliteration": "majhool."
+				}
+			],
+			"targetWords": [
+				"Source"
+			]
+		},
+		{
+			"arabic": "دا خبر ولا إشاعة؟",
+			"arabicTashkeel": "دا خَبَر وَلّا إشاعة؟",
+			"english": "Is this news or a rumour?",
+			"transliteration": "da khabar walla ishaa3a?",
+			"wordAlignments": [
+				{
+					"arabic": "دا",
+					"english": "Is this",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "خبر",
+					"english": "news",
+					"transliteration": "khabar"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "إشاعة؟",
+					"english": "a rumour?",
+					"transliteration": "ishaa3a?"
+				}
+			],
+			"targetWords": [
+				"Rumour"
+			]
+		},
+		{
+			"arabic": "المؤثر يعلن عن منتجات.",
+			"arabicTashkeel": "المُؤَثِّر يِعلِن عَن مُنتَجات.",
+			"english": "An influencer advertises products.",
+			"transliteration": "il-mu2assir yi3lin 3an muntajaat.",
+			"wordAlignments": [
+				{
+					"arabic": "المؤثر",
+					"english": "The influencer",
+					"transliteration": "il-mu2assir"
+				},
+				{
+					"arabic": "يعلن",
+					"english": "advertises",
+					"transliteration": "yi3lin"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "منتجات.",
+					"english": "products.",
+					"transliteration": "muntajaat."
+				}
+			],
+			"targetWords": [
+				"Influencer"
+			]
+		},
+		{
+			"arabic": "تغطية واسعة.",
+			"arabicTashkeel": "تَغطية واسعة.",
+			"english": "Wide coverage.",
+			"transliteration": "taghtiya waas3a.",
+			"wordAlignments": [
+				{
+					"arabic": "تغطية",
+					"english": "Coverage",
+					"transliteration": "taghtiya"
+				},
+				{
+					"arabic": "واسعة.",
+					"english": "wide.",
+					"transliteration": "waas3a."
+				}
+			],
+			"targetWords": [
+				"Coverage"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Day at the Channel",
+			"sentences": [
+				{
+					"arabic": "أمس قضيت يوم مع مراسل في قناة أخبار في جدة.",
+					"arabicTashkeel": "أمس قَضَّيت يوم مَعَ مُراسِل في قَناة أخبار في جِدّة.",
+					"english": "Yesterday I spent a day with a reporter at a news channel in Jeddah.",
+					"transliteration": "ams gadhdheet yoom ma3a muraasil fi ganaat akhbaar fi jidda.",
+					"wordAlignments": [
+						{
+							"arabic": "أمس",
+							"english": "Yesterday",
+							"transliteration": "ams"
+						},
+						{
+							"arabic": "قضيت",
+							"english": "I spent",
+							"transliteration": "gadhdheet"
+						},
+						{
+							"arabic": "يوم",
+							"english": "a day",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "مع",
+							"english": "with",
+							"transliteration": "ma3a"
+						},
+						{
+							"arabic": "مراسل",
+							"english": "a reporter",
+							"transliteration": "muraasil"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "قناة",
+							"english": "a channel of",
+							"transliteration": "ganaat"
+						},
+						{
+							"arabic": "أخبار",
+							"english": "news",
+							"transliteration": "akhbaar"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "جدة.",
+							"english": "Jeddah.",
+							"transliteration": "jidda."
+						}
+					]
+				},
+				{
+					"arabic": "الصبح، المحرر اختار عناوين اليوم.",
+					"arabicTashkeel": "الصُّبح، المُحَرِّر اِختار عَناوين اليوم.",
+					"english": "In the morning, the editor chose the headlines of the day.",
+					"transliteration": "is-sub7, il-mu7arrir ikhtaar 3anaaween il-yoom.",
+					"wordAlignments": [
+						{
+							"arabic": "الصبح،",
+							"english": "In the morning,",
+							"transliteration": "is-sub7,"
+						},
+						{
+							"arabic": "المحرر",
+							"english": "the editor",
+							"transliteration": "il-mu7arrir"
+						},
+						{
+							"arabic": "اختار",
+							"english": "chose",
+							"transliteration": "ikhtaar"
+						},
+						{
+							"arabic": "عناوين",
+							"english": "the headlines of",
+							"transliteration": "3anaaween"
+						},
+						{
+							"arabic": "اليوم.",
+							"english": "the day.",
+							"transliteration": "il-yoom."
+						}
+					]
+				},
+				{
+					"arabic": "المراسل قال: قبل أي خبر، لازم تتأكد من المصدر.",
+					"arabicTashkeel": "المُراسِل قال: قَبل أيّ خَبَر، لازِم تِتأكَّد مِن المَصدَر.",
+					"english": "The reporter said: before any news item, you must check the source.",
+					"transliteration": "il-muraasil gaal: gabl ayy khabar, laazim tit2akkad min il-masdar.",
+					"wordAlignments": [
+						{
+							"arabic": "المراسل",
+							"english": "The reporter",
+							"transliteration": "il-muraasil"
+						},
+						{
+							"arabic": "قال:",
+							"english": "said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "قبل",
+							"english": "before",
+							"transliteration": "gabl"
+						},
+						{
+							"arabic": "أي",
+							"english": "any",
+							"transliteration": "ayy"
+						},
+						{
+							"arabic": "خبر،",
+							"english": "news item,",
+							"transliteration": "khabar,"
+						},
+						{
+							"arabic": "لازم",
+							"english": "you must",
+							"transliteration": "laazim"
+						},
+						{
+							"arabic": "تتأكد",
+							"english": "check",
+							"transliteration": "tit2akkad"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "المصدر.",
+							"english": "the source.",
+							"transliteration": "il-masdar."
+						}
+					]
+				},
+				{
+					"arabic": "عشان اليوم الإشاعات تنتشر بسرعة على السوشيال ميديا.",
+					"arabicTashkeel": "عَشان اليوم الإشاعات تِنتِشِر بسُرعة على السّوشيال ميديا.",
+					"english": "Because today rumours spread fast on social media.",
+					"transliteration": "3ashaan il-yoom il-ishaa3aat tintishir b-sur3a 3ala is-sooshyal meedya.",
+					"wordAlignments": [
+						{
+							"arabic": "عشان",
+							"english": "Because",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "اليوم",
+							"english": "today",
+							"transliteration": "il-yoom"
+						},
+						{
+							"arabic": "الإشاعات",
+							"english": "the rumours",
+							"transliteration": "il-ishaa3aat"
+						},
+						{
+							"arabic": "تنتشر",
+							"english": "spread",
+							"transliteration": "tintishir"
+						},
+						{
+							"arabic": "بسرعة",
+							"english": "fast",
+							"transliteration": "b-sur3a"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "السوشيال",
+							"english": "the social",
+							"transliteration": "is-sooshyal"
+						},
+						{
+							"arabic": "ميديا.",
+							"english": "media.",
+							"transliteration": "meedya."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Media and Influencers",
+			"sentences": [
+				{
+					"arabic": "اليوم المؤثرين يأثروا على الرأي العام أكتر من الصحافة.",
+					"arabicTashkeel": "اليوم المُؤَثِّرين يأثِّروا على الرّأي العام أكتَر مِن الصَّحافة.",
+					"english": "Today influencers affect public opinion more than the press.",
+					"transliteration": "il-yoom il-mu2assireen ya2assiru 3ala ir-ra2y il-3aam aktar min is-sa7aafa.",
+					"wordAlignments": [
+						{
+							"arabic": "اليوم",
+							"english": "Today",
+							"transliteration": "il-yoom"
+						},
+						{
+							"arabic": "المؤثرين",
+							"english": "the influencers",
+							"transliteration": "il-mu2assireen"
+						},
+						{
+							"arabic": "يأثروا",
+							"english": "affect",
+							"transliteration": "ya2assiru"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الرأي",
+							"english": "the opinion",
+							"transliteration": "ir-ra2y"
+						},
+						{
+							"arabic": "العام",
+							"english": "public",
+							"transliteration": "il-3aam"
+						},
+						{
+							"arabic": "أكتر",
+							"english": "more",
+							"transliteration": "aktar"
+						},
+						{
+							"arabic": "من",
+							"english": "than",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الصحافة.",
+							"english": "the press.",
+							"transliteration": "is-sa7aafa."
+						}
+					]
+				},
+				{
+					"arabic": "بس تغطية الإعلام لازم تكون موضوعية.",
+					"arabicTashkeel": "بَس تَغطية الإعلام لازِم تِكون مَوضوعية.",
+					"english": "But the coverage of the media must be objective.",
+					"transliteration": "bas taghtiyat il-i3laam laazim tikoon mawdhoo3iyya.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "تغطية",
+							"english": "the coverage of",
+							"transliteration": "taghtiyat"
+						},
+						{
+							"arabic": "الإعلام",
+							"english": "the media",
+							"transliteration": "il-i3laam"
+						},
+						{
+							"arabic": "لازم",
+							"english": "must",
+							"transliteration": "laazim"
+						},
+						{
+							"arabic": "تكون",
+							"english": "be",
+							"transliteration": "tikoon"
+						},
+						{
+							"arabic": "موضوعية.",
+							"english": "objective.",
+							"transliteration": "mawdhoo3iyya."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is shadowing a reporter at a news channel in Jeddah for a day as part of a journalism course.",
+		"studentRole": "A journalism student learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The experienced Jeddawi reporter.",
+		"goalEnglish": "Ask how stories are chosen and checked, discuss rumours, influencers and reliable sources, and give your opinion on objectivity.",
+		"targetWords": [
+			"Media",
+			"Reporter",
+			"Source",
+			"Rumour",
+			"Objective",
+			"Headline",
+			"Coverage",
+			"Public opinion"
+		]
+	}
+}

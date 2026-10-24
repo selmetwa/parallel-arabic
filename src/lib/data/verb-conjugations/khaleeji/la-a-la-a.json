@@ -1,0 +1,318 @@
+{
+  "slug": "la-a-la-a",
+  "arabic": "لقى",
+  "transliteration": "liga",
+  "english": "to find",
+  "wordId": null,
+  "rootLetters": "ل ق ي",
+  "verbClass": "defective",
+  "notes": "Past liga, present algi (I find).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "لقيت",
+          "transliteration": "ligeit",
+          "english": "I found"
+        },
+        {
+          "person": "enta",
+          "arabic": "لقيت",
+          "transliteration": "ligeit",
+          "english": "you (m) found"
+        },
+        {
+          "person": "enti",
+          "arabic": "لقيتي",
+          "transliteration": "ligeiti",
+          "english": "you (f) found"
+        },
+        {
+          "person": "howa",
+          "arabic": "لقى",
+          "transliteration": "liga",
+          "english": "he found"
+        },
+        {
+          "person": "heya",
+          "arabic": "لقت",
+          "transliteration": "ligat",
+          "english": "she found"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لقينا",
+          "transliteration": "ligeina",
+          "english": "we found"
+        },
+        {
+          "person": "entu",
+          "arabic": "لقيتوا",
+          "transliteration": "ligeitaw",
+          "english": "you (pl) found"
+        },
+        {
+          "person": "homma",
+          "arabic": "لقوا",
+          "transliteration": "ligaw",
+          "english": "they found"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما لقيت",
+          "transliteration": "ma ligeit",
+          "english": "I didn't find"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما لقيت",
+          "transliteration": "ma ligeit",
+          "english": "you (m) didn't find"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما لقيتي",
+          "transliteration": "ma ligeiti",
+          "english": "you (f) didn't find"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما لقى",
+          "transliteration": "ma liga",
+          "english": "he didn't find"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما لقت",
+          "transliteration": "ma ligat",
+          "english": "she didn't find"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما لقينا",
+          "transliteration": "ma ligeina",
+          "english": "we didn't find"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما لقيتوا",
+          "transliteration": "ma ligeitaw",
+          "english": "you (pl) didn't find"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما لقوا",
+          "transliteration": "ma ligaw",
+          "english": "they didn't find"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "القي",
+          "transliteration": "algi",
+          "english": "I find"
+        },
+        {
+          "person": "enta",
+          "arabic": "تلقي",
+          "transliteration": "tilgi",
+          "english": "you (m) find"
+        },
+        {
+          "person": "enti",
+          "arabic": "تلقين",
+          "transliteration": "tilgeen",
+          "english": "you (f) find"
+        },
+        {
+          "person": "howa",
+          "arabic": "يلقي",
+          "transliteration": "yilgi",
+          "english": "he finds"
+        },
+        {
+          "person": "heya",
+          "arabic": "تلقي",
+          "transliteration": "tilgi",
+          "english": "she finds"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نلقي",
+          "transliteration": "nilgi",
+          "english": "we find"
+        },
+        {
+          "person": "entu",
+          "arabic": "تلقون",
+          "transliteration": "tilgoon",
+          "english": "you (pl) find"
+        },
+        {
+          "person": "homma",
+          "arabic": "يلقون",
+          "transliteration": "yilgoon",
+          "english": "they find"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما القي",
+          "transliteration": "ma algi",
+          "english": "I don't find"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تلقي",
+          "transliteration": "ma tilgi",
+          "english": "you (m) don't find"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تلقين",
+          "transliteration": "ma tilgeen",
+          "english": "you (f) don't find"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يلقي",
+          "transliteration": "ma yilgi",
+          "english": "he doesn't find"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تلقي",
+          "transliteration": "ma tilgi",
+          "english": "she doesn't find"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نلقي",
+          "transliteration": "ma nilgi",
+          "english": "we don't find"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تلقون",
+          "transliteration": "ma tilgoon",
+          "english": "you (pl) don't find"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يلقون",
+          "transliteration": "ma yilgoon",
+          "english": "they don't find"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح القي",
+          "transliteration": "raa7 algi",
+          "english": "I will find"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تلقي",
+          "transliteration": "raa7 tilgi",
+          "english": "you (m) will find"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تلقين",
+          "transliteration": "raa7 tilgeen",
+          "english": "you (f) will find"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يلقي",
+          "transliteration": "raa7 yilgi",
+          "english": "he will find"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تلقي",
+          "transliteration": "raa7 tilgi",
+          "english": "she will find"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نلقي",
+          "transliteration": "raa7 nilgi",
+          "english": "we will find"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تلقون",
+          "transliteration": "raa7 tilgoon",
+          "english": "you (pl) will find"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يلقون",
+          "transliteration": "raa7 yilgoon",
+          "english": "they will find"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح القي",
+          "transliteration": "ma raa7 algi",
+          "english": "I won't find"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تلقي",
+          "transliteration": "ma raa7 tilgi",
+          "english": "you (m) won't find"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تلقين",
+          "transliteration": "ma raa7 tilgeen",
+          "english": "you (f) won't find"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يلقي",
+          "transliteration": "ma raa7 yilgi",
+          "english": "he won't find"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تلقي",
+          "transliteration": "ma raa7 tilgi",
+          "english": "she won't find"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نلقي",
+          "transliteration": "ma raa7 nilgi",
+          "english": "we won't find"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تلقون",
+          "transliteration": "ma raa7 tilgoon",
+          "english": "you (pl) won't find"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يلقون",
+          "transliteration": "ma raa7 yilgoon",
+          "english": "they won't find"
+        }
+      ]
+    }
+  }
+}

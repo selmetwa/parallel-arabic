@@ -1,0 +1,2085 @@
+{
+	"vocab": [
+		{
+			"arabic": "إستقبال",
+			"arabicTashkeel": "إستِقبال",
+			"english": "Reception",
+			"transliteration": "istigbaal",
+			"wordAlignments": [
+				{
+					"arabic": "إستقبال",
+					"english": "Reception",
+					"transliteration": "istigbaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "غرفة مفردة",
+			"arabicTashkeel": "غُرفة مُفرَدة",
+			"english": "Single room",
+			"transliteration": "ghurfa mufrada",
+			"wordAlignments": [
+				{
+					"arabic": "غرفة",
+					"english": "Room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "مفردة",
+					"english": "single",
+					"transliteration": "mufrada"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "غرفة دبل",
+			"arabicTashkeel": "غُرفة دَبَل",
+			"english": "Double room",
+			"transliteration": "ghurfa dabal",
+			"wordAlignments": [
+				{
+					"arabic": "غرفة",
+					"english": "Room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "دبل",
+					"english": "double",
+					"transliteration": "dabal"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مفتاح",
+			"arabicTashkeel": "مِفتاح",
+			"english": "Key",
+			"transliteration": "miftaa7",
+			"wordAlignments": [
+				{
+					"arabic": "مفتاح",
+					"english": "Key",
+					"transliteration": "miftaa7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ليلة",
+			"arabicTashkeel": "ليلة",
+			"english": "Night (stay)",
+			"transliteration": "leela",
+			"wordAlignments": [
+				{
+					"arabic": "ليلة",
+					"english": "Night",
+					"transliteration": "leela"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الفطور مشمول",
+			"arabicTashkeel": "الفُطور مَشمول",
+			"english": "Breakfast included",
+			"transliteration": "il-futoor mashmool",
+			"wordAlignments": [
+				{
+					"arabic": "الفطور",
+					"english": "The breakfast",
+					"transliteration": "il-futoor"
+				},
+				{
+					"arabic": "مشمول",
+					"english": "included",
+					"transliteration": "mashmool"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "واي فاي",
+			"arabicTashkeel": "واي فاي",
+			"english": "Wi-Fi",
+			"transliteration": "waay faay",
+			"wordAlignments": [
+				{
+					"arabic": "واي",
+					"english": "Wi",
+					"transliteration": "waay"
+				},
+				{
+					"arabic": "فاي",
+					"english": "Fi",
+					"transliteration": "faay"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سبلت",
+			"arabicTashkeel": "سْبِلِت",
+			"english": "Air conditioner",
+			"transliteration": "sbilit",
+			"wordAlignments": [
+				{
+					"arabic": "سبلت",
+					"english": "Split AC",
+					"transliteration": "sbilit"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خدمة الغرف",
+			"arabicTashkeel": "خِدمة الغُرَف",
+			"english": "Room service",
+			"transliteration": "khidmat il-ghuraf",
+			"wordAlignments": [
+				{
+					"arabic": "خدمة",
+					"english": "Service of",
+					"transliteration": "khidmat"
+				},
+				{
+					"arabic": "الغرف",
+					"english": "the rooms",
+					"transliteration": "il-ghuraf"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "شكوى",
+			"arabicTashkeel": "شَكوى",
+			"english": "Complaint",
+			"transliteration": "shakwa",
+			"wordAlignments": [
+				{
+					"arabic": "شكوى",
+					"english": "Complaint",
+					"transliteration": "shakwa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عاطل",
+			"arabicTashkeel": "عاطِل",
+			"english": "Broken (not working)",
+			"transliteration": "3aatil",
+			"wordAlignments": [
+				{
+					"arabic": "عاطل",
+					"english": "Broken",
+					"transliteration": "3aatil"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "خاولي",
+			"arabicTashkeel": "خاولي",
+			"english": "Towel",
+			"transliteration": "khaawli",
+			"wordAlignments": [
+				{
+					"arabic": "خاولي",
+					"english": "Towel",
+					"transliteration": "khaawli"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مصعد",
+			"arabicTashkeel": "مِصعَد",
+			"english": "Elevator",
+			"transliteration": "mis3ad",
+			"wordAlignments": [
+				{
+					"arabic": "مصعد",
+					"english": "Elevator",
+					"transliteration": "mis3ad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تسجيل الدخول",
+			"arabicTashkeel": "تَسجيل الدُّخول",
+			"english": "Check-in",
+			"transliteration": "tasjeel id-dukhool",
+			"wordAlignments": [
+				{
+					"arabic": "تسجيل",
+					"english": "Registration of",
+					"transliteration": "tasjeel"
+				},
+				{
+					"arabic": "الدخول",
+					"english": "entry",
+					"transliteration": "id-dukhool"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "طابق",
+			"arabicTashkeel": "طابِق",
+			"english": "Floor (storey)",
+			"transliteration": "taabig",
+			"wordAlignments": [
+				{
+					"arabic": "طابق",
+					"english": "Floor",
+					"transliteration": "taabig"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "الإستقبال مفتوح أربعة وعشرين ساعة.",
+			"arabicTashkeel": "الإستِقبال مَفتوح أربعة وعِشرين ساعة.",
+			"english": "The reception is open twenty-four hours.",
+			"transliteration": "il-istigbaal maftoo7 arba3a w-3ishreen saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الإستقبال",
+					"english": "The reception is",
+					"transliteration": "il-istigbaal"
+				},
+				{
+					"arabic": "مفتوح",
+					"english": "open",
+					"transliteration": "maftoo7"
+				},
+				{
+					"arabic": "أربعة",
+					"english": "four",
+					"transliteration": "arba3a"
+				},
+				{
+					"arabic": "وعشرين",
+					"english": "and twenty",
+					"transliteration": "w-3ishreen"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "hours.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Reception"
+			]
+		},
+		{
+			"arabic": "أريد غرفة مفردة لثلاث ليالي.",
+			"arabicTashkeel": "أريد غُرفة مُفرَدة لثْلاث ليالي.",
+			"english": "I want a single room for three nights.",
+			"transliteration": "areed ghurfa mufrada l-thlath layaali.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "غرفة",
+					"english": "a room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "مفردة",
+					"english": "single",
+					"transliteration": "mufrada"
+				},
+				{
+					"arabic": "لثلاث",
+					"english": "for three",
+					"transliteration": "l-thlath"
+				},
+				{
+					"arabic": "ليالي.",
+					"english": "nights.",
+					"transliteration": "layaali."
+				}
+			],
+			"targetWords": [
+				"Single room",
+				"Night (stay)"
+			]
+		},
+		{
+			"arabic": "عدكم غرفة دبل؟",
+			"arabicTashkeel": "عِدكُم غُرفة دَبَل؟",
+			"english": "Do you have a double room?",
+			"transliteration": "3idkum ghurfa dabal?",
+			"wordAlignments": [
+				{
+					"arabic": "عدكم",
+					"english": "Do you have",
+					"transliteration": "3idkum"
+				},
+				{
+					"arabic": "غرفة",
+					"english": "a room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "دبل؟",
+					"english": "double?",
+					"transliteration": "dabal?"
+				}
+			],
+			"targetWords": [
+				"Double room"
+			]
+		},
+		{
+			"arabic": "تفضل المفتاح.",
+			"arabicTashkeel": "تْفَضَّل المِفتاح.",
+			"english": "Here is your key.",
+			"transliteration": "tfaddal il-miftaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "تفضل",
+					"english": "Here is",
+					"transliteration": "tfaddal"
+				},
+				{
+					"arabic": "المفتاح.",
+					"english": "the key.",
+					"transliteration": "il-miftaa7."
+				}
+			],
+			"targetWords": [
+				"Key"
+			]
+		},
+		{
+			"arabic": "بيش الليلة؟",
+			"arabicTashkeel": "بيش الليلة؟",
+			"english": "How much is the night?",
+			"transliteration": "beesh il-leela?",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much is",
+					"transliteration": "beesh"
+				},
+				{
+					"arabic": "الليلة؟",
+					"english": "the night?",
+					"transliteration": "il-leela?"
+				}
+			],
+			"targetWords": [
+				"Night (stay)"
+			]
+		},
+		{
+			"arabic": "الفطور مشمول؟",
+			"arabicTashkeel": "الفُطور مَشمول؟",
+			"english": "Is breakfast included?",
+			"transliteration": "il-futoor mashmool?",
+			"wordAlignments": [
+				{
+					"arabic": "الفطور",
+					"english": "Is the breakfast",
+					"transliteration": "il-futoor"
+				},
+				{
+					"arabic": "مشمول؟",
+					"english": "included?",
+					"transliteration": "mashmool?"
+				}
+			],
+			"targetWords": [
+				"Breakfast included"
+			]
+		},
+		{
+			"arabic": "شنو باسورد الواي فاي؟",
+			"arabicTashkeel": "شِنو باسوَرد الواي فاي؟",
+			"english": "What is the Wi-Fi password?",
+			"transliteration": "shinu baasward il-waay faay?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What is",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "باسورد",
+					"english": "the password of",
+					"transliteration": "baasward"
+				},
+				{
+					"arabic": "الواي",
+					"english": "the Wi",
+					"transliteration": "il-waay"
+				},
+				{
+					"arabic": "فاي؟",
+					"english": "Fi?",
+					"transliteration": "faay?"
+				}
+			],
+			"targetWords": [
+				"Wi-Fi"
+			]
+		},
+		{
+			"arabic": "السبلت عاطل.",
+			"arabicTashkeel": "السْبِلِت عاطِل.",
+			"english": "The air conditioner isn't working.",
+			"transliteration": "is-sbilit 3aatil.",
+			"wordAlignments": [
+				{
+					"arabic": "السبلت",
+					"english": "The split AC is",
+					"transliteration": "is-sbilit"
+				},
+				{
+					"arabic": "عاطل.",
+					"english": "broken.",
+					"transliteration": "3aatil."
+				}
+			],
+			"targetWords": [
+				"Air conditioner",
+				"Broken (not working)"
+			]
+		},
+		{
+			"arabic": "أريد أطلب خدمة الغرف.",
+			"arabicTashkeel": "أريد أطلُب خِدمة الغُرَف.",
+			"english": "I want to order room service.",
+			"transliteration": "areed atlub khidmat il-ghuraf.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "أطلب",
+					"english": "to order",
+					"transliteration": "atlub"
+				},
+				{
+					"arabic": "خدمة",
+					"english": "service of",
+					"transliteration": "khidmat"
+				},
+				{
+					"arabic": "الغرف.",
+					"english": "the rooms.",
+					"transliteration": "il-ghuraf."
+				}
+			],
+			"targetWords": [
+				"Room service"
+			]
+		},
+		{
+			"arabic": "عندي شكوى.",
+			"arabicTashkeel": "عِندي شَكوى.",
+			"english": "I have a complaint.",
+			"transliteration": "3indi shakwa.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "شكوى.",
+					"english": "a complaint.",
+					"transliteration": "shakwa."
+				}
+			],
+			"targetWords": [
+				"Complaint"
+			]
+		},
+		{
+			"arabic": "الدوش عاطل.",
+			"arabicTashkeel": "الدّوش عاطِل.",
+			"english": "The shower is broken.",
+			"transliteration": "id-doosh 3aatil.",
+			"wordAlignments": [
+				{
+					"arabic": "الدوش",
+					"english": "The shower is",
+					"transliteration": "id-doosh"
+				},
+				{
+					"arabic": "عاطل.",
+					"english": "broken.",
+					"transliteration": "3aatil."
+				}
+			],
+			"targetWords": [
+				"Broken (not working)"
+			]
+		},
+		{
+			"arabic": "نحتاج خاوليات بعد.",
+			"arabicTashkeel": "نِحتاج خاوليات بَعَد.",
+			"english": "We need more towels.",
+			"transliteration": "ni7taaj khaawliyyaat ba3ad.",
+			"wordAlignments": [
+				{
+					"arabic": "نحتاج",
+					"english": "We need",
+					"transliteration": "ni7taaj"
+				},
+				{
+					"arabic": "خاوليات",
+					"english": "towels",
+					"transliteration": "khaawliyyaat"
+				},
+				{
+					"arabic": "بعد.",
+					"english": "more.",
+					"transliteration": "ba3ad."
+				}
+			],
+			"targetWords": [
+				"Towel"
+			]
+		},
+		{
+			"arabic": "المصعد عاليمين.",
+			"arabicTashkeel": "المِصعَد عاليِمين.",
+			"english": "The elevator is on the right.",
+			"transliteration": "il-mis3ad 3al-yimeen.",
+			"wordAlignments": [
+				{
+					"arabic": "المصعد",
+					"english": "The elevator is",
+					"transliteration": "il-mis3ad"
+				},
+				{
+					"arabic": "عاليمين.",
+					"english": "on the right.",
+					"transliteration": "3al-yimeen."
+				}
+			],
+			"targetWords": [
+				"Elevator"
+			]
+		},
+		{
+			"arabic": "تسجيل الدخول الساعة ثنين.",
+			"arabicTashkeel": "تَسجيل الدُّخول السّاعة ثْنين.",
+			"english": "Check-in is at two.",
+			"transliteration": "tasjeel id-dukhool is-saa3a thneen.",
+			"wordAlignments": [
+				{
+					"arabic": "تسجيل",
+					"english": "Registration of",
+					"transliteration": "tasjeel"
+				},
+				{
+					"arabic": "الدخول",
+					"english": "entry is",
+					"transliteration": "id-dukhool"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثنين.",
+					"english": "two.",
+					"transliteration": "thneen."
+				}
+			],
+			"targetWords": [
+				"Check-in"
+			]
+		},
+		{
+			"arabic": "غرفتي بالطابق الخامس.",
+			"arabicTashkeel": "غُرفتي بالطّابِق الخامِس.",
+			"english": "My room is on the fifth floor.",
+			"transliteration": "ghurufti bit-taabig il-khaamis.",
+			"wordAlignments": [
+				{
+					"arabic": "غرفتي",
+					"english": "My room is",
+					"transliteration": "ghurufti"
+				},
+				{
+					"arabic": "بالطابق",
+					"english": "on the floor",
+					"transliteration": "bit-taabig"
+				},
+				{
+					"arabic": "الخامس.",
+					"english": "fifth.",
+					"transliteration": "il-khaamis."
+				}
+			],
+			"targetWords": [
+				"Floor (storey)"
+			]
+		},
+		{
+			"arabic": "خلي المفتاح بالإستقبال.",
+			"arabicTashkeel": "خَلّي المِفتاح بالإستِقبال.",
+			"english": "Leave the key at reception.",
+			"transliteration": "khalli il-miftaa7 bil-istigbaal.",
+			"wordAlignments": [
+				{
+					"arabic": "خلي",
+					"english": "Leave",
+					"transliteration": "khalli"
+				},
+				{
+					"arabic": "المفتاح",
+					"english": "the key",
+					"transliteration": "il-miftaa7"
+				},
+				{
+					"arabic": "بالإستقبال.",
+					"english": "at reception.",
+					"transliteration": "bil-istigbaal."
+				}
+			],
+			"targetWords": [
+				"Key",
+				"Reception"
+			]
+		},
+		{
+			"arabic": "الغرفة المفردة زغيرة.",
+			"arabicTashkeel": "الغُرفة المُفرَدة زْغَيّرة.",
+			"english": "The single room is small.",
+			"transliteration": "il-ghurfa il-mufrada zghayyra.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرفة",
+					"english": "The room",
+					"transliteration": "il-ghurfa"
+				},
+				{
+					"arabic": "المفردة",
+					"english": "single is",
+					"transliteration": "il-mufrada"
+				},
+				{
+					"arabic": "زغيرة.",
+					"english": "small.",
+					"transliteration": "zghayyra."
+				}
+			],
+			"targetWords": [
+				"Single room"
+			]
+		},
+		{
+			"arabic": "الغرفة الدبل بيها بلكونة.",
+			"arabicTashkeel": "الغُرفة الدَّبَل بيها بَلكونة.",
+			"english": "The double room has a balcony.",
+			"transliteration": "il-ghurfa id-dabal beeha balkoona.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرفة",
+					"english": "The room",
+					"transliteration": "il-ghurfa"
+				},
+				{
+					"arabic": "الدبل",
+					"english": "double",
+					"transliteration": "id-dabal"
+				},
+				{
+					"arabic": "بيها",
+					"english": "has",
+					"transliteration": "beeha"
+				},
+				{
+					"arabic": "بلكونة.",
+					"english": "a balcony.",
+					"transliteration": "balkoona."
+				}
+			],
+			"targetWords": [
+				"Double room"
+			]
+		},
+		{
+			"arabic": "ضيعت مفتاح الغرفة.",
+			"arabicTashkeel": "ضَيَّعِت مِفتاح الغُرفة.",
+			"english": "I lost the room key.",
+			"transliteration": "dhayya3it miftaa7 il-ghurfa.",
+			"wordAlignments": [
+				{
+					"arabic": "ضيعت",
+					"english": "I lost",
+					"transliteration": "dhayya3it"
+				},
+				{
+					"arabic": "مفتاح",
+					"english": "the key of",
+					"transliteration": "miftaa7"
+				},
+				{
+					"arabic": "الغرفة.",
+					"english": "the room.",
+					"transliteration": "il-ghurfa."
+				}
+			],
+			"targetWords": [
+				"Key"
+			]
+		},
+		{
+			"arabic": "ليلة لخ رجاء.",
+			"arabicTashkeel": "ليلة لُخ رَجاءً.",
+			"english": "One more night, please.",
+			"transliteration": "leela lukh rajaa2an.",
+			"wordAlignments": [
+				{
+					"arabic": "ليلة",
+					"english": "A night",
+					"transliteration": "leela"
+				},
+				{
+					"arabic": "لخ",
+					"english": "another",
+					"transliteration": "lukh"
+				},
+				{
+					"arabic": "رجاء.",
+					"english": "please.",
+					"transliteration": "rajaa2an."
+				}
+			],
+			"targetWords": [
+				"Night (stay)"
+			]
+		},
+		{
+			"arabic": "الفطور مشمول ويا الغرفة.",
+			"arabicTashkeel": "الفُطور مَشمول ويّا الغُرفة.",
+			"english": "Breakfast is included with the room.",
+			"transliteration": "il-futoor mashmool wiyya il-ghurfa.",
+			"wordAlignments": [
+				{
+					"arabic": "الفطور",
+					"english": "The breakfast is",
+					"transliteration": "il-futoor"
+				},
+				{
+					"arabic": "مشمول",
+					"english": "included",
+					"transliteration": "mashmool"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "الغرفة.",
+					"english": "the room.",
+					"transliteration": "il-ghurfa."
+				}
+			],
+			"targetWords": [
+				"Breakfast included"
+			]
+		},
+		{
+			"arabic": "الواي فاي بطيء.",
+			"arabicTashkeel": "الواي فاي بَطيء.",
+			"english": "The Wi-Fi is slow.",
+			"transliteration": "il-waay faay batee2.",
+			"wordAlignments": [
+				{
+					"arabic": "الواي",
+					"english": "The Wi",
+					"transliteration": "il-waay"
+				},
+				{
+					"arabic": "فاي",
+					"english": "Fi is",
+					"transliteration": "faay"
+				},
+				{
+					"arabic": "بطيء.",
+					"english": "slow.",
+					"transliteration": "batee2."
+				}
+			],
+			"targetWords": [
+				"Wi-Fi"
+			]
+		},
+		{
+			"arabic": "شغل السبلت، الجو حار.",
+			"arabicTashkeel": "شَغِّل السْبِلِت، الجَو حار.",
+			"english": "Turn on the air conditioner, it's hot.",
+			"transliteration": "shaghghil is-sbilit, ij-jaw 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Turn on",
+					"transliteration": "shaghghil"
+				},
+				{
+					"arabic": "السبلت،",
+					"english": "the split AC,",
+					"transliteration": "is-sbilit,"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "خدمة الغرف سريعة.",
+			"arabicTashkeel": "خِدمة الغُرَف سَريعة.",
+			"english": "Room service is fast.",
+			"transliteration": "khidmat il-ghuraf saree3a.",
+			"wordAlignments": [
+				{
+					"arabic": "خدمة",
+					"english": "The service of",
+					"transliteration": "khidmat"
+				},
+				{
+					"arabic": "الغرف",
+					"english": "the rooms is",
+					"transliteration": "il-ghuraf"
+				},
+				{
+					"arabic": "سريعة.",
+					"english": "fast.",
+					"transliteration": "saree3a."
+				}
+			],
+			"targetWords": [
+				"Room service"
+			]
+		},
+		{
+			"arabic": "أريد أقدم شكوى للمدير.",
+			"arabicTashkeel": "أريد أقَدِّم شَكوى للمُدير.",
+			"english": "I want to make a complaint to the manager.",
+			"transliteration": "areed agaddim shakwa lil-mudeer.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "أقدم",
+					"english": "to make",
+					"transliteration": "agaddim"
+				},
+				{
+					"arabic": "شكوى",
+					"english": "a complaint",
+					"transliteration": "shakwa"
+				},
+				{
+					"arabic": "للمدير.",
+					"english": "to the manager.",
+					"transliteration": "lil-mudeer."
+				}
+			],
+			"targetWords": [
+				"Complaint"
+			]
+		},
+		{
+			"arabic": "التلفزيون عاطل.",
+			"arabicTashkeel": "التَّلَفِزيون عاطِل.",
+			"english": "The TV is broken.",
+			"transliteration": "it-talafizyoon 3aatil.",
+			"wordAlignments": [
+				{
+					"arabic": "التلفزيون",
+					"english": "The TV is",
+					"transliteration": "it-talafizyoon"
+				},
+				{
+					"arabic": "عاطل.",
+					"english": "broken.",
+					"transliteration": "3aatil."
+				}
+			],
+			"targetWords": [
+				"Broken (not working)"
+			]
+		},
+		{
+			"arabic": "الخاولي وسخ.",
+			"arabicTashkeel": "الخاولي وَسِخ.",
+			"english": "The towel is dirty.",
+			"transliteration": "il-khaawli wasikh.",
+			"wordAlignments": [
+				{
+					"arabic": "الخاولي",
+					"english": "The towel is",
+					"transliteration": "il-khaawli"
+				},
+				{
+					"arabic": "وسخ.",
+					"english": "dirty.",
+					"transliteration": "wasikh."
+				}
+			],
+			"targetWords": [
+				"Towel"
+			]
+		},
+		{
+			"arabic": "المصعد عاطل، إطلع بالدرج.",
+			"arabicTashkeel": "المِصعَد عاطِل، إطلَع بالدَّرَج.",
+			"english": "The elevator is broken, take the stairs.",
+			"transliteration": "il-mis3ad 3aatil, itla3 bid-daraj.",
+			"wordAlignments": [
+				{
+					"arabic": "المصعد",
+					"english": "The elevator is",
+					"transliteration": "il-mis3ad"
+				},
+				{
+					"arabic": "عاطل،",
+					"english": "broken,",
+					"transliteration": "3aatil,"
+				},
+				{
+					"arabic": "إطلع",
+					"english": "go up",
+					"transliteration": "itla3"
+				},
+				{
+					"arabic": "بالدرج.",
+					"english": "by the stairs.",
+					"transliteration": "bid-daraj."
+				}
+			],
+			"targetWords": [
+				"Elevator",
+				"Broken (not working)"
+			]
+		},
+		{
+			"arabic": "جوازك لتسجيل الدخول رجاء.",
+			"arabicTashkeel": "جَوازَك لتَسجيل الدُّخول رَجاءً.",
+			"english": "Your passport for check-in, please.",
+			"transliteration": "jawaazak l-tasjeel id-dukhool rajaa2an.",
+			"wordAlignments": [
+				{
+					"arabic": "جوازك",
+					"english": "Your passport",
+					"transliteration": "jawaazak"
+				},
+				{
+					"arabic": "لتسجيل",
+					"english": "for the registration of",
+					"transliteration": "l-tasjeel"
+				},
+				{
+					"arabic": "الدخول",
+					"english": "entry",
+					"transliteration": "id-dukhool"
+				},
+				{
+					"arabic": "رجاء.",
+					"english": "please.",
+					"transliteration": "rajaa2an."
+				}
+			],
+			"targetWords": [
+				"Check-in"
+			]
+		},
+		{
+			"arabic": "المطعم بيا طابق؟",
+			"arabicTashkeel": "المَطعَم بيا طابِق؟",
+			"english": "Which floor is the restaurant on?",
+			"transliteration": "il-mat3am b-ya taabig?",
+			"wordAlignments": [
+				{
+					"arabic": "المطعم",
+					"english": "The restaurant",
+					"transliteration": "il-mat3am"
+				},
+				{
+					"arabic": "بيا",
+					"english": "on which",
+					"transliteration": "b-ya"
+				},
+				{
+					"arabic": "طابق؟",
+					"english": "floor?",
+					"transliteration": "taabig?"
+				}
+			],
+			"targetWords": [
+				"Floor (storey)"
+			]
+		},
+		{
+			"arabic": "موظفين الإستقبال طيبين.",
+			"arabicTashkeel": "مْوَظَّفين الإستِقبال طَيّبين.",
+			"english": "The reception staff are kind.",
+			"transliteration": "mwadhdhafeen il-istigbaal tayyibeen.",
+			"wordAlignments": [
+				{
+					"arabic": "موظفين",
+					"english": "The employees of",
+					"transliteration": "mwadhdhafeen"
+				},
+				{
+					"arabic": "الإستقبال",
+					"english": "the reception are",
+					"transliteration": "il-istigbaal"
+				},
+				{
+					"arabic": "طيبين.",
+					"english": "kind.",
+					"transliteration": "tayyibeen."
+				}
+			],
+			"targetWords": [
+				"Reception"
+			]
+		},
+		{
+			"arabic": "غرفة مفردة تكفيني.",
+			"arabicTashkeel": "غُرفة مُفرَدة تِكفيني.",
+			"english": "A single room is enough for me.",
+			"transliteration": "ghurfa mufrada tikfeeni.",
+			"wordAlignments": [
+				{
+					"arabic": "غرفة",
+					"english": "A room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "مفردة",
+					"english": "single",
+					"transliteration": "mufrada"
+				},
+				{
+					"arabic": "تكفيني.",
+					"english": "is enough for me.",
+					"transliteration": "tikfeeni."
+				}
+			],
+			"targetWords": [
+				"Single room"
+			]
+		},
+		{
+			"arabic": "غرفة دبل لليلتين.",
+			"arabicTashkeel": "غُرفة دَبَل لليلتين.",
+			"english": "A double room for two nights.",
+			"transliteration": "ghurfa dabal l-leelteen.",
+			"wordAlignments": [
+				{
+					"arabic": "غرفة",
+					"english": "A room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "دبل",
+					"english": "double",
+					"transliteration": "dabal"
+				},
+				{
+					"arabic": "لليلتين.",
+					"english": "for two nights.",
+					"transliteration": "l-leelteen."
+				}
+			],
+			"targetWords": [
+				"Double room",
+				"Night (stay)"
+			]
+		},
+		{
+			"arabic": "المفتاح ما يفتح الباب.",
+			"arabicTashkeel": "المِفتاح ما يِفتَح الباب.",
+			"english": "The key doesn't open the door.",
+			"transliteration": "il-miftaa7 ma yifta7 il-baab.",
+			"wordAlignments": [
+				{
+					"arabic": "المفتاح",
+					"english": "The key",
+					"transliteration": "il-miftaa7"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يفتح",
+					"english": "opens",
+					"transliteration": "yifta7"
+				},
+				{
+					"arabic": "الباب.",
+					"english": "the door.",
+					"transliteration": "il-baab."
+				}
+			],
+			"targetWords": [
+				"Key"
+			]
+		},
+		{
+			"arabic": "خمسين ألف دينار بالليلة.",
+			"arabicTashkeel": "خَمسين ألف دينار باللّيلة.",
+			"english": "Fifty thousand dinars a night.",
+			"transliteration": "khamseen alf deenaar bil-leela.",
+			"wordAlignments": [
+				{
+					"arabic": "خمسين",
+					"english": "Fifty",
+					"transliteration": "khamseen"
+				},
+				{
+					"arabic": "ألف",
+					"english": "thousand",
+					"transliteration": "alf"
+				},
+				{
+					"arabic": "دينار",
+					"english": "dinars",
+					"transliteration": "deenaar"
+				},
+				{
+					"arabic": "بالليلة.",
+					"english": "per night.",
+					"transliteration": "bil-leela."
+				}
+			],
+			"targetWords": [
+				"Night (stay)"
+			]
+		},
+		{
+			"arabic": "الفطور مو مشمول.",
+			"arabicTashkeel": "الفُطور مو مَشمول.",
+			"english": "Breakfast isn't included.",
+			"transliteration": "il-futoor moo mashmool.",
+			"wordAlignments": [
+				{
+					"arabic": "الفطور",
+					"english": "The breakfast is",
+					"transliteration": "il-futoor"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مشمول.",
+					"english": "included.",
+					"transliteration": "mashmool."
+				}
+			],
+			"targetWords": [
+				"Breakfast included"
+			]
+		},
+		{
+			"arabic": "ماكو واي فاي بالغرفة.",
+			"arabicTashkeel": "ماكو واي فاي بالغُرفة.",
+			"english": "There's no Wi-Fi in the room.",
+			"transliteration": "maaku waay faay bil-ghurfa.",
+			"wordAlignments": [
+				{
+					"arabic": "ماكو",
+					"english": "There is no",
+					"transliteration": "maaku"
+				},
+				{
+					"arabic": "واي",
+					"english": "Wi",
+					"transliteration": "waay"
+				},
+				{
+					"arabic": "فاي",
+					"english": "Fi",
+					"transliteration": "faay"
+				},
+				{
+					"arabic": "بالغرفة.",
+					"english": "in the room.",
+					"transliteration": "bil-ghurfa."
+				}
+			],
+			"targetWords": [
+				"Wi-Fi"
+			]
+		},
+		{
+			"arabic": "السبلت صوته عالي.",
+			"arabicTashkeel": "السْبِلِت صَوتَه عالي.",
+			"english": "The air conditioner is noisy.",
+			"transliteration": "is-sbilit sawta 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "السبلت",
+					"english": "The split AC",
+					"transliteration": "is-sbilit"
+				},
+				{
+					"arabic": "صوته",
+					"english": "its sound is",
+					"transliteration": "sawta"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "loud.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "إتصل بخدمة الغرف.",
+			"arabicTashkeel": "إتَّصِل بخِدمة الغُرَف.",
+			"english": "Call room service.",
+			"transliteration": "ittasil b-khidmat il-ghuraf.",
+			"wordAlignments": [
+				{
+					"arabic": "إتصل",
+					"english": "Call",
+					"transliteration": "ittasil"
+				},
+				{
+					"arabic": "بخدمة",
+					"english": "the service of",
+					"transliteration": "b-khidmat"
+				},
+				{
+					"arabic": "الغرف.",
+					"english": "the rooms.",
+					"transliteration": "il-ghuraf."
+				}
+			],
+			"targetWords": [
+				"Room service"
+			]
+		},
+		{
+			"arabic": "حلوا شكواي بسرعة.",
+			"arabicTashkeel": "حَلّوا شَكواي بسُرعة.",
+			"english": "They solved my complaint quickly.",
+			"transliteration": "7allaw shakwaay b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "حلوا",
+					"english": "They solved",
+					"transliteration": "7allaw"
+				},
+				{
+					"arabic": "شكواي",
+					"english": "my complaint",
+					"transliteration": "shakwaay"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "quickly.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"Complaint"
+			]
+		},
+		{
+			"arabic": "الضوة عاطلة.",
+			"arabicTashkeel": "الضَّوَّة عاطلة.",
+			"english": "The light is broken.",
+			"transliteration": "idh-dhawwa 3aatla.",
+			"wordAlignments": [
+				{
+					"arabic": "الضوة",
+					"english": "The light is",
+					"transliteration": "idh-dhawwa"
+				},
+				{
+					"arabic": "عاطلة.",
+					"english": "broken.",
+					"transliteration": "3aatla."
+				}
+			],
+			"targetWords": [
+				"Broken (not working)"
+			]
+		},
+		{
+			"arabic": "خاوليين رجاء.",
+			"arabicTashkeel": "خاوليَين رَجاءً.",
+			"english": "Two towels, please.",
+			"transliteration": "khaawliyyeen rajaa2an.",
+			"wordAlignments": [
+				{
+					"arabic": "خاوليين",
+					"english": "Two towels",
+					"transliteration": "khaawliyyeen"
+				},
+				{
+					"arabic": "رجاء.",
+					"english": "please.",
+					"transliteration": "rajaa2an."
+				}
+			],
+			"targetWords": [
+				"Towel"
+			]
+		},
+		{
+			"arabic": "خذ المصعد للطابق الثالث.",
+			"arabicTashkeel": "خُذ المِصعَد للطّابِق الثّالِث.",
+			"english": "Take the elevator to the third floor.",
+			"transliteration": "khudh il-mis3ad lit-taabig ith-thaalith.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "المصعد",
+					"english": "the elevator",
+					"transliteration": "il-mis3ad"
+				},
+				{
+					"arabic": "للطابق",
+					"english": "to the floor",
+					"transliteration": "lit-taabig"
+				},
+				{
+					"arabic": "الثالث.",
+					"english": "third.",
+					"transliteration": "ith-thaalith."
+				}
+			],
+			"targetWords": [
+				"Elevator",
+				"Floor (storey)"
+			]
+		},
+		{
+			"arabic": "تسجيل الدخول سريع.",
+			"arabicTashkeel": "تَسجيل الدُّخول سَريع.",
+			"english": "Check-in is quick.",
+			"transliteration": "tasjeel id-dukhool saree3.",
+			"wordAlignments": [
+				{
+					"arabic": "تسجيل",
+					"english": "Registration of",
+					"transliteration": "tasjeel"
+				},
+				{
+					"arabic": "الدخول",
+					"english": "entry is",
+					"transliteration": "id-dukhool"
+				},
+				{
+					"arabic": "سريع.",
+					"english": "quick.",
+					"transliteration": "saree3."
+				}
+			],
+			"targetWords": [
+				"Check-in"
+			]
+		},
+		{
+			"arabic": "الطابق الأخير بيه منظر النهر.",
+			"arabicTashkeel": "الطّابِق الأخير بيه مَنظَر النَّهَر.",
+			"english": "The top floor has a view of the river.",
+			"transliteration": "it-taabig il-akheer bee mandhar in-nahar.",
+			"wordAlignments": [
+				{
+					"arabic": "الطابق",
+					"english": "The floor",
+					"transliteration": "it-taabig"
+				},
+				{
+					"arabic": "الأخير",
+					"english": "last",
+					"transliteration": "il-akheer"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "منظر",
+					"english": "a view of",
+					"transliteration": "mandhar"
+				},
+				{
+					"arabic": "النهر.",
+					"english": "the river.",
+					"transliteration": "in-nahar."
+				}
+			],
+			"targetWords": [
+				"Floor (storey)"
+			]
+		},
+		{
+			"arabic": "أسأل بالإستقبال.",
+			"arabicTashkeel": "أسأل بالإستِقبال.",
+			"english": "I'll ask at reception.",
+			"transliteration": "as2al bil-istigbaal.",
+			"wordAlignments": [
+				{
+					"arabic": "أسأل",
+					"english": "I'll ask",
+					"transliteration": "as2al"
+				},
+				{
+					"arabic": "بالإستقبال.",
+					"english": "at reception.",
+					"transliteration": "bil-istigbaal."
+				}
+			],
+			"targetWords": [
+				"Reception"
+			]
+		},
+		{
+			"arabic": "الغرفة المفردة أرخص.",
+			"arabicTashkeel": "الغُرفة المُفرَدة أرخَص.",
+			"english": "The single room is cheaper.",
+			"transliteration": "il-ghurfa il-mufrada arkhas.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرفة",
+					"english": "The room",
+					"transliteration": "il-ghurfa"
+				},
+				{
+					"arabic": "المفردة",
+					"english": "single is",
+					"transliteration": "il-mufrada"
+				},
+				{
+					"arabic": "أرخص.",
+					"english": "cheaper.",
+					"transliteration": "arkhas."
+				}
+			],
+			"targetWords": [
+				"Single room"
+			]
+		},
+		{
+			"arabic": "الغرف الدبل مليانة.",
+			"arabicTashkeel": "الغُرَف الدَّبَل مَليانة.",
+			"english": "The double room is full.",
+			"transliteration": "il-ghuraf id-dabal malyaana.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرف",
+					"english": "The rooms",
+					"transliteration": "il-ghuraf"
+				},
+				{
+					"arabic": "الدبل",
+					"english": "double are",
+					"transliteration": "id-dabal"
+				},
+				{
+					"arabic": "مليانة.",
+					"english": "full.",
+					"transliteration": "malyaana."
+				}
+			],
+			"targetWords": [
+				"Double room"
+			]
+		},
+		{
+			"arabic": "كارت المفتاح.",
+			"arabicTashkeel": "كارت المِفتاح.",
+			"english": "The key card.",
+			"transliteration": "kaart il-miftaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "كارت",
+					"english": "The card of",
+					"transliteration": "kaart"
+				},
+				{
+					"arabic": "المفتاح.",
+					"english": "the key.",
+					"transliteration": "il-miftaa7."
+				}
+			],
+			"targetWords": [
+				"Key"
+			]
+		},
+		{
+			"arabic": "آخر ليلة بالفندق.",
+			"arabicTashkeel": "آخِر ليلة بالفِندِق.",
+			"english": "The last night at the hotel.",
+			"transliteration": "aakhir leela bil-findig.",
+			"wordAlignments": [
+				{
+					"arabic": "آخر",
+					"english": "The last",
+					"transliteration": "aakhir"
+				},
+				{
+					"arabic": "ليلة",
+					"english": "night",
+					"transliteration": "leela"
+				},
+				{
+					"arabic": "بالفندق.",
+					"english": "at the hotel.",
+					"transliteration": "bil-findig."
+				}
+			],
+			"targetWords": [
+				"Night (stay)"
+			]
+		},
+		{
+			"arabic": "الفطور مشمول بالسعر؟",
+			"arabicTashkeel": "الفُطور مَشمول بالسِّعِر؟",
+			"english": "Is breakfast included with the price?",
+			"transliteration": "il-futoor mashmool bis-si3ir?",
+			"wordAlignments": [
+				{
+					"arabic": "الفطور",
+					"english": "Is the breakfast",
+					"transliteration": "il-futoor"
+				},
+				{
+					"arabic": "مشمول",
+					"english": "included",
+					"transliteration": "mashmool"
+				},
+				{
+					"arabic": "بالسعر؟",
+					"english": "in the price?",
+					"transliteration": "bis-si3ir?"
+				}
+			],
+			"targetWords": [
+				"Breakfast included"
+			]
+		},
+		{
+			"arabic": "الواي فاي عاطل.",
+			"arabicTashkeel": "الواي فاي عاطِل.",
+			"english": "The Wi-Fi isn't working.",
+			"transliteration": "il-waay faay 3aatil.",
+			"wordAlignments": [
+				{
+					"arabic": "الواي",
+					"english": "The Wi",
+					"transliteration": "il-waay"
+				},
+				{
+					"arabic": "فاي",
+					"english": "Fi",
+					"transliteration": "faay"
+				},
+				{
+					"arabic": "عاطل.",
+					"english": "is broken.",
+					"transliteration": "3aatil."
+				}
+			],
+			"targetWords": [
+				"Wi-Fi",
+				"Broken (not working)"
+			]
+		},
+		{
+			"arabic": "طفي السبلت بالليل.",
+			"arabicTashkeel": "طَفّي السْبِلِت بالليل.",
+			"english": "Turn off the air conditioner at night.",
+			"transliteration": "taffi is-sbilit bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "طفي",
+					"english": "Turn off",
+					"transliteration": "taffi"
+				},
+				{
+					"arabic": "السبلت",
+					"english": "the split AC",
+					"transliteration": "is-sbilit"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "خدمة الغرف لنص الليل.",
+			"arabicTashkeel": "خِدمة الغُرَف لنُص الليل.",
+			"english": "Room service until midnight.",
+			"transliteration": "khidmat il-ghuraf l-nuss il-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "خدمة",
+					"english": "The service of",
+					"transliteration": "khidmat"
+				},
+				{
+					"arabic": "الغرف",
+					"english": "the rooms",
+					"transliteration": "il-ghuraf"
+				},
+				{
+					"arabic": "لنص",
+					"english": "until the middle of",
+					"transliteration": "l-nuss"
+				},
+				{
+					"arabic": "الليل.",
+					"english": "the night.",
+					"transliteration": "il-leel."
+				}
+			],
+			"targetWords": [
+				"Room service"
+			]
+		},
+		{
+			"arabic": "شكوى بسيطة.",
+			"arabicTashkeel": "شَكوى بَسيطة.",
+			"english": "A simple complaint.",
+			"transliteration": "shakwa baseeta.",
+			"wordAlignments": [
+				{
+					"arabic": "شكوى",
+					"english": "A complaint",
+					"transliteration": "shakwa"
+				},
+				{
+					"arabic": "بسيطة.",
+					"english": "simple.",
+					"transliteration": "baseeta."
+				}
+			],
+			"targetWords": [
+				"Complaint"
+			]
+		},
+		{
+			"arabic": "خاولي نظيف.",
+			"arabicTashkeel": "خاولي نْظيف.",
+			"english": "A clean towel.",
+			"transliteration": "khaawli ndheef.",
+			"wordAlignments": [
+				{
+					"arabic": "خاولي",
+					"english": "A towel",
+					"transliteration": "khaawli"
+				},
+				{
+					"arabic": "نظيف.",
+					"english": "clean.",
+					"transliteration": "ndheef."
+				}
+			],
+			"targetWords": [
+				"Towel"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Arriving at the Hotel",
+			"sentences": [
+				{
+					"arabic": "وصلت للفندق المسا ورحت للإستقبال.",
+					"arabicTashkeel": "وصَلِت للفِندِق المَسا ورِحِت للإستِقبال.",
+					"english": "I arrived at the hotel in the evening and went to reception.",
+					"transliteration": "wsalit lil-findig il-masa w-ri7it lil-istigbaal.",
+					"wordAlignments": [
+						{
+							"arabic": "وصلت",
+							"english": "I arrived",
+							"transliteration": "wsalit"
+						},
+						{
+							"arabic": "للفندق",
+							"english": "at the hotel",
+							"transliteration": "lil-findig"
+						},
+						{
+							"arabic": "المسا",
+							"english": "in the evening",
+							"transliteration": "il-masa"
+						},
+						{
+							"arabic": "ورحت",
+							"english": "and went",
+							"transliteration": "w-ri7it"
+						},
+						{
+							"arabic": "للإستقبال.",
+							"english": "to reception.",
+							"transliteration": "lil-istigbaal."
+						}
+					]
+				},
+				{
+					"arabic": "كان عندي حجز لغرفة دبل لثلاث ليالي.",
+					"arabicTashkeel": "كان عِندي حَجِز لغُرفة دَبَل لثْلاث ليالي.",
+					"english": "I had a booking for a double room for three nights.",
+					"transliteration": "chaan 3indi 7ajiz l-ghurfa dabal l-thlath layaali.",
+					"wordAlignments": [
+						{
+							"arabic": "كان",
+							"english": "There was",
+							"transliteration": "chaan"
+						},
+						{
+							"arabic": "عندي",
+							"english": "to me",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "حجز",
+							"english": "a booking",
+							"transliteration": "7ajiz"
+						},
+						{
+							"arabic": "لغرفة",
+							"english": "for a room",
+							"transliteration": "l-ghurfa"
+						},
+						{
+							"arabic": "دبل",
+							"english": "double",
+							"transliteration": "dabal"
+						},
+						{
+							"arabic": "لثلاث",
+							"english": "for three",
+							"transliteration": "l-thlath"
+						},
+						{
+							"arabic": "ليالي.",
+							"english": "nights.",
+							"transliteration": "layaali."
+						}
+					]
+				},
+				{
+					"arabic": "الموظف أخذ جوازي لتسجيل الدخول وإنطاني المفتاح.",
+					"arabicTashkeel": "المْوَظَّف أخَذ جَوازي لتَسجيل الدُّخول وإنطاني المِفتاح.",
+					"english": "The employee took my passport for check-in and gave me the key.",
+					"transliteration": "il-mwadhdhaf akhadh jawaazi l-tasjeel id-dukhool w-intaani il-miftaa7.",
+					"wordAlignments": [
+						{
+							"arabic": "الموظف",
+							"english": "The employee",
+							"transliteration": "il-mwadhdhaf"
+						},
+						{
+							"arabic": "أخذ",
+							"english": "took",
+							"transliteration": "akhadh"
+						},
+						{
+							"arabic": "جوازي",
+							"english": "my passport",
+							"transliteration": "jawaazi"
+						},
+						{
+							"arabic": "لتسجيل",
+							"english": "for the registration of",
+							"transliteration": "l-tasjeel"
+						},
+						{
+							"arabic": "الدخول",
+							"english": "entry",
+							"transliteration": "id-dukhool"
+						},
+						{
+							"arabic": "وإنطاني",
+							"english": "and gave me",
+							"transliteration": "w-intaani"
+						},
+						{
+							"arabic": "المفتاح.",
+							"english": "the key.",
+							"transliteration": "il-miftaa7."
+						}
+					]
+				},
+				{
+					"arabic": "قال: الفطور مشمول، من سبعة لعشرة.",
+					"arabicTashkeel": "قال: الفُطور مَشمول، مِن سَبعة لعَشرة.",
+					"english": "He said: breakfast is included, from seven to ten.",
+					"transliteration": "gaal: il-futoor mashmool, min sab3a l-3ashra.",
+					"wordAlignments": [
+						{
+							"arabic": "قال:",
+							"english": "He said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "الفطور",
+							"english": "the breakfast is",
+							"transliteration": "il-futoor"
+						},
+						{
+							"arabic": "مشمول،",
+							"english": "included,",
+							"transliteration": "mashmool,"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "سبعة",
+							"english": "seven",
+							"transliteration": "sab3a"
+						},
+						{
+							"arabic": "لعشرة.",
+							"english": "to ten.",
+							"transliteration": "l-3ashra."
+						}
+					]
+				},
+				{
+					"arabic": "الغرفة بالطابق الرابع، لعد أخذت المصعد.",
+					"arabicTashkeel": "الغُرفة بالطّابِق الرّابِع، لَعَد أخَذِت المِصعَد.",
+					"english": "The room is on the fourth floor, so I took the elevator.",
+					"transliteration": "il-ghurfa bit-taabig ir-raabi3, la3ad akhadhit il-mis3ad.",
+					"wordAlignments": [
+						{
+							"arabic": "الغرفة",
+							"english": "The room is",
+							"transliteration": "il-ghurfa"
+						},
+						{
+							"arabic": "بالطابق",
+							"english": "on the floor",
+							"transliteration": "bit-taabig"
+						},
+						{
+							"arabic": "الرابع،",
+							"english": "fourth,",
+							"transliteration": "ir-raabi3,"
+						},
+						{
+							"arabic": "لعد",
+							"english": "so",
+							"transliteration": "la3ad"
+						},
+						{
+							"arabic": "أخذت",
+							"english": "I took",
+							"transliteration": "akhadhit"
+						},
+						{
+							"arabic": "المصعد.",
+							"english": "the elevator.",
+							"transliteration": "il-mis3ad."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Small Problem",
+			"sentences": [
+				{
+					"arabic": "بالغرفة السبلت كان عاطل، والجو كان حار كلش.",
+					"arabicTashkeel": "بالغُرفة السْبِلِت كان عاطِل، والجَو كان حار كُلَّش.",
+					"english": "In the room the air conditioner was broken, and it was very hot.",
+					"transliteration": "bil-ghurfa is-sbilit chaan 3aatil, w-ij-jaw chaan 7aarr kullish.",
+					"wordAlignments": [
+						{
+							"arabic": "بالغرفة",
+							"english": "In the room",
+							"transliteration": "bil-ghurfa"
+						},
+						{
+							"arabic": "السبلت",
+							"english": "the split AC",
+							"transliteration": "is-sbilit"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "chaan"
+						},
+						{
+							"arabic": "عاطل،",
+							"english": "broken,",
+							"transliteration": "3aatil,"
+						},
+						{
+							"arabic": "والجو",
+							"english": "and the weather",
+							"transliteration": "w-ij-jaw"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "chaan"
+						},
+						{
+							"arabic": "حار",
+							"english": "hot",
+							"transliteration": "7aarr"
+						},
+						{
+							"arabic": "كلش.",
+							"english": "extremely.",
+							"transliteration": "kullish."
+						}
+					]
+				},
+				{
+					"arabic": "إتصلت بالإستقبال وقدمت شكوى.",
+					"arabicTashkeel": "إتصَلِت بالإستِقبال وقَدَّمِت شَكوى.",
+					"english": "I called reception and made a complaint.",
+					"transliteration": "ittisalit bil-istigbaal w-gaddamit shakwa.",
+					"wordAlignments": [
+						{
+							"arabic": "إتصلت",
+							"english": "I called",
+							"transliteration": "ittisalit"
+						},
+						{
+							"arabic": "بالإستقبال",
+							"english": "reception",
+							"transliteration": "bil-istigbaal"
+						},
+						{
+							"arabic": "وقدمت",
+							"english": "and I made",
+							"transliteration": "w-gaddamit"
+						},
+						{
+							"arabic": "شكوى.",
+							"english": "a complaint.",
+							"transliteration": "shakwa."
+						}
+					]
+				},
+				{
+					"arabic": "بعد عشر دقايق صلحوه وجابوا خاوليات نظيفة.",
+					"arabicTashkeel": "بَعد عَشر دَقايِق صَلّحوه وجابوا خاوليات نْظيفة.",
+					"english": "After ten minutes they fixed it and brought clean towels.",
+					"transliteration": "ba3d 3ashir dagaayig salla7oo w-jaabu khaawliyyaat ndheefa.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "عشر",
+							"english": "ten",
+							"transliteration": "3ashir"
+						},
+						{
+							"arabic": "دقايق",
+							"english": "minutes",
+							"transliteration": "dagaayig"
+						},
+						{
+							"arabic": "صلحوه",
+							"english": "they fixed it",
+							"transliteration": "salla7oo"
+						},
+						{
+							"arabic": "وجابوا",
+							"english": "and brought",
+							"transliteration": "w-jaabu"
+						},
+						{
+							"arabic": "خاوليات",
+							"english": "towels",
+							"transliteration": "khaawliyyaat"
+						},
+						{
+							"arabic": "نظيفة.",
+							"english": "clean.",
+							"transliteration": "ndheefa."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student arrives late at a hotel in Erbil and finds a few problems with the room.",
+		"studentRole": "A hotel guest learning Iraqi Arabic.",
+		"otherRole": "The night receptionist.",
+		"goalEnglish": "Check in, ask about breakfast and the Wi-Fi, then complain politely that the air conditioner is broken and ask for towels.",
+		"targetWords": [
+			"Reception",
+			"Check-in",
+			"Key",
+			"Breakfast included",
+			"Wi-Fi",
+			"Air conditioner",
+			"Complaint",
+			"Towel"
+		]
+	}
+}
