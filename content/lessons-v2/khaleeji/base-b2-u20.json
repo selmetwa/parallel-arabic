@@ -1,0 +1,2256 @@
+{
+	"vocab": [
+		{
+			"arabic": "رائد أعمال",
+			"arabicTashkeel": "رائِد أعمال",
+			"english": "Entrepreneur",
+			"transliteration": "raa2id a3maal",
+			"wordAlignments": [
+				{
+					"arabic": "رائد",
+					"english": "Pioneer of",
+					"transliteration": "raa2id"
+				},
+				{
+					"arabic": "أعمال",
+					"english": "business",
+					"transliteration": "a3maal"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مشروع صغير",
+			"arabicTashkeel": "مَشروع صْغَيِّر",
+			"english": "Small business",
+			"transliteration": "mashroo3 sghayyir",
+			"wordAlignments": [
+				{
+					"arabic": "مشروع",
+					"english": "Project",
+					"transliteration": "mashroo3"
+				},
+				{
+					"arabic": "صغير",
+					"english": "small",
+					"transliteration": "sghayyir"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ربح",
+			"arabicTashkeel": "رِبح",
+			"english": "Profit",
+			"transliteration": "rib7",
+			"wordAlignments": [
+				{
+					"arabic": "ربح",
+					"english": "Profit",
+					"transliteration": "rib7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خسارة",
+			"arabicTashkeel": "خَسارة",
+			"english": "Loss",
+			"transliteration": "khasaara",
+			"wordAlignments": [
+				{
+					"arabic": "خسارة",
+					"english": "Loss",
+					"transliteration": "khasaara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "راس مال",
+			"arabicTashkeel": "راس مال",
+			"english": "Capital",
+			"transliteration": "raas maal",
+			"wordAlignments": [
+				{
+					"arabic": "راس",
+					"english": "Head of",
+					"transliteration": "raas"
+				},
+				{
+					"arabic": "مال",
+					"english": "money",
+					"transliteration": "maal"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "دراسة جدوى",
+			"arabicTashkeel": "دِراسة جَدوى",
+			"english": "Feasibility study",
+			"transliteration": "diraasat jadwa",
+			"wordAlignments": [
+				{
+					"arabic": "دراسة",
+					"english": "Study of",
+					"transliteration": "diraasat"
+				},
+				{
+					"arabic": "جدوى",
+					"english": "feasibility",
+					"transliteration": "jadwa"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "تكاليف",
+			"arabicTashkeel": "تَكاليف",
+			"english": "Costs",
+			"transliteration": "takaaleef",
+			"wordAlignments": [
+				{
+					"arabic": "تكاليف",
+					"english": "Costs",
+					"transliteration": "takaaleef"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "زباين",
+			"arabicTashkeel": "زَباين",
+			"english": "Customers",
+			"transliteration": "zabaayin",
+			"wordAlignments": [
+				{
+					"arabic": "زباين",
+					"english": "Customers",
+					"transliteration": "zabaayin"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "شريك",
+			"arabicTashkeel": "شَريك",
+			"english": "Partner",
+			"transliteration": "shareek",
+			"wordAlignments": [
+				{
+					"arabic": "شريك",
+					"english": "Partner",
+					"transliteration": "shareek"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تسويق",
+			"arabicTashkeel": "تَسويق",
+			"english": "Marketing",
+			"transliteration": "tasweeg",
+			"wordAlignments": [
+				{
+					"arabic": "تسويق",
+					"english": "Marketing",
+					"transliteration": "tasweeg"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "منافسة",
+			"arabicTashkeel": "مُنافَسة",
+			"english": "Competition",
+			"transliteration": "munaafasa",
+			"wordAlignments": [
+				{
+					"arabic": "منافسة",
+					"english": "Competition",
+					"transliteration": "munaafasa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مخاطرة",
+			"arabicTashkeel": "مُخاطَرة",
+			"english": "Risk",
+			"transliteration": "mukhaatara",
+			"wordAlignments": [
+				{
+					"arabic": "مخاطرة",
+					"english": "Risk",
+					"transliteration": "mukhaatara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "إحتياجات",
+			"arabicTashkeel": "إحتِياجات",
+			"english": "Needs (of the market)",
+			"transliteration": "i7tiyaajaat",
+			"wordAlignments": [
+				{
+					"arabic": "إحتياجات",
+					"english": "Needs",
+					"transliteration": "i7tiyaajaat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "متجر إلكتروني",
+			"arabicTashkeel": "مَتجَر إلكتروني",
+			"english": "Online store",
+			"transliteration": "matjar ilektrooni",
+			"wordAlignments": [
+				{
+					"arabic": "متجر",
+					"english": "Store",
+					"transliteration": "matjar"
+				},
+				{
+					"arabic": "إلكتروني",
+					"english": "electronic",
+					"transliteration": "ilektrooni"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "رخصة تجارية",
+			"arabicTashkeel": "رُخصة تِجارية",
+			"english": "Trade licence",
+			"transliteration": "rukhsa tijaariyya",
+			"wordAlignments": [
+				{
+					"arabic": "رخصة",
+					"english": "Licence",
+					"transliteration": "rukhsa"
+				},
+				{
+					"arabic": "تجارية",
+					"english": "commercial",
+					"transliteration": "tijaariyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "هي رائدة أعمال إماراتية شابة.",
+			"arabicTashkeel": "هي رائدة أعمال إماراتية شابّة.",
+			"english": "She is a young Emirati entrepreneur.",
+			"transliteration": "hi raa2idat a3maal imaaraatiyya shaabba.",
+			"wordAlignments": [
+				{
+					"arabic": "هي",
+					"english": "She is",
+					"transliteration": "hi"
+				},
+				{
+					"arabic": "رائدة",
+					"english": "a pioneer of",
+					"transliteration": "raa2idat"
+				},
+				{
+					"arabic": "أعمال",
+					"english": "business",
+					"transliteration": "a3maal"
+				},
+				{
+					"arabic": "إماراتية",
+					"english": "Emirati",
+					"transliteration": "imaaraatiyya"
+				},
+				{
+					"arabic": "شابة.",
+					"english": "young.",
+					"transliteration": "shaabba."
+				}
+			],
+			"targetWords": [
+				"Entrepreneur"
+			]
+		},
+		{
+			"arabic": "أبي أفتح مشروع صغير.",
+			"arabicTashkeel": "أبي أفتَح مَشروع صْغَيِّر.",
+			"english": "I want to open a small business.",
+			"transliteration": "abi afta7 mashroo3 sghayyir.",
+			"wordAlignments": [
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "أفتح",
+					"english": "to open",
+					"transliteration": "afta7"
+				},
+				{
+					"arabic": "مشروع",
+					"english": "a project",
+					"transliteration": "mashroo3"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sghayyir."
+				}
+			],
+			"targetWords": [
+				"Small business"
+			]
+		},
+		{
+			"arabic": "الربح هالشهر كان زين.",
+			"arabicTashkeel": "الرِّبح هالشَّهَر كان زين.",
+			"english": "The profit this month was good.",
+			"transliteration": "ir-rib7 hash-shahar kaan zeen.",
+			"wordAlignments": [
+				{
+					"arabic": "الربح",
+					"english": "The profit",
+					"transliteration": "ir-rib7"
+				},
+				{
+					"arabic": "هالشهر",
+					"english": "this month",
+					"transliteration": "hash-shahar"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "زين.",
+					"english": "good.",
+					"transliteration": "zeen."
+				}
+			],
+			"targetWords": [
+				"Profit"
+			]
+		},
+		{
+			"arabic": "كان عندنا خسارة بالسنة الأولى.",
+			"arabicTashkeel": "كان عِندنا خَسارة بالسَّنة الأولى.",
+			"english": "We had a loss in the first year.",
+			"transliteration": "kaan 3indana khasaara bis-sana il-oola.",
+			"wordAlignments": [
+				{
+					"arabic": "كان",
+					"english": "There was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "عندنا",
+					"english": "with us",
+					"transliteration": "3indana"
+				},
+				{
+					"arabic": "خسارة",
+					"english": "a loss",
+					"transliteration": "khasaara"
+				},
+				{
+					"arabic": "بالسنة",
+					"english": "in the year",
+					"transliteration": "bis-sana"
+				},
+				{
+					"arabic": "الأولى.",
+					"english": "first.",
+					"transliteration": "il-oola."
+				}
+			],
+			"targetWords": [
+				"Loss"
+			]
+		},
+		{
+			"arabic": "كم راس مال تحتاج؟",
+			"arabicTashkeel": "كَم راس مال تحتاج؟",
+			"english": "How much capital do you need?",
+			"transliteration": "cham raas maal t7taaj?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "راس",
+					"english": "head of",
+					"transliteration": "raas"
+				},
+				{
+					"arabic": "مال",
+					"english": "money",
+					"transliteration": "maal"
+				},
+				{
+					"arabic": "تحتاج؟",
+					"english": "do you need?",
+					"transliteration": "t7taaj?"
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "سو دراسة جدوى أول.",
+			"arabicTashkeel": "سَوِّ دِراسة جَدوى أوَّل.",
+			"english": "Do a feasibility study first.",
+			"transliteration": "sawwi diraasat jadwa awwal.",
+			"wordAlignments": [
+				{
+					"arabic": "سو",
+					"english": "Do",
+					"transliteration": "sawwi"
+				},
+				{
+					"arabic": "دراسة",
+					"english": "a study of",
+					"transliteration": "diraasat"
+				},
+				{
+					"arabic": "جدوى",
+					"english": "feasibility",
+					"transliteration": "jadwa"
+				},
+				{
+					"arabic": "أول.",
+					"english": "first.",
+					"transliteration": "awwal."
+				}
+			],
+			"targetWords": [
+				"Feasibility study"
+			]
+		},
+		{
+			"arabic": "التكاليف عالية: الإيجار، المعاشات والرخصة.",
+			"arabicTashkeel": "التَّكاليف عالية: الإيجار، المَعاشات والرُّخصة.",
+			"english": "The costs are high: rent, salaries and the licence.",
+			"transliteration": "it-takaaleef 3aalya: il-eejaar, il-ma3aashaat w-ir-rukhsa.",
+			"wordAlignments": [
+				{
+					"arabic": "التكاليف",
+					"english": "The costs are",
+					"transliteration": "it-takaaleef"
+				},
+				{
+					"arabic": "عالية:",
+					"english": "high:",
+					"transliteration": "3aalya:"
+				},
+				{
+					"arabic": "الإيجار،",
+					"english": "the rent,",
+					"transliteration": "il-eejaar,"
+				},
+				{
+					"arabic": "المعاشات",
+					"english": "the salaries",
+					"transliteration": "il-ma3aashaat"
+				},
+				{
+					"arabic": "والرخصة.",
+					"english": "and the licence.",
+					"transliteration": "w-ir-rukhsa."
+				}
+			],
+			"targetWords": [
+				"Costs"
+			]
+		},
+		{
+			"arabic": "الزباين يحبون منتجنا.",
+			"arabicTashkeel": "الزَّباين يْحِبّون مُنتَجنا.",
+			"english": "The customers love our product.",
+			"transliteration": "iz-zabaayin y7ibboon muntajna.",
+			"wordAlignments": [
+				{
+					"arabic": "الزباين",
+					"english": "The customers",
+					"transliteration": "iz-zabaayin"
+				},
+				{
+					"arabic": "يحبون",
+					"english": "love",
+					"transliteration": "y7ibboon"
+				},
+				{
+					"arabic": "منتجنا.",
+					"english": "our product.",
+					"transliteration": "muntajna."
+				}
+			],
+			"targetWords": [
+				"Customers"
+			]
+		},
+		{
+			"arabic": "شريكي مسؤول عن البيزات.",
+			"arabicTashkeel": "شَريكي مَسؤول عَن البيزات.",
+			"english": "My partner handles the money.",
+			"transliteration": "shareeki mas2ool 3an il-beezaat.",
+			"wordAlignments": [
+				{
+					"arabic": "شريكي",
+					"english": "My partner",
+					"transliteration": "shareeki"
+				},
+				{
+					"arabic": "مسؤول",
+					"english": "is responsible",
+					"transliteration": "mas2ool"
+				},
+				{
+					"arabic": "عن",
+					"english": "for",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "البيزات.",
+					"english": "the money.",
+					"transliteration": "il-beezaat."
+				}
+			],
+			"targetWords": [
+				"Partner"
+			]
+		},
+		{
+			"arabic": "التسويق على الإنستقرام رخيص.",
+			"arabicTashkeel": "التَّسويق على الإنستَقرام رْخيص.",
+			"english": "Marketing on Instagram is cheap.",
+			"transliteration": "it-tasweeg 3ala il-instagraam rkhees.",
+			"wordAlignments": [
+				{
+					"arabic": "التسويق",
+					"english": "Marketing",
+					"transliteration": "it-tasweeg"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الإنستقرام",
+					"english": "Instagram is",
+					"transliteration": "il-instagraam"
+				},
+				{
+					"arabic": "رخيص.",
+					"english": "cheap.",
+					"transliteration": "rkhees."
+				}
+			],
+			"targetWords": [
+				"Marketing"
+			]
+		},
+		{
+			"arabic": "في منافسة وايد بالسوق.",
+			"arabicTashkeel": "في مُنافَسة وايد بالسّوق.",
+			"english": "There is a lot of competition in the market.",
+			"transliteration": "fee munaafasa waayid bis-soog.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "There is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "منافسة",
+					"english": "competition",
+					"transliteration": "munaafasa"
+				},
+				{
+					"arabic": "وايد",
+					"english": "a lot",
+					"transliteration": "waayid"
+				},
+				{
+					"arabic": "بالسوق.",
+					"english": "in the market.",
+					"transliteration": "bis-soog."
+				}
+			],
+			"targetWords": [
+				"Competition"
+			]
+		},
+		{
+			"arabic": "كل مشروع فيه مخاطرة.",
+			"arabicTashkeel": "كِل مَشروع فيه مُخاطَرة.",
+			"english": "Every business has some risk.",
+			"transliteration": "kil mashroo3 fee mukhaatara.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "مشروع",
+					"english": "project",
+					"transliteration": "mashroo3"
+				},
+				{
+					"arabic": "فيه",
+					"english": "has in it",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "مخاطرة.",
+					"english": "risk.",
+					"transliteration": "mukhaatara."
+				}
+			],
+			"targetWords": [
+				"Risk"
+			]
+		},
+		{
+			"arabic": "إدرس إحتياجات السوق.",
+			"arabicTashkeel": "إدرِس إحتِياجات السّوق.",
+			"english": "Study the needs of the market.",
+			"transliteration": "idris i7tiyaajaat is-soog.",
+			"wordAlignments": [
+				{
+					"arabic": "إدرس",
+					"english": "Study",
+					"transliteration": "idris"
+				},
+				{
+					"arabic": "إحتياجات",
+					"english": "the needs of",
+					"transliteration": "i7tiyaajaat"
+				},
+				{
+					"arabic": "السوق.",
+					"english": "the market.",
+					"transliteration": "is-soog."
+				}
+			],
+			"targetWords": [
+				"Needs (of the market)"
+			]
+		},
+		{
+			"arabic": "تبيع عبايات بمتجر إلكتروني.",
+			"arabicTashkeel": "تبيع عَبايات بمَتجَر إلكتروني.",
+			"english": "She sells abayas through an online store.",
+			"transliteration": "tbee3 3abaayaat b-matjar ilektrooni.",
+			"wordAlignments": [
+				{
+					"arabic": "تبيع",
+					"english": "She sells",
+					"transliteration": "tbee3"
+				},
+				{
+					"arabic": "عبايات",
+					"english": "abayas",
+					"transliteration": "3abaayaat"
+				},
+				{
+					"arabic": "بمتجر",
+					"english": "through a store",
+					"transliteration": "b-matjar"
+				},
+				{
+					"arabic": "إلكتروني.",
+					"english": "electronic.",
+					"transliteration": "ilektrooni."
+				}
+			],
+			"targetWords": [
+				"Online store"
+			]
+		},
+		{
+			"arabic": "طلعت رخصة تجارية.",
+			"arabicTashkeel": "طَلَّعت رُخصة تِجارية.",
+			"english": "I got a trade licence.",
+			"transliteration": "talla3t rukhsa tijaariyya.",
+			"wordAlignments": [
+				{
+					"arabic": "طلعت",
+					"english": "I got out",
+					"transliteration": "talla3t"
+				},
+				{
+					"arabic": "رخصة",
+					"english": "a licence",
+					"transliteration": "rukhsa"
+				},
+				{
+					"arabic": "تجارية.",
+					"english": "commercial.",
+					"transliteration": "tijaariyya."
+				}
+			],
+			"targetWords": [
+				"Trade licence"
+			]
+		},
+		{
+			"arabic": "رواد الأعمال يسوون وظايف.",
+			"arabicTashkeel": "رُوّاد الأعمال يْسَوّون وَظايِف.",
+			"english": "Entrepreneurs create jobs.",
+			"transliteration": "ruwwaad il-a3maal ysawwoon wadhaayif.",
+			"wordAlignments": [
+				{
+					"arabic": "رواد",
+					"english": "Pioneers of",
+					"transliteration": "ruwwaad"
+				},
+				{
+					"arabic": "الأعمال",
+					"english": "business",
+					"transliteration": "il-a3maal"
+				},
+				{
+					"arabic": "يسوون",
+					"english": "make",
+					"transliteration": "ysawwoon"
+				},
+				{
+					"arabic": "وظايف.",
+					"english": "jobs.",
+					"transliteration": "wadhaayif."
+				}
+			],
+			"targetWords": [
+				"Entrepreneur"
+			]
+		},
+		{
+			"arabic": "المشروع الصغير يقدر يكبر.",
+			"arabicTashkeel": "المَشروع الصْغَيِّر يِقدَر يِكبَر.",
+			"english": "A small business can grow.",
+			"transliteration": "il-mashroo3 is-sghayyir yigdar yikbar.",
+			"wordAlignments": [
+				{
+					"arabic": "المشروع",
+					"english": "The project",
+					"transliteration": "il-mashroo3"
+				},
+				{
+					"arabic": "الصغير",
+					"english": "small",
+					"transliteration": "is-sghayyir"
+				},
+				{
+					"arabic": "يقدر",
+					"english": "can",
+					"transliteration": "yigdar"
+				},
+				{
+					"arabic": "يكبر.",
+					"english": "grow.",
+					"transliteration": "yikbar."
+				}
+			],
+			"targetWords": [
+				"Small business"
+			]
+		},
+		{
+			"arabic": "الربح والخسارة.",
+			"arabicTashkeel": "الرِّبح والخَسارة.",
+			"english": "Profit and loss.",
+			"transliteration": "ir-rib7 w-il-khasaara.",
+			"wordAlignments": [
+				{
+					"arabic": "الربح",
+					"english": "Profit",
+					"transliteration": "ir-rib7"
+				},
+				{
+					"arabic": "والخسارة.",
+					"english": "and loss.",
+					"transliteration": "w-il-khasaara."
+				}
+			],
+			"targetWords": [
+				"Profit",
+				"Loss"
+			]
+		},
+		{
+			"arabic": "بدا براس مال صغير.",
+			"arabicTashkeel": "بَدا براس مال صْغَيِّر.",
+			"english": "He started with little capital.",
+			"transliteration": "bada b-raas maal sghayyir.",
+			"wordAlignments": [
+				{
+					"arabic": "بدا",
+					"english": "He started",
+					"transliteration": "bada"
+				},
+				{
+					"arabic": "براس",
+					"english": "with a head of",
+					"transliteration": "b-raas"
+				},
+				{
+					"arabic": "مال",
+					"english": "money",
+					"transliteration": "maal"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sghayyir."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "دراسة الجدوى كانت إيجابية.",
+			"arabicTashkeel": "دِراسة الجَدوى كانَت إيجابية.",
+			"english": "The feasibility study was positive.",
+			"transliteration": "diraasat il-jadwa kaanat eejaabiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "دراسة",
+					"english": "The study of",
+					"transliteration": "diraasat"
+				},
+				{
+					"arabic": "الجدوى",
+					"english": "feasibility",
+					"transliteration": "il-jadwa"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "إيجابية.",
+					"english": "positive.",
+					"transliteration": "eejaabiyya."
+				}
+			],
+			"targetWords": [
+				"Feasibility study"
+			]
+		},
+		{
+			"arabic": "قلل التكاليف.",
+			"arabicTashkeel": "قَلِّل التَّكاليف.",
+			"english": "Reduce the costs.",
+			"transliteration": "gallil it-takaaleef.",
+			"wordAlignments": [
+				{
+					"arabic": "قلل",
+					"english": "Reduce",
+					"transliteration": "gallil"
+				},
+				{
+					"arabic": "التكاليف.",
+					"english": "the costs.",
+					"transliteration": "it-takaaleef."
+				}
+			],
+			"targetWords": [
+				"Costs"
+			]
+		},
+		{
+			"arabic": "رضا الزباين أهم شي.",
+			"arabicTashkeel": "رِضا الزَّباين أهَم شي.",
+			"english": "Customer satisfaction is the most important thing.",
+			"transliteration": "ridha iz-zabaayin aham shay.",
+			"wordAlignments": [
+				{
+					"arabic": "رضا",
+					"english": "The satisfaction of",
+					"transliteration": "ridha"
+				},
+				{
+					"arabic": "الزباين",
+					"english": "the customers is",
+					"transliteration": "iz-zabaayin"
+				},
+				{
+					"arabic": "أهم",
+					"english": "the most important",
+					"transliteration": "aham"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shay."
+				}
+			],
+			"targetWords": [
+				"Customers"
+			]
+		},
+		{
+			"arabic": "الشريك الزين مثل الذهب.",
+			"arabicTashkeel": "الشَّريك الزين مِثل الذَّهَب.",
+			"english": "A good partner is like gold.",
+			"transliteration": "ish-shareek iz-zeen mithil idh-dhahab.",
+			"wordAlignments": [
+				{
+					"arabic": "الشريك",
+					"english": "The partner",
+					"transliteration": "ish-shareek"
+				},
+				{
+					"arabic": "الزين",
+					"english": "good is",
+					"transliteration": "iz-zeen"
+				},
+				{
+					"arabic": "مثل",
+					"english": "like",
+					"transliteration": "mithil"
+				},
+				{
+					"arabic": "الذهب.",
+					"english": "gold.",
+					"transliteration": "idh-dhahab."
+				}
+			],
+			"targetWords": [
+				"Partner"
+			]
+		},
+		{
+			"arabic": "التسويق يبي إبداع.",
+			"arabicTashkeel": "التَّسويق يَبي إبداع.",
+			"english": "Marketing needs creativity.",
+			"transliteration": "it-tasweeg yabi ibdaa3.",
+			"wordAlignments": [
+				{
+					"arabic": "التسويق",
+					"english": "Marketing",
+					"transliteration": "it-tasweeg"
+				},
+				{
+					"arabic": "يبي",
+					"english": "needs",
+					"transliteration": "yabi"
+				},
+				{
+					"arabic": "إبداع.",
+					"english": "creativity.",
+					"transliteration": "ibdaa3."
+				}
+			],
+			"targetWords": [
+				"Marketing"
+			]
+		},
+		{
+			"arabic": "المنافسة تخليك أحسن.",
+			"arabicTashkeel": "المُنافَسة تْخَلّيك أحسَن.",
+			"english": "Competition makes you better.",
+			"transliteration": "il-munaafasa tkhalleek a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "المنافسة",
+					"english": "Competition",
+					"transliteration": "il-munaafasa"
+				},
+				{
+					"arabic": "تخليك",
+					"english": "makes you",
+					"transliteration": "tkhalleek"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"Competition"
+			]
+		},
+		{
+			"arabic": "إحسب المخاطرة.",
+			"arabicTashkeel": "إحسِب المُخاطَرة.",
+			"english": "Calculate the risk.",
+			"transliteration": "i7sib il-mukhaatara.",
+			"wordAlignments": [
+				{
+					"arabic": "إحسب",
+					"english": "Calculate",
+					"transliteration": "i7sib"
+				},
+				{
+					"arabic": "المخاطرة.",
+					"english": "the risk.",
+					"transliteration": "il-mukhaatara."
+				}
+			],
+			"targetWords": [
+				"Risk"
+			]
+		},
+		{
+			"arabic": "شو إحتياجات الشباب؟",
+			"arabicTashkeel": "شو إحتِياجات الشَّباب؟",
+			"english": "What are the needs of young people?",
+			"transliteration": "shu i7tiyaajaat ish-shabaab?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What are",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "إحتياجات",
+					"english": "the needs of",
+					"transliteration": "i7tiyaajaat"
+				},
+				{
+					"arabic": "الشباب؟",
+					"english": "young people?",
+					"transliteration": "ish-shabaab?"
+				}
+			],
+			"targetWords": [
+				"Needs (of the market)"
+			]
+		},
+		{
+			"arabic": "متجر إلكتروني حق الحلاوة الإماراتية.",
+			"arabicTashkeel": "مَتجَر إلكتروني حَق الحَلاوة الإماراتية.",
+			"english": "An online store for Emirati sweets.",
+			"transliteration": "matjar ilektrooni 7agg il-7alaawa il-imaaraatiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "متجر",
+					"english": "A store",
+					"transliteration": "matjar"
+				},
+				{
+					"arabic": "إلكتروني",
+					"english": "electronic",
+					"transliteration": "ilektrooni"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الحلاوة",
+					"english": "sweets",
+					"transliteration": "il-7alaawa"
+				},
+				{
+					"arabic": "الإماراتية.",
+					"english": "Emirati.",
+					"transliteration": "il-imaaraatiyya."
+				}
+			],
+			"targetWords": [
+				"Online store"
+			]
+		},
+		{
+			"arabic": "الرخصة التجارية خذت أسبوع.",
+			"arabicTashkeel": "الرُّخصة التِّجارية خَذَت أسبوع.",
+			"english": "The trade licence took a week.",
+			"transliteration": "ir-rukhsa it-tijaariyya khadhat usboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "الرخصة",
+					"english": "The licence",
+					"transliteration": "ir-rukhsa"
+				},
+				{
+					"arabic": "التجارية",
+					"english": "commercial",
+					"transliteration": "it-tijaariyya"
+				},
+				{
+					"arabic": "خذت",
+					"english": "took",
+					"transliteration": "khadhat"
+				},
+				{
+					"arabic": "أسبوع.",
+					"english": "a week.",
+					"transliteration": "usboo3."
+				}
+			],
+			"targetWords": [
+				"Trade licence"
+			]
+		},
+		{
+			"arabic": "رائد أعمال ناجح.",
+			"arabicTashkeel": "رائِد أعمال ناجِح.",
+			"english": "A successful entrepreneur.",
+			"transliteration": "raa2id a3maal naaji7.",
+			"wordAlignments": [
+				{
+					"arabic": "رائد",
+					"english": "A pioneer of",
+					"transliteration": "raa2id"
+				},
+				{
+					"arabic": "أعمال",
+					"english": "business",
+					"transliteration": "a3maal"
+				},
+				{
+					"arabic": "ناجح.",
+					"english": "successful.",
+					"transliteration": "naaji7."
+				}
+			],
+			"targetWords": [
+				"Entrepreneur"
+			]
+		},
+		{
+			"arabic": "مشروعي الصغير كوفي كرك.",
+			"arabicTashkeel": "مَشروعي الصْغَيِّر كوفي كَرَك.",
+			"english": "My small business is a karak café.",
+			"transliteration": "mashroo3i is-sghayyir koofi karak.",
+			"wordAlignments": [
+				{
+					"arabic": "مشروعي",
+					"english": "My project",
+					"transliteration": "mashroo3i"
+				},
+				{
+					"arabic": "الصغير",
+					"english": "small is",
+					"transliteration": "is-sghayyir"
+				},
+				{
+					"arabic": "كوفي",
+					"english": "a café of",
+					"transliteration": "koofi"
+				},
+				{
+					"arabic": "كرك.",
+					"english": "karak.",
+					"transliteration": "karak."
+				}
+			],
+			"targetWords": [
+				"Small business"
+			]
+		},
+		{
+			"arabic": "ربح بعد سنة.",
+			"arabicTashkeel": "رِبح بَعد سَنة.",
+			"english": "Profit after a year.",
+			"transliteration": "rib7 ba3d sana.",
+			"wordAlignments": [
+				{
+					"arabic": "ربح",
+					"english": "Profit",
+					"transliteration": "rib7"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "a year.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Profit"
+			]
+		},
+		{
+			"arabic": "خسارة كبيرة.",
+			"arabicTashkeel": "خَسارة كْبيرة.",
+			"english": "A big loss.",
+			"transliteration": "khasaara chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "خسارة",
+					"english": "A loss",
+					"transliteration": "khasaara"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Loss"
+			]
+		},
+		{
+			"arabic": "راس مال من الأهل.",
+			"arabicTashkeel": "راس مال مِن الأهَل.",
+			"english": "Capital from family.",
+			"transliteration": "raas maal min il-ahal.",
+			"wordAlignments": [
+				{
+					"arabic": "راس",
+					"english": "Head of",
+					"transliteration": "raas"
+				},
+				{
+					"arabic": "مال",
+					"english": "money",
+					"transliteration": "maal"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الأهل.",
+					"english": "the family.",
+					"transliteration": "il-ahal."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "بدون دراسة جدوى، المشروع مخاطرة.",
+			"arabicTashkeel": "بدون دِراسة جَدوى، المَشروع مُخاطَرة.",
+			"english": "Without a feasibility study, it's a gamble.",
+			"transliteration": "bidoon diraasat jadwa, il-mashroo3 mukhaatara.",
+			"wordAlignments": [
+				{
+					"arabic": "بدون",
+					"english": "Without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "دراسة",
+					"english": "a study of",
+					"transliteration": "diraasat"
+				},
+				{
+					"arabic": "جدوى،",
+					"english": "feasibility,",
+					"transliteration": "jadwa,"
+				},
+				{
+					"arabic": "المشروع",
+					"english": "the project is",
+					"transliteration": "il-mashroo3"
+				},
+				{
+					"arabic": "مخاطرة.",
+					"english": "a risk.",
+					"transliteration": "mukhaatara."
+				}
+			],
+			"targetWords": [
+				"Feasibility study",
+				"Risk"
+			]
+		},
+		{
+			"arabic": "تكاليف ثابتة.",
+			"arabicTashkeel": "تَكاليف ثابتة.",
+			"english": "Fixed costs.",
+			"transliteration": "takaaleef thaabta.",
+			"wordAlignments": [
+				{
+					"arabic": "تكاليف",
+					"english": "Costs",
+					"transliteration": "takaaleef"
+				},
+				{
+					"arabic": "ثابتة.",
+					"english": "fixed.",
+					"transliteration": "thaabta."
+				}
+			],
+			"targetWords": [
+				"Costs"
+			]
+		},
+		{
+			"arabic": "زباين جدد كل يوم.",
+			"arabicTashkeel": "زَباين جُدُد كِل يوم.",
+			"english": "New customers every day.",
+			"transliteration": "zabaayin judud kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "زباين",
+					"english": "Customers",
+					"transliteration": "zabaayin"
+				},
+				{
+					"arabic": "جدد",
+					"english": "new",
+					"transliteration": "judud"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"Customers"
+			]
+		},
+		{
+			"arabic": "أدور شريك.",
+			"arabicTashkeel": "أدَوِّر شَريك.",
+			"english": "I'm looking for a partner.",
+			"transliteration": "adawwir shareek.",
+			"wordAlignments": [
+				{
+					"arabic": "أدور",
+					"english": "I'm looking for",
+					"transliteration": "adawwir"
+				},
+				{
+					"arabic": "شريك.",
+					"english": "a partner.",
+					"transliteration": "shareek."
+				}
+			],
+			"targetWords": [
+				"Partner"
+			]
+		},
+		{
+			"arabic": "خطة تسويق.",
+			"arabicTashkeel": "خُطّة تَسويق.",
+			"english": "Marketing plan.",
+			"transliteration": "khuttat tasweeg.",
+			"wordAlignments": [
+				{
+					"arabic": "خطة",
+					"english": "A plan of",
+					"transliteration": "khuttat"
+				},
+				{
+					"arabic": "تسويق.",
+					"english": "marketing.",
+					"transliteration": "tasweeg."
+				}
+			],
+			"targetWords": [
+				"Marketing"
+			]
+		},
+		{
+			"arabic": "منافسة قوية.",
+			"arabicTashkeel": "مُنافَسة قَوية.",
+			"english": "Strong competition.",
+			"transliteration": "munaafasa gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "منافسة",
+					"english": "Competition",
+					"transliteration": "munaafasa"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Competition"
+			]
+		},
+		{
+			"arabic": "بدون مخاطرة، ما في ربح.",
+			"arabicTashkeel": "بدون مُخاطَرة، ما في رِبح.",
+			"english": "No risk, no profit.",
+			"transliteration": "bidoon mukhaatara, ma fee rib7.",
+			"wordAlignments": [
+				{
+					"arabic": "بدون",
+					"english": "Without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "مخاطرة،",
+					"english": "risk,",
+					"transliteration": "mukhaatara,"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "ربح.",
+					"english": "profit.",
+					"transliteration": "rib7."
+				}
+			],
+			"targetWords": [
+				"Risk",
+				"Profit"
+			]
+		},
+		{
+			"arabic": "لب إحتياجات الزباين.",
+			"arabicTashkeel": "لَبِّ إحتِياجات الزَّباين.",
+			"english": "Meet the needs of customers.",
+			"transliteration": "labbi i7tiyaajaat iz-zabaayin.",
+			"wordAlignments": [
+				{
+					"arabic": "لب",
+					"english": "Meet",
+					"transliteration": "labbi"
+				},
+				{
+					"arabic": "إحتياجات",
+					"english": "the needs of",
+					"transliteration": "i7tiyaajaat"
+				},
+				{
+					"arabic": "الزباين.",
+					"english": "the customers.",
+					"transliteration": "iz-zabaayin."
+				}
+			],
+			"targetWords": [
+				"Needs (of the market)",
+				"Customers"
+			]
+		},
+		{
+			"arabic": "المتاجر الإلكترونية قاعدة تكبر بالخليج.",
+			"arabicTashkeel": "المَتاجِر الإلكترونية قاعدة تِكبَر بالخَليج.",
+			"english": "Online stores are growing in the Gulf.",
+			"transliteration": "il-mataajir il-ilektrooniyya gaa3da tikbar bil-khaleej.",
+			"wordAlignments": [
+				{
+					"arabic": "المتاجر",
+					"english": "The stores",
+					"transliteration": "il-mataajir"
+				},
+				{
+					"arabic": "الإلكترونية",
+					"english": "electronic",
+					"transliteration": "il-ilektrooniyya"
+				},
+				{
+					"arabic": "قاعدة",
+					"english": "are in the middle of",
+					"transliteration": "gaa3da"
+				},
+				{
+					"arabic": "تكبر",
+					"english": "growing",
+					"transliteration": "tikbar"
+				},
+				{
+					"arabic": "بالخليج.",
+					"english": "in the Gulf.",
+					"transliteration": "bil-khaleej."
+				}
+			],
+			"targetWords": [
+				"Online store"
+			]
+		},
+		{
+			"arabic": "جدد الرخصة كل سنة.",
+			"arabicTashkeel": "جَدِّد الرُّخصة كِل سَنة.",
+			"english": "Renew the licence every year.",
+			"transliteration": "jaddid ir-rukhsa kil sana.",
+			"wordAlignments": [
+				{
+					"arabic": "جدد",
+					"english": "Renew",
+					"transliteration": "jaddid"
+				},
+				{
+					"arabic": "الرخصة",
+					"english": "the licence",
+					"transliteration": "ir-rukhsa"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "year.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Trade licence"
+			]
+		},
+		{
+			"arabic": "رائدات أعمال بدبي.",
+			"arabicTashkeel": "رائدات أعمال بدُبَي.",
+			"english": "Women entrepreneurs in Dubai.",
+			"transliteration": "raa2idaat a3maal b-dubay.",
+			"wordAlignments": [
+				{
+					"arabic": "رائدات",
+					"english": "Pioneers of",
+					"transliteration": "raa2idaat"
+				},
+				{
+					"arabic": "أعمال",
+					"english": "business",
+					"transliteration": "a3maal"
+				},
+				{
+					"arabic": "بدبي.",
+					"english": "in Dubai.",
+					"transliteration": "b-dubay."
+				}
+			],
+			"targetWords": [
+				"Entrepreneur"
+			]
+		},
+		{
+			"arabic": "مشروع صغير عايلي.",
+			"arabicTashkeel": "مَشروع صْغَيِّر عايلي.",
+			"english": "A family small business.",
+			"transliteration": "mashroo3 sghayyir 3aayli.",
+			"wordAlignments": [
+				{
+					"arabic": "مشروع",
+					"english": "A project",
+					"transliteration": "mashroo3"
+				},
+				{
+					"arabic": "صغير",
+					"english": "small",
+					"transliteration": "sghayyir"
+				},
+				{
+					"arabic": "عايلي.",
+					"english": "of family.",
+					"transliteration": "3aayli."
+				}
+			],
+			"targetWords": [
+				"Small business"
+			]
+		},
+		{
+			"arabic": "الربح الصافي.",
+			"arabicTashkeel": "الرِّبح الصّافي.",
+			"english": "Net profit.",
+			"transliteration": "ir-rib7 is-saafi.",
+			"wordAlignments": [
+				{
+					"arabic": "الربح",
+					"english": "The profit",
+					"transliteration": "ir-rib7"
+				},
+				{
+					"arabic": "الصافي.",
+					"english": "net.",
+					"transliteration": "is-saafi."
+				}
+			],
+			"targetWords": [
+				"Profit"
+			]
+		},
+		{
+			"arabic": "تعلم من الخسارة.",
+			"arabicTashkeel": "تعَلَّم مِن الخَسارة.",
+			"english": "Learn from the loss.",
+			"transliteration": "t3allam min il-khasaara.",
+			"wordAlignments": [
+				{
+					"arabic": "تعلم",
+					"english": "Learn",
+					"transliteration": "t3allam"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الخسارة.",
+					"english": "the loss.",
+					"transliteration": "il-khasaara."
+				}
+			],
+			"targetWords": [
+				"Loss"
+			]
+		},
+		{
+			"arabic": "المستثمرين يجيبون راس المال.",
+			"arabicTashkeel": "المُستَثمِرين يْجيبون راس المال.",
+			"english": "Investors bring capital.",
+			"transliteration": "il-mustathmireen yjeeboon raas il-maal.",
+			"wordAlignments": [
+				{
+					"arabic": "المستثمرين",
+					"english": "The investors",
+					"transliteration": "il-mustathmireen"
+				},
+				{
+					"arabic": "يجيبون",
+					"english": "bring",
+					"transliteration": "yjeeboon"
+				},
+				{
+					"arabic": "راس",
+					"english": "head of",
+					"transliteration": "raas"
+				},
+				{
+					"arabic": "المال.",
+					"english": "the money.",
+					"transliteration": "il-maal."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "دراسة جدوى مفصلة.",
+			"arabicTashkeel": "دِراسة جَدوى مُفَصَّلة.",
+			"english": "A detailed feasibility study.",
+			"transliteration": "diraasat jadwa mufassala.",
+			"wordAlignments": [
+				{
+					"arabic": "دراسة",
+					"english": "A study of",
+					"transliteration": "diraasat"
+				},
+				{
+					"arabic": "جدوى",
+					"english": "feasibility",
+					"transliteration": "jadwa"
+				},
+				{
+					"arabic": "مفصلة.",
+					"english": "detailed.",
+					"transliteration": "mufassala."
+				}
+			],
+			"targetWords": [
+				"Feasibility study"
+			]
+		},
+		{
+			"arabic": "التكاليف والأرباح.",
+			"arabicTashkeel": "التَّكاليف والأرباح.",
+			"english": "Costs and profits.",
+			"transliteration": "it-takaaleef w-il-arbaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "التكاليف",
+					"english": "The costs",
+					"transliteration": "it-takaaleef"
+				},
+				{
+					"arabic": "والأرباح.",
+					"english": "and the profits.",
+					"transliteration": "w-il-arbaa7."
+				}
+			],
+			"targetWords": [
+				"Costs",
+				"Profit"
+			]
+		},
+		{
+			"arabic": "زباين أوفيا.",
+			"arabicTashkeel": "زَباين أوفِيا.",
+			"english": "Loyal customers.",
+			"transliteration": "zabaayin awfiya.",
+			"wordAlignments": [
+				{
+					"arabic": "زباين",
+					"english": "Customers",
+					"transliteration": "zabaayin"
+				},
+				{
+					"arabic": "أوفيا.",
+					"english": "loyal.",
+					"transliteration": "awfiya."
+				}
+			],
+			"targetWords": [
+				"Customers"
+			]
+		},
+		{
+			"arabic": "شريك أمين.",
+			"arabicTashkeel": "شَريك أمين.",
+			"english": "A trustworthy partner.",
+			"transliteration": "shareek ameen.",
+			"wordAlignments": [
+				{
+					"arabic": "شريك",
+					"english": "A partner",
+					"transliteration": "shareek"
+				},
+				{
+					"arabic": "أمين.",
+					"english": "trustworthy.",
+					"transliteration": "ameen."
+				}
+			],
+			"targetWords": [
+				"Partner"
+			]
+		},
+		{
+			"arabic": "التسويق الرقمي.",
+			"arabicTashkeel": "التَّسويق الرَّقمي.",
+			"english": "Digital marketing.",
+			"transliteration": "it-tasweeg ir-ragmi.",
+			"wordAlignments": [
+				{
+					"arabic": "التسويق",
+					"english": "Marketing",
+					"transliteration": "it-tasweeg"
+				},
+				{
+					"arabic": "الرقمي.",
+					"english": "digital.",
+					"transliteration": "ir-ragmi."
+				}
+			],
+			"targetWords": [
+				"Marketing"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "From an Idea to a Business",
+			"sentences": [
+				{
+					"arabic": "مريم رائدة أعمال إماراتية شابة من الشارقة.",
+					"arabicTashkeel": "مَريَم رائدة أعمال إماراتية شابّة مِن الشّارقة.",
+					"english": "Mariam is a young Emirati entrepreneur from Sharjah.",
+					"transliteration": "maryam raa2idat a3maal imaaraatiyya shaabba min ish-shaariga.",
+					"wordAlignments": [
+						{
+							"arabic": "مريم",
+							"english": "Mariam is",
+							"transliteration": "maryam"
+						},
+						{
+							"arabic": "رائدة",
+							"english": "a pioneer of",
+							"transliteration": "raa2idat"
+						},
+						{
+							"arabic": "أعمال",
+							"english": "business",
+							"transliteration": "a3maal"
+						},
+						{
+							"arabic": "إماراتية",
+							"english": "Emirati",
+							"transliteration": "imaaraatiyya"
+						},
+						{
+							"arabic": "شابة",
+							"english": "young",
+							"transliteration": "shaabba"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الشارقة.",
+							"english": "Sharjah.",
+							"transliteration": "ish-shaariga."
+						}
+					]
+				},
+				{
+					"arabic": "شافت إن السوق يحتاج حلاوة إماراتية صحية، فسوت دراسة جدوى.",
+					"arabicTashkeel": "شافَت إنَّ السّوق يِحتاج حَلاوة إماراتية صِحّية، فسَوَّت دِراسة جَدوى.",
+					"english": "She saw that the market needed healthy Emirati sweets, so she did a feasibility study.",
+					"transliteration": "shaafat inna is-soog yi7taaj 7alaawa imaaraatiyya si77iyya, f-sawwat diraasat jadwa.",
+					"wordAlignments": [
+						{
+							"arabic": "شافت",
+							"english": "She saw",
+							"transliteration": "shaafat"
+						},
+						{
+							"arabic": "إن",
+							"english": "that",
+							"transliteration": "inna"
+						},
+						{
+							"arabic": "السوق",
+							"english": "the market",
+							"transliteration": "is-soog"
+						},
+						{
+							"arabic": "يحتاج",
+							"english": "needs",
+							"transliteration": "yi7taaj"
+						},
+						{
+							"arabic": "حلاوة",
+							"english": "sweets",
+							"transliteration": "7alaawa"
+						},
+						{
+							"arabic": "إماراتية",
+							"english": "Emirati",
+							"transliteration": "imaaraatiyya"
+						},
+						{
+							"arabic": "صحية،",
+							"english": "healthy,",
+							"transliteration": "si77iyya,"
+						},
+						{
+							"arabic": "فسوت",
+							"english": "so she did",
+							"transliteration": "f-sawwat"
+						},
+						{
+							"arabic": "دراسة",
+							"english": "a study of",
+							"transliteration": "diraasat"
+						},
+						{
+							"arabic": "جدوى.",
+							"english": "feasibility.",
+							"transliteration": "jadwa."
+						}
+					]
+				},
+				{
+					"arabic": "طلعت رخصة تجارية وبدت مشروع صغير بمتجر إلكتروني.",
+					"arabicTashkeel": "طَلّعَت رُخصة تِجارية وبدَت مَشروع صْغَيِّر بمَتجَر إلكتروني.",
+					"english": "She got a trade licence and started a small business with an online store.",
+					"transliteration": "talla3at rukhsa tijaariyya w-badat mashroo3 sghayyir b-matjar ilektrooni.",
+					"wordAlignments": [
+						{
+							"arabic": "طلعت",
+							"english": "She got out",
+							"transliteration": "talla3at"
+						},
+						{
+							"arabic": "رخصة",
+							"english": "a licence",
+							"transliteration": "rukhsa"
+						},
+						{
+							"arabic": "تجارية",
+							"english": "commercial",
+							"transliteration": "tijaariyya"
+						},
+						{
+							"arabic": "وبدت",
+							"english": "and started",
+							"transliteration": "w-badat"
+						},
+						{
+							"arabic": "مشروع",
+							"english": "a project",
+							"transliteration": "mashroo3"
+						},
+						{
+							"arabic": "صغير",
+							"english": "small",
+							"transliteration": "sghayyir"
+						},
+						{
+							"arabic": "بمتجر",
+							"english": "with a store",
+							"transliteration": "b-matjar"
+						},
+						{
+							"arabic": "إلكتروني.",
+							"english": "electronic.",
+							"transliteration": "ilektrooni."
+						}
+					]
+				},
+				{
+					"arabic": "بالسنة الأولى كان في خسارة، عشان التكاليف كانت عالية والمنافسة قوية.",
+					"arabicTashkeel": "بالسَّنة الأولى كان في خَسارة، عَشان التَّكاليف كانَت عالية والمُنافَسة قَوية.",
+					"english": "In the first year there was a loss, because the costs were high and the competition was strong.",
+					"transliteration": "bis-sana il-oola kaan fee khasaara, 3ashaan it-takaaleef kaanat 3aalya w-il-munaafasa gawiyya.",
+					"wordAlignments": [
+						{
+							"arabic": "بالسنة",
+							"english": "In the year",
+							"transliteration": "bis-sana"
+						},
+						{
+							"arabic": "الأولى",
+							"english": "first",
+							"transliteration": "il-oola"
+						},
+						{
+							"arabic": "كان",
+							"english": "there was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "في",
+							"english": "in it",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "خسارة،",
+							"english": "a loss,",
+							"transliteration": "khasaara,"
+						},
+						{
+							"arabic": "عشان",
+							"english": "because",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "التكاليف",
+							"english": "the costs",
+							"transliteration": "it-takaaleef"
+						},
+						{
+							"arabic": "كانت",
+							"english": "were",
+							"transliteration": "kaanat"
+						},
+						{
+							"arabic": "عالية",
+							"english": "high",
+							"transliteration": "3aalya"
+						},
+						{
+							"arabic": "والمنافسة",
+							"english": "and the competition",
+							"transliteration": "w-il-munaafasa"
+						},
+						{
+							"arabic": "قوية.",
+							"english": "strong.",
+							"transliteration": "gawiyya."
+						}
+					]
+				},
+				{
+					"arabic": "بس حسنت التسويق على الإنستقرام، والزباين زادوا.",
+					"arabicTashkeel": "بَس حَسَّنَت التَّسويق على الإنستَقرام، والزَّباين زادوا.",
+					"english": "But she improved her marketing on Instagram, and the customers increased.",
+					"transliteration": "bas 7assanat it-tasweeg 3ala il-instagraam, w-iz-zabaayin zaadu.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "حسنت",
+							"english": "she improved",
+							"transliteration": "7assanat"
+						},
+						{
+							"arabic": "التسويق",
+							"english": "the marketing",
+							"transliteration": "it-tasweeg"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الإنستقرام،",
+							"english": "Instagram,",
+							"transliteration": "il-instagraam,"
+						},
+						{
+							"arabic": "والزباين",
+							"english": "and the customers",
+							"transliteration": "w-iz-zabaayin"
+						},
+						{
+							"arabic": "زادوا.",
+							"english": "increased.",
+							"transliteration": "zaadu."
+						}
+					]
+				},
+				{
+					"arabic": "الحين، بعد ثلاث سنين، عندها ربح زين وشريك وخمس موظفين.",
+					"arabicTashkeel": "الحين، بَعد ثَلاث سِنين، عِندها رِبح زين وشَريك وخَمس مْوَظَّفين.",
+					"english": "Now, after three years, she makes a good profit and has a partner and five employees.",
+					"transliteration": "il-7een, ba3d thalaath sneen, 3indaha rib7 zeen w-shareek w-khams mwadhdhafeen.",
+					"wordAlignments": [
+						{
+							"arabic": "الحين،",
+							"english": "Now,",
+							"transliteration": "il-7een,"
+						},
+						{
+							"arabic": "بعد",
+							"english": "after",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "ثلاث",
+							"english": "three",
+							"transliteration": "thalaath"
+						},
+						{
+							"arabic": "سنين،",
+							"english": "years,",
+							"transliteration": "sneen,"
+						},
+						{
+							"arabic": "عندها",
+							"english": "she has",
+							"transliteration": "3indaha"
+						},
+						{
+							"arabic": "ربح",
+							"english": "a profit",
+							"transliteration": "rib7"
+						},
+						{
+							"arabic": "زين",
+							"english": "good",
+							"transliteration": "zeen"
+						},
+						{
+							"arabic": "وشريك",
+							"english": "and a partner",
+							"transliteration": "w-shareek"
+						},
+						{
+							"arabic": "وخمس",
+							"english": "and five",
+							"transliteration": "w-khams"
+						},
+						{
+							"arabic": "موظفين.",
+							"english": "employees.",
+							"transliteration": "mwadhdhafeen."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Advice for Beginners",
+			"sentences": [
+				{
+					"arabic": "إبدا صغير، إدرس إحتياجات السوق، وإحسب التكاليف.",
+					"arabicTashkeel": "إبدا صْغَيِّر، إدرِس إحتِياجات السّوق، وإحسِب التَّكاليف.",
+					"english": "Start small, study the needs of the market, and calculate the costs.",
+					"transliteration": "ibda sghayyir, idris i7tiyaajaat is-soog, w-i7sib it-takaaleef.",
+					"wordAlignments": [
+						{
+							"arabic": "إبدا",
+							"english": "Start",
+							"transliteration": "ibda"
+						},
+						{
+							"arabic": "صغير،",
+							"english": "small,",
+							"transliteration": "sghayyir,"
+						},
+						{
+							"arabic": "إدرس",
+							"english": "study",
+							"transliteration": "idris"
+						},
+						{
+							"arabic": "إحتياجات",
+							"english": "the needs of",
+							"transliteration": "i7tiyaajaat"
+						},
+						{
+							"arabic": "السوق،",
+							"english": "the market,",
+							"transliteration": "is-soog,"
+						},
+						{
+							"arabic": "وإحسب",
+							"english": "and calculate",
+							"transliteration": "w-i7sib"
+						},
+						{
+							"arabic": "التكاليف.",
+							"english": "the costs.",
+							"transliteration": "it-takaaleef."
+						}
+					]
+				},
+				{
+					"arabic": "كل مشروع فيه مخاطرة، بس بدون مخاطرة ما في ربح.",
+					"arabicTashkeel": "كِل مَشروع فيه مُخاطَرة، بَس بدون مُخاطَرة ما في رِبح.",
+					"english": "Every business has risk, but without risk there is no profit.",
+					"transliteration": "kil mashroo3 fee mukhaatara, bas bidoon mukhaatara ma fee rib7.",
+					"wordAlignments": [
+						{
+							"arabic": "كل",
+							"english": "Every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "مشروع",
+							"english": "project",
+							"transliteration": "mashroo3"
+						},
+						{
+							"arabic": "فيه",
+							"english": "has",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "مخاطرة،",
+							"english": "risk,",
+							"transliteration": "mukhaatara,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "بدون",
+							"english": "without",
+							"transliteration": "bidoon"
+						},
+						{
+							"arabic": "مخاطرة",
+							"english": "risk",
+							"transliteration": "mukhaatara"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "في",
+							"english": "there is",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "ربح.",
+							"english": "profit.",
+							"transliteration": "rib7."
+						}
+					]
+				},
+				{
+					"arabic": "إختار شريكك زين، ودايما إسمع حق زباينك.",
+					"arabicTashkeel": "إختار شَريكَك زين، ودايماً إسمَع حَق زَبايِنَك.",
+					"english": "Choose your partner carefully, and always listen to your customers.",
+					"transliteration": "ikhtaar shareekak zeen, w-daayman isma3 7agg zabaayinak.",
+					"wordAlignments": [
+						{
+							"arabic": "إختار",
+							"english": "Choose",
+							"transliteration": "ikhtaar"
+						},
+						{
+							"arabic": "شريكك",
+							"english": "your partner",
+							"transliteration": "shareekak"
+						},
+						{
+							"arabic": "زين،",
+							"english": "well,",
+							"transliteration": "zeen,"
+						},
+						{
+							"arabic": "ودايما",
+							"english": "and always",
+							"transliteration": "w-daayman"
+						},
+						{
+							"arabic": "إسمع",
+							"english": "listen",
+							"transliteration": "isma3"
+						},
+						{
+							"arabic": "حق",
+							"english": "to",
+							"transliteration": "7agg"
+						},
+						{
+							"arabic": "زباينك.",
+							"english": "your customers.",
+							"transliteration": "zabaayinak."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student pitches a small business idea to an Emirati investor at a startup event in Abu Dhabi.",
+		"studentRole": "A would-be entrepreneur learning Gulf Arabic.",
+		"otherRole": "The Emirati investor, who asks tough questions.",
+		"goalEnglish": "Describe your idea, the market needs and the competition, explain costs, capital and expected profit, and answer questions about risk.",
+		"targetWords": [
+			"Entrepreneur",
+			"Small business",
+			"Capital",
+			"Costs",
+			"Profit",
+			"Customers",
+			"Competition",
+			"Risk"
+		]
+	}
+}
