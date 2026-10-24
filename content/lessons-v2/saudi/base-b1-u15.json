@@ -1,0 +1,1983 @@
+{
+	"vocab": [
+		{
+			"arabic": "دعوة",
+			"arabicTashkeel": "دَعوة",
+			"english": "Invitation",
+			"transliteration": "da3wa",
+			"wordAlignments": [
+				{
+					"arabic": "دعوة",
+					"english": "Invitation",
+					"transliteration": "da3wa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حفلة",
+			"arabicTashkeel": "حَفلة",
+			"english": "Party",
+			"transliteration": "7afla",
+			"wordAlignments": [
+				{
+					"arabic": "حفلة",
+					"english": "Party",
+					"transliteration": "7afla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عيد ميلاد",
+			"arabicTashkeel": "عيد ميلاد",
+			"english": "Birthday",
+			"transliteration": "3eed meelaad",
+			"wordAlignments": [
+				{
+					"arabic": "عيد",
+					"english": "Feast of",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "ميلاد",
+					"english": "birth",
+					"transliteration": "meelaad"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "تخرج",
+			"arabicTashkeel": "تَخَرُّج",
+			"english": "Graduation",
+			"transliteration": "takharruj",
+			"wordAlignments": [
+				{
+					"arabic": "تخرج",
+					"english": "Graduation",
+					"transliteration": "takharruj"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مناسبة",
+			"arabicTashkeel": "مُناسَبة",
+			"english": "Occasion",
+			"transliteration": "munaasaba",
+			"wordAlignments": [
+				{
+					"arabic": "مناسبة",
+					"english": "Occasion",
+					"transliteration": "munaasaba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "يعزم",
+			"arabicTashkeel": "يِعزِم",
+			"english": "He invites",
+			"transliteration": "yi3zim",
+			"wordAlignments": [
+				{
+					"arabic": "يعزم",
+					"english": "He invites",
+					"transliteration": "yi3zim"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أقبل",
+			"arabicTashkeel": "أقبَل",
+			"english": "I accept",
+			"transliteration": "agbal",
+			"wordAlignments": [
+				{
+					"arabic": "أقبل",
+					"english": "I accept",
+					"transliteration": "agbal"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أعتذر",
+			"arabicTashkeel": "أعتِذِر",
+			"english": "I apologize",
+			"transliteration": "a3tizir",
+			"wordAlignments": [
+				{
+					"arabic": "أعتذر",
+					"english": "I apologize",
+					"transliteration": "a3tizir"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "هدية",
+			"arabicTashkeel": "هَدية",
+			"english": "Gift",
+			"transliteration": "hadiyya",
+			"wordAlignments": [
+				{
+					"arabic": "هدية",
+					"english": "Gift",
+					"transliteration": "hadiyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مبروك",
+			"arabicTashkeel": "مَبروك",
+			"english": "Congratulations",
+			"transliteration": "mabrook",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "للأسف",
+			"arabicTashkeel": "للأسَف",
+			"english": "Unfortunately",
+			"transliteration": "lil-asaf",
+			"wordAlignments": [
+				{
+					"arabic": "للأسف",
+					"english": "Unfortunately",
+					"transliteration": "lil-asaf"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يشرفني",
+			"arabicTashkeel": "يِشَرِّفني",
+			"english": "I'd be honoured",
+			"transliteration": "yisharrifni",
+			"wordAlignments": [
+				{
+					"arabic": "يشرفني",
+					"english": "It honours me",
+					"transliteration": "yisharrifni"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "اتفضلوا",
+			"arabicTashkeel": "اِتفَضَّلوا",
+			"english": "Please come in",
+			"transliteration": "itfadhdhalu",
+			"wordAlignments": [
+				{
+					"arabic": "اتفضلوا",
+					"english": "Please come in",
+					"transliteration": "itfadhdhalu"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إحتفال",
+			"arabicTashkeel": "إحتِفال",
+			"english": "Celebration",
+			"transliteration": "i7tifaal",
+			"wordAlignments": [
+				{
+					"arabic": "إحتفال",
+					"english": "Celebration",
+					"transliteration": "i7tifaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بيت جديد",
+			"arabicTashkeel": "بيت جَديد",
+			"english": "Housewarming",
+			"transliteration": "bait jadeed",
+			"wordAlignments": [
+				{
+					"arabic": "بيت",
+					"english": "House",
+					"transliteration": "bait"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "jadeed"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شكرا على الدعوة.",
+			"arabicTashkeel": "شُكراً على الدَّعوة.",
+			"english": "Thank you for the invitation.",
+			"transliteration": "shukran 3ala id-da3wa.",
+			"wordAlignments": [
+				{
+					"arabic": "شكرا",
+					"english": "Thank you",
+					"transliteration": "shukran"
+				},
+				{
+					"arabic": "على",
+					"english": "for",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الدعوة.",
+					"english": "the invitation.",
+					"transliteration": "id-da3wa."
+				}
+			],
+			"targetWords": [
+				"Invitation"
+			]
+		},
+		{
+			"arabic": "الحفلة ليلة الخميس.",
+			"arabicTashkeel": "الحَفلة ليلة الخَميس.",
+			"english": "The party is on Thursday night.",
+			"transliteration": "il-7afla lailat il-khamees.",
+			"wordAlignments": [
+				{
+					"arabic": "الحفلة",
+					"english": "The party is",
+					"transliteration": "il-7afla"
+				},
+				{
+					"arabic": "ليلة",
+					"english": "the night of",
+					"transliteration": "lailat"
+				},
+				{
+					"arabic": "الخميس.",
+					"english": "Thursday.",
+					"transliteration": "il-khamees."
+				}
+			],
+			"targetWords": [
+				"Party"
+			]
+		},
+		{
+			"arabic": "عيد ميلاد سعيد!",
+			"arabicTashkeel": "عيد ميلاد سَعيد!",
+			"english": "Happy birthday!",
+			"transliteration": "3eed meelaad sa3eed!",
+			"wordAlignments": [
+				{
+					"arabic": "عيد",
+					"english": "Feast of",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "ميلاد",
+					"english": "birth",
+					"transliteration": "meelaad"
+				},
+				{
+					"arabic": "سعيد!",
+					"english": "happy!",
+					"transliteration": "sa3eed!"
+				}
+			],
+			"targetWords": [
+				"Birthday"
+			]
+		},
+		{
+			"arabic": "تخرجي الشهر الجاي.",
+			"arabicTashkeel": "تَخَرُّجي الشَّهر الجاي.",
+			"english": "My graduation is next month.",
+			"transliteration": "takharruji ish-shahr ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "تخرجي",
+					"english": "My graduation is",
+					"transliteration": "takharruji"
+				},
+				{
+					"arabic": "الشهر",
+					"english": "the month",
+					"transliteration": "ish-shahr"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Graduation"
+			]
+		},
+		{
+			"arabic": "إيش المناسبة؟",
+			"arabicTashkeel": "إيش المُناسَبة؟",
+			"english": "What's the occasion?",
+			"transliteration": "eesh il-munaasaba?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "المناسبة؟",
+					"english": "the occasion?",
+					"transliteration": "il-munaasaba?"
+				}
+			],
+			"targetWords": [
+				"Occasion"
+			]
+		},
+		{
+			"arabic": "يعزمنا كل سنة.",
+			"arabicTashkeel": "يِعزِمنا كُل سَنة.",
+			"english": "He invites us every year.",
+			"transliteration": "yi3zimna kull sana.",
+			"wordAlignments": [
+				{
+					"arabic": "يعزمنا",
+					"english": "He invites us",
+					"transliteration": "yi3zimna"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "year.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"He invites"
+			]
+		},
+		{
+			"arabic": "أقبل الدعوة بكل سرور.",
+			"arabicTashkeel": "أقبَل الدَّعوة بكُل سُرور.",
+			"english": "I accept the invitation with pleasure.",
+			"transliteration": "agbal id-da3wa b-kull suroor.",
+			"wordAlignments": [
+				{
+					"arabic": "أقبل",
+					"english": "I accept",
+					"transliteration": "agbal"
+				},
+				{
+					"arabic": "الدعوة",
+					"english": "the invitation",
+					"transliteration": "id-da3wa"
+				},
+				{
+					"arabic": "بكل",
+					"english": "with all",
+					"transliteration": "b-kull"
+				},
+				{
+					"arabic": "سرور.",
+					"english": "pleasure.",
+					"transliteration": "suroor."
+				}
+			],
+			"targetWords": [
+				"I accept",
+				"Invitation"
+			]
+		},
+		{
+			"arabic": "أعتذر، ما أقدر أجي.",
+			"arabicTashkeel": "أعتِذِر، ما أقدَر أجي.",
+			"english": "I apologize, I can't come.",
+			"transliteration": "a3tizir, ma agdar aji.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتذر،",
+					"english": "I apologize,",
+					"transliteration": "a3tizir,"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أقدر",
+					"english": "I can",
+					"transliteration": "agdar"
+				},
+				{
+					"arabic": "أجي.",
+					"english": "come.",
+					"transliteration": "aji."
+				}
+			],
+			"targetWords": [
+				"I apologize"
+			]
+		},
+		{
+			"arabic": "اشتريت له هدية.",
+			"arabicTashkeel": "اِشتَريت لُه هَدية.",
+			"english": "I bought him a gift.",
+			"transliteration": "ishtareet lu hadiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "اشتريت",
+					"english": "I bought",
+					"transliteration": "ishtareet"
+				},
+				{
+					"arabic": "له",
+					"english": "for him",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "هدية.",
+					"english": "a gift.",
+					"transliteration": "hadiyya."
+				}
+			],
+			"targetWords": [
+				"Gift"
+			]
+		},
+		{
+			"arabic": "مبروك المولود!",
+			"arabicTashkeel": "مَبروك المَولود!",
+			"english": "Congratulations on the new baby!",
+			"transliteration": "mabrook il-mawlood!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "المولود!",
+					"english": "the baby!",
+					"transliteration": "il-mawlood!"
+				}
+			],
+			"targetWords": [
+				"Congratulations"
+			]
+		},
+		{
+			"arabic": "للأسف أنا مسافر اليوم داك.",
+			"arabicTashkeel": "للأسَف أنا مِسافِر اليوم داك.",
+			"english": "Unfortunately I'm travelling that day.",
+			"transliteration": "lil-asaf ana misaafir il-yoom daak.",
+			"wordAlignments": [
+				{
+					"arabic": "للأسف",
+					"english": "Unfortunately",
+					"transliteration": "lil-asaf"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مسافر",
+					"english": "travelling",
+					"transliteration": "misaafir"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "the day",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "داك.",
+					"english": "that.",
+					"transliteration": "daak."
+				}
+			],
+			"targetWords": [
+				"Unfortunately"
+			]
+		},
+		{
+			"arabic": "يشرفني أجي.",
+			"arabicTashkeel": "يِشَرِّفني أجي.",
+			"english": "I'd be honoured to come.",
+			"transliteration": "yisharrifni aji.",
+			"wordAlignments": [
+				{
+					"arabic": "يشرفني",
+					"english": "It honours me",
+					"transliteration": "yisharrifni"
+				},
+				{
+					"arabic": "أجي.",
+					"english": "I come.",
+					"transliteration": "aji."
+				}
+			],
+			"targetWords": [
+				"I'd be honoured"
+			]
+		},
+		{
+			"arabic": "اتفضلوا، حياكم!",
+			"arabicTashkeel": "اِتفَضَّلوا، حَيّاكُم!",
+			"english": "Please come in, welcome!",
+			"transliteration": "itfadhdhalu, 7ayyaakum!",
+			"wordAlignments": [
+				{
+					"arabic": "اتفضلوا،",
+					"english": "Please come in,",
+					"transliteration": "itfadhdhalu,"
+				},
+				{
+					"arabic": "حياكم!",
+					"english": "welcome!",
+					"transliteration": "7ayyaakum!"
+				}
+			],
+			"targetWords": [
+				"Please come in"
+			]
+		},
+		{
+			"arabic": "الإحتفال كان حلو.",
+			"arabicTashkeel": "الإحتِفال كان حِلو.",
+			"english": "The celebration was beautiful.",
+			"transliteration": "il-i7tifaal kaan 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الإحتفال",
+					"english": "The celebration",
+					"transliteration": "il-i7tifaal"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Celebration"
+			]
+		},
+		{
+			"arabic": "عندنا عزيمة على البيت الجديد.",
+			"arabicTashkeel": "عِندِنا عَزيمة على البيت الجَديد.",
+			"english": "We have a housewarming at our new house.",
+			"transliteration": "3indina 3azeema 3ala il-bait ij-jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "عندنا",
+					"english": "We have",
+					"transliteration": "3indina"
+				},
+				{
+					"arabic": "عزيمة",
+					"english": "a feast",
+					"transliteration": "3azeema"
+				},
+				{
+					"arabic": "على",
+					"english": "for",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "الجديد.",
+					"english": "new.",
+					"transliteration": "ij-jadeed."
+				}
+			],
+			"targetWords": [
+				"Housewarming"
+			]
+		},
+		{
+			"arabic": "جاتني دعوة زواج.",
+			"arabicTashkeel": "جاتني دَعوة زَواج.",
+			"english": "I got a wedding invitation.",
+			"transliteration": "jaatni da3wa zawaaj.",
+			"wordAlignments": [
+				{
+					"arabic": "جاتني",
+					"english": "Came to me",
+					"transliteration": "jaatni"
+				},
+				{
+					"arabic": "دعوة",
+					"english": "an invitation",
+					"transliteration": "da3wa"
+				},
+				{
+					"arabic": "زواج.",
+					"english": "of a wedding.",
+					"transliteration": "zawaaj."
+				}
+			],
+			"targetWords": [
+				"Invitation"
+			]
+		},
+		{
+			"arabic": "حفلة مفاجأة.",
+			"arabicTashkeel": "حَفلة مُفاجأة.",
+			"english": "A surprise party.",
+			"transliteration": "7afla mufaaja2a.",
+			"wordAlignments": [
+				{
+					"arabic": "حفلة",
+					"english": "A party",
+					"transliteration": "7afla"
+				},
+				{
+					"arabic": "مفاجأة.",
+					"english": "surprise.",
+					"transliteration": "mufaaja2a."
+				}
+			],
+			"targetWords": [
+				"Party"
+			]
+		},
+		{
+			"arabic": "إمتى عيد ميلادك؟",
+			"arabicTashkeel": "إمتى عيد ميلادَك؟",
+			"english": "When is your birthday?",
+			"transliteration": "imta 3eed meelaadak?",
+			"wordAlignments": [
+				{
+					"arabic": "إمتى",
+					"english": "When is",
+					"transliteration": "imta"
+				},
+				{
+					"arabic": "عيد",
+					"english": "the feast of",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "ميلادك؟",
+					"english": "your birth?",
+					"transliteration": "meelaadak?"
+				}
+			],
+			"targetWords": [
+				"Birthday"
+			]
+		},
+		{
+			"arabic": "حفلة التخرج في الفندق.",
+			"arabicTashkeel": "حَفلة التَّخَرُّج في الفُندُق.",
+			"english": "The graduation party is at the hotel.",
+			"transliteration": "7aflat it-takharruj fi il-funduq.",
+			"wordAlignments": [
+				{
+					"arabic": "حفلة",
+					"english": "The party of",
+					"transliteration": "7aflat"
+				},
+				{
+					"arabic": "التخرج",
+					"english": "graduation is",
+					"transliteration": "it-takharruj"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الفندق.",
+					"english": "the hotel.",
+					"transliteration": "il-funduq."
+				}
+			],
+			"targetWords": [
+				"Graduation",
+				"Party"
+			]
+		},
+		{
+			"arabic": "مناسبة سعيدة.",
+			"arabicTashkeel": "مُناسَبة سَعيدة.",
+			"english": "A happy occasion.",
+			"transliteration": "munaasaba sa3eeda.",
+			"wordAlignments": [
+				{
+					"arabic": "مناسبة",
+					"english": "An occasion",
+					"transliteration": "munaasaba"
+				},
+				{
+					"arabic": "سعيدة.",
+					"english": "happy.",
+					"transliteration": "sa3eeda."
+				}
+			],
+			"targetWords": [
+				"Occasion"
+			]
+		},
+		{
+			"arabic": "مين عزمك؟",
+			"arabicTashkeel": "مين عَزَمَك؟",
+			"english": "Who invited you?",
+			"transliteration": "meen 3azamak?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "عزمك؟",
+					"english": "invited you?",
+					"transliteration": "3azamak?"
+				}
+			],
+			"targetWords": [
+				"He invites"
+			]
+		},
+		{
+			"arabic": "ما أقدر أقبل الهدية دي.",
+			"arabicTashkeel": "ما أقدَر أقبَل الهَدية دي.",
+			"english": "I can't accept this gift.",
+			"transliteration": "ma agdar agbal il-hadiyya di.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أقدر",
+					"english": "I can",
+					"transliteration": "agdar"
+				},
+				{
+					"arabic": "أقبل",
+					"english": "accept",
+					"transliteration": "agbal"
+				},
+				{
+					"arabic": "الهدية",
+					"english": "the gift",
+					"transliteration": "il-hadiyya"
+				},
+				{
+					"arabic": "دي.",
+					"english": "this.",
+					"transliteration": "di."
+				}
+			],
+			"targetWords": [
+				"I accept",
+				"Gift"
+			]
+		},
+		{
+			"arabic": "أعتذر على التأخير.",
+			"arabicTashkeel": "أعتِذِر على التَّأخير.",
+			"english": "I apologize for being late.",
+			"transliteration": "a3tizir 3ala it-ta2kheer.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتذر",
+					"english": "I apologize",
+					"transliteration": "a3tizir"
+				},
+				{
+					"arabic": "على",
+					"english": "for",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "التأخير.",
+					"english": "the delay.",
+					"transliteration": "it-ta2kheer."
+				}
+			],
+			"targetWords": [
+				"I apologize"
+			]
+		},
+		{
+			"arabic": "إيش هدية أجيب؟",
+			"arabicTashkeel": "إيش هَدية أجيب؟",
+			"english": "What gift should I bring?",
+			"transliteration": "eesh hadiyya ajeeb?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هدية",
+					"english": "gift",
+					"transliteration": "hadiyya"
+				},
+				{
+					"arabic": "أجيب؟",
+					"english": "do I bring?",
+					"transliteration": "ajeeb?"
+				}
+			],
+			"targetWords": [
+				"Gift"
+			]
+		},
+		{
+			"arabic": "مبروك التخرج!",
+			"arabicTashkeel": "مَبروك التَّخَرُّج!",
+			"english": "Congratulations on the graduation!",
+			"transliteration": "mabrook it-takharruj!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "التخرج!",
+					"english": "the graduation!",
+					"transliteration": "it-takharruj!"
+				}
+			],
+			"targetWords": [
+				"Congratulations",
+				"Graduation"
+			]
+		},
+		{
+			"arabic": "للأسف أنا مريض.",
+			"arabicTashkeel": "للأسَف أنا مَريض.",
+			"english": "Unfortunately I'm sick.",
+			"transliteration": "lil-asaf ana mareedh.",
+			"wordAlignments": [
+				{
+					"arabic": "للأسف",
+					"english": "Unfortunately",
+					"transliteration": "lil-asaf"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مريض.",
+					"english": "sick.",
+					"transliteration": "mareedh."
+				}
+			],
+			"targetWords": [
+				"Unfortunately"
+			]
+		},
+		{
+			"arabic": "يشرفني أتعرف عليك.",
+			"arabicTashkeel": "يِشَرِّفني أتعَرَّف عَلَيك.",
+			"english": "I'd be honoured to know you.",
+			"transliteration": "yisharrifni at3arraf 3alaik.",
+			"wordAlignments": [
+				{
+					"arabic": "يشرفني",
+					"english": "It honours me",
+					"transliteration": "yisharrifni"
+				},
+				{
+					"arabic": "أتعرف",
+					"english": "I get to know",
+					"transliteration": "at3arraf"
+				},
+				{
+					"arabic": "عليك.",
+					"english": "you.",
+					"transliteration": "3alaik."
+				}
+			],
+			"targetWords": [
+				"I'd be honoured"
+			]
+		},
+		{
+			"arabic": "اتفضلوا، الأكل جاهز.",
+			"arabicTashkeel": "اِتفَضَّلوا، الأكل جاهِز.",
+			"english": "Please come in, the food is ready.",
+			"transliteration": "itfadhdhalu, il-akl jaahiz.",
+			"wordAlignments": [
+				{
+					"arabic": "اتفضلوا،",
+					"english": "Please come in,",
+					"transliteration": "itfadhdhalu,"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food is",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "جاهز.",
+					"english": "ready.",
+					"transliteration": "jaahiz."
+				}
+			],
+			"targetWords": [
+				"Please come in"
+			]
+		},
+		{
+			"arabic": "إحتفال اليوم الوطني.",
+			"arabicTashkeel": "إحتِفال اليوم الوَطَني.",
+			"english": "The National Day celebration.",
+			"transliteration": "i7tifaal il-yoom il-watani.",
+			"wordAlignments": [
+				{
+					"arabic": "إحتفال",
+					"english": "The celebration of",
+					"transliteration": "i7tifaal"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "the day",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "الوطني.",
+					"english": "national.",
+					"transliteration": "il-watani."
+				}
+			],
+			"targetWords": [
+				"Celebration"
+			]
+		},
+		{
+			"arabic": "مبروك البيت الجديد!",
+			"arabicTashkeel": "مَبروك البيت الجَديد!",
+			"english": "Congratulations on the new house!",
+			"transliteration": "mabrook il-bait ij-jadeed!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "الجديد!",
+					"english": "new!",
+					"transliteration": "ij-jadeed!"
+				}
+			],
+			"targetWords": [
+				"Congratulations",
+				"Housewarming"
+			]
+		},
+		{
+			"arabic": "الدعوة لكل العيلة.",
+			"arabicTashkeel": "الدَّعوة لِكُل العيلة.",
+			"english": "The invitation is for the whole family.",
+			"transliteration": "id-da3wa li-kull il-3eela.",
+			"wordAlignments": [
+				{
+					"arabic": "الدعوة",
+					"english": "The invitation is",
+					"transliteration": "id-da3wa"
+				},
+				{
+					"arabic": "لكل",
+					"english": "for all",
+					"transliteration": "li-kull"
+				},
+				{
+					"arabic": "العيلة.",
+					"english": "the family.",
+					"transliteration": "il-3eela."
+				}
+			],
+			"targetWords": [
+				"Invitation"
+			]
+		},
+		{
+			"arabic": "الحفلة خلصت متأخر.",
+			"arabicTashkeel": "الحَفلة خِلصَت مِتأخِّر.",
+			"english": "The party ended late.",
+			"transliteration": "il-7afla khilsat mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "الحفلة",
+					"english": "The party",
+					"transliteration": "il-7afla"
+				},
+				{
+					"arabic": "خلصت",
+					"english": "ended",
+					"transliteration": "khilsat"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Party"
+			]
+		},
+		{
+			"arabic": "اليوم عيد ميلاد بنتي.",
+			"arabicTashkeel": "اليوم عيد ميلاد بِنتي.",
+			"english": "My daughter's birthday is today.",
+			"transliteration": "il-yoom 3eed meelaad binti.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "عيد",
+					"english": "the feast of",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "ميلاد",
+					"english": "the birth of",
+					"transliteration": "meelaad"
+				},
+				{
+					"arabic": "بنتي.",
+					"english": "my daughter.",
+					"transliteration": "binti."
+				}
+			],
+			"targetWords": [
+				"Birthday"
+			]
+		},
+		{
+			"arabic": "تخرجه من الجامعة.",
+			"arabicTashkeel": "تَخَرُّجُه مِن الجامعة.",
+			"english": "His graduation from university.",
+			"transliteration": "takharruju min ij-jaam3a.",
+			"wordAlignments": [
+				{
+					"arabic": "تخرجه",
+					"english": "His graduation",
+					"transliteration": "takharruju"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الجامعة.",
+					"english": "the university.",
+					"transliteration": "ij-jaam3a."
+				}
+			],
+			"targetWords": [
+				"Graduation"
+			]
+		},
+		{
+			"arabic": "بهادي المناسبة، نشكرك.",
+			"arabicTashkeel": "بِهادي المُناسَبة، نِشكُرَك.",
+			"english": "On this occasion, we thank you.",
+			"transliteration": "bi-haadi il-munaasaba, nishkurak.",
+			"wordAlignments": [
+				{
+					"arabic": "بهادي",
+					"english": "On this",
+					"transliteration": "bi-haadi"
+				},
+				{
+					"arabic": "المناسبة،",
+					"english": "occasion,",
+					"transliteration": "il-munaasaba,"
+				},
+				{
+					"arabic": "نشكرك.",
+					"english": "we thank you.",
+					"transliteration": "nishkurak."
+				}
+			],
+			"targetWords": [
+				"Occasion"
+			]
+		},
+		{
+			"arabic": "خالتي تعزم الكل على غدا العيد.",
+			"arabicTashkeel": "خالتي تِعزِم الكُل على غَدا العيد.",
+			"english": "My aunt invites everyone to Eid lunch.",
+			"transliteration": "khaalti ti3zim il-kull 3ala ghada il-3eed.",
+			"wordAlignments": [
+				{
+					"arabic": "خالتي",
+					"english": "My aunt",
+					"transliteration": "khaalti"
+				},
+				{
+					"arabic": "تعزم",
+					"english": "invites",
+					"transliteration": "ti3zim"
+				},
+				{
+					"arabic": "الكل",
+					"english": "everyone",
+					"transliteration": "il-kull"
+				},
+				{
+					"arabic": "على",
+					"english": "to",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "غدا",
+					"english": "the lunch of",
+					"transliteration": "ghada"
+				},
+				{
+					"arabic": "العيد.",
+					"english": "Eid.",
+					"transliteration": "il-3eed."
+				}
+			],
+			"targetWords": [
+				"He invites"
+			]
+		},
+		{
+			"arabic": "أقبل إعتذارك.",
+			"arabicTashkeel": "أقبَل إعتِذارَك.",
+			"english": "I accept your apology.",
+			"transliteration": "agbal i3tizaarak.",
+			"wordAlignments": [
+				{
+					"arabic": "أقبل",
+					"english": "I accept",
+					"transliteration": "agbal"
+				},
+				{
+					"arabic": "إعتذارك.",
+					"english": "your apology.",
+					"transliteration": "i3tizaarak."
+				}
+			],
+			"targetWords": [
+				"I accept"
+			]
+		},
+		{
+			"arabic": "أعتذر من الكل.",
+			"arabicTashkeel": "أعتِذِر مِن الكُل.",
+			"english": "I apologize to everyone.",
+			"transliteration": "a3tizir min il-kull.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتذر",
+					"english": "I apologize",
+					"transliteration": "a3tizir"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الكل.",
+					"english": "everyone.",
+					"transliteration": "il-kull."
+				}
+			],
+			"targetWords": [
+				"I apologize"
+			]
+		},
+		{
+			"arabic": "هدية صغيرة.",
+			"arabicTashkeel": "هَدية صُغَيَّرة.",
+			"english": "A small gift.",
+			"transliteration": "hadiyya sughayyara.",
+			"wordAlignments": [
+				{
+					"arabic": "هدية",
+					"english": "A gift",
+					"transliteration": "hadiyya"
+				},
+				{
+					"arabic": "صغيرة.",
+					"english": "small.",
+					"transliteration": "sughayyara."
+				}
+			],
+			"targetWords": [
+				"Gift"
+			]
+		},
+		{
+			"arabic": "مبروك، تستاهل!",
+			"arabicTashkeel": "مَبروك، تِستاهِل!",
+			"english": "Congratulations, you deserve it!",
+			"transliteration": "mabrook, tistaahil!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك،",
+					"english": "Congratulations,",
+					"transliteration": "mabrook,"
+				},
+				{
+					"arabic": "تستاهل!",
+					"english": "you deserve it!",
+					"transliteration": "tistaahil!"
+				}
+			],
+			"targetWords": [
+				"Congratulations"
+			]
+		},
+		{
+			"arabic": "للأسف الحفلة انلغت.",
+			"arabicTashkeel": "للأسَف الحَفلة اِنلَغَت.",
+			"english": "Unfortunately the party was cancelled.",
+			"transliteration": "lil-asaf il-7afla inlaghat.",
+			"wordAlignments": [
+				{
+					"arabic": "للأسف",
+					"english": "Unfortunately",
+					"transliteration": "lil-asaf"
+				},
+				{
+					"arabic": "الحفلة",
+					"english": "the party",
+					"transliteration": "il-7afla"
+				},
+				{
+					"arabic": "انلغت.",
+					"english": "was cancelled.",
+					"transliteration": "inlaghat."
+				}
+			],
+			"targetWords": [
+				"Unfortunately",
+				"Party"
+			]
+		},
+		{
+			"arabic": "يشرفني أزورك.",
+			"arabicTashkeel": "يِشَرِّفني أزورَك.",
+			"english": "I'd be honoured to visit you.",
+			"transliteration": "yisharrifni azoorak.",
+			"wordAlignments": [
+				{
+					"arabic": "يشرفني",
+					"english": "It honours me",
+					"transliteration": "yisharrifni"
+				},
+				{
+					"arabic": "أزورك.",
+					"english": "I visit you.",
+					"transliteration": "azoorak."
+				}
+			],
+			"targetWords": [
+				"I'd be honoured"
+			]
+		},
+		{
+			"arabic": "اتفضلوا اقعدوا.",
+			"arabicTashkeel": "اِتفَضَّلوا اُقعُدوا.",
+			"english": "Please come in, sit down.",
+			"transliteration": "itfadhdhalu ug3udu.",
+			"wordAlignments": [
+				{
+					"arabic": "اتفضلوا",
+					"english": "Please come in",
+					"transliteration": "itfadhdhalu"
+				},
+				{
+					"arabic": "اقعدوا.",
+					"english": "sit down.",
+					"transliteration": "ug3udu."
+				}
+			],
+			"targetWords": [
+				"Please come in"
+			]
+		},
+		{
+			"arabic": "إحتفال الزواج كان كبير.",
+			"arabicTashkeel": "إحتِفال الزَّواج كان كبير.",
+			"english": "The wedding celebration was big.",
+			"transliteration": "i7tifaal iz-zawaaj kaan kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "إحتفال",
+					"english": "The celebration of",
+					"transliteration": "i7tifaal"
+				},
+				{
+					"arabic": "الزواج",
+					"english": "the wedding",
+					"transliteration": "iz-zawaaj"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Celebration"
+			]
+		},
+		{
+			"arabic": "إمتى عزيمة البيت الجديد؟",
+			"arabicTashkeel": "إمتى عَزيمة البيت الجَديد؟",
+			"english": "When is the housewarming?",
+			"transliteration": "imta 3azeemat il-bait ij-jadeed?",
+			"wordAlignments": [
+				{
+					"arabic": "إمتى",
+					"english": "When is",
+					"transliteration": "imta"
+				},
+				{
+					"arabic": "عزيمة",
+					"english": "the feast of",
+					"transliteration": "3azeemat"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "الجديد؟",
+					"english": "new?",
+					"transliteration": "ij-jadeed?"
+				}
+			],
+			"targetWords": [
+				"Housewarming"
+			]
+		},
+		{
+			"arabic": "أرسلت الدعوات بالواتساب.",
+			"arabicTashkeel": "أرسَلت الدَّعوات بالواتساب.",
+			"english": "I sent the invitations by WhatsApp.",
+			"transliteration": "arsalt id-da3waat bil-waatsaab.",
+			"wordAlignments": [
+				{
+					"arabic": "أرسلت",
+					"english": "I sent",
+					"transliteration": "arsalt"
+				},
+				{
+					"arabic": "الدعوات",
+					"english": "the invitations",
+					"transliteration": "id-da3waat"
+				},
+				{
+					"arabic": "بالواتساب.",
+					"english": "by WhatsApp.",
+					"transliteration": "bil-waatsaab."
+				}
+			],
+			"targetWords": [
+				"Invitation"
+			]
+		},
+		{
+			"arabic": "الحفلة في بيتي.",
+			"arabicTashkeel": "الحَفلة في بيتي.",
+			"english": "The party is at my house.",
+			"transliteration": "il-7afla fi baiti.",
+			"wordAlignments": [
+				{
+					"arabic": "الحفلة",
+					"english": "The party is",
+					"transliteration": "il-7afla"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "بيتي.",
+					"english": "my house.",
+					"transliteration": "baiti."
+				}
+			],
+			"targetWords": [
+				"Party"
+			]
+		},
+		{
+			"arabic": "كيكة عيد ميلاد.",
+			"arabicTashkeel": "كيكة عيد ميلاد.",
+			"english": "A birthday cake.",
+			"transliteration": "keekat 3eed meelaad.",
+			"wordAlignments": [
+				{
+					"arabic": "كيكة",
+					"english": "The cake of",
+					"transliteration": "keekat"
+				},
+				{
+					"arabic": "عيد",
+					"english": "the feast of",
+					"transliteration": "3eed"
+				},
+				{
+					"arabic": "ميلاد.",
+					"english": "birth.",
+					"transliteration": "meelaad."
+				}
+			],
+			"targetWords": [
+				"Birthday"
+			]
+		},
+		{
+			"arabic": "حفل التخرج الصبح.",
+			"arabicTashkeel": "حَفل التَّخَرُّج الصُّبح.",
+			"english": "The graduation ceremony is in the morning.",
+			"transliteration": "7afl it-takharruj is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "حفل",
+					"english": "The ceremony of",
+					"transliteration": "7afl"
+				},
+				{
+					"arabic": "التخرج",
+					"english": "graduation is",
+					"transliteration": "it-takharruj"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Graduation"
+			]
+		},
+		{
+			"arabic": "كل مناسبة لها عاداتها.",
+			"arabicTashkeel": "كُل مُناسَبة لَها عاداتها.",
+			"english": "Every occasion has its customs.",
+			"transliteration": "kull munaasaba laha 3aadaatha.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "مناسبة",
+					"english": "occasion",
+					"transliteration": "munaasaba"
+				},
+				{
+					"arabic": "لها",
+					"english": "has",
+					"transliteration": "laha"
+				},
+				{
+					"arabic": "عاداتها.",
+					"english": "its customs.",
+					"transliteration": "3aadaatha."
+				}
+			],
+			"targetWords": [
+				"Occasion"
+			]
+		},
+		{
+			"arabic": "عزمني على العشا.",
+			"arabicTashkeel": "عَزَمني على العَشا.",
+			"english": "He invited me to dinner.",
+			"transliteration": "3azamni 3ala il-3asha.",
+			"wordAlignments": [
+				{
+					"arabic": "عزمني",
+					"english": "He invited me",
+					"transliteration": "3azamni"
+				},
+				{
+					"arabic": "على",
+					"english": "to",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "العشا.",
+					"english": "the dinner.",
+					"transliteration": "il-3asha."
+				}
+			],
+			"targetWords": [
+				"He invites"
+			]
+		},
+		{
+			"arabic": "أقبل بكل سرور.",
+			"arabicTashkeel": "أقبَل بكُل سُرور.",
+			"english": "I accept with pleasure.",
+			"transliteration": "agbal b-kull suroor.",
+			"wordAlignments": [
+				{
+					"arabic": "أقبل",
+					"english": "I accept",
+					"transliteration": "agbal"
+				},
+				{
+					"arabic": "بكل",
+					"english": "with all",
+					"transliteration": "b-kull"
+				},
+				{
+					"arabic": "سرور.",
+					"english": "pleasure.",
+					"transliteration": "suroor."
+				}
+			],
+			"targetWords": [
+				"I accept"
+			]
+		},
+		{
+			"arabic": "أعتذر، عندي شغل.",
+			"arabicTashkeel": "أعتِذِر، عِندي شُغل.",
+			"english": "I apologize, I have work.",
+			"transliteration": "a3tizir, 3indi shughl.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتذر،",
+					"english": "I apologize,",
+					"transliteration": "a3tizir,"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "شغل.",
+					"english": "work.",
+					"transliteration": "shughl."
+				}
+			],
+			"targetWords": [
+				"I apologize"
+			]
+		},
+		{
+			"arabic": "الهدية حلوة مرة.",
+			"arabicTashkeel": "الهَدية حِلوة مَرّة.",
+			"english": "The gift is very nice.",
+			"transliteration": "il-hadiyya 7ilwa marra.",
+			"wordAlignments": [
+				{
+					"arabic": "الهدية",
+					"english": "The gift is",
+					"transliteration": "il-hadiyya"
+				},
+				{
+					"arabic": "حلوة",
+					"english": "nice",
+					"transliteration": "7ilwa"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Gift"
+			]
+		},
+		{
+			"arabic": "للأسف ما كنت أدري.",
+			"arabicTashkeel": "للأسَف ما كُنت أدري.",
+			"english": "Unfortunately I didn't know.",
+			"transliteration": "lil-asaf ma kunt adri.",
+			"wordAlignments": [
+				{
+					"arabic": "للأسف",
+					"english": "Unfortunately",
+					"transliteration": "lil-asaf"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "kunt"
+				},
+				{
+					"arabic": "أدري.",
+					"english": "knowing.",
+					"transliteration": "adri."
+				}
+			],
+			"targetWords": [
+				"Unfortunately"
+			]
+		},
+		{
+			"arabic": "إحتفال لكل الحارة.",
+			"arabicTashkeel": "إحتِفال لِكُل الحارة.",
+			"english": "A celebration for the whole neighbourhood.",
+			"transliteration": "i7tifaal li-kull il-7aara.",
+			"wordAlignments": [
+				{
+					"arabic": "إحتفال",
+					"english": "A celebration",
+					"transliteration": "i7tifaal"
+				},
+				{
+					"arabic": "لكل",
+					"english": "for all",
+					"transliteration": "li-kull"
+				},
+				{
+					"arabic": "الحارة.",
+					"english": "the neighbourhood.",
+					"transliteration": "il-7aara."
+				}
+			],
+			"targetWords": [
+				"Celebration"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Invitation",
+			"sentences": [
+				{
+					"arabic": "زميلي عزمني على حفلة تخرج ولده.",
+					"arabicTashkeel": "زَميلي عَزَمني على حَفلة تَخَرُّج وَلَدُه.",
+					"english": "My colleague invited me to his son's graduation party.",
+					"transliteration": "zameeli 3azamni 3ala 7aflat takharruj waladu.",
+					"wordAlignments": [
+						{
+							"arabic": "زميلي",
+							"english": "My colleague",
+							"transliteration": "zameeli"
+						},
+						{
+							"arabic": "عزمني",
+							"english": "invited me",
+							"transliteration": "3azamni"
+						},
+						{
+							"arabic": "على",
+							"english": "to",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "حفلة",
+							"english": "the party of",
+							"transliteration": "7aflat"
+						},
+						{
+							"arabic": "تخرج",
+							"english": "the graduation of",
+							"transliteration": "takharruj"
+						},
+						{
+							"arabic": "ولده.",
+							"english": "his son.",
+							"transliteration": "waladu."
+						}
+					]
+				},
+				{
+					"arabic": "قلت له: مبروك، يشرفني أجي!",
+					"arabicTashkeel": "قُلت لُه: مَبروك، يِشَرِّفني أجي!",
+					"english": "I said to him: congratulations, I'd be honoured to come!",
+					"transliteration": "gult lu: mabrook, yisharrifni aji!",
+					"wordAlignments": [
+						{
+							"arabic": "قلت",
+							"english": "I said",
+							"transliteration": "gult"
+						},
+						{
+							"arabic": "له:",
+							"english": "to him:",
+							"transliteration": "lu:"
+						},
+						{
+							"arabic": "مبروك،",
+							"english": "congratulations,",
+							"transliteration": "mabrook,"
+						},
+						{
+							"arabic": "يشرفني",
+							"english": "it honours me",
+							"transliteration": "yisharrifni"
+						},
+						{
+							"arabic": "أجي!",
+							"english": "I come!",
+							"transliteration": "aji!"
+						}
+					]
+				},
+				{
+					"arabic": "اشتريت هدية ورحت يوم الخميس.",
+					"arabicTashkeel": "اِشتَريت هَدية ورُحت يوم الخَميس.",
+					"english": "I bought a gift and went on Thursday.",
+					"transliteration": "ishtareet hadiyya w-ru7t yoom il-khamees.",
+					"wordAlignments": [
+						{
+							"arabic": "اشتريت",
+							"english": "I bought",
+							"transliteration": "ishtareet"
+						},
+						{
+							"arabic": "هدية",
+							"english": "a gift",
+							"transliteration": "hadiyya"
+						},
+						{
+							"arabic": "ورحت",
+							"english": "and went",
+							"transliteration": "w-ru7t"
+						},
+						{
+							"arabic": "يوم",
+							"english": "on",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الخميس.",
+							"english": "Thursday.",
+							"transliteration": "il-khamees."
+						}
+					]
+				},
+				{
+					"arabic": "على الباب قال: اتفضلوا، حياكم!",
+					"arabicTashkeel": "على الباب قال: اِتفَضَّلوا، حَيّاكُم!",
+					"english": "At the door he said: please come in, welcome!",
+					"transliteration": "3ala il-baab gaal: itfadhdhalu, 7ayyaakum!",
+					"wordAlignments": [
+						{
+							"arabic": "على",
+							"english": "At",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الباب",
+							"english": "the door",
+							"transliteration": "il-baab"
+						},
+						{
+							"arabic": "قال:",
+							"english": "he said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "اتفضلوا،",
+							"english": "please come in,",
+							"transliteration": "itfadhdhalu,"
+						},
+						{
+							"arabic": "حياكم!",
+							"english": "welcome!",
+							"transliteration": "7ayyaakum!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "I Can't Come",
+			"sentences": [
+				{
+					"arabic": "صاحبتي عزمتني على حفلة عيد ميلادها.",
+					"arabicTashkeel": "صاحبتي عَزَمَتني على حَفلة عيد ميلادَها.",
+					"english": "My friend invited me to her birthday party.",
+					"transliteration": "saa7bati 3azamatni 3ala 7aflat 3eed meelaadaha.",
+					"wordAlignments": [
+						{
+							"arabic": "صاحبتي",
+							"english": "My friend",
+							"transliteration": "saa7bati"
+						},
+						{
+							"arabic": "عزمتني",
+							"english": "invited me",
+							"transliteration": "3azamatni"
+						},
+						{
+							"arabic": "على",
+							"english": "to",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "حفلة",
+							"english": "the party of",
+							"transliteration": "7aflat"
+						},
+						{
+							"arabic": "عيد",
+							"english": "the feast of",
+							"transliteration": "3eed"
+						},
+						{
+							"arabic": "ميلادها.",
+							"english": "her birth.",
+							"transliteration": "meelaadaha."
+						}
+					]
+				},
+				{
+					"arabic": "للأسف أنا مسافرة اليوم داك، فاعتذرت.",
+					"arabicTashkeel": "للأسَف أنا مِسافِرة اليوم داك، فاعتَذَرت.",
+					"english": "Unfortunately I'm travelling that day, so I apologized.",
+					"transliteration": "lil-asaf ana misaafira il-yoom daak, fa3tazart.",
+					"wordAlignments": [
+						{
+							"arabic": "للأسف",
+							"english": "Unfortunately",
+							"transliteration": "lil-asaf"
+						},
+						{
+							"arabic": "أنا",
+							"english": "I am",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "مسافرة",
+							"english": "travelling",
+							"transliteration": "misaafira"
+						},
+						{
+							"arabic": "اليوم",
+							"english": "the day",
+							"transliteration": "il-yoom"
+						},
+						{
+							"arabic": "داك،",
+							"english": "that,",
+							"transliteration": "daak,"
+						},
+						{
+							"arabic": "فاعتذرت.",
+							"english": "so I apologized.",
+							"transliteration": "fa3tazart."
+						}
+					]
+				},
+				{
+					"arabic": "بس أرسلت لها هدية.",
+					"arabicTashkeel": "بَس أرسَلت لَها هَدية.",
+					"english": "But I sent her a gift.",
+					"transliteration": "bas arsalt laha hadiyya.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "أرسلت",
+							"english": "I sent",
+							"transliteration": "arsalt"
+						},
+						{
+							"arabic": "لها",
+							"english": "to her",
+							"transliteration": "laha"
+						},
+						{
+							"arabic": "هدية.",
+							"english": "a gift.",
+							"transliteration": "hadiyya."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "A Jeddawi colleague invites the student to a family celebration, and the student has to decide whether they can go.",
+		"studentRole": "A colleague learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi colleague, who insists warmly.",
+		"goalEnglish": "Ask about the occasion, accept or politely decline the invitation, congratulate them and ask what gift to bring.",
+		"targetWords": [
+			"Invitation",
+			"Party",
+			"Occasion",
+			"I accept",
+			"I apologize",
+			"Gift",
+			"Congratulations",
+			"Unfortunately"
+		]
+	}
+}
