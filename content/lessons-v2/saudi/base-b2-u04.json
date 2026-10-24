@@ -1273,30 +1273,30 @@
 			]
 		},
 		{
-			"arabic": "الشام يسموا فيها دمشق كمان.",
-			"arabicTashkeel": "الشّام يِسَمّوا فيها دِمَشق كَمان.",
-			"english": "Damascus is the capital of Syria.",
-			"transliteration": "ish-shaam yisammu feeha dimashg kamaan.",
+			"arabic": "الناس يسموا دمشق الشام كمان.",
+			"arabicTashkeel": "النّاس يِسَمّوا دِمَشق الشّام كَمان.",
+			"english": "People also call Damascus \"Ash-Sham\".",
+			"transliteration": "in-naas yisammu dimashg ish-shaam kamaan.",
 			"wordAlignments": [
 				{
-					"arabic": "الشام",
-					"english": "Ash-Sham",
-					"transliteration": "ish-shaam"
+					"arabic": "الناس",
+					"english": "The people",
+					"transliteration": "in-naas"
 				},
 				{
 					"arabic": "يسموا",
-					"english": "they call",
+					"english": "call",
 					"transliteration": "yisammu"
-				},
-				{
-					"arabic": "فيها",
-					"english": "in it",
-					"transliteration": "feeha"
 				},
 				{
 					"arabic": "دمشق",
 					"english": "Damascus",
 					"transliteration": "dimashg"
+				},
+				{
+					"arabic": "الشام",
+					"english": "Ash-Sham",
+					"transliteration": "ish-shaam"
 				},
 				{
 					"arabic": "كمان.",
@@ -2182,10 +2182,10 @@
 					]
 				},
 				{
-					"arabic": "بس رغم التنوع، هويتنا وحدة.",
-					"arabicTashkeel": "بَس رَغم التَّنَوُّع، هُوِيِّتنا وَحدة.",
+					"arabic": "بس رغم التنوع، هويتنا واحدة.",
+					"arabicTashkeel": "بَس رَغم التَّنَوُّع، هُوِيِّتنا واحدة.",
 					"english": "But despite the diversity, our identity is one.",
-					"transliteration": "bas ragham it-tanawwu3, huwiyyatna wa7da.",
+					"transliteration": "bas ragham it-tanawwu3, huwiyyatna waa7da.",
 					"wordAlignments": [
 						{
 							"arabic": "بس",
@@ -2208,9 +2208,9 @@
 							"transliteration": "huwiyyatna"
 						},
 						{
-							"arabic": "وحدة.",
+							"arabic": "واحدة.",
 							"english": "one.",
-							"transliteration": "wa7da."
+							"transliteration": "waa7da."
 						}
 					]
 				}
