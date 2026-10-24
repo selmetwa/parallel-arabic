@@ -23,6 +23,10 @@
 		"khaleeji": {
 			"arabic": "هَلا، تِفَضَّل. شو فيك؟",
 			"transliteration": "hala, tfadhdhal. shu feek?"
+		},
+		"saudi": {
+			"arabic": "أهلين، اِتفَضَّل. إيش فيك؟",
+			"transliteration": "ahlain, itfadhdhal. eesh feek?"
 		}
 	},
 	"d_since": {
@@ -49,6 +53,10 @@
 		"khaleeji": {
 			"arabic": "مِن مِتى وإنتَ جِذي؟",
 			"transliteration": "min mita w-inta chidhi?"
+		},
+		"saudi": {
+			"arabic": "مِن إمتى وإنتَ كِدا؟",
+			"transliteration": "min imta w-inta kida?"
 		}
 	},
 	"d_fever": {
@@ -73,6 +81,10 @@
 			"transliteration": "3indak 7araara?"
 		},
 		"khaleeji": {
+			"arabic": "عِندَك حَرارة؟",
+			"transliteration": "3indak 7araara?"
+		},
+		"saudi": {
 			"arabic": "عِندَك حَرارة؟",
 			"transliteration": "3indak 7araara?"
 		}
@@ -101,6 +113,10 @@
 		"khaleeji": {
 			"arabic": "خَلّني أفحصَك. خِذ نَفَس عَميق",
 			"transliteration": "khallni af7asak. khidh nafas 3ameeg"
+		},
+		"saudi": {
+			"arabic": "خَلّيني أكشِف عَلَيك. خُد نَفَس عَميق",
+			"transliteration": "khalleeni akshif 3alaik. khud nafas 3ameeg"
 		}
 	},
 	"d_ok": {
@@ -127,6 +143,10 @@
 		"khaleeji": {
 			"arabic": "زين. ما في شي خَطير",
 			"transliteration": "zain. ma fi shay khateer"
+		},
+		"saudi": {
+			"arabic": "كْوَيِّس. مافي شي خَطير",
+			"transliteration": "kwayyis. maafi shay khateer"
 		}
 	},
 	"d_prescription": {
@@ -153,6 +173,10 @@
 		"khaleeji": {
 			"arabic": "بَكتِبلَك وَصفة",
 			"transliteration": "bachtiblak wasfa"
+		},
+		"saudi": {
+			"arabic": "حَكتُب لَك وَصفة",
+			"transliteration": "7aktub lak wasfa"
 		}
 	},
 	"d_yes": {
@@ -179,6 +203,10 @@
 		"khaleeji": {
 			"arabic": "إي، مِن أي صَيدَلية",
 			"transliteration": "ee, min ay saidaliyya"
+		},
+		"saudi": {
+			"arabic": "أيوا، مِن أيّ صَيدَلية",
+			"transliteration": "aiwa, min ayy saidaliyya"
 		}
 	},
 	"d_rest": {
@@ -205,6 +233,10 @@
 		"khaleeji": {
 			"arabic": "اِرتاح يومين واشرَب ماي وايد",
 			"transliteration": "irtaa7 yoomain w-ishrab maay waayid"
+		},
+		"saudi": {
+			"arabic": "اِرتاح يومين واشرَب مُويَة كِتير",
+			"transliteration": "irtaa7 yoomain w-ishrab mooya kteer"
 		}
 	},
 	"d_questions": {
@@ -231,6 +263,10 @@
 		"khaleeji": {
 			"arabic": "عِندَك أي سُؤال؟",
 			"transliteration": "3indak ay su2aal?"
+		},
+		"saudi": {
+			"arabic": "عِندَك أيّ سُؤال؟",
+			"transliteration": "3indak ayy su2aal?"
 		}
 	},
 	"d_not_tomorrow": {
@@ -257,6 +293,10 @@
 		"khaleeji": {
 			"arabic": "مو باكِر. اِرتاح أوَّل",
 			"transliteration": "mu baachir. irtaa7 awwal"
+		},
+		"saudi": {
+			"arabic": "مو بُكرة. اِرتاح أوَّل",
+			"transliteration": "moo bukra. irtaa7 awwal"
 		}
 	},
 	"d_bye": {
@@ -281,6 +321,10 @@
 			"transliteration": "salaamtak!"
 		},
 		"khaleeji": {
+			"arabic": "سَلامتَك!",
+			"transliteration": "salaamtak!"
+		},
+		"saudi": {
 			"arabic": "سَلامتَك!",
 			"transliteration": "salaamtak!"
 		}
@@ -309,6 +353,10 @@
 		"khaleeji": {
 			"arabic": "عَفواً؟ ما فِهَمت",
 			"transliteration": "3afwan? ma fihamt"
+		},
+		"saudi": {
+			"arabic": "عَفواً؟ ما فِهِمت",
+			"transliteration": "3afwan? ma fihimt"
 		}
 	},
 	"y_throat": {
@@ -335,6 +383,10 @@
 		"khaleeji": {
 			"arabic": "حَلقي يعَوِّرني",
 			"transliteration": "7algi y3awwirni"
+		},
+		"saudi": {
+			"arabic": "حَلقي يوجَعني",
+			"transliteration": "7algi yooja3ni"
 		}
 	},
 	"y_back": {
@@ -361,6 +413,10 @@
 		"khaleeji": {
 			"arabic": "ظَهري يعَوِّرني",
 			"transliteration": "dhahri y3awwirni"
+		},
+		"saudi": {
+			"arabic": "ضَهري يوجَعني",
+			"transliteration": "dhahri yooja3ni"
 		}
 	},
 	"y_three_days": {
@@ -387,6 +443,10 @@
 		"khaleeji": {
 			"arabic": "مِن ثلاث أيّام",
 			"transliteration": "min thalaath ayyaam"
+		},
+		"saudi": {
+			"arabic": "مِن تَلات أيّام",
+			"transliteration": "min talaat ayyaam"
 		}
 	},
 	"y_week": {
@@ -412,6 +472,10 @@
 		},
 		"khaleeji": {
 			"arabic": "مِن أسبوع",
+			"transliteration": "min usboo3"
+		},
+		"saudi": {
+			"arabic": "مِن أُسبوع",
 			"transliteration": "min usboo3"
 		}
 	},
@@ -439,6 +503,10 @@
 		"khaleeji": {
 			"arabic": "لا، ما أظِن",
 			"transliteration": "la, ma adhinn"
+		},
+		"saudi": {
+			"arabic": "لا، ما أظُن",
+			"transliteration": "la, ma azunn"
 		}
 	},
 	"y_little": {
@@ -465,6 +533,10 @@
 		"khaleeji": {
 			"arabic": "إي، شوَي",
 			"transliteration": "ee, shway"
+		},
+		"saudi": {
+			"arabic": "أيوا، شْوَيّة",
+			"transliteration": "aiwa, shwayya"
 		}
 	},
 	"y_ok": {
@@ -491,6 +563,10 @@
 		"khaleeji": {
 			"arabic": "زين",
 			"transliteration": "zain"
+		},
+		"saudi": {
+			"arabic": "طَيِّب",
+			"transliteration": "tayyib"
 		}
 	},
 	"y_relief": {
@@ -517,6 +593,10 @@
 		"khaleeji": {
 			"arabic": "الحَمدُلله!",
 			"transliteration": "il-7amdilla!"
+		},
+		"saudi": {
+			"arabic": "الحَمدُلله!",
+			"transliteration": "il-7amdulillah!"
 		}
 	},
 	"y_pharmacy": {
@@ -543,6 +623,10 @@
 		"khaleeji": {
 			"arabic": "أقدَر أييبَه مِن أي صَيدَلية؟",
 			"transliteration": "agdar ayeeba min ay saidaliyya?"
+		},
+		"saudi": {
+			"arabic": "أقدَر أجيبُه مِن أيّ صَيدَلية؟",
+			"transliteration": "agdar ajeebu min ayy saidaliyya?"
 		}
 	},
 	"y_will": {
@@ -569,6 +653,10 @@
 		"khaleeji": {
 			"arabic": "زين، بسَوّيها",
 			"transliteration": "zain, b-sawweeha"
+		},
+		"saudi": {
+			"arabic": "طَيِّب، حَسَوّيها",
+			"transliteration": "tayyib, 7asawweeha"
 		}
 	},
 	"y_work": {
@@ -595,6 +683,10 @@
 		"khaleeji": {
 			"arabic": "أقدَر أروح الدَّوام؟",
 			"transliteration": "agdar aroo7 id-dawaam?"
+		},
+		"saudi": {
+			"arabic": "أقدَر أروح الدَّوام؟",
+			"transliteration": "agdar arooh id-dawaam?"
 		}
 	},
 	"y_no_thanks": {
@@ -621,6 +713,10 @@
 		"khaleeji": {
 			"arabic": "لا، مَشكور",
 			"transliteration": "la, mashkoor"
+		},
+		"saudi": {
+			"arabic": "لا، شُكراً",
+			"transliteration": "la, shukran"
 		}
 	},
 	"y_thanks_doctor": {
@@ -647,6 +743,10 @@
 		"khaleeji": {
 			"arabic": "مَشكور دكتور!",
 			"transliteration": "mashkoor daktoor!"
+		},
+		"saudi": {
+			"arabic": "شُكراً يا دُكتور!",
+			"transliteration": "shukran ya duktoor!"
 		}
 	},
 	"item_prescription": {
@@ -671,6 +771,10 @@
 			"transliteration": "wasfa"
 		},
 		"khaleeji": {
+			"arabic": "وَصفة",
+			"transliteration": "wasfa"
+		},
+		"saudi": {
 			"arabic": "وَصفة",
 			"transliteration": "wasfa"
 		}
@@ -699,6 +803,10 @@
 		"khaleeji": {
 			"arabic": "كيلوين",
 			"transliteration": "keeloowain"
+		},
+		"saudi": {
+			"arabic": "كيلوين",
+			"transliteration": "keelowain"
 		}
 	},
 	"y_stop_here": {
@@ -725,6 +833,10 @@
 		"khaleeji": {
 			"arabic": "وَقِّف هني لو سَمَحت",
 			"transliteration": "waggif hni law sama7t"
+		},
+		"saudi": {
+			"arabic": "وَقِّف هِنا لو سَمَحت",
+			"transliteration": "waggif hina law sama7t"
 		}
 	},
 	"y_tea": {
@@ -751,6 +863,10 @@
 		"khaleeji": {
 			"arabic": "شاي لو سَمَحت",
 			"transliteration": "chaay law sama7t"
+		},
+		"saudi": {
+			"arabic": "شاهي لو سَمَحت",
+			"transliteration": "shaahi law sama7t"
 		}
 	},
 	"y_too_expensive": {
@@ -775,6 +891,10 @@
 			"transliteration": "ghaali! 3ishreen?"
 		},
 		"khaleeji": {
+			"arabic": "غالي! عِشرين؟",
+			"transliteration": "ghaali! 3ishreen?"
+		},
+		"saudi": {
 			"arabic": "غالي! عِشرين؟",
 			"transliteration": "ghaali! 3ishreen?"
 		}
@@ -803,6 +923,10 @@
 		"khaleeji": {
 			"arabic": "بالعافية!",
 			"transliteration": "bil-3aafya!"
+		},
+		"saudi": {
+			"arabic": "بالعافية!",
+			"transliteration": "bil-3aafya!"
 		}
 	},
 	"y_welcome": {
@@ -827,6 +951,10 @@
 			"transliteration": "ahlan w-sahlan!"
 		},
 		"khaleeji": {
+			"arabic": "أهلاً وسَهلاً!",
+			"transliteration": "ahlan w-sahlan!"
+		},
+		"saudi": {
 			"arabic": "أهلاً وسَهلاً!",
 			"transliteration": "ahlan w-sahlan!"
 		}
