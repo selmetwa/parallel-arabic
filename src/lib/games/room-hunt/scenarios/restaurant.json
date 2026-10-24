@@ -15,6 +15,10 @@
 		"fusha": {
 			"arabic": "أَهْلًا بِكَ! تَفَضَّلْ بِالْجُلُوسِ. هَذِهِ قَائِمَةُ الطَّعَامِ.",
 			"transliteration": "Ahlan bik! Tafaddal bil-juloos. Hathihi qa2imatu at-ta3aam."
+		},
+		"iraqi": {
+			"arabic": "هَلا بيك! تِفَضَّل أُقعُد. هاي المِنيو",
+			"transliteration": "hala beek! tfadhdhal ug3ud. haay il-menyu"
 		}
 	},
 	"w_drink": {
@@ -33,6 +37,10 @@
 		"fusha": {
 			"arabic": "مَاذَا تُحِبُّ أَنْ تَشْرَبَ؟",
 			"transliteration": "Matha tu7ibbu 2an tashraba?"
+		},
+		"iraqi": {
+			"arabic": "شتِشرَب؟",
+			"transliteration": "shtishrab?"
 		}
 	},
 	"w_food": {
@@ -51,6 +59,10 @@
 		"fusha": {
 			"arabic": "وَمَاذَا تُحِبُّ أَنْ تَأْكُلَ؟",
 			"transliteration": "Wa matha tu7ibbu 2an ta2kula?"
+		},
+		"iraqi": {
+			"arabic": "وشتاكُل؟",
+			"transliteration": "w-shtaakul?"
 		}
 	},
 	"w_coming": {
@@ -69,6 +81,10 @@
 		"fusha": {
 			"arabic": "حَالًا!",
 			"transliteration": "7aalan!"
+		},
+		"iraqi": {
+			"arabic": "هَسّة!",
+			"transliteration": "hassa!"
 		}
 	},
 	"w_enjoy": {
@@ -87,6 +103,10 @@
 		"fusha": {
 			"arabic": "تَفَضَّلْ. بِالْهَنَاءِ وَالشِّفَاءِ!",
 			"transliteration": "Tafaddal. Bil-hanaa2i wash-shifaa2!"
+		},
+		"iraqi": {
+			"arabic": "تِفَضَّل. بالعافية!",
+			"transliteration": "tfadhdhal. bil-3aafya!"
 		}
 	},
 	"w_dessert": {
@@ -105,6 +125,10 @@
 		"fusha": {
 			"arabic": "هَلْ تُرِيدُ بَعْضَ الْحَلْوَى؟",
 			"transliteration": "Hal tureedu ba3da al-7alwa?"
+		},
+		"iraqi": {
+			"arabic": "تريد حَلويات بَعدين؟",
+			"transliteration": "treed 7alawiyyaat ba3dein?"
 		}
 	},
 	"w_how": {
@@ -123,6 +147,10 @@
 		"fusha": {
 			"arabic": "كَيْفَ كَانَ الطَّعَامُ؟",
 			"transliteration": "Kayfa kaana at-ta3aam?"
+		},
+		"iraqi": {
+			"arabic": "شلون كان الأكِل؟",
+			"transliteration": "shloon chaan il-akil?"
 		}
 	},
 	"w_bye": {
@@ -141,6 +169,10 @@
 		"fusha": {
 			"arabic": "شُكْرًا لَكَ! زُرْنَا مَرَّةً أُخْرَى.",
 			"transliteration": "Shukran lak! Zurna marratan 2ukhra."
+		},
+		"iraqi": {
+			"arabic": "شُكراً! زورنا مَرّة لُخ",
+			"transliteration": "shukran! zoorna marra lukh"
 		}
 	},
 	"w_sorry": {
@@ -159,6 +191,10 @@
 		"fusha": {
 			"arabic": "عُذْرًا؟ لَمْ أَفْهَمْ.",
 			"transliteration": "3uthran? Lam 2afham."
+		},
+		"iraqi": {
+			"arabic": "عَفواً؟ ما فِتهَمِت",
+			"transliteration": "3afwan? ma fithamit"
 		}
 	},
 	"y_thanks": {
@@ -177,6 +213,10 @@
 		"fusha": {
 			"arabic": "شُكْرًا!",
 			"transliteration": "Shukran!"
+		},
+		"iraqi": {
+			"arabic": "شُكراً",
+			"transliteration": "shukran"
 		}
 	},
 	"y_bill": {
@@ -195,6 +235,10 @@
 		"fusha": {
 			"arabic": "الْفَاتُورَةَ، مِنْ فَضْلِكَ.",
 			"transliteration": "Al-fatoorata, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "الحِساب رَجاءً",
+			"transliteration": "il-7isaab rajaa2an"
 		}
 	},
 	"y_bathroom": {
@@ -213,6 +257,10 @@
 		"fusha": {
 			"arabic": "أَيْنَ الْحَمَّامُ؟",
 			"transliteration": "2ayna al-7ammaam?"
+		},
+		"iraqi": {
+			"arabic": "وين الحَمّام؟",
+			"transliteration": "wein il-7ammaam?"
 		}
 	},
 	"y_tea": {
@@ -231,6 +279,10 @@
 		"fusha": {
 			"arabic": "شَاي، مِنْ فَضْلِكَ.",
 			"transliteration": "Shaay, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "شاي رَجاءً",
+			"transliteration": "chaay rajaa2an"
 		}
 	},
 	"y_water": {
@@ -249,6 +301,10 @@
 		"fusha": {
 			"arabic": "كُوبَ مَاءٍ، مِنْ فَضْلِكَ.",
 			"transliteration": "Kooba maa2in, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "قلاص ماي رَجاءً",
+			"transliteration": "glaas maay rajaa2an"
 		}
 	},
 	"y_fish": {
@@ -267,6 +323,10 @@
 		"fusha": {
 			"arabic": "سَمَك، مِنْ فَضْلِكَ.",
 			"transliteration": "Samak, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "سِمَك رَجاءً",
+			"transliteration": "simach rajaa2an"
 		}
 	},
 	"y_chicken": {
@@ -285,6 +345,10 @@
 		"fusha": {
 			"arabic": "دَجَاج، مِنْ فَضْلِكَ.",
 			"transliteration": "Dajaaj, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "دِجاج رَجاءً",
+			"transliteration": "dijaaj rajaa2an"
 		}
 	},
 	"y_soup": {
@@ -303,6 +367,10 @@
 		"fusha": {
 			"arabic": "حَسَاء، مِنْ فَضْلِكَ.",
 			"transliteration": "7asaa2, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "شوربة رَجاءً",
+			"transliteration": "shoorba rajaa2an"
 		}
 	},
 	"y_goodbye": {
@@ -321,6 +389,10 @@
 		"fusha": {
 			"arabic": "إِلَى اللِّقَاءِ!",
 			"transliteration": "2ila al-liqaa2!"
+		},
+		"iraqi": {
+			"arabic": "مَعَ السَّلامة!",
+			"transliteration": "ma3a is-salaama!"
 		}
 	},
 	"y_welcome": {
@@ -339,6 +411,10 @@
 		"fusha": {
 			"arabic": "أَهْلًا بِكَ!",
 			"transliteration": "Ahlan bik!"
+		},
+		"iraqi": {
+			"arabic": "هَلا بيك!",
+			"transliteration": "hala beek!"
 		}
 	},
 	"y_drink_q": {
@@ -357,6 +433,10 @@
 		"fusha": {
 			"arabic": "مَاذَا تُحِبُّ أَنْ تَشْرَبَ؟",
 			"transliteration": "Matha tu7ibbu 2an tashraba?"
+		},
+		"iraqi": {
+			"arabic": "شتِشرَب؟",
+			"transliteration": "shtishrab?"
 		}
 	},
 	"y_cake": {
@@ -375,6 +455,10 @@
 		"fusha": {
 			"arabic": "نَعَمْ، كَعْكَة، مِنْ فَضْلِكَ.",
 			"transliteration": "Na3am, ka3kah, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "إي، كيك رَجاءً",
+			"transliteration": "ee, keik rajaa2an"
 		}
 	},
 	"y_no_thanks": {
@@ -393,6 +477,10 @@
 		"fusha": {
 			"arabic": "لَا، شُكْرًا.",
 			"transliteration": "Laa, shukran."
+		},
+		"iraqi": {
+			"arabic": "لا، شُكراً",
+			"transliteration": "la, shukran"
 		}
 	},
 	"y_table_two": {
@@ -411,6 +499,10 @@
 		"fusha": {
 			"arabic": "طَاوِلَةٌ لِشَخْصَيْنِ، مِنْ فَضْلِكَ.",
 			"transliteration": "Taawilatun lishakhsayni, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "ميز لِنَفَرين رَجاءً",
+			"transliteration": "meiz li-nafarein rajaa2an"
 		}
 	},
 	"y_delicious_bill": {
@@ -429,6 +521,10 @@
 		"fusha": {
 			"arabic": "لَذِيذٌ! الْفَاتُورَةَ، مِنْ فَضْلِكَ.",
 			"transliteration": "Latheethun! Al-fatoorata, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "طَيِّب! الحِساب رَجاءً",
+			"transliteration": "tayyib! il-7isaab rajaa2an"
 		}
 	},
 	"y_fork": {
@@ -447,6 +543,10 @@
 		"fusha": {
 			"arabic": "أَيْنَ الشَّوْكَةُ؟",
 			"transliteration": "2ayna ash-shawkatu?"
+		},
+		"iraqi": {
+			"arabic": "وين الجَطّال؟",
+			"transliteration": "wein ich-chattaal?"
 		}
 	},
 	"y_bye": {
@@ -465,6 +565,10 @@
 		"fusha": {
 			"arabic": "شُكْرًا، مَعَ السَّلَامَةِ!",
 			"transliteration": "Shukran, ma3a as-salaamah!"
+		},
+		"iraqi": {
+			"arabic": "شُكراً، مَعَ السَّلامة!",
+			"transliteration": "shukran, ma3a is-salaama!"
 		}
 	},
 	"item_tea": {
@@ -483,6 +587,10 @@
 		"fusha": {
 			"arabic": "شَاي",
 			"transliteration": "shay"
+		},
+		"iraqi": {
+			"arabic": "شاي",
+			"transliteration": "chaay"
 		}
 	},
 	"item_fish": {
@@ -501,6 +609,10 @@
 		"fusha": {
 			"arabic": "سَمَك",
 			"transliteration": "samak"
+		},
+		"iraqi": {
+			"arabic": "سِمَك",
+			"transliteration": "simach"
 		}
 	},
 	"item_chicken": {
@@ -519,6 +631,10 @@
 		"fusha": {
 			"arabic": "دَجَاج",
 			"transliteration": "dajaj"
+		},
+		"iraqi": {
+			"arabic": "دِجاج",
+			"transliteration": "dijaaj"
 		}
 	},
 	"item_soup": {
@@ -537,6 +653,10 @@
 		"fusha": {
 			"arabic": "حَسَاء",
 			"transliteration": "7asa2"
+		},
+		"iraqi": {
+			"arabic": "شوربة",
+			"transliteration": "shoorba"
 		}
 	},
 	"item_cake": {
@@ -555,6 +675,10 @@
 		"fusha": {
 			"arabic": "كَعْكَة",
 			"transliteration": "ka3ka"
+		},
+		"iraqi": {
+			"arabic": "كيك",
+			"transliteration": "keik"
 		}
 	},
 	"item_glass": {
@@ -573,6 +697,10 @@
 		"fusha": {
 			"arabic": "كُوبُ مَاءٍ",
 			"transliteration": "kubu ma2in"
+		},
+		"iraqi": {
+			"arabic": "قلاص ماي",
+			"transliteration": "glaas maay"
 		}
 	},
 	"w_people": {
@@ -591,6 +719,10 @@
 		"fusha": {
 			"arabic": "مَسَاءُ الْخَيْرِ! كَمْ شَخْصًا؟",
 			"transliteration": "masa2 al-khayr! kam shakhsan?"
+		},
+		"iraqi": {
+			"arabic": "مَسا الخير! كَم نَفَر؟",
+			"transliteration": "masa il-khair! cham nafar?"
 		}
 	},
 	"w_questions": {
@@ -609,6 +741,10 @@
 		"fusha": {
 			"arabic": "خُذْ وَقْتَكَ. هَلْ لَدَيْكَ أَيُّ سُؤَالٍ؟",
 			"transliteration": "khudh waqtak. hal ladayka ayyu su2al?"
+		},
+		"iraqi": {
+			"arabic": "خُذ راحتَك. عِندَك أي سُؤال؟",
+			"transliteration": "khudh raa7tak. 3indak ay su2aal?"
 		}
 	},
 	"w_recommend": {
@@ -627,6 +763,10 @@
 		"fusha": {
 			"arabic": "السَّمَكُ الْمَشْوِيُّ لَذِيذٌ جِدًّا الْيَوْمَ.",
 			"transliteration": "as-samak al-mashwi ladhidh jiddan al-yawm."
+		},
+		"iraqi": {
+			"arabic": "السِّمَك المَسقوف كُلِّش طَيِّب اليوم",
+			"transliteration": "is-simach il-masgoof kullish tayyib il-yoom"
 		}
 	},
 	"w_bread": {
@@ -645,6 +785,10 @@
 		"fusha": {
 			"arabic": "هَلْ تُرِيدُ خُبْزًا مَعَهُ؟",
 			"transliteration": "hal turidu khubzan ma3ah?"
+		},
+		"iraqi": {
+			"arabic": "تريد خُبُز وِيّاه؟",
+			"transliteration": "treed khubuz wiyyaa?"
 		}
 	},
 	"w_coffee": {
@@ -663,6 +807,10 @@
 		"fusha": {
 			"arabic": "هَلْ تُرِيدُ مَشْرُوبًا سَاخِنًا؟ قَهْوَةً؟",
 			"transliteration": "hal turidu mashruban sakhinan? qahwatan?"
+		},
+		"iraqi": {
+			"arabic": "تريد شي حار؟ قَهوة؟",
+			"transliteration": "treed shi 7aarr? gahwa?"
 		}
 	},
 	"w_total": {
@@ -681,6 +829,10 @@
 		"fusha": {
 			"arabic": "مِئَةٌ وَخَمْسُونَ.",
 			"transliteration": "mi2a wa khamsun."
+		},
+		"iraqi": {
+			"arabic": "مِيّة وخَمسين",
+			"transliteration": "miyya w-khamseen"
 		}
 	},
 	"w_thanks": {
@@ -699,6 +851,10 @@
 		"fusha": {
 			"arabic": "شُكْرًا جَزِيلًا!",
 			"transliteration": "shukran jazilan!"
+		},
+		"iraqi": {
+			"arabic": "شُكراً هوايه!",
+			"transliteration": "shukran hwaaya!"
 		}
 	},
 	"w_card": {
@@ -717,6 +873,10 @@
 		"fusha": {
 			"arabic": "بِالتَّأْكِيدِ، تَفَضَّلِ الْجِهَازَ.",
 			"transliteration": "bit-ta2kid, tafaddal al-jihaz."
+		},
+		"iraqi": {
+			"arabic": "أكيد، تِفَضَّل الجِهاز",
+			"transliteration": "akeed, tfadhdhal ij-jihaaz"
 		}
 	},
 	"y_one": {
@@ -735,6 +895,10 @@
 		"fusha": {
 			"arabic": "شَخْصٌ وَاحِدٌ فَقَطْ، مِنْ فَضْلِكَ.",
 			"transliteration": "shakhsun wa7id faqat, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "نَفَر واحِد بَس رَجاءً",
+			"transliteration": "nafar waa7id bass rajaa2an"
 		}
 	},
 	"y_recommend": {
@@ -753,6 +917,10 @@
 		"fusha": {
 			"arabic": "بِمَاذَا تَنْصَحُنِي؟",
 			"transliteration": "bimadha tansa7uni?"
+		},
+		"iraqi": {
+			"arabic": "شتنصَحني؟",
+			"transliteration": "shtinsa7ni?"
 		}
 	},
 	"y_yes_please": {
@@ -771,6 +939,10 @@
 		"fusha": {
 			"arabic": "نَعَمْ، مِنْ فَضْلِكَ.",
 			"transliteration": "na3am, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "إي رَجاءً",
+			"transliteration": "ee rajaa2an"
 		}
 	},
 	"y_coffee": {
@@ -789,6 +961,10 @@
 		"fusha": {
 			"arabic": "قَهْوَةٌ، مِنْ فَضْلِكَ.",
 			"transliteration": "qahwa, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "قَهوة رَجاءً",
+			"transliteration": "gahwa rajaa2an"
 		}
 	},
 	"y_pay": {
@@ -807,6 +983,10 @@
 		"fusha": {
 			"arabic": "تَفَضَّلْ.",
 			"transliteration": "tafaddal."
+		},
+		"iraqi": {
+			"arabic": "تِفَضَّل",
+			"transliteration": "tfadhdhal"
 		}
 	},
 	"y_card": {
@@ -825,6 +1005,10 @@
 		"fusha": {
 			"arabic": "هَلْ يُمْكِنُنِي الدَّفْعُ بِالْبِطَاقَةِ؟",
 			"transliteration": "hal yumkinuni ad-daf3u bil-bitaqa?"
+		},
+		"iraqi": {
+			"arabic": "أقدَر أدفَع بالكارت؟",
+			"transliteration": "agdar adfa3 bil-kaart?"
 		}
 	},
 	"item_bread": {
@@ -843,6 +1027,10 @@
 		"fusha": {
 			"arabic": "خُبْز",
 			"transliteration": "khubz"
+		},
+		"iraqi": {
+			"arabic": "خُبُز",
+			"transliteration": "khubuz"
 		}
 	},
 	"item_coffee": {
@@ -861,6 +1049,10 @@
 		"fusha": {
 			"arabic": "قَهْوَة",
 			"transliteration": "qahwa"
+		},
+		"iraqi": {
+			"arabic": "قَهوة",
+			"transliteration": "gahwa"
 		}
 	}
 }

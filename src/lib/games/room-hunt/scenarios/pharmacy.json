@@ -15,6 +15,10 @@
 		"fusha": {
 			"arabic": "مَرْحَبًا، كَيْفَ يُمْكِنُنِي مُسَاعَدَتُكَ؟",
 			"transliteration": "mar7aban, kayfa yumkinuni musa3adatuk?"
+		},
+		"iraqi": {
+			"arabic": "هَلا، شلون أقدَر أساعدَك؟",
+			"transliteration": "hala, shloon agdar asaa3dak?"
 		}
 	},
 	"p_since": {
@@ -33,6 +37,10 @@
 		"fusha": {
 			"arabic": "مُنْذُ مَتَى؟",
 			"transliteration": "mundhu mata?"
+		},
+		"iraqi": {
+			"arabic": "مِن شوَكِت؟",
+			"transliteration": "min shwakit?"
 		}
 	},
 	"p_fever": {
@@ -51,6 +59,10 @@
 		"fusha": {
 			"arabic": "هَلْ لَدَيْكَ حُمَّى؟",
 			"transliteration": "hal ladayka 7umma?"
+		},
+		"iraqi": {
+			"arabic": "عِندَك حَرارة؟",
+			"transliteration": "3indak 7araara?"
 		}
 	},
 	"p_take": {
@@ -69,6 +81,10 @@
 		"fusha": {
 			"arabic": "خُذْ هَذَا ثَلَاثَ مَرَّاتٍ فِي الْيَوْمِ، بَعْدَ الطَّعَامِ.",
 			"transliteration": "khudh hadha thalatha marratin fil-yawm, ba3da at-ta3am."
+		},
+		"iraqi": {
+			"arabic": "خُذ هاذا ثلاث مَرّات باليوم، بَعد الأكِل",
+			"transliteration": "khudh haadha thlath marraat bil-yoom, ba3d il-akil"
 		}
 	},
 	"p_price": {
@@ -87,6 +103,10 @@
 		"fusha": {
 			"arabic": "خَمْسَةَ عَشَرَ.",
 			"transliteration": "khamsata 3ashar."
+		},
+		"iraqi": {
+			"arabic": "خُمُستَعَش",
+			"transliteration": "khumusta3ash"
 		}
 	},
 	"p_sorry": {
@@ -105,6 +125,10 @@
 		"fusha": {
 			"arabic": "عُذْرًا؟ لَمْ أَفْهَمْ.",
 			"transliteration": "3udhran? lam afham."
+		},
+		"iraqi": {
+			"arabic": "عَفواً؟ ما فِتهَمِت",
+			"transliteration": "3afwan? ma fithamit"
 		}
 	},
 	"y_stomach": {
@@ -123,6 +147,10 @@
 		"fusha": {
 			"arabic": "بَطْنِي يُؤْلِمُنِي.",
 			"transliteration": "batni yu2limuni."
+		},
+		"iraqi": {
+			"arabic": "بَطني يوجَعني",
+			"transliteration": "batni yooja3ni"
 		}
 	},
 	"y_cough": {
@@ -141,6 +169,10 @@
 		"fusha": {
 			"arabic": "عِنْدِي سُعَالٌ.",
 			"transliteration": "3indi su3al."
+		},
+		"iraqi": {
+			"arabic": "عِندي كُحّة",
+			"transliteration": "3indi ku77a"
 		}
 	},
 	"y_yesterday": {
@@ -159,6 +191,10 @@
 		"fusha": {
 			"arabic": "مُنْذُ أَمْسِ.",
 			"transliteration": "mundhu ams."
+		},
+		"iraqi": {
+			"arabic": "مِن البارحة",
+			"transliteration": "min il-baar7a"
 		}
 	},
 	"y_morning": {
@@ -177,6 +213,10 @@
 		"fusha": {
 			"arabic": "مُنْذُ الصَّبَاحِ.",
 			"transliteration": "mundhu as-saba7."
+		},
+		"iraqi": {
+			"arabic": "مِن الصُّبُح",
+			"transliteration": "min is-subu7"
 		}
 	},
 	"y_no": {
@@ -195,6 +235,10 @@
 		"fusha": {
 			"arabic": "لَا.",
 			"transliteration": "la."
+		},
+		"iraqi": {
+			"arabic": "لا",
+			"transliteration": "la"
 		}
 	},
 	"y_little": {
@@ -213,6 +257,10 @@
 		"fusha": {
 			"arabic": "نَعَمْ، قَلِيلًا.",
 			"transliteration": "na3am, qalilan."
+		},
+		"iraqi": {
+			"arabic": "إي، شوَيّة",
+			"transliteration": "ee, shwayya"
 		}
 	},
 	"y_thanks_how_much": {
@@ -231,6 +279,10 @@
 		"fusha": {
 			"arabic": "شُكْرًا. كَمِ الثَّمَنُ؟",
 			"transliteration": "shukran. kam ath-thaman?"
+		},
+		"iraqi": {
+			"arabic": "شُكراً. بيش؟",
+			"transliteration": "shukran. beesh?"
 		}
 	},
 	"item_pills": {
@@ -249,6 +301,10 @@
 		"fusha": {
 			"arabic": "أَقْرَاص",
 			"transliteration": "aqras"
+		},
+		"iraqi": {
+			"arabic": "حُبوب",
+			"transliteration": "7boob"
 		}
 	},
 	"item_syrup": {
@@ -267,6 +323,10 @@
 		"fusha": {
 			"arabic": "شَرَابٌ لِلسُّعَالِ",
 			"transliteration": "sharab lis-su3al"
+		},
+		"iraqi": {
+			"arabic": "شَراب كُحّة",
+			"transliteration": "sharaab ku77a"
 		}
 	},
 	"y_headache": {
@@ -285,6 +345,10 @@
 		"fusha": {
 			"arabic": "عِنْدِي صُدَاعٌ.",
 			"transliteration": "3indi suda3."
+		},
+		"iraqi": {
+			"arabic": "عِندي صُداع",
+			"transliteration": "3indi sudaa3"
 		}
 	},
 	"y_thanks_bye": {
@@ -303,6 +367,10 @@
 		"fusha": {
 			"arabic": "شُكْرًا، مَعَ السَّلَامَةِ!",
 			"transliteration": "shukran, ma3a as-salama!"
+		},
+		"iraqi": {
+			"arabic": "شُكراً، مَعَ السَّلامة!",
+			"transliteration": "shukran, ma3a is-salaama!"
 		}
 	},
 	"y_two_kilos": {
@@ -321,6 +389,10 @@
 		"fusha": {
 			"arabic": "كِيلُوَانِ.",
 			"transliteration": "kiluwan."
+		},
+		"iraqi": {
+			"arabic": "كيلوين",
+			"transliteration": "keeloowein"
 		}
 	},
 	"y_stop_here": {
@@ -339,6 +411,10 @@
 		"fusha": {
 			"arabic": "تَوَقَّفْ هُنَا، مِنْ فَضْلِكَ.",
 			"transliteration": "tawaqqaf huna, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "وَقِّف هنا رَجاءً",
+			"transliteration": "waggif hna rajaa2an"
 		}
 	},
 	"y_enjoy": {
@@ -357,6 +433,10 @@
 		"fusha": {
 			"arabic": "بِالْهَنَاءِ وَالشِّفَاءِ!",
 			"transliteration": "bil-hana2 wash-shifa2!"
+		},
+		"iraqi": {
+			"arabic": "بالعافية!",
+			"transliteration": "bil-3aafya!"
 		}
 	},
 	"y_welcome": {
@@ -375,6 +455,10 @@
 		"fusha": {
 			"arabic": "أَهْلًا وَسَهْلًا!",
 			"transliteration": "ahlan wa sahlan!"
+		},
+		"iraqi": {
+			"arabic": "أهلاً وسَهلاً!",
+			"transliteration": "ahlan w-sahlan!"
 		}
 	},
 	"y_tea": {
@@ -393,6 +477,10 @@
 		"fusha": {
 			"arabic": "شَايٌ، مِنْ فَضْلِكَ.",
 			"transliteration": "shay, min fadlik."
+		},
+		"iraqi": {
+			"arabic": "شاي رَجاءً",
+			"transliteration": "chaay rajaa2an"
 		}
 	},
 	"p_allergy": {
@@ -411,6 +499,10 @@
 		"fusha": {
 			"arabic": "هَلْ لَدَيْكَ حَسَاسِيَّةٌ مِنْ أَيِّ دَوَاءٍ؟",
 			"transliteration": "hal ladayka 7asasiyya min ayyi dawa2?"
+		},
+		"iraqi": {
+			"arabic": "عِندَك حَساسية مِن أي دَوا؟",
+			"transliteration": "3indak 7assaasiyya min ay dawa?"
 		}
 	},
 	"p_other": {
@@ -429,6 +521,10 @@
 		"fusha": {
 			"arabic": "هَلْ تَتَنَاوَلُ أَيَّ دَوَاءٍ آخَرَ؟",
 			"transliteration": "hal tatanawalu ayya dawa2in akhar?"
+		},
+		"iraqi": {
+			"arabic": "تاخُذ أي دَوا لاخ؟",
+			"transliteration": "taakhudh ay dawa laakh?"
 		}
 	},
 	"p_eaten": {
@@ -447,6 +543,10 @@
 		"fusha": {
 			"arabic": "هَلْ أَكَلْتَ شَيْئًا الْيَوْمَ؟",
 			"transliteration": "hal akalta shay2an al-yawm?"
+		},
+		"iraqi": {
+			"arabic": "أكَلِت شي اليوم؟",
+			"transliteration": "akalit shi il-yoom?"
 		}
 	},
 	"p_exactly": {
@@ -465,6 +565,10 @@
 		"fusha": {
 			"arabic": "تَمَامًا.",
 			"transliteration": "tamaman."
+		},
+		"iraqi": {
+			"arabic": "بالضَّبُط",
+			"transliteration": "bidh-dhabut"
 		}
 	},
 	"p_water": {
@@ -483,6 +587,10 @@
 		"fusha": {
 			"arabic": "وَاشْرَبْ الْكَثِيرَ مِنَ الْمَاءِ.",
 			"transliteration": "washrab al-kathira mina al-ma2."
+		},
+		"iraqi": {
+			"arabic": "واشرَب ماي هوايه",
+			"transliteration": "w-ishrab maay hwaaya"
 		}
 	},
 	"p_doctor": {
@@ -501,6 +609,10 @@
 		"fusha": {
 			"arabic": "إِذَا لَمْ تَتَحَسَّنْ خِلَالَ ثَلَاثَةِ أَيَّامٍ، فَاذْهَبْ إِلَى الطَّبِيبِ.",
 			"transliteration": "idha lam tata7assan khilala thalathati ayyam, fa-dhhab ila at-tabib."
+		},
+		"iraqi": {
+			"arabic": "إذا ما تحَسَّنِت بثلاث أيّام، روح للدكتور",
+			"transliteration": "idha ma t7assanit b-thlath ayyaam, roo7 lid-diktoor"
 		}
 	},
 	"p_else": {
@@ -519,6 +631,10 @@
 		"fusha": {
 			"arabic": "هَلْ تَحْتَاجُ شَيْئًا آخَرَ؟",
 			"transliteration": "hal ta7taju shay2an akhar?"
+		},
+		"iraqi": {
+			"arabic": "تحتاج شي لاخ؟",
+			"transliteration": "ti7taaj shi laakh?"
 		}
 	},
 	"p_bye": {
@@ -537,6 +653,10 @@
 		"fusha": {
 			"arabic": "سَلَامَتُكَ!",
 			"transliteration": "salamatuk!"
+		},
+		"iraqi": {
+			"arabic": "سَلامتَك!",
+			"transliteration": "salaamtak!"
 		}
 	},
 	"y_not_allergic": {
@@ -555,6 +675,10 @@
 		"fusha": {
 			"arabic": "لَا، لَيْسَ لَدَيَّ.",
 			"transliteration": "la, laysa ladayya."
+		},
+		"iraqi": {
+			"arabic": "لا، ما عِندي",
+			"transliteration": "la, ma 3indi"
 		}
 	},
 	"y_penicillin": {
@@ -573,6 +697,10 @@
 		"fusha": {
 			"arabic": "نَعَمْ، مِنَ الْبِنِسِلِينِ.",
 			"transliteration": "na3am, mina al-binisilin."
+		},
+		"iraqi": {
+			"arabic": "إي، مِن البِنسِلين",
+			"transliteration": "ee, min il-binsileen"
 		}
 	},
 	"y_nothing": {
@@ -591,6 +719,10 @@
 		"fusha": {
 			"arabic": "لَا، لَا شَيْءَ.",
 			"transliteration": "la, la shay2."
+		},
+		"iraqi": {
+			"arabic": "لا، ولا شي",
+			"transliteration": "la, wala shi"
 		}
 	},
 	"y_had_breakfast": {
@@ -609,6 +741,10 @@
 		"fusha": {
 			"arabic": "نَعَمْ، تَنَاوَلْتُ الْفَطُورَ.",
 			"transliteration": "na3am, tanawaltu al-futur."
+		},
+		"iraqi": {
+			"arabic": "إي، فطَرِت",
+			"transliteration": "ee, ftarit"
 		}
 	},
 	"y_not_yet": {
@@ -627,6 +763,10 @@
 		"fusha": {
 			"arabic": "لَيْسَ بَعْدُ.",
 			"transliteration": "laysa ba3d."
+		},
+		"iraqi": {
+			"arabic": "بَعَد لا",
+			"transliteration": "ba3ad la"
 		}
 	},
 	"y_repeat": {
@@ -645,6 +785,10 @@
 		"fusha": {
 			"arabic": "ثَلَاثَ مَرَّاتٍ فِي الْيَوْمِ، بَعْدَ الطَّعَامِ؟",
 			"transliteration": "thalatha marratin fil-yawm, ba3da at-ta3am?"
+		},
+		"iraqi": {
+			"arabic": "ثلاث مَرّات باليوم، بَعد الأكِل؟",
+			"transliteration": "thlath marraat bil-yoom, ba3d il-akil?"
 		}
 	},
 	"y_will": {
@@ -663,6 +807,10 @@
 		"fusha": {
 			"arabic": "حَسَنًا، سَأَفْعَلُ.",
 			"transliteration": "7asanan, sa-af3al."
+		},
+		"iraqi": {
+			"arabic": "زين، راح أسَوّيها",
+			"transliteration": "zein, raa7 asawweeha"
 		}
 	},
 	"y_ok_thanks": {
@@ -681,6 +829,10 @@
 		"fusha": {
 			"arabic": "حَسَنًا، شُكْرًا.",
 			"transliteration": "7asanan, shukran."
+		},
+		"iraqi": {
+			"arabic": "زين، شُكراً",
+			"transliteration": "zein, shukran"
 		}
 	},
 	"y_here_you_go": {
@@ -699,6 +851,10 @@
 		"fusha": {
 			"arabic": "تَفَضَّلْ.",
 			"transliteration": "tafaddal."
+		},
+		"iraqi": {
+			"arabic": "تِفَضَّل",
+			"transliteration": "tfadhdhal"
 		}
 	},
 	"y_too_expensive": {
@@ -717,6 +873,10 @@
 		"fusha": {
 			"arabic": "هَذَا غَالٍ! عِشْرُونَ؟",
 			"transliteration": "hadha ghalin! 3ishrun?"
+		},
+		"iraqi": {
+			"arabic": "غالي! عِشرين؟",
+			"transliteration": "ghaali! 3ishreen?"
 		}
 	}
 }
