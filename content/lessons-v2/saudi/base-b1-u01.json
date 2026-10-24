@@ -1,0 +1,2352 @@
+{
+	"vocab": [
+		{
+			"arabic": "رحلة",
+			"arabicTashkeel": "رِحلة",
+			"english": "Trip",
+			"transliteration": "ri7la",
+			"wordAlignments": [
+				{
+					"arabic": "رحلة",
+					"english": "Trip",
+					"transliteration": "ri7la"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "طلعة",
+			"arabicTashkeel": "طَلعة",
+			"english": "Outing",
+			"transliteration": "tal3a",
+			"wordAlignments": [
+				{
+					"arabic": "طلعة",
+					"english": "Outing",
+					"transliteration": "tal3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "كشتة",
+			"arabicTashkeel": "كَشتة",
+			"english": "Picnic",
+			"transliteration": "kashta",
+			"wordAlignments": [
+				{
+					"arabic": "كشتة",
+					"english": "Picnic",
+					"transliteration": "kashta"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ملاهي",
+			"arabicTashkeel": "مَلاهي",
+			"english": "Amusement park",
+			"transliteration": "malaahi",
+			"wordAlignments": [
+				{
+					"arabic": "ملاهي",
+					"english": "Amusement park",
+					"transliteration": "malaahi"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "متحف",
+			"arabicTashkeel": "مَتحَف",
+			"english": "Museum",
+			"transliteration": "mat7af",
+			"wordAlignments": [
+				{
+					"arabic": "متحف",
+					"english": "Museum",
+					"transliteration": "mat7af"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "كورنيش",
+			"arabicTashkeel": "كورنيش",
+			"english": "Corniche",
+			"transliteration": "koornaish",
+			"wordAlignments": [
+				{
+					"arabic": "كورنيش",
+					"english": "Corniche",
+					"transliteration": "koornaish"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قارب",
+			"arabicTashkeel": "قارِب",
+			"english": "Boat",
+			"transliteration": "gaarib",
+			"wordAlignments": [
+				{
+					"arabic": "قارب",
+					"english": "Boat",
+					"transliteration": "gaarib"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إجازة",
+			"arabicTashkeel": "إجازة",
+			"english": "Vacation",
+			"transliteration": "ijaaza",
+			"wordAlignments": [
+				{
+					"arabic": "إجازة",
+					"english": "Vacation",
+					"transliteration": "ijaaza"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "فندق",
+			"arabicTashkeel": "فُندُق",
+			"english": "Hotel",
+			"transliteration": "funduq",
+			"wordAlignments": [
+				{
+					"arabic": "فندق",
+					"english": "Hotel",
+					"transliteration": "funduq"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سايح",
+			"arabicTashkeel": "سايِح",
+			"english": "Tourist",
+			"transliteration": "saayi7",
+			"wordAlignments": [
+				{
+					"arabic": "سايح",
+					"english": "Tourist",
+					"transliteration": "saayi7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "وناسة",
+			"arabicTashkeel": "وَناسة",
+			"english": "Fun",
+			"transliteration": "wanaasa",
+			"wordAlignments": [
+				{
+					"arabic": "وناسة",
+					"english": "Fun",
+					"transliteration": "wanaasa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "استانسنا",
+			"arabicTashkeel": "اِستانَسنا",
+			"english": "We had a great time",
+			"transliteration": "istaanasna",
+			"wordAlignments": [
+				{
+					"arabic": "استانسنا",
+					"english": "We had a great time",
+					"transliteration": "istaanasna"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "صور",
+			"arabicTashkeel": "صُوَر",
+			"english": "Photos",
+			"transliteration": "suwar",
+			"wordAlignments": [
+				{
+					"arabic": "صور",
+					"english": "Photos",
+					"transliteration": "suwar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "جزيرة",
+			"arabicTashkeel": "جَزيرة",
+			"english": "Island",
+			"transliteration": "jazeera",
+			"wordAlignments": [
+				{
+					"arabic": "جزيرة",
+					"english": "Island",
+					"transliteration": "jazeera"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ترفيه",
+			"arabicTashkeel": "تَرفيه",
+			"english": "Entertainment",
+			"transliteration": "tarfeeh",
+			"wordAlignments": [
+				{
+					"arabic": "ترفيه",
+					"english": "Entertainment",
+					"transliteration": "tarfeeh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "رحنا رحلة العلا الأسبوع اللي فات.",
+			"arabicTashkeel": "رُحنا رِحلة العُلا الأُسبوع اللي فات.",
+			"english": "We went on a trip to Al-Ula last week.",
+			"transliteration": "ru7na ri7la il-3ula il-usboo3 illi faat.",
+			"wordAlignments": [
+				{
+					"arabic": "رحنا",
+					"english": "We went",
+					"transliteration": "ru7na"
+				},
+				{
+					"arabic": "رحلة",
+					"english": "on a trip",
+					"transliteration": "ri7la"
+				},
+				{
+					"arabic": "العلا",
+					"english": "to Al-Ula",
+					"transliteration": "il-3ula"
+				},
+				{
+					"arabic": "الأسبوع",
+					"english": "the week",
+					"transliteration": "il-usboo3"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "فات.",
+					"english": "passed.",
+					"transliteration": "faat."
+				}
+			],
+			"targetWords": [
+				"Trip"
+			]
+		},
+		{
+			"arabic": "يلا نسوي طلعة يوم الجمعة.",
+			"arabicTashkeel": "يَلّا نِسَوّي طَلعة يوم الجُمعة.",
+			"english": "Let's go on an outing on Friday.",
+			"transliteration": "yalla nisawwi tal3a yoom ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "يلا",
+					"english": "Come on,",
+					"transliteration": "yalla"
+				},
+				{
+					"arabic": "نسوي",
+					"english": "let's do",
+					"transliteration": "nisawwi"
+				},
+				{
+					"arabic": "طلعة",
+					"english": "an outing",
+					"transliteration": "tal3a"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"Outing"
+			]
+		},
+		{
+			"arabic": "العيلة تطلع كشتة في الشتا.",
+			"arabicTashkeel": "العيلة تِطلَع كَشتة في الشِّتا.",
+			"english": "The family goes on a picnic in winter.",
+			"transliteration": "il-3eela titla3 kashta fi ish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "العيلة",
+					"english": "The family",
+					"transliteration": "il-3eela"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "goes out",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "كشتة",
+					"english": "on a picnic",
+					"transliteration": "kashta"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشتا.",
+					"english": "winter.",
+					"transliteration": "ish-shita."
+				}
+			],
+			"targetWords": [
+				"Picnic"
+			]
+		},
+		{
+			"arabic": "العيال يحبوا الملاهي.",
+			"arabicTashkeel": "العِيال يِحِبّوا المَلاهي.",
+			"english": "The kids love the amusement park.",
+			"transliteration": "il-3iyaal yi7ibbu il-malaahi.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3iyaal"
+				},
+				{
+					"arabic": "يحبوا",
+					"english": "love",
+					"transliteration": "yi7ibbu"
+				},
+				{
+					"arabic": "الملاهي.",
+					"english": "the amusement park.",
+					"transliteration": "il-malaahi."
+				}
+			],
+			"targetWords": [
+				"Amusement park"
+			]
+		},
+		{
+			"arabic": "المتحف فيه حاجات قديمة مرة.",
+			"arabicTashkeel": "المَتحَف فيه حاجات قَديمة مَرّة.",
+			"english": "The museum has very old things.",
+			"transliteration": "il-mat7af feeh 7aajaat gadeema marra.",
+			"wordAlignments": [
+				{
+					"arabic": "المتحف",
+					"english": "The museum",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "فيه",
+					"english": "has",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "حاجات",
+					"english": "things",
+					"transliteration": "7aajaat"
+				},
+				{
+					"arabic": "قديمة",
+					"english": "old",
+					"transliteration": "gadeema"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Museum"
+			]
+		},
+		{
+			"arabic": "في المسا نتمشى على الكورنيش.",
+			"arabicTashkeel": "في المَسا نِتمَشّى على الكورنيش.",
+			"english": "In the evening we walk on the corniche.",
+			"transliteration": "fi il-masa nitmashsha 3ala il-koornaish.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "In",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المسا",
+					"english": "the evening",
+					"transliteration": "il-masa"
+				},
+				{
+					"arabic": "نتمشى",
+					"english": "we walk",
+					"transliteration": "nitmashsha"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الكورنيش.",
+					"english": "the corniche.",
+					"transliteration": "il-koornaish."
+				}
+			],
+			"targetWords": [
+				"Corniche"
+			]
+		},
+		{
+			"arabic": "ركبنا قارب في البحر الأحمر.",
+			"arabicTashkeel": "رِكِبنا قارِب في البَحر الأحمَر.",
+			"english": "We took a boat on the Red Sea.",
+			"transliteration": "rikibna gaarib fi il-ba7r il-a7mar.",
+			"wordAlignments": [
+				{
+					"arabic": "ركبنا",
+					"english": "We rode",
+					"transliteration": "rikibna"
+				},
+				{
+					"arabic": "قارب",
+					"english": "a boat",
+					"transliteration": "gaarib"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البحر",
+					"english": "the sea",
+					"transliteration": "il-ba7r"
+				},
+				{
+					"arabic": "الأحمر.",
+					"english": "Red.",
+					"transliteration": "il-a7mar."
+				}
+			],
+			"targetWords": [
+				"Boat"
+			]
+		},
+		{
+			"arabic": "عندي إجازة أسبوع.",
+			"arabicTashkeel": "عِندي إجازة أُسبوع.",
+			"english": "I have a week's vacation.",
+			"transliteration": "3indi ijaaza usboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "إجازة",
+					"english": "a vacation",
+					"transliteration": "ijaaza"
+				},
+				{
+					"arabic": "أسبوع.",
+					"english": "of a week.",
+					"transliteration": "usboo3."
+				}
+			],
+			"targetWords": [
+				"Vacation"
+			]
+		},
+		{
+			"arabic": "الفندق كان نظيف ورخيص.",
+			"arabicTashkeel": "الفُندُق كان نَظيف ورَخيص.",
+			"english": "The hotel was clean and cheap.",
+			"transliteration": "il-funduq kaan nadheef w-rakhees.",
+			"wordAlignments": [
+				{
+					"arabic": "الفندق",
+					"english": "The hotel",
+					"transliteration": "il-funduq"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "نظيف",
+					"english": "clean",
+					"transliteration": "nadheef"
+				},
+				{
+					"arabic": "ورخيص.",
+					"english": "and cheap.",
+					"transliteration": "w-rakhees."
+				}
+			],
+			"targetWords": [
+				"Hotel"
+			]
+		},
+		{
+			"arabic": "سياح كتير يزوروا العلا.",
+			"arabicTashkeel": "سُيّاح كِتير يِزوروا العُلا.",
+			"english": "Many tourists visit Al-Ula.",
+			"transliteration": "suyyaa7 kteer yizooru il-3ula.",
+			"wordAlignments": [
+				{
+					"arabic": "سياح",
+					"english": "Tourists",
+					"transliteration": "suyyaa7"
+				},
+				{
+					"arabic": "كتير",
+					"english": "many",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "يزوروا",
+					"english": "visit",
+					"transliteration": "yizooru"
+				},
+				{
+					"arabic": "العلا.",
+					"english": "Al-Ula.",
+					"transliteration": "il-3ula."
+				}
+			],
+			"targetWords": [
+				"Tourist"
+			]
+		},
+		{
+			"arabic": "الرحلة كانت وناسة.",
+			"arabicTashkeel": "الرِّحلة كانَت وَناسة.",
+			"english": "The trip was a lot of fun.",
+			"transliteration": "ir-ri7la kaanat wanaasa.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "وناسة.",
+					"english": "fun.",
+					"transliteration": "wanaasa."
+				}
+			],
+			"targetWords": [
+				"Fun",
+				"Trip"
+			]
+		},
+		{
+			"arabic": "استانسنا في الحفلة.",
+			"arabicTashkeel": "اِستانَسنا في الحَفلة.",
+			"english": "We had a great time at the party.",
+			"transliteration": "istaanasna fi il-7afla.",
+			"wordAlignments": [
+				{
+					"arabic": "استانسنا",
+					"english": "We had a great time",
+					"transliteration": "istaanasna"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الحفلة.",
+					"english": "the party.",
+					"transliteration": "il-7afla."
+				}
+			],
+			"targetWords": [
+				"We had a great time"
+			]
+		},
+		{
+			"arabic": "ارسل لي صور الرحلة.",
+			"arabicTashkeel": "اِرسِل لي صُوَر الرِّحلة.",
+			"english": "Send me the photos of the trip.",
+			"transliteration": "irsil li suwar ir-ri7la.",
+			"wordAlignments": [
+				{
+					"arabic": "ارسل",
+					"english": "Send",
+					"transliteration": "irsil"
+				},
+				{
+					"arabic": "لي",
+					"english": "me",
+					"transliteration": "li"
+				},
+				{
+					"arabic": "صور",
+					"english": "the photos of",
+					"transliteration": "suwar"
+				},
+				{
+					"arabic": "الرحلة.",
+					"english": "the trip.",
+					"transliteration": "ir-ri7la."
+				}
+			],
+			"targetWords": [
+				"Photos",
+				"Trip"
+			]
+		},
+		{
+			"arabic": "جزيرة فرسان فيها شواطئ حلوة.",
+			"arabicTashkeel": "جَزيرة فَرَسان فيها شَواطئ حِلوة.",
+			"english": "Farasan Island has beautiful beaches.",
+			"transliteration": "jazeerat farasaan feeha shawaati2 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "جزيرة",
+					"english": "The island of",
+					"transliteration": "jazeerat"
+				},
+				{
+					"arabic": "فرسان",
+					"english": "Farasan",
+					"transliteration": "farasaan"
+				},
+				{
+					"arabic": "فيها",
+					"english": "has",
+					"transliteration": "feeha"
+				},
+				{
+					"arabic": "شواطئ",
+					"english": "beaches",
+					"transliteration": "shawaati2"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "beautiful.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Island"
+			]
+		},
+		{
+			"arabic": "فيه ترفيه كتير في جدة دحين.",
+			"arabicTashkeel": "فيه تَرفيه كِتير في جِدّة دحين.",
+			"english": "There is a lot of entertainment in Jeddah now.",
+			"transliteration": "feeh tarfeeh kteer fi jidda da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "ترفيه",
+					"english": "entertainment",
+					"transliteration": "tarfeeh"
+				},
+				{
+					"arabic": "كتير",
+					"english": "a lot",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة",
+					"english": "Jeddah",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"Entertainment"
+			]
+		},
+		{
+			"arabic": "فين نروح الرحلة الجاية؟",
+			"arabicTashkeel": "فين نِروح الرِّحلة الجاية؟",
+			"english": "Where shall we go on our next trip?",
+			"transliteration": "feen nirooh ir-ri7la ij-jaaya?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "نروح",
+					"english": "shall we go",
+					"transliteration": "nirooh"
+				},
+				{
+					"arabic": "الرحلة",
+					"english": "the trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "الجاية؟",
+					"english": "next?",
+					"transliteration": "ij-jaaya?"
+				}
+			],
+			"targetWords": [
+				"Trip"
+			]
+		},
+		{
+			"arabic": "طلعة قصيرة مع الأصحاب.",
+			"arabicTashkeel": "طَلعة قَصيرة مَعَ الأصحاب.",
+			"english": "A short outing with friends.",
+			"transliteration": "tal3a gaseera ma3a il-as7aab.",
+			"wordAlignments": [
+				{
+					"arabic": "طلعة",
+					"english": "An outing",
+					"transliteration": "tal3a"
+				},
+				{
+					"arabic": "قصيرة",
+					"english": "short",
+					"transliteration": "gaseera"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الأصحاب.",
+					"english": "the friends.",
+					"transliteration": "il-as7aab."
+				}
+			],
+			"targetWords": [
+				"Outing"
+			]
+		},
+		{
+			"arabic": "أخدنا أكل وشاهي للكشتة.",
+			"arabicTashkeel": "أخَدنا أكل وشاهي للكَشتة.",
+			"english": "We took food and tea for the picnic.",
+			"transliteration": "akhadna akl w-shaahi lil-kashta.",
+			"wordAlignments": [
+				{
+					"arabic": "أخدنا",
+					"english": "We took",
+					"transliteration": "akhadna"
+				},
+				{
+					"arabic": "أكل",
+					"english": "food",
+					"transliteration": "akl"
+				},
+				{
+					"arabic": "وشاهي",
+					"english": "and tea",
+					"transliteration": "w-shaahi"
+				},
+				{
+					"arabic": "للكشتة.",
+					"english": "for the picnic.",
+					"transliteration": "lil-kashta."
+				}
+			],
+			"targetWords": [
+				"Picnic"
+			]
+		},
+		{
+			"arabic": "الملاهي تفتح الساعة أربعة.",
+			"arabicTashkeel": "المَلاهي تِفتَح السّاعة أربَعة.",
+			"english": "The amusement park opens at four.",
+			"transliteration": "il-malaahi tifta7 is-saa3a arba3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الملاهي",
+					"english": "The amusement park",
+					"transliteration": "il-malaahi"
+				},
+				{
+					"arabic": "تفتح",
+					"english": "opens",
+					"transliteration": "tifta7"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "أربعة.",
+					"english": "four.",
+					"transliteration": "arba3a."
+				}
+			],
+			"targetWords": [
+				"Amusement park"
+			]
+		},
+		{
+			"arabic": "تذكرة المتحف رخيصة.",
+			"arabicTashkeel": "تَذكَرة المَتحَف رَخيصة.",
+			"english": "The museum ticket is cheap.",
+			"transliteration": "tazkarat il-mat7af rakheesa.",
+			"wordAlignments": [
+				{
+					"arabic": "تذكرة",
+					"english": "The ticket of",
+					"transliteration": "tazkarat"
+				},
+				{
+					"arabic": "المتحف",
+					"english": "the museum is",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "رخيصة.",
+					"english": "cheap.",
+					"transliteration": "rakheesa."
+				}
+			],
+			"targetWords": [
+				"Museum"
+			]
+		},
+		{
+			"arabic": "الكورنيش حلو وقت المغرب.",
+			"arabicTashkeel": "الكورنيش حِلو وَقت المَغرِب.",
+			"english": "The corniche is beautiful at sunset.",
+			"transliteration": "il-koornaish 7ilu wagt il-maghrib.",
+			"wordAlignments": [
+				{
+					"arabic": "الكورنيش",
+					"english": "The corniche is",
+					"transliteration": "il-koornaish"
+				},
+				{
+					"arabic": "حلو",
+					"english": "beautiful",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "وقت",
+					"english": "at the time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "المغرب.",
+					"english": "sunset.",
+					"transliteration": "il-maghrib."
+				}
+			],
+			"targetWords": [
+				"Corniche"
+			]
+		},
+		{
+			"arabic": "القارب يمشي بشويش.",
+			"arabicTashkeel": "القارِب يِمشي بشْوَيش.",
+			"english": "The boat moves slowly.",
+			"transliteration": "il-gaarib yimshi b-shwaish.",
+			"wordAlignments": [
+				{
+					"arabic": "القارب",
+					"english": "The boat",
+					"transliteration": "il-gaarib"
+				},
+				{
+					"arabic": "يمشي",
+					"english": "moves",
+					"transliteration": "yimshi"
+				},
+				{
+					"arabic": "بشويش.",
+					"english": "slowly.",
+					"transliteration": "b-shwaish."
+				}
+			],
+			"targetWords": [
+				"Boat"
+			]
+		},
+		{
+			"arabic": "قضيت إجازتي في أبها.",
+			"arabicTashkeel": "قَضَّيت إجازتي في أبها.",
+			"english": "I spent my vacation in Abha.",
+			"transliteration": "gadhdheet ijaazati fi abha.",
+			"wordAlignments": [
+				{
+					"arabic": "قضيت",
+					"english": "I spent",
+					"transliteration": "gadhdheet"
+				},
+				{
+					"arabic": "إجازتي",
+					"english": "my vacation",
+					"transliteration": "ijaazati"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "أبها.",
+					"english": "Abha.",
+					"transliteration": "abha."
+				}
+			],
+			"targetWords": [
+				"Vacation"
+			]
+		},
+		{
+			"arabic": "الفندق قريب من نص البلد؟",
+			"arabicTashkeel": "الفُندُق قَريب مِن نُص البَلَد؟",
+			"english": "Is the hotel near the city centre?",
+			"transliteration": "il-funduq gareeb min nuss il-balad?",
+			"wordAlignments": [
+				{
+					"arabic": "الفندق",
+					"english": "Is the hotel",
+					"transliteration": "il-funduq"
+				},
+				{
+					"arabic": "قريب",
+					"english": "near",
+					"transliteration": "gareeb"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "نص",
+					"english": "the middle of",
+					"transliteration": "nuss"
+				},
+				{
+					"arabic": "البلد؟",
+					"english": "the city?",
+					"transliteration": "il-balad?"
+				}
+			],
+			"targetWords": [
+				"Hotel"
+			]
+		},
+		{
+			"arabic": "السياح أخدوا صور قدام البيوت القديمة.",
+			"arabicTashkeel": "السُّيّاح أخَدوا صُوَر قُدّام البُيوت القَديمة.",
+			"english": "The tourists took photos in front of the old houses.",
+			"transliteration": "is-suyyaa7 akhadu suwar guddaam il-buyoot il-gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "السياح",
+					"english": "The tourists",
+					"transliteration": "is-suyyaa7"
+				},
+				{
+					"arabic": "أخدوا",
+					"english": "took",
+					"transliteration": "akhadu"
+				},
+				{
+					"arabic": "صور",
+					"english": "photos",
+					"transliteration": "suwar"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "guddaam"
+				},
+				{
+					"arabic": "البيوت",
+					"english": "the houses",
+					"transliteration": "il-buyoot"
+				},
+				{
+					"arabic": "القديمة.",
+					"english": "old.",
+					"transliteration": "il-gadeema."
+				}
+			],
+			"targetWords": [
+				"Tourist",
+				"Photos"
+			]
+		},
+		{
+			"arabic": "إيش هادي الوناسة!",
+			"arabicTashkeel": "إيش هادي الوَناسة!",
+			"english": "What fun!",
+			"transliteration": "eesh haadi il-wanaasa!",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هادي",
+					"english": "this",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "الوناسة!",
+					"english": "fun!",
+					"transliteration": "il-wanaasa!"
+				}
+			],
+			"targetWords": [
+				"Fun"
+			]
+		},
+		{
+			"arabic": "استانستوا أمس؟",
+			"arabicTashkeel": "اِستانَستوا أمس؟",
+			"english": "Did you have a good time yesterday?",
+			"transliteration": "istaanastu ams?",
+			"wordAlignments": [
+				{
+					"arabic": "استانستوا",
+					"english": "Did you have a great time",
+					"transliteration": "istaanastu"
+				},
+				{
+					"arabic": "أمس؟",
+					"english": "yesterday?",
+					"transliteration": "ams?"
+				}
+			],
+			"targetWords": [
+				"We had a great time"
+			]
+		},
+		{
+			"arabic": "أخدت صور كتير في الرحلة.",
+			"arabicTashkeel": "أخَدت صُوَر كِتير في الرِّحلة.",
+			"english": "I took a lot of photos on the trip.",
+			"transliteration": "akhadt suwar kteer fi ir-ri7la.",
+			"wordAlignments": [
+				{
+					"arabic": "أخدت",
+					"english": "I took",
+					"transliteration": "akhadt"
+				},
+				{
+					"arabic": "صور",
+					"english": "photos",
+					"transliteration": "suwar"
+				},
+				{
+					"arabic": "كتير",
+					"english": "a lot",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الرحلة.",
+					"english": "the trip.",
+					"transliteration": "ir-ri7la."
+				}
+			],
+			"targetWords": [
+				"Photos"
+			]
+		},
+		{
+			"arabic": "اتغدينا في الجزيرة.",
+			"arabicTashkeel": "اِتغَدّينا في الجَزيرة.",
+			"english": "We had lunch on the island.",
+			"transliteration": "itghaddeena fi ij-jazeera.",
+			"wordAlignments": [
+				{
+					"arabic": "اتغدينا",
+					"english": "We had lunch",
+					"transliteration": "itghaddeena"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجزيرة.",
+					"english": "the island.",
+					"transliteration": "ij-jazeera."
+				}
+			],
+			"targetWords": [
+				"Island"
+			]
+		},
+		{
+			"arabic": "السينما ترفيه كويس للعيال.",
+			"arabicTashkeel": "السّينَما تَرفيه كْوَيِّس للعِيال.",
+			"english": "The cinema is good entertainment for the kids.",
+			"transliteration": "is-seenama tarfeeh kwayyis lil-3iyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "السينما",
+					"english": "The cinema is",
+					"transliteration": "is-seenama"
+				},
+				{
+					"arabic": "ترفيه",
+					"english": "entertainment",
+					"transliteration": "tarfeeh"
+				},
+				{
+					"arabic": "كويس",
+					"english": "good",
+					"transliteration": "kwayyis"
+				},
+				{
+					"arabic": "للعيال.",
+					"english": "for the kids.",
+					"transliteration": "lil-3iyaal."
+				}
+			],
+			"targetWords": [
+				"Entertainment"
+			]
+		},
+		{
+			"arabic": "الرحلة للعلا أخدت يومين.",
+			"arabicTashkeel": "الرِّحلة لِلعُلا أخَدَت يومين.",
+			"english": "The trip to Al-Ula took two days.",
+			"transliteration": "ir-ri7la lil-3ula akhadat yoomain.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "للعلا",
+					"english": "to Al-Ula",
+					"transliteration": "lil-3ula"
+				},
+				{
+					"arabic": "أخدت",
+					"english": "took",
+					"transliteration": "akhadat"
+				},
+				{
+					"arabic": "يومين.",
+					"english": "two days.",
+					"transliteration": "yoomain."
+				}
+			],
+			"targetWords": [
+				"Trip"
+			]
+		},
+		{
+			"arabic": "بعد الدوام سوينا طلعة على الكورنيش.",
+			"arabicTashkeel": "بَعد الدَّوام سَوّينا طَلعة على الكورنيش.",
+			"english": "After work we went on an outing to the corniche.",
+			"transliteration": "ba3d id-dawaam sawweena tal3a 3ala il-koornaish.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "سوينا",
+					"english": "we did",
+					"transliteration": "sawweena"
+				},
+				{
+					"arabic": "طلعة",
+					"english": "an outing",
+					"transliteration": "tal3a"
+				},
+				{
+					"arabic": "على",
+					"english": "to",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الكورنيش.",
+					"english": "the corniche.",
+					"transliteration": "il-koornaish."
+				}
+			],
+			"targetWords": [
+				"Outing"
+			]
+		},
+		{
+			"arabic": "الجو يجنن للكشتة.",
+			"arabicTashkeel": "الجَو يِجَنِّن للكَشتة.",
+			"english": "The weather is perfect for a picnic.",
+			"transliteration": "ij-jaw yijannin lil-kashta.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather is",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "يجنن",
+					"english": "perfect",
+					"transliteration": "yijannin"
+				},
+				{
+					"arabic": "للكشتة.",
+					"english": "for the picnic.",
+					"transliteration": "lil-kashta."
+				}
+			],
+			"targetWords": [
+				"Picnic"
+			]
+		},
+		{
+			"arabic": "ألعاب الملاهي تخوف.",
+			"arabicTashkeel": "ألعاب المَلاهي تِخَوِّف.",
+			"english": "The rides in the amusement park are scary.",
+			"transliteration": "al3aab il-malaahi tikhawwif.",
+			"wordAlignments": [
+				{
+					"arabic": "ألعاب",
+					"english": "The rides of",
+					"transliteration": "al3aab"
+				},
+				{
+					"arabic": "الملاهي",
+					"english": "the amusement park",
+					"transliteration": "il-malaahi"
+				},
+				{
+					"arabic": "تخوف.",
+					"english": "are scary.",
+					"transliteration": "tikhawwif."
+				}
+			],
+			"targetWords": [
+				"Amusement park"
+			]
+		},
+		{
+			"arabic": "المتحف مسكر يوم الإتنين.",
+			"arabicTashkeel": "المَتحَف مْسَكَّر يوم الإتنين.",
+			"english": "The museum is closed on Monday.",
+			"transliteration": "il-mat7af msakkar yoom il-itneen.",
+			"wordAlignments": [
+				{
+					"arabic": "المتحف",
+					"english": "The museum is",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "مسكر",
+					"english": "closed",
+					"transliteration": "msakkar"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الإتنين.",
+					"english": "Monday.",
+					"transliteration": "il-itneen."
+				}
+			],
+			"targetWords": [
+				"Museum"
+			]
+		},
+		{
+			"arabic": "تمشينا على الكورنيش ساعة.",
+			"arabicTashkeel": "تمَشّينا على الكورنيش ساعة.",
+			"english": "We walked along the corniche for an hour.",
+			"transliteration": "tmashsheena 3ala il-koornaish saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "تمشينا",
+					"english": "We walked",
+					"transliteration": "tmashsheena"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الكورنيش",
+					"english": "the corniche",
+					"transliteration": "il-koornaish"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Corniche"
+			]
+		},
+		{
+			"arabic": "القارب قديم بس آمن.",
+			"arabicTashkeel": "القارِب قَديم بَس آمِن.",
+			"english": "The boat is old but safe.",
+			"transliteration": "il-gaarib gadeem bas aamin.",
+			"wordAlignments": [
+				{
+					"arabic": "القارب",
+					"english": "The boat is",
+					"transliteration": "il-gaarib"
+				},
+				{
+					"arabic": "قديم",
+					"english": "old",
+					"transliteration": "gadeem"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "آمن.",
+					"english": "safe.",
+					"transliteration": "aamin."
+				}
+			],
+			"targetWords": [
+				"Boat"
+			]
+		},
+		{
+			"arabic": "إمتى تبدا إجازتك؟",
+			"arabicTashkeel": "إمتى تِبدا إجازتَك؟",
+			"english": "When does your vacation start?",
+			"transliteration": "imta tibda ijaaztak?",
+			"wordAlignments": [
+				{
+					"arabic": "إمتى",
+					"english": "When",
+					"transliteration": "imta"
+				},
+				{
+					"arabic": "تبدا",
+					"english": "starts",
+					"transliteration": "tibda"
+				},
+				{
+					"arabic": "إجازتك؟",
+					"english": "your vacation?",
+					"transliteration": "ijaaztak?"
+				}
+			],
+			"targetWords": [
+				"Vacation"
+			]
+		},
+		{
+			"arabic": "حجزنا فندق تلات ليالي.",
+			"arabicTashkeel": "حَجَزنا فُندُق تَلات لَيالي.",
+			"english": "We booked a hotel for three nights.",
+			"transliteration": "7ajazna funduq talaat layaali.",
+			"wordAlignments": [
+				{
+					"arabic": "حجزنا",
+					"english": "We booked",
+					"transliteration": "7ajazna"
+				},
+				{
+					"arabic": "فندق",
+					"english": "a hotel",
+					"transliteration": "funduq"
+				},
+				{
+					"arabic": "تلات",
+					"english": "three",
+					"transliteration": "talaat"
+				},
+				{
+					"arabic": "ليالي.",
+					"english": "nights.",
+					"transliteration": "layaali."
+				}
+			],
+			"targetWords": [
+				"Hotel"
+			]
+		},
+		{
+			"arabic": "السايح سألني عن المتحف.",
+			"arabicTashkeel": "السّايِح سألني عَن المَتحَف.",
+			"english": "The tourist asked me about the museum.",
+			"transliteration": "is-saayi7 sa2alni 3an il-mat7af.",
+			"wordAlignments": [
+				{
+					"arabic": "السايح",
+					"english": "The tourist",
+					"transliteration": "is-saayi7"
+				},
+				{
+					"arabic": "سألني",
+					"english": "asked me",
+					"transliteration": "sa2alni"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "المتحف.",
+					"english": "the museum.",
+					"transliteration": "il-mat7af."
+				}
+			],
+			"targetWords": [
+				"Tourist",
+				"Museum"
+			]
+		},
+		{
+			"arabic": "بدون أصحاب ما فيه وناسة.",
+			"arabicTashkeel": "بِدون أصحاب ما فيه وَناسة.",
+			"english": "Without friends there's no fun.",
+			"transliteration": "bidoon as7aab ma feeh wanaasa.",
+			"wordAlignments": [
+				{
+					"arabic": "بدون",
+					"english": "Without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "أصحاب",
+					"english": "friends",
+					"transliteration": "as7aab"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "وناسة.",
+					"english": "fun.",
+					"transliteration": "wanaasa."
+				}
+			],
+			"targetWords": [
+				"Fun"
+			]
+		},
+		{
+			"arabic": "استانسنا في الملاهي.",
+			"arabicTashkeel": "اِستانَسنا في المَلاهي.",
+			"english": "We had a great time at the amusement park.",
+			"transliteration": "istaanasna fi il-malaahi.",
+			"wordAlignments": [
+				{
+					"arabic": "استانسنا",
+					"english": "We had a great time",
+					"transliteration": "istaanasna"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الملاهي.",
+					"english": "the amusement park.",
+					"transliteration": "il-malaahi."
+				}
+			],
+			"targetWords": [
+				"We had a great time",
+				"Amusement park"
+			]
+		},
+		{
+			"arabic": "دي صور قديمة لجدة.",
+			"arabicTashkeel": "دي صُوَر قَديمة لِجِدّة.",
+			"english": "These are old photos of Jeddah.",
+			"transliteration": "di suwar gadeema li-jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "دي",
+					"english": "These are",
+					"transliteration": "di"
+				},
+				{
+					"arabic": "صور",
+					"english": "photos",
+					"transliteration": "suwar"
+				},
+				{
+					"arabic": "قديمة",
+					"english": "old",
+					"transliteration": "gadeema"
+				},
+				{
+					"arabic": "لجدة.",
+					"english": "of Jeddah.",
+					"transliteration": "li-jidda."
+				}
+			],
+			"targetWords": [
+				"Photos"
+			]
+		},
+		{
+			"arabic": "فيه مطعم وبحر في الجزيرة.",
+			"arabicTashkeel": "فيه مَطعَم وبَحر في الجَزيرة.",
+			"english": "There's a restaurant and a beach on the island.",
+			"transliteration": "feeh mat3am w-ba7r fi ij-jazeera.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "مطعم",
+					"english": "a restaurant",
+					"transliteration": "mat3am"
+				},
+				{
+					"arabic": "وبحر",
+					"english": "and a beach",
+					"transliteration": "w-ba7r"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجزيرة.",
+					"english": "the island.",
+					"transliteration": "ij-jazeera."
+				}
+			],
+			"targetWords": [
+				"Island"
+			]
+		},
+		{
+			"arabic": "إيش تسوي للترفيه؟",
+			"arabicTashkeel": "إيش تِسَوّي للتَّرفيه؟",
+			"english": "What do you do for entertainment?",
+			"transliteration": "eesh tisawwi lit-tarfeeh?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "تسوي",
+					"english": "do you do",
+					"transliteration": "tisawwi"
+				},
+				{
+					"arabic": "للترفيه؟",
+					"english": "for entertainment?",
+					"transliteration": "lit-tarfeeh?"
+				}
+			],
+			"targetWords": [
+				"Entertainment"
+			]
+		},
+		{
+			"arabic": "حنروح رحلة أبها الشهر الجاي.",
+			"arabicTashkeel": "حَنِروح رِحلة أبها الشَّهر الجاي.",
+			"english": "We're going on a trip to Abha next month.",
+			"transliteration": "7anirooh ri7la abha ish-shahr ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "حنروح",
+					"english": "We'll go",
+					"transliteration": "7anirooh"
+				},
+				{
+					"arabic": "رحلة",
+					"english": "on a trip",
+					"transliteration": "ri7la"
+				},
+				{
+					"arabic": "أبها",
+					"english": "to Abha",
+					"transliteration": "abha"
+				},
+				{
+					"arabic": "الشهر",
+					"english": "the month",
+					"transliteration": "ish-shahr"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Trip"
+			]
+		},
+		{
+			"arabic": "طلعة في المسا على الكورنيش.",
+			"arabicTashkeel": "طَلعة في المَسا على الكورنيش.",
+			"english": "An evening outing on the corniche.",
+			"transliteration": "tal3a fi il-masa 3ala il-koornaish.",
+			"wordAlignments": [
+				{
+					"arabic": "طلعة",
+					"english": "An outing",
+					"transliteration": "tal3a"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المسا",
+					"english": "the evening",
+					"transliteration": "il-masa"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الكورنيش.",
+					"english": "the corniche.",
+					"transliteration": "il-koornaish."
+				}
+			],
+			"targetWords": [
+				"Outing",
+				"Corniche"
+			]
+		},
+		{
+			"arabic": "كشتة في البر.",
+			"arabicTashkeel": "كَشتة في البَر.",
+			"english": "A picnic in the desert.",
+			"transliteration": "kashta fi il-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "كشتة",
+					"english": "A picnic",
+					"transliteration": "kashta"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البر.",
+					"english": "the desert.",
+					"transliteration": "il-barr."
+				}
+			],
+			"targetWords": [
+				"Picnic"
+			]
+		},
+		{
+			"arabic": "الملاهي زحمة في العيد.",
+			"arabicTashkeel": "المَلاهي زَحمة في العيد.",
+			"english": "The amusement park is crowded on Eid.",
+			"transliteration": "il-malaahi za7ma fi il-3eed.",
+			"wordAlignments": [
+				{
+					"arabic": "الملاهي",
+					"english": "The amusement park",
+					"transliteration": "il-malaahi"
+				},
+				{
+					"arabic": "زحمة",
+					"english": "is crowded",
+					"transliteration": "za7ma"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "العيد.",
+					"english": "Eid.",
+					"transliteration": "il-3eed."
+				}
+			],
+			"targetWords": [
+				"Amusement park"
+			]
+		},
+		{
+			"arabic": "قضينا اليوم كله في المتحف.",
+			"arabicTashkeel": "قَضَّينا اليوم كُلُّه في المَتحَف.",
+			"english": "We spent the whole day at the museum.",
+			"transliteration": "gadhdheena il-yoom kullu fi il-mat7af.",
+			"wordAlignments": [
+				{
+					"arabic": "قضينا",
+					"english": "We spent",
+					"transliteration": "gadhdheena"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "the day",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "كله",
+					"english": "all of it",
+					"transliteration": "kullu"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المتحف.",
+					"english": "the museum.",
+					"transliteration": "il-mat7af."
+				}
+			],
+			"targetWords": [
+				"Museum"
+			]
+		},
+		{
+			"arabic": "رحلة القارب بخمسين ريال.",
+			"arabicTashkeel": "رِحلة القارِب بخَمسين ريال.",
+			"english": "A boat ride costs fifty riyals.",
+			"transliteration": "ri7lat il-gaarib b-khamseen riyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "رحلة",
+					"english": "A trip of",
+					"transliteration": "ri7lat"
+				},
+				{
+					"arabic": "القارب",
+					"english": "the boat",
+					"transliteration": "il-gaarib"
+				},
+				{
+					"arabic": "بخمسين",
+					"english": "is for fifty",
+					"transliteration": "b-khamseen"
+				},
+				{
+					"arabic": "ريال.",
+					"english": "riyals.",
+					"transliteration": "riyaal."
+				}
+			],
+			"targetWords": [
+				"Boat"
+			]
+		},
+		{
+			"arabic": "أحتاج إجازة!",
+			"arabicTashkeel": "أحتاج إجازة!",
+			"english": "I need a vacation!",
+			"transliteration": "a7taaj ijaaza!",
+			"wordAlignments": [
+				{
+					"arabic": "أحتاج",
+					"english": "I need",
+					"transliteration": "a7taaj"
+				},
+				{
+					"arabic": "إجازة!",
+					"english": "a vacation!",
+					"transliteration": "ijaaza!"
+				}
+			],
+			"targetWords": [
+				"Vacation"
+			]
+		},
+		{
+			"arabic": "الفندق فيه مسبح.",
+			"arabicTashkeel": "الفُندُق فيه مَسبَح.",
+			"english": "The hotel has a pool.",
+			"transliteration": "il-funduq feeh masba7.",
+			"wordAlignments": [
+				{
+					"arabic": "الفندق",
+					"english": "The hotel",
+					"transliteration": "il-funduq"
+				},
+				{
+					"arabic": "فيه",
+					"english": "has",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "مسبح.",
+					"english": "a pool.",
+					"transliteration": "masba7."
+				}
+			],
+			"targetWords": [
+				"Hotel"
+			]
+		},
+		{
+			"arabic": "السياح يحبوا الأكل الحجازي.",
+			"arabicTashkeel": "السُّيّاح يِحِبّوا الأكل الحِجازي.",
+			"english": "The tourists like Hijazi food.",
+			"transliteration": "is-suyyaa7 yi7ibbu il-akl il-7ijaazi.",
+			"wordAlignments": [
+				{
+					"arabic": "السياح",
+					"english": "The tourists",
+					"transliteration": "is-suyyaa7"
+				},
+				{
+					"arabic": "يحبوا",
+					"english": "like",
+					"transliteration": "yi7ibbu"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "الحجازي.",
+					"english": "Hijazi.",
+					"transliteration": "il-7ijaazi."
+				}
+			],
+			"targetWords": [
+				"Tourist"
+			]
+		},
+		{
+			"arabic": "الرحلة كانت وناسة بس متعبة.",
+			"arabicTashkeel": "الرِّحلة كانَت وَناسة بَس مِتعِبة.",
+			"english": "The trip was fun but tiring.",
+			"transliteration": "ir-ri7la kaanat wanaasa bas mit3iba.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "وناسة",
+					"english": "fun",
+					"transliteration": "wanaasa"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "متعبة.",
+					"english": "tiring.",
+					"transliteration": "mit3iba."
+				}
+			],
+			"targetWords": [
+				"Fun",
+				"Trip"
+			]
+		},
+		{
+			"arabic": "استانسنا، شكرا!",
+			"arabicTashkeel": "اِستانَسنا، شُكراً!",
+			"english": "We had a great time, thank you!",
+			"transliteration": "istaanasna, shukran!",
+			"wordAlignments": [
+				{
+					"arabic": "استانسنا،",
+					"english": "We had a great time,",
+					"transliteration": "istaanasna,"
+				},
+				{
+					"arabic": "شكرا!",
+					"english": "thank you!",
+					"transliteration": "shukran!"
+				}
+			],
+			"targetWords": [
+				"We had a great time"
+			]
+		},
+		{
+			"arabic": "وريني الصور.",
+			"arabicTashkeel": "وَرّيني الصُّوَر.",
+			"english": "Show me the photos.",
+			"transliteration": "warreeni is-suwar.",
+			"wordAlignments": [
+				{
+					"arabic": "وريني",
+					"english": "Show me",
+					"transliteration": "warreeni"
+				},
+				{
+					"arabic": "الصور.",
+					"english": "the photos.",
+					"transliteration": "is-suwar."
+				}
+			],
+			"targetWords": [
+				"Photos"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Weekend in Al-Ula",
+			"sentences": [
+				{
+					"arabic": "الشهر اللي فات رحنا رحلة العلا.",
+					"arabicTashkeel": "الشَّهر اللي فات رُحنا رِحلة العُلا.",
+					"english": "Last month we went on a trip to Al-Ula.",
+					"transliteration": "ish-shahr illi faat ru7na ri7la il-3ula.",
+					"wordAlignments": [
+						{
+							"arabic": "الشهر",
+							"english": "The month",
+							"transliteration": "ish-shahr"
+						},
+						{
+							"arabic": "اللي",
+							"english": "that",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "فات",
+							"english": "passed",
+							"transliteration": "faat"
+						},
+						{
+							"arabic": "رحنا",
+							"english": "we went",
+							"transliteration": "ru7na"
+						},
+						{
+							"arabic": "رحلة",
+							"english": "on a trip",
+							"transliteration": "ri7la"
+						},
+						{
+							"arabic": "العلا.",
+							"english": "to Al-Ula.",
+							"transliteration": "il-3ula."
+						}
+					]
+				},
+				{
+					"arabic": "نزلنا في فندق صغير قريب من البلدة القديمة.",
+					"arabicTashkeel": "نِزِلنا في فُندُق صُغَيَّر قَريب مِن البَلدة القَديمة.",
+					"english": "We stayed at a small hotel near the old town.",
+					"transliteration": "nizilna fi funduq sughayyar gareeb min il-balda il-gadeema.",
+					"wordAlignments": [
+						{
+							"arabic": "نزلنا",
+							"english": "We stayed",
+							"transliteration": "nizilna"
+						},
+						{
+							"arabic": "في",
+							"english": "at",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "فندق",
+							"english": "a hotel",
+							"transliteration": "funduq"
+						},
+						{
+							"arabic": "صغير",
+							"english": "small",
+							"transliteration": "sughayyar"
+						},
+						{
+							"arabic": "قريب",
+							"english": "near",
+							"transliteration": "gareeb"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "البلدة",
+							"english": "the town",
+							"transliteration": "il-balda"
+						},
+						{
+							"arabic": "القديمة.",
+							"english": "old.",
+							"transliteration": "il-gadeema."
+						}
+					]
+				},
+				{
+					"arabic": "شفنا مقابر الحجر وأخدنا صور كتير.",
+					"arabicTashkeel": "شُفنا مَقابِر الحِجر وأخَدنا صُوَر كِتير.",
+					"english": "We saw the ancient tombs of Hegra and took a lot of photos.",
+					"transliteration": "shufna magaabir il-7ijr w-akhadna suwar kteer.",
+					"wordAlignments": [
+						{
+							"arabic": "شفنا",
+							"english": "We saw",
+							"transliteration": "shufna"
+						},
+						{
+							"arabic": "مقابر",
+							"english": "the tombs of",
+							"transliteration": "magaabir"
+						},
+						{
+							"arabic": "الحجر",
+							"english": "Hegra",
+							"transliteration": "il-7ijr"
+						},
+						{
+							"arabic": "وأخدنا",
+							"english": "and took",
+							"transliteration": "w-akhadna"
+						},
+						{
+							"arabic": "صور",
+							"english": "photos",
+							"transliteration": "suwar"
+						},
+						{
+							"arabic": "كتير.",
+							"english": "a lot.",
+							"transliteration": "kteer."
+						}
+					]
+				},
+				{
+					"arabic": "بالليل قعدنا تحت النجوم في البر.",
+					"arabicTashkeel": "بالليل قَعَدنا تَحت النُّجوم في البَر.",
+					"english": "At night we sat under the stars in the desert.",
+					"transliteration": "bil-lail ga3adna ta7t in-nujoom fi il-barr.",
+					"wordAlignments": [
+						{
+							"arabic": "بالليل",
+							"english": "At night",
+							"transliteration": "bil-lail"
+						},
+						{
+							"arabic": "قعدنا",
+							"english": "we sat",
+							"transliteration": "ga3adna"
+						},
+						{
+							"arabic": "تحت",
+							"english": "under",
+							"transliteration": "ta7t"
+						},
+						{
+							"arabic": "النجوم",
+							"english": "the stars",
+							"transliteration": "in-nujoom"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "البر.",
+							"english": "the desert.",
+							"transliteration": "il-barr."
+						}
+					]
+				},
+				{
+					"arabic": "كانت وناسة، استانسنا مرة!",
+					"arabicTashkeel": "كانَت وَناسة، اِستانَسنا مَرّة!",
+					"english": "It was a lot of fun; we had a great time!",
+					"transliteration": "kaanat wanaasa, istaanasna marra!",
+					"wordAlignments": [
+						{
+							"arabic": "كانت",
+							"english": "It was",
+							"transliteration": "kaanat"
+						},
+						{
+							"arabic": "وناسة،",
+							"english": "fun,",
+							"transliteration": "wanaasa,"
+						},
+						{
+							"arabic": "استانسنا",
+							"english": "we had a great time",
+							"transliteration": "istaanasna"
+						},
+						{
+							"arabic": "مرة!",
+							"english": "a lot!",
+							"transliteration": "marra!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Day in Jeddah",
+			"sentences": [
+				{
+					"arabic": "يوم الجمعة سويت طلعة مع عيلتي.",
+					"arabicTashkeel": "يوم الجُمعة سَوّيت طَلعة مَعَ عيلتي.",
+					"english": "On Friday I went on an outing with my family.",
+					"transliteration": "yoom ij-jum3a sawweet tal3a ma3a 3eelati.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الجمعة",
+							"english": "Friday",
+							"transliteration": "ij-jum3a"
+						},
+						{
+							"arabic": "سويت",
+							"english": "I did",
+							"transliteration": "sawweet"
+						},
+						{
+							"arabic": "طلعة",
+							"english": "an outing",
+							"transliteration": "tal3a"
+						},
+						{
+							"arabic": "مع",
+							"english": "with",
+							"transliteration": "ma3a"
+						},
+						{
+							"arabic": "عيلتي.",
+							"english": "my family.",
+							"transliteration": "3eelati."
+						}
+					]
+				},
+				{
+					"arabic": "الصبح زرنا متحف في البلد.",
+					"arabicTashkeel": "الصُّبح زُرنا مَتحَف في البَلَد.",
+					"english": "In the morning we visited a museum in Al-Balad.",
+					"transliteration": "is-sub7 zurna mat7af fi il-balad.",
+					"wordAlignments": [
+						{
+							"arabic": "الصبح",
+							"english": "In the morning",
+							"transliteration": "is-sub7"
+						},
+						{
+							"arabic": "زرنا",
+							"english": "we visited",
+							"transliteration": "zurna"
+						},
+						{
+							"arabic": "متحف",
+							"english": "a museum",
+							"transliteration": "mat7af"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "البلد.",
+							"english": "Al-Balad.",
+							"transliteration": "il-balad."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين رحنا الملاهي، والعيال استانسوا.",
+					"arabicTashkeel": "بَعدين رُحنا المَلاهي، والعِيال اِستانَسوا.",
+					"english": "Then we went to the amusement park, and the kids had fun.",
+					"transliteration": "ba3dain ru7na il-malaahi, w-il-3iyaal istaanasu.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "رحنا",
+							"english": "we went",
+							"transliteration": "ru7na"
+						},
+						{
+							"arabic": "الملاهي،",
+							"english": "to the amusement park,",
+							"transliteration": "il-malaahi,"
+						},
+						{
+							"arabic": "والعيال",
+							"english": "and the kids",
+							"transliteration": "w-il-3iyaal"
+						},
+						{
+							"arabic": "استانسوا.",
+							"english": "had fun.",
+							"transliteration": "istaanasu."
+						}
+					]
+				},
+				{
+					"arabic": "في المسا اتعشينا على الكورنيش.",
+					"arabicTashkeel": "في المَسا اِتعَشّينا على الكورنيش.",
+					"english": "In the evening we had dinner on the corniche.",
+					"transliteration": "fi il-masa it3ashsheena 3ala il-koornaish.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "In",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "المسا",
+							"english": "the evening",
+							"transliteration": "il-masa"
+						},
+						{
+							"arabic": "اتعشينا",
+							"english": "we had dinner",
+							"transliteration": "it3ashsheena"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الكورنيش.",
+							"english": "the corniche.",
+							"transliteration": "il-koornaish."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is back at work after a long weekend and a Jeddawi colleague asks about their trip around Saudi Arabia.",
+		"studentRole": "An employee learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The curious Jeddawi colleague, who recommends more places to visit.",
+		"goalEnglish": "Describe where you went, where you stayed and what you did, say whether you had fun, and ask for recommendations for your next trip.",
+		"targetWords": [
+			"Trip",
+			"Hotel",
+			"Museum",
+			"Corniche",
+			"Photos",
+			"Fun",
+			"We had a great time",
+			"Vacation"
+		]
+	}
+}
