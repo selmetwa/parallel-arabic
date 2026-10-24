@@ -33,14 +33,13 @@ export const getVoiceConfig = (dialect: string) => {
         stability: 0.9,
         similarity_boost: 0.9
       };
-    // TODO(voices): replace the iraqi/khaleeji/saudi placeholders with ElevenLabs
-    // voice IDs, and set gender/gender2 to match, since IDs don't reveal gender.
+    // ElevenLabs matches these by name, so gender is set explicitly.
     case 'iraqi':
       return {
-        voice: 'Mona', // Placeholder (Fusha voice)
-        voice2: 'Mustafa', // Placeholder
-        gender: 'female' as const,
-        gender2: 'male' as const,
+        voice: 'Sufyan',
+        voice2: 'Zahraa Nazar - Calm, Natural & Friendly',
+        gender: 'male' as const,
+        gender2: 'female' as const,
         speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
@@ -48,7 +47,7 @@ export const getVoiceConfig = (dialect: string) => {
     case 'khaleeji':
       return {
         voice: 'Ghawi',
-        voice2: 'Fatima', // Placeholder
+        voice2: 'Lama - Soft Emotional',
         gender: 'male' as const,
         gender2: 'female' as const,
         speed: 0.9,
@@ -57,10 +56,10 @@ export const getVoiceConfig = (dialect: string) => {
       };
     case 'saudi':
       return {
-        voice: 'Ghawi', // Placeholder (Khaleeji voice)
-        voice2: 'Fatima', // Placeholder
+        voice: 'Nasser AlJubaily - Authentic Saudi Pro',
+        voice2: 'Faisal Ali - Sharp and Confident',
         gender: 'male' as const,
-        gender2: 'female' as const,
+        gender2: 'male' as const,
         speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
