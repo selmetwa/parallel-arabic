@@ -8,6 +8,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createWordsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { supabase } from '$lib/supabaseClient';
+import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -104,28 +105,24 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   const dialectConfigs = {
     'egyptian-arabic': {
       name: 'EGYPTIAN',
-      description: 'Please make sure that the arabic provided is in the EGYPTIAN dialect. Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
       wordList: commonWords,
       commonWordsInstruction: 'Here are 3000 of the most common words in Egyptian Arabic, please use these words:',
       wordListInstruction: 'please only use the words in the common words list.'
     },
     'fusha': {
       name: 'MODERN STANDARD ARABIC (FUSHA)',
-      description: 'Please make sure that the arabic provided is in MODERN STANDARD ARABIC (FUSHA). Use formal Arabic as used in news, literature, and official communications.',
       wordList: [],
       commonWordsInstruction: '',
       wordListInstruction: 'Please use formal Modern Standard Arabic vocabulary.'
     },
     'levantine': {
       name: 'LEVANTINE ARABIC',
-      description: 'Please make sure that the arabic provided is in the LEVANTINE dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
       wordList: [],
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Levantine Arabic conversations.'
     },
     'darija': {
       name: 'MOROCCAN DARIJA',
-      description: 'Please make sure that the arabic provided is in MOROCCAN DARIJA dialect. Use natural conversational Moroccan expressions.',
       wordList: [],
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Moroccan Darija conversations.'
@@ -208,7 +205,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
     ${exclusionSection}
 
-    ${config.description}
 
     Can you make sure that there are no diacritics in the arabic words. Nothing like [أَ إِ آ] please. (THIS is very important)
     
@@ -236,6 +232,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.7,
         maxOutputTokens: 8192,
         responseMimeType: 'application/json',

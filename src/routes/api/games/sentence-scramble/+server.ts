@@ -20,6 +20,7 @@ export const POST: RequestHandler = async (event) => {
 
 	try {
 		const items = await generateValidated({
+			dialect,
 			prompt: sentenceScramblePrompt(dialect, level),
 			schema: createSentenceScrambleSchema(),
 			items: (parsed) => parsed.sentences,

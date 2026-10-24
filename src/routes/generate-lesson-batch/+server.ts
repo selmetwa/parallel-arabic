@@ -8,6 +8,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import fs from 'fs';
 import path from 'path';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 /**
  * Write debug log to file in logs/lessons directory
@@ -166,6 +167,7 @@ async function generateSingleLesson(
 			model: "gemini-2.5-flash",
 			contents: prompt,
 			config: {
+				systemInstruction: getDialectSystemInstruction(effectiveDialect),
 				temperature: 0.7,
 				maxOutputTokens: 32768,
 				responseMimeType: 'application/json',

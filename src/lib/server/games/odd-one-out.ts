@@ -1,4 +1,4 @@
-import { getDialectName, getDialectStyle } from '$lib/data/dialect-rules-v2';
+import { getDialectName } from '$lib/data/dialect-rules-v2';
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { ODD_PATTERNS, type OddPattern, type OddPuzzle } from '$lib/games/odd-one-out';
 import { shuffle } from '$lib/games/shuffle';
@@ -12,8 +12,6 @@ export function oddOneOutPrompt(dialect: string, level: GameLevel): string {
 	return `You are writing "odd one out" puzzles for learners of ${getDialectName(
 		dialect
 	)}, pitched at ${LEVEL_GUIDE[level]}.
-
-${getDialectStyle(dialect)}
 
 Write 12 puzzles. Each has exactly 4 different single Arabic words. Three share one clear pattern; the fourth ("oddWord") does not.
 

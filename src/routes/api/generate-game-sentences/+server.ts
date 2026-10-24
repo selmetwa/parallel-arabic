@@ -8,6 +8,7 @@ import {
   createGameSentencesSchema,
   createListeningComprehensionSchema
 } from '$lib/utils/gemini-schemas';
+import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 // Function to clean unwanted characters from text
@@ -85,19 +86,15 @@ export const POST: RequestHandler = async ({ request }) => {
   const dialectConfigs = {
     'egyptian-arabic': {
       name: 'EGYPTIAN ARABIC',
-      description: 'Make sure all Arabic text is in the EGYPTIAN dialect. Use vocabulary and expressions commonly used in Egypt.'
     },
     'fusha': {
       name: 'MODERN STANDARD ARABIC (FUSHA)',
-      description: 'Make sure all Arabic text is in MODERN STANDARD ARABIC (FUSHA). Use formal Arabic as used in news and literature.'
     },
     'levantine': {
       name: 'LEVANTINE ARABIC',
-      description: 'Make sure all Arabic text is in the LEVANTINE dialect as spoken in Syria, Lebanon, Palestine, and Jordan.'
     },
     'darija': {
       name: 'MOROCCAN DARIJA',
-      description: 'Make sure all Arabic text is in MOROCCAN DARIJA dialect.'
     }
   } as const;
 
@@ -165,7 +162,6 @@ export const POST: RequestHandler = async ({ request }) => {
 
     DIFFICULTY LEVEL: ${getDifficultyDescription(difficulty)}
 
-    ${config.description}
 
     For each sentence:
     1. Create a complete, natural sentence in Arabic
@@ -215,7 +211,6 @@ export const POST: RequestHandler = async ({ request }) => {
 
     DIFFICULTY LEVEL: ${getDifficultyDescription(difficulty)}
 
-    ${config.description}
 
     For each sentence:
     1. Write a complete, natural, everyday sentence in Arabic
@@ -284,6 +279,7 @@ export const POST: RequestHandler = async ({ request }) => {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.8,
         maxOutputTokens: 8192,
         responseMimeType: 'application/json',

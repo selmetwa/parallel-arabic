@@ -43,6 +43,7 @@ export const POST: RequestHandler = async (event) => {
 
 	try {
 		const items = await generateValidated({
+			dialect,
 			prompt: fillTheGapPrompt(dialect, level, saved),
 			schema: createFillTheGapSchema(),
 			items: (parsed) => parsed.items,

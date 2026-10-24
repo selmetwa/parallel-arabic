@@ -7,6 +7,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { textWithTranslationSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { zodToJsonSchema } from 'zod-to-json-schema';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -95,6 +96,7 @@ Respond as JSON with this exact shape:
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.7,
         maxOutputTokens: 1024,
         // Disable thinking — gemini-2.5-flash's thinking tokens count against

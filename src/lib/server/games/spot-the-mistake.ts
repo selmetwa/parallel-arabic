@@ -1,4 +1,4 @@
-import { getDialectName, getDialectStyle } from '$lib/data/dialect-rules-v2';
+import { getDialectName } from '$lib/data/dialect-rules-v2';
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { MISTAKE_TYPES, type MistakeItem, type MistakeType } from '$lib/games/spot-the-mistake';
 import type { GameLevel } from '$lib/games/levels';
@@ -11,8 +11,6 @@ export function spotTheMistakePrompt(dialect: string, level: GameLevel): string 
 	return `You are writing a "spot the mistake" grammar game for learners of ${getDialectName(
 		dialect
 	)}, pitched at ${LEVEL_GUIDE[level]}.
-
-${getDialectStyle(dialect)}
 
 Write 12 items. Each is a natural everyday sentence with EXACTLY ONE wrong word.
 

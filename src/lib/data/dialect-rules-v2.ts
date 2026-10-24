@@ -1,9 +1,9 @@
 /**
- * Per-dialect generation rules for v2 lessons.
+ * Per-dialect generation rules, shared by every Gemini call that writes Arabic.
  *
  * Each block tells Gemini how to write authentic, natural text for that dialect.
- * The shared FORMAT_RULES (clean arabic vs tashkeel, word alignments) are the
- * same for every dialect and appended automatically.
+ * getDialectSystemInstruction() goes in `config.systemInstruction`; the lesson
+ * FORMAT_RULES (clean arabic vs tashkeel, word alignments) stay in the prompt.
  *
  * To support a new dialect: add a display name and a rules block, or rely on the
  * generic fallback. Everything downstream (schema, assembler, player, TTS/STT,
@@ -54,6 +54,75 @@ const DIALECT_PHONOLOGY: Record<string, string> = {
 - Present tense is the imperfect (يذهب); future uses سـ / سوف (سيذهب).`
 };
 
+// MSA words that leak into dialect output, each paired with what a native speaker says.
+const MSA_TO_DIALECT: Record<string, [msa: string, dialect: string][]> = {
+	'egyptian-arabic': [
+		['هذا / هذه', 'ده / دي'],
+		['ماذا', 'إيه'],
+		['لماذا', 'ليه'],
+		['كيف', 'إزاي'],
+		['أين', 'فين'],
+		['الآن', 'دلوقتي'],
+		['سوف / سـ', 'هـ (هروح)'],
+		['ليس / لا (with verbs)', 'مش / ما...ش (مش عارف، ماروحتش)'],
+		['يريد / أريد', 'عايز / عايزة'],
+		['الذي / التي', 'اللي'],
+		['يوجد / لا يوجد', 'فيه / مفيش'],
+		['جداً', 'أوي / خالص'],
+		['أيضاً', 'كمان'],
+		['فقط', 'بس']
+	],
+	levantine: [
+		['هذا / هذه', 'هاد / هاي (هيدا / هيدي)'],
+		['ماذا', 'شو'],
+		['لماذا', 'ليش'],
+		['أين', 'وين'],
+		['الآن', 'هلّق'],
+		['سوف / سـ', 'رح (رح روح)'],
+		['ليس / لا (with verbs)', 'مش / ما (ما بعرف)'],
+		['يريد / أريد', 'بدّو / بدّي'],
+		['الذي / التي', 'اللي'],
+		['يوجد / لا يوجد', 'في / ما في'],
+		['جداً', 'كتير'],
+		['أيضاً', 'كمان'],
+		['فقط', 'بس']
+	],
+	darija: [
+		['هذا / هذه', 'هاد / هادي'],
+		['ماذا', 'شنو / آش'],
+		['لماذا', 'علاش'],
+		['كيف', 'كيفاش'],
+		['أين', 'فين'],
+		['الآن', 'دابا'],
+		['سوف / سـ', 'غادي / غا (غادي نمشي)'],
+		['ليس / لا (with verbs)', 'ماشي / ما...ش (ماعرفتش)'],
+		['يريد / أريد', 'بغا / بغيت'],
+		['الذي / التي', 'اللي'],
+		['يوجد / لا يوجد', 'كاين / ماكاينش'],
+		['جيد', 'مزيان'],
+		['كثير / جداً', 'بزاف'],
+		['فقط', 'غير']
+	]
+};
+
+// Natural sentences, plus one MSA sentence rewritten the way a native speaker says it.
+const DIALECT_EXAMPLES: Record<string, string> = {
+	'egyptian-arabic': `- إنت رايح فين دلوقتي؟ (Where are you going now?)
+- مش عارف أعمل إيه، الشغل كتير أوي النهارده. (I don't know what to do, there's so much work today.)
+- هنروح نتغدى برّه بكرة. (We'll go out for lunch tomorrow.)
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: عايز تاكل إيه دلوقتي؟`,
+
+	levantine: `- وين رايح هلّق؟ (Where are you going now?)
+- ما بعرف شو بدي اعمل، في شغل كتير اليوم. (I don't know what to do, there's so much work today.)
+- رح نروح نتغدى برّا بكرا. (We'll go out for lunch tomorrow.)
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: شو بدك تاكل هلّق؟`,
+
+	darija: `- فين غادي دابا؟ (Where are you going now?)
+- ماعرفتش شنو ندير، كاينة بزاف ديال الخدمة اليوم. (I don't know what to do, there's so much work today.)
+- غادي نتغداو برا غدا. (We'll go out for lunch tomorrow.)
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: آش بغيتي تاكل دابا؟`
+};
+
 /**
  * How to write naturally in a dialect, without the lesson-specific output rules.
  * Used by prompts whose JSON has no tashkeel or word-alignment fields.
@@ -67,7 +136,27 @@ export function getDialectStyle(dialect: string): string {
 	);
 }
 
-/** Returns the full rules block (phonology + shared format) for a dialect. */
-export function getDialectRules(dialect: string): string {
-	return `${getDialectStyle(dialect)}\n${FORMAT_RULES}`.trim();
+/**
+ * The system instruction for any call that writes Arabic in a dialect: the style
+ * guide, the MSA words to avoid, and example sentences. Fusha gets the style only.
+ */
+export function getDialectSystemInstruction(dialect: string): string {
+	const parts = [getDialectStyle(dialect)];
+	const swaps = MSA_TO_DIALECT[dialect];
+	if (swaps) {
+		parts.push(
+			`Never use these Modern Standard Arabic words in Arabic you write; use the everyday ${getDialectName(dialect)} word instead:\n` +
+				swaps.map(([msa, local]) => `- ${msa} → ${local}`).join('\n')
+		);
+	}
+	const examples = DIALECT_EXAMPLES[dialect];
+	if (examples) {
+		parts.push(`Examples of the register to write in:\n${examples}`);
+	}
+	return parts.join('\n\n');
+}
+
+/** Output-format rules for lesson JSON with tashkeel and word-alignment fields. */
+export function getLessonFormatRules(): string {
+	return FORMAT_RULES.trim();
 }

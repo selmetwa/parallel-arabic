@@ -1,4 +1,4 @@
-import { getDialectName, getDialectStyle } from '$lib/data/dialect-rules-v2';
+import { getDialectName } from '$lib/data/dialect-rules-v2';
 import { normalizeArabicText, stripArabicDiacritics } from '$lib/utils/arabic-normalization';
 import { tokenize, type ScrambleSentence } from '$lib/games/sentence-scramble';
 import type { GameLevel } from '$lib/games/levels';
@@ -23,8 +23,6 @@ export function cleanArabic(text: string): string {
 export function sentenceScramblePrompt(dialect: string, level: GameLevel): string {
 	const [min, max] = WORD_RANGE[level];
 	return `You are writing a word-order game for learners of ${getDialectName(dialect)}.
-
-${getDialectStyle(dialect)}
 
 Write 12 different short everyday sentences for ${LEVEL_GUIDE[level]}.
 
