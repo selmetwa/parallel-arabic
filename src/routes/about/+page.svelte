@@ -460,7 +460,7 @@
 	<header class="hero">
 		<div class="hero-grid mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 			<div>
-				<p class="kicker reveal">Egyptian · Levantine · Moroccan · Fusha</p>
+				<p class="kicker reveal">Egyptian · Levantine · Moroccan · Iraqi · Gulf · Saudi · Fusha</p>
 				<h1 class="hero-title reveal" style="animation-delay: 60ms;">
 					Learn the Arabic people <span class="hl">actually speak.</span>
 				</h1>
