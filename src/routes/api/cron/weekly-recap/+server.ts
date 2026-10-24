@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { recordCronRun } from '$lib/server/health-checks';
 import { supabase } from '$lib/supabaseClient';
 import { sendBrandedEmail } from '$lib/server/email';
 import { countActivity } from '$lib/server/activity';
@@ -115,5 +116,6 @@ export const GET: RequestHandler = async ({ request }) => {
 		);
 	}
 
+	await recordCronRun('weekly-recap');
 	return json({ success: true, sent, considered: recipients.length });
 };

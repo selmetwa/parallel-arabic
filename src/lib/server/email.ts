@@ -18,7 +18,7 @@ export function getMailgunClient() {
   return mailgunClient;
 }
 
-const MAILGUN_DOMAIN = 'parallel-arabic.com';
+export const MAILGUN_DOMAIN = 'parallel-arabic.com';
 const FROM_EMAIL = 'Sherif from Parallel Arabic <postmaster@parallel-arabic.com>';
 
 // Admin verification helper

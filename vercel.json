@@ -27,6 +27,10 @@
     {
       "path": "/api/cron/send-streak-reminders?run=18",
       "schedule": "0 18 * * *"
+    },
+    {
+      "path": "/api/cron/health",
+      "schedule": "0 * * * *"
     }
   ]
 }

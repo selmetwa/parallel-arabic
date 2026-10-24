@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { recordCronRun } from '$lib/server/health-checks';
 import { supabase } from '$lib/supabaseClient';
 import { sendOnboardingNudgeEmail } from '$lib/server/email';
 import { firstLesson } from '$lib/helpers/first-lesson';
@@ -64,6 +65,7 @@ export const GET: RequestHandler = async ({ request }) => {
       }
     }
 
+    await recordCronRun('onboarding-nudge');
     return json({ success: true, message: 'Onboarding nudge emails processed', emailsSent });
   } catch (error) {
     console.error('Error in onboarding-nudge cron job:', error);
