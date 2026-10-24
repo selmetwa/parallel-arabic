@@ -28,7 +28,10 @@ export function formatDialectName(dialect: string): string {
 		'egyptian-arabic': 'Egyptian Arabic',
 		levantine: 'Levantine Arabic',
 		darija: 'Moroccan Darija',
-		fusha: 'Modern Standard Arabic'
+		fusha: 'Modern Standard Arabic',
+		iraqi: 'Iraqi Arabic',
+		khaleeji: 'Gulf Arabic',
+		saudi: 'Saudi Arabic'
 	};
 	return dialectMap[dialect] || dialect;
 }
@@ -41,7 +44,10 @@ const DIALECT_SHORT: Record<string, string> = {
 	'egyptian-arabic': 'Egyptian',
 	levantine: 'Levantine',
 	darija: 'Darija',
-	fusha: 'MSA'
+	fusha: 'MSA',
+	iraqi: 'Iraqi',
+	khaleeji: 'Khaleeji',
+	saudi: 'Saudi'
 };
 
 function searchDialectName(dialect: string): string {
