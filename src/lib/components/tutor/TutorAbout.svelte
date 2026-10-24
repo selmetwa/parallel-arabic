@@ -4,7 +4,7 @@
 	const steps = [
 		{
 			title: 'Pick a dialect and a situation',
-			body: 'Egyptian, Levantine or Modern Standard Arabic. Start from a scenario like ordering coffee, or describe your own.'
+			body: 'Egyptian, Levantine, Iraqi, Gulf, Saudi or Modern Standard Arabic. Start from a scenario like ordering coffee, or describe your own.'
 		},
 		{
 			title: 'Learn the key sentences first',

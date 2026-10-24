@@ -8,7 +8,7 @@
 	const game = getGame('dialect-match')!;
 </script>
 
-<!-- Every question covers all four dialects, so there is no dialect to pick. -->
+<!-- Every question covers all seven dialects, so there is no dialect to pick. -->
 <LocalGamePage {game} {data} roundLabel="10 questions" showDialect={false}>
 	{#snippet children({ onPlayAgain })}
 		<DialectMatch

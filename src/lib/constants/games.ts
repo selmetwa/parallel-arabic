@@ -63,7 +63,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Room Hunt - Learn Household Words in 3D | Parallel Arabic',
 			description:
-				'Look around a 3D kitchen, bathroom and restaurant and tap the object that matches the Arabic word. Egyptian, Levantine, Darija and Fusha.'
+				'Look around a 3D kitchen, bathroom and restaurant and tap the object that matches the Arabic word. Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.'
 		},
 		intro:
 			'A vocabulary game set in real rooms. Step into a kitchen, a bathroom or a restaurant and learn what everything is called, a few words at a time, then find each thing when you hear "Where is the…?" in your dialect.',
@@ -122,7 +122,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Conversation Practice: Real-Life Scenes | Parallel Arabic',
 			description:
-				'Everyday Arabic conversations in 3D: a taxi, a market, a doctor, airport check-in, a café and more. In Egyptian, Levantine, Darija and Fusha.'
+				'Everyday Arabic conversations in 3D: a taxi, a market, a doctor, airport check-in, a café and more. In seven dialects, from Egyptian to Fusha.'
 		},
 		intro:
 			'Short spoken conversations in places you will actually be. A taxi driver asks where you are going, a market seller tells you the price, a pharmacist asks what hurts. You answer in Arabic, and what you ask for turns up.',
@@ -146,7 +146,7 @@ export const GAMES: GameInfo[] = [
 			{
 				question: 'Is the Arabic the same in every dialect?',
 				answer:
-					'No. Each scene is written separately for Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic, so the taxi driver in Cairo says 3ala feen? and the one in Casablanca says fin ghadi?'
+					'No. Each scene is written separately for Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic, so the taxi driver in Cairo says 3ala feen? and the one in Casablanca says fin ghadi?'
 			}
 		]
 	},
@@ -170,7 +170,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Word Scramble - Unscramble the Letters | Parallel Arabic',
 			description:
-				'Unscramble Arabic words letter by letter and see how the letters join as you go. Spelling practice in Egyptian, Levantine, Darija and Fusha.'
+				'Unscramble Arabic words letter by letter and see how the letters join as you go. Spelling practice in Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.'
 		},
 		intro:
 			'A spelling game for Arabic words. You get the meaning and the letters, shuffled. Tap them back into order, and the answer joins up as you go, the way Arabic letters connect in real writing.',
@@ -218,7 +218,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Odd One Out - Word Puzzles | Parallel Arabic',
 			description:
-				'Arabic word puzzles: four words, one doesn’t belong. Spot it by meaning, gender, word type or shared root, then read why. Fresh puzzles in four dialects.'
+				'Arabic word puzzles: four words, one doesn’t belong. Spot it by meaning, gender, word type or shared root, then read why. Fresh puzzles in seven dialects.'
 		},
 		intro:
 			'Four Arabic words: three share something, one doesn’t. Sometimes it’s the meaning, sometimes the grammar: gender, singular or plural, or the three-letter root the words are built from. Every answer comes with the reason.',
@@ -265,7 +265,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Spot the Mistake - Arabic Grammar Game | Parallel Arabic',
 			description:
-				'An Arabic grammar game: each sentence has one wrong word. Tap it, see the corrected sentence and learn the rule. Fresh sentences in four dialects.'
+				'An Arabic grammar game: each sentence has one wrong word. Tap it, see the corrected sentence and learn the rule. Fresh sentences in seven dialects.'
 		},
 		intro:
 			'Each Arabic sentence has one word that doesn’t fit: an adjective in the wrong gender, a verb that doesn’t match its subject, a plural that should be singular. Find it, then see the corrected sentence and the rule behind it.',
@@ -284,7 +284,7 @@ export const GAMES: GameInfo[] = [
 			{
 				question: 'Does the grammar change by dialect?',
 				answer:
-					'Some of it does. Verb prefixes and demonstratives differ between Egyptian, Levantine, Darija and Fusha, so the sentences and corrections follow the dialect you pick.'
+					'Some of it does. Verb prefixes and demonstratives differ between Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha, so the sentences and corrections follow the dialect you pick.'
 			},
 			{
 				question: 'What level is Spot the Mistake for?',
@@ -313,7 +313,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Sentence Scramble - Word Order Game | Parallel Arabic',
 			description:
-				'Rebuild Arabic sentences from their scrambled words. Fresh sentences at your level in Egyptian, Levantine, Darija or Fusha, with audio and transliteration.'
+				'Rebuild Arabic sentences from their scrambled words. Fresh sentences at your level in seven Arabic dialects, with audio and transliteration.'
 		},
 		intro:
 			'A word-order game for Arabic. You see what a sentence means in English and its words in a jumble. Tap them into the right order and learn how a sentence in your dialect is put together.',
@@ -361,7 +361,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Memory Game - Match Words to Meanings | Parallel Arabic',
 			description:
-				'A free Arabic memory game: turn over cards and match each word to its English meaning or its recording. Egyptian, Levantine, Darija and Fusha, by theme.'
+				'A free Arabic memory game: turn over cards and match each word to its English meaning or its recording. Seven dialects, by theme.'
 		},
 		intro:
 			'The card game you know, with Arabic words. Twelve cards, six pairs: turn two over at a time and find each Arabic word’s English meaning. Switch to Sound and match the word to its recording instead.',
@@ -409,7 +409,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Vocabulary Speed Quiz - 60-Second Game | Parallel Arabic',
 			description:
-				'How many Arabic words can you check in 60 seconds? A fast true-or-false vocabulary game with streak bonuses, in Egyptian, Levantine, Darija and Fusha.'
+				'How many Arabic words can you check in 60 seconds? A fast true-or-false vocabulary game with streak bonuses, in seven Arabic dialects.'
 		},
 		intro:
 			'Sixty seconds on the clock. You see an Arabic word next to an English meaning: is it right or wrong? Answer as fast as you can. Five right in a row doubles your points, ten triples them, and one miss resets the streak.',
@@ -457,7 +457,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Listening & Spelling Game | Parallel Arabic',
 			description:
-				'Hear a native recording and pick the right Arabic spelling, with near-misses like س and ص or ت and ط to train your ear. Egyptian, Levantine, Darija and Fusha.'
+				'Hear a native recording and pick the right Arabic spelling, with near-misses like س and ص or ت and ط to train your ear. Seven Arabic dialects.'
 		},
 		intro:
 			'A listening game for the letters that sound alike. Hear a word, recorded by a native speaker, and pick its spelling from four. One of the wrong answers is always close: the same word with س for ص, or ك for ق.',
@@ -542,9 +542,9 @@ export const GAMES: GameInfo[] = [
 		slug: 'dialect-match',
 		feature: 'which-arabic-dialect-quiz',
 		name: 'Dialect Match',
-		heading: 'Which Arabic Dialect Is It? Egyptian, Levantine, Darija or Fusha',
+		heading: 'Which Arabic Dialect Is It? Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi or Fusha',
 		emoji: '🌍',
-		tagline: 'Is it Egyptian, Levantine, Moroccan or Fusha? Read it or hear it, and guess.',
+		tagline: 'Is it Egyptian, Levantine, Iraqi, Gulf, Saudi, Moroccan or Fusha? Read it or hear it, and guess.',
 		skills: ['Dialects', 'Listening', 'Vocabulary'],
 		levels: 'Beginner–Advanced',
 		accent: '#6366f1',
@@ -553,20 +553,20 @@ export const GAMES: GameInfo[] = [
 			src: '/images/feature-pages/game-dialect-match.webp',
 			w: 1648,
 			h: 840,
-			alt: 'A Dialect Match question: an Arabic word with its meaning, and buttons for Egyptian, Levantine, Darija and Fusha'
+			alt: 'A Dialect Match question: an Arabic word with its meaning, and buttons for Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha'
 		},
 		seo: {
 			title: 'Which Arabic Dialect Is It? Dialect Quiz Game | Parallel Arabic',
 			description:
-				'Guess the dialect of an Arabic word, phrase or native recording: Egyptian, Levantine, Darija or Fusha. Then see all four side by side.'
+				'Guess the dialect of an Arabic word or recording: Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi or Fusha. Then compare all seven.'
 		},
 		intro:
-			'The same thing is said four different ways. “What?” is إيه in Cairo, شو in Beirut, شنو in Casablanca and ماذا in Fusha. Read a word or hear a recording and say which dialect it is, or pick how one dialect says it. After every answer you see all four.',
+			'The same thing is said many different ways. “What?” is إيه in Cairo, شو in Beirut, شنو in Casablanca and ماذا in Fusha. Read a word or hear a recording and say which dialect it is, or pick how one dialect says it. After every answer you see all four.',
 		howToPlay: [
 			'Press Start. A round is ten questions of three kinds, mixed.',
 			'See a word or phrase and tap its dialect, or listen to a recording and do the same.',
 			'Or get a meaning and a dialect, and pick that dialect’s way of saying it from four.',
-			'After each answer, compare all four dialects and play the recordings.'
+			'After each answer, compare all seven dialects and play the recordings.'
 		],
 		faqs: [
 			{
@@ -582,10 +582,10 @@ export const GAMES: GameInfo[] = [
 			{
 				question: 'Where do the recordings come from?',
 				answer:
-					'Native recordings made for Parallel Arabic’s 3D Room Hunt game, in all four dialects. The rest of the questions are written words and phrases you read.'
+					'Native recordings made for Parallel Arabic’s 3D Room Hunt game, in all seven dialects. The rest of the questions are written words and phrases you read.'
 			},
 			{
-				question: 'Do I need to know all four dialects to play?',
+				question: 'Do I need to know all seven dialects to play?',
 				answer:
 					'No. It works best if you know one, because you learn the others by comparison. Even beginners pick up the giveaways quickly, like Darija’s دابا for “now”.'
 			}
@@ -611,7 +611,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Fill the Gap - Arabic Sentence Game | Parallel Arabic',
 			description:
-				'Pick the missing word in everyday Arabic sentences, then see why it fits. Fresh sentences at your level in Egyptian, Levantine, Darija and Fusha.'
+				'Pick the missing word in everyday Arabic sentences, then see why it fits. Fresh sentences at your level in seven Arabic dialects.'
 		},
 		intro:
 			'Everyday Arabic sentences with one word missing. Read the sentence and its meaning, then pick the word that fits from four. Only one makes sense: the others are the wrong food, the wrong time or the wrong kind of word. Signed in, you can have the sentences built around words you’ve saved.',
@@ -659,7 +659,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Shadowing Game - Repeat and Get a Score | Parallel Arabic',
 			description:
-				'Shadow native Arabic speakers: listen to a real line, repeat it out loud and get a score out of 100. Egyptian, Levantine, Darija and Fusha.'
+				'Shadow native Arabic speakers: listen to a real line, repeat it out loud and get a score out of 100. Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.'
 		},
 		intro:
 			'Shadowing is the simplest speaking drill there is: listen to a native speaker and say exactly what they said, the way they said it. Every line here is a recorded phrase people actually use, from ordering in a café to asking a taxi driver to stop. Say it, and see a score out of 100.',
@@ -712,7 +712,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Verb Conjugation Game | Parallel Arabic',
 			description:
-				'Pick the right form of an Arabic verb for each person and tense, affirmative and negative. 72 verbs in Egyptian, Levantine, Darija and Fusha.'
+				'Pick the right form of an Arabic verb for each person and tense, affirmative and negative. 72 verbs in seven Arabic dialects.'
 		},
 		intro:
 			'Arabic verbs change for every person and tense: عاش is “he lived”, عاشت “she lived”, بيعيش “he lives”. Each question gives you a verb, a person and a tense, and you pick the right form from four. 72 everyday verbs, past, present and future, including the negative.',
@@ -827,7 +827,7 @@ export const GAMES_HUB_FAQS: Faq[] = [
 	{
 		question: 'Which dialects can I play in?',
 		answer:
-			'Egyptian Arabic, Levantine, Moroccan Darija and Modern Standard Arabic. The words and sentences change with the dialect you pick, so you are not learning Fusha vocabulary with an Egyptian accent bolted on.'
+			'Egyptian Arabic, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic. The words and sentences change with the dialect you pick, so you are not learning Fusha vocabulary with an Egyptian accent bolted on.'
 	},
 	{
 		question: 'Do I need to know the Arabic alphabet first?',

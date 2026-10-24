@@ -8,7 +8,10 @@
 		'egyptian-arabic': 'Egyptian Arabic',
 		levantine: 'Levantine Arabic',
 		darija: 'Moroccan Arabic',
-		fusha: 'Modern Standard Arabic'
+		fusha: 'Modern Standard Arabic',
+		iraqi: 'Iraqi Arabic',
+		khaleeji: 'Gulf Arabic',
+		saudi: 'Saudi Arabic'
 	};
 
 	let dialectName = $derived(DIALECT_NAMES[page.data.targetDialect ?? ''] ?? '');

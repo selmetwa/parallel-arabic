@@ -80,12 +80,18 @@ const staticPages = [
 	{ path: '/fusha', priority: '0.9', changefreq: 'weekly' },
 	{ path: '/levantine', priority: '0.9', changefreq: 'weekly' },
 	{ path: '/darija', priority: '0.9', changefreq: 'weekly' },
+	{ path: '/iraqi', priority: '0.9', changefreq: 'weekly' },
+	{ path: '/khaleeji', priority: '0.9', changefreq: 'weekly' },
+	{ path: '/saudi', priority: '0.9', changefreq: 'weekly' },
 
 	// Structured lessons by dialect
 	{ path: '/lessons/structured/egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
 	{ path: '/lessons/structured/fusha', priority: '0.8', changefreq: 'weekly' },
 	{ path: '/lessons/structured/levantine', priority: '0.8', changefreq: 'weekly' },
 	{ path: '/lessons/structured/darija', priority: '0.8', changefreq: 'weekly' },
+	{ path: '/lessons/structured/iraqi', priority: '0.8', changefreq: 'weekly' },
+	{ path: '/lessons/structured/khaleeji', priority: '0.8', changefreq: 'weekly' },
+	{ path: '/lessons/structured/saudi', priority: '0.8', changefreq: 'weekly' },
 
 	// Resources
 	{ path: '/anki-decks', priority: '0.7', changefreq: 'monthly' },

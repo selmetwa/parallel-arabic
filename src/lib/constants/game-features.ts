@@ -23,12 +23,12 @@ const PAGES: GameFeature[] = [
 		name: 'Dialect Match',
 		emoji: '🌍',
 		heading: 'Learn to tell the Arabic dialects apart',
-		lede: 'Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic say everyday things differently. Read or hear a word, guess the dialect, and see all four side by side after every answer.',
+		lede: 'Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic say everyday things differently. Read or hear a word, guess the dialect, and see all seven side by side after every answer.',
 		blurb: 'Guess the dialect from a word or a recording.',
 		seo: {
 			title: 'Tell the Arabic Dialects Apart | Parallel Arabic',
 			description:
-				'Learn how Egyptian, Levantine, Moroccan Darija and Fusha differ by guessing the dialect of everyday words and native recordings, then comparing all four.'
+				'Learn how seven Arabic dialects differ by guessing the dialect of everyday words and native recordings, then comparing all seven.'
 		},
 		hero: shot(
 			'game-dialect-match',
@@ -38,7 +38,7 @@ const PAGES: GameFeature[] = [
 		),
 		sections: [
 			{
-				title: 'Every answer shows all four',
+				title: 'Every answer shows all seven',
 				body: 'Right or wrong, you see how each dialect says the same thing: أنا كويس in Cairo, أنا منيح in Beirut, لاباس in Casablanca and أنا بخير in Fusha. Recorded words have a play button for each.',
 				shot: shot(
 					'dialect-match-reveal',
@@ -71,7 +71,7 @@ const PAGES: GameFeature[] = [
 			{
 				question: 'How many words are in the game?',
 				answer:
-					'Over seventy, from everyday words that differ by dialect, household words with recordings, and common phrases written for all four dialects.'
+					'Over seventy, from everyday words that differ by dialect, household words with recordings, and common phrases written for all seven dialects.'
 			}
 		]
 	},
@@ -85,7 +85,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Learn Arabic Vocabulary with Memory Cards | Parallel Arabic',
 			description:
-				'A memory card game for Arabic vocabulary: match words to their English meaning or their native recording, by theme, in Egyptian, Levantine, Darija or Fusha.'
+				'A memory card game for Arabic vocabulary: match words to their English meaning or their native recording, by theme, in seven Arabic dialects.'
 		},
 		hero: shot(
 			'game-memory-pairs',
@@ -135,7 +135,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Flashcards Against the Clock | Parallel Arabic',
 			description:
-				'Timed Arabic vocabulary practice: does the word match the meaning? As many as you can in 60 seconds, with streak bonuses. Four dialects.'
+				'Timed Arabic vocabulary practice: does the word match the meaning? As many as you can in 60 seconds, with streak bonuses. Seven dialects.'
 		},
 		hero: shot(
 			'game-speed-round',
@@ -242,7 +242,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Listening and Spelling Practice | Parallel Arabic',
 			description:
-				'Train your ear for the Arabic letters that sound alike: hear a native recording and pick the right spelling. No keyboard needed. Four dialects.'
+				'Train your ear for the Arabic letters that sound alike: hear a native recording and pick the right spelling. No keyboard needed. Seven dialects.'
 		},
 		hero: shot(
 			'game-listen-and-spell',
@@ -295,12 +295,12 @@ const PAGES: GameFeature[] = [
 		name: 'Verb Blitz',
 		emoji: '🔁',
 		heading: 'Arabic verb drills: every person, every tense',
-		lede: 'Pick the right form of an everyday verb for a person and a tense, affirmative or negative. 72 verbs with full tables in Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic.',
-		blurb: '72 verbs, every person and tense, in four dialects.',
+		lede: 'Pick the right form of an everyday verb for a person and a tense, affirmative or negative. 72 verbs with full tables in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic.',
+		blurb: '72 verbs, every person and tense, in seven dialects.',
 		seo: {
-			title: 'Arabic Verb Drills in Four Dialects | Parallel Arabic',
+			title: 'Arabic Verb Drills in Seven Dialects | Parallel Arabic',
 			description:
-				'Drill 72 everyday Arabic verbs for every person in the past, present and future, negative included. Egyptian, Levantine, Darija and Fusha.'
+				'Drill 72 everyday Arabic verbs for every person in the past, present and future, negative included. Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.'
 		},
 		hero: shot(
 			'game-verb-blitz',
@@ -357,7 +357,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Fill in the Blank Exercises | Parallel Arabic',
 			description:
-				'Practise Arabic vocabulary in context with fill-in-the-blank sentences at your level, built fresh each round or around your saved words. Four dialects.'
+				'Practise Arabic vocabulary in context with fill-in-the-blank sentences at your level, built fresh each round or around your saved words. Seven dialects.'
 		},
 		hero: shot(
 			'game-fill-the-gap',
@@ -413,7 +413,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Shadowing Practice with Native Audio | Parallel Arabic',
 			description:
-				'The shadowing technique for Arabic: listen to native recordings of everyday phrases, repeat them out loud, and get a pronunciation score. Four dialects.'
+				'The shadowing technique for Arabic: listen to native recordings of everyday phrases, repeat them out loud, and get a pronunciation score. Seven dialects.'
 		},
 		hero: shot(
 			'game-shadowing',
@@ -513,7 +513,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Spelling Practice with Letter Tiles | Parallel Arabic',
 			description:
-				'Practise Arabic spelling by rebuilding words from scrambled letters and watching them join up. Everyday vocabulary by theme in four dialects.'
+				'Practise Arabic spelling by rebuilding words from scrambled letters and watching them join up. Everyday vocabulary by theme in seven dialects.'
 		},
 		hero: shot(
 			'game-word-scramble',
@@ -554,7 +554,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Vocabulary Puzzles: Odd One Out | Parallel Arabic',
 			description:
-				'Sharpen your Arabic vocabulary and grammar with odd-one-out puzzles by meaning, gender, number and root, each explained. Four dialects.'
+				'Sharpen your Arabic vocabulary and grammar with odd-one-out puzzles by meaning, gender, number and root, each explained. Seven dialects.'
 		},
 		hero: shot(
 			'game-odd-one-out',
@@ -601,7 +601,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Grammar Practice: Find the Mistake | Parallel Arabic',
 			description:
-				'Practise Arabic grammar by spotting agreement mistakes in everyday sentences: gender, verb person, number and pronoun endings. Fresh sentences in four dialects.'
+				'Practise Arabic grammar by spotting agreement mistakes in everyday sentences: gender, verb person, number and pronoun endings. Seven dialects.'
 		},
 		hero: shot(
 			'game-spot-the-mistake',
@@ -642,7 +642,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Sentence Building Practice | Parallel Arabic',
 			description:
-				'Learn Arabic word order by rebuilding everyday sentences from scrambled words, with audio and transliteration. Fresh sentences at your level in four dialects.'
+				'Learn Arabic word order by rebuilding everyday sentences from scrambled words, with audio and transliteration. Fresh sentences at your level in seven dialects.'
 		},
 		hero: shot(
 			'game-sentence-scramble',
@@ -724,7 +724,7 @@ const PAGES: GameFeature[] = [
 		seo: {
 			title: 'Arabic Role-Play: Café, Doctor, Airport | Parallel Arabic',
 			description:
-				'Role-play everyday Arabic in 3D: a café, a doctor’s visit, airport check-in, asking the way, a taxi, a market. Four dialects.'
+				'Role-play everyday Arabic in 3D: a café, a doctor’s visit, airport check-in, asking the way, a taxi, a market. Seven dialects.'
 		},
 		hero: shot(
 			'game-scenarios',
@@ -783,7 +783,7 @@ const PAGES: GameFeature[] = [
 			{
 				question: 'Is it the same conversation in every dialect?',
 				answer:
-					'The situations are, the words aren’t. Each line is written separately for Egyptian, Levantine, Moroccan Darija and Fusha.'
+					'The situations are, the words aren’t. Each line is written separately for Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Fusha.'
 			}
 		]
 	}

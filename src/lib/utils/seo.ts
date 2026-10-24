@@ -15,7 +15,15 @@ export interface PageMeta {
 const baseUrl = 'https://www.parallel-arabic.com';
 const defaultImage = `${baseUrl}/images/banner.png`;
 
-const DIALECTS = ['egyptian-arabic', 'levantine', 'darija', 'fusha'] as const;
+const DIALECTS = [
+	'egyptian-arabic',
+	'levantine',
+	'darija',
+	'fusha',
+	'iraqi',
+	'khaleeji',
+	'saudi'
+] as const;
 type DialectSlug = (typeof DIALECTS)[number];
 
 /** "an Egyptian Arabic story" vs "a Levantine Arabic story". */
@@ -183,6 +191,21 @@ const DIALECT_META: Record<DialectSlug, { title: string; description: string }> 
 		title: 'Learn Fusha (Modern Standard Arabic): Lessons & Vocabulary',
 		description:
 			'Learn Fusha, Modern Standard Arabic: the written, formal Arabic of news, books and the Quran. Lessons, graded reading, vocabulary and common phrases with audio.'
+	},
+	iraqi: {
+		title: 'Learn Iraqi Arabic Online (Baghdadi): Lessons, Phrases, Verb Tables',
+		description:
+			'Learn Iraqi Arabic, the Baghdadi dialect of Iraq. Structured lessons from A1 to B2, everyday phrases with audio, verb tables, games and speaking practice.'
+	},
+	khaleeji: {
+		title: 'Learn Gulf Arabic Online (Khaleeji): Lessons, Phrases, Verb Tables',
+		description:
+			'Learn Gulf Arabic (Khaleeji), the Arabic of the UAE, Kuwait, Qatar and Bahrain. Structured lessons from A1 to B2, everyday phrases with audio, verb tables and games.'
+	},
+	saudi: {
+		title: 'Learn Saudi Arabic Online (Hijazi): Lessons, Phrases, Verb Tables',
+		description:
+			'Learn Saudi Arabic in the Hijazi dialect of Jeddah, Mecca and Medina. Structured lessons from A1 to B2, everyday phrases with audio, verb tables and games.'
 	}
 };
 
@@ -228,7 +251,7 @@ function gamePageMeta(slug: string | undefined): PageMeta {
 	if (!game) {
 		return {
 			title: 'Arabic Games | Parallel Arabic',
-			description: 'Free Arabic word games in four dialects.',
+			description: 'Free Arabic word games in seven dialects.',
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
 		};
@@ -270,14 +293,14 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		home: {
 			title: 'Parallel Arabic - Learn Arabic Dialects with an AI Tutor',
 			description:
-				'Learn Egyptian Arabic, Levantine, Moroccan Darija, and Modern Standard Arabic through interactive lessons, graded stories, and spaced repetition. Practise speaking with an AI Arabic tutor.',
+				'Learn Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf and Saudi Arabic, or Modern Standard Arabic, through interactive lessons, graded stories, and spaced repetition. Practise speaking with an AI Arabic tutor.',
 			url: baseUrl,
 			type: 'website'
 		},
 		about: {
 			title: 'About Parallel Arabic - Why We Teach Arabic Dialects',
 			description:
-				'Parallel Arabic teaches the Arabic people actually speak. Read why we built a platform around Egyptian, Levantine, Darija and Fusha side by side, and who makes it.',
+				'Parallel Arabic teaches the Arabic people actually speak. Read why we built a platform around Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha side by side, and who makes it.',
 			url: `${baseUrl}/about`,
 			type: 'website'
 		},
@@ -304,7 +327,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		},
 		game: {
 			title: `Arabic Games Online - ${GAMES.length} Free Word Games to Learn Arabic`,
-			description: `${GAMES.length} Arabic games online: word scramble, memory pairs, a daily word puzzle, listening rounds and 3D scenes. Four dialects, two free rounds each, no sign-up.`,
+			description: `${GAMES.length} Arabic games online: word scramble, memory pairs, a daily word puzzle, listening rounds and 3D scenes. Seven dialects, two free rounds each, no sign-up.`,
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
 		},
@@ -365,7 +388,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 				: 'Arabic Lessons - All Dialects | Parallel Arabic',
 			description: data?.dialect
 				? `Interactive ${dialectName} lessons covering vocabulary, grammar and conversation, ordered so each one builds on the last.`
-				: 'Interactive Arabic lessons for every dialect. Vocabulary, grammar and conversation practice in Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic.',
+				: 'Interactive Arabic lessons for every dialect. Vocabulary, grammar and conversation practice in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic.',
 			url: `${baseUrl}/lessons${data?.dialect ? `/${data.dialect}` : ''}`,
 			type: 'website'
 		},
@@ -394,7 +417,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 				: 'Structured Arabic Curriculum - Beginner to Fluent | Parallel Arabic',
 			description: data?.dialect
 				? `A structured ${dialectName} curriculum that takes you from the alphabet to real conversation, module by module.`
-				: 'A structured Arabic curriculum, module by module, from the alphabet to real conversation. Available for Egyptian, Levantine, Darija and Fusha.',
+				: 'A structured Arabic curriculum, module by module, from the alphabet to real conversation. Available for Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.',
 			url: `${baseUrl}/lessons/structured${data?.dialect ? `/${data.dialect}` : ''}`,
 			type: 'website'
 		},
@@ -473,7 +496,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		conjugations: {
 			title: 'Arabic Verb Conjugation Practice - All Tenses | Parallel Arabic',
 			description:
-				'Practise Arabic verb conjugation across past, present, future and imperative. Drill any verb in Egyptian, Levantine, Moroccan Darija or Modern Standard Arabic.',
+				'Practise Arabic verb conjugation across past, present, future and imperative. Drill any verb in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi or Modern Standard Arabic.',
 			url: `${baseUrl}/conjugations`,
 			type: 'website'
 		},
@@ -658,7 +681,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		},
 		pricing: {
 			title: `Parallel Arabic Pricing - Free Plan or Premium from ${PLANS.annual.perMonth}`,
-			description: `Parallel Arabic is free to start. Premium is ${PLANS.monthly.price} or ${PLANS.annual.price} and unlocks every lesson, story and game in four Arabic dialects, plus the AI Tutor.`,
+			description: `Parallel Arabic is free to start. Premium is ${PLANS.monthly.price} or ${PLANS.annual.price} and unlocks every lesson, story and game in seven varieties of Arabic, plus the AI Tutor.`,
 			url: `${baseUrl}/pricing`,
 			type: 'website'
 		},

@@ -3,7 +3,7 @@
 </script>
 
 <!-- Everything a subscription includes, as screenshot tiles: behind "See everything included". -->
-<p class="trial-dialects">Egyptian, Levantine, Moroccan and MSA all included</p>
+<p class="trial-dialects">Egyptian, Levantine, Moroccan, Iraqi, Gulf, Saudi and MSA all included</p>
 <ul class="trial-grid">
 	{#each FEATURES as feature (feature.slug)}
 		<li class="trial-tile">

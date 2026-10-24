@@ -250,7 +250,7 @@
 		},
 		{
 			title: 'Dialect comparison',
-			body: 'See how any word or phrase is said in all four dialects, side by side.',
+			body: 'See how any word or phrase is said in all seven dialects, side by side.',
 			img: '/images/features-large/dialect-compare.png',
 			w: 787,
 			h: 653,
@@ -345,7 +345,7 @@
 	const faqs = [
 		{
 			q: 'Which Arabic dialects does it support?',
-			a: 'Parallel Arabic currently supports Egyptian Arabic, Levantine Arabic, Moroccan Darija, and Modern Standard Arabic (Fusha). All four are available across stories, vocabulary, lessons, and review.'
+			a: 'Parallel Arabic supports Egyptian Arabic, Levantine Arabic, Moroccan Darija, Iraqi Arabic, Gulf Arabic (Khaleeji), Saudi Arabic (Hijazi) and Modern Standard Arabic (Fusha). All seven are available across lessons, vocabulary, games and review.'
 		},
 		{
 			q: 'Which dialect should I learn?',
@@ -533,7 +533,7 @@
 				</p>
 				<p class="body mt-4">
 					So Parallel Arabic starts with the dialect you want to speak. Fusha is never far away:
-					compare any word across all four dialects in one tap.
+					compare any word across all seven dialects in one tap.
 				</p>
 			</div>
 

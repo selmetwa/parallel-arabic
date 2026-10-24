@@ -76,7 +76,7 @@ export const FEATURES: FeatureInfo[] = [
 			// /tutor ranks for "AI Arabic tutor"; this page stays off those words.
 			title: 'Arabic Conversation Practice: Everyday Role-Plays | Parallel Arabic',
 			description:
-				'Practice speaking Arabic in everyday role-plays like ordering food or taking a taxi, in Egyptian, Levantine or MSA, with replies glossed and your grammar corrected.'
+				'Practice speaking Arabic in everyday role-plays like ordering food or taking a taxi, in Egyptian, Levantine, Iraqi, Gulf, Saudi or MSA, with replies glossed and your grammar corrected.'
 		},
 		hero: shot(
 			'tutor',
@@ -238,7 +238,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Does it work for every dialect?',
 				answer:
-					'Yes. Definitions and comparisons cover Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic.'
+					'Yes. Definitions and comparisons cover Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic.'
 			},
 			{
 				question: 'Where do saved words go?',
@@ -303,7 +303,7 @@ export const FEATURES: FeatureInfo[] = [
 		seo: {
 			title: 'Arabic Spaced Repetition Flashcards - Remember Every Word | Parallel Arabic',
 			description:
-				'Review Arabic vocabulary with spaced repetition. Save words from stories and lessons, rate how well you remembered each one, and let the schedule bring it back at the right time. Four dialects.'
+				'Review Arabic vocabulary with spaced repetition. Save words from stories and lessons, rate how well you remembered each one, and let the schedule bring it back at the right time. Seven dialects.'
 		},
 		hero: shot(
 			'review',
@@ -369,7 +369,7 @@ export const FEATURES: FeatureInfo[] = [
 			},
 			{
 				title: 'Sentences at your level',
-				body: 'Choose Egyptian, Levantine, Darija or Fusha, a level from A1 to C2, and optionally a focus such as past tense, plurals or numbers. You get fresh sentences every time.',
+				body: 'Choose Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi or Fusha, a level from A1 to C2, and optionally a focus such as past tense, plurals or numbers. You get fresh sentences every time.',
 				shot: shot(
 					'speak',
 					2048,
@@ -409,7 +409,7 @@ export const FEATURES: FeatureInfo[] = [
 		seo: {
 			title: 'Arabic Writing Practice - Type Sentences in Arabic Script | Parallel Arabic',
 			description:
-				'Practice writing Arabic with sentences made for your level. Type on a built-in Arabic keyboard, reorder scrambled words or trace letter by letter, in Egyptian, Levantine, Darija or Fusha.'
+				'Practice writing Arabic with sentences made for your level. Type on a built-in Arabic keyboard, reorder scrambled words or trace letter by letter, in seven Arabic dialects.'
 		},
 		hero: shot(
 			'sentences-trace',
@@ -465,7 +465,7 @@ export const FEATURES: FeatureInfo[] = [
 		seo: {
 			title: 'Arabic Verb Conjugation Practice - Drills & Tables | Parallel Arabic',
 			description:
-				'Practice conjugating Arabic verbs in the past, present and future tense, affirmative and negative. Quizzes and reference tables for Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic.'
+				'Practice conjugating Arabic verbs in the past, present and future tense, affirmative and negative. Quizzes and reference tables for Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic.'
 		},
 		hero: shot(
 			'conjugations',
@@ -480,7 +480,7 @@ export const FEATURES: FeatureInfo[] = [
 			},
 			{
 				title: 'Any verb, any dialect',
-				body: 'Type a verb in English, such as “to write” or “to go”, and get its full conjugation in Egyptian, Levantine, Darija or Fusha.'
+				body: 'Type a verb in English, such as “to write” or “to go”, and get its full conjugation in Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi or Fusha.'
 			},
 			{
 				title: 'Full reference tables',
@@ -510,18 +510,18 @@ export const FEATURES: FeatureInfo[] = [
 		name: 'Dialect Comparison',
 		emoji: '🌍',
 		heading: 'Compare Arabic dialects side by side',
-		lede: 'See how any word is said in Egyptian, Levantine, Moroccan Darija and Fusha at once. Learn one dialect well, and understand speakers of the others.',
-		blurb: 'One word in Egyptian, Levantine, Darija and Fusha at once.',
+		lede: 'See how any word is said in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Fusha at once. Learn one dialect well, and understand speakers of the others.',
+		blurb: 'One word in Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha at once.',
 		seo: {
 			title: 'Compare Arabic Dialects - Egyptian, Levantine, Darija & Fusha | Parallel Arabic',
 			description:
-				'Compare any Arabic word or phrase across Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic, with audio and transliteration. Plus side-by-side guides to how each pair of dialects differs.'
+				'Compare any Arabic word or phrase across Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic, with audio and transliteration. Plus side-by-side guides to how each pair of dialects differs.'
 		},
 		hero: shot(
 			'compare-modal',
 			2200,
 			1800,
-			'One word compared across Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic, with audio for each'
+			'One word compared across Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic, with audio for each'
 		),
 		sections: [
 			{
@@ -674,7 +674,7 @@ export const FEATURES: FeatureInfo[] = [
 		seo: {
 			title: 'Learn Arabic in 3D: Home Words & Ordering Food | Parallel Arabic',
 			description:
-				'Learn the Arabic for things in the kitchen, bathroom and restaurant inside a 3D room, then order a meal from a waiter. Egyptian, Levantine, Darija and Fusha.'
+				'Learn the Arabic for things in the kitchen, bathroom and restaurant inside a 3D room, then order a meal from a waiter. Seven Arabic dialects.'
 		},
 		hero: shot(
 			'room-hunt-order-served',
@@ -746,8 +746,8 @@ export const FEATURES: FeatureInfo[] = [
 				)
 			},
 			{
-				title: 'Four dialects, every word recorded',
-				body: 'Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic each use their own words: the fridge is a tallaga in Cairo and a barrad in Beirut. Every word, question and line of the waiter has a recording.'
+				title: 'Seven dialects, every word recorded',
+				body: 'Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic each use their own words: the fridge is a tallaga in Cairo and a barrad in Beirut. Every word, question and line of the waiter has a recording.'
 			},
 			{
 				title: 'Easy, Normal or Hard',
@@ -785,12 +785,12 @@ export const FEATURES: FeatureInfo[] = [
 		name: 'Games',
 		emoji: '🎮',
 		heading: 'Practice Arabic spelling, vocabulary and grammar by playing',
-		lede: 'Short games for vocabulary, spelling, listening, speaking and grammar, in Egyptian, Levantine, Moroccan Darija and Fusha. A round takes a few minutes, and every game has free rounds with no account needed.',
-		blurb: 'Word scramble, odd one out and more, in four dialects.',
+		lede: 'Short games for vocabulary, spelling, listening, speaking and grammar, in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Fusha. A round takes a few minutes, and every game has free rounds with no account needed.',
+		blurb: 'Word scramble, odd one out and more, in seven dialects.',
 		seo: {
 			title: 'Learn Arabic by Playing: Spelling & Grammar Practice | Parallel Arabic',
 			description:
-				'Practice Arabic by playing: unscramble words and sentences, spot the odd one out or the grammar mistake, or quiz yourself. In Egyptian, Levantine, Darija and Fusha.'
+				'Practice Arabic by playing: unscramble words and sentences, spot the odd one out or the grammar mistake, or quiz yourself. In Seven Arabic dialects.'
 		},
 		hero: shot(
 			'games',

@@ -9,8 +9,8 @@
 <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
 	<h1 class="title">Features</h1>
 	<p class="lede">
-		Everything Parallel Arabic does to help you learn Egyptian, Levantine, Moroccan Darija and
-		Modern Standard Arabic: read, listen, speak, write and review.
+		Everything Parallel Arabic does to help you learn Egyptian, Levantine, Moroccan Darija, Iraqi,
+		Gulf, Saudi and Modern Standard Arabic: read, listen, speak, write and review.
 	</p>
 	<div class="grid-wrap">
 		<FeatureGrid links={tools} />

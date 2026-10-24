@@ -1,6 +1,6 @@
 /**
  * Everything Dialect Match can ask about: the hand-written sets, Room Hunt's
- * recorded words, and the phrasebook entries written for all four dialects.
+ * recorded words, and the phrasebook entries written for every game dialect.
  * All of it is our own content, so it can go into the page.
  */
 import sets from '$lib/data/dialect-match/sets.json';

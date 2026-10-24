@@ -105,7 +105,7 @@
 	<section class="band">
 		<h2 class="h2">Try it in your dialect</h2>
 		<p class="body">
-			Egyptian, Levantine, Moroccan Darija or Modern Standard Arabic. Free to start, no card
+			Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi or Modern Standard Arabic. Free to start, no card
 			needed.
 		</p>
 		<div class="actions actions--center">

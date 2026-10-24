@@ -82,7 +82,7 @@
   }
 
   const features = [
-    { icon: '🌍', title: 'Multiple Dialects', desc: 'Egyptian, Levantine, Moroccan & Fusha' },
+    { icon: '🌍', title: 'Multiple Dialects', desc: 'Egyptian, Levantine, Gulf, Moroccan & more' },
     { icon: '📚', title: 'Lessons', desc: 'Customized lessons for all levels' },
     { icon: '🧠', title: 'Spaced Repetition', desc: 'Never forget a word again' },
     { icon: '📖', title: 'Stories & Audio', desc: 'Native audio pronunciation' },

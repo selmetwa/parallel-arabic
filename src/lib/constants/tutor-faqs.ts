@@ -15,7 +15,7 @@ export const TUTOR_FAQS = [
 	{
 		question: 'Which Arabic dialects can I speak with it?',
 		answer:
-			'Egyptian Arabic, Levantine Arabic and Modern Standard Arabic. The tutor stays in the dialect you choose, so an Egyptian conversation uses Egyptian words and grammar rather than Fusha with an accent.'
+			'Egyptian, Levantine, Iraqi, Gulf and Saudi Arabic, and Modern Standard Arabic. The tutor stays in the dialect you choose, so an Egyptian conversation uses Egyptian words and grammar rather than Fusha with an accent.'
 	},
 	{
 		question: 'Is the AI Arabic tutor free?',
