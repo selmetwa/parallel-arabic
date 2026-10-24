@@ -80,11 +80,41 @@ export const PRONOUNS: Record<GameDialect, Record<Person, [string, string]>> = {
 		ehna: ['نحن', 'na7nu'],
 		entu: ['أنتم', 'antum'],
 		homma: ['هم', 'hum']
+	},
+	iraqi: {
+		ana: ['آني', 'aani'],
+		enta: ['إنت', 'inta'],
+		enti: ['إنتي', 'inti'],
+		howa: ['هو', 'huwwa'],
+		heya: ['هي', 'hiyya'],
+		ehna: ['إحنا', 'i7na'],
+		entu: ['إنتو', 'intu'],
+		homma: ['هم', 'humma']
+	},
+	khaleeji: {
+		ana: ['أنا', 'ana'],
+		enta: ['إنت', 'inta'],
+		enti: ['إنتي', 'inti'],
+		howa: ['هو', 'huwa'],
+		heya: ['هي', 'hiya'],
+		ehna: ['إحنا', 'i7na'],
+		entu: ['إنتو', 'intu'],
+		homma: ['هم', 'hum']
+	},
+	saudi: {
+		ana: ['أنا', 'ana'],
+		enta: ['إنت', 'inta'],
+		enti: ['إنتي', 'inti'],
+		howa: ['هوّا', 'huwwa'],
+		heya: ['هيّا', 'hiyya'],
+		ehna: ['إحنا', 'i7na'],
+		entu: ['إنتو', 'intu'],
+		homma: ['همّا', 'humma']
 	}
 };
 
 /**
- * Egyptian, Levantine and Darija are written without tashkeel, so "I opened"
+ * Every dialect but Fusha is written without tashkeel, so "I opened"
  * and "you opened" can look the same. Two options never look the same.
  */
 const looks = (arabic: string) => stripArabicDiacritics(arabic).replace(/\s+/g, ' ').trim();

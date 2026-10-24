@@ -13,7 +13,7 @@ export const hotel: Scenario = {
 	emoji: '🛎️',
 	blurb: 'Give your name and how many nights, get your key, ask about breakfast.',
 	npcRole: 'Receptionist',
-	npcGender: { 'egyptian-arabic': 'f', levantine: 'f', darija: 'm', fusha: 'm' },
+	npcGender: { 'egyptian-arabic': 'f', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'm', khaleeji: 'm', saudi: 'm' },
 	doneHeading: 'Checked in, in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

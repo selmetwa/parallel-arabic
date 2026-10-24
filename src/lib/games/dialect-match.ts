@@ -4,6 +4,9 @@ import { normalizeArabicTextLight, stripArabicDiacritics } from '$lib/utils/arab
 
 export const QUESTIONS_PER_ROUND = 10;
 
+/** How many forms a "find" question shows. */
+export const FIND_OPTIONS = 4;
+
 export interface DialectForm {
 	arabic: string;
 	transliteration: string;
@@ -43,6 +46,28 @@ export function allDistinct(item: DialectItem): boolean {
 }
 
 /**
+ * The target dialect plus others whose forms are all written differently, so
+ * exactly one option is right. Neighbouring dialects often share a word, so
+ * this picks a few rather than requiring every dialect to differ.
+ */
+export function findOptions(
+	item: DialectItem,
+	target: GameDialect,
+	random: () => number = Math.random
+): GameDialect[] | null {
+	const seen = new Set([key(item.forms[target].arabic)]);
+	const picked: GameDialect[] = [target];
+	for (const d of shuffle(GAME_DIALECTS, random)) {
+		if (picked.length === FIND_OPTIONS) break;
+		const k = key(item.forms[d].arabic);
+		if (seen.has(k)) continue;
+		seen.add(k);
+		picked.push(d);
+	}
+	return picked.length === FIND_OPTIONS ? shuffle(picked, random) : null;
+}
+
+/**
  * A round of mixed questions. Each item is used once, and a question is only
  * asked where its answer is unambiguous: a "which dialect" form must be
  * written differently everywhere else, and "find" needs four different forms.
@@ -62,8 +87,9 @@ export function buildRound(
 			const kind = kinds[(k + t) % kinds.length];
 			const dialects = shuffle(GAME_DIALECTS, random);
 			if (kind === 'find') {
-				if (!allDistinct(item)) continue;
-				out.push({ kind, item, dialect: dialects[0], options: shuffle(GAME_DIALECTS, random) });
+				const options = findOptions(item, dialects[0], random);
+				if (!options) continue;
+				out.push({ kind, item, dialect: dialects[0], options });
 			} else {
 				const dialect = dialects.find(
 					(d) => isDistinct(item, d) && (kind === 'which' || item.forms[d].audioUrl)

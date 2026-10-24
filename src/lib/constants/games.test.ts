@@ -1,3 +1,4 @@
+import { readdirSync } from 'fs';
 import { describe, expect, it } from 'vitest';
 import { GAMES, GAMES_HUB_FAQS, GAME_LEVEL_GROUPS, QUIZ_CARD, getGame, levelGroup } from './games';
 import { QUIZ_FAQS } from './game-content';
@@ -63,7 +64,14 @@ describe('game themes', () => {
 		'egyptian-arabic': sections.map((s) => s.path),
 		levantine: levantineSections.map((s) => s.path),
 		darija: darijaSections.map((s) => s.path),
-		fusha: fushaSections.map((s) => s.path)
+		fusha: fushaSections.map((s) => s.path),
+		// Seeded from content/words/<dialect>/<category>.txt (scripts/seed-new-dialect-words.ts).
+		...Object.fromEntries(
+			['iraqi', 'khaleeji', 'saudi'].map((d) => [
+				d,
+				readdirSync(`content/words/${d}`).map((f) => f.replace(/\.txt$/, ''))
+			])
+		)
 	};
 
 	it('only points at categories that exist for the dialect', () => {
