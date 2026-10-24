@@ -1,0 +1,2231 @@
+{
+	"vocab": [
+		{
+			"arabic": "خلينا",
+			"arabicTashkeel": "خَلّينا",
+			"english": "Let's",
+			"transliteration": "khalleena",
+			"wordAlignments": [
+				{
+					"arabic": "خلينا",
+					"english": "Let us",
+					"transliteration": "khalleena"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ليش ما",
+			"arabicTashkeel": "ليش ما",
+			"english": "Why don't we",
+			"transliteration": "laish ma",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "ما",
+					"english": "don't",
+					"transliteration": "ma"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أقترح",
+			"arabicTashkeel": "أقتِرِح",
+			"english": "I suggest",
+			"transliteration": "agtiri7",
+			"wordAlignments": [
+				{
+					"arabic": "أقترح",
+					"english": "I suggest",
+					"transliteration": "agtiri7"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إقتراح",
+			"arabicTashkeel": "إقتِراح",
+			"english": "Suggestion",
+			"transliteration": "igtiraa7",
+			"wordAlignments": [
+				{
+					"arabic": "إقتراح",
+					"english": "Suggestion",
+					"transliteration": "igtiraa7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إيش رأيك لو",
+			"arabicTashkeel": "إيش رأيَك لو",
+			"english": "How about if",
+			"transliteration": "eesh ra2yak law",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أحسن لو",
+			"arabicTashkeel": "أحسَن لو",
+			"english": "It's better if",
+			"transliteration": "a7san law",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بدل",
+			"arabicTashkeel": "بَدَل",
+			"english": "Instead of",
+			"transliteration": "badal",
+			"wordAlignments": [
+				{
+					"arabic": "بدل",
+					"english": "Instead of",
+					"transliteration": "badal"
+				}
+			],
+			"partOfSpeech": "preposition"
+		},
+		{
+			"arabic": "بسبب",
+			"arabicTashkeel": "بسَبَب",
+			"english": "Because of",
+			"transliteration": "b-sabab",
+			"wordAlignments": [
+				{
+					"arabic": "بسبب",
+					"english": "Because of",
+					"transliteration": "b-sabab"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "عشان",
+			"arabicTashkeel": "عَشان",
+			"english": "So that",
+			"transliteration": "3ashaan",
+			"wordAlignments": [
+				{
+					"arabic": "عشان",
+					"english": "So that",
+					"transliteration": "3ashaan"
+				}
+			],
+			"partOfSpeech": "conjunction"
+		},
+		{
+			"arabic": "عشان خاطر",
+			"arabicTashkeel": "عَشان خاطِر",
+			"english": "For the sake of",
+			"transliteration": "3ashaan khaatir",
+			"wordAlignments": [
+				{
+					"arabic": "عشان",
+					"english": "For",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "خاطر",
+					"english": "the sake of",
+					"transliteration": "khaatir"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "عشان كدا",
+			"arabicTashkeel": "عَشان كِدا",
+			"english": "That's why",
+			"transliteration": "3ashaan kida",
+			"wordAlignments": [
+				{
+					"arabic": "عشان",
+					"english": "Because of",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "كدا",
+					"english": "this",
+					"transliteration": "kida"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "سبب",
+			"arabicTashkeel": "سَبَب",
+			"english": "Reason",
+			"transliteration": "sabab",
+			"wordAlignments": [
+				{
+					"arabic": "سبب",
+					"english": "Reason",
+					"transliteration": "sabab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "منطقي",
+			"arabicTashkeel": "مَنطِقي",
+			"english": "Logical",
+			"transliteration": "mantigi",
+			"wordAlignments": [
+				{
+					"arabic": "منطقي",
+					"english": "Logical",
+					"transliteration": "mantigi"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "يستاهل",
+			"arabicTashkeel": "يِستاهِل",
+			"english": "It's worth it",
+			"transliteration": "yistaahil",
+			"wordAlignments": [
+				{
+					"arabic": "يستاهل",
+					"english": "It deserves",
+					"transliteration": "yistaahil"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "حجة",
+			"arabicTashkeel": "حِجّة",
+			"english": "Excuse",
+			"transliteration": "7ijja",
+			"wordAlignments": [
+				{
+					"arabic": "حجة",
+					"english": "Excuse",
+					"transliteration": "7ijja"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "خلينا نروح البحر.",
+			"arabicTashkeel": "خَلّينا نِروح البَحر.",
+			"english": "Let's go to the beach.",
+			"transliteration": "khalleena nirooh il-ba7r.",
+			"wordAlignments": [
+				{
+					"arabic": "خلينا",
+					"english": "Let us",
+					"transliteration": "khalleena"
+				},
+				{
+					"arabic": "نروح",
+					"english": "go",
+					"transliteration": "nirooh"
+				},
+				{
+					"arabic": "البحر.",
+					"english": "to the beach.",
+					"transliteration": "il-ba7r."
+				}
+			],
+			"targetWords": [
+				"Let's"
+			]
+		},
+		{
+			"arabic": "ليش ما ناكل برا؟",
+			"arabicTashkeel": "ليش ما ناكُل بَرّا؟",
+			"english": "Why don't we eat out?",
+			"transliteration": "laish ma naakul barra?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "ما",
+					"english": "don't",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "ناكل",
+					"english": "we eat",
+					"transliteration": "naakul"
+				},
+				{
+					"arabic": "برا؟",
+					"english": "outside?",
+					"transliteration": "barra?"
+				}
+			],
+			"targetWords": [
+				"Why don't we"
+			]
+		},
+		{
+			"arabic": "أقترح نروح بدري.",
+			"arabicTashkeel": "أقتِرِح نِروح بَدري.",
+			"english": "I suggest we go early.",
+			"transliteration": "agtiri7 nirooh badri.",
+			"wordAlignments": [
+				{
+					"arabic": "أقترح",
+					"english": "I suggest",
+					"transliteration": "agtiri7"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nirooh"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"I suggest"
+			]
+		},
+		{
+			"arabic": "عندي إقتراح.",
+			"arabicTashkeel": "عِندي إقتِراح.",
+			"english": "I have a suggestion.",
+			"transliteration": "3indi igtiraa7.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "إقتراح.",
+					"english": "a suggestion.",
+					"transliteration": "igtiraa7."
+				}
+			],
+			"targetWords": [
+				"Suggestion"
+			]
+		},
+		{
+			"arabic": "إيش رأيك لو نسافر أبها؟",
+			"arabicTashkeel": "إيش رأيَك لو نِسافِر أبها؟",
+			"english": "How about if we travel to Abha?",
+			"transliteration": "eesh ra2yak law nisaafir abha?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "نسافر",
+					"english": "we travel",
+					"transliteration": "nisaafir"
+				},
+				{
+					"arabic": "أبها؟",
+					"english": "to Abha?",
+					"transliteration": "abha?"
+				}
+			],
+			"targetWords": [
+				"How about if"
+			]
+		},
+		{
+			"arabic": "أحسن لو ترتاح.",
+			"arabicTashkeel": "أحسَن لو تِرتاح.",
+			"english": "It's better if you rest.",
+			"transliteration": "a7san law tirtaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "ترتاح.",
+					"english": "you rest.",
+					"transliteration": "tirtaa7."
+				}
+			],
+			"targetWords": [
+				"It's better if"
+			]
+		},
+		{
+			"arabic": "اشرب موية بدل البيبسي.",
+			"arabicTashkeel": "اِشرَب مُويَة بَدَل البيبسي.",
+			"english": "Drink water instead of soda.",
+			"transliteration": "ishrab mooya badal il-beebsi.",
+			"wordAlignments": [
+				{
+					"arabic": "اشرب",
+					"english": "Drink",
+					"transliteration": "ishrab"
+				},
+				{
+					"arabic": "موية",
+					"english": "water",
+					"transliteration": "mooya"
+				},
+				{
+					"arabic": "بدل",
+					"english": "instead of",
+					"transliteration": "badal"
+				},
+				{
+					"arabic": "البيبسي.",
+					"english": "the Pepsi.",
+					"transliteration": "il-beebsi."
+				}
+			],
+			"targetWords": [
+				"Instead of"
+			]
+		},
+		{
+			"arabic": "اتأخرنا بسبب الزحمة.",
+			"arabicTashkeel": "اِتأخَّرنا بسَبَب الزَّحمة.",
+			"english": "We were late because of the traffic.",
+			"transliteration": "it2akhkharna b-sabab iz-za7ma.",
+			"wordAlignments": [
+				{
+					"arabic": "اتأخرنا",
+					"english": "We were late",
+					"transliteration": "it2akhkharna"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "الزحمة.",
+					"english": "the traffic.",
+					"transliteration": "iz-za7ma."
+				}
+			],
+			"targetWords": [
+				"Because of"
+			]
+		},
+		{
+			"arabic": "أذاكر عشان أنجح.",
+			"arabicTashkeel": "أذاكِر عَشان أنجَح.",
+			"english": "I study so that I pass.",
+			"transliteration": "azaakir 3ashaan anja7.",
+			"wordAlignments": [
+				{
+					"arabic": "أذاكر",
+					"english": "I study",
+					"transliteration": "azaakir"
+				},
+				{
+					"arabic": "عشان",
+					"english": "so that",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "أنجح.",
+					"english": "I pass.",
+					"transliteration": "anja7."
+				}
+			],
+			"targetWords": [
+				"So that"
+			]
+		},
+		{
+			"arabic": "سويتها عشان خاطرك.",
+			"arabicTashkeel": "سَوّيتها عَشان خاطرَك.",
+			"english": "I did it for your sake.",
+			"transliteration": "sawweetaha 3ashaan khaatrak.",
+			"wordAlignments": [
+				{
+					"arabic": "سويتها",
+					"english": "I did it",
+					"transliteration": "sawweetaha"
+				},
+				{
+					"arabic": "عشان",
+					"english": "for",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "خاطرك.",
+					"english": "your sake.",
+					"transliteration": "khaatrak."
+				}
+			],
+			"targetWords": [
+				"For the sake of"
+			]
+		},
+		{
+			"arabic": "كانت تمطر، عشان كدا قعدنا في البيت.",
+			"arabicTashkeel": "كانَت تِمَطِّر، عَشان كِدا قَعَدنا في البيت.",
+			"english": "It was raining, that's why we stayed home.",
+			"transliteration": "kaanat timattir, 3ashaan kida ga3adna fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "كانت",
+					"english": "It was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "تمطر،",
+					"english": "raining,",
+					"transliteration": "timattir,"
+				},
+				{
+					"arabic": "عشان",
+					"english": "because of",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "كدا",
+					"english": "this",
+					"transliteration": "kida"
+				},
+				{
+					"arabic": "قعدنا",
+					"english": "we stayed",
+					"transliteration": "ga3adna"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"That's why"
+			]
+		},
+		{
+			"arabic": "إيش السبب؟",
+			"arabicTashkeel": "إيش السَّبَب؟",
+			"english": "What's the reason?",
+			"transliteration": "eesh is-sabab?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "السبب؟",
+					"english": "the reason?",
+					"transliteration": "is-sabab?"
+				}
+			],
+			"targetWords": [
+				"Reason"
+			]
+		},
+		{
+			"arabic": "هادا منطقي.",
+			"arabicTashkeel": "هادا مَنطِقي.",
+			"english": "That's logical.",
+			"transliteration": "haada mantigi.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "منطقي.",
+					"english": "logical.",
+					"transliteration": "mantigi."
+				}
+			],
+			"targetWords": [
+				"Logical"
+			]
+		},
+		{
+			"arabic": "الرحلة تستاهل.",
+			"arabicTashkeel": "الرِّحلة تِستاهِل.",
+			"english": "The trip is worth it.",
+			"transliteration": "ir-ri7la tistaahil.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "تستاهل.",
+					"english": "deserves it.",
+					"transliteration": "tistaahil."
+				}
+			],
+			"targetWords": [
+				"It's worth it"
+			]
+		},
+		{
+			"arabic": "دي حجة بس.",
+			"arabicTashkeel": "دي حِجّة بَس.",
+			"english": "That's just an excuse.",
+			"transliteration": "di 7ijja bas.",
+			"wordAlignments": [
+				{
+					"arabic": "دي",
+					"english": "This is",
+					"transliteration": "di"
+				},
+				{
+					"arabic": "حجة",
+					"english": "an excuse",
+					"transliteration": "7ijja"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Excuse"
+			]
+		},
+		{
+			"arabic": "خلينا نبدا.",
+			"arabicTashkeel": "خَلّينا نِبدا.",
+			"english": "Let's start.",
+			"transliteration": "khalleena nibda.",
+			"wordAlignments": [
+				{
+					"arabic": "خلينا",
+					"english": "Let us",
+					"transliteration": "khalleena"
+				},
+				{
+					"arabic": "نبدا.",
+					"english": "start.",
+					"transliteration": "nibda."
+				}
+			],
+			"targetWords": [
+				"Let's"
+			]
+		},
+		{
+			"arabic": "ليش ما نسأله؟",
+			"arabicTashkeel": "ليش ما نِسألُه؟",
+			"english": "Why don't we ask him?",
+			"transliteration": "laish ma nis2alu?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "ما",
+					"english": "don't",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "نسأله؟",
+					"english": "we ask him?",
+					"transliteration": "nis2alu?"
+				}
+			],
+			"targetWords": [
+				"Why don't we"
+			]
+		},
+		{
+			"arabic": "أقترح المطعم اللبناني.",
+			"arabicTashkeel": "أقتِرِح المَطعَم اللُّبناني.",
+			"english": "I suggest the Lebanese restaurant.",
+			"transliteration": "agtiri7 il-mat3am il-lubnaani.",
+			"wordAlignments": [
+				{
+					"arabic": "أقترح",
+					"english": "I suggest",
+					"transliteration": "agtiri7"
+				},
+				{
+					"arabic": "المطعم",
+					"english": "the restaurant",
+					"transliteration": "il-mat3am"
+				},
+				{
+					"arabic": "اللبناني.",
+					"english": "Lebanese.",
+					"transliteration": "il-lubnaani."
+				}
+			],
+			"targetWords": [
+				"I suggest"
+			]
+		},
+		{
+			"arabic": "إقتراح حلو!",
+			"arabicTashkeel": "إقتِراح حِلو!",
+			"english": "A good suggestion!",
+			"transliteration": "igtiraa7 7ilu!",
+			"wordAlignments": [
+				{
+					"arabic": "إقتراح",
+					"english": "A suggestion",
+					"transliteration": "igtiraa7"
+				},
+				{
+					"arabic": "حلو!",
+					"english": "good!",
+					"transliteration": "7ilu!"
+				}
+			],
+			"targetWords": [
+				"Suggestion"
+			]
+		},
+		{
+			"arabic": "إيش رأيك لو نروح بكرة؟",
+			"arabicTashkeel": "إيش رأيَك لو نِروح بُكرة؟",
+			"english": "How about if we go tomorrow?",
+			"transliteration": "eesh ra2yak law nirooh bukra?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nirooh"
+				},
+				{
+					"arabic": "بكرة؟",
+					"english": "tomorrow?",
+					"transliteration": "bukra?"
+				}
+			],
+			"targetWords": [
+				"How about if"
+			]
+		},
+		{
+			"arabic": "أحسن لو ناخد تاكسي.",
+			"arabicTashkeel": "أحسَن لو ناخُد تاكسي.",
+			"english": "It's better if we take a taxi.",
+			"transliteration": "a7san law naakhud taaksi.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "ناخد",
+					"english": "we take",
+					"transliteration": "naakhud"
+				},
+				{
+					"arabic": "تاكسي.",
+					"english": "a taxi.",
+					"transliteration": "taaksi."
+				}
+			],
+			"targetWords": [
+				"It's better if"
+			]
+		},
+		{
+			"arabic": "خد الباص بدل السيارة.",
+			"arabicTashkeel": "خُد الباص بَدَل السَّيّارة.",
+			"english": "Take the bus instead of the car.",
+			"transliteration": "khud il-baas badal is-sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "خد",
+					"english": "Take",
+					"transliteration": "khud"
+				},
+				{
+					"arabic": "الباص",
+					"english": "the bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "بدل",
+					"english": "instead of",
+					"transliteration": "badal"
+				},
+				{
+					"arabic": "السيارة.",
+					"english": "the car.",
+					"transliteration": "is-sayyaara."
+				}
+			],
+			"targetWords": [
+				"Instead of"
+			]
+		},
+		{
+			"arabic": "الرحلة انلغت بسبب الجو.",
+			"arabicTashkeel": "الرِّحلة اِنلَغَت بسَبَب الجَو.",
+			"english": "The flight was cancelled because of the weather.",
+			"transliteration": "ir-ri7la inlaghat b-sabab ij-jaw.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The flight",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "انلغت",
+					"english": "was cancelled",
+					"transliteration": "inlaghat"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "الجو.",
+					"english": "the weather.",
+					"transliteration": "ij-jaw."
+				}
+			],
+			"targetWords": [
+				"Because of"
+			]
+		},
+		{
+			"arabic": "تعال بدري عشان نتكلم.",
+			"arabicTashkeel": "تَعال بَدري عَشان نِتكَلَّم.",
+			"english": "Come early so that we can talk.",
+			"transliteration": "ta3aal badri 3ashaan nitkallam.",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "ta3aal"
+				},
+				{
+					"arabic": "بدري",
+					"english": "early",
+					"transliteration": "badri"
+				},
+				{
+					"arabic": "عشان",
+					"english": "so that",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "نتكلم.",
+					"english": "we talk.",
+					"transliteration": "nitkallam."
+				}
+			],
+			"targetWords": [
+				"So that"
+			]
+		},
+		{
+			"arabic": "عشان خاطر أمي حجي.",
+			"arabicTashkeel": "عَشان خاطِر أُمّي حَجي.",
+			"english": "For my mom's sake I'll come.",
+			"transliteration": "3ashaan khaatir ummi 7aji.",
+			"wordAlignments": [
+				{
+					"arabic": "عشان",
+					"english": "For",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "خاطر",
+					"english": "the sake of",
+					"transliteration": "khaatir"
+				},
+				{
+					"arabic": "أمي",
+					"english": "my mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "حجي.",
+					"english": "I'll come.",
+					"transliteration": "7aji."
+				}
+			],
+			"targetWords": [
+				"For the sake of"
+			]
+		},
+		{
+			"arabic": "هوا مريض، عشان كدا ما جا.",
+			"arabicTashkeel": "هوّا مَريض، عَشان كِدا ما جا.",
+			"english": "He's sick, that's why he didn't come.",
+			"transliteration": "huwwa mareedh, 3ashaan kida ma ja.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مريض،",
+					"english": "sick,",
+					"transliteration": "mareedh,"
+				},
+				{
+					"arabic": "عشان",
+					"english": "because of",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "كدا",
+					"english": "this",
+					"transliteration": "kida"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "جا.",
+					"english": "he came.",
+					"transliteration": "ja."
+				}
+			],
+			"targetWords": [
+				"That's why"
+			]
+		},
+		{
+			"arabic": "ما فيه سبب تزعل.",
+			"arabicTashkeel": "ما فيه سَبَب تِزعَل.",
+			"english": "There's no reason to be angry.",
+			"transliteration": "ma feeh sabab tiz3al.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "سبب",
+					"english": "a reason",
+					"transliteration": "sabab"
+				},
+				{
+					"arabic": "تزعل.",
+					"english": "you get upset.",
+					"transliteration": "tiz3al."
+				}
+			],
+			"targetWords": [
+				"Reason"
+			]
+		},
+		{
+			"arabic": "فكرتك منطقية.",
+			"arabicTashkeel": "فِكرتَك مَنطِقية.",
+			"english": "Your idea is logical.",
+			"transliteration": "fikratak mantigiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "فكرتك",
+					"english": "Your idea is",
+					"transliteration": "fikratak"
+				},
+				{
+					"arabic": "منطقية.",
+					"english": "logical.",
+					"transliteration": "mantigiyya."
+				}
+			],
+			"targetWords": [
+				"Logical"
+			]
+		},
+		{
+			"arabic": "يستاهل؟",
+			"arabicTashkeel": "يِستاهِل؟",
+			"english": "Is it worth it?",
+			"transliteration": "yistaahil?",
+			"wordAlignments": [
+				{
+					"arabic": "يستاهل؟",
+					"english": "Does it deserve it?",
+					"transliteration": "yistaahil?"
+				}
+			],
+			"targetWords": [
+				"It's worth it"
+			]
+		},
+		{
+			"arabic": "عنده حجة دايما.",
+			"arabicTashkeel": "عِندُه حِجّة دايماً.",
+			"english": "He always has an excuse.",
+			"transliteration": "3indu 7ijja daayman.",
+			"wordAlignments": [
+				{
+					"arabic": "عنده",
+					"english": "He has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "حجة",
+					"english": "an excuse",
+					"transliteration": "7ijja"
+				},
+				{
+					"arabic": "دايما.",
+					"english": "always.",
+					"transliteration": "daayman."
+				}
+			],
+			"targetWords": [
+				"Excuse"
+			]
+		},
+		{
+			"arabic": "خلينا ناكل، أنا جوعان.",
+			"arabicTashkeel": "خَلّينا ناكُل، أنا جوعان.",
+			"english": "Let's eat, I'm hungry.",
+			"transliteration": "khalleena naakul, ana joo3aan.",
+			"wordAlignments": [
+				{
+					"arabic": "خلينا",
+					"english": "Let us",
+					"transliteration": "khalleena"
+				},
+				{
+					"arabic": "ناكل،",
+					"english": "eat,",
+					"transliteration": "naakul,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "جوعان.",
+					"english": "hungry.",
+					"transliteration": "joo3aan."
+				}
+			],
+			"targetWords": [
+				"Let's"
+			]
+		},
+		{
+			"arabic": "ليش ما نتفرج على فيلم؟",
+			"arabicTashkeel": "ليش ما نِتفَرَّج على فيلم؟",
+			"english": "Why don't we watch a film?",
+			"transliteration": "laish ma nitfarraj 3ala film?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "ما",
+					"english": "don't",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "نتفرج",
+					"english": "we watch",
+					"transliteration": "nitfarraj"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "فيلم؟",
+					"english": "a film?",
+					"transliteration": "film?"
+				}
+			],
+			"targetWords": [
+				"Why don't we"
+			]
+		},
+		{
+			"arabic": "أقترح تروح للدكتور.",
+			"arabicTashkeel": "أقتِرِح تِروح لِلدُّكتور.",
+			"english": "I suggest you see a doctor.",
+			"transliteration": "agtiri7 tirooh lid-duktoor.",
+			"wordAlignments": [
+				{
+					"arabic": "أقترح",
+					"english": "I suggest",
+					"transliteration": "agtiri7"
+				},
+				{
+					"arabic": "تروح",
+					"english": "you go",
+					"transliteration": "tirooh"
+				},
+				{
+					"arabic": "للدكتور.",
+					"english": "to the doctor.",
+					"transliteration": "lid-duktoor."
+				}
+			],
+			"targetWords": [
+				"I suggest"
+			]
+		},
+		{
+			"arabic": "شكرا على الإقتراح.",
+			"arabicTashkeel": "شُكراً على الإقتِراح.",
+			"english": "Thanks for the suggestion.",
+			"transliteration": "shukran 3ala il-igtiraa7.",
+			"wordAlignments": [
+				{
+					"arabic": "شكرا",
+					"english": "Thank you",
+					"transliteration": "shukran"
+				},
+				{
+					"arabic": "على",
+					"english": "for",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الإقتراح.",
+					"english": "the suggestion.",
+					"transliteration": "il-igtiraa7."
+				}
+			],
+			"targetWords": [
+				"Suggestion"
+			]
+		},
+		{
+			"arabic": "إيش رأيك لو نعزمهم؟",
+			"arabicTashkeel": "إيش رأيَك لو نِعزِمهُم؟",
+			"english": "How about if we invite them?",
+			"transliteration": "eesh ra2yak law ni3zimhum?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "نعزمهم؟",
+					"english": "we invite them?",
+					"transliteration": "ni3zimhum?"
+				}
+			],
+			"targetWords": [
+				"How about if"
+			]
+		},
+		{
+			"arabic": "أحسن لو ما تروح.",
+			"arabicTashkeel": "أحسَن لو ما تِروح.",
+			"english": "It's better if you don't go.",
+			"transliteration": "a7san law ma tirooh.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تروح.",
+					"english": "you go.",
+					"transliteration": "tirooh."
+				}
+			],
+			"targetWords": [
+				"It's better if"
+			]
+		},
+		{
+			"arabic": "شاهي بدل القهوة.",
+			"arabicTashkeel": "شاهي بَدَل القَهوة.",
+			"english": "Tea instead of coffee.",
+			"transliteration": "shaahi badal il-gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "شاهي",
+					"english": "Tea",
+					"transliteration": "shaahi"
+				},
+				{
+					"arabic": "بدل",
+					"english": "instead of",
+					"transliteration": "badal"
+				},
+				{
+					"arabic": "القهوة.",
+					"english": "the coffee.",
+					"transliteration": "il-gahwa."
+				}
+			],
+			"targetWords": [
+				"Instead of"
+			]
+		},
+		{
+			"arabic": "المدرسة سكرت بسبب المطر.",
+			"arabicTashkeel": "المَدرَسة سَكَّرَت بسَبَب المَطَر.",
+			"english": "The school closed because of the rain.",
+			"transliteration": "il-madrasa sakkarat b-sabab il-matar.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسة",
+					"english": "The school",
+					"transliteration": "il-madrasa"
+				},
+				{
+					"arabic": "سكرت",
+					"english": "closed",
+					"transliteration": "sakkarat"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "المطر.",
+					"english": "the rain.",
+					"transliteration": "il-matar."
+				}
+			],
+			"targetWords": [
+				"Because of"
+			]
+		},
+		{
+			"arabic": "أحوش عشان أشتري سيارة.",
+			"arabicTashkeel": "أحَوِّش عَشان أشتِري سَيّارة.",
+			"english": "I'm saving so that I buy a car.",
+			"transliteration": "a7awwish 3ashaan ashtiri sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "أحوش",
+					"english": "I'm saving",
+					"transliteration": "a7awwish"
+				},
+				{
+					"arabic": "عشان",
+					"english": "so that",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "أشتري",
+					"english": "I buy",
+					"transliteration": "ashtiri"
+				},
+				{
+					"arabic": "سيارة.",
+					"english": "a car.",
+					"transliteration": "sayyaara."
+				}
+			],
+			"targetWords": [
+				"So that"
+			]
+		},
+		{
+			"arabic": "سويها عشان خاطري.",
+			"arabicTashkeel": "سَوّيها عَشان خاطري.",
+			"english": "Do it for my sake.",
+			"transliteration": "sawweeha 3ashaan khaatri.",
+			"wordAlignments": [
+				{
+					"arabic": "سويها",
+					"english": "Do it",
+					"transliteration": "sawweeha"
+				},
+				{
+					"arabic": "عشان",
+					"english": "for",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "خاطري.",
+					"english": "my sake.",
+					"transliteration": "khaatri."
+				}
+			],
+			"targetWords": [
+				"For the sake of"
+			]
+		},
+		{
+			"arabic": "عشان كدا أحب جدة.",
+			"arabicTashkeel": "عَشان كِدا أحِب جِدّة.",
+			"english": "That's why I love Jeddah.",
+			"transliteration": "3ashaan kida a7ibb jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "عشان",
+					"english": "Because of",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "كدا",
+					"english": "this",
+					"transliteration": "kida"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"That's why"
+			]
+		},
+		{
+			"arabic": "قول لي السبب.",
+			"arabicTashkeel": "قول لي السَّبَب.",
+			"english": "Tell me the reason.",
+			"transliteration": "gool li is-sabab.",
+			"wordAlignments": [
+				{
+					"arabic": "قول",
+					"english": "Tell",
+					"transliteration": "gool"
+				},
+				{
+					"arabic": "لي",
+					"english": "me",
+					"transliteration": "li"
+				},
+				{
+					"arabic": "السبب.",
+					"english": "the reason.",
+					"transliteration": "is-sabab."
+				}
+			],
+			"targetWords": [
+				"Reason"
+			]
+		},
+		{
+			"arabic": "مو منطقي!",
+			"arabicTashkeel": "مو مَنطِقي!",
+			"english": "That's not logical!",
+			"transliteration": "moo mantigi!",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "منطقي!",
+					"english": "logical!",
+					"transliteration": "mantigi!"
+				}
+			],
+			"targetWords": [
+				"Logical"
+			]
+		},
+		{
+			"arabic": "الأكل هنا يستاهل.",
+			"arabicTashkeel": "الأكل هِنا يِستاهِل.",
+			"english": "The food here is worth it.",
+			"transliteration": "il-akl hina yistaahil.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "The food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "هنا",
+					"english": "here",
+					"transliteration": "hina"
+				},
+				{
+					"arabic": "يستاهل.",
+					"english": "deserves it.",
+					"transliteration": "yistaahil."
+				}
+			],
+			"targetWords": [
+				"It's worth it"
+			]
+		},
+		{
+			"arabic": "دي مو حجة.",
+			"arabicTashkeel": "دي مو حِجّة.",
+			"english": "That's not an excuse.",
+			"transliteration": "di moo 7ijja.",
+			"wordAlignments": [
+				{
+					"arabic": "دي",
+					"english": "This is",
+					"transliteration": "di"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "حجة.",
+					"english": "an excuse.",
+					"transliteration": "7ijja."
+				}
+			],
+			"targetWords": [
+				"Excuse"
+			]
+		},
+		{
+			"arabic": "خلينا نروح سوا.",
+			"arabicTashkeel": "خَلّينا نِروح سَوا.",
+			"english": "Let's go together.",
+			"transliteration": "khalleena nirooh sawa.",
+			"wordAlignments": [
+				{
+					"arabic": "خلينا",
+					"english": "Let us",
+					"transliteration": "khalleena"
+				},
+				{
+					"arabic": "نروح",
+					"english": "go",
+					"transliteration": "nirooh"
+				},
+				{
+					"arabic": "سوا.",
+					"english": "together.",
+					"transliteration": "sawa."
+				}
+			],
+			"targetWords": [
+				"Let's"
+			]
+		},
+		{
+			"arabic": "ليش ما نروح الطايف الويكند دا؟",
+			"arabicTashkeel": "ليش ما نِروح الطّايِف الويكِند دا؟",
+			"english": "Why don't we go to Taif this weekend?",
+			"transliteration": "laish ma nirooh it-taayif il-weekend da?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "ما",
+					"english": "don't",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "نروح",
+					"english": "we go",
+					"transliteration": "nirooh"
+				},
+				{
+					"arabic": "الطايف",
+					"english": "to Taif",
+					"transliteration": "it-taayif"
+				},
+				{
+					"arabic": "الويكند",
+					"english": "the weekend",
+					"transliteration": "il-weekend"
+				},
+				{
+					"arabic": "دا؟",
+					"english": "this?",
+					"transliteration": "da?"
+				}
+			],
+			"targetWords": [
+				"Why don't we"
+			]
+		},
+		{
+			"arabic": "أقترح نتقابل الساعة ستة.",
+			"arabicTashkeel": "أقتِرِح نِتقابَل السّاعة سِتّة.",
+			"english": "I suggest we meet at six.",
+			"transliteration": "agtiri7 nitgaabal is-saa3a sitta.",
+			"wordAlignments": [
+				{
+					"arabic": "أقترح",
+					"english": "I suggest",
+					"transliteration": "agtiri7"
+				},
+				{
+					"arabic": "نتقابل",
+					"english": "we meet",
+					"transliteration": "nitgaabal"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ستة.",
+					"english": "six.",
+					"transliteration": "sitta."
+				}
+			],
+			"targetWords": [
+				"I suggest"
+			]
+		},
+		{
+			"arabic": "فيه أي إقتراح؟",
+			"arabicTashkeel": "فيه أيّ إقتِراح؟",
+			"english": "Any suggestion?",
+			"transliteration": "feeh ayy igtiraa7?",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "Is there",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "أي",
+					"english": "any",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "إقتراح؟",
+					"english": "suggestion?",
+					"transliteration": "igtiraa7?"
+				}
+			],
+			"targetWords": [
+				"Suggestion"
+			]
+		},
+		{
+			"arabic": "إيش رأيك لو نطلب أكل؟",
+			"arabicTashkeel": "إيش رأيَك لو نِطلُب أكل؟",
+			"english": "How about if we order food?",
+			"transliteration": "eesh ra2yak law nitlub akl?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "نطلب",
+					"english": "we order",
+					"transliteration": "nitlub"
+				},
+				{
+					"arabic": "أكل؟",
+					"english": "food?",
+					"transliteration": "akl?"
+				}
+			],
+			"targetWords": [
+				"How about if"
+			]
+		},
+		{
+			"arabic": "أحسن لو نطلع دحين.",
+			"arabicTashkeel": "أحسَن لو نِطلَع دحين.",
+			"english": "It's better if we leave now.",
+			"transliteration": "a7san law nitla3 da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "نطلع",
+					"english": "we leave",
+					"transliteration": "nitla3"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"It's better if"
+			]
+		},
+		{
+			"arabic": "امشي بدل ما تسوق.",
+			"arabicTashkeel": "اِمشي بَدَل ما تِسوق.",
+			"english": "Walk instead of driving.",
+			"transliteration": "imshi badal ma tisoog.",
+			"wordAlignments": [
+				{
+					"arabic": "امشي",
+					"english": "Walk",
+					"transliteration": "imshi"
+				},
+				{
+					"arabic": "بدل",
+					"english": "instead of",
+					"transliteration": "badal"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تسوق.",
+					"english": "you drive.",
+					"transliteration": "tisoog."
+				}
+			],
+			"targetWords": [
+				"Instead of"
+			]
+		},
+		{
+			"arabic": "بسبب الشغل ما أقدر أجي.",
+			"arabicTashkeel": "بسَبَب الشُّغل ما أقدَر أجي.",
+			"english": "Because of work I can't come.",
+			"transliteration": "b-sabab ish-shughl ma agdar aji.",
+			"wordAlignments": [
+				{
+					"arabic": "بسبب",
+					"english": "Because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "الشغل",
+					"english": "the work",
+					"transliteration": "ish-shughl"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أقدر",
+					"english": "I can",
+					"transliteration": "agdar"
+				},
+				{
+					"arabic": "أجي.",
+					"english": "come.",
+					"transliteration": "aji."
+				}
+			],
+			"targetWords": [
+				"Because of"
+			]
+		},
+		{
+			"arabic": "اتكلم بشويش عشان أفهم.",
+			"arabicTashkeel": "اِتكَلَّم بشْوَيش عَشان أفهَم.",
+			"english": "Speak slowly so that I understand.",
+			"transliteration": "itkallam b-shwaish 3ashaan afham.",
+			"wordAlignments": [
+				{
+					"arabic": "اتكلم",
+					"english": "Speak",
+					"transliteration": "itkallam"
+				},
+				{
+					"arabic": "بشويش",
+					"english": "slowly",
+					"transliteration": "b-shwaish"
+				},
+				{
+					"arabic": "عشان",
+					"english": "so that",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "أفهم.",
+					"english": "I understand.",
+					"transliteration": "afham."
+				}
+			],
+			"targetWords": [
+				"So that"
+			]
+		},
+		{
+			"arabic": "السبب بسيط.",
+			"arabicTashkeel": "السَّبَب بَسيط.",
+			"english": "The reason is simple.",
+			"transliteration": "is-sabab baseet.",
+			"wordAlignments": [
+				{
+					"arabic": "السبب",
+					"english": "The reason is",
+					"transliteration": "is-sabab"
+				},
+				{
+					"arabic": "بسيط.",
+					"english": "simple.",
+					"transliteration": "baseet."
+				}
+			],
+			"targetWords": [
+				"Reason"
+			]
+		},
+		{
+			"arabic": "حل منطقي.",
+			"arabicTashkeel": "حَل مَنطِقي.",
+			"english": "A logical solution.",
+			"transliteration": "7all mantigi.",
+			"wordAlignments": [
+				{
+					"arabic": "حل",
+					"english": "A solution",
+					"transliteration": "7all"
+				},
+				{
+					"arabic": "منطقي.",
+					"english": "logical.",
+					"transliteration": "mantigi."
+				}
+			],
+			"targetWords": [
+				"Logical"
+			]
+		},
+		{
+			"arabic": "غالي بس يستاهل.",
+			"arabicTashkeel": "غالي بَس يِستاهِل.",
+			"english": "It's expensive but worth it.",
+			"transliteration": "ghaali bas yistaahil.",
+			"wordAlignments": [
+				{
+					"arabic": "غالي",
+					"english": "Expensive",
+					"transliteration": "ghaali"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "يستاهل.",
+					"english": "it deserves it.",
+					"transliteration": "yistaahil."
+				}
+			],
+			"targetWords": [
+				"It's worth it"
+			]
+		},
+		{
+			"arabic": "لا تديني حجج.",
+			"arabicTashkeel": "لا تِدّيني حِجَج.",
+			"english": "Don't give me excuses.",
+			"transliteration": "la tiddeeni 7ijaj.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تديني",
+					"english": "give me",
+					"transliteration": "tiddeeni"
+				},
+				{
+					"arabic": "حجج.",
+					"english": "excuses.",
+					"transliteration": "7ijaj."
+				}
+			],
+			"targetWords": [
+				"Excuse"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Planning the Weekend",
+			"sentences": [
+				{
+					"arabic": "قلت لصاحبي: خلينا نروح الكورنيش يوم الجمعة.",
+					"arabicTashkeel": "قُلت لِصاحبي: خَلّينا نِروح الكورنيش يوم الجُمعة.",
+					"english": "I said to my friend: let's go to the corniche on Friday.",
+					"transliteration": "gult li-saa7bi: khalleena nirooh il-koornaish yoom ij-jum3a.",
+					"wordAlignments": [
+						{
+							"arabic": "قلت",
+							"english": "I said",
+							"transliteration": "gult"
+						},
+						{
+							"arabic": "لصاحبي:",
+							"english": "to my friend:",
+							"transliteration": "li-saa7bi:"
+						},
+						{
+							"arabic": "خلينا",
+							"english": "let us",
+							"transliteration": "khalleena"
+						},
+						{
+							"arabic": "نروح",
+							"english": "go",
+							"transliteration": "nirooh"
+						},
+						{
+							"arabic": "الكورنيش",
+							"english": "to the corniche",
+							"transliteration": "il-koornaish"
+						},
+						{
+							"arabic": "يوم",
+							"english": "on",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الجمعة.",
+							"english": "Friday.",
+							"transliteration": "ij-jum3a."
+						}
+					]
+				},
+				{
+					"arabic": "قال: الجو حر، ليش ما نروح المول بدل الكورنيش؟",
+					"arabicTashkeel": "قال: الجَو حَر، ليش ما نِروح المول بَدَل الكورنيش؟",
+					"english": "He said: it's hot, why don't we go to the mall instead of the corniche?",
+					"transliteration": "gaal: ij-jaw 7arr, laish ma nirooh il-mool badal il-koornaish?",
+					"wordAlignments": [
+						{
+							"arabic": "قال:",
+							"english": "He said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "الجو",
+							"english": "the weather is",
+							"transliteration": "ij-jaw"
+						},
+						{
+							"arabic": "حر،",
+							"english": "hot,",
+							"transliteration": "7arr,"
+						},
+						{
+							"arabic": "ليش",
+							"english": "why",
+							"transliteration": "laish"
+						},
+						{
+							"arabic": "ما",
+							"english": "don't",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "نروح",
+							"english": "we go",
+							"transliteration": "nirooh"
+						},
+						{
+							"arabic": "المول",
+							"english": "to the mall",
+							"transliteration": "il-mool"
+						},
+						{
+							"arabic": "بدل",
+							"english": "instead of",
+							"transliteration": "badal"
+						},
+						{
+							"arabic": "الكورنيش؟",
+							"english": "the corniche?",
+							"transliteration": "il-koornaish?"
+						}
+					]
+				},
+				{
+					"arabic": "قلت: إيش رأيك لو نروح بالليل؟ ساعتها الجو أبرد.",
+					"arabicTashkeel": "قُلت: إيش رأيَك لو نِروح بالليل؟ ساعتها الجَو أبرَد.",
+					"english": "I said: how about if we go at night? Then it's cooler.",
+					"transliteration": "gult: eesh ra2yak law nirooh bil-lail? saa3it-ha ij-jaw abrad.",
+					"wordAlignments": [
+						{
+							"arabic": "قلت:",
+							"english": "I said:",
+							"transliteration": "gult:"
+						},
+						{
+							"arabic": "إيش",
+							"english": "what is",
+							"transliteration": "eesh"
+						},
+						{
+							"arabic": "رأيك",
+							"english": "your opinion",
+							"transliteration": "ra2yak"
+						},
+						{
+							"arabic": "لو",
+							"english": "if",
+							"transliteration": "law"
+						},
+						{
+							"arabic": "نروح",
+							"english": "we go",
+							"transliteration": "nirooh"
+						},
+						{
+							"arabic": "بالليل؟",
+							"english": "at night?",
+							"transliteration": "bil-lail?"
+						},
+						{
+							"arabic": "ساعتها",
+							"english": "at that time",
+							"transliteration": "saa3it-ha"
+						},
+						{
+							"arabic": "الجو",
+							"english": "the weather is",
+							"transliteration": "ij-jaw"
+						},
+						{
+							"arabic": "أبرد.",
+							"english": "cooler.",
+							"transliteration": "abrad."
+						}
+					]
+				},
+				{
+					"arabic": "وافق، عشان الإقتراح حقي كان منطقي.",
+					"arabicTashkeel": "وافَق، عَشان الإقتِراح حَقّي كان مَنطِقي.",
+					"english": "He agreed, because my suggestion was logical.",
+					"transliteration": "waafag, 3ashaan il-igtiraa7 7aggi kaan mantigi.",
+					"wordAlignments": [
+						{
+							"arabic": "وافق،",
+							"english": "He agreed,",
+							"transliteration": "waafag,"
+						},
+						{
+							"arabic": "عشان",
+							"english": "because",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "الإقتراح",
+							"english": "the suggestion",
+							"transliteration": "il-igtiraa7"
+						},
+						{
+							"arabic": "حقي",
+							"english": "of mine",
+							"transliteration": "7aggi"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "منطقي.",
+							"english": "logical.",
+							"transliteration": "mantigi."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Excuse",
+			"sentences": [
+				{
+					"arabic": "أخويا ما جا الحفلة، وقال السبب الشغل.",
+					"arabicTashkeel": "أخويا ما جا الحَفلة، وقال السَّبَب الشُّغل.",
+					"english": "My brother didn't come to the party, and he said the reason is work.",
+					"transliteration": "akhooya ma ja il-7afla, w-gaal is-sabab ish-shughl.",
+					"wordAlignments": [
+						{
+							"arabic": "أخويا",
+							"english": "My brother",
+							"transliteration": "akhooya"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "جا",
+							"english": "came",
+							"transliteration": "ja"
+						},
+						{
+							"arabic": "الحفلة،",
+							"english": "to the party,",
+							"transliteration": "il-7afla,"
+						},
+						{
+							"arabic": "وقال",
+							"english": "and said",
+							"transliteration": "w-gaal"
+						},
+						{
+							"arabic": "السبب",
+							"english": "the reason is",
+							"transliteration": "is-sabab"
+						},
+						{
+							"arabic": "الشغل.",
+							"english": "the work.",
+							"transliteration": "ish-shughl."
+						}
+					]
+				},
+				{
+					"arabic": "بس أنا أدري إنها حجة بس.",
+					"arabicTashkeel": "بَس أنا أدري إنَّها حِجّة بَس.",
+					"english": "But I know it's just an excuse.",
+					"transliteration": "bas ana adri innaha 7ijja bas.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "أنا",
+							"english": "I",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "أدري",
+							"english": "know",
+							"transliteration": "adri"
+						},
+						{
+							"arabic": "إنها",
+							"english": "that it is",
+							"transliteration": "innaha"
+						},
+						{
+							"arabic": "حجة",
+							"english": "an excuse",
+							"transliteration": "7ijja"
+						},
+						{
+							"arabic": "بس.",
+							"english": "only.",
+							"transliteration": "bas."
+						}
+					]
+				},
+				{
+					"arabic": "هوا ما يحب الحفلات، عشان كدا ما جا.",
+					"arabicTashkeel": "هوّا ما يِحِب الحَفلات، عَشان كِدا ما جا.",
+					"english": "He doesn't like parties, that's why he didn't come.",
+					"transliteration": "huwwa ma yi7ibb il-7aflaat, 3ashaan kida ma ja.",
+					"wordAlignments": [
+						{
+							"arabic": "هوا",
+							"english": "He",
+							"transliteration": "huwwa"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "يحب",
+							"english": "likes",
+							"transliteration": "yi7ibb"
+						},
+						{
+							"arabic": "الحفلات،",
+							"english": "the parties,",
+							"transliteration": "il-7aflaat,"
+						},
+						{
+							"arabic": "عشان",
+							"english": "because of",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "كدا",
+							"english": "this",
+							"transliteration": "kida"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "جا.",
+							"english": "he came.",
+							"transliteration": "ja."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student and a Jeddawi friend are planning a weekend activity but keep disagreeing about where to go.",
+		"studentRole": "A friend learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi friend, who always has an excuse.",
+		"goalEnglish": "Make suggestions (let's, why don't we, how about if), give reasons, respond to excuses and agree on a plan.",
+		"targetWords": [
+			"Let's",
+			"Why don't we",
+			"I suggest",
+			"How about if",
+			"Instead of",
+			"Because of",
+			"Reason",
+			"It's worth it"
+		]
+	}
+}
