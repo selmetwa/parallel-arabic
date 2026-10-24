@@ -4,6 +4,8 @@
 	import { page } from '$app/state';
 	import VocabPractice from '$lib/components/dialect-shared/vocab/VocabPractice.svelte';
 	import { DIALECT_LANDING } from '$lib/constants/dialect-landing';
+	import { DIALECT_COMPARISONS, comparisonSlug } from '$lib/constants/dialect-comparisons';
+	import { SELECTABLE_DIALECTS } from '$lib/constants/dialects';
 	import type { Dialect } from '$lib/types/index';
 	import type { PracticeWord } from '$lib/types/words';
 
@@ -70,6 +72,20 @@
 		}
 	]);
 
+	// Cross-links, so every dialect page and comparison page is reachable from the others.
+	const comparisons = $derived(
+		DIALECT_COMPARISONS.filter((pair) => pair.a === dialect || pair.b === dialect).map((pair) => ({
+			href: `/${comparisonSlug(pair)}`,
+			title: `${DIALECT_LANDING[pair.a].heading} vs ${DIALECT_LANDING[pair.b].heading}`
+		}))
+	);
+	const otherDialects = $derived(
+		SELECTABLE_DIALECTS.filter((d) => d !== dialect).map((d) => ({
+			href: `/${d}`,
+			title: DIALECT_LANDING[d].heading
+		}))
+	);
+
 	onMount(() => {
 		currentDialect.set(dialect);
 	});
@@ -123,6 +139,22 @@
 		</div>
 	</section>
 
+	{#if comparisons.length}
+		<section class="mt-10">
+			<h2 class="mb-4 text-2xl font-bold text-text-300">How {content.heading} compares</h2>
+			<div class="grid gap-3 sm:grid-cols-2">
+				{#each comparisons as comparison (comparison.href)}
+					<a
+						href={comparison.href}
+						class="rounded-xl border border-tile-500 bg-tile-300 p-4 font-semibold text-text-300 transition-colors hover:bg-tile-400"
+					>
+						{comparison.title}
+					</a>
+				{/each}
+			</div>
+		</section>
+	{/if}
+
 	{#if practiceWords.length}
 		<div class="mb-12 mt-10">
 			<VocabPractice
@@ -143,6 +175,20 @@
 					<h3 class="mb-2 text-lg font-bold text-text-300">{faq.question}</h3>
 					<p class="leading-relaxed text-text-200">{faq.answer}</p>
 				</div>
+			{/each}
+		</div>
+	</section>
+
+	<section class="mb-12">
+		<h2 class="mb-4 text-2xl font-bold text-text-300">Other dialects</h2>
+		<div class="flex flex-wrap gap-2">
+			{#each otherDialects as other (other.href)}
+				<a
+					href={other.href}
+					class="rounded-full border border-tile-500 bg-tile-300 px-4 py-2 font-semibold text-text-300 transition-colors hover:bg-tile-400"
+				>
+					{other.title}
+				</a>
 			{/each}
 		</div>
 	</section>

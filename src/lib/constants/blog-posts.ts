@@ -11,6 +11,30 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'how-to-learn-iraqi-arabic',
+		title: 'How to learn Iraqi Arabic',
+		description:
+			'Why Baghdadi is the one to learn, the g and ch sounds that make Iraqi recognisable, aku and maku, the da- that means "right now", and the order to learn it all in, with a realistic timeline for each stage.',
+		date: '2026-10-24',
+		readingTime: '7 min read'
+	},
+	{
+		slug: 'how-to-learn-gulf-arabic',
+		title: 'How to learn Gulf Arabic (Khaleeji)',
+		description:
+			'Emirati, Kuwaiti, Qatari or Bahraini? Why the shared Gulf forms get you all four, the y that replaces j, abi, waayid and il-7een, and the order to learn Khaleeji in, with a realistic timeline for each stage.',
+		date: '2026-10-24',
+		readingTime: '7 min read'
+	},
+	{
+		slug: 'how-to-learn-saudi-arabic',
+		title: 'How to learn Saudi Arabic (Hijazi)',
+		description:
+			'Saudi Arabia has several dialects. Why Hijazi, the Arabic of Jeddah, Mecca and Medina, is the one to start with, what it shares with Egyptian, and the order to learn it in, with a realistic timeline for each stage.',
+		date: '2026-10-24',
+		readingTime: '7 min read'
+	},
+	{
 		slug: 'how-to-learn-levantine-arabic',
 		title: 'How to learn Levantine Arabic',
 		description:

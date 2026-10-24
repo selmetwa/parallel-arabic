@@ -278,6 +278,14 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 				answer:
 					'They are close cousins and share many words and sounds. Learn Iraqi if you have family, friends or work connected to Iraq; Gulf Arabic if your life is in the UAE, Kuwait or Qatar.'
 			}
+		],
+		extraLinks: [
+			{
+				href: '/blog/how-to-learn-iraqi-arabic',
+				title: 'Start Here',
+				description:
+					'How to learn Iraqi Arabic: the sounds to get right first, the words that carry every sentence, and how long each stage takes.'
+			}
 		]
 	},
 	khaleeji: {
@@ -321,6 +329,14 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 				answer:
 					'abi (أبي), as in abi gahwa (I want coffee). Saudis say abgha, Egyptians 3aayiz and Levantines biddi.'
 			}
+		],
+		extraLinks: [
+			{
+				href: '/blog/how-to-learn-gulf-arabic',
+				title: 'Start Here',
+				description:
+					'How to learn Gulf Arabic: which Gulf accent to aim for, what to learn first, and how long each stage takes.'
+			}
 		]
 	},
 	saudi: {
@@ -363,6 +379,14 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 				question: 'How do you say "how are you" in Saudi Hijazi?',
 				answer:
 					'kaifak? (كيفك) to a man and kaifik? to a woman. The answer is usually il-7amdulillah, tamaam (praise God, fine).'
+			}
+		],
+		extraLinks: [
+			{
+				href: '/blog/how-to-learn-saudi-arabic',
+				title: 'Start Here',
+				description:
+					'How to learn Saudi Arabic: why Hijazi is the place to start, what to learn first, and how long each stage takes.'
 			}
 		]
 	}

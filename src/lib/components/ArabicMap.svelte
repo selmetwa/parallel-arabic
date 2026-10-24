@@ -85,6 +85,9 @@
     darija: '/darija',
     levantine: '/levantine',
     fusha: '/fusha',
+    iraqi: '/iraqi',
+    khaleeji: '/khaleeji',
+    saudi: '/saudi',
   };
 
   const DIALECT_LABEL: Record<string, string> = {
