@@ -12,6 +12,7 @@
 	import { CEFR_LEVEL_INFO, type CefrLevel } from '$lib/constants/cefr-levels';
 	import { describeGoal } from '$lib/constants/daily-goal';
 	import { NOTHING_TRIED, type TryProgress } from '$lib/constants/onboarding-try';
+	import type { ChallengeId } from '$lib/constants/onboarding-questions';
 
 	type Props = {
 		/** e.g. "Egyptian Arabic"; falls back to generic copy when empty. */
@@ -25,6 +26,8 @@
 		goalLevel?: CefrLevel | '';
 		/** Lead the quotes with the Egyptian Arabic one. */
 		egyptianQuote?: boolean;
+		/** From onboarding: the benefit matching their first challenge goes first. */
+		challenges?: ChallengeId[];
 	};
 
 	let {
@@ -34,7 +37,8 @@
 		tried = NOTHING_TRIED,
 		proficiencyLevel = '',
 		goalLevel = '',
-		egyptianQuote = false
+		egyptianQuote = false,
+		challenges = []
 	}: Props = $props();
 
 	const quotes = $derived(egyptianQuote ? [EGYPTIAN_TESTIMONIAL, ...TESTIMONIALS] : TESTIMONIALS);
@@ -55,15 +59,28 @@
 	// Speaking and the scramble both award XP, and XP starts the streak.
 	const streakStarted = $derived(tried.spoke || tried.played);
 
-	const benefits = $derived([
-		`Speak ${dialectName || 'Arabic'} with live corrections`,
-		proficiencyLevel && goalLevel && proficiencyLevel !== goalLevel
-			? `A path from ${proficiencyLevel} to ${goalLevel}, one lesson a day`
-			: 'A step-by-step path from A1 to C2, one lesson a day',
-		"Words that come back right before you'd forget them",
-		`Graded stories in ${dialectName || 'Arabic'}, with audio and tap-to-translate`,
-		'Games, verb drills and pronunciation practice'
-	]);
+	/** Which benefit below answers each challenge, by index. */
+	const BENEFIT_FOR: Partial<Record<ChallengeId, number>> = {
+		speaking: 0,
+		where_to_start: 1,
+		vocabulary: 2,
+		listening: 3,
+		grammar: 4
+	};
+
+	const benefits = $derived.by(() => {
+		const list = [
+			`Speak ${dialectName || 'Arabic'} with live corrections`,
+			proficiencyLevel && goalLevel && proficiencyLevel !== goalLevel
+				? `A path from ${proficiencyLevel} to ${goalLevel}, one lesson a day`
+				: 'A step-by-step path from A1 to C2, one lesson a day',
+			"Words that come back right before you'd forget them",
+			`Graded stories in ${dialectName || 'Arabic'}, with audio and tap-to-translate`,
+			'Games, verb drills and pronunciation practice'
+		];
+		const lead = challenges.map((c) => BENEFIT_FOR[c]).find((i) => i !== undefined);
+		return lead ? [list[lead], ...list.filter((_, i) => i !== lead)] : list;
+	});
 
 	// Someone who already used their trial (or let it lapse) can only subscribe.
 	// Web reads the Stripe flag; the app asks Apple, since a Stripe trial can't

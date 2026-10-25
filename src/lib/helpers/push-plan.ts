@@ -1,7 +1,8 @@
 /**
  * Which push notification, if any, a learner is due right now.
  *
- * At most one a day, in the evening of their own time zone. What they get
+ * At most one a day, in the part of the day they picked in onboarding
+ * (evening unless they chose otherwise), in their own time zone. What they get
  * depends on how long they have been away:
  *
  *   never started, the day after onboarding  → first_day
@@ -11,16 +12,14 @@
  *
  * After day 7 they hear nothing more until they come back.
  */
-import { daysBetween, localDayKey, localHour, streakAtRisk } from './streak';
+import { daysBetween, inReminderWindow, localDayKey, localHour, streakAtRisk } from './streak';
 
 export type PushKind = 'streak' | 'first_day' | 'comeback' | 'reviews';
 
 /** Fewer due words than this is not worth a notification. */
 export const REVIEWS_MIN = 10;
 
-/** Local hours (inclusive start, exclusive end) when a push may go out. Matches the streak email. */
-const EVENING = [16, 23] as const;
-/** Never twice in one evening, whichever of the day's cron runs gets there first. */
+/** Never twice in one window, whichever of the day's cron runs gets there first. */
 const RESEND_AFTER_MS = 12 * 60 * 60 * 1000;
 const COMEBACK_DAYS = [3, 7];
 
@@ -32,12 +31,13 @@ export interface PushUser {
 	onboarding_completed_at: number | null;
 	timezone: string | null;
 	push_sent_at: number | null;
+	/** From onboarding; null is evening. Matches the streak email. */
+	reminder_window?: string | null;
 }
 
 /** 'reviews' still depends on how many words are due: the caller checks REVIEWS_MIN. */
 export function pickPush(user: PushUser, now: number): PushKind | null {
-	const hour = localHour(now, user.timezone);
-	if (hour < EVENING[0] || hour >= EVENING[1]) return null;
+	if (!inReminderWindow(localHour(now, user.timezone), user.reminder_window)) return null;
 	if (user.push_sent_at && now - user.push_sent_at < RESEND_AFTER_MS) return null;
 
 	const today = localDayKey(now, user.timezone);

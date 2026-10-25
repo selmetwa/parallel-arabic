@@ -11,7 +11,6 @@
 	import ReadSentence from '$lib/components/onboarding/ReadSentence.svelte';
 	import TraceWord from '$lib/components/onboarding/TraceWord.svelte';
 	import TryScramble from '$lib/components/onboarding/TryScramble.svelte';
-	import DailyGoalPick from '$lib/components/onboarding/DailyGoalPick.svelte';
 	import { onboardingLines, onboardingScenario } from '$lib/constants/tutor-scenarios';
 	import {
 		NOTHING_TRIED,
@@ -20,7 +19,22 @@
 		type TryProgress
 	} from '$lib/constants/onboarding-try';
 	import type { GameDialect } from '$lib/games/themes';
-	import type { DailyGoal } from '$lib/constants/daily-goal';
+	import {
+		CHALLENGES,
+		CHALLENGE_FOCUS,
+		DAILY_MINUTES,
+		MINUTES_LABEL,
+		REMINDER_OPTIONS,
+		STREAK_GOALS,
+		buildGoal,
+		challengeHelp,
+		wordsPerMonth,
+		type ChallengeId,
+		type DailyMinutes,
+		type ReminderWindow
+	} from '$lib/constants/onboarding-questions';
+	import { enablePush, pushPermission, snoozePushPrompt } from '$lib/helpers/push-notifications';
+	import { FEATURES } from '$lib/constants/features';
 	import { firstLesson } from '$lib/helpers/first-lesson';
 	import TrialOffer from '$lib/components/TrialOffer.svelte';
 	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
@@ -42,23 +56,30 @@
 		WELCOME: 0,
 		DIALECT: 1,
 		REASON: 2,
-		LEVEL: 3,
-		GOAL: 4,
+		CHALLENGES: 3,
+		/** How the app answers what they picked: one card per challenge. */
+		HELP: 4,
+		LEVEL: 5,
+		GOAL: 6,
+		// Habit questions: time a day, reminder time, streak (docs/onboarding-questions-plan.md).
+		DAILY_TIME: 7,
+		REMINDER: 8,
+		STREAK: 9,
 		// "Try it": one dialog, read, said, traced and played (docs/onboarding-v4-plan.md).
-		READ: 5,
-		CONVERSATION: 6,
-		TRACE: 7,
-		PLAY: 8,
-		DAILY_GOAL: 9,
+		READ: 10,
+		CONVERSATION: 11,
+		TRACE: 12,
+		PLAY: 13,
 		/** A short narrated pause between the Try-it steps and the plan. */
-		BUILDING: 10,
-		PLAN: 11,
-		TRIAL: 12
+		BUILDING: 14,
+		PLAN: 15,
+		TRIAL: 16
 	} as const;
 
-	/** Steps the header stepper covers: the questions, then the Try-it steps. */
-	const STEPPER_STEPS = [STEP.WELCOME, STEP.DIALECT, STEP.REASON, STEP.LEVEL, STEP.GOAL];
-	const TRY_STEPS = [STEP.READ, STEP.CONVERSATION, STEP.TRACE, STEP.PLAY, STEP.DAILY_GOAL];
+	/** The header stepper shows one group at a time: about you, your habit, then Try it. */
+	const STEPPER_STEPS = [STEP.DIALECT, STEP.REASON, STEP.CHALLENGES, STEP.LEVEL, STEP.GOAL];
+	const HABIT_STEPS = [STEP.DAILY_TIME, STEP.REMINDER, STEP.STREAK];
+	const TRY_STEPS = [STEP.READ, STEP.CONVERSATION, STEP.TRACE, STEP.PLAY];
 
 	/** How far above their current level we pre-set someone's goal. */
 	const GOAL_OFFSET = 2;
@@ -71,6 +92,11 @@
 	let isSubmitting = $state(false);
 	let error = $state('');
 	let tried = $state<TryProgress>({ ...NOTHING_TRIED });
+	// Habit answers; null when the screen was skipped.
+	let challenges = $state<ChallengeId[]>([]);
+	let dailyMinutes = $state<DailyMinutes | null>(15);
+	let reminderWindow = $state<ReminderWindow | null>(null);
+	let streakGoal = $state<number | null>(7);
 
 	// Web gets the Stripe trial offer; iOS gets the same step with Apple's
 	// plans and trial (TrialOffer/SubscribeButton never show Stripe in the app).
@@ -170,13 +196,17 @@
 		{ title: 'Welcome', subtitle: '' },
 		{ title: 'Dialect', subtitle: 'Choose your focus' },
 		{ title: 'Goals', subtitle: 'Why are you learning?' },
+		{ title: 'Challenges', subtitle: "What's hard for you?" },
+		{ title: 'Challenge help', subtitle: '' },
 		{ title: 'Level', subtitle: 'Where are you now?' },
 		{ title: 'Target', subtitle: 'Where do you want to get to?' },
+		{ title: 'Daily time', subtitle: 'Make it a habit' },
+		{ title: 'Reminder', subtitle: 'Make it a habit' },
+		{ title: 'Streak goal', subtitle: 'Make it a habit' },
 		{ title: 'Read', subtitle: 'Read it' },
 		{ title: 'Practice', subtitle: 'Say it' },
 		{ title: 'Trace', subtitle: 'Write it' },
 		{ title: 'Play', subtitle: 'Play with it' },
-		{ title: 'Daily goal', subtitle: 'Make it a habit' },
 		{ title: 'Building', subtitle: '' },
 		{ title: 'Plan', subtitle: '' },
 		{ title: 'Trial', subtitle: '' }
@@ -198,11 +228,33 @@
 
 	let lesson = $derived(firstLesson(targetDialect, proficiencyLevel, page.data.isSubscribed === true));
 
+	/** How the app answers each challenge they picked, in their order (up to three on the help screen). */
+	let helps = $derived(
+		challenges.map((id) => ({
+			id,
+			label: CHALLENGES.find((c) => c.id === id)?.label ?? '',
+			...challengeHelp(id, targetDialect, chosenDialectName)
+		}))
+	);
+	let helpCards = $derived(
+		helps.slice(0, 3).map((h) => ({ ...h, shot: FEATURES.find((f) => f.slug === h.feature)?.hero }))
+	);
+	/** The plan's first stop: the place that answers their first challenge, if it has one. */
+	let focusStart = $derived(helps.find((h) => h.start)?.start ?? null);
+	/** On a Try-it step that tackles one of their challenges, which one. */
+	let tryFocus = $derived.by(() => {
+		const key = step === STEP.READ ? 'read' : step === STEP.CONVERSATION ? 'conversation' : step === STEP.PLAY ? 'play' : null;
+		return key ? (helps.find((h) => h.tryStep === key) ?? null) : null;
+	});
+
 	let buildingLines = $derived([
 		goalLevel && goalLevel !== proficiencyLevel
 			? `${chosenDialectName}, ${proficiencyLevel} to ${goalLevel}`
 			: `${chosenDialectName}, from ${proficiencyLevel}`,
 		REASON_FOCUS[learningReason] ?? 'Starting with everyday conversations',
+		...(challenges.length
+			? [`Focusing on ${challenges.slice(0, 2).map((c) => CHALLENGE_FOCUS[c]).join(' and ')}`]
+			: []),
 		lesson.title === 'Your first lesson' ? 'Picking your first lesson' : `Picking your first lesson: ${lesson.title}`
 	]);
 
@@ -218,13 +270,18 @@
 	let sentences = $derived(scrambleSentences(onboardingLines(scenario, targetDialect as Dialect)));
 
 	let inTry = $derived(TRY_STEPS.includes(step as (typeof TRY_STEPS)[number]));
-	let stepperSteps = $derived<readonly number[]>(inTry ? TRY_STEPS : STEPPER_STEPS);
-	let showStepper = $derived(inTry || STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number]));
+	let inHabit = $derived(HABIT_STEPS.includes(step as (typeof HABIT_STEPS)[number]));
+	let stepperSteps = $derived<readonly number[]>(
+		inTry ? TRY_STEPS : inHabit ? HABIT_STEPS : STEPPER_STEPS
+	);
+	let showStepper = $derived(
+		inTry || inHabit || STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number])
+	);
 
 	/** Read and Trace need written content, Play needs the conversation; without them they're left out. */
 	function nextTryStep(from: number): number {
 		for (const s of TRY_STEPS.slice(TRY_STEPS.indexOf(from as (typeof TRY_STEPS)[number]) + 1)) {
-			if (s === STEP.PLAY ? sentences.length > 0 : tryData || s === STEP.CONVERSATION || s === STEP.DAILY_GOAL)
+			if (s === STEP.PLAY ? sentences.length > 0 : tryData || s === STEP.CONVERSATION)
 				return s;
 		}
 		return STEP.BUILDING;
@@ -237,11 +294,6 @@
 			step: stepInfo[step].title.toLowerCase()
 		});
 		step = nextTryStep(step);
-	}
-
-	function finishDailyGoal(goal: DailyGoal) {
-		tried.goal = goal;
-		finishTryStep(null, true);
 	}
 
 	function nextStep() {
@@ -259,14 +311,72 @@
 		}
 		if (step === STEP.GOAL) {
 			if (!goalLevel) return;
+			step = STEP.DAILY_TIME;
+			return;
+		}
+		if (step === STEP.CHALLENGES) {
+			if (!challenges.length) return;
+			trackEvent('onboarding_challenges_chosen', { challenges });
+		}
+		if (step === STEP.DAILY_TIME) {
+			if (!dailyMinutes) return;
+			trackEvent('onboarding_minutes_chosen', { minutes: dailyMinutes });
+		}
+		if (step === STEP.STREAK) {
+			if (!streakGoal) return;
+			trackEvent('onboarding_streak_goal_chosen', { days: streakGoal });
 			handleSubmit();
 			return;
 		}
 		step += 1;
 	}
 
+	/** The footer's Skip: leaves this screen's answer empty and moves on. */
+	function skipStep() {
+		if (step === STEP.CHALLENGES) {
+			challenges = [];
+			step = STEP.LEVEL;
+			return;
+		} else if (step === STEP.GOAL) goalLevel = '';
+		else if (step === STEP.DAILY_TIME) dailyMinutes = null;
+		else if (step === STEP.REMINDER) reminderWindow = null;
+		else if (step === STEP.STREAK) {
+			streakGoal = null;
+			handleSubmit();
+			return;
+		} else {
+			nextStep();
+			return;
+		}
+		step += 1;
+	}
+
+	function toggleChallenge(id: ChallengeId) {
+		challenges = challenges.includes(id) ? challenges.filter((c) => c !== id) : [...challenges, id];
+	}
+
+	/** Long enough that the generic reminder banner doesn't re-ask straight after onboarding. */
+	const SNOOZE_AFTER_ONBOARDING_MS = 14 * 24 * 60 * 60 * 1000;
+
+	/**
+	 * They picked when to be reminded. In the app this is where iOS asks for
+	 * notification permission; on the web the time applies to the streak email.
+	 */
+	async function chooseReminder(id: ReminderWindow) {
+		reminderWindow = id;
+		trackEvent('onboarding_reminder_chosen', { window: id });
+		if (id !== 'off' && isNative && (await pushPermission()) === 'prompt') {
+			snoozePushPrompt(SNOOZE_AFTER_ONBOARDING_MS);
+			const allowed = await enablePush();
+			trackEvent('onboarding_reminder_answered', { allowed });
+		}
+		step = STEP.STREAK;
+	}
+
 	function prevStep() {
-		if (step > 0) step -= 1;
+		// With nothing picked there was no help screen on the way here.
+		if (step === STEP.LEVEL && !challenges.length) step = STEP.CHALLENGES;
+		else if (step > 0) step -= 1;
 	}
 
 	/**
@@ -293,11 +403,6 @@
 		setTimeout(() => nextStep(), 400);
 	}
 
-	function skipGoal() {
-		goalLevel = '';
-		handleSubmit();
-	}
-
 	async function handleSubmit() {
 		if (!targetDialect || !learningReason || !proficiencyLevel) {
 			error = 'Please complete all steps';
@@ -318,7 +423,11 @@
 					learning_reason: learningReason,
 					proficiency_level: proficiencyLevel,
 					goal_level: goalLevel || null,
-					platform: isNative ? 'native' : 'web'
+					platform: isNative ? 'native' : 'web',
+					learning_challenges: challenges,
+					daily_minutes: dailyMinutes,
+					reminder_window: reminderWindow,
+					streak_goal: streakGoal
 				})
 			});
 
@@ -335,6 +444,8 @@
 		}
 
 		isSubmitting = false;
+		// The time they have is their daily goal now; the plan and trial offer recap it.
+		tried.goal = dailyMinutes ? buildGoal(dailyMinutes, challenges, targetDialect) : null;
 		step = tryData ? STEP.READ : STEP.CONVERSATION;
 	}
 
@@ -545,6 +656,76 @@
 						</div>
 					{/if}
 
+					{#if step === STEP.CHALLENGES}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-7 text-center">
+								<h2 class="screen-title">What's hardest for you?</h2>
+								<p class="screen-sub">Pick as many as you like. We'll focus your plan on them.</p>
+							</div>
+
+							<div class="mx-auto grid max-w-xl grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
+								{#each CHALLENGES as challenge, i (challenge.id)}
+									<button
+										class="reason {challenges.includes(challenge.id) ? 'is-on' : ''}"
+										style="--accent:#22c55e; --deep:#15803d;"
+										aria-pressed={challenges.includes(challenge.id)}
+										onclick={() => toggleChallenge(challenge.id)}
+										in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
+									>
+										<span class="reason-emoji" aria-hidden="true">{challenge.emoji}</span>
+										<span class="reason-label">{challenge.label}</span>
+									</button>
+								{/each}
+							</div>
+
+							<div class="mt-8 flex justify-center">
+								<button
+									class="press"
+									style="--accent:#22c55e; --deep:#15803d;"
+									disabled={!challenges.length}
+									onclick={nextStep}
+								>
+									Continue
+								</button>
+							</div>
+						</div>
+					{/if}
+
+					{#if step === STEP.HELP}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-7 text-center">
+								<h2 class="screen-title">Here's how we'll help</h2>
+								<p class="screen-sub">Your plan starts with what you find hardest.</p>
+							</div>
+
+							<div class="mx-auto grid max-w-3xl gap-3 {helpCards.length > 1 ? 'sm:grid-cols-2' : ''} {helpCards.length > 2 ? 'lg:grid-cols-3' : ''}">
+								{#each helpCards as card, i (card.id)}
+									<div class="help-card" in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}>
+										{#if card.shot}
+											<img
+												class="help-shot"
+												src={card.shot.src}
+												width={card.shot.w}
+												height={card.shot.h}
+												alt={card.shot.alt}
+												decoding="async"
+											/>
+										{/if}
+										<span class="help-for">{card.label}</span>
+										<span class="help-title">{card.title}</span>
+										<span class="help-body">{card.body}</span>
+									</div>
+								{/each}
+							</div>
+
+							<div class="mt-8 flex justify-center">
+								<button class="press" style="--accent:#22c55e; --deep:#15803d;" onclick={nextStep}>
+									Continue
+								</button>
+							</div>
+						</div>
+					{/if}
+
 					<!-- Step 3: Current level -->
 					{#if step === STEP.LEVEL}
 						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
@@ -593,10 +774,117 @@
 								<button
 									class="press"
 									style="--accent:#22c55e; --deep:#15803d;"
-									disabled={!goalLevel || isSubmitting}
+									disabled={!goalLevel}
 									onclick={nextStep}
 								>
 									Continue
+								</button>
+							</div>
+						</div>
+					{/if}
+
+					{#if step === STEP.DAILY_TIME}
+						{@const minutes = dailyMinutes ?? 15}
+						<div class="mx-auto max-w-md" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-6 text-center">
+								<h2 class="screen-title">How much time can you study each day?</h2>
+								<p class="screen-sub">A little every day beats a lot once a week. Even 5 minutes works.</p>
+							</div>
+
+							<div class="text-center">
+								<span class="chip">~{wordsPerMonth(minutes)} new words a month</span>
+								<p class="minutes" aria-live="polite">{minutes} minutes</p>
+								<input
+									class="minutes-slider"
+									type="range"
+									min="0"
+									max={DAILY_MINUTES.length - 1}
+									step="1"
+									value={DAILY_MINUTES.indexOf(minutes)}
+									oninput={(e) => (dailyMinutes = DAILY_MINUTES[Number(e.currentTarget.value)])}
+									aria-label="Minutes a day"
+									aria-valuetext="{minutes} minutes"
+								/>
+								<span class="chip">{MINUTES_LABEL[minutes]}</span>
+							</div>
+
+							<div class="mt-8 flex justify-center">
+								<button
+									class="press"
+									style="--accent:#22c55e; --deep:#15803d;"
+									onclick={() => {
+										dailyMinutes = minutes;
+										nextStep();
+									}}
+								>
+									I'm committed
+								</button>
+							</div>
+						</div>
+					{/if}
+
+					{#if step === STEP.REMINDER}
+						<div class="mx-auto max-w-md" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-6 text-center">
+								<h2 class="screen-title">
+									When can you fit in {dailyMinutes ? `${dailyMinutes} minutes` : 'a little Arabic'}?
+								</h2>
+								<p class="screen-sub">One reminder at most, and only on days you haven't practised.</p>
+							</div>
+
+							<div class="flex flex-col gap-2.5">
+								{#each REMINDER_OPTIONS as option, i (option.id)}
+									<button
+										class="reason is-row {reminderWindow === option.id ? 'is-on' : ''}"
+										style="--accent:#22c55e; --deep:#15803d;"
+										aria-pressed={reminderWindow === option.id}
+										onclick={() => chooseReminder(option.id)}
+										in:fly={{ y: 20, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
+									>
+										<span class="reason-emoji" aria-hidden="true">{option.emoji}</span>
+										<span class="row-text">
+											<span class="reason-label">{option.label}</span>
+											<span class="row-hint">{option.hint}</span>
+										</span>
+									</button>
+								{/each}
+							</div>
+						</div>
+					{/if}
+
+					{#if step === STEP.STREAK}
+						<div class="mx-auto max-w-md" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-6 text-center">
+								<h2 class="screen-title">Commit to a streak</h2>
+								<p class="screen-sub">Streak goals help you stay with it and build a habit.</p>
+							</div>
+
+							<div class="flex flex-col gap-2.5">
+								{#each STREAK_GOALS as goal, i (goal.days)}
+									<button
+										class="reason is-row {streakGoal === goal.days ? 'is-on' : ''}"
+										style="--accent:#f59e0b; --deep:#b45309;"
+										aria-pressed={streakGoal === goal.days}
+										onclick={() => (streakGoal = goal.days)}
+										in:fly={{ y: 20, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
+									>
+										<span class="reason-emoji" aria-hidden="true">🔥</span>
+										<span class="row-text">
+											<span class="reason-label">{goal.days} days</span>
+											<span class="row-hint">{goal.label}</span>
+										</span>
+									</button>
+								{/each}
+							</div>
+
+							<div class="mt-8 flex justify-center">
+								<button
+									class="press"
+									style="--accent:#22c55e; --deep:#15803d;"
+									disabled={!streakGoal || isSubmitting}
+									onclick={nextStep}
+								>
+									Build my plan
 								</button>
 							</div>
 
@@ -611,6 +899,12 @@
 								</div>
 							{/if}
 						</div>
+					{/if}
+
+					{#if tryFocus}
+						<p class="focus-tag" in:fade={{ duration: 300 }}>
+							You said {tryFocus.label.toLowerCase()} is hardest. This is where it gets easier.
+						</p>
 					{/if}
 
 					<!-- Try it: read the dialog's opening -->
@@ -655,10 +949,6 @@
 					{/if}
 
 					<!-- Try it: a daily goal -->
-					{#if step === STEP.DAILY_GOAL}
-						<DailyGoalPick onDone={finishDailyGoal} onSkip={() => finishTryStep(null, false)} />
-					{/if}
-
 					<!-- Between the Try-it steps and the plan: "Building your plan" -->
 					{#if step === STEP.BUILDING}
 						<BuildingPlan lines={buildingLines} onDone={() => (step = STEP.PLAN)} />
@@ -671,7 +961,9 @@
 							{goalLevel}
 							{tried}
 							{lesson}
-							isNative={isNative === true}
+							{focusStart}
+							{streakGoal}
+							{reminderWindow}
 							onStart={handlePlanStart}
 						/>
 					{/if}
@@ -685,6 +977,7 @@
 							{proficiencyLevel}
 							{goalLevel}
 							egyptianQuote={targetDialect === 'egyptian-arabic'}
+							{challenges}
 						/>
 					{/if}
 
@@ -696,7 +989,7 @@
 			</div>
 
 			<!-- Footer Navigation -->
-			{#if step >= STEP.DIALECT && step <= STEP.GOAL}
+			{#if step >= STEP.DIALECT && step <= STEP.STREAK}
 				<div class="px-4 pb-5 sm:px-8 sm:pb-7">
 					<div class="mx-auto flex max-w-2xl items-center justify-between">
 						<button class="nav-pill" onclick={prevStep}>
@@ -716,7 +1009,7 @@
 							Back
 						</button>
 
-						<button class="nav-pill" onclick={step === STEP.GOAL ? skipGoal : nextStep}>
+						<button class="nav-pill" onclick={skipStep} disabled={isSubmitting}>
 							Skip
 							<svg
 								fill="none"
@@ -915,6 +1208,111 @@
 	}
 
 	/* Pressable primary */
+	.help-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		border-radius: 1.25rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 0.75rem 0.75rem 1rem;
+		text-align: left;
+	}
+
+	.help-shot {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 0.8rem;
+		margin-bottom: 0.4rem;
+	}
+
+	.help-for {
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #16a34a;
+	}
+
+	.help-title {
+		font-size: 1.05rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.help-body {
+		font-size: 0.88rem;
+		line-height: 1.45;
+		color: var(--text2);
+	}
+
+	.focus-tag {
+		margin: 0 auto 1rem;
+		max-width: 28rem;
+		border-radius: 100px;
+		background: color-mix(in srgb, #22c55e 14%, var(--tile3));
+		padding: 0.4rem 1rem;
+		text-align: center;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #16a34a;
+	}
+
+	/* Option rows (reminder time, streak goal): the reason card laid out sideways. */
+	.reason.is-row {
+		flex-direction: row;
+		gap: 1rem;
+		padding: 0.85rem 1.1rem;
+		text-align: left;
+	}
+
+	.reason.is-row:hover {
+		transform: translateY(-2px);
+	}
+
+	.reason.is-row .reason-label {
+		font-size: 1rem;
+	}
+
+	.row-text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.row-hint {
+		font-size: 0.82rem;
+		color: var(--text2);
+	}
+
+	.chip {
+		display: inline-block;
+		border-radius: 100px;
+		background: color-mix(in srgb, #22c55e 14%, var(--tile3));
+		padding: 0.35rem 0.9rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #16a34a;
+	}
+
+	.minutes {
+		margin: 1.5rem 0 1rem;
+		font-size: clamp(2.4rem, 9vw, 3.2rem);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		color: var(--text1);
+	}
+
+	.minutes-slider {
+		display: block;
+		width: 100%;
+		margin-bottom: 1.25rem;
+		accent-color: #22c55e;
+		cursor: pointer;
+	}
+
 	.press {
 		display: inline-flex;
 		align-items: center;

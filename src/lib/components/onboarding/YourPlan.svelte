@@ -1,63 +1,55 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { CEFR_LEVEL_INFO, type CefrLevel } from '$lib/constants/cefr-levels';
-	import {
-		enablePush,
-		pushPermission,
-		snoozePushPrompt
-	} from '$lib/helpers/push-notifications';
 	import { trackEvent } from '$lib/analytics';
 	import type { FirstLesson } from '$lib/helpers/first-lesson';
 	import type { TryProgress } from '$lib/constants/onboarding-try';
 	import { describeGoal } from '$lib/constants/daily-goal';
+	import { REMINDER_OPTIONS, type ReminderWindow } from '$lib/constants/onboarding-questions';
 
 	interface Props {
 		proficiencyLevel: CefrLevel | '';
 		goalLevel: CefrLevel | '';
 		tried: TryProgress;
 		lesson: FirstLesson;
-		isNative: boolean;
+		/** Where their hardest challenge is tackled, when that isn't the first lesson. */
+		focusStart: { href: string; title: string } | null;
+		/** From the habit questions; null when skipped. */
+		streakGoal: number | null;
+		reminderWindow: ReminderWindow | null;
 		onStart: (destination: string) => void;
 	}
 
-	let { proficiencyLevel, goalLevel, tried, lesson, isNative, onStart }: Props = $props();
+	let {
+		proficiencyLevel,
+		goalLevel,
+		tried,
+		lesson,
+		focusStart,
+		streakGoal,
+		reminderWindow,
+		onStart
+	}: Props = $props();
 
-	/** Long enough that the generic reminder banner doesn't re-ask straight after this screen. */
-	const SNOOZE_AFTER_PLAN_MS = 14 * 24 * 60 * 60 * 1000;
-
-	// Only offered when iOS can still show its one-time dialog.
-	let canAskForPush = $state(false);
-	let reminder = $state<'unasked' | 'on' | 'declined'>('unasked');
-
-	onMount(async () => {
-		if (isNative) canAskForPush = (await pushPermission()) === 'prompt';
-	});
+	const reminderLabel = $derived(
+		reminderWindow && reminderWindow !== 'off'
+			? reminderWindow === 'night'
+				? 'at night'
+				: `in the ${REMINDER_OPTIONS.find((o) => o.id === reminderWindow)?.label.toLowerCase()}`
+			: null
+	);
 
 	const goalCaption = $derived(goalLevel ? CEFR_LEVEL_INFO[goalLevel].goal : '');
 
 	const checklist = $derived([
 		{ label: 'Your first sentence: read, said, written', done: tried.read || tried.spoke || tried.traced },
-		{ label: lesson.title, done: false },
+		{ label: focusStart?.title ?? lesson.title, done: false },
 		{
 			label: tried.goal ? `Today's goal: ${describeGoal(tried.goal)}` : "Today's challenge",
 			done: false
 		}
 	]);
-
-	async function remindMe() {
-		snoozePushPrompt(SNOOZE_AFTER_PLAN_MS);
-		const allowed = await enablePush();
-		reminder = allowed ? 'on' : 'declined';
-		trackEvent('onboarding_reminder_answered', { allowed });
-	}
-
-	function notNow() {
-		snoozePushPrompt(SNOOZE_AFTER_PLAN_MS);
-		reminder = 'declined';
-		trackEvent('onboarding_reminder_answered', { allowed: false, dismissed: true });
-	}
 
 	function start(destination: string) {
 		trackEvent('onboarding_plan_destination_chosen', { destination });
@@ -98,28 +90,29 @@
 		{/each}
 	</ol>
 
-	{#if canAskForPush && reminder === 'unasked'}
-		<div class="reminder">
-			<p class="reminder-title">Practise a little every day?</p>
-			<p class="reminder-sub">One reminder a day at most, and only if you haven't practised yet.</p>
-			<div class="reminder-actions">
-				<button type="button" class="pill pill--on" onclick={remindMe}>Remind me daily</button>
-				<button type="button" class="pill" onclick={notNow}>Not now</button>
-			</div>
-		</div>
-	{:else if reminder === 'on'}
-		<p class="reminder-done">🔔 Daily reminder on.</p>
-	{:else if !isNative}
-		<p class="reminder-done">We'll email you if you miss a day. You can turn that off in your profile.</p>
+	{#if streakGoal || reminderLabel}
+		<p class="reminder-done">
+			{#if streakGoal}🔥 Day 1 of your {streakGoal}-day streak goal.{/if}
+			{#if reminderLabel}Reminders come {reminderLabel}, at most once a day.{/if}
+		</p>
 	{/if}
 
 	<div class="mt-7 flex flex-col items-center gap-3">
-		<button type="button" class="press" onclick={() => start(lesson.href)}>
-			Start: {lesson.title}
-		</button>
-		<button type="button" class="secondary" onclick={() => start('/tutor')}>
-			Talk to the tutor instead
-		</button>
+		{#if focusStart}
+			<button type="button" class="press" onclick={() => start(focusStart.href)}>
+				Start: {focusStart.title}
+			</button>
+			<button type="button" class="secondary" onclick={() => start(lesson.href)}>
+				Or start with {lesson.title}
+			</button>
+		{:else}
+			<button type="button" class="press" onclick={() => start(lesson.href)}>
+				Start: {lesson.title}
+			</button>
+			<button type="button" class="secondary" onclick={() => start('/tutor')}>
+				Talk to the tutor instead
+			</button>
+		{/if}
 	</div>
 </div>
 
@@ -228,31 +221,9 @@
 		text-decoration: line-through;
 	}
 
-	.reminder {
-		margin-top: 1.25rem;
-		border-radius: 1rem;
-		background: var(--tile4);
-		padding: 1rem;
-		text-align: center;
-	}
 
-	.reminder-title {
-		font-weight: 700;
-		color: var(--text1);
-	}
 
-	.reminder-sub {
-		margin-top: 0.2rem;
-		font-size: 0.85rem;
-		color: var(--text2);
-	}
 
-	.reminder-actions {
-		margin-top: 0.8rem;
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-	}
 
 	.reminder-done {
 		margin-top: 1.25rem;
@@ -261,22 +232,7 @@
 		color: var(--text2);
 	}
 
-	.pill {
-		border-radius: 100px;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		padding: 0.45rem 1rem;
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: var(--text2);
-		cursor: pointer;
-	}
 
-	.pill--on {
-		border-color: var(--brand);
-		background: var(--brand);
-		color: #fff;
-	}
 
 	.press {
 		border-radius: 100px;
