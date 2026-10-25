@@ -21,6 +21,8 @@
 	import { awardGameXp } from '$lib/games/game-xp';
 	import { takePendingRound } from '$lib/games/pending-round';
 	import { saveMissedWords } from '$lib/games/save-missed';
+	import { signupPrompt } from '$lib/games/free-rounds';
+	import { noteGameSignup } from '$lib/games/signup-source';
 
 	interface Props {
 		game: GameInfo;
@@ -230,7 +232,8 @@
 	isOpen={modal === 'auth'}
 	handleCloseModal={onCloseModal}
 	title="Keep playing {game.name}"
-	message="You've played your free rounds. Make a free account for two more rounds of every game, plus XP and a daily streak."
+	message={signupPrompt(game.slug)}
+	onChoose={(choice) => noteGameSignup(game.slug, 'gate', choice)}
 />
 <PaywallModal source="game" isOpen={modal === 'paywall'} handleCloseModal={onCloseModal} gameName={game.name} />
 

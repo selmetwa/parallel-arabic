@@ -13,6 +13,8 @@
     message?: string;
     /** Where to come back to after signing up or logging in. Defaults to this page. */
     next?: string;
+    /** Called as the visitor heads to sign up or log in, e.g. to record where they came from. */
+    onChoose?: (choice: 'signup' | 'login') => void;
   }
 
   let {
@@ -20,7 +22,8 @@
     handleCloseModal = () => {},
     title = 'Login Required',
     message = 'Create an account or log in to continue your learning journey.',
-    next
+    next,
+    onChoose
   }: Props = $props();
 
   // Only read the URL once open: prerendered pages can't touch url.search.
@@ -49,10 +52,13 @@
 
     <!-- Footer / Action -->
     <div class="p-6 pt-0 flex flex-col items-center gap-3">
-        <Button type="button" onClick={() => goto(`${resolve('/signup')}${nextQuery}`)} className="!py-3 !text-lg w-full shadow-md">
+        <Button type="button" onClick={() => {
+          onChoose?.('signup');
+          goto(`${resolve('/signup')}${nextQuery}`);
+        }} className="!py-3 !text-lg w-full shadow-md">
             Create a free account
         </Button>
-        <a href="{resolve('/login')}{nextQuery}" class="text-sm font-semibold text-text-200 underline underline-offset-2 hover:text-text-300">
+        <a href="{resolve('/login')}{nextQuery}" onclick={() => onChoose?.('login')} class="text-sm font-semibold text-text-200 underline underline-offset-2 hover:text-text-300">
             I already have an account
         </a>
     </div>

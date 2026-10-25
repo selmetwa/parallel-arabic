@@ -29,7 +29,7 @@ async function savedWordsFor(userId: string, dialect: string): Promise<string[]>
 	return [...new Set(words)].slice(0, MAX_SAVED_WORDS);
 }
 
-/** A fresh round of Fill the Gap. Two free rounds, then Premium. */
+/** A fresh round of Fill the Gap. Free rounds from the shared allowance, then Premium. */
 export const POST: RequestHandler = async (event) => {
 	const access = await checkGameAccess(event, 'fill-the-gap');
 	if ('denied' in access) return access.denied;

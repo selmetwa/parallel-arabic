@@ -9,6 +9,7 @@ export function openGate(): RoundGate {
 	return {
 		ready: true,
 		unlimited: true,
+		limit: Infinity,
 		remaining: Infinity,
 		modal: null,
 		canStart: () => true,

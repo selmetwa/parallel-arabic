@@ -822,7 +822,7 @@ export const GAMES_HUB_FAQS: Faq[] = [
 	{
 		question: 'Are the Arabic games free?',
 		answer:
-			'Every game gives you two free rounds, no account needed. Sign up and you get two more of each; Premium unlocks unlimited rounds of everything.'
+			'Your first three rounds are free, in any games you like, with no account needed. Sign up and you get five more; Premium unlocks unlimited rounds of everything.'
 	},
 	{
 		question: 'Which dialects can I play in?',

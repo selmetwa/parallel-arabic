@@ -1,5 +1,6 @@
 import { browser } from '$app/environment';
-import { FREE_ROUNDS, readRoundsUsed, recordRound } from './free-rounds';
+import { freeRounds, readRoundsUsed, recordRound } from './free-rounds';
+import { trackEvent } from '$lib/analytics';
 
 export type GateModal = 'auth' | 'paywall' | null;
 
@@ -27,6 +28,7 @@ export function createRoundGate(
 	let modal = $state<GateModal>(null);
 
 	const who = () => access().userId ?? 'anon';
+	const limit = () => freeRounds(game, !!access().userId);
 
 	$effect(() => {
 		used = readRoundsUsed(storage(), game, who());
@@ -35,10 +37,11 @@ export function createRoundGate(
 
 	function block() {
 		modal = access().userId ? 'paywall' : 'auth';
+		trackEvent('game_gate_shown', { game, modal, used });
 	}
 
 	function canStart() {
-		return access().isSubscribed || used < FREE_ROUNDS;
+		return access().isSubscribed || used < limit();
 	}
 
 	// A round started counts toward the daily goal.
@@ -56,12 +59,14 @@ export function createRoundGate(
 			logRound();
 			return true;
 		}
-		if (used >= FREE_ROUNDS) {
+		if (used >= limit()) {
 			block();
 			return false;
 		}
 		used = Math.max(used + 1, recordRound(storage(), game, who()));
 		logRound();
+		// Signed-in rounds are already in activity_event.
+		if (!access().userId) trackEvent('game_round_started', { game, round: used });
 		return true;
 	}
 
@@ -72,8 +77,11 @@ export function createRoundGate(
 		get unlimited() {
 			return access().isSubscribed;
 		},
+		get limit() {
+			return limit();
+		},
 		get remaining() {
-			return Math.max(0, FREE_ROUNDS - used);
+			return Math.max(0, limit() - used);
 		},
 		get modal() {
 			return modal;
@@ -96,5 +104,5 @@ export type RoundGate = ReturnType<typeof createRoundGate>;
 export function freeRoundsStatus(gate: RoundGate, roundName: string): string | undefined {
 	if (!gate.ready || gate.unlimited) return undefined;
 	if (gate.remaining === 0) return `You've used your free ${roundName}`;
-	return `${gate.remaining} of ${FREE_ROUNDS} free ${roundName} left`;
+	return `${gate.remaining} of ${gate.limit} free ${roundName} left`;
 }

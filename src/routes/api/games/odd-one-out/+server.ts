@@ -10,7 +10,7 @@ import {
 	validatePuzzle
 } from '$lib/server/games/odd-one-out';
 
-/** A fresh round of Odd One Out. Two free rounds, then Premium. */
+/** A fresh round of Odd One Out. Free rounds from the shared allowance, then Premium. */
 export const POST: RequestHandler = async (event) => {
 	const access = await checkGameAccess(event, 'odd-one-out');
 	if ('denied' in access) return access.denied;

@@ -4,8 +4,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
-	import SocialProof from '$lib/components/SocialProof.svelte';
-	import Testimonial from '$lib/components/Testimonial.svelte';
+	import TestimonialWall from '$lib/components/TestimonialWall.svelte';
 	import FeatureGrid from '$lib/components/FeatureGrid.svelte';
 	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
 	import { isNativeApp } from '$lib/helpers/is-native-app';
@@ -177,14 +176,9 @@
 		{/if}
 	</div>
 
-	<aside class="proof">
-		<SocialProof quotes={0} />
-		<div class="quote-cols">
-			{#each quotes as segments, i (i)}
-				<Testimonial {segments} class="text-left" />
-			{/each}
-		</div>
-	</aside>
+	<div class="proof">
+		<TestimonialWall {quotes} />
+	</div>
 </div>
 
 <svelte:window onkeydown={(e) => showAllPage && e.key === 'Escape' && (showAllPage = false)} />
@@ -233,12 +227,6 @@
 		margin-top: 1.5rem;
 	}
 
-	.quote-cols {
-		display: grid;
-		gap: 0.75rem;
-		margin-top: 1rem;
-	}
-
 	@media (min-width: 1024px) {
 		.offer {
 			max-width: none;
@@ -251,18 +239,6 @@
 
 		.proof {
 			margin-top: 0;
-		}
-
-		/* Two masonry columns, so quotes of different lengths pack without gaps. */
-		.quote-cols {
-			display: block;
-			columns: 2;
-			column-gap: 0.75rem;
-		}
-
-		.quote-cols :global(figure) {
-			break-inside: avoid;
-			margin-bottom: 0.75rem;
 		}
 	}
 

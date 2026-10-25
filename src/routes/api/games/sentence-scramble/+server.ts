@@ -9,7 +9,7 @@ import {
 	validateSentence
 } from '$lib/server/games/sentence-scramble';
 
-/** A fresh round of Sentence Scramble. Two free rounds, then Premium. */
+/** A fresh round of Sentence Scramble. Free rounds from the shared allowance, then Premium. */
 export const POST: RequestHandler = async (event) => {
 	const access = await checkGameAccess(event, 'sentence-scramble');
 	if ('denied' in access) return access.denied;

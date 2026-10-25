@@ -4,6 +4,7 @@
 	import { page } from '$app/state';
 	import PressButton from './PressButton.svelte';
 	import { rememberRound } from '$lib/games/pending-round';
+	import { noteGameSignup } from '$lib/games/signup-source';
 	import { hapticSuccess } from '$lib/helpers/haptics';
 	import type { GameWord } from '$lib/games/word-pool';
 
@@ -54,7 +55,10 @@
 	const signupHref = $derived(
 		`${resolve('/signup')}?next=${encodeURIComponent(page.url.pathname + page.url.search)}`
 	);
+	// The game this round came from, for the sign-up count (blog embeds use the post's path).
+	const game = $derived(page.url.pathname.match(/^\/learn\/game\/([^/]+)/)?.[1] ?? page.url.pathname);
 	const missedCount = $derived(missedWords.length);
+	const SHOWN_WORDS = 6;
 	const keepLine = $derived.by(() => {
 		const parts = [];
 		if (xpEarned > 0) parts.push(`earned +${xpEarned} XP`);
@@ -96,9 +100,24 @@
 
 	{#if !signedIn}
 		<div class="keep">
-			<p>{keepLine ?? 'Make a free account to earn XP and keep a daily streak.'}</p>
-			<a href={signupHref} class="keep-link">
-				{keepLine ? 'Create a free account to keep them' : 'Create a free account'}
+			{#if missedCount > 0}
+				<p class="keep-title">
+					Save {missedCount === 1 ? 'this word' : `these ${missedCount} words`} to your review deck
+				</p>
+				<ul class="missed">
+					{#each missedWords.slice(0, SHOWN_WORDS) as word (word.id)}
+						<li><span class="ar" lang="ar">{word.arabic}</span> {word.english}</li>
+					{/each}
+					{#if missedCount > SHOWN_WORDS}
+						<li>+{missedCount - SHOWN_WORDS} more</li>
+					{/if}
+				</ul>
+				<p>They come back just before you'd forget them.{xpEarned > 0 ? ` You'd also keep your +${xpEarned} XP.` : ''}</p>
+			{:else}
+				<p>{keepLine ?? 'Make a free account to earn XP and keep a daily streak.'}</p>
+			{/if}
+			<a href={signupHref} class="keep-link" onclick={() => noteGameSignup(game, 'results')}>
+				{missedCount > 0 ? 'Save them with a free account' : 'Create a free account'}
 				<span aria-hidden="true">→</span>
 			</a>
 		</div>
@@ -179,17 +198,45 @@
 		color: var(--text1);
 	}
 
+	.keep-title {
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	.missed {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin: 0.6rem 0;
+	}
+
+	.missed li {
+		border-radius: 100px;
+		border: 1px solid var(--tile5);
+		background: var(--tile2);
+		padding: 0.2rem 0.65rem;
+		font-size: 0.82rem;
+		color: var(--text2);
+	}
+
+	.missed .ar {
+		color: var(--text1);
+		font-size: 1rem;
+	}
+
 	.keep-link {
 		display: inline-block;
-		margin-top: 0.4rem;
+		margin-top: 0.7rem;
+		border-radius: 100px;
+		background: var(--accent);
+		box-shadow: 0 3px 0 var(--deep);
+		padding: 0.55rem 1.1rem;
 		font-weight: 600;
-		color: var(--text1);
-		text-decoration: underline;
-		text-underline-offset: 3px;
+		color: #fff;
 	}
 
 	.keep-link:hover {
-		color: var(--accent);
+		filter: brightness(1.05);
 	}
 
 	.actions {

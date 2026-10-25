@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readRoundsUsed, recordRound } from './free-rounds';
+import { freeRounds, readRoundsUsed, recordRound } from './free-rounds';
 
 function memoryStore() {
 	const data = new Map<string, string>();
@@ -10,18 +10,28 @@ function memoryStore() {
 }
 
 describe('free rounds', () => {
-	it('counts rounds per game', () => {
+	it('shares one count across games', () => {
 		const store = memoryStore();
 		recordRound(store, 'word-scramble', 'anon');
-		recordRound(store, 'word-scramble', 'anon');
-		expect(readRoundsUsed(store, 'word-scramble', 'anon')).toBe(2);
+		recordRound(store, 'odd-one-out', 'anon');
+		expect(readRoundsUsed(store, 'memory-pairs', 'anon')).toBe(2);
 	});
 
-	it('keeps games and identities apart', () => {
+	it('keeps identities apart', () => {
 		const store = memoryStore();
 		recordRound(store, 'word-scramble', 'anon');
-		expect(readRoundsUsed(store, 'odd-one-out', 'anon')).toBe(0);
 		expect(readRoundsUsed(store, 'word-scramble', 'user-1')).toBe(0);
+	});
+
+	it('keeps scenarios on their own count', () => {
+		const store = memoryStore();
+		recordRound(store, 'word-scramble', 'anon');
+		expect(readRoundsUsed(store, 'scenarios', 'anon')).toBe(0);
+		expect(freeRounds('scenarios', false)).toBe(2);
+	});
+
+	it('gives accounts more rounds than signed-out visitors', () => {
+		expect(freeRounds('quiz', true)).toBeGreaterThan(freeRounds('quiz', false));
 	});
 
 	it('survives storage that throws', () => {
