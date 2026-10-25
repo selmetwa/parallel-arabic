@@ -2,6 +2,7 @@
 import { Stripe } from 'stripe';
 import { PUBLIC_DOMAIN, PUBLIC_STRIPE_PUBLISHABLE_KEY } from '$env/static/public';
 import { STRIPE_SECRET } from '$env/static/private';
+import { PAID_THROUGH_KEY, pausedPaidThrough } from '$lib/subscription/cancel-flow';
 
 let stripe: Stripe | undefined;
 
@@ -12,13 +13,97 @@ let stripe: Stripe | undefined;
  * current pay period.
  *
  */
-const cancel = async (subscriptionId: string): Promise<Stripe.Subscription | undefined> => {
+const cancel = async (
+	subscriptionId: string,
+	details?: Stripe.SubscriptionUpdateParams.CancellationDetails
+): Promise<Stripe.Subscription | undefined> => {
 	if (stripe) {
 		try {
 			const subscription = await stripe.subscriptions.update(subscriptionId, {
-				cancel_at_period_end: true
+				cancel_at_period_end: true,
+				...(details && { cancellation_details: details })
 			});
 			return subscription;
+		} catch (error: any) {
+			console.error(error);
+		}
+	}
+};
+
+/**
+ * Stripe pause
+ *
+ * Stops charging until `resumesAt`; the invoices in between are voided.
+ * `paidThrough` (the end of the period already paid for) goes on the metadata,
+ * because Stripe keeps a paused subscription `active` and access should still
+ * stop there (see stripeAccessEnd).
+ */
+const pause = async (
+	subscriptionId: string,
+	resumesAt: number,
+	paidThrough: number
+): Promise<Stripe.Subscription | undefined> => {
+	if (stripe) {
+		try {
+			return await stripe.subscriptions.update(subscriptionId, {
+				pause_collection: { behavior: 'void', resumes_at: resumesAt },
+				metadata: { [PAID_THROUGH_KEY]: String(paidThrough) }
+			});
+		} catch (error: any) {
+			console.error(error);
+		}
+	}
+};
+
+/**
+ * Stripe resume
+ *
+ * Undoes a pending cancellation or a pause. Ending a pause after the paid
+ * period has run out restarts the billing cycle today, so they pay for the
+ * access they get back.
+ */
+const resume = async (subscriptionId: string): Promise<Stripe.Subscription | undefined> => {
+	if (stripe) {
+		try {
+			const current = await stripe.subscriptions.retrieve(subscriptionId);
+			const paidThrough = pausedPaidThrough(current);
+			const lapsed = !!paidThrough && paidThrough <= Math.floor(Date.now() / 1000);
+			return await stripe.subscriptions.update(subscriptionId, {
+				cancel_at_period_end: false,
+				// A paused subscription is cancelled with a date (cancelPaused), not at period end.
+				...(current.cancel_at && !current.cancel_at_period_end && { cancel_at: '' }),
+				cancellation_details: { feedback: '', comment: '' },
+				...(current.pause_collection && {
+					pause_collection: '',
+					metadata: { [PAID_THROUGH_KEY]: '' }
+				}),
+				...(lapsed && { billing_cycle_anchor: 'now', proration_behavior: 'none' })
+			});
+		} catch (error: any) {
+			console.error(error);
+		}
+	}
+};
+
+/**
+ * End a paused subscription. Paid time still left runs out first; otherwise it
+ * ends now, since nothing is being paid for.
+ */
+const cancelPaused = async (
+	subscriptionId: string,
+	details: Stripe.SubscriptionUpdateParams.CancellationDetails
+): Promise<Stripe.Subscription | undefined> => {
+	if (stripe) {
+		try {
+			const current = await stripe.subscriptions.retrieve(subscriptionId);
+			const paidThrough = pausedPaidThrough(current);
+			if (paidThrough && paidThrough > Math.floor(Date.now() / 1000)) {
+				return await stripe.subscriptions.update(subscriptionId, {
+					cancel_at: paidThrough,
+					cancellation_details: details
+				});
+			}
+			return await stripe.subscriptions.cancel(subscriptionId, { cancellation_details: details });
 		} catch (error: any) {
 			console.error(error);
 		}
@@ -144,6 +229,9 @@ const initializeStripe = async (): Promise<boolean> => {
 
 export const StripeService = {
 	cancel,
+	cancelPaused,
+	pause,
+	resume,
 	getSession,
 	getSubscription,
 	subscribe

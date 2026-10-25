@@ -1,10 +1,10 @@
 /**
  * Thin chokepoint for semantic product events. Onboarding, trial-offer,
- * paywall and game events are stored in `onboarding_event` so the funnel can be
+ * paywall, game and cancel-flow events are stored in `onboarding_event` so the funnel can be
  * measured (game events from signed-out visitors go to `anon_event`);
  * everything else is a no-op until an analytics provider is wired up again.
  */
-const RECORDED_PREFIXES = ['onboarding_', 'trial_offer_', 'paywall_', 'game_'];
+const RECORDED_PREFIXES = ['onboarding_', 'trial_offer_', 'paywall_', 'game_', 'cancel_'];
 
 /** The only events a signed-out visitor can record. */
 export function isAnonEvent(event: string): boolean {

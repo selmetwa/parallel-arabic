@@ -8,6 +8,7 @@ import { computeAchievements } from '$lib/config/achievements';
 import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { env } from '$env/dynamic/private';
 import { isDialect } from '$lib/constants/dialects';
+import { pausedPaidThrough } from '$lib/subscription/cancel-flow';
 
 export const load = async ({ locals, parent }) => {
 	const { session, user } = await parent();
@@ -55,6 +56,9 @@ export const load = async ({ locals, parent }) => {
     /** Stripe only: 'month' | 'year' and the price in dollars */
     interval?: string | null;
     amount?: number | null;
+    /** Stripe only, while paused: when billing restarts, and when paid access ends. */
+    pausedUntil?: number | null;
+    paidThrough?: number | null;
   } = {
     cancelAtPeriodEnd: false,
     currentPeriodEnd: null,
@@ -67,11 +71,15 @@ export const load = async ({ locals, parent }) => {
       if (subscription) {
         const price = subscription.items?.data[0]?.price;
         subscriptionDetails = {
-          cancelAtPeriodEnd: subscription.cancel_at_period_end,
+          // A paused subscription is cancelled with a date rather than at period end.
+          cancelAtPeriodEnd: subscription.cancel_at_period_end || !!subscription.cancel_at,
           currentPeriodEnd: subscription.current_period_end,
           status: subscription.status,
           interval: price?.recurring?.interval ?? null,
-          amount: price?.unit_amount != null ? price.unit_amount / 100 : null
+          amount: price?.unit_amount != null ? price.unit_amount / 100 : null,
+          pausedUntil:
+            subscription.status === 'active' ? (subscription.pause_collection?.resumes_at ?? null) : null,
+          paidThrough: pausedPaidThrough(subscription)
         };
       }
     } catch (error) {
