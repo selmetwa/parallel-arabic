@@ -4,7 +4,8 @@
 	import { page } from '$app/state';
 	import { rememberNext, safeNext, withNewSignup } from '$lib/helpers/safe-next';
 	import Button from '$lib/components/Button.svelte';
-	import Testimonial from '$lib/components/Testimonial.svelte';
+	import TestimonialWall from '$lib/components/TestimonialWall.svelte';
+	import AuthValueProps from '$lib/components/AuthValueProps.svelte';
 	import type { ActionData } from './$types';
 	import { Browser } from '@capacitor/browser';
 	import { App } from '@capacitor/app';
@@ -81,28 +82,11 @@
     // On web, supabase handles redirect automatically via /auth/callback server route
   }
 
-  const features = [
-    { icon: '🌍', title: 'Multiple Dialects', desc: 'Egyptian, Levantine, Gulf, Moroccan & more' },
-    { icon: '📚', title: 'Lessons', desc: 'Customized lessons for all levels' },
-    { icon: '🧠', title: 'Spaced Repetition', desc: 'Never forget a word again' },
-    { icon: '📖', title: 'Stories & Audio', desc: 'Native audio pronunciation' },
-    { icon: '💬', title: 'AI Tutor', desc: 'Real-time conversation practice' },
-    { icon: '📺', title: 'Interactive Videos', desc: 'YouTube with transcripts' },
-    { icon: '✨', title: 'Sentence Mining', desc: 'Unlimited practice sentences' },
-    { icon: '🎙️', title: 'Speaking', desc: 'Pronunciation feedback' },
-    { icon: '✍️', title: 'Verb Mastery', desc: 'Conjugation practice' },
-    { icon: '📦', title: 'Anki Decks', desc: 'Custom flashcard exports' },
-    { icon: '🔤', title: 'Alphabet', desc: 'Handwriting & pronunciation' },
-  ];
-
-  // Split features for desktop layout
-  const topFeatures = features.slice(0, 8); // Cards next to form (2x2 grid)
-  const bottomFeatures = features.slice(8); // Cards below
 </script>
 
 <section class="min-h-screen bg-tile-300 py-8 sm:py-12">
-  <div class="max-w-6xl mx-auto px-4 sm:px-8 flex gap-4 flex-col sm:flex-row">
-    <div class="flex-1 flex flex-col gap-4">
+  <!-- Mobile: form, what's included, quotes. Desktop: form and what's included left, quotes right. -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 grid gap-6 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-10 lg:items-start">
       <form
         method="POST"
         action="?/signup"
@@ -183,43 +167,7 @@
           <a href="/login{nextQuery}" class="text-text-200 hover:text-text-300 underline transition-colors">Already have an account? Login</a>
         </div>
       </form>
-      <Testimonial
-        segments={[
-          { t: 'After only a day, I love Parallel Arabic.', b: true },
-          {
-            t: ' As a language teacher and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.'
-          }
-        ]}
-      />
-      <div>
-        <div class="grid grid-cols-2 gap-4 flex-1 content-start">
-          {#each bottomFeatures as feature}
-            <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-5 shadow-lg">
-              <div class="text-2xl mb-2">{feature.icon}</div>
-              <h3 class="text-base font-bold text-text-300 mb-1">{feature.title}</h3>
-              <p class="text-text-200 text-sm leading-relaxed">{feature.desc}</p>
-            </div>
-          {/each}
-        </div>
-      </div>
-    </div>
-    <div class="flex-1 flex flex-col gap-4">
-      <div class="grid grid-cols-2 gap-4 content-start">
-        {#each topFeatures as feature}
-          <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-5 shadow-lg">
-            <div class="text-2xl mb-2">{feature.icon}</div>
-            <h3 class="text-base font-bold text-text-300 mb-1">{feature.title}</h3>
-            <p class="text-text-200 text-sm leading-relaxed">{feature.desc}</p>
-          </div>
-        {/each}
-      </div>
-      <Testimonial
-        segments={[
-          { t: 'I love it! This is something I have been ' },
-          { t: 'searching for ages', b: true },
-          { t: ' :) thank you so much' }
-        ]}
-      />
-    </div>
+      <AuthValueProps cta="Create a free account" />
+      <TestimonialWall class="lg:col-start-2 lg:row-start-1 lg:row-span-2" />
   </div>
 </section>

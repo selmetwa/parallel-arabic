@@ -9,7 +9,7 @@ import {
 	validateItem
 } from '$lib/server/games/spot-the-mistake';
 
-/** A fresh round of Spot the Mistake. Two free rounds, then Premium. */
+/** A fresh round of Spot the Mistake. Free rounds from the shared allowance, then Premium. */
 export const POST: RequestHandler = async (event) => {
 	const access = await checkGameAccess(event, 'spot-the-mistake');
 	if ('denied' in access) return access.denied;

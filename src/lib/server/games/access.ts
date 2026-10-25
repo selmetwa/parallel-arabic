@@ -1,7 +1,7 @@
 import { json, type Cookies } from '@sveltejs/kit';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
 import { consumeRateLimit, getRedisClient } from '$lib/server/redis';
-import { FREE_ROUNDS } from '$lib/games/free-rounds';
+import { freeRounds, roundPool } from '$lib/games/free-rounds';
 
 // App.Locals is not typed in this repo; this is the part hooks.server.ts provides.
 type SessionLocals = {
@@ -21,7 +21,9 @@ const YEAR_SECONDS = 60 * 60 * 24 * 365;
 /**
  * Free rounds for the generated games, counted where the browser can't reset
  * them: in Redis for accounts, in an httpOnly cookie for signed-out visitors
- * (backed by a per-IP hourly ceiling). Subscribers are never counted.
+ * (backed by a per-IP hourly ceiling). Subscribers are never counted. These only
+ * see the generated games, so they trail the browser's count of the shared
+ * allowance; they're a backstop against clearing storage, not the main gate.
  *
  * Returns the 401 (sign up) / 403 (paywall) / 429 response to send, or a
  * `charge` to call once the round has actually been generated — a failed
@@ -50,11 +52,11 @@ export async function checkGameAccess(
 	}
 
 	if (signedIn) {
-		const key = `games:free:${game}:user:${user!.id}`;
+		const key = `games:free:${roundPool(game)}:user:${user!.id}`;
 		const redis = await getRedisClient();
 		// Without Redis the count can't be kept; fail open, as the rate limiter does.
 		const used = redis ? Number(await redis.get(key).catch(() => 0)) || 0 : 0;
-		if (used >= FREE_ROUNDS) {
+		if (used >= freeRounds(game, true)) {
 			return {
 				denied: json({ error: 'Premium required', requiresSubscription: true }, { status: 403 })
 			};
@@ -70,9 +72,9 @@ export async function checkGameAccess(
 		};
 	}
 
-	const cookie = `pa_free_${game.replace(/-/g, '_')}`;
+	const cookie = `pa_free_${roundPool(game).replace(/-/g, '_')}`;
 	const used = Number(cookies.get(cookie)) || 0;
-	if (used >= FREE_ROUNDS) {
+	if (used >= freeRounds(game, false)) {
 		return { denied: json({ error: 'Sign up to keep playing' }, { status: 401 }) };
 	}
 	return {

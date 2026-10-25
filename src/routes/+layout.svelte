@@ -25,6 +25,7 @@
 		onImportComplete,
 		onImportError
 	} from '$lib/stores/import-job';
+	import { recordGameAccount } from '$lib/games/signup-source';
 	import {
 		showWordImportSuccessToast,
 		showWordImportErrorToast,
@@ -78,6 +79,11 @@
 
 	// Get session and supabase client from data
 	let { session, supabase } = $derived(data);
+
+	// Sign-up can finish with a client-side redirect, so watch the URL rather than mount.
+	$effect(() => {
+		if (session) recordGameAccount($page.url);
+	});
 
 	onMount(async () => {
 		root = document.documentElement;

@@ -249,7 +249,7 @@
 			<p>
 				<a href={resolve('/learn/game/room-hunt')} class="text-text-300 underline underline-offset-2"
 					>Room Hunt is here</a
-				>, with two free lessons and no account needed. Start in the kitchen, and when the
+				>, with free lessons and no account needed. Start in the kitchen, and when the
 				restaurant opens up, sit down and order. There's a
 				<a
 					href={resolve('/features/learn-arabic-in-3d')}

@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { onMount, untrack } from 'svelte';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import GameCard from '$lib/components/games/GameCard.svelte';
+	import SocialProof from '$lib/components/SocialProof.svelte';
+	import { noteGameSignup } from '$lib/games/signup-source';
 	import {
 		GAMES,
 		GAMES_HUB_FAQS,
@@ -67,7 +70,8 @@
 <section class="mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5">
 	<header class="mb-6">
 		<h1 class="hero-title">Arabic Games</h1>
-		<p class="hero-sub">Short games for learning Arabic. Two free rounds of each, no account needed.</p>
+		<p class="hero-sub">Short games for learning Arabic, in seven dialects. Your first three rounds are free.</p>
+		<SocialProof quotes={0} alignStart class="mt-3" />
 	</header>
 
 	<div class="picker">
@@ -97,6 +101,25 @@
 		<span class="today-play">Play now <span aria-hidden="true">→</span></span>
 	</a>
 
+	{#if !page.data.user}
+		<div class="join">
+			<p class="join-text">
+				<span class="join-title">Earn XP and keep a daily streak</span>
+				<span class="join-desc">
+					A free account saves every word you miss to a review deck and gives you five more
+					rounds.
+				</span>
+			</p>
+			<a
+				href="{resolve('/signup')}?next={encodeURIComponent('/learn/game')}"
+				class="join-cta"
+				onclick={() => noteGameSignup('hub', 'hub')}
+			>
+				Create a free account
+			</a>
+		</div>
+	{/if}
+
 	{#each groups as group (group.id)}
 		<section class="level">
 			<h2 class="section-title">{group.title}</h2>
@@ -113,7 +136,7 @@
 		<h2 class="section-title">About these games</h2>
 		<p class="about">
 			Short games for Arabic vocabulary and grammar in Egyptian Arabic, Levantine, Moroccan Darija,
-			Iraqi, Gulf, Saudi and Modern Standard Arabic. Every game has two free rounds, with no account needed. Pick one,
+			Iraqi, Gulf, Saudi and Modern Standard Arabic. Your first three rounds are free, with no account needed. Pick one,
 			choose your dialect, and play.
 		</p>
 	</section>
@@ -253,6 +276,45 @@
 		font-weight: 600;
 		padding: 0.6rem 1.2rem;
 		white-space: nowrap;
+	}
+
+	.join {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1.1rem;
+		margin-top: 0.9rem;
+		border-radius: 1.25rem;
+		border: 2px dashed var(--tile6);
+		background: var(--tile3);
+		padding: 1rem 1.3rem;
+	}
+	.join-text {
+		flex: 1;
+		min-width: 12rem;
+	}
+	.join-title {
+		display: block;
+		font-weight: 600;
+		color: var(--text1);
+	}
+	.join-desc {
+		display: block;
+		margin-top: 0.15rem;
+		font-size: 0.9rem;
+		color: var(--text2);
+	}
+	.join-cta {
+		border-radius: 100px;
+		border: 2px solid var(--tile6);
+		background: var(--tile4);
+		color: var(--text1);
+		font-weight: 600;
+		padding: 0.55rem 1.1rem;
+		white-space: nowrap;
+	}
+	.join-cta:hover {
+		border-color: var(--brand);
 	}
 
 	.level {

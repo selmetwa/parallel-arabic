@@ -327,7 +327,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		},
 		game: {
 			title: `Arabic Games Online - ${GAMES.length} Free Word Games to Learn Arabic`,
-			description: `${GAMES.length} Arabic games online: word scramble, memory pairs, a daily word puzzle, listening rounds and 3D scenes. Seven dialects, two free rounds each, no sign-up.`,
+			description: `${GAMES.length} Arabic games online: word scramble, memory pairs, a daily word puzzle, listening rounds and 3D scenes. Seven dialects, free to try, no sign-up.`,
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
 		},

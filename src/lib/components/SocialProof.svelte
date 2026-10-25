@@ -9,10 +9,12 @@
 		quotes?: number;
 		/** A quote to show first, ahead of the shared ones. */
 		lead?: TestimonialSegment[];
+		/** Line the numbers up with left-aligned text instead of centring them. */
+		alignStart?: boolean;
 		class?: string;
 	}
 
-	let { quotes = 2, lead, class: className = '' }: Props = $props();
+	let { quotes = 2, lead, alignStart = false, class: className = '' }: Props = $props();
 
 	const shown = $derived((lead ? [lead, ...TESTIMONIALS] : TESTIMONIALS).slice(0, quotes));
 
@@ -30,7 +32,7 @@
 
 <div class={className}>
 	<!-- Fixed height so the numbers arriving don't push the page around. -->
-	<p class="numbers" aria-live="polite">
+	<p class="numbers" class:start={alignStart} aria-live="polite">
 		{#if proof && proof.learners > 0}
 			<span><strong>{fmt(proof.learners)}+</strong> learners</span>
 			{#if proof.wordsSavedThisMonth > 0}
@@ -61,6 +63,10 @@
 		min-height: 1.5rem;
 		font-size: 0.85rem;
 		color: var(--text2);
+	}
+
+	.numbers.start {
+		justify-content: flex-start;
 	}
 
 	.numbers strong {

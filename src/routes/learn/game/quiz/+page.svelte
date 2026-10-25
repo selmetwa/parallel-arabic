@@ -7,10 +7,12 @@
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { createRoundGate, freeRoundsStatus } from '$lib/games/free-rounds.svelte';
+	import { signupPrompt } from '$lib/games/free-rounds';
+	import { noteGameSignup } from '$lib/games/signup-source';
 
 	let { data } = $props();
 
-	// Two free quizzes, then the sign-up prompt (signed out) or the paywall.
+	// Free quizzes from the shared allowance, then the sign-up prompt (signed out) or the paywall.
 	const gate = createRoundGate('quiz', () => ({
 		isSubscribed: !!data.isSubscribed,
 		userId: data.user?.id ?? null
@@ -616,7 +618,8 @@
 	isOpen={gate.modal === 'auth'}
 	handleCloseModal={gate.closeModal}
 	title="Keep playing Vocabulary Quiz"
-	message="You've played your free rounds. Make a free account for two more rounds of every game, plus XP and a daily streak."
+	message={signupPrompt('quiz')}
+	onChoose={(choice) => noteGameSignup('quiz', 'gate', choice)}
 />
 
 <PaywallModal source="game" isOpen={gate.modal === 'paywall'} handleCloseModal={gate.closeModal} gameName="Vocabulary Quiz" />
