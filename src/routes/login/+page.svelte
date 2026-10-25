@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
 	import TestimonialWall from '$lib/components/TestimonialWall.svelte';
+	import AuthValueProps from '$lib/components/AuthValueProps.svelte';
 	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
 	import type { ActionData } from './$types';
 	import { Browser } from '@capacitor/browser';
@@ -221,19 +222,6 @@
     // On web, supabase handles redirect automatically via /auth/callback server route
   }
 
-  const features = [
-    { icon: '🌍', title: 'Multiple Dialects', desc: 'Egyptian, Levantine, Gulf, Moroccan & more' },
-      { icon: '📚', title: 'Lessons', desc: 'Customized lessons for all levels' },
-      { icon: '🧠', title: 'Spaced Repetition', desc: 'Never forget a word again' },
-    { icon: '📖', title: 'Stories & Audio', desc: 'Native audio pronunciation' },
-    { icon: '💬', title: 'AI Tutor', desc: 'Real-time conversation practice' },
-    { icon: '📺', title: 'Interactive Videos', desc: 'YouTube with transcripts' },
-    { icon: '✨', title: 'Sentence Mining', desc: 'Unlimited practice sentences' },
-    { icon: '🎙️', title: 'Speaking', desc: 'Pronunciation feedback' },
-    { icon: '✍️', title: 'Verb Mastery', desc: 'Conjugation practice' },
-    { icon: '📦', title: 'Anki Decks', desc: 'Custom flashcard exports' },
-    { icon: '🔤', title: 'Alphabet', desc: 'Handwriting & pronunciation' },
-  ];
 
   // Every shared quote, plus the one only this page has shown.
   const quotes = [
@@ -247,7 +235,7 @@
 </script>
 
 <section class="min-h-screen bg-tile-300 py-8 sm:py-12">
-  <!-- Mobile: form, quotes, features. Desktop: form and features left, quotes right. -->
+  <!-- Mobile: form, what's included, quotes. Desktop: form and what's included left, quotes right. -->
   <div class="max-w-6xl mx-auto px-4 sm:px-8 grid gap-6 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-10 lg:items-start">
       <form
       method="POST"
@@ -360,16 +348,8 @@
         </button>
       </div>
     </form>
+    <AuthValueProps cta="Log in" />
     <TestimonialWall {quotes} class="lg:col-start-2 lg:row-start-1 lg:row-span-2" />
-    <div class="grid grid-cols-2 gap-4 content-start">
-      {#each features as feature (feature.title)}
-        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-5 shadow-lg">
-          <div class="text-2xl mb-2">{feature.icon}</div>
-          <h3 class="text-base font-bold text-text-300 mb-1">{feature.title}</h3>
-          <p class="text-text-200 text-sm leading-relaxed">{feature.desc}</p>
-        </div>
-      {/each}
-    </div>
   </div>
 </section>
 <!-- <section class="min-h-screen bg-tile-300 py-8 sm:py-12">

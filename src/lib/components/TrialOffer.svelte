@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import TestimonialWall from '$lib/components/TestimonialWall.svelte';
-	import FeatureGrid from '$lib/components/FeatureGrid.svelte';
+	import IncludedFeatures from '$lib/components/IncludedFeatures.svelte';
 	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
 	import { isNativeApp } from '$lib/helpers/is-native-app';
 	import { RevenueCatService } from '$lib/services/revenuecat.service';
@@ -36,15 +36,6 @@
 		goalLevel = '',
 		egyptianQuote = false
 	}: Props = $props();
-
-	let showAll = $state(false);
-	/** Desktop only: "See everything included" opens as a full-page overlay with its own checkout. */
-	let showAllPage = $state(false);
-
-	function openIncluded() {
-		if (window.matchMedia('(min-width: 1024px)').matches) showAllPage = true;
-		else showAll = !showAll;
-	}
 
 	const quotes = $derived(egyptianQuote ? [EGYPTIAN_TESTIMONIAL, ...TESTIMONIALS] : TESTIMONIALS);
 
@@ -143,19 +134,12 @@
 		</ul>
 
 		<div class="included">
-			<button
-				class="all-toggle"
-				aria-expanded={showAll || showAllPage}
-				aria-haspopup="dialog"
-				onclick={openIncluded}
-			>
-				{#if showAll}Hide everything included{:else}See everything included <span aria-hidden="true">→</span>{/if}
-			</button>
-			{#if showAll}
-				<div class="mt-3 text-center" in:fly={{ y: 10, duration: 250 }}>
-					<FeatureGrid />
-				</div>
-			{/if}
+			<!-- On desktop, checkout stays in reach while they browse. -->
+			<IncludedFeatures>
+				{#snippet bar()}
+					<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
+				{/snippet}
+			</IncludedFeatures>
 		</div>
 
 		{#if trialEligible}
@@ -180,36 +164,6 @@
 		<TestimonialWall {quotes} />
 	</div>
 </div>
-
-<svelte:window onkeydown={(e) => showAllPage && e.key === 'Escape' && (showAllPage = false)} />
-
-{#if showAllPage}
-	<div
-		class="included-page"
-		role="dialog"
-		aria-modal="true"
-		aria-labelledby="included-title"
-		transition:fade={{ duration: 200 }}
-	>
-		<div class="included-body">
-			<div class="included-head">
-				<h2 id="included-title" class="screen-title">Everything included</h2>
-				<button class="included-close" aria-label="Close" onclick={() => (showAllPage = false)}>
-					✕
-				</button>
-			</div>
-			<div class="text-center">
-				<FeatureGrid />
-			</div>
-		</div>
-		<!-- Checkout stays in reach while they browse. -->
-		<div class="included-bar">
-			<div class="mx-auto max-w-md">
-				<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
-			</div>
-		</div>
-	</div>
-{/if}
 
 <style>
 	.offer {
@@ -352,63 +306,6 @@
 	.timeline strong {
 		font-size: 0.85rem;
 		color: var(--text1);
-	}
-
-	.all-toggle {
-		font-size: 0.8rem;
-		font-weight: 600;
-		color: var(--text2);
-		cursor: pointer;
-	}
-	.all-toggle:hover {
-		color: var(--text1);
-	}
-
-	.included-page {
-		position: fixed;
-		inset: 0;
-		z-index: 200;
-		display: flex;
-		flex-direction: column;
-		overflow-y: auto;
-		overscroll-behavior: contain;
-		background: var(--tile2);
-	}
-
-	.included-body {
-		flex: 1;
-		width: 100%;
-		max-width: 72rem;
-		margin: 0 auto;
-		padding: 2.5rem 2rem 0;
-	}
-
-	.included-head {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.included-close {
-		width: 2.5rem;
-		height: 2.5rem;
-		border-radius: 50%;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		font-size: 1rem;
-		color: var(--text2);
-		cursor: pointer;
-	}
-	.included-close:hover {
-		color: var(--text1);
-	}
-
-	.included-bar {
-		position: sticky;
-		bottom: 0;
-		padding: 1rem 2rem 1.25rem;
-		border-top: 2px solid var(--tile5);
-		background: var(--tile2);
 	}
 
 	.skip-link {
