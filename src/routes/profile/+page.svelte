@@ -3,6 +3,9 @@
   import Button from '$lib/components/Button.svelte';
   import ContributionGraph from '$lib/components/ContributionGraph.svelte';
   import ReviewWordsStats from './components/ReviewWordsStats.svelte';
+  import CancelFlow from './components/CancelFlow.svelte';
+  import { trackEvent } from '$lib/analytics';
+  import { onMount, tick } from 'svelte';
   import Achievements from './components/Achievements.svelte';
   import type { PageData } from './$types';
   import { goto, invalidateAll, invalidate } from '$app/navigation';
@@ -20,10 +23,15 @@
   let showClearConfirm = $state(false);
 
   // Subscription cancellation state
-  let isCancelling = $state(false);
+  let isResuming = $state(false);
   let cancelError = $state<string | null>(null);
   let cancelSuccess = $state<string | null>(null);
-  let showCancelConfirm = $state(false);
+  let showCancelFlow = $state(false);
+  const pausedUntil = $derived(data.subscriptionDetails?.pausedUntil ?? null);
+  // Paused with no paid time left: Premium is off until billing restarts.
+  const pauseLapsed = $derived(
+    !!pausedUntil && (data.subscriptionDetails?.paidThrough ?? 0) <= Math.floor(Date.now() / 1000)
+  );
 
   // Stripe-only: Apple subscriptions are reported with status 'active'.
   const isTrialing = $derived(
@@ -40,6 +48,14 @@
   // Expandable sections
   let showSettings = $state(false);
   let showContent = $state(false);
+
+  // /profile#subscription (e.g. a paused subscriber sent here from checkout) opens settings on it.
+  onMount(async () => {
+    if (location.hash !== '#subscription') return;
+    showSettings = true;
+    await tick();
+    document.getElementById('subscription')?.scrollIntoView({ block: 'center' });
+  });
 
   // Per-form submission status (success / error / pending), keyed by form name.
   type FormStatus = { success: string | null; error: string | null; pending: boolean };
@@ -221,48 +237,29 @@
     }
   }
 
-  async function cancelSubscription() {
-    if (!showCancelConfirm) {
-      showCancelConfirm = true;
-      return;
-    }
-
-    isCancelling = true;
+  function cancelFlowDone(message: string) {
+    showCancelFlow = false;
     cancelError = null;
-    cancelSuccess = null;
-
-    try {
-      const response = await fetch('/api/cancel-subscription', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to cancel subscription');
-      }
-
-      cancelSuccess = 'Your subscription has been cancelled. You will retain access until the end of your billing period.';
-      showCancelConfirm = false;
-
-      // Refresh data after 2 seconds
-      setTimeout(async () => {
-        await invalidateAll();
-      }, 2000);
-    } catch (error) {
-      cancelError = error instanceof Error ? error.message : 'Failed to cancel subscription';
-      showCancelConfirm = false;
-    } finally {
-      isCancelling = false;
-    }
+    cancelSuccess = message;
+    invalidateAll();
   }
 
-  function cancelCancelSubscription() {
-    showCancelConfirm = false;
+  async function resumeSubscription() {
+    isResuming = true;
     cancelError = null;
+    cancelSuccess = null;
+    try {
+      const response = await fetch('/api/subscription/resume', { method: 'POST' });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'Failed to resume subscription');
+      trackEvent('cancel_resumed', { from: pausedUntil ? 'pause' : 'cancel' });
+      cancelSuccess = 'Welcome back! Your subscription is active again.';
+      await invalidateAll();
+    } catch (error) {
+      cancelError = error instanceof Error ? error.message : 'Failed to resume subscription';
+    } finally {
+      isResuming = false;
+    }
   }
 
   async function openCustomerCenter() {
@@ -650,8 +647,8 @@
           </div>
 
           <!-- Subscription Management (only for subscribers) -->
-          {#if data.hasActiveSubscription && !isWhitelisted}
-            <div class="p-5 sm:p-6 bg-tile-500/20">
+          {#if (data.hasActiveSubscription || pausedUntil) && !isWhitelisted}
+            <div id="subscription" class="p-5 sm:p-6 bg-tile-500/20">
  <h3 class="text-xs font-bold text-text-200 mb-4">Subscription</h3>
 
               <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-4">
@@ -663,7 +660,11 @@
                     </p>
                     {#if data.subscriptionDetails?.cancelAtPeriodEnd}
                       <p class="text-sm text-text-200">
-                        ⚠️ Cancelling — access until {formatDate(data.subscriptionDetails.currentPeriodEnd)}
+                        ⚠️ Cancelling — access until {formatDate(data.subscriptionDetails.paidThrough ?? data.subscriptionDetails.currentPeriodEnd)}
+                      </p>
+                    {:else if pausedUntil}
+                      <p class="text-sm text-text-200">
+                        ⏸️ Paused — {pauseLapsed ? 'Premium is off' : `Premium until ${formatDate(data.subscriptionDetails?.paidThrough ?? null)}`}, billing restarts {formatDate(pausedUntil)}
                       </p>
                     {:else if isTrialing}
                       <p class="text-sm text-text-200">
@@ -693,35 +694,31 @@
                     <p class="status-ok mb-3" transition:fade>{cancelSuccess}</p>
                   {/if}
 
-                  {#if !data.subscriptionDetails?.cancelAtPeriodEnd}
-                    {#if showCancelConfirm}
-                      <div class="danger-panel space-y-3 mt-4" transition:slide={{ duration: 150 }}>
-                        <p class="text-text-300 text-sm font-semibold">Are you sure you want to cancel?</p>
-                        <p class="text-text-200 text-xs">
-                          {#if isTrialing}
-                            You won't be charged. Premium access ends {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.
-                          {:else}
-                            You'll keep premium features until {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.
-                          {/if}
-                        </p>
-                        <div class="flex gap-2">
-                          <Button onClick={cancelSubscription} type="button" variant="danger" disabled={isCancelling} className="flex-1 text-sm">
-                            {isCancelling ? 'Cancelling…' : 'Yes, cancel'}
-                          </Button>
-                          <Button onClick={cancelCancelSubscription} type="button" variant="secondary" disabled={isCancelling} className="flex-1 text-sm">
-                            Keep subscription
-                          </Button>
-                        </div>
-                      </div>
-                    {:else}
-                      <button onclick={cancelSubscription} class="mt-3 text-sm font-medium text-red-600 hover:text-red-700 underline transition-colors">
-                        Cancel subscription
-                      </button>
-                    {/if}
-                  {:else}
-                    <p class="text-sm text-text-200 mt-2">
-                      Your subscription is set to cancel. You can keep using premium features until access expires.
-                    </p>
+                  {#if pausedUntil || data.subscriptionDetails?.cancelAtPeriodEnd}
+                    <div class="mt-3 flex flex-wrap items-center gap-3">
+                      <Button type="button" onClick={resumeSubscription} disabled={isResuming} className="text-sm">
+                        {#if isResuming}Resuming…{:else if pauseLapsed}Resume now (${data.subscriptionDetails?.amount ?? 10} today){:else}Resume subscription{/if}
+                      </Button>
+                      {#if pausedUntil && !data.subscriptionDetails?.cancelAtPeriodEnd && !showCancelFlow}
+                        <button onclick={() => (showCancelFlow = true)} class="text-sm font-medium text-red-600 hover:text-red-700 underline transition-colors">
+                          Cancel subscription
+                        </button>
+                      {/if}
+                    </div>
+                  {:else if !showCancelFlow}
+                    <button onclick={() => (showCancelFlow = true)} class="mt-3 text-sm font-medium text-red-600 hover:text-red-700 underline transition-colors">
+                      Cancel subscription
+                    </button>
+                  {/if}
+                  {#if showCancelFlow && data.subscriptionDetails}
+                    <CancelFlow
+                      details={data.subscriptionDetails}
+                      savedWords={data.wordStats?.total ?? 0}
+                      streak={currentStreak}
+                      {formatDate}
+                      onDone={cancelFlowDone}
+                      onClose={() => (showCancelFlow = false)}
+                    />
                   {/if}
                 {/if}
               </div>

@@ -1,6 +1,7 @@
 import { supabase } from '$lib/supabaseClient';
 import { StripeService } from '$lib/services/stripe.service';
 import { isEmailWhitelisted } from './subscription';
+import { stripeAccessEnd } from '$lib/subscription/cancel-flow';
 import { env } from '$env/dynamic/private';
 
 const ENTITLEMENT_ID = 'Parallel Arabic Premium';
@@ -48,7 +49,8 @@ export const getUserHasActiveSubscription = async (userId: string | null) => {
       const activeStatuses = ['active', 'trialing', 'past_due'];
       if (activeStatuses.includes(subscription.status)) {
         const now = Math.floor(Date.now() / 1000);
-        return !!(subscription.current_period_end && subscription.current_period_end > now);
+        const accessEnd = stripeAccessEnd(subscription);
+        return !!(accessEnd && accessEnd > now);
       }
       return false;
     } catch {

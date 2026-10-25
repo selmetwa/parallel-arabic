@@ -1,6 +1,7 @@
 import { supabase } from '$lib/supabaseClient';
 import { StripeService } from '$lib/services/stripe.service';
 import { checkUserSubscription } from '$lib/helpers/subscription';
+import { stripeAccessEnd } from '$lib/subscription/cancel-flow';
 
 /**
  * Stripe subscription -> user row sync
@@ -89,11 +90,8 @@ export async function syncStripeSubscription(
 	const hasTrialed = !!subscription.trial_end;
 
 	if (isActive) {
-		// While trialing these are the same date; after conversion trial_end is
-		// in the past, so only current_period_end is safe to store.
-		const endDate = isTrial
-			? (subscription.trial_end ?? subscription.current_period_end ?? null)
-			: (subscription.current_period_end ?? null);
+		// Paused: the end of the period they paid for, not the voided ones after it.
+		const endDate = stripeAccessEnd(subscription);
 
 		const { error } = await supabase
 			.from('user')

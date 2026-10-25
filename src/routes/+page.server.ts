@@ -472,12 +472,20 @@ export const actions = {
     // charge happens today or in 7 days, and it is offered once per account.
     const { data: dbUser } = await supabase
       .from('user')
-      .select('id, email, is_subscriber, subscription_end_date, has_used_trial')
+      .select('id, email, is_subscriber, subscription_end_date, has_used_trial, subscriber_id')
       .eq('supabase_auth_id', session.user.id)
       .single();
 
     if (!dbUser) {
       return fail(400, { error: 'Could not find your account' });
+    }
+
+    // A paused subscription is resumed from the profile, not replaced by a second one.
+    if (dbUser.subscriber_id?.startsWith('sub_')) {
+      const existing = await StripeService.getSubscription(dbUser.subscriber_id);
+      if (existing?.pause_collection && existing.status === 'active') {
+        throw redirect(302, '/profile#subscription');
+      }
     }
 
     const withTrial = !dbUser.has_used_trial && !checkUserSubscription(dbUser);
