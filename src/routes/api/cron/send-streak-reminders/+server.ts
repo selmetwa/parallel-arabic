@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { recordCronRun } from '$lib/server/health-checks';
 import { supabase } from '$lib/supabaseClient';
 import { sendBrandedEmail, sendStreakReminderEmail } from '$lib/server/email';
-import { daysBetween, localDayKey, localHour, streakAtRisk } from '$lib/helpers/streak';
+import { daysBetween, inReminderWindow, localDayKey, localHour, streakAtRisk } from '$lib/helpers/streak';
 import { dueWordCount, sendPushReminders } from '$lib/server/push-reminders';
 import { comebackEmail, nextStep } from '$lib/server/retention-email';
 import { describeGoal, parseGoal } from '$lib/constants/daily-goal';
@@ -11,12 +11,11 @@ import { isPaywalled } from '$lib/server/paywall-experiment';
 import { checkUserSubscription } from '$lib/helpers/subscription';
 
 /**
- * Local hours (inclusive start, exclusive end) when a reminder may go out.
- * Seven hours, so that with runs six hours apart, and Hobby firing a cron
- * anywhere within its hour, every time zone still gets at least one run.
+ * Local hours (inclusive start, exclusive end) when a comeback email may go out.
+ * Streak reminders use the window the learner picked (REMINDER_WINDOWS).
  */
 const EVENING = [16, 23] as const;
-/** Never twice in one evening, whichever of the day's runs gets there first. */
+/** Never twice in one window, whichever of the day's runs gets there first. */
 const RESEND_AFTER_MS = 12 * 60 * 60 * 1000;
 const LOOKBACK_MS = 3 * 24 * 60 * 60 * 1000;
 /** Days away after which a learner gets a comeback email, as the push plan does. */
@@ -31,8 +30,9 @@ const goalTextOf = (raw: unknown) => {
 /**
  * Runs four times a day, six hours apart (four daily crons in vercel.json,
  * because the Hobby plan only allows daily schedules). Every time zone has
- * at least one run in its 16:00–23:00 evening, and that run emails learners
- * whose streak ends tonight: active yesterday (their time), not yet today.
+ * at least one run in each reminder window, and the run in the window they
+ * picked (evening by default) emails learners whose streak ends tonight:
+ * active yesterday (their time), not yet today.
  */
 export const GET: RequestHandler = async ({ request }) => {
 	const authHeader = request.headers.get('authorization');
@@ -54,7 +54,7 @@ export const GET: RequestHandler = async ({ request }) => {
 
 		const { data: users, error: fetchError } = await supabase
 			.from('user')
-			.select('id, email, current_streak, longest_streak, streak_freezes, last_activity_date, timezone, streak_reminder_sent_at, daily_goal')
+			.select('id, email, current_streak, longest_streak, streak_freezes, last_activity_date, timezone, streak_reminder_sent_at, daily_goal, reminder_window, streak_goal')
 			.eq('email_notifications_enabled', true)
 			.gt('current_streak', 0)
 			.gte('last_activity_date', now - LOOKBACK_MS)
@@ -66,8 +66,7 @@ export const GET: RequestHandler = async ({ request }) => {
 		}
 
 		const due = (users ?? []).filter((u) => {
-			const hour = localHour(now, u.timezone);
-			if (hour < EVENING[0] || hour >= EVENING[1]) return false;
+			if (!inReminderWindow(localHour(now, u.timezone), u.reminder_window)) return false;
 			if (u.streak_reminder_sent_at && now - u.streak_reminder_sent_at < RESEND_AFTER_MS) return false;
 			return streakAtRisk(
 				{
@@ -87,7 +86,7 @@ export const GET: RequestHandler = async ({ request }) => {
 			await Promise.allSettled(
 				due.slice(i, i + BATCH_SIZE).map(async (user) => {
 					try {
-						await sendStreakReminderEmail(user.email, user.current_streak, user.id, goalTextOf(user.daily_goal));
+						await sendStreakReminderEmail(user.email, user.current_streak, user.id, goalTextOf(user.daily_goal), user.streak_goal);
 						await supabase.from('user').update({ streak_reminder_sent_at: now }).eq('id', user.id);
 						emailsSent++;
 					} catch (err) {

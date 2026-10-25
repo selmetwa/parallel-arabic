@@ -47,6 +47,40 @@ export function localHour(ts: number, tz: string | null | undefined): number {
 	return Number(hour) % 24;
 }
 
+/**
+ * Local hours (inclusive start, exclusive end) when the daily reminder may go
+ * out, by the time the learner picked in onboarding. Seven hours each, so that
+ * with cron runs six hours apart, and Hobby firing a cron anywhere within its
+ * hour, every time zone still gets at least one run. Night wraps past midnight.
+ */
+export const REMINDER_WINDOWS = {
+	morning: [6, 13],
+	afternoon: [11, 18],
+	evening: [16, 23],
+	night: [20, 3]
+} as const;
+
+export type ReminderTime = keyof typeof REMINDER_WINDOWS;
+
+/**
+ * Whether a reminder may go out at this local hour. No choice means evening,
+ * the only window there was before onboarding asked; 'off' means never.
+ */
+export function inReminderWindow(hour: number, window: string | null | undefined): boolean {
+	if (window === 'off') return false;
+	const [start, end] = REMINDER_WINDOWS[(window ?? 'evening') as ReminderTime] ?? REMINDER_WINDOWS.evening;
+	return start < end ? hour >= start && hour < end : hour >= start || hour < end;
+}
+
+/**
+ * "Day 6 of your 14-day goal. A few minutes keeps it going.", for reminders, while
+ * the streak is short of the goal they set in onboarding. Null otherwise.
+ */
+export function streakGoalLine(streak: number | null, goal: number | null): string | null {
+	if (!goal || !streak || streak >= goal) return null;
+	return `Day ${streak} of your ${goal}-day goal. A few minutes keeps it going.`;
+}
+
 /** How far `tz`'s wall clock is ahead of UTC at `ts` (ms). */
 function zoneOffset(ts: number, tz: string): number {
 	const parts = Object.fromEntries(

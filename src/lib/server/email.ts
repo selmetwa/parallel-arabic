@@ -97,10 +97,17 @@ export const sendStreakReminderEmail = async (
 	streakCount: number,
 	userId: string,
 	/** "review 10 words and play a game", if they set a daily goal. */
-	goalText?: string | null
+	goalText?: string | null,
+	/** The streak they committed to in onboarding, if any. */
+	streakGoal?: number | null
 ) => {
 	const siteUrl = 'https://parallel-arabic.com';
-	const goalLine = goalText ? `Today's goal: ${goalText}.` : '';
+	const goalLine = [
+		streakGoal && streakGoal > streakCount ? `Day ${streakCount} of your ${streakGoal}-day goal.` : '',
+		goalText ? `Today's goal: ${goalText}.` : ''
+	]
+		.filter(Boolean)
+		.join(' ');
 	const profileUrl = `${siteUrl}/profile`;
 
 	const html = `

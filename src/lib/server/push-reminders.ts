@@ -1,6 +1,7 @@
 import { supabase } from '$lib/supabaseClient';
 import { pickPush, REVIEWS_MIN, type PushKind } from '$lib/helpers/push-plan';
 import { apnsConfigured, sendPushes, type PushMessage } from '$lib/server/apns';
+import { streakGoalLine } from '$lib/helpers/streak';
 
 interface Learner {
 	id: string;
@@ -13,6 +14,8 @@ interface Learner {
 	push_sent_at: number | null;
 	target_dialect: string | null;
 	proficiency_level: string | null;
+	reminder_window: string | null;
+	streak_goal: number | null;
 }
 
 /** Same query the review page uses for "due". */
@@ -30,7 +33,7 @@ function copy(kind: PushKind, learner: Learner, dueWords: number) {
 		case 'streak':
 			return {
 				title: `Your ${learner.current_streak}-day streak ends tonight`,
-				body: 'A few minutes of Arabic keeps it going.',
+				body: streakGoalLine(learner.current_streak, learner.streak_goal) ?? 'A few minutes of Arabic keeps it going.',
 				url: '/'
 			};
 		case 'first_day':
@@ -79,7 +82,7 @@ export async function sendPushReminders(now: number): Promise<number> {
 	const { data: learners, error: learnersError } = await supabase
 		.from('user')
 		.select(
-			'id, current_streak, longest_streak, streak_freezes, last_activity_date, onboarding_completed_at, timezone, push_sent_at, target_dialect, proficiency_level'
+			'id, current_streak, longest_streak, streak_freezes, last_activity_date, onboarding_completed_at, timezone, push_sent_at, target_dialect, proficiency_level, reminder_window, streak_goal'
 		)
 		.in('id', [...tokensByUser.keys()]);
 	if (learnersError) throw learnersError;

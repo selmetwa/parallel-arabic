@@ -5,6 +5,14 @@ import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { checkUserSubscription } from '$lib/helpers/subscription';
 import type { PaywallVariant } from '$lib/server/paywall-experiment';
 import { isDialect } from '$lib/constants/dialects';
+import type { DailyGoal } from '$lib/constants/daily-goal';
+import {
+	isDailyMinutes,
+	isReminderWindow,
+	isStreakGoal,
+	buildGoal,
+	parseChallenges
+} from '$lib/constants/onboarding-questions';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -21,7 +29,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		show_arabic,
 		show_transliteration,
 		show_english,
-		platform
+		platform,
+		learning_challenges,
+		daily_minutes,
+		reminder_window,
+		streak_goal
 	} = await request.json();
 
 	// Validate inputs
@@ -48,7 +60,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	}
 
 	// Build update data with optional display preferences
-	const updateData: Record<string, string | boolean | number> = {
+	const updateData: Record<string, string | boolean | number | DailyGoal> = {
 		target_dialect,
 		learning_reason,
 		proficiency_level,
@@ -58,6 +70,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	if (goal_level) {
 		updateData.goal_level = goal_level;
+	}
+
+	// The time they said they have becomes their daily goal (the column already exists).
+	if (isDailyMinutes(daily_minutes)) {
+		updateData.daily_goal = buildGoal(daily_minutes, parseChallenges(learning_challenges) ?? [], target_dialect);
 	}
 
 	// Add display preferences if provided
@@ -100,6 +117,19 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		if (updateError) {
 			console.error('Error updating onboarding data:', updateError);
 			return json({ error: 'Failed to save onboarding data' }, { status: 500 });
+		}
+
+		// The habit questions are optional and saved apart, so a missing column
+		// (docs/sql/2026-10-25-onboarding-questions.sql not run yet) can't block onboarding.
+		const habits: Record<string, unknown> = {};
+		const challenges = parseChallenges(learning_challenges);
+		if (challenges) habits.learning_challenges = challenges;
+		if (isDailyMinutes(daily_minutes)) habits.daily_minutes = daily_minutes;
+		if (isReminderWindow(reminder_window)) habits.reminder_window = reminder_window;
+		if (isStreakGoal(streak_goal)) habits.streak_goal = streak_goal;
+		if (Object.keys(habits).length) {
+			const { error: habitsError } = await supabase.from('user').update(habits).eq('id', user.id);
+			if (habitsError) console.error('Error saving onboarding habits:', habitsError);
 		}
 
 		return json({ success: true, variant });
