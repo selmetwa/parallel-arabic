@@ -40,6 +40,15 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 		{ t: 'I really like the website and find it very useful. For me ' },
 		{ t: "it's better than a lot of other platforms", b: true },
 		{ t: " — it's well thought out and has a lot of features." }
+	],
+	[
+		{
+			t: "I've been learning Egyptian Arabic with a teacher for a few months now and was looking for something to supplement my classes and practise with outside of lessons. I came across your platform after someone mentioned it on Reddit and honestly "
+		},
+		{ t: "it's exactly the sort of thing I was looking for", b: true },
+		{
+			t: ' - there is so much packed in and this has quickly become an invaluable resource when there aren\'t many resources for learning dialects out there'
+		}
 	]
 ];
 
