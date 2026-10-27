@@ -1,0 +1,320 @@
+{
+  "slug": "radd",
+  "arabic": "رد",
+  "transliteration": "radd",
+  "english": "to answer",
+  "wordId": null,
+  "rootLetters": "ر د د",
+  "verbClass": "doubled",
+  "notes": "As a doubled (geminate) verb, the second and third root letters are identical, causing the stem to end in a double consonant and taking an '-ey-' infix before consonant-initial suffixes in the past tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رديت",
+          "transliteration": "raddeyt",
+          "english": "I answered"
+        },
+        {
+          "person": "enta",
+          "arabic": "رديت",
+          "transliteration": "raddeyt",
+          "english": "you (m) answered"
+        },
+        {
+          "person": "enti",
+          "arabic": "رديتي",
+          "transliteration": "raddeyti",
+          "english": "you (f) answered"
+        },
+        {
+          "person": "howa",
+          "arabic": "رد",
+          "transliteration": "radd",
+          "english": "he answered"
+        },
+        {
+          "person": "heya",
+          "arabic": "ردت",
+          "transliteration": "raddit",
+          "english": "she answered"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ردينا",
+          "transliteration": "raddeyna",
+          "english": "we answered"
+        },
+        {
+          "person": "entu",
+          "arabic": "رديتوا",
+          "transliteration": "raddeytu",
+          "english": "you (pl) answered"
+        },
+        {
+          "person": "homma",
+          "arabic": "ردوا",
+          "transliteration": "raddu",
+          "english": "they answered"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رديتش",
+          "transliteration": "ma raddeytish",
+          "english": "I didn't answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رديتش",
+          "transliteration": "ma raddeytish",
+          "english": "you (m) didn't answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رديتيش",
+          "transliteration": "ma raddeytiish",
+          "english": "you (f) didn't answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ردش",
+          "transliteration": "ma raddish",
+          "english": "he didn't answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ردتش",
+          "transliteration": "ma radditsh",
+          "english": "she didn't answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رديناش",
+          "transliteration": "ma raddeynaash",
+          "english": "we didn't answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رديتوش",
+          "transliteration": "ma raddeytuush",
+          "english": "you (pl) didn't answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ردوش",
+          "transliteration": "ma radduush",
+          "english": "they didn't answer"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "برد",
+          "transliteration": "barudd",
+          "english": "I answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "بترد",
+          "transliteration": "bitrudd",
+          "english": "you (m) answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتردي",
+          "transliteration": "bitruddi",
+          "english": "you (f) answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيرد",
+          "transliteration": "biyirudd",
+          "english": "he answers"
+        },
+        {
+          "person": "heya",
+          "arabic": "بترد",
+          "transliteration": "bitrudd",
+          "english": "she answers"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنرد",
+          "transliteration": "binrudd",
+          "english": "we answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتردوا",
+          "transliteration": "bitruddu",
+          "english": "you (pl) answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيردوا",
+          "transliteration": "biyiruddu",
+          "english": "they answer"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابردش",
+          "transliteration": "mabaruddish",
+          "english": "I don't answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتردش",
+          "transliteration": "mabitruddish",
+          "english": "you (m) don't answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابترديش",
+          "transliteration": "mabitruddiish",
+          "english": "you (f) don't answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيردش",
+          "transliteration": "mabiyiruddish",
+          "english": "he doesn't answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتردش",
+          "transliteration": "mabitruddish",
+          "english": "she doesn't answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنردش",
+          "transliteration": "mabinruddish",
+          "english": "we don't answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتردوش",
+          "transliteration": "mabitrudduush",
+          "english": "you (pl) don't answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيردوش",
+          "transliteration": "mabiyirudduush",
+          "english": "they don't answer"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هرد",
+          "transliteration": "harudd",
+          "english": "I will answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "هترد",
+          "transliteration": "hatrudd",
+          "english": "you (m) will answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتردي",
+          "transliteration": "hatruddi",
+          "english": "you (f) will answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيرد",
+          "transliteration": "hayirudd",
+          "english": "he will answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "هترد",
+          "transliteration": "hatrudd",
+          "english": "she will answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنرد",
+          "transliteration": "hanrudd",
+          "english": "we will answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتردوا",
+          "transliteration": "hatruddu",
+          "english": "you (pl) will answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيردوا",
+          "transliteration": "hayiruddu",
+          "english": "they will answer"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هرد",
+          "transliteration": "mish harudd",
+          "english": "I won't answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هترد",
+          "transliteration": "mish hatrudd",
+          "english": "you (m) won't answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتردي",
+          "transliteration": "mish hatruddi",
+          "english": "you (f) won't answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيرد",
+          "transliteration": "mish hayirudd",
+          "english": "he won't answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هترد",
+          "transliteration": "mish hatrudd",
+          "english": "she won't answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنرد",
+          "transliteration": "mish hanrudd",
+          "english": "we won't answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتردوا",
+          "transliteration": "mish hatruddu",
+          "english": "you (pl) won't answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيردوا",
+          "transliteration": "mish hayiruddu",
+          "english": "they won't answer"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

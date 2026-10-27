@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
 	import PressButton from '$lib/components/games/PressButton.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -13,9 +14,11 @@
 	interface Props {
 		dialect: Dialect;
 		data: any;
+		/** A focus area to preselect, opening the form straight away (from a grammar article). */
+		initialFocus?: string;
 	}
 
-	const { data, dialect }: Props = $props();
+	const { data, dialect, initialFocus }: Props = $props();
 
 	let isOpen = $state(false);
 	let topic = $state('');
@@ -38,6 +41,13 @@
 	let reviewWords = $state<Array<{ arabic: string; english: string; transliteration: string }>>([]);
 	let isLoadingReviewWords = $state(false);
 	let reviewWordsError = $state('');
+
+	onMount(() => {
+		if (initialFocus && data.session) {
+			selectedLearningTopics = [initialFocus];
+			isOpen = true;
+		}
+	});
 
 	function openModal() {
 		if (!data.session) {
@@ -664,6 +674,9 @@
 									</button>
 								{/each}
 							</div>
+							<p class="mt-3 text-xs text-text-200">
+								Want the rules first? Read the <a class="font-semibold underline hover:text-text-300" href="/grammar/{dialect}">grammar guide</a>.
+							</p>
 						</div>
 					</div>
 

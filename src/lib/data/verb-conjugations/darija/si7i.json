@@ -1,0 +1,320 @@
+{
+  "slug": "si7i",
+  "arabic": "فاق",
+  "transliteration": "faq",
+  "english": "to wake up",
+  "wordId": null,
+  "rootLetters": "ف و ق",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb. The medial weak letter drops in the first and second person past tense, and changes to 'i' in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "فقت",
+          "transliteration": "feqt",
+          "english": "I woke up"
+        },
+        {
+          "person": "enta",
+          "arabic": "فقتي",
+          "transliteration": "feqti",
+          "english": "you (m) woke up"
+        },
+        {
+          "person": "enti",
+          "arabic": "فقتي",
+          "transliteration": "feqti",
+          "english": "you (f) woke up"
+        },
+        {
+          "person": "howa",
+          "arabic": "فاق",
+          "transliteration": "faq",
+          "english": "he woke up"
+        },
+        {
+          "person": "heya",
+          "arabic": "فاقت",
+          "transliteration": "faqt",
+          "english": "she woke up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "فقنا",
+          "transliteration": "feqna",
+          "english": "we woke up"
+        },
+        {
+          "person": "entu",
+          "arabic": "فقتيو",
+          "transliteration": "feqtiw",
+          "english": "you (pl) woke up"
+        },
+        {
+          "person": "homma",
+          "arabic": "فاقو",
+          "transliteration": "faqu",
+          "english": "they woke up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما فقتش",
+          "transliteration": "ma feqtsh",
+          "english": "I didn't wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما فقتيش",
+          "transliteration": "ma feqtish",
+          "english": "you (m) didn't wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما فقتيش",
+          "transliteration": "ma feqtish",
+          "english": "you (f) didn't wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما فاقش",
+          "transliteration": "ma faqsh",
+          "english": "he didn't wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما فاقتش",
+          "transliteration": "ma faqtsh",
+          "english": "she didn't wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما فقناش",
+          "transliteration": "ma feqnash",
+          "english": "we didn't wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما فقتيوش",
+          "transliteration": "ma feqtiwsh",
+          "english": "you (pl) didn't wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما فاقوش",
+          "transliteration": "ma faqush",
+          "english": "they didn't wake up"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنفيق",
+          "transliteration": "kanfiq",
+          "english": "I wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتفيق",
+          "transliteration": "katfiq",
+          "english": "you (m) wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتفيقي",
+          "transliteration": "katfiqi",
+          "english": "you (f) wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيفيق",
+          "transliteration": "kayfiq",
+          "english": "he wakes up"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتفيق",
+          "transliteration": "katfiq",
+          "english": "she wakes up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنفيقو",
+          "transliteration": "kanfiqu",
+          "english": "we wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتفيقو",
+          "transliteration": "katfiqu",
+          "english": "you (pl) wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيفيقو",
+          "transliteration": "kayfiqu",
+          "english": "they wake up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنفيقش",
+          "transliteration": "ma kanfiqsh",
+          "english": "I don't wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتفيقش",
+          "transliteration": "ma katfiqsh",
+          "english": "you (m) don't wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتفيقيش",
+          "transliteration": "ma katfiqish",
+          "english": "you (f) don't wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيفيقش",
+          "transliteration": "ma kayfiqsh",
+          "english": "he doesn't wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتفيقش",
+          "transliteration": "ma katfiqsh",
+          "english": "she doesn't wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنفيقوش",
+          "transliteration": "ma kanfiqush",
+          "english": "we don't wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتفيقوش",
+          "transliteration": "ma katfiqush",
+          "english": "you (pl) don't wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيفيقوش",
+          "transliteration": "ma kayfiqush",
+          "english": "they don't wake up"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نفيق",
+          "transliteration": "ghadi nfiq",
+          "english": "I will wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تفيق",
+          "transliteration": "ghadi tfiq",
+          "english": "you (m) will wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تفيقي",
+          "transliteration": "ghadi tfiqi",
+          "english": "you (f) will wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يفيق",
+          "transliteration": "ghadi yfiq",
+          "english": "he will wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تفيق",
+          "transliteration": "ghadi tfiq",
+          "english": "she will wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نفيقو",
+          "transliteration": "ghadi nfiqu",
+          "english": "we will wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تفيقو",
+          "transliteration": "ghadi tfiqu",
+          "english": "you (pl) will wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يفيقو",
+          "transliteration": "ghadi yfiqu",
+          "english": "they will wake up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نفيق",
+          "transliteration": "ma ghadish nfiq",
+          "english": "I won't wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تفيق",
+          "transliteration": "ma ghadish tfiq",
+          "english": "you (m) won't wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تفيقي",
+          "transliteration": "ma ghadish tfiqi",
+          "english": "you (f) won't wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يفيق",
+          "transliteration": "ma ghadish yfiq",
+          "english": "he won't wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تفيق",
+          "transliteration": "ma ghadish tfiq",
+          "english": "she won't wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نفيقو",
+          "transliteration": "ma ghadish nfiqu",
+          "english": "we won't wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تفيقو",
+          "transliteration": "ma ghadish tfiqu",
+          "english": "you (pl) won't wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يفيقو",
+          "transliteration": "ma ghadish yfiqu",
+          "english": "they won't wake up"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "istakhabba",
+  "arabic": "اخْتَبَأَ",
+  "transliteration": "ikhtaba2a",
+  "english": "to hide",
+  "wordId": null,
+  "rootLetters": "خ ب أ",
+  "verbClass": "sound",
+  "notes": "Form VIII verb ending in a hamza: ikhtaba2tu in the past, yakhtabi2u in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اخْتَبَأْتُ",
+          "transliteration": "ikhtaba2tu",
+          "english": "I hid"
+        },
+        {
+          "person": "enta",
+          "arabic": "اخْتَبَأْتَ",
+          "transliteration": "ikhtaba2ta",
+          "english": "you (m) hid"
+        },
+        {
+          "person": "enti",
+          "arabic": "اخْتَبَأْتِ",
+          "transliteration": "ikhtaba2ti",
+          "english": "you (f) hid"
+        },
+        {
+          "person": "howa",
+          "arabic": "اخْتَبَأَ",
+          "transliteration": "ikhtaba2a",
+          "english": "he hid"
+        },
+        {
+          "person": "heya",
+          "arabic": "اخْتَبَأَتْ",
+          "transliteration": "ikhtaba2at",
+          "english": "she hid"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اخْتَبَأْنَا",
+          "transliteration": "ikhtaba2na",
+          "english": "we hid"
+        },
+        {
+          "person": "entu",
+          "arabic": "اخْتَبَأْتُمْ",
+          "transliteration": "ikhtaba2tum",
+          "english": "you (pl) hid"
+        },
+        {
+          "person": "homma",
+          "arabic": "اخْتَبَأُوا",
+          "transliteration": "ikhtaba2u",
+          "english": "they hid"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا اخْتَبَأْتُ",
+          "transliteration": "ma ikhtaba2tu",
+          "english": "I didn't hide"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا اخْتَبَأْتَ",
+          "transliteration": "ma ikhtaba2ta",
+          "english": "you (m) didn't hide"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا اخْتَبَأْتِ",
+          "transliteration": "ma ikhtaba2ti",
+          "english": "you (f) didn't hide"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا اخْتَبَأَ",
+          "transliteration": "ma ikhtaba2a",
+          "english": "he didn't hide"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا اخْتَبَأَتْ",
+          "transliteration": "ma ikhtaba2at",
+          "english": "she didn't hide"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا اخْتَبَأْنَا",
+          "transliteration": "ma ikhtaba2na",
+          "english": "we didn't hide"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا اخْتَبَأْتُمْ",
+          "transliteration": "ma ikhtaba2tum",
+          "english": "you (pl) didn't hide"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا اخْتَبَأُوا",
+          "transliteration": "ma ikhtaba2u",
+          "english": "they didn't hide"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَخْتَبِئُ",
+          "transliteration": "akhtabi2u",
+          "english": "I hide"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَخْتَبِئُ",
+          "transliteration": "takhtabi2u",
+          "english": "you (m) hide"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَخْتَبِئِينَ",
+          "transliteration": "takhtabi2ina",
+          "english": "you (f) hide"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَخْتَبِئُ",
+          "transliteration": "yakhtabi2u",
+          "english": "he hides"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَخْتَبِئُ",
+          "transliteration": "takhtabi2u",
+          "english": "she hides"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَخْتَبِئُ",
+          "transliteration": "nakhtabi2u",
+          "english": "we hide"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَخْتَبِئُونَ",
+          "transliteration": "takhtabi2una",
+          "english": "you (pl) hide"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَخْتَبِئُونَ",
+          "transliteration": "yakhtabi2una",
+          "english": "they hide"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَخْتَبِئُ",
+          "transliteration": "la akhtabi2u",
+          "english": "I don't hide"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَخْتَبِئُ",
+          "transliteration": "la takhtabi2u",
+          "english": "you (m) don't hide"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَخْتَبِئِينَ",
+          "transliteration": "la takhtabi2ina",
+          "english": "you (f) don't hide"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَخْتَبِئُ",
+          "transliteration": "la yakhtabi2u",
+          "english": "he doesn't hide"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَخْتَبِئُ",
+          "transliteration": "la takhtabi2u",
+          "english": "she doesn't hide"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَخْتَبِئُ",
+          "transliteration": "la nakhtabi2u",
+          "english": "we don't hide"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَخْتَبِئُونَ",
+          "transliteration": "la takhtabi2una",
+          "english": "you (pl) don't hide"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَخْتَبِئُونَ",
+          "transliteration": "la yakhtabi2una",
+          "english": "they don't hide"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَخْتَبِئُ",
+          "transliteration": "sa2akhtabi2u",
+          "english": "I will hide"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَخْتَبِئُ",
+          "transliteration": "satakhtabi2u",
+          "english": "you (m) will hide"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَخْتَبِئِينَ",
+          "transliteration": "satakhtabi2ina",
+          "english": "you (f) will hide"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَخْتَبِئُ",
+          "transliteration": "sayakhtabi2u",
+          "english": "he will hide"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَخْتَبِئُ",
+          "transliteration": "satakhtabi2u",
+          "english": "she will hide"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَخْتَبِئُ",
+          "transliteration": "sanakhtabi2u",
+          "english": "we will hide"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَخْتَبِئُونَ",
+          "transliteration": "satakhtabi2una",
+          "english": "you (pl) will hide"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَخْتَبِئُونَ",
+          "transliteration": "sayakhtabi2una",
+          "english": "they will hide"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَخْتَبِئَ",
+          "transliteration": "lan akhtabi2a",
+          "english": "I won't hide"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَخْتَبِئَ",
+          "transliteration": "lan takhtabi2a",
+          "english": "you (m) won't hide"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَخْتَبِئِي",
+          "transliteration": "lan takhtabi2i",
+          "english": "you (f) won't hide"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَخْتَبِئَ",
+          "transliteration": "lan yakhtabi2a",
+          "english": "he won't hide"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَخْتَبِئَ",
+          "transliteration": "lan takhtabi2a",
+          "english": "she won't hide"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَخْتَبِئَ",
+          "transliteration": "lan nakhtabi2a",
+          "english": "we won't hide"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَخْتَبِئُوا",
+          "transliteration": "lan takhtabi2u",
+          "english": "you (pl) won't hide"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَخْتَبِئُوا",
+          "transliteration": "lan yakhtabi2u",
+          "english": "they won't hide"
+        }
+      ]
+    }
+  },
+  "form": "VIII",
+  "source": "generated"
+}

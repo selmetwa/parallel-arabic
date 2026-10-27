@@ -1,0 +1,320 @@
+{
+  "slug": "gamma3",
+  "arabic": "جمع",
+  "transliteration": "jamma3",
+  "english": "to collect",
+  "wordId": null,
+  "rootLetters": "ج م ع",
+  "verbClass": "sound",
+  "notes": "This is a Form II verb. In the present tense, the characteristic 'e' vowel drops when a suffix starting with a vowel is added (e.g., btjamme3 becomes btjam3i).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "جمعت",
+          "transliteration": "jamma3t",
+          "english": "I collected"
+        },
+        {
+          "person": "enta",
+          "arabic": "جمعت",
+          "transliteration": "jamma3t",
+          "english": "you (m) collected"
+        },
+        {
+          "person": "enti",
+          "arabic": "جمعتي",
+          "transliteration": "jamma3ti",
+          "english": "you (f) collected"
+        },
+        {
+          "person": "howa",
+          "arabic": "جمع",
+          "transliteration": "jamma3",
+          "english": "he collected"
+        },
+        {
+          "person": "heya",
+          "arabic": "جمعت",
+          "transliteration": "jamma3it",
+          "english": "she collected"
+        },
+        {
+          "person": "ehna",
+          "arabic": "جمعنا",
+          "transliteration": "jamma3na",
+          "english": "we collected"
+        },
+        {
+          "person": "entu",
+          "arabic": "جمعتوا",
+          "transliteration": "jamma3tu",
+          "english": "you (pl) collected"
+        },
+        {
+          "person": "homma",
+          "arabic": "جمعوا",
+          "transliteration": "jamma3u",
+          "english": "they collected"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما جمعت",
+          "transliteration": "ma jamma3t",
+          "english": "I didn't collect"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما جمعت",
+          "transliteration": "ma jamma3t",
+          "english": "you (m) didn't collect"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما جمعتي",
+          "transliteration": "ma jamma3ti",
+          "english": "you (f) didn't collect"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما جمع",
+          "transliteration": "ma jamma3",
+          "english": "he didn't collect"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما جمعت",
+          "transliteration": "ma jamma3it",
+          "english": "she didn't collect"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما جمعنا",
+          "transliteration": "ma jamma3na",
+          "english": "we didn't collect"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما جمعتوا",
+          "transliteration": "ma jamma3tu",
+          "english": "you (pl) didn't collect"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما جمعوا",
+          "transliteration": "ma jamma3u",
+          "english": "they didn't collect"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بجمع",
+          "transliteration": "bjamme3",
+          "english": "I collect"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتجمع",
+          "transliteration": "btjamme3",
+          "english": "you (m) collect"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتجمعي",
+          "transliteration": "btjam3i",
+          "english": "you (f) collect"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيجمع",
+          "transliteration": "byjamme3",
+          "english": "he collects"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتجمع",
+          "transliteration": "btjamme3",
+          "english": "she collects"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منجمع",
+          "transliteration": "mnjamme3",
+          "english": "we collect"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتجمعوا",
+          "transliteration": "btjam3u",
+          "english": "you (pl) collect"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيجمعوا",
+          "transliteration": "byjam3u",
+          "english": "they collect"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بجمع",
+          "transliteration": "ma bjamme3",
+          "english": "I don't collect"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتجمع",
+          "transliteration": "ma btjamme3",
+          "english": "you (m) don't collect"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتجمعي",
+          "transliteration": "ma btjam3i",
+          "english": "you (f) don't collect"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيجمع",
+          "transliteration": "ma byjamme3",
+          "english": "he doesn't collect"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتجمع",
+          "transliteration": "ma btjamme3",
+          "english": "she doesn't collect"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منجمع",
+          "transliteration": "ma mnjamme3",
+          "english": "we don't collect"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتجمعوا",
+          "transliteration": "ma btjam3u",
+          "english": "you (pl) don't collect"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيجمعوا",
+          "transliteration": "ma byjam3u",
+          "english": "they don't collect"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح جمع",
+          "transliteration": "ra7 jamme3",
+          "english": "I will collect"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تجمع",
+          "transliteration": "ra7 tjamme3",
+          "english": "you (m) will collect"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تجمعي",
+          "transliteration": "ra7 tjam3i",
+          "english": "you (f) will collect"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يجمع",
+          "transliteration": "ra7 yjamme3",
+          "english": "he will collect"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تجمع",
+          "transliteration": "ra7 tjamme3",
+          "english": "she will collect"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نجمع",
+          "transliteration": "ra7 njamme3",
+          "english": "we will collect"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تجمعوا",
+          "transliteration": "ra7 tjam3u",
+          "english": "you (pl) will collect"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يجمعوا",
+          "transliteration": "ra7 yjam3u",
+          "english": "they will collect"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح جمع",
+          "transliteration": "ma ra7 jamme3",
+          "english": "I won't collect"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تجمع",
+          "transliteration": "ma ra7 tjamme3",
+          "english": "you (m) won't collect"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تجمعي",
+          "transliteration": "ma ra7 tjam3i",
+          "english": "you (f) won't collect"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يجمع",
+          "transliteration": "ma ra7 yjamme3",
+          "english": "he won't collect"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تجمع",
+          "transliteration": "ma ra7 tjamme3",
+          "english": "she won't collect"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نجمع",
+          "transliteration": "ma ra7 njamme3",
+          "english": "we won't collect"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تجمعوا",
+          "transliteration": "ma ra7 tjam3u",
+          "english": "you (pl) won't collect"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يجمعوا",
+          "transliteration": "ma ra7 yjam3u",
+          "english": "they won't collect"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

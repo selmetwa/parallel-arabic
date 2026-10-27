@@ -1,0 +1,320 @@
+{
+  "slug": "tafa",
+  "arabic": "طفى",
+  "transliteration": "tafa",
+  "english": "to turn off",
+  "wordId": null,
+  "rootLetters": "ط ف ي",
+  "verbClass": "defective",
+  "notes": "Defective verb: tafeit in the past, bitfi in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "طفيت",
+          "transliteration": "tafeit",
+          "english": "I turned off"
+        },
+        {
+          "person": "enta",
+          "arabic": "طفيت",
+          "transliteration": "tafeit",
+          "english": "you (m) turned off"
+        },
+        {
+          "person": "enti",
+          "arabic": "طفيتي",
+          "transliteration": "tafeiti",
+          "english": "you (f) turned off"
+        },
+        {
+          "person": "howa",
+          "arabic": "طفى",
+          "transliteration": "tafa",
+          "english": "he turned off"
+        },
+        {
+          "person": "heya",
+          "arabic": "طفت",
+          "transliteration": "tafit",
+          "english": "she turned off"
+        },
+        {
+          "person": "ehna",
+          "arabic": "طفينا",
+          "transliteration": "tafeina",
+          "english": "we turned off"
+        },
+        {
+          "person": "entu",
+          "arabic": "طفيتوا",
+          "transliteration": "tafeitu",
+          "english": "you (pl) turned off"
+        },
+        {
+          "person": "homma",
+          "arabic": "طفوا",
+          "transliteration": "tafu",
+          "english": "they turned off"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما طفيت",
+          "transliteration": "ma tafeit",
+          "english": "I didn't turn off"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما طفيت",
+          "transliteration": "ma tafeit",
+          "english": "you (m) didn't turn off"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما طفيتي",
+          "transliteration": "ma tafeiti",
+          "english": "you (f) didn't turn off"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما طفى",
+          "transliteration": "ma tafa",
+          "english": "he didn't turn off"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما طفت",
+          "transliteration": "ma tafit",
+          "english": "she didn't turn off"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما طفينا",
+          "transliteration": "ma tafeina",
+          "english": "we didn't turn off"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما طفيتوا",
+          "transliteration": "ma tafeitu",
+          "english": "you (pl) didn't turn off"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما طفوا",
+          "transliteration": "ma tafu",
+          "english": "they didn't turn off"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بطفي",
+          "transliteration": "bitfi",
+          "english": "I turn off"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتطفي",
+          "transliteration": "btitfi",
+          "english": "you (m) turn off"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتطفي",
+          "transliteration": "btitfi",
+          "english": "you (f) turn off"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيطفي",
+          "transliteration": "byitfi",
+          "english": "he turns off"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتطفي",
+          "transliteration": "btitfi",
+          "english": "she turns off"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منطفي",
+          "transliteration": "mnitfi",
+          "english": "we turn off"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتطفوا",
+          "transliteration": "btitfu",
+          "english": "you (pl) turn off"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيطفوا",
+          "transliteration": "byitfu",
+          "english": "they turn off"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بطفي",
+          "transliteration": "ma bitfi",
+          "english": "I don't turn off"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتطفي",
+          "transliteration": "ma btitfi",
+          "english": "you (m) don't turn off"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتطفي",
+          "transliteration": "ma btitfi",
+          "english": "you (f) don't turn off"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيطفي",
+          "transliteration": "ma byitfi",
+          "english": "he doesn't turn off"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتطفي",
+          "transliteration": "ma btitfi",
+          "english": "she doesn't turn off"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منطفي",
+          "transliteration": "ma mnitfi",
+          "english": "we don't turn off"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتطفوا",
+          "transliteration": "ma btitfu",
+          "english": "you (pl) don't turn off"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيطفوا",
+          "transliteration": "ma byitfu",
+          "english": "they don't turn off"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اطفي",
+          "transliteration": "ra7 itfi",
+          "english": "I will turn off"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تطفي",
+          "transliteration": "ra7 titfi",
+          "english": "you (m) will turn off"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تطفي",
+          "transliteration": "ra7 titfi",
+          "english": "you (f) will turn off"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يطفي",
+          "transliteration": "ra7 yitfi",
+          "english": "he will turn off"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تطفي",
+          "transliteration": "ra7 titfi",
+          "english": "she will turn off"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نطفي",
+          "transliteration": "ra7 nitfi",
+          "english": "we will turn off"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تطفوا",
+          "transliteration": "ra7 titfu",
+          "english": "you (pl) will turn off"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يطفوا",
+          "transliteration": "ra7 yitfu",
+          "english": "they will turn off"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اطفي",
+          "transliteration": "ma ra7 itfi",
+          "english": "I won't turn off"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تطفي",
+          "transliteration": "ma ra7 titfi",
+          "english": "you (m) won't turn off"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تطفي",
+          "transliteration": "ma ra7 titfi",
+          "english": "you (f) won't turn off"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يطفي",
+          "transliteration": "ma ra7 yitfi",
+          "english": "he won't turn off"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تطفي",
+          "transliteration": "ma ra7 titfi",
+          "english": "she won't turn off"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نطفي",
+          "transliteration": "ma ra7 nitfi",
+          "english": "we won't turn off"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تطفوا",
+          "transliteration": "ma ra7 titfu",
+          "english": "you (pl) won't turn off"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يطفوا",
+          "transliteration": "ma ra7 yitfu",
+          "english": "they won't turn off"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

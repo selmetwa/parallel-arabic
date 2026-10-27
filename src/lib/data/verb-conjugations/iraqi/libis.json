@@ -1,0 +1,320 @@
+{
+  "slug": "libis",
+  "arabic": "لبس",
+  "transliteration": "libas",
+  "english": "to wear",
+  "wordId": null,
+  "rootLetters": "ل ب س",
+  "verbClass": "sound",
+  "notes": "A Form I sound verb. The past tense follows the 'i-a' pattern (libas), and the present tense has an 'a' stem vowel (yilbas) which changes to 'i' before suffixes.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "لبست",
+          "transliteration": "libasit",
+          "english": "I wore"
+        },
+        {
+          "person": "enta",
+          "arabic": "لبست",
+          "transliteration": "libasit",
+          "english": "you (m) wore"
+        },
+        {
+          "person": "enti",
+          "arabic": "لبستي",
+          "transliteration": "libasti",
+          "english": "you (f) wore"
+        },
+        {
+          "person": "howa",
+          "arabic": "لبس",
+          "transliteration": "libas",
+          "english": "he wore"
+        },
+        {
+          "person": "heya",
+          "arabic": "لبست",
+          "transliteration": "libsat",
+          "english": "she wore"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لبسنا",
+          "transliteration": "libasna",
+          "english": "we wore"
+        },
+        {
+          "person": "entu",
+          "arabic": "لبستوا",
+          "transliteration": "libastu",
+          "english": "you (pl) wore"
+        },
+        {
+          "person": "homma",
+          "arabic": "لبسوا",
+          "transliteration": "libsaw",
+          "english": "they wore"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما لبست",
+          "transliteration": "ma libasit",
+          "english": "I didn't wear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما لبست",
+          "transliteration": "ma libasit",
+          "english": "you (m) didn't wear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما لبستي",
+          "transliteration": "ma libasti",
+          "english": "you (f) didn't wear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما لبس",
+          "transliteration": "ma libas",
+          "english": "he didn't wear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما لبست",
+          "transliteration": "ma libsat",
+          "english": "she didn't wear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما لبسنا",
+          "transliteration": "ma libasna",
+          "english": "we didn't wear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما لبستوا",
+          "transliteration": "ma libastu",
+          "english": "you (pl) didn't wear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما لبسوا",
+          "transliteration": "ma libsaw",
+          "english": "they didn't wear"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "البس",
+          "transliteration": "albas",
+          "english": "I wear"
+        },
+        {
+          "person": "enta",
+          "arabic": "تلبس",
+          "transliteration": "tilbas",
+          "english": "you (m) wear"
+        },
+        {
+          "person": "enti",
+          "arabic": "تلبسين",
+          "transliteration": "tilbiseen",
+          "english": "you (f) wear"
+        },
+        {
+          "person": "howa",
+          "arabic": "يلبس",
+          "transliteration": "yilbas",
+          "english": "he wears"
+        },
+        {
+          "person": "heya",
+          "arabic": "تلبس",
+          "transliteration": "tilbas",
+          "english": "she wears"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نلبس",
+          "transliteration": "nilbas",
+          "english": "we wear"
+        },
+        {
+          "person": "entu",
+          "arabic": "تلبسون",
+          "transliteration": "tilbisoon",
+          "english": "you (pl) wear"
+        },
+        {
+          "person": "homma",
+          "arabic": "يلبسون",
+          "transliteration": "yilbisoon",
+          "english": "they wear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما البس",
+          "transliteration": "ma albas",
+          "english": "I don't wear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تلبس",
+          "transliteration": "ma tilbas",
+          "english": "you (m) don't wear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تلبسين",
+          "transliteration": "ma tilbiseen",
+          "english": "you (f) don't wear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يلبس",
+          "transliteration": "ma yilbas",
+          "english": "he doesn't wear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تلبس",
+          "transliteration": "ma tilbas",
+          "english": "she doesn't wear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نلبس",
+          "transliteration": "ma nilbas",
+          "english": "we don't wear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تلبسون",
+          "transliteration": "ma tilbisoon",
+          "english": "you (pl) don't wear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يلبسون",
+          "transliteration": "ma yilbisoon",
+          "english": "they don't wear"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح البس",
+          "transliteration": "raa7 albas",
+          "english": "I will wear"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تلبس",
+          "transliteration": "raa7 tilbas",
+          "english": "you (m) will wear"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تلبسين",
+          "transliteration": "raa7 tilbiseen",
+          "english": "you (f) will wear"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يلبس",
+          "transliteration": "raa7 yilbas",
+          "english": "he will wear"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تلبس",
+          "transliteration": "raa7 tilbas",
+          "english": "she will wear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نلبس",
+          "transliteration": "raa7 nilbas",
+          "english": "we will wear"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تلبسون",
+          "transliteration": "raa7 tilbisoon",
+          "english": "you (pl) will wear"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يلبسون",
+          "transliteration": "raa7 yilbisoon",
+          "english": "they will wear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح البس",
+          "transliteration": "ma raa7 albas",
+          "english": "I won't wear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تلبس",
+          "transliteration": "ma raa7 tilbas",
+          "english": "you (m) won't wear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تلبسين",
+          "transliteration": "ma raa7 tilbiseen",
+          "english": "you (f) won't wear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يلبس",
+          "transliteration": "ma raa7 yilbas",
+          "english": "he won't wear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تلبس",
+          "transliteration": "ma raa7 tilbas",
+          "english": "she won't wear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نلبس",
+          "transliteration": "ma raa7 nilbas",
+          "english": "we won't wear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تلبسون",
+          "transliteration": "ma raa7 tilbisoon",
+          "english": "you (pl) won't wear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يلبسون",
+          "transliteration": "ma raa7 yilbisoon",
+          "english": "they won't wear"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

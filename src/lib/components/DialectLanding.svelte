@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { hasGrammar } from '$lib/data/grammar/topics';
+	import GrammarLinks from '$lib/components/grammar/GrammarLinks.svelte';
 	import { onMount } from 'svelte';
 	import { currentDialect } from '$lib/store/store';
 	import { page } from '$app/state';
@@ -59,11 +61,20 @@
 			description: 'Search the word database, hear each word, and save it to your review deck.'
 		},
 		...(content.extraLinks ?? []),
+		...(hasGrammar(dialect)
+			? [
+					{
+						href: `/grammar/${dialect}`,
+						title: 'Grammar',
+						description: `${content.heading} grammar in plain English: pronouns, plurals, numbers, tenses, verb forms and more.`
+					}
+				]
+			: []),
 		{
 			href: `/${dialect}/conjugations`,
 			title: 'Verb Conjugations',
 			description:
-				'Full conjugation tables for 72 common verbs, every tense, affirmative and negative.'
+				'Full conjugation tables for 200 common verbs, every tense, affirmative and negative.'
 		},
 		{
 			href: '/tutor',
@@ -138,6 +149,12 @@
 			{/each}
 		</div>
 	</section>
+
+	<GrammarLinks
+		{dialect}
+		heading="{content.heading} grammar"
+		slugs={['pronouns', 'possessive-suffixes', 'plurals', 'numbers-counting', 'present-tense', 'past-tense']}
+	/>
 
 	{#if comparisons.length}
 		<section class="mt-10">

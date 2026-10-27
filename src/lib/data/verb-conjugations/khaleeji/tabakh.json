@@ -1,0 +1,320 @@
+{
+  "slug": "tabakh",
+  "arabic": "طبخ",
+  "transliteration": "tabakh",
+  "english": "to cook",
+  "wordId": null,
+  "rootLetters": "ط ب خ",
+  "verbClass": "sound",
+  "notes": "Regular Form I sound verb. In the 'she' and 'they' past forms, the second vowel is dropped (tabkhat, tabkhaw).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "طبخت",
+          "transliteration": "tabakht",
+          "english": "I cooked"
+        },
+        {
+          "person": "enta",
+          "arabic": "طبخت",
+          "transliteration": "tabakht",
+          "english": "you (m) cooked"
+        },
+        {
+          "person": "enti",
+          "arabic": "طبختي",
+          "transliteration": "tabakhti",
+          "english": "you (f) cooked"
+        },
+        {
+          "person": "howa",
+          "arabic": "طبخ",
+          "transliteration": "tabakh",
+          "english": "he cooked"
+        },
+        {
+          "person": "heya",
+          "arabic": "طبخت",
+          "transliteration": "tabkhat",
+          "english": "she cooked"
+        },
+        {
+          "person": "ehna",
+          "arabic": "طبخنا",
+          "transliteration": "tabakhna",
+          "english": "we cooked"
+        },
+        {
+          "person": "entu",
+          "arabic": "طبختوا",
+          "transliteration": "tabakhtaw",
+          "english": "you (pl) cooked"
+        },
+        {
+          "person": "homma",
+          "arabic": "طبخوا",
+          "transliteration": "tabkhaw",
+          "english": "they cooked"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما طبخت",
+          "transliteration": "ma tabakht",
+          "english": "I didn't cook"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما طبخت",
+          "transliteration": "ma tabakht",
+          "english": "you (m) didn't cook"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما طبختي",
+          "transliteration": "ma tabakhti",
+          "english": "you (f) didn't cook"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما طبخ",
+          "transliteration": "ma tabakh",
+          "english": "he didn't cook"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما طبخت",
+          "transliteration": "ma tabkhat",
+          "english": "she didn't cook"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما طبخنا",
+          "transliteration": "ma tabakhna",
+          "english": "we didn't cook"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما طبختوا",
+          "transliteration": "ma tabakhtaw",
+          "english": "you (pl) didn't cook"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما طبخوا",
+          "transliteration": "ma tabkhaw",
+          "english": "they didn't cook"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اطبخ",
+          "transliteration": "atbakh",
+          "english": "I cook"
+        },
+        {
+          "person": "enta",
+          "arabic": "تطبخ",
+          "transliteration": "titbakh",
+          "english": "you (m) cook"
+        },
+        {
+          "person": "enti",
+          "arabic": "تطبخين",
+          "transliteration": "titbakheen",
+          "english": "you (f) cook"
+        },
+        {
+          "person": "howa",
+          "arabic": "يطبخ",
+          "transliteration": "yitbakh",
+          "english": "he cooks"
+        },
+        {
+          "person": "heya",
+          "arabic": "تطبخ",
+          "transliteration": "titbakh",
+          "english": "she cooks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نطبخ",
+          "transliteration": "nitbakh",
+          "english": "we cook"
+        },
+        {
+          "person": "entu",
+          "arabic": "تطبخون",
+          "transliteration": "titbakhoon",
+          "english": "you (pl) cook"
+        },
+        {
+          "person": "homma",
+          "arabic": "يطبخون",
+          "transliteration": "yitbakhoon",
+          "english": "they cook"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اطبخ",
+          "transliteration": "ma atbakh",
+          "english": "I don't cook"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تطبخ",
+          "transliteration": "ma titbakh",
+          "english": "you (m) don't cook"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تطبخين",
+          "transliteration": "ma titbakheen",
+          "english": "you (f) don't cook"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يطبخ",
+          "transliteration": "ma yitbakh",
+          "english": "he doesn't cook"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تطبخ",
+          "transliteration": "ma titbakh",
+          "english": "she doesn't cook"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نطبخ",
+          "transliteration": "ma nitbakh",
+          "english": "we don't cook"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تطبخون",
+          "transliteration": "ma titbakhoon",
+          "english": "you (pl) don't cook"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يطبخون",
+          "transliteration": "ma yitbakhoon",
+          "english": "they don't cook"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اطبخ",
+          "transliteration": "raa7 atbakh",
+          "english": "I will cook"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تطبخ",
+          "transliteration": "raa7 titbakh",
+          "english": "you (m) will cook"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تطبخين",
+          "transliteration": "raa7 titbakheen",
+          "english": "you (f) will cook"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يطبخ",
+          "transliteration": "raa7 yitbakh",
+          "english": "he will cook"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تطبخ",
+          "transliteration": "raa7 titbakh",
+          "english": "she will cook"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نطبخ",
+          "transliteration": "raa7 nitbakh",
+          "english": "we will cook"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تطبخون",
+          "transliteration": "raa7 titbakhoon",
+          "english": "you (pl) will cook"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يطبخون",
+          "transliteration": "raa7 yitbakhoon",
+          "english": "they will cook"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اطبخ",
+          "transliteration": "ma raa7 atbakh",
+          "english": "I won't cook"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تطبخ",
+          "transliteration": "ma raa7 titbakh",
+          "english": "you (m) won't cook"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تطبخين",
+          "transliteration": "ma raa7 titbakheen",
+          "english": "you (f) won't cook"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يطبخ",
+          "transliteration": "ma raa7 yitbakh",
+          "english": "he won't cook"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تطبخ",
+          "transliteration": "ma raa7 titbakh",
+          "english": "she won't cook"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نطبخ",
+          "transliteration": "ma raa7 nitbakh",
+          "english": "we won't cook"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تطبخون",
+          "transliteration": "ma raa7 titbakhoon",
+          "english": "you (pl) won't cook"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يطبخون",
+          "transliteration": "ma raa7 yitbakhoon",
+          "english": "they won't cook"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

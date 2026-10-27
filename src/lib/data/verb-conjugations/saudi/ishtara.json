@@ -1,0 +1,320 @@
+{
+  "slug": "ishtara",
+  "arabic": "اشترى",
+  "transliteration": "ishtara",
+  "english": "to buy",
+  "wordId": null,
+  "rootLetters": "ش ر ي",
+  "verbClass": "defective",
+  "notes": "This is a Form VIII defective verb; the final weak root letter 'y' becomes 'ee' in most past tense forms, but drops in the plural forms (اشتروا) and merges in the 2nd person feminine singular present/future.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اشتريت",
+          "transliteration": "ishtareet",
+          "english": "I bought"
+        },
+        {
+          "person": "enta",
+          "arabic": "اشتريت",
+          "transliteration": "ishtareet",
+          "english": "you (m) bought"
+        },
+        {
+          "person": "enti",
+          "arabic": "اشتريتي",
+          "transliteration": "ishtareeti",
+          "english": "you (f) bought"
+        },
+        {
+          "person": "howa",
+          "arabic": "اشترى",
+          "transliteration": "ishtara",
+          "english": "he bought"
+        },
+        {
+          "person": "heya",
+          "arabic": "اشترت",
+          "transliteration": "ishtarat",
+          "english": "she bought"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اشترينا",
+          "transliteration": "ishtareena",
+          "english": "we bought"
+        },
+        {
+          "person": "entu",
+          "arabic": "اشتريتوا",
+          "transliteration": "ishtareetu",
+          "english": "you (pl) bought"
+        },
+        {
+          "person": "homma",
+          "arabic": "اشتروا",
+          "transliteration": "ishtaru",
+          "english": "they bought"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اشتريت",
+          "transliteration": "ma ishtareet",
+          "english": "I didn't buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اشتريت",
+          "transliteration": "ma ishtareet",
+          "english": "you (m) didn't buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اشتريتي",
+          "transliteration": "ma ishtareeti",
+          "english": "you (f) didn't buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اشترى",
+          "transliteration": "ma ishtara",
+          "english": "he didn't buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اشترت",
+          "transliteration": "ma ishtarat",
+          "english": "she didn't buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اشترينا",
+          "transliteration": "ma ishtareena",
+          "english": "we didn't buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اشتريتوا",
+          "transliteration": "ma ishtareetu",
+          "english": "you (pl) didn't buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اشتروا",
+          "transliteration": "ma ishtaru",
+          "english": "they didn't buy"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باشتري",
+          "transliteration": "bashtari",
+          "english": "I buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتشتري",
+          "transliteration": "btishtari",
+          "english": "you (m) buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتشتري",
+          "transliteration": "btishtari",
+          "english": "you (f) buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيشتري",
+          "transliteration": "byishtari",
+          "english": "he buys"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتشتري",
+          "transliteration": "btishtari",
+          "english": "she buys"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنشتري",
+          "transliteration": "bnishtari",
+          "english": "we buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتشتروا",
+          "transliteration": "btishtaru",
+          "english": "you (pl) buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيشتروا",
+          "transliteration": "byishtaru",
+          "english": "they buy"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باشتري",
+          "transliteration": "ma bashtari",
+          "english": "I don't buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتشتري",
+          "transliteration": "ma btishtari",
+          "english": "you (m) don't buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتشتري",
+          "transliteration": "ma btishtari",
+          "english": "you (f) don't buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيشتري",
+          "transliteration": "ma byishtari",
+          "english": "he doesn't buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتشتري",
+          "transliteration": "ma btishtari",
+          "english": "she doesn't buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنشتري",
+          "transliteration": "ma bnishtari",
+          "english": "we don't buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتشتروا",
+          "transliteration": "ma btishtaru",
+          "english": "you (pl) don't buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيشتروا",
+          "transliteration": "ma byishtaru",
+          "english": "they don't buy"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاشتري",
+          "transliteration": "7ashtari",
+          "english": "I will buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتشتري",
+          "transliteration": "7atishtari",
+          "english": "you (m) will buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتشتري",
+          "transliteration": "7atishtari",
+          "english": "you (f) will buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيشتري",
+          "transliteration": "7ayishtari",
+          "english": "he will buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتشتري",
+          "transliteration": "7atishtari",
+          "english": "she will buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنشتري",
+          "transliteration": "7anishtari",
+          "english": "we will buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتشتروا",
+          "transliteration": "7atishtaru",
+          "english": "you (pl) will buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيشتروا",
+          "transliteration": "7ayishtaru",
+          "english": "they will buy"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاشتري",
+          "transliteration": "ma 7ashtari",
+          "english": "I won't buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتشتري",
+          "transliteration": "ma 7atishtari",
+          "english": "you (m) won't buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتشتري",
+          "transliteration": "ma 7atishtari",
+          "english": "you (f) won't buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيشتري",
+          "transliteration": "ma 7ayishtari",
+          "english": "he won't buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتشتري",
+          "transliteration": "ma 7atishtari",
+          "english": "she won't buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنشتري",
+          "transliteration": "ma 7anishtari",
+          "english": "we won't buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتشتروا",
+          "transliteration": "ma 7atishtaru",
+          "english": "you (pl) won't buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيشتروا",
+          "transliteration": "ma 7ayishtaru",
+          "english": "they won't buy"
+        }
+      ]
+    }
+  },
+  "form": "VIII",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "ti3ib",
+  "arabic": "تعب",
+  "transliteration": "ti3ib",
+  "english": "to get tired",
+  "wordId": null,
+  "rootLetters": "ت ع ب",
+  "verbClass": "sound",
+  "notes": "This is a Form I verb of the fihim/byifham pattern, where the past tense has an 'i' vowel that drops in some conjugations, and the present tense has an 'a' vowel.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "تعبت",
+          "transliteration": "t3ibt",
+          "english": "I got tired"
+        },
+        {
+          "person": "enta",
+          "arabic": "تعبت",
+          "transliteration": "t3ibt",
+          "english": "you (m) got tired"
+        },
+        {
+          "person": "enti",
+          "arabic": "تعبتي",
+          "transliteration": "t3ibti",
+          "english": "you (f) got tired"
+        },
+        {
+          "person": "howa",
+          "arabic": "تعب",
+          "transliteration": "ti3ib",
+          "english": "he got tired"
+        },
+        {
+          "person": "heya",
+          "arabic": "تعبت",
+          "transliteration": "ti3bit",
+          "english": "she got tired"
+        },
+        {
+          "person": "ehna",
+          "arabic": "تعبنا",
+          "transliteration": "t3ibna",
+          "english": "we got tired"
+        },
+        {
+          "person": "entu",
+          "arabic": "تعبتوا",
+          "transliteration": "t3ibtu",
+          "english": "you (pl) got tired"
+        },
+        {
+          "person": "homma",
+          "arabic": "تعبوا",
+          "transliteration": "ti3bu",
+          "english": "they got tired"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما تعبت",
+          "transliteration": "ma t3ibt",
+          "english": "I didn't get tired"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تعبت",
+          "transliteration": "ma t3ibt",
+          "english": "you (m) didn't get tired"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تعبتي",
+          "transliteration": "ma t3ibti",
+          "english": "you (f) didn't get tired"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما تعب",
+          "transliteration": "ma ti3ib",
+          "english": "he didn't get tired"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تعبت",
+          "transliteration": "ma ti3bit",
+          "english": "she didn't get tired"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما تعبنا",
+          "transliteration": "ma t3ibna",
+          "english": "we didn't get tired"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تعبتوا",
+          "transliteration": "ma t3ibtu",
+          "english": "you (pl) didn't get tired"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما تعبوا",
+          "transliteration": "ma ti3bu",
+          "english": "they didn't get tired"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بتعب",
+          "transliteration": "bit3ab",
+          "english": "I get tired"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتتعب",
+          "transliteration": "btit3ab",
+          "english": "you (m) get tired"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتتعبي",
+          "transliteration": "btit3abi",
+          "english": "you (f) get tired"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيتعب",
+          "transliteration": "byit3ab",
+          "english": "he gets tired"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتتعب",
+          "transliteration": "btit3ab",
+          "english": "she gets tired"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منتعب",
+          "transliteration": "mnit3ab",
+          "english": "we get tired"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتتعبوا",
+          "transliteration": "btit3abu",
+          "english": "you (pl) get tired"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيتعبوا",
+          "transliteration": "byit3abu",
+          "english": "they get tired"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بتعب",
+          "transliteration": "ma bit3ab",
+          "english": "I don't get tired"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتتعب",
+          "transliteration": "ma btit3ab",
+          "english": "you (m) don't get tired"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتتعبي",
+          "transliteration": "ma btit3abi",
+          "english": "you (f) don't get tired"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيتعب",
+          "transliteration": "ma byit3ab",
+          "english": "he doesn't get tired"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتتعب",
+          "transliteration": "ma btit3ab",
+          "english": "she doesn't get tired"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منتعب",
+          "transliteration": "ma mnit3ab",
+          "english": "we don't get tired"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتتعبوا",
+          "transliteration": "ma btit3abu",
+          "english": "you (pl) don't get tired"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيتعبوا",
+          "transliteration": "ma byit3abu",
+          "english": "they don't get tired"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اتعب",
+          "transliteration": "ra7 it3ab",
+          "english": "I will get tired"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تتعب",
+          "transliteration": "ra7 tit3ab",
+          "english": "you (m) will get tired"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تتعبي",
+          "transliteration": "ra7 tit3abi",
+          "english": "you (f) will get tired"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يتعب",
+          "transliteration": "ra7 yit3ab",
+          "english": "he will get tired"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تتعب",
+          "transliteration": "ra7 tit3ab",
+          "english": "she will get tired"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نتعب",
+          "transliteration": "ra7 nit3ab",
+          "english": "we will get tired"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تتعبوا",
+          "transliteration": "ra7 tit3abu",
+          "english": "you (pl) will get tired"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يتعبوا",
+          "transliteration": "ra7 yit3abu",
+          "english": "they will get tired"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اتعب",
+          "transliteration": "ma ra7 it3ab",
+          "english": "I won't get tired"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تتعب",
+          "transliteration": "ma ra7 tit3ab",
+          "english": "you (m) won't get tired"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تتعبي",
+          "transliteration": "ma ra7 tit3abi",
+          "english": "you (f) won't get tired"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يتعب",
+          "transliteration": "ma ra7 yit3ab",
+          "english": "he won't get tired"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تتعب",
+          "transliteration": "ma ra7 tit3ab",
+          "english": "she won't get tired"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نتعب",
+          "transliteration": "ma ra7 nit3ab",
+          "english": "we won't get tired"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تتعبوا",
+          "transliteration": "ma ra7 tit3abu",
+          "english": "you (pl) won't get tired"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يتعبوا",
+          "transliteration": "ma ra7 yit3abu",
+          "english": "they won't get tired"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

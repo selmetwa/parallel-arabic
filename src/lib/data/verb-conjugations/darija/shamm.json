@@ -1,0 +1,320 @@
+{
+  "slug": "shamm",
+  "arabic": "شم",
+  "transliteration": "shemm",
+  "english": "to smell",
+  "wordId": null,
+  "rootLetters": "ش م م",
+  "verbClass": "doubled",
+  "notes": "Doubled verb: -it before consonant endings in the past (shemmit).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شميت",
+          "transliteration": "shemmit",
+          "english": "I smelled"
+        },
+        {
+          "person": "enta",
+          "arabic": "شميتي",
+          "transliteration": "shemmiti",
+          "english": "you (m) smelled"
+        },
+        {
+          "person": "enti",
+          "arabic": "شميتي",
+          "transliteration": "shemmiti",
+          "english": "you (f) smelled"
+        },
+        {
+          "person": "howa",
+          "arabic": "شم",
+          "transliteration": "shemm",
+          "english": "he smelled"
+        },
+        {
+          "person": "heya",
+          "arabic": "شمات",
+          "transliteration": "shemmat",
+          "english": "she smelled"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شمينا",
+          "transliteration": "shemmina",
+          "english": "we smelled"
+        },
+        {
+          "person": "entu",
+          "arabic": "شميتيو",
+          "transliteration": "shemmitiw",
+          "english": "you (pl) smelled"
+        },
+        {
+          "person": "homma",
+          "arabic": "شمو",
+          "transliteration": "shemmu",
+          "english": "they smelled"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما شميتش",
+          "transliteration": "ma shemmitsh",
+          "english": "I didn't smell"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما شميتيش",
+          "transliteration": "ma shemmitish",
+          "english": "you (m) didn't smell"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما شميتيش",
+          "transliteration": "ma shemmitish",
+          "english": "you (f) didn't smell"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما شمش",
+          "transliteration": "ma shemmsh",
+          "english": "he didn't smell"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما شماتش",
+          "transliteration": "ma shemmatsh",
+          "english": "she didn't smell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما شميناش",
+          "transliteration": "ma shemminash",
+          "english": "we didn't smell"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما شميتيوش",
+          "transliteration": "ma shemmitiwsh",
+          "english": "you (pl) didn't smell"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما شموش",
+          "transliteration": "ma shemmush",
+          "english": "they didn't smell"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنشم",
+          "transliteration": "kanshemm",
+          "english": "I smell"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتشم",
+          "transliteration": "katshemm",
+          "english": "you (m) smell"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتشمي",
+          "transliteration": "katshemmi",
+          "english": "you (f) smell"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيشم",
+          "transliteration": "kayshemm",
+          "english": "he smells"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتشم",
+          "transliteration": "katshemm",
+          "english": "she smells"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنشمو",
+          "transliteration": "kanshemmu",
+          "english": "we smell"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتشمو",
+          "transliteration": "katshemmu",
+          "english": "you (pl) smell"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيشمو",
+          "transliteration": "kayshemmu",
+          "english": "they smell"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنشمش",
+          "transliteration": "ma kanshemmsh",
+          "english": "I don't smell"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتشمش",
+          "transliteration": "ma katshemmsh",
+          "english": "you (m) don't smell"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتشميش",
+          "transliteration": "ma katshemmish",
+          "english": "you (f) don't smell"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيشمش",
+          "transliteration": "ma kayshemmsh",
+          "english": "he doesn't smell"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتشمش",
+          "transliteration": "ma katshemmsh",
+          "english": "she doesn't smell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنشموش",
+          "transliteration": "ma kanshemmush",
+          "english": "we don't smell"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتشموش",
+          "transliteration": "ma katshemmush",
+          "english": "you (pl) don't smell"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيشموش",
+          "transliteration": "ma kayshemmush",
+          "english": "they don't smell"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نشم",
+          "transliteration": "ghadi nshemm",
+          "english": "I will smell"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تشم",
+          "transliteration": "ghadi tshemm",
+          "english": "you (m) will smell"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تشمي",
+          "transliteration": "ghadi tshemmi",
+          "english": "you (f) will smell"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يشم",
+          "transliteration": "ghadi yshemm",
+          "english": "he will smell"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تشم",
+          "transliteration": "ghadi tshemm",
+          "english": "she will smell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نشمو",
+          "transliteration": "ghadi nshemmu",
+          "english": "we will smell"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تشمو",
+          "transliteration": "ghadi tshemmu",
+          "english": "you (pl) will smell"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يشمو",
+          "transliteration": "ghadi yshemmu",
+          "english": "they will smell"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نشم",
+          "transliteration": "ma ghadish nshemm",
+          "english": "I won't smell"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تشم",
+          "transliteration": "ma ghadish tshemm",
+          "english": "you (m) won't smell"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تشمي",
+          "transliteration": "ma ghadish tshemmi",
+          "english": "you (f) won't smell"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يشم",
+          "transliteration": "ma ghadish yshemm",
+          "english": "he won't smell"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تشم",
+          "transliteration": "ma ghadish tshemm",
+          "english": "she won't smell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نشمو",
+          "transliteration": "ma ghadish nshemmu",
+          "english": "we won't smell"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تشمو",
+          "transliteration": "ma ghadish tshemmu",
+          "english": "you (pl) won't smell"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يشمو",
+          "transliteration": "ma ghadish yshemmu",
+          "english": "they won't smell"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

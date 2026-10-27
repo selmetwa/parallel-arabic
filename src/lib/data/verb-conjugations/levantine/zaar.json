@@ -1,0 +1,320 @@
+{
+  "slug": "zaar",
+  "arabic": "زار",
+  "transliteration": "zar",
+  "english": "to visit",
+  "wordId": null,
+  "rootLetters": "ز و ر",
+  "verbClass": "hollow",
+  "notes": "Hollow Form I verb with a middle 'w' root, conjugating similarly to 'kan' (to be).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "زرت",
+          "transliteration": "zurt",
+          "english": "I visited"
+        },
+        {
+          "person": "enta",
+          "arabic": "زرت",
+          "transliteration": "zurt",
+          "english": "you (m) visited"
+        },
+        {
+          "person": "enti",
+          "arabic": "زرتي",
+          "transliteration": "zurti",
+          "english": "you (f) visited"
+        },
+        {
+          "person": "howa",
+          "arabic": "زار",
+          "transliteration": "zar",
+          "english": "he visited"
+        },
+        {
+          "person": "heya",
+          "arabic": "زارت",
+          "transliteration": "zarit",
+          "english": "she visited"
+        },
+        {
+          "person": "ehna",
+          "arabic": "زرنا",
+          "transliteration": "zurna",
+          "english": "we visited"
+        },
+        {
+          "person": "entu",
+          "arabic": "زرتوا",
+          "transliteration": "zurtu",
+          "english": "you (pl) visited"
+        },
+        {
+          "person": "homma",
+          "arabic": "زاروا",
+          "transliteration": "zaru",
+          "english": "they visited"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما زرت",
+          "transliteration": "ma zurt",
+          "english": "I didn't visit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما زرت",
+          "transliteration": "ma zurt",
+          "english": "you (m) didn't visit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما زرتي",
+          "transliteration": "ma zurti",
+          "english": "you (f) didn't visit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما زار",
+          "transliteration": "ma zar",
+          "english": "he didn't visit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما زارت",
+          "transliteration": "ma zarit",
+          "english": "she didn't visit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما زرنا",
+          "transliteration": "ma zurna",
+          "english": "we didn't visit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما زرتوا",
+          "transliteration": "ma zurtu",
+          "english": "you (pl) didn't visit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما زاروا",
+          "transliteration": "ma zaru",
+          "english": "they didn't visit"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بزور",
+          "transliteration": "bzur",
+          "english": "I visit"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتزور",
+          "transliteration": "btzur",
+          "english": "you (m) visit"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتزوري",
+          "transliteration": "btzuri",
+          "english": "you (f) visit"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيزور",
+          "transliteration": "bizur",
+          "english": "he visits"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتزور",
+          "transliteration": "btzur",
+          "english": "she visits"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منزور",
+          "transliteration": "mnzur",
+          "english": "we visit"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتزوروا",
+          "transliteration": "btzuru",
+          "english": "you (pl) visit"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيزوروا",
+          "transliteration": "bizuru",
+          "english": "they visit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بزور",
+          "transliteration": "ma bzur",
+          "english": "I don't visit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتزور",
+          "transliteration": "ma btzur",
+          "english": "you (m) don't visit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتزوري",
+          "transliteration": "ma btzuri",
+          "english": "you (f) don't visit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيزور",
+          "transliteration": "ma bizur",
+          "english": "he doesn't visit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتزور",
+          "transliteration": "ma btzur",
+          "english": "she doesn't visit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منزور",
+          "transliteration": "ma mnzur",
+          "english": "we don't visit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتزوروا",
+          "transliteration": "ma btzuru",
+          "english": "you (pl) don't visit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيزوروا",
+          "transliteration": "ma bizuru",
+          "english": "they don't visit"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح زور",
+          "transliteration": "ra7 zur",
+          "english": "I will visit"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تزور",
+          "transliteration": "ra7 tzur",
+          "english": "you (m) will visit"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تزوري",
+          "transliteration": "ra7 tzuri",
+          "english": "you (f) will visit"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يزور",
+          "transliteration": "ra7 yzur",
+          "english": "he will visit"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تزور",
+          "transliteration": "ra7 tzur",
+          "english": "she will visit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نزور",
+          "transliteration": "ra7 nzur",
+          "english": "we will visit"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تزوروا",
+          "transliteration": "ra7 tzuru",
+          "english": "you (pl) will visit"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يزوروا",
+          "transliteration": "ra7 yzuru",
+          "english": "they will visit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح زور",
+          "transliteration": "ma ra7 zur",
+          "english": "I won't visit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تزور",
+          "transliteration": "ma ra7 tzur",
+          "english": "you (m) won't visit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تزوري",
+          "transliteration": "ma ra7 tzuri",
+          "english": "you (f) won't visit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يزور",
+          "transliteration": "ma ra7 yzur",
+          "english": "he won't visit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تزور",
+          "transliteration": "ma ra7 tzur",
+          "english": "she won't visit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نزور",
+          "transliteration": "ma ra7 nzur",
+          "english": "we won't visit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تزوروا",
+          "transliteration": "ma ra7 tzuru",
+          "english": "you (pl) won't visit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يزوروا",
+          "transliteration": "ma ra7 yzuru",
+          "english": "they won't visit"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

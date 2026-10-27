@@ -1,0 +1,320 @@
+{
+  "slug": "7ass",
+  "arabic": "حس",
+  "transliteration": "7ass",
+  "english": "to feel",
+  "wordId": null,
+  "rootLetters": "ح س س",
+  "verbClass": "doubled",
+  "notes": "As a doubled (geminate) verb, the second and third root letters are identical and merge. In the past tense, an '-ee-' is inserted before consonant-initial suffixes (e.g., 7asseet).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حسيت",
+          "transliteration": "7asseet",
+          "english": "I felt"
+        },
+        {
+          "person": "enta",
+          "arabic": "حسيت",
+          "transliteration": "7asseet",
+          "english": "you (m) felt"
+        },
+        {
+          "person": "enti",
+          "arabic": "حسيتي",
+          "transliteration": "7asseeti",
+          "english": "you (f) felt"
+        },
+        {
+          "person": "howa",
+          "arabic": "حس",
+          "transliteration": "7ass",
+          "english": "he felt"
+        },
+        {
+          "person": "heya",
+          "arabic": "حست",
+          "transliteration": "7assat",
+          "english": "she felt"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حسينا",
+          "transliteration": "7asseena",
+          "english": "we felt"
+        },
+        {
+          "person": "entu",
+          "arabic": "حسيتوا",
+          "transliteration": "7asseetaw",
+          "english": "you (pl) felt"
+        },
+        {
+          "person": "homma",
+          "arabic": "حسوا",
+          "transliteration": "7assaw",
+          "english": "they felt"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حسيت",
+          "transliteration": "ma 7asseet",
+          "english": "I didn't feel"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حسيت",
+          "transliteration": "ma 7asseet",
+          "english": "you (m) didn't feel"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حسيتي",
+          "transliteration": "ma 7asseeti",
+          "english": "you (f) didn't feel"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حس",
+          "transliteration": "ma 7ass",
+          "english": "he didn't feel"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حست",
+          "transliteration": "ma 7assat",
+          "english": "she didn't feel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حسينا",
+          "transliteration": "ma 7asseena",
+          "english": "we didn't feel"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حسيتوا",
+          "transliteration": "ma 7asseetaw",
+          "english": "you (pl) didn't feel"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حسوا",
+          "transliteration": "ma 7assaw",
+          "english": "they didn't feel"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "احس",
+          "transliteration": "a7iss",
+          "english": "I feel"
+        },
+        {
+          "person": "enta",
+          "arabic": "تحس",
+          "transliteration": "t7iss",
+          "english": "you (m) feel"
+        },
+        {
+          "person": "enti",
+          "arabic": "تحسين",
+          "transliteration": "t7isseen",
+          "english": "you (f) feel"
+        },
+        {
+          "person": "howa",
+          "arabic": "يحس",
+          "transliteration": "y7iss",
+          "english": "he feels"
+        },
+        {
+          "person": "heya",
+          "arabic": "تحس",
+          "transliteration": "t7iss",
+          "english": "she feels"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نحس",
+          "transliteration": "n7iss",
+          "english": "we feel"
+        },
+        {
+          "person": "entu",
+          "arabic": "تحسون",
+          "transliteration": "t7issoon",
+          "english": "you (pl) feel"
+        },
+        {
+          "person": "homma",
+          "arabic": "يحسون",
+          "transliteration": "y7issoon",
+          "english": "they feel"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما احس",
+          "transliteration": "ma a7iss",
+          "english": "I don't feel"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تحس",
+          "transliteration": "ma t7iss",
+          "english": "you (m) don't feel"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تحسين",
+          "transliteration": "ma t7isseen",
+          "english": "you (f) don't feel"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يحس",
+          "transliteration": "ma y7iss",
+          "english": "he doesn't feel"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تحس",
+          "transliteration": "ma t7iss",
+          "english": "she doesn't feel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نحس",
+          "transliteration": "ma n7iss",
+          "english": "we don't feel"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تحسون",
+          "transliteration": "ma t7issoon",
+          "english": "you (pl) don't feel"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يحسون",
+          "transliteration": "ma y7issoon",
+          "english": "they don't feel"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح احس",
+          "transliteration": "raa7 a7iss",
+          "english": "I will feel"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تحس",
+          "transliteration": "raa7 t7iss",
+          "english": "you (m) will feel"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تحسين",
+          "transliteration": "raa7 t7isseen",
+          "english": "you (f) will feel"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يحس",
+          "transliteration": "raa7 y7iss",
+          "english": "he will feel"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تحس",
+          "transliteration": "raa7 t7iss",
+          "english": "she will feel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نحس",
+          "transliteration": "raa7 n7iss",
+          "english": "we will feel"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تحسون",
+          "transliteration": "raa7 t7issoon",
+          "english": "you (pl) will feel"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يحسون",
+          "transliteration": "raa7 y7issoon",
+          "english": "they will feel"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح احس",
+          "transliteration": "ma raa7 a7iss",
+          "english": "I won't feel"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تحس",
+          "transliteration": "ma raa7 t7iss",
+          "english": "you (m) won't feel"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تحسين",
+          "transliteration": "ma raa7 t7isseen",
+          "english": "you (f) won't feel"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يحس",
+          "transliteration": "ma raa7 y7iss",
+          "english": "he won't feel"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تحس",
+          "transliteration": "ma raa7 t7iss",
+          "english": "she won't feel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نحس",
+          "transliteration": "ma raa7 n7iss",
+          "english": "we won't feel"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تحسون",
+          "transliteration": "ma raa7 t7issoon",
+          "english": "you (pl) won't feel"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يحسون",
+          "transliteration": "ma raa7 y7issoon",
+          "english": "they won't feel"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

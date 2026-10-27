@@ -1,0 +1,320 @@
+{
+  "slug": "radd",
+  "arabic": "أَجَابَ",
+  "transliteration": "ajaba",
+  "english": "to answer",
+  "wordId": null,
+  "rootLetters": "ج و ب",
+  "verbClass": "hollow",
+  "notes": "This is a Form IV hollow verb; the middle long vowel is shortened in the past tense when the suffix begins with a consonant.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَجَبْتُ",
+          "transliteration": "ajabtu",
+          "english": "I answered"
+        },
+        {
+          "person": "enta",
+          "arabic": "أَجَبْتَ",
+          "transliteration": "ajabta",
+          "english": "you (m) answered"
+        },
+        {
+          "person": "enti",
+          "arabic": "أَجَبْتِ",
+          "transliteration": "ajabti",
+          "english": "you (f) answered"
+        },
+        {
+          "person": "howa",
+          "arabic": "أَجَابَ",
+          "transliteration": "ajaba",
+          "english": "he answered"
+        },
+        {
+          "person": "heya",
+          "arabic": "أَجَابَتْ",
+          "transliteration": "ajabat",
+          "english": "she answered"
+        },
+        {
+          "person": "ehna",
+          "arabic": "أَجَبْنَا",
+          "transliteration": "ajabna",
+          "english": "we answered"
+        },
+        {
+          "person": "entu",
+          "arabic": "أَجَبْتُمْ",
+          "transliteration": "ajabtum",
+          "english": "you (pl) answered"
+        },
+        {
+          "person": "homma",
+          "arabic": "أَجَابُوا",
+          "transliteration": "ajabu",
+          "english": "they answered"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا أَجَبْتُ",
+          "transliteration": "ma ajabtu",
+          "english": "I didn't answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا أَجَبْتَ",
+          "transliteration": "ma ajabta",
+          "english": "you (m) didn't answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا أَجَبْتِ",
+          "transliteration": "ma ajabti",
+          "english": "you (f) didn't answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا أَجَابَ",
+          "transliteration": "ma ajaba",
+          "english": "he didn't answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا أَجَابَتْ",
+          "transliteration": "ma ajabat",
+          "english": "she didn't answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا أَجَبْنَا",
+          "transliteration": "ma ajabna",
+          "english": "we didn't answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا أَجَبْتُمْ",
+          "transliteration": "ma ajabtum",
+          "english": "you (pl) didn't answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا أَجَابُوا",
+          "transliteration": "ma ajabu",
+          "english": "they didn't answer"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أُجِيبُ",
+          "transliteration": "ujibu",
+          "english": "I answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "تُجِيبُ",
+          "transliteration": "tujibu",
+          "english": "you (m) answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "تُجِيبِينَ",
+          "transliteration": "tujibina",
+          "english": "you (f) answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "يُجِيبُ",
+          "transliteration": "yujibu",
+          "english": "he answers"
+        },
+        {
+          "person": "heya",
+          "arabic": "تُجِيبُ",
+          "transliteration": "tujibu",
+          "english": "she answers"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نُجِيبُ",
+          "transliteration": "nujibu",
+          "english": "we answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "تُجِيبُونَ",
+          "transliteration": "tujibuna",
+          "english": "you (pl) answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "يُجِيبُونَ",
+          "transliteration": "yujibuna",
+          "english": "they answer"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أُجِيبُ",
+          "transliteration": "la ujibu",
+          "english": "I don't answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تُجِيبُ",
+          "transliteration": "la tujibu",
+          "english": "you (m) don't answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تُجِيبِينَ",
+          "transliteration": "la tujibina",
+          "english": "you (f) don't answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يُجِيبُ",
+          "transliteration": "la yujibu",
+          "english": "he doesn't answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تُجِيبُ",
+          "transliteration": "la tujibu",
+          "english": "she doesn't answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نُجِيبُ",
+          "transliteration": "la nujibu",
+          "english": "we don't answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تُجِيبُونَ",
+          "transliteration": "la tujibuna",
+          "english": "you (pl) don't answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يُجِيبُونَ",
+          "transliteration": "la yujibuna",
+          "english": "they don't answer"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأُجِيبُ",
+          "transliteration": "sa2ujibu",
+          "english": "I will answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتُجِيبُ",
+          "transliteration": "satujibu",
+          "english": "you (m) will answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتُجِيبِينَ",
+          "transliteration": "satujibina",
+          "english": "you (f) will answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيُجِيبُ",
+          "transliteration": "sayujibu",
+          "english": "he will answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتُجِيبُ",
+          "transliteration": "satujibu",
+          "english": "she will answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنُجِيبُ",
+          "transliteration": "sanujibu",
+          "english": "we will answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتُجِيبُونَ",
+          "transliteration": "satujibuna",
+          "english": "you (pl) will answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيُجِيبُونَ",
+          "transliteration": "sayujibuna",
+          "english": "they will answer"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أُجِيبَ",
+          "transliteration": "lan ujiba",
+          "english": "I won't answer"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تُجِيبَ",
+          "transliteration": "lan tujiba",
+          "english": "you (m) won't answer"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تُجِيبِي",
+          "transliteration": "lan tujibi",
+          "english": "you (f) won't answer"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يُجِيبَ",
+          "transliteration": "lan yujiba",
+          "english": "he won't answer"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تُجِيبَ",
+          "transliteration": "lan tujiba",
+          "english": "she won't answer"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نُجِيبَ",
+          "transliteration": "lan nujiba",
+          "english": "we won't answer"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تُجِيبُوا",
+          "transliteration": "lan tujibu",
+          "english": "you (pl) won't answer"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يُجِيبُوا",
+          "transliteration": "lan yujibu",
+          "english": "they won't answer"
+        }
+      ]
+    }
+  },
+  "form": "IV",
+  "source": "generated"
+}

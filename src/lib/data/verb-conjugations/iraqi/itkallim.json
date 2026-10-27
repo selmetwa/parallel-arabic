@@ -1,0 +1,320 @@
+{
+  "slug": "itkallim",
+  "arabic": "حكى",
+  "transliteration": "7acha",
+  "english": "to speak",
+  "wordId": null,
+  "rootLetters": "ح ك ي",
+  "verbClass": "defective",
+  "notes": "The root letter ك is pronounced as 'ch' in everyday Iraqi Arabic. It is a Form I defective verb.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حكيت",
+          "transliteration": "7achayt",
+          "english": "I spoke"
+        },
+        {
+          "person": "enta",
+          "arabic": "حكيت",
+          "transliteration": "7achayt",
+          "english": "you (m) spoke"
+        },
+        {
+          "person": "enti",
+          "arabic": "حكيتي",
+          "transliteration": "7achayti",
+          "english": "you (f) spoke"
+        },
+        {
+          "person": "howa",
+          "arabic": "حكى",
+          "transliteration": "7acha",
+          "english": "he spoke"
+        },
+        {
+          "person": "heya",
+          "arabic": "حكت",
+          "transliteration": "7achat",
+          "english": "she spoke"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حكينا",
+          "transliteration": "7achayna",
+          "english": "we spoke"
+        },
+        {
+          "person": "entu",
+          "arabic": "حكيتوا",
+          "transliteration": "7achaytu",
+          "english": "you (pl) spoke"
+        },
+        {
+          "person": "homma",
+          "arabic": "حكوا",
+          "transliteration": "7achaw",
+          "english": "they spoke"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حكيت",
+          "transliteration": "ma 7achayt",
+          "english": "I didn't speak"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حكيت",
+          "transliteration": "ma 7achayt",
+          "english": "you (m) didn't speak"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حكيتي",
+          "transliteration": "ma 7achayti",
+          "english": "you (f) didn't speak"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حكى",
+          "transliteration": "ma 7acha",
+          "english": "he didn't speak"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حكت",
+          "transliteration": "ma 7achat",
+          "english": "she didn't speak"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حكينا",
+          "transliteration": "ma 7achayna",
+          "english": "we didn't speak"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حكيتوا",
+          "transliteration": "ma 7achaytu",
+          "english": "you (pl) didn't speak"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حكوا",
+          "transliteration": "ma 7achaw",
+          "english": "they didn't speak"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "احكي",
+          "transliteration": "a7chi",
+          "english": "I speak"
+        },
+        {
+          "person": "enta",
+          "arabic": "تحكي",
+          "transliteration": "ti7chi",
+          "english": "you (m) speak"
+        },
+        {
+          "person": "enti",
+          "arabic": "تحكين",
+          "transliteration": "ti7cheen",
+          "english": "you (f) speak"
+        },
+        {
+          "person": "howa",
+          "arabic": "يحكي",
+          "transliteration": "yi7chi",
+          "english": "he speaks"
+        },
+        {
+          "person": "heya",
+          "arabic": "تحكي",
+          "transliteration": "ti7chi",
+          "english": "she speaks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نحكي",
+          "transliteration": "ni7chi",
+          "english": "we speak"
+        },
+        {
+          "person": "entu",
+          "arabic": "تحكون",
+          "transliteration": "ti7choon",
+          "english": "you (pl) speak"
+        },
+        {
+          "person": "homma",
+          "arabic": "يحكون",
+          "transliteration": "yi7choon",
+          "english": "they speak"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما احكي",
+          "transliteration": "ma a7chi",
+          "english": "I don't speak"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تحكي",
+          "transliteration": "ma ti7chi",
+          "english": "you (m) don't speak"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تحكين",
+          "transliteration": "ma ti7cheen",
+          "english": "you (f) don't speak"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يحكي",
+          "transliteration": "ma yi7chi",
+          "english": "he doesn't speak"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تحكي",
+          "transliteration": "ma ti7chi",
+          "english": "she doesn't speak"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نحكي",
+          "transliteration": "ma ni7chi",
+          "english": "we don't speak"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تحكون",
+          "transliteration": "ma ti7choon",
+          "english": "you (pl) don't speak"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يحكون",
+          "transliteration": "ma yi7choon",
+          "english": "they don't speak"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح احكي",
+          "transliteration": "raa7 a7chi",
+          "english": "I will speak"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تحكي",
+          "transliteration": "raa7 ti7chi",
+          "english": "you (m) will speak"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تحكين",
+          "transliteration": "raa7 ti7cheen",
+          "english": "you (f) will speak"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يحكي",
+          "transliteration": "raa7 yi7chi",
+          "english": "he will speak"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تحكي",
+          "transliteration": "raa7 ti7chi",
+          "english": "she will speak"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نحكي",
+          "transliteration": "raa7 ni7chi",
+          "english": "we will speak"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تحكون",
+          "transliteration": "raa7 ti7choon",
+          "english": "you (pl) will speak"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يحكون",
+          "transliteration": "raa7 yi7choon",
+          "english": "they will speak"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح احكي",
+          "transliteration": "ma raa7 a7chi",
+          "english": "I won't speak"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تحكي",
+          "transliteration": "ma raa7 ti7chi",
+          "english": "you (m) won't speak"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تحكين",
+          "transliteration": "ma raa7 ti7cheen",
+          "english": "you (f) won't speak"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يحكي",
+          "transliteration": "ma raa7 yi7chi",
+          "english": "he won't speak"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تحكي",
+          "transliteration": "ma raa7 ti7chi",
+          "english": "she won't speak"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نحكي",
+          "transliteration": "ma raa7 ni7chi",
+          "english": "we won't speak"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تحكون",
+          "transliteration": "ma raa7 ti7choon",
+          "english": "you (pl) won't speak"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يحكون",
+          "transliteration": "ma raa7 yi7choon",
+          "english": "they won't speak"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

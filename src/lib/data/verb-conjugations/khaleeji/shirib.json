@@ -1,0 +1,320 @@
+{
+  "slug": "shirib",
+  "arabic": "شرب",
+  "transliteration": "shirab",
+  "english": "to drink",
+  "wordId": null,
+  "rootLetters": "ش ر ب",
+  "verbClass": "sound",
+  "notes": "A standard Form I sound verb. Note the vowel elision in the past tense for 'she' (shirbat) and 'they' (shirbaw) where the unstressed middle vowel drops.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شربت",
+          "transliteration": "shirabt",
+          "english": "I drank"
+        },
+        {
+          "person": "enta",
+          "arabic": "شربت",
+          "transliteration": "shirabt",
+          "english": "you (m) drank"
+        },
+        {
+          "person": "enti",
+          "arabic": "شربتي",
+          "transliteration": "shirabti",
+          "english": "you (f) drank"
+        },
+        {
+          "person": "howa",
+          "arabic": "شرب",
+          "transliteration": "shirab",
+          "english": "he drank"
+        },
+        {
+          "person": "heya",
+          "arabic": "شربت",
+          "transliteration": "shirbat",
+          "english": "she drank"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شربنا",
+          "transliteration": "shirabna",
+          "english": "we drank"
+        },
+        {
+          "person": "entu",
+          "arabic": "شربتوا",
+          "transliteration": "shirabtaw",
+          "english": "you (pl) drank"
+        },
+        {
+          "person": "homma",
+          "arabic": "شربوا",
+          "transliteration": "shirbaw",
+          "english": "they drank"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما شربت",
+          "transliteration": "ma shirabt",
+          "english": "I didn't drink"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما شربت",
+          "transliteration": "ma shirabt",
+          "english": "you (m) didn't drink"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما شربتي",
+          "transliteration": "ma shirabti",
+          "english": "you (f) didn't drink"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما شرب",
+          "transliteration": "ma shirab",
+          "english": "he didn't drink"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما شربت",
+          "transliteration": "ma shirbat",
+          "english": "she didn't drink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما شربنا",
+          "transliteration": "ma shirabna",
+          "english": "we didn't drink"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما شربتوا",
+          "transliteration": "ma shirabtaw",
+          "english": "you (pl) didn't drink"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما شربوا",
+          "transliteration": "ma shirbaw",
+          "english": "they didn't drink"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اشرب",
+          "transliteration": "ashrab",
+          "english": "I drink"
+        },
+        {
+          "person": "enta",
+          "arabic": "تشرب",
+          "transliteration": "tishrab",
+          "english": "you (m) drink"
+        },
+        {
+          "person": "enti",
+          "arabic": "تشربين",
+          "transliteration": "tishrabeen",
+          "english": "you (f) drink"
+        },
+        {
+          "person": "howa",
+          "arabic": "يشرب",
+          "transliteration": "yishrab",
+          "english": "he drinks"
+        },
+        {
+          "person": "heya",
+          "arabic": "تشرب",
+          "transliteration": "tishrab",
+          "english": "she drinks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نشرب",
+          "transliteration": "nishrab",
+          "english": "we drink"
+        },
+        {
+          "person": "entu",
+          "arabic": "تشربون",
+          "transliteration": "tishraboon",
+          "english": "you (pl) drink"
+        },
+        {
+          "person": "homma",
+          "arabic": "يشربون",
+          "transliteration": "yishraboon",
+          "english": "they drink"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اشرب",
+          "transliteration": "ma ashrab",
+          "english": "I don't drink"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تشرب",
+          "transliteration": "ma tishrab",
+          "english": "you (m) don't drink"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تشربين",
+          "transliteration": "ma tishrabeen",
+          "english": "you (f) don't drink"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يشرب",
+          "transliteration": "ma yishrab",
+          "english": "he doesn't drink"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تشرب",
+          "transliteration": "ma tishrab",
+          "english": "she doesn't drink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نشرب",
+          "transliteration": "ma nishrab",
+          "english": "we don't drink"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تشربون",
+          "transliteration": "ma tishraboon",
+          "english": "you (pl) don't drink"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يشربون",
+          "transliteration": "ma yishraboon",
+          "english": "they don't drink"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اشرب",
+          "transliteration": "raa7 ashrab",
+          "english": "I will drink"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تشرب",
+          "transliteration": "raa7 tishrab",
+          "english": "you (m) will drink"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تشربين",
+          "transliteration": "raa7 tishrabeen",
+          "english": "you (f) will drink"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يشرب",
+          "transliteration": "raa7 yishrab",
+          "english": "he will drink"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تشرب",
+          "transliteration": "raa7 tishrab",
+          "english": "she will drink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نشرب",
+          "transliteration": "raa7 nishrab",
+          "english": "we will drink"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تشربون",
+          "transliteration": "raa7 tishraboon",
+          "english": "you (pl) will drink"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يشربون",
+          "transliteration": "raa7 yishraboon",
+          "english": "they will drink"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اشرب",
+          "transliteration": "ma raa7 ashrab",
+          "english": "I won't drink"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تشرب",
+          "transliteration": "ma raa7 tishrab",
+          "english": "you (m) won't drink"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تشربين",
+          "transliteration": "ma raa7 tishrabeen",
+          "english": "you (f) won't drink"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يشرب",
+          "transliteration": "ma raa7 yishrab",
+          "english": "he won't drink"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تشرب",
+          "transliteration": "ma raa7 tishrab",
+          "english": "she won't drink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نشرب",
+          "transliteration": "ma raa7 nishrab",
+          "english": "we won't drink"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تشربون",
+          "transliteration": "ma raa7 tishraboon",
+          "english": "you (pl) won't drink"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يشربون",
+          "transliteration": "ma raa7 yishraboon",
+          "english": "they won't drink"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

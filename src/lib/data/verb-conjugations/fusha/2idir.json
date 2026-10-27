@@ -1,0 +1,320 @@
+{
+  "slug": "2idir",
+  "arabic": "اِسْتَطَاعَ",
+  "transliteration": "istata3a",
+  "english": "to be able to",
+  "wordId": null,
+  "rootLetters": "ط و ع",
+  "verbClass": "hollow",
+  "notes": "This is a Form X hollow verb; the long vowel disappears in the past tense when the suffix starts with a consonant (e.g., istata3tu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اِسْتَطَعْتُ",
+          "transliteration": "istata3tu",
+          "english": "I could"
+        },
+        {
+          "person": "enta",
+          "arabic": "اِسْتَطَعْتَ",
+          "transliteration": "istata3ta",
+          "english": "you (m) could"
+        },
+        {
+          "person": "enti",
+          "arabic": "اِسْتَطَعْتِ",
+          "transliteration": "istata3ti",
+          "english": "you (f) could"
+        },
+        {
+          "person": "howa",
+          "arabic": "اِسْتَطَاعَ",
+          "transliteration": "istata3a",
+          "english": "he could"
+        },
+        {
+          "person": "heya",
+          "arabic": "اِسْتَطَاعَتْ",
+          "transliteration": "istata3at",
+          "english": "she could"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اِسْتَطَعْنَا",
+          "transliteration": "istata3na",
+          "english": "we could"
+        },
+        {
+          "person": "entu",
+          "arabic": "اِسْتَطَعْتُمْ",
+          "transliteration": "istata3tum",
+          "english": "you (pl) could"
+        },
+        {
+          "person": "homma",
+          "arabic": "اِسْتَطَاعُوا",
+          "transliteration": "istata3u",
+          "english": "they could"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا اِسْتَطَعْتُ",
+          "transliteration": "ma istata3tu",
+          "english": "I didn't can"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا اِسْتَطَعْتَ",
+          "transliteration": "ma istata3ta",
+          "english": "you (m) didn't can"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا اِسْتَطَعْتِ",
+          "transliteration": "ma istata3ti",
+          "english": "you (f) didn't can"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا اِسْتَطَاعَ",
+          "transliteration": "ma istata3a",
+          "english": "he didn't can"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا اِسْتَطَاعَتْ",
+          "transliteration": "ma istata3at",
+          "english": "she didn't can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا اِسْتَطَعْنَا",
+          "transliteration": "ma istata3na",
+          "english": "we didn't can"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا اِسْتَطَعْتُمْ",
+          "transliteration": "ma istata3tum",
+          "english": "you (pl) didn't can"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا اِسْتَطَاعُوا",
+          "transliteration": "ma istata3u",
+          "english": "they didn't can"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَسْتَطِيعُ",
+          "transliteration": "astati3u",
+          "english": "I can"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَسْتَطِيعُ",
+          "transliteration": "tastati3u",
+          "english": "you (m) can"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَسْتَطِيعِينَ",
+          "transliteration": "tastati3ina",
+          "english": "you (f) can"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَسْتَطِيعُ",
+          "transliteration": "yastati3u",
+          "english": "he can"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَسْتَطِيعُ",
+          "transliteration": "tastati3u",
+          "english": "she can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَسْتَطِيعُ",
+          "transliteration": "nastati3u",
+          "english": "we can"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَسْتَطِيعُونَ",
+          "transliteration": "tastati3una",
+          "english": "you (pl) can"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَسْتَطِيعُونَ",
+          "transliteration": "yastati3una",
+          "english": "they can"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَسْتَطِيعُ",
+          "transliteration": "la astati3u",
+          "english": "I don't can"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَسْتَطِيعُ",
+          "transliteration": "la tastati3u",
+          "english": "you (m) don't can"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَسْتَطِيعِينَ",
+          "transliteration": "la tastati3ina",
+          "english": "you (f) don't can"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَسْتَطِيعُ",
+          "transliteration": "la yastati3u",
+          "english": "he doesn't can"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَسْتَطِيعُ",
+          "transliteration": "la tastati3u",
+          "english": "she doesn't can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَسْتَطِيعُ",
+          "transliteration": "la nastati3u",
+          "english": "we don't can"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَسْتَطِيعُونَ",
+          "transliteration": "la tastati3una",
+          "english": "you (pl) don't can"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَسْتَطِيعُونَ",
+          "transliteration": "la yastati3una",
+          "english": "they don't can"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَسْتَطِيعُ",
+          "transliteration": "sa2astati3u",
+          "english": "I will can"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَسْتَطِيعُ",
+          "transliteration": "satastati3u",
+          "english": "you (m) will can"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَسْتَطِيعِينَ",
+          "transliteration": "satastati3ina",
+          "english": "you (f) will can"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَسْتَطِيعُ",
+          "transliteration": "sayastati3u",
+          "english": "he will can"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَسْتَطِيعُ",
+          "transliteration": "satastati3u",
+          "english": "she will can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَسْتَطِيعُ",
+          "transliteration": "sanastati3u",
+          "english": "we will can"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَسْتَطِيعُونَ",
+          "transliteration": "satastati3una",
+          "english": "you (pl) will can"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَسْتَطِيعُونَ",
+          "transliteration": "sayastati3una",
+          "english": "they will can"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَسْتَطِيعَ",
+          "transliteration": "lan astati3a",
+          "english": "I won't can"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَسْتَطِيعَ",
+          "transliteration": "lan tastati3a",
+          "english": "you (m) won't can"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَسْتَطِيعِي",
+          "transliteration": "lan tastati3i",
+          "english": "you (f) won't can"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَسْتَطِيعَ",
+          "transliteration": "lan yastati3a",
+          "english": "he won't can"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَسْتَطِيعَ",
+          "transliteration": "lan tastati3a",
+          "english": "she won't can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَسْتَطِيعَ",
+          "transliteration": "lan nastati3a",
+          "english": "we won't can"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَسْتَطِيعُوا",
+          "transliteration": "lan tastati3u",
+          "english": "you (pl) won't can"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَسْتَطِيعُوا",
+          "transliteration": "lan yastati3u",
+          "english": "they won't can"
+        }
+      ]
+    }
+  },
+  "form": "X",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "rigi3",
+  "arabic": "رَجَعَ",
+  "transliteration": "raja3a",
+  "english": "to return",
+  "wordId": null,
+  "rootLetters": "ر ج ع",
+  "verbClass": "sound",
+  "notes": "Form I sound verb; the middle root letter takes a kasra (i) in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رَجَعْتُ",
+          "transliteration": "raja3tu",
+          "english": "I returned"
+        },
+        {
+          "person": "enta",
+          "arabic": "رَجَعْتَ",
+          "transliteration": "raja3ta",
+          "english": "you (m) returned"
+        },
+        {
+          "person": "enti",
+          "arabic": "رَجَعْتِ",
+          "transliteration": "raja3ti",
+          "english": "you (f) returned"
+        },
+        {
+          "person": "howa",
+          "arabic": "رَجَعَ",
+          "transliteration": "raja3a",
+          "english": "he returned"
+        },
+        {
+          "person": "heya",
+          "arabic": "رَجَعَتْ",
+          "transliteration": "raja3at",
+          "english": "she returned"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رَجَعْنَا",
+          "transliteration": "raja3na",
+          "english": "we returned"
+        },
+        {
+          "person": "entu",
+          "arabic": "رَجَعْتُمْ",
+          "transliteration": "raja3tum",
+          "english": "you (pl) returned"
+        },
+        {
+          "person": "homma",
+          "arabic": "رَجَعُوا",
+          "transliteration": "raja3u",
+          "english": "they returned"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا رَجَعْتُ",
+          "transliteration": "ma raja3tu",
+          "english": "I didn't return"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا رَجَعْتَ",
+          "transliteration": "ma raja3ta",
+          "english": "you (m) didn't return"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا رَجَعْتِ",
+          "transliteration": "ma raja3ti",
+          "english": "you (f) didn't return"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا رَجَعَ",
+          "transliteration": "ma raja3a",
+          "english": "he didn't return"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا رَجَعَتْ",
+          "transliteration": "ma raja3at",
+          "english": "she didn't return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا رَجَعْنَا",
+          "transliteration": "ma raja3na",
+          "english": "we didn't return"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا رَجَعْتُمْ",
+          "transliteration": "ma raja3tum",
+          "english": "you (pl) didn't return"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا رَجَعُوا",
+          "transliteration": "ma raja3u",
+          "english": "they didn't return"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَرْجِعُ",
+          "transliteration": "arji3u",
+          "english": "I return"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَرْجِعُ",
+          "transliteration": "tarji3u",
+          "english": "you (m) return"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَرْجِعِينَ",
+          "transliteration": "tarji3ina",
+          "english": "you (f) return"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَرْجِعُ",
+          "transliteration": "yarji3u",
+          "english": "he returns"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَرْجِعُ",
+          "transliteration": "tarji3u",
+          "english": "she returns"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَرْجِعُ",
+          "transliteration": "narji3u",
+          "english": "we return"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَرْجِعُونَ",
+          "transliteration": "tarji3una",
+          "english": "you (pl) return"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَرْجِعُونَ",
+          "transliteration": "yarji3una",
+          "english": "they return"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَرْجِعُ",
+          "transliteration": "la arji3u",
+          "english": "I don't return"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَرْجِعُ",
+          "transliteration": "la tarji3u",
+          "english": "you (m) don't return"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَرْجِعِينَ",
+          "transliteration": "la tarji3ina",
+          "english": "you (f) don't return"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَرْجِعُ",
+          "transliteration": "la yarji3u",
+          "english": "he doesn't return"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَرْجِعُ",
+          "transliteration": "la tarji3u",
+          "english": "she doesn't return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَرْجِعُ",
+          "transliteration": "la narji3u",
+          "english": "we don't return"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَرْجِعُونَ",
+          "transliteration": "la tarji3una",
+          "english": "you (pl) don't return"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَرْجِعُونَ",
+          "transliteration": "la yarji3una",
+          "english": "they don't return"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَرْجِعُ",
+          "transliteration": "sa2arji3u",
+          "english": "I will return"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَرْجِعُ",
+          "transliteration": "satarji3u",
+          "english": "you (m) will return"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَرْجِعِينَ",
+          "transliteration": "satarji3ina",
+          "english": "you (f) will return"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَرْجِعُ",
+          "transliteration": "sayarji3u",
+          "english": "he will return"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَرْجِعُ",
+          "transliteration": "satarji3u",
+          "english": "she will return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَرْجِعُ",
+          "transliteration": "sanarji3u",
+          "english": "we will return"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَرْجِعُونَ",
+          "transliteration": "satarji3una",
+          "english": "you (pl) will return"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَرْجِعُونَ",
+          "transliteration": "sayarji3una",
+          "english": "they will return"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَرْجِعَ",
+          "transliteration": "lan arji3a",
+          "english": "I won't return"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَرْجِعَ",
+          "transliteration": "lan tarji3a",
+          "english": "you (m) won't return"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَرْجِعِي",
+          "transliteration": "lan tarji3i",
+          "english": "you (f) won't return"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَرْجِعَ",
+          "transliteration": "lan yarji3a",
+          "english": "he won't return"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَرْجِعَ",
+          "transliteration": "lan tarji3a",
+          "english": "she won't return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَرْجِعَ",
+          "transliteration": "lan narji3a",
+          "english": "we won't return"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَرْجِعُوا",
+          "transliteration": "lan tarji3u",
+          "english": "you (pl) won't return"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَرْجِعُوا",
+          "transliteration": "lan yarji3u",
+          "english": "they won't return"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -48,7 +48,10 @@
 		);
 	}
 
-	let selectedDialect = $state(session.dialect || getDefaultDialect(data.user));
+	// Sentences in progress keep their dialect; otherwise start from the learner's.
+	let selectedDialect = $state(
+		(session.sentences.length > 0 && session.dialect) || getDefaultDialect(data.user)
+	);
 
 	let sentence = $derived(session.sentences[session.index]);
 	$effect(() => {
@@ -395,6 +398,12 @@
 		{ label: 'Possessive Suffixes', value: 'possessive suffixes', emoji: '🫱' }
 	];
 
+	// Only the learner's dialect shows until they ask for the others.
+	let showAllDialects = $state(false);
+	let visibleDialects = $derived(
+		showAllDialects ? dialectOptions : dialectOptions.filter((d) => d.value === selectedDialect)
+	);
+
 	// Cool → hot, so the level picker reads as a heat ramp at a glance.
 	const difficultyOptions = [
 		{ value: 'a1', label: 'A1', sublabel: 'Beginner', accent: '#22c55e' },
@@ -517,10 +526,13 @@
 				<section class="block">
 					{@render stepHead('1', 'Select Dialect', 'Pick one')}
 					<div class="grid gap-2.5 sm:grid-cols-2">
-						{#each dialectOptions as d (d.value)}
+						{#each visibleDialects as d (d.value)}
 							<button
 								type="button"
-								onclick={() => (selectedDialect = d.value)}
+								onclick={() => {
+								selectedDialect = d.value;
+								showAllDialects = false;
+							}}
 								aria-pressed={selectedDialect === d.value}
 								class="pick {selectedDialect === d.value ? 'is-on' : ''}"
 								style="--accent:{d.accent}; --deep:{d.deep};"
@@ -545,6 +557,16 @@
 							</button>
 						{/each}
 					</div>
+					{#if dialectOptions.length > 1}
+						<button
+							type="button"
+							onclick={() => (showAllDialects = !showAllDialects)}
+							aria-expanded={showAllDialects}
+							class="mt-2 text-xs font-semibold text-text-200 underline underline-offset-2 hover:text-text-300"
+						>
+							{showAllDialects ? 'Show only my dialect' : 'Practise a different dialect'}
+						</button>
+					{/if}
 				</section>
 
 				<!-- Level -->

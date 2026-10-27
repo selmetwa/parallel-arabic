@@ -1,0 +1,320 @@
+{
+  "slug": "daa2",
+  "arabic": "ذَاقَ",
+  "transliteration": "dhaqa",
+  "english": "to taste",
+  "wordId": null,
+  "rootLetters": "ذ و ق",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a waw root, so the middle radical becomes a damma in the first and second person past tense (dhuqtu) and a waw in the present (yadhuqu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ذُقْتُ",
+          "transliteration": "dhuqtu",
+          "english": "I tasted"
+        },
+        {
+          "person": "enta",
+          "arabic": "ذُقْتَ",
+          "transliteration": "dhuqta",
+          "english": "you (m) tasted"
+        },
+        {
+          "person": "enti",
+          "arabic": "ذُقْتِ",
+          "transliteration": "dhuqti",
+          "english": "you (f) tasted"
+        },
+        {
+          "person": "howa",
+          "arabic": "ذَاقَ",
+          "transliteration": "dhaqa",
+          "english": "he tasted"
+        },
+        {
+          "person": "heya",
+          "arabic": "ذَاقَتْ",
+          "transliteration": "dhaqat",
+          "english": "she tasted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ذُقْنَا",
+          "transliteration": "dhuqna",
+          "english": "we tasted"
+        },
+        {
+          "person": "entu",
+          "arabic": "ذُقْتُمْ",
+          "transliteration": "dhuqtum",
+          "english": "you (pl) tasted"
+        },
+        {
+          "person": "homma",
+          "arabic": "ذَاقُوا",
+          "transliteration": "dhaqu",
+          "english": "they tasted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا ذُقْتُ",
+          "transliteration": "ma dhuqtu",
+          "english": "I didn't taste"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا ذُقْتَ",
+          "transliteration": "ma dhuqta",
+          "english": "you (m) didn't taste"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا ذُقْتِ",
+          "transliteration": "ma dhuqti",
+          "english": "you (f) didn't taste"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا ذَاقَ",
+          "transliteration": "ma dhaqa",
+          "english": "he didn't taste"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا ذَاقَتْ",
+          "transliteration": "ma dhaqat",
+          "english": "she didn't taste"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا ذُقْنَا",
+          "transliteration": "ma dhuqna",
+          "english": "we didn't taste"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا ذُقْتُمْ",
+          "transliteration": "ma dhuqtum",
+          "english": "you (pl) didn't taste"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا ذَاقُوا",
+          "transliteration": "ma dhaqu",
+          "english": "they didn't taste"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَذُوقُ",
+          "transliteration": "adhuqu",
+          "english": "I taste"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَذُوقُ",
+          "transliteration": "tadhuqu",
+          "english": "you (m) taste"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَذُوقِينَ",
+          "transliteration": "tadhuqina",
+          "english": "you (f) taste"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَذُوقُ",
+          "transliteration": "yadhuqu",
+          "english": "he tastes"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَذُوقُ",
+          "transliteration": "tadhuqu",
+          "english": "she tastes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَذُوقُ",
+          "transliteration": "nadhuqu",
+          "english": "we taste"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَذُوقُونَ",
+          "transliteration": "tadhuquna",
+          "english": "you (pl) taste"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَذُوقُونَ",
+          "transliteration": "yadhuquna",
+          "english": "they taste"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَذُوقُ",
+          "transliteration": "la adhuqu",
+          "english": "I don't taste"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَذُوقُ",
+          "transliteration": "la tadhuqu",
+          "english": "you (m) don't taste"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَذُوقِينَ",
+          "transliteration": "la tadhuqina",
+          "english": "you (f) don't taste"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَذُوقُ",
+          "transliteration": "la yadhuqu",
+          "english": "he doesn't taste"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَذُوقُ",
+          "transliteration": "la tadhuqu",
+          "english": "she doesn't taste"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَذُوقُ",
+          "transliteration": "la nadhuqu",
+          "english": "we don't taste"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَذُوقُونَ",
+          "transliteration": "la tadhuquna",
+          "english": "you (pl) don't taste"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَذُوقُونَ",
+          "transliteration": "la yadhuquna",
+          "english": "they don't taste"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَذُوقُ",
+          "transliteration": "sa2adhuqu",
+          "english": "I will taste"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَذُوقُ",
+          "transliteration": "satadhuqu",
+          "english": "you (m) will taste"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَذُوقِينَ",
+          "transliteration": "satadhuqina",
+          "english": "you (f) will taste"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَذُوقُ",
+          "transliteration": "sayadhuqu",
+          "english": "he will taste"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَذُوقُ",
+          "transliteration": "satadhuqu",
+          "english": "she will taste"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَذُوقُ",
+          "transliteration": "sanadhuqu",
+          "english": "we will taste"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَذُوقُونَ",
+          "transliteration": "satadhuquna",
+          "english": "you (pl) will taste"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَذُوقُونَ",
+          "transliteration": "sayadhuquna",
+          "english": "they will taste"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَذُوقَ",
+          "transliteration": "lan adhuqa",
+          "english": "I won't taste"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَذُوقَ",
+          "transliteration": "lan tadhuqa",
+          "english": "you (m) won't taste"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَذُوقِي",
+          "transliteration": "lan tadhuqi",
+          "english": "you (f) won't taste"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَذُوقَ",
+          "transliteration": "lan yadhuqa",
+          "english": "he won't taste"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَذُوقَ",
+          "transliteration": "lan tadhuqa",
+          "english": "she won't taste"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَذُوقَ",
+          "transliteration": "lan nadhuqa",
+          "english": "we won't taste"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَذُوقُوا",
+          "transliteration": "lan tadhuqu",
+          "english": "you (pl) won't taste"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَذُوقُوا",
+          "transliteration": "lan yadhuqu",
+          "english": "they won't taste"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

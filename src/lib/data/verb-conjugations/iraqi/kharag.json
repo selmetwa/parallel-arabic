@@ -1,0 +1,320 @@
+{
+  "slug": "kharag",
+  "arabic": "طلع",
+  "transliteration": "tila3",
+  "english": "to go out",
+  "wordId": null,
+  "rootLetters": "ط ل ع",
+  "verbClass": "sound",
+  "notes": "A standard Form I sound verb. Notice how the middle vowel drops in the 'heya' and 'homma' past tense forms (til3at, til3aw) to maintain the rhythm of the dialect.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "طلعت",
+          "transliteration": "tila3it",
+          "english": "I went out"
+        },
+        {
+          "person": "enta",
+          "arabic": "طلعت",
+          "transliteration": "tila3it",
+          "english": "you (m) went out"
+        },
+        {
+          "person": "enti",
+          "arabic": "طلعتي",
+          "transliteration": "tila3ti",
+          "english": "you (f) went out"
+        },
+        {
+          "person": "howa",
+          "arabic": "طلع",
+          "transliteration": "tila3",
+          "english": "he went out"
+        },
+        {
+          "person": "heya",
+          "arabic": "طلعت",
+          "transliteration": "til3at",
+          "english": "she went out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "طلعنا",
+          "transliteration": "tila3na",
+          "english": "we went out"
+        },
+        {
+          "person": "entu",
+          "arabic": "طلعتوا",
+          "transliteration": "tila3tu",
+          "english": "you (pl) went out"
+        },
+        {
+          "person": "homma",
+          "arabic": "طلعوا",
+          "transliteration": "til3aw",
+          "english": "they went out"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما طلعت",
+          "transliteration": "ma tila3it",
+          "english": "I didn't go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما طلعت",
+          "transliteration": "ma tila3it",
+          "english": "you (m) didn't go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما طلعتي",
+          "transliteration": "ma tila3ti",
+          "english": "you (f) didn't go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما طلع",
+          "transliteration": "ma tila3",
+          "english": "he didn't go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما طلعت",
+          "transliteration": "ma til3at",
+          "english": "she didn't go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما طلعنا",
+          "transliteration": "ma tila3na",
+          "english": "we didn't go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما طلعتوا",
+          "transliteration": "ma tila3tu",
+          "english": "you (pl) didn't go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما طلعوا",
+          "transliteration": "ma til3aw",
+          "english": "they didn't go out"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اطلع",
+          "transliteration": "atla3",
+          "english": "I go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "تطلع",
+          "transliteration": "titla3",
+          "english": "you (m) go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "تطلعين",
+          "transliteration": "titla3een",
+          "english": "you (f) go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "يطلع",
+          "transliteration": "yitla3",
+          "english": "he goes out"
+        },
+        {
+          "person": "heya",
+          "arabic": "تطلع",
+          "transliteration": "titla3",
+          "english": "she goes out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نطلع",
+          "transliteration": "nitla3",
+          "english": "we go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "تطلعون",
+          "transliteration": "titla3oon",
+          "english": "you (pl) go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "يطلعون",
+          "transliteration": "yitla3oon",
+          "english": "they go out"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اطلع",
+          "transliteration": "ma atla3",
+          "english": "I don't go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تطلع",
+          "transliteration": "ma titla3",
+          "english": "you (m) don't go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تطلعين",
+          "transliteration": "ma titla3een",
+          "english": "you (f) don't go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يطلع",
+          "transliteration": "ma yitla3",
+          "english": "he doesn't go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تطلع",
+          "transliteration": "ma titla3",
+          "english": "she doesn't go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نطلع",
+          "transliteration": "ma nitla3",
+          "english": "we don't go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تطلعون",
+          "transliteration": "ma titla3oon",
+          "english": "you (pl) don't go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يطلعون",
+          "transliteration": "ma yitla3oon",
+          "english": "they don't go out"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اطلع",
+          "transliteration": "raa7 atla3",
+          "english": "I will go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تطلع",
+          "transliteration": "raa7 titla3",
+          "english": "you (m) will go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تطلعين",
+          "transliteration": "raa7 titla3een",
+          "english": "you (f) will go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يطلع",
+          "transliteration": "raa7 yitla3",
+          "english": "he will go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تطلع",
+          "transliteration": "raa7 titla3",
+          "english": "she will go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نطلع",
+          "transliteration": "raa7 nitla3",
+          "english": "we will go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تطلعون",
+          "transliteration": "raa7 titla3oon",
+          "english": "you (pl) will go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يطلعون",
+          "transliteration": "raa7 yitla3oon",
+          "english": "they will go out"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اطلع",
+          "transliteration": "ma raa7 atla3",
+          "english": "I won't go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تطلع",
+          "transliteration": "ma raa7 titla3",
+          "english": "you (m) won't go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تطلعين",
+          "transliteration": "ma raa7 titla3een",
+          "english": "you (f) won't go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يطلع",
+          "transliteration": "ma raa7 yitla3",
+          "english": "he won't go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تطلع",
+          "transliteration": "ma raa7 titla3",
+          "english": "she won't go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نطلع",
+          "transliteration": "ma raa7 nitla3",
+          "english": "we won't go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تطلعون",
+          "transliteration": "ma raa7 titla3oon",
+          "english": "you (pl) won't go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يطلعون",
+          "transliteration": "ma raa7 yitla3oon",
+          "english": "they won't go out"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

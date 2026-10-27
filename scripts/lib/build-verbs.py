@@ -175,10 +175,18 @@ def main():
         (out_dir / f"{slug}.json").write_text(json.dumps(entry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         index.append({k: entry[k] for k in ("slug", "arabic", "transliteration", "english", "wordId", "rootLetters", "verbClass")})
         done.add(slug)
-    expected = {p.stem for p in (DIR / "levantine").glob("*.json") if p.stem != "index"}
+    # The generated second batch (generate-more.ts) isn't in the .txt sources.
+    expected = {
+        p.stem for p in (DIR / "levantine").glob("*.json")
+        if p.stem != "index" and json.loads(p.read_text(encoding="utf-8")).get("source") != "generated"
+    }
     missing = expected - done
     if missing:
         sys.exit(f"{dialect}: missing verbs: {sorted(missing)}")
+    for p in out_dir.glob("*.json"):
+        if p.stem != "index" and p.stem not in done:
+            v = json.loads(p.read_text(encoding="utf-8"))
+            index.append({k: v.get(k) for k in ("slug", "arabic", "transliteration", "english", "wordId", "rootLetters", "verbClass")})
     index.sort(key=lambda v: v["english"])
     (out_dir / "index.json").write_text(
         json.dumps({"dialect": dialect, "generatedAt": datetime.now(timezone.utc).isoformat(), "verbs": index}, ensure_ascii=False, indent=2) + "\n",

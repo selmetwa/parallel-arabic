@@ -1,0 +1,320 @@
+{
+  "slug": "bana",
+  "arabic": "بنى",
+  "transliteration": "bna",
+  "english": "to build",
+  "wordId": null,
+  "rootLetters": "ب ن ي",
+  "verbClass": "defective",
+  "notes": "Defective verb: bnit in the past, nbni in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بنيت",
+          "transliteration": "bnit",
+          "english": "I built"
+        },
+        {
+          "person": "enta",
+          "arabic": "بنيتي",
+          "transliteration": "bniti",
+          "english": "you (m) built"
+        },
+        {
+          "person": "enti",
+          "arabic": "بنيتي",
+          "transliteration": "bniti",
+          "english": "you (f) built"
+        },
+        {
+          "person": "howa",
+          "arabic": "بنى",
+          "transliteration": "bna",
+          "english": "he built"
+        },
+        {
+          "person": "heya",
+          "arabic": "بنات",
+          "transliteration": "bnat",
+          "english": "she built"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنينا",
+          "transliteration": "bnina",
+          "english": "we built"
+        },
+        {
+          "person": "entu",
+          "arabic": "بنيتيو",
+          "transliteration": "bnitiw",
+          "english": "you (pl) built"
+        },
+        {
+          "person": "homma",
+          "arabic": "بناو",
+          "transliteration": "bnaw",
+          "english": "they built"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بنيتش",
+          "transliteration": "ma bnitsh",
+          "english": "I didn't build"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بنيتيش",
+          "transliteration": "ma bnitish",
+          "english": "you (m) didn't build"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بنيتيش",
+          "transliteration": "ma bnitish",
+          "english": "you (f) didn't build"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بناش",
+          "transliteration": "ma bnash",
+          "english": "he didn't build"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بناتش",
+          "transliteration": "ma bnatsh",
+          "english": "she didn't build"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنيناش",
+          "transliteration": "ma bninash",
+          "english": "we didn't build"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بنيتيوش",
+          "transliteration": "ma bnitiwsh",
+          "english": "you (pl) didn't build"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بناوش",
+          "transliteration": "ma bnawsh",
+          "english": "they didn't build"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنبني",
+          "transliteration": "kanbni",
+          "english": "I build"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتبني",
+          "transliteration": "katbni",
+          "english": "you (m) build"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتبني",
+          "transliteration": "katbni",
+          "english": "you (f) build"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيبني",
+          "transliteration": "kaybni",
+          "english": "he builds"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتبني",
+          "transliteration": "katbni",
+          "english": "she builds"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنبنيو",
+          "transliteration": "kanbniw",
+          "english": "we build"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتبنيو",
+          "transliteration": "katbniw",
+          "english": "you (pl) build"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيبنيو",
+          "transliteration": "kaybniw",
+          "english": "they build"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنبنيش",
+          "transliteration": "ma kanbnish",
+          "english": "I don't build"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتبنيش",
+          "transliteration": "ma katbnish",
+          "english": "you (m) don't build"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتبنيش",
+          "transliteration": "ma katbnish",
+          "english": "you (f) don't build"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيبنيش",
+          "transliteration": "ma kaybnish",
+          "english": "he doesn't build"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتبنيش",
+          "transliteration": "ma katbnish",
+          "english": "she doesn't build"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنبنيوش",
+          "transliteration": "ma kanbniwsh",
+          "english": "we don't build"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتبنيوش",
+          "transliteration": "ma katbniwsh",
+          "english": "you (pl) don't build"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيبنيوش",
+          "transliteration": "ma kaybniwsh",
+          "english": "they don't build"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نبني",
+          "transliteration": "ghadi nbni",
+          "english": "I will build"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تبني",
+          "transliteration": "ghadi tbni",
+          "english": "you (m) will build"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تبني",
+          "transliteration": "ghadi tbni",
+          "english": "you (f) will build"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يبني",
+          "transliteration": "ghadi ybni",
+          "english": "he will build"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تبني",
+          "transliteration": "ghadi tbni",
+          "english": "she will build"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نبنيو",
+          "transliteration": "ghadi nbniw",
+          "english": "we will build"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تبنيو",
+          "transliteration": "ghadi tbniw",
+          "english": "you (pl) will build"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يبنيو",
+          "transliteration": "ghadi ybniw",
+          "english": "they will build"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نبني",
+          "transliteration": "ma ghadish nbni",
+          "english": "I won't build"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تبني",
+          "transliteration": "ma ghadish tbni",
+          "english": "you (m) won't build"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تبني",
+          "transliteration": "ma ghadish tbni",
+          "english": "you (f) won't build"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يبني",
+          "transliteration": "ma ghadish ybni",
+          "english": "he won't build"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تبني",
+          "transliteration": "ma ghadish tbni",
+          "english": "she won't build"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نبنيو",
+          "transliteration": "ma ghadish nbniw",
+          "english": "we won't build"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تبنيو",
+          "transliteration": "ma ghadish tbniw",
+          "english": "you (pl) won't build"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يبنيو",
+          "transliteration": "ma ghadish ybniw",
+          "english": "they won't build"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

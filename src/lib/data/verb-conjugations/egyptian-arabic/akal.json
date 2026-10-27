@@ -1,0 +1,320 @@
+{
+  "slug": "akal",
+  "arabic": "أكل",
+  "transliteration": "akal",
+  "english": "to eat",
+  "wordId": null,
+  "rootLetters": "ء ك ل",
+  "verbClass": "irregular",
+  "notes": "The initial hamza is dropped in the past tense (kal) and lengthens the prefix vowel in the present and future tenses (baakul, haakul).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كلت",
+          "transliteration": "kalt",
+          "english": "I ate"
+        },
+        {
+          "person": "enta",
+          "arabic": "كلت",
+          "transliteration": "kalt",
+          "english": "you (m) ate"
+        },
+        {
+          "person": "enti",
+          "arabic": "كلتي",
+          "transliteration": "kalti",
+          "english": "you (f) ate"
+        },
+        {
+          "person": "howa",
+          "arabic": "كل",
+          "transliteration": "kal",
+          "english": "he ate"
+        },
+        {
+          "person": "heya",
+          "arabic": "كلت",
+          "transliteration": "kalit",
+          "english": "she ate"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كلنا",
+          "transliteration": "kalna",
+          "english": "we ate"
+        },
+        {
+          "person": "entu",
+          "arabic": "كلتوا",
+          "transliteration": "kaltu",
+          "english": "you (pl) ate"
+        },
+        {
+          "person": "homma",
+          "arabic": "كلوا",
+          "transliteration": "kalu",
+          "english": "they ate"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كلتش",
+          "transliteration": "ma kaltish",
+          "english": "I didn't eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كلتش",
+          "transliteration": "ma kaltish",
+          "english": "you (m) didn't eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كلتيش",
+          "transliteration": "ma kaltiish",
+          "english": "you (f) didn't eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كلش",
+          "transliteration": "ma kalsh",
+          "english": "he didn't eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كلتش",
+          "transliteration": "ma kalitsh",
+          "english": "she didn't eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كلناش",
+          "transliteration": "ma kalnaash",
+          "english": "we didn't eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كلتوش",
+          "transliteration": "ma kaltuush",
+          "english": "you (pl) didn't eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كلوش",
+          "transliteration": "ma kaluush",
+          "english": "they didn't eat"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باكل",
+          "transliteration": "baakul",
+          "english": "I eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتاكل",
+          "transliteration": "bitaakul",
+          "english": "you (m) eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتاكلي",
+          "transliteration": "bitaakli",
+          "english": "you (f) eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "بياكل",
+          "transliteration": "biyaakul",
+          "english": "he eats"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتاكل",
+          "transliteration": "bitaakul",
+          "english": "she eats"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بناكل",
+          "transliteration": "binaakul",
+          "english": "we eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتاكلوا",
+          "transliteration": "bitaaklu",
+          "english": "you (pl) eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "بياكلوا",
+          "transliteration": "biyaaklu",
+          "english": "they eat"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماباكلش",
+          "transliteration": "mabaakulsh",
+          "english": "I don't eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتاكلش",
+          "transliteration": "mabitaakulsh",
+          "english": "you (m) don't eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتاكليش",
+          "transliteration": "mabitaakliish",
+          "english": "you (f) don't eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابياكلش",
+          "transliteration": "mabiyaakulsh",
+          "english": "he doesn't eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتاكلش",
+          "transliteration": "mabitaakulsh",
+          "english": "she doesn't eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابناكلش",
+          "transliteration": "mabinaakulsh",
+          "english": "we don't eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتاكلوش",
+          "transliteration": "mabitaakluush",
+          "english": "you (pl) don't eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابياكلوش",
+          "transliteration": "mabiyaakluush",
+          "english": "they don't eat"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاكل",
+          "transliteration": "haakul",
+          "english": "I will eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتاكل",
+          "transliteration": "hataakul",
+          "english": "you (m) will eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتاكلي",
+          "transliteration": "hataakli",
+          "english": "you (f) will eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "هياكل",
+          "transliteration": "hayaakul",
+          "english": "he will eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتاكل",
+          "transliteration": "hataakul",
+          "english": "she will eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هناكل",
+          "transliteration": "hanaakul",
+          "english": "we will eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتاكلوا",
+          "transliteration": "hataaklu",
+          "english": "you (pl) will eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "هياكلوا",
+          "transliteration": "hayaaklu",
+          "english": "they will eat"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاكل",
+          "transliteration": "mish haakul",
+          "english": "I won't eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتاكل",
+          "transliteration": "mish hataakul",
+          "english": "you (m) won't eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتاكلي",
+          "transliteration": "mish hataakli",
+          "english": "you (f) won't eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هياكل",
+          "transliteration": "mish hayaakul",
+          "english": "he won't eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتاكل",
+          "transliteration": "mish hataakul",
+          "english": "she won't eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هناكل",
+          "transliteration": "mish hanaakul",
+          "english": "we won't eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتاكلوا",
+          "transliteration": "mish hataaklu",
+          "english": "you (pl) won't eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هياكلوا",
+          "transliteration": "mish hayaaklu",
+          "english": "they won't eat"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

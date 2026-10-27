@@ -1,0 +1,320 @@
+{
+  "slug": "saam",
+  "arabic": "صَامَ",
+  "transliteration": "sama",
+  "english": "to fast",
+  "wordId": null,
+  "rootLetters": "ص و م",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a waw root, so the middle radical becomes a damma in the first and second person past tense (sumtu) and a waw in the present tense (yasumu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صُمْتُ",
+          "transliteration": "sumtu",
+          "english": "I fasted"
+        },
+        {
+          "person": "enta",
+          "arabic": "صُمْتَ",
+          "transliteration": "sumta",
+          "english": "you (m) fasted"
+        },
+        {
+          "person": "enti",
+          "arabic": "صُمْتِ",
+          "transliteration": "sumti",
+          "english": "you (f) fasted"
+        },
+        {
+          "person": "howa",
+          "arabic": "صَامَ",
+          "transliteration": "sama",
+          "english": "he fasted"
+        },
+        {
+          "person": "heya",
+          "arabic": "صَامَتْ",
+          "transliteration": "samat",
+          "english": "she fasted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صُمْنَا",
+          "transliteration": "sumna",
+          "english": "we fasted"
+        },
+        {
+          "person": "entu",
+          "arabic": "صُمْتُمْ",
+          "transliteration": "sumtum",
+          "english": "you (pl) fasted"
+        },
+        {
+          "person": "homma",
+          "arabic": "صَامُوا",
+          "transliteration": "samu",
+          "english": "they fasted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا صُمْتُ",
+          "transliteration": "ma sumtu",
+          "english": "I didn't fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا صُمْتَ",
+          "transliteration": "ma sumta",
+          "english": "you (m) didn't fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا صُمْتِ",
+          "transliteration": "ma sumti",
+          "english": "you (f) didn't fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا صَامَ",
+          "transliteration": "ma sama",
+          "english": "he didn't fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا صَامَتْ",
+          "transliteration": "ma samat",
+          "english": "she didn't fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا صُمْنَا",
+          "transliteration": "ma sumna",
+          "english": "we didn't fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا صُمْتُمْ",
+          "transliteration": "ma sumtum",
+          "english": "you (pl) didn't fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا صَامُوا",
+          "transliteration": "ma samu",
+          "english": "they didn't fast"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَصُومُ",
+          "transliteration": "asumu",
+          "english": "I fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَصُومُ",
+          "transliteration": "tasumu",
+          "english": "you (m) fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَصُومِينَ",
+          "transliteration": "tasumina",
+          "english": "you (f) fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَصُومُ",
+          "transliteration": "yasumu",
+          "english": "he fasts"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَصُومُ",
+          "transliteration": "tasumu",
+          "english": "she fasts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَصُومُ",
+          "transliteration": "nasumu",
+          "english": "we fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَصُومُونَ",
+          "transliteration": "tasumuna",
+          "english": "you (pl) fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَصُومُونَ",
+          "transliteration": "yasumuna",
+          "english": "they fast"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَصُومُ",
+          "transliteration": "la asumu",
+          "english": "I don't fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَصُومُ",
+          "transliteration": "la tasumu",
+          "english": "you (m) don't fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَصُومِينَ",
+          "transliteration": "la tasumina",
+          "english": "you (f) don't fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَصُومُ",
+          "transliteration": "la yasumu",
+          "english": "he doesn't fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَصُومُ",
+          "transliteration": "la tasumu",
+          "english": "she doesn't fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَصُومُ",
+          "transliteration": "la nasumu",
+          "english": "we don't fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَصُومُونَ",
+          "transliteration": "la tasumuna",
+          "english": "you (pl) don't fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَصُومُونَ",
+          "transliteration": "la yasumuna",
+          "english": "they don't fast"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَصُومُ",
+          "transliteration": "sa2asumu",
+          "english": "I will fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَصُومُ",
+          "transliteration": "satasumu",
+          "english": "you (m) will fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَصُومِينَ",
+          "transliteration": "satasumina",
+          "english": "you (f) will fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَصُومُ",
+          "transliteration": "sayasumu",
+          "english": "he will fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَصُومُ",
+          "transliteration": "satasumu",
+          "english": "she will fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَصُومُ",
+          "transliteration": "sanasumu",
+          "english": "we will fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَصُومُونَ",
+          "transliteration": "satasumuna",
+          "english": "you (pl) will fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَصُومُونَ",
+          "transliteration": "sayasumuna",
+          "english": "they will fast"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَصُومَ",
+          "transliteration": "lan asuma",
+          "english": "I won't fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَصُومَ",
+          "transliteration": "lan tasuma",
+          "english": "you (m) won't fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَصُومِي",
+          "transliteration": "lan tasumi",
+          "english": "you (f) won't fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَصُومَ",
+          "transliteration": "lan yasuma",
+          "english": "he won't fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَصُومَ",
+          "transliteration": "lan tasuma",
+          "english": "she won't fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَصُومَ",
+          "transliteration": "lan nasuma",
+          "english": "we won't fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَصُومُوا",
+          "transliteration": "lan tasumu",
+          "english": "you (pl) won't fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَصُومُوا",
+          "transliteration": "lan yasumu",
+          "english": "they won't fast"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

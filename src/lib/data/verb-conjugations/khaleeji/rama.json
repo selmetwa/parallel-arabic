@@ -1,0 +1,320 @@
+{
+  "slug": "rama",
+  "arabic": "قط",
+  "transliteration": "gatt",
+  "english": "to throw",
+  "wordId": null,
+  "rootLetters": "ق ط ط",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb. In Gulf Arabic, doubled verbs add an '-ay-' before consonant-initial suffixes in the past tense, and the letter qaf is pronounced as a 'g'.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قطيت",
+          "transliteration": "gattayt",
+          "english": "I threw"
+        },
+        {
+          "person": "enta",
+          "arabic": "قطيت",
+          "transliteration": "gattayt",
+          "english": "you (m) threw"
+        },
+        {
+          "person": "enti",
+          "arabic": "قطيتي",
+          "transliteration": "gattayti",
+          "english": "you (f) threw"
+        },
+        {
+          "person": "howa",
+          "arabic": "قط",
+          "transliteration": "gatt",
+          "english": "he threw"
+        },
+        {
+          "person": "heya",
+          "arabic": "قطت",
+          "transliteration": "gattat",
+          "english": "she threw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قطينا",
+          "transliteration": "gattayna",
+          "english": "we threw"
+        },
+        {
+          "person": "entu",
+          "arabic": "قطيتوا",
+          "transliteration": "gattaytaw",
+          "english": "you (pl) threw"
+        },
+        {
+          "person": "homma",
+          "arabic": "قطوا",
+          "transliteration": "gattaw",
+          "english": "they threw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما قطيت",
+          "transliteration": "ma gattayt",
+          "english": "I didn't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما قطيت",
+          "transliteration": "ma gattayt",
+          "english": "you (m) didn't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما قطيتي",
+          "transliteration": "ma gattayti",
+          "english": "you (f) didn't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما قط",
+          "transliteration": "ma gatt",
+          "english": "he didn't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما قطت",
+          "transliteration": "ma gattat",
+          "english": "she didn't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما قطينا",
+          "transliteration": "ma gattayna",
+          "english": "we didn't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما قطيتوا",
+          "transliteration": "ma gattaytaw",
+          "english": "you (pl) didn't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما قطوا",
+          "transliteration": "ma gattaw",
+          "english": "they didn't throw"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اقط",
+          "transliteration": "agitt",
+          "english": "I throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "تقط",
+          "transliteration": "tigitt",
+          "english": "you (m) throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "تقطين",
+          "transliteration": "tigitteen",
+          "english": "you (f) throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "يقط",
+          "transliteration": "yigitt",
+          "english": "he throws"
+        },
+        {
+          "person": "heya",
+          "arabic": "تقط",
+          "transliteration": "tigitt",
+          "english": "she throws"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نقط",
+          "transliteration": "nigitt",
+          "english": "we throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "تقطون",
+          "transliteration": "tigittoon",
+          "english": "you (pl) throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "يقطون",
+          "transliteration": "yigittoon",
+          "english": "they throw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اقط",
+          "transliteration": "ma agitt",
+          "english": "I don't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تقط",
+          "transliteration": "ma tigitt",
+          "english": "you (m) don't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تقطين",
+          "transliteration": "ma tigitteen",
+          "english": "you (f) don't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يقط",
+          "transliteration": "ma yigitt",
+          "english": "he doesn't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تقط",
+          "transliteration": "ma tigitt",
+          "english": "she doesn't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نقط",
+          "transliteration": "ma nigitt",
+          "english": "we don't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تقطون",
+          "transliteration": "ma tigittoon",
+          "english": "you (pl) don't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يقطون",
+          "transliteration": "ma yigittoon",
+          "english": "they don't throw"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اقط",
+          "transliteration": "raa7 agitt",
+          "english": "I will throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تقط",
+          "transliteration": "raa7 tigitt",
+          "english": "you (m) will throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تقطين",
+          "transliteration": "raa7 tigitteen",
+          "english": "you (f) will throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يقط",
+          "transliteration": "raa7 yigitt",
+          "english": "he will throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تقط",
+          "transliteration": "raa7 tigitt",
+          "english": "she will throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نقط",
+          "transliteration": "raa7 nigitt",
+          "english": "we will throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تقطون",
+          "transliteration": "raa7 tigittoon",
+          "english": "you (pl) will throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يقطون",
+          "transliteration": "raa7 yigittoon",
+          "english": "they will throw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اقط",
+          "transliteration": "ma raa7 agitt",
+          "english": "I won't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تقط",
+          "transliteration": "ma raa7 tigitt",
+          "english": "you (m) won't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تقطين",
+          "transliteration": "ma raa7 tigitteen",
+          "english": "you (f) won't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يقط",
+          "transliteration": "ma raa7 yigitt",
+          "english": "he won't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تقط",
+          "transliteration": "ma raa7 tigitt",
+          "english": "she won't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نقط",
+          "transliteration": "ma raa7 nigitt",
+          "english": "we won't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تقطون",
+          "transliteration": "ma raa7 tigittoon",
+          "english": "you (pl) won't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يقطون",
+          "transliteration": "ma raa7 yigittoon",
+          "english": "they won't throw"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,62 +1,19 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { fly, fade } from 'svelte/transition';
-
-  interface NavItem {
-    label: string;
-    href: string;
-    icon: string;
-  }
-
-  interface NavSection {
-    title: string;
-    items: NavItem[];
-  }
+  import { getNavSections } from '$lib/constants/nav';
 
   interface Props {
     isOpen: boolean;
     onClose: () => void;
     session: any;
     handleOpenDrawer?: () => void;
+    targetDialect?: string | null;
   }
 
-  let { isOpen, onClose, session, handleOpenDrawer }: Props = $props();
+  let { isOpen, onClose, session, handleOpenDrawer, targetDialect }: Props = $props();
 
-  const navSections = $derived.by(() => {
-    const baseSections: NavSection[] = [
-      {
-        title: 'Learn',
-        items: [
-          { label: 'Alphabet', href: '/alphabet', icon: '✍️' },
-          { label: 'Lessons', href: '/lessons', icon: '📚' },
-          { label: 'Vocab Review', href: '/review', icon: '🧠' },
-        ]
-      },
-      {
-        title: 'Practice',
-        items: [
-          { label: 'Scenarios', href: '/scenarios', icon: '🗣️' },
-          { label: 'Game', href: '/learn/game', icon: '🎮' },
-          { label: 'Sentences', href: '/sentences', icon: '📝' },
-          { label: 'Conjugations', href: '/conjugations', icon: '🔄' },
-          { label: 'Stories', href: '/stories', icon: '📖' },
-          { label: 'Speak', href: '/speak', icon: '🎤' },
-          { label: 'Tutor', href: '/tutor', icon: '💬' },
-        ]
-      },
-      {
-        title: 'General',
-        items: [
-          { label: 'My words', href: '/review/all-words', icon: '🗂️' },
-          { label: 'History', href: '/history', icon: '📜' },
-          session
-            ? { label: 'Profile', href: '/profile', icon: '👤' }
-            : { label: 'Login', href: '/login', icon: '🔐' }
-        ]
-      }
-    ];
-    return baseSections;
-  });
+  const navSections = $derived(getNavSections(session, targetDialect || 'egyptian-arabic'));
 
   function isActive(href: string): boolean {
     const currentPath = $page.url.pathname;

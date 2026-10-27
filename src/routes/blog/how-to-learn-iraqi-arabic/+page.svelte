@@ -124,7 +124,7 @@
 	</ul>
 	<p>
 		The <a href={resolve('/iraqi/conjugations')}>Iraqi conjugation
-		tables</a> have every tense of 72 common verbs, affirmative and negative.
+		tables</a> have every tense of 200 common verbs, affirmative and negative.
 	</p>
 
 	<h2>6. Follow a course for the structure (month 1 onwards)</h2>

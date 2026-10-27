@@ -1,0 +1,320 @@
+{
+  "slug": "rama",
+  "arabic": "رمى",
+  "transliteration": "rama",
+  "english": "to throw",
+  "wordId": null,
+  "rootLetters": "ر م ي",
+  "verbClass": "defective",
+  "notes": "Form I defective verb. The final weak root letter becomes 'ee' before consonant endings in the past tense, and drops before plural vowel endings.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رميت",
+          "transliteration": "rameet",
+          "english": "I threw"
+        },
+        {
+          "person": "enta",
+          "arabic": "رميت",
+          "transliteration": "rameet",
+          "english": "you (m) threw"
+        },
+        {
+          "person": "enti",
+          "arabic": "رميتي",
+          "transliteration": "rameeti",
+          "english": "you (f) threw"
+        },
+        {
+          "person": "howa",
+          "arabic": "رمى",
+          "transliteration": "rama",
+          "english": "he threw"
+        },
+        {
+          "person": "heya",
+          "arabic": "رمت",
+          "transliteration": "ramat",
+          "english": "she threw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رمينا",
+          "transliteration": "rameena",
+          "english": "we threw"
+        },
+        {
+          "person": "entu",
+          "arabic": "رميتوا",
+          "transliteration": "rameetu",
+          "english": "you (pl) threw"
+        },
+        {
+          "person": "homma",
+          "arabic": "رموا",
+          "transliteration": "ramu",
+          "english": "they threw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رميت",
+          "transliteration": "ma rameet",
+          "english": "I didn't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رميت",
+          "transliteration": "ma rameet",
+          "english": "you (m) didn't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رميتي",
+          "transliteration": "ma rameeti",
+          "english": "you (f) didn't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رمى",
+          "transliteration": "ma rama",
+          "english": "he didn't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رمت",
+          "transliteration": "ma ramat",
+          "english": "she didn't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رمينا",
+          "transliteration": "ma rameena",
+          "english": "we didn't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رميتوا",
+          "transliteration": "ma rameetu",
+          "english": "you (pl) didn't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رموا",
+          "transliteration": "ma ramu",
+          "english": "they didn't throw"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بارمي",
+          "transliteration": "barmi",
+          "english": "I throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "بترمي",
+          "transliteration": "btirmi",
+          "english": "you (m) throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "بترمي",
+          "transliteration": "btirmi",
+          "english": "you (f) throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيرمي",
+          "transliteration": "byirmi",
+          "english": "he throws"
+        },
+        {
+          "person": "heya",
+          "arabic": "بترمي",
+          "transliteration": "btirmi",
+          "english": "she throws"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنرمي",
+          "transliteration": "bnirmi",
+          "english": "we throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "بترموا",
+          "transliteration": "btirmu",
+          "english": "you (pl) throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيرموا",
+          "transliteration": "byirmu",
+          "english": "they throw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بارمي",
+          "transliteration": "ma barmi",
+          "english": "I don't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بترمي",
+          "transliteration": "ma btirmi",
+          "english": "you (m) don't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بترمي",
+          "transliteration": "ma btirmi",
+          "english": "you (f) don't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيرمي",
+          "transliteration": "ma byirmi",
+          "english": "he doesn't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بترمي",
+          "transliteration": "ma btirmi",
+          "english": "she doesn't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنرمي",
+          "transliteration": "ma bnirmi",
+          "english": "we don't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بترموا",
+          "transliteration": "ma btirmu",
+          "english": "you (pl) don't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيرموا",
+          "transliteration": "ma byirmu",
+          "english": "they don't throw"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حارمي",
+          "transliteration": "7armi",
+          "english": "I will throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "حترمي",
+          "transliteration": "7atirmi",
+          "english": "you (m) will throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "حترمي",
+          "transliteration": "7atirmi",
+          "english": "you (f) will throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيرمي",
+          "transliteration": "7ayirmi",
+          "english": "he will throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "حترمي",
+          "transliteration": "7atirmi",
+          "english": "she will throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنرمي",
+          "transliteration": "7anirmi",
+          "english": "we will throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "حترموا",
+          "transliteration": "7atirmu",
+          "english": "you (pl) will throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيرموا",
+          "transliteration": "7ayirmu",
+          "english": "they will throw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حارمي",
+          "transliteration": "ma 7armi",
+          "english": "I won't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حترمي",
+          "transliteration": "ma 7atirmi",
+          "english": "you (m) won't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حترمي",
+          "transliteration": "ma 7atirmi",
+          "english": "you (f) won't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيرمي",
+          "transliteration": "ma 7ayirmi",
+          "english": "he won't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حترمي",
+          "transliteration": "ma 7atirmi",
+          "english": "she won't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنرمي",
+          "transliteration": "ma 7anirmi",
+          "english": "we won't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حترموا",
+          "transliteration": "ma 7atirmu",
+          "english": "you (pl) won't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيرموا",
+          "transliteration": "ma 7ayirmu",
+          "english": "they won't throw"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

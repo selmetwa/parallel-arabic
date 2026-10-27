@@ -1,0 +1,320 @@
+{
+  "slug": "saa2",
+  "arabic": "قَادَ",
+  "transliteration": "qada",
+  "english": "to drive",
+  "wordId": null,
+  "rootLetters": "ق و د",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a middle waw (و), which appears in the present tense but is dropped in the past tense when a consonant-initial suffix is added.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قُدْتُ",
+          "transliteration": "qudtu",
+          "english": "I drove"
+        },
+        {
+          "person": "enta",
+          "arabic": "قُدْتَ",
+          "transliteration": "qudta",
+          "english": "you (m) drove"
+        },
+        {
+          "person": "enti",
+          "arabic": "قُدْتِ",
+          "transliteration": "qudti",
+          "english": "you (f) drove"
+        },
+        {
+          "person": "howa",
+          "arabic": "قَادَ",
+          "transliteration": "qada",
+          "english": "he drove"
+        },
+        {
+          "person": "heya",
+          "arabic": "قَادَتْ",
+          "transliteration": "qadat",
+          "english": "she drove"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قُدْنَا",
+          "transliteration": "qudna",
+          "english": "we drove"
+        },
+        {
+          "person": "entu",
+          "arabic": "قُدْتُمْ",
+          "transliteration": "qudtum",
+          "english": "you (pl) drove"
+        },
+        {
+          "person": "homma",
+          "arabic": "قَادُوا",
+          "transliteration": "qadu",
+          "english": "they drove"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا قُدْتُ",
+          "transliteration": "ma qudtu",
+          "english": "I didn't drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا قُدْتَ",
+          "transliteration": "ma qudta",
+          "english": "you (m) didn't drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا قُدْتِ",
+          "transliteration": "ma qudti",
+          "english": "you (f) didn't drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا قَادَ",
+          "transliteration": "ma qada",
+          "english": "he didn't drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا قَادَتْ",
+          "transliteration": "ma qadat",
+          "english": "she didn't drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا قُدْنَا",
+          "transliteration": "ma qudna",
+          "english": "we didn't drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا قُدْتُمْ",
+          "transliteration": "ma qudtum",
+          "english": "you (pl) didn't drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا قَادُوا",
+          "transliteration": "ma qadu",
+          "english": "they didn't drive"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَقُودُ",
+          "transliteration": "aqudu",
+          "english": "I drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَقُودُ",
+          "transliteration": "taqudu",
+          "english": "you (m) drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَقُودِينَ",
+          "transliteration": "taqudina",
+          "english": "you (f) drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَقُودُ",
+          "transliteration": "yaqudu",
+          "english": "he drives"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَقُودُ",
+          "transliteration": "taqudu",
+          "english": "she drives"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَقُودُ",
+          "transliteration": "naqudu",
+          "english": "we drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَقُودُونَ",
+          "transliteration": "taquduna",
+          "english": "you (pl) drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَقُودُونَ",
+          "transliteration": "yaquduna",
+          "english": "they drive"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَقُودُ",
+          "transliteration": "la aqudu",
+          "english": "I don't drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَقُودُ",
+          "transliteration": "la taqudu",
+          "english": "you (m) don't drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَقُودِينَ",
+          "transliteration": "la taqudina",
+          "english": "you (f) don't drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَقُودُ",
+          "transliteration": "la yaqudu",
+          "english": "he doesn't drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَقُودُ",
+          "transliteration": "la taqudu",
+          "english": "she doesn't drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَقُودُ",
+          "transliteration": "la naqudu",
+          "english": "we don't drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَقُودُونَ",
+          "transliteration": "la taquduna",
+          "english": "you (pl) don't drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَقُودُونَ",
+          "transliteration": "la yaquduna",
+          "english": "they don't drive"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَقُودُ",
+          "transliteration": "sa2aqudu",
+          "english": "I will drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَقُودُ",
+          "transliteration": "sataqudu",
+          "english": "you (m) will drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَقُودِينَ",
+          "transliteration": "sataqudina",
+          "english": "you (f) will drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَقُودُ",
+          "transliteration": "sayaqudu",
+          "english": "he will drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَقُودُ",
+          "transliteration": "sataqudu",
+          "english": "she will drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَقُودُ",
+          "transliteration": "sanaqudu",
+          "english": "we will drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَقُودُونَ",
+          "transliteration": "sataquduna",
+          "english": "you (pl) will drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَقُودُونَ",
+          "transliteration": "sayaquduna",
+          "english": "they will drive"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَقُودَ",
+          "transliteration": "lan aquda",
+          "english": "I won't drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَقُودَ",
+          "transliteration": "lan taquda",
+          "english": "you (m) won't drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَقُودِي",
+          "transliteration": "lan taqudi",
+          "english": "you (f) won't drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَقُودَ",
+          "transliteration": "lan yaquda",
+          "english": "he won't drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَقُودَ",
+          "transliteration": "lan taquda",
+          "english": "she won't drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَقُودَ",
+          "transliteration": "lan naquda",
+          "english": "we won't drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَقُودُوا",
+          "transliteration": "lan taqudu",
+          "english": "you (pl) won't drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَقُودُوا",
+          "transliteration": "lan yaqudu",
+          "english": "they won't drive"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

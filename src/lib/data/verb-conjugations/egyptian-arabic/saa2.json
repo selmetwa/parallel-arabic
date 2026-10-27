@@ -1,0 +1,320 @@
+{
+  "slug": "saa2",
+  "arabic": "ساق",
+  "transliteration": "saa2",
+  "english": "to drive",
+  "wordId": null,
+  "rootLetters": "س و ق",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb. The middle root letter 'wāw' appears as 'uu' in the present tense, and the long vowel is shortened when followed by two consonants (e.g., in the past tense with consonant-initial suffixes, or in the negative).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سقت",
+          "transliteration": "su2t",
+          "english": "I drove"
+        },
+        {
+          "person": "enta",
+          "arabic": "سقت",
+          "transliteration": "su2t",
+          "english": "you (m) drove"
+        },
+        {
+          "person": "enti",
+          "arabic": "سقتي",
+          "transliteration": "su2ti",
+          "english": "you (f) drove"
+        },
+        {
+          "person": "howa",
+          "arabic": "ساق",
+          "transliteration": "saa2",
+          "english": "he drove"
+        },
+        {
+          "person": "heya",
+          "arabic": "ساقت",
+          "transliteration": "saa2it",
+          "english": "she drove"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سقنا",
+          "transliteration": "su2na",
+          "english": "we drove"
+        },
+        {
+          "person": "entu",
+          "arabic": "سقتوا",
+          "transliteration": "su2tu",
+          "english": "you (pl) drove"
+        },
+        {
+          "person": "homma",
+          "arabic": "ساقوا",
+          "transliteration": "saa2u",
+          "english": "they drove"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سقتش",
+          "transliteration": "ma su2tish",
+          "english": "I didn't drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سقتش",
+          "transliteration": "ma su2tish",
+          "english": "you (m) didn't drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سقتيش",
+          "transliteration": "ma su2tiish",
+          "english": "you (f) didn't drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ساقش",
+          "transliteration": "ma sa2sh",
+          "english": "he didn't drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ساقتش",
+          "transliteration": "ma saa2itsh",
+          "english": "she didn't drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سقناش",
+          "transliteration": "ma su2naash",
+          "english": "we didn't drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سقتوش",
+          "transliteration": "ma su2tuush",
+          "english": "you (pl) didn't drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ساقوش",
+          "transliteration": "ma saa2uush",
+          "english": "they didn't drive"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بسوق",
+          "transliteration": "basuu2",
+          "english": "I drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتسوق",
+          "transliteration": "bitsuu2",
+          "english": "you (m) drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتسوقي",
+          "transliteration": "bitsuu2i",
+          "english": "you (f) drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيسوق",
+          "transliteration": "biyisuu2",
+          "english": "he drives"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتسوق",
+          "transliteration": "bitsuu2",
+          "english": "she drives"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنسوق",
+          "transliteration": "binsuu2",
+          "english": "we drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتسوقوا",
+          "transliteration": "bitsuu2u",
+          "english": "you (pl) drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيسوقوا",
+          "transliteration": "biyisuu2u",
+          "english": "they drive"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابسوقش",
+          "transliteration": "mabasu2sh",
+          "english": "I don't drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتسوقش",
+          "transliteration": "mabitsu2sh",
+          "english": "you (m) don't drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتسوقيش",
+          "transliteration": "mabitsuu2iish",
+          "english": "you (f) don't drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيسوقش",
+          "transliteration": "mabiyisu2sh",
+          "english": "he doesn't drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتسوقش",
+          "transliteration": "mabitsu2sh",
+          "english": "she doesn't drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنسوقش",
+          "transliteration": "mabinsu2sh",
+          "english": "we don't drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتسوقوش",
+          "transliteration": "mabitsuu2uush",
+          "english": "you (pl) don't drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيسوقوش",
+          "transliteration": "mabiyisuu2uush",
+          "english": "they don't drive"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هسوق",
+          "transliteration": "hasuu2",
+          "english": "I will drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتسوق",
+          "transliteration": "hatsuu2",
+          "english": "you (m) will drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتسوقي",
+          "transliteration": "hatsuu2i",
+          "english": "you (f) will drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيسوق",
+          "transliteration": "hayisuu2",
+          "english": "he will drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتسوق",
+          "transliteration": "hatsuu2",
+          "english": "she will drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنسوق",
+          "transliteration": "hansuu2",
+          "english": "we will drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتسوقوا",
+          "transliteration": "hatsuu2u",
+          "english": "you (pl) will drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيسوقوا",
+          "transliteration": "hayisuu2u",
+          "english": "they will drive"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هسوق",
+          "transliteration": "mish hasuu2",
+          "english": "I won't drive"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتسوق",
+          "transliteration": "mish hatsuu2",
+          "english": "you (m) won't drive"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتسوقي",
+          "transliteration": "mish hatsuu2i",
+          "english": "you (f) won't drive"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيسوق",
+          "transliteration": "mish hayisuu2",
+          "english": "he won't drive"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتسوق",
+          "transliteration": "mish hatsuu2",
+          "english": "she won't drive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنسوق",
+          "transliteration": "mish hansuu2",
+          "english": "we won't drive"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتسوقوا",
+          "transliteration": "mish hatsuu2u",
+          "english": "you (pl) won't drive"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيسوقوا",
+          "transliteration": "mish hayisuu2u",
+          "english": "they won't drive"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

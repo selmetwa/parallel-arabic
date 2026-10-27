@@ -1,0 +1,320 @@
+{
+  "slug": "2ara",
+  "arabic": "قرا",
+  "transliteration": "qira",
+  "english": "to read",
+  "wordId": null,
+  "rootLetters": "ق ر ء",
+  "verbClass": "defective",
+  "notes": "Although the root ends in a hamza in Standard Arabic, in Iraqi Arabic it behaves entirely as a defective verb ending in a vowel, and it retains the 'q' pronunciation rather than changing to 'g'.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قريت",
+          "transliteration": "qireet",
+          "english": "I read"
+        },
+        {
+          "person": "enta",
+          "arabic": "قريت",
+          "transliteration": "qireet",
+          "english": "you (m) read"
+        },
+        {
+          "person": "enti",
+          "arabic": "قريتي",
+          "transliteration": "qireeti",
+          "english": "you (f) read"
+        },
+        {
+          "person": "howa",
+          "arabic": "قرا",
+          "transliteration": "qira",
+          "english": "he read"
+        },
+        {
+          "person": "heya",
+          "arabic": "قرت",
+          "transliteration": "qirat",
+          "english": "she read"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قرينا",
+          "transliteration": "qireena",
+          "english": "we read"
+        },
+        {
+          "person": "entu",
+          "arabic": "قريتوا",
+          "transliteration": "qireetu",
+          "english": "you (pl) read"
+        },
+        {
+          "person": "homma",
+          "arabic": "قروا",
+          "transliteration": "qiraw",
+          "english": "they read"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما قريت",
+          "transliteration": "ma qireet",
+          "english": "I didn't read"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما قريت",
+          "transliteration": "ma qireet",
+          "english": "you (m) didn't read"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما قريتي",
+          "transliteration": "ma qireeti",
+          "english": "you (f) didn't read"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما قرا",
+          "transliteration": "ma qira",
+          "english": "he didn't read"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما قرت",
+          "transliteration": "ma qirat",
+          "english": "she didn't read"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما قرينا",
+          "transliteration": "ma qireena",
+          "english": "we didn't read"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما قريتوا",
+          "transliteration": "ma qireetu",
+          "english": "you (pl) didn't read"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما قروا",
+          "transliteration": "ma qiraw",
+          "english": "they didn't read"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اقرا",
+          "transliteration": "aqra",
+          "english": "I read"
+        },
+        {
+          "person": "enta",
+          "arabic": "تقرا",
+          "transliteration": "tiqra",
+          "english": "you (m) read"
+        },
+        {
+          "person": "enti",
+          "arabic": "تقرين",
+          "transliteration": "tiqreen",
+          "english": "you (f) read"
+        },
+        {
+          "person": "howa",
+          "arabic": "يقرا",
+          "transliteration": "yiqra",
+          "english": "he reads"
+        },
+        {
+          "person": "heya",
+          "arabic": "تقرا",
+          "transliteration": "tiqra",
+          "english": "she reads"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نقرا",
+          "transliteration": "niqra",
+          "english": "we read"
+        },
+        {
+          "person": "entu",
+          "arabic": "تقرون",
+          "transliteration": "tiqroon",
+          "english": "you (pl) read"
+        },
+        {
+          "person": "homma",
+          "arabic": "يقرون",
+          "transliteration": "yiqroon",
+          "english": "they read"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اقرا",
+          "transliteration": "ma aqra",
+          "english": "I don't read"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تقرا",
+          "transliteration": "ma tiqra",
+          "english": "you (m) don't read"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تقرين",
+          "transliteration": "ma tiqreen",
+          "english": "you (f) don't read"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يقرا",
+          "transliteration": "ma yiqra",
+          "english": "he doesn't read"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تقرا",
+          "transliteration": "ma tiqra",
+          "english": "she doesn't read"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نقرا",
+          "transliteration": "ma niqra",
+          "english": "we don't read"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تقرون",
+          "transliteration": "ma tiqroon",
+          "english": "you (pl) don't read"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يقرون",
+          "transliteration": "ma yiqroon",
+          "english": "they don't read"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اقرا",
+          "transliteration": "raa7 aqra",
+          "english": "I will read"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تقرا",
+          "transliteration": "raa7 tiqra",
+          "english": "you (m) will read"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تقرين",
+          "transliteration": "raa7 tiqreen",
+          "english": "you (f) will read"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يقرا",
+          "transliteration": "raa7 yiqra",
+          "english": "he will read"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تقرا",
+          "transliteration": "raa7 tiqra",
+          "english": "she will read"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نقرا",
+          "transliteration": "raa7 niqra",
+          "english": "we will read"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تقرون",
+          "transliteration": "raa7 tiqroon",
+          "english": "you (pl) will read"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يقرون",
+          "transliteration": "raa7 yiqroon",
+          "english": "they will read"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اقرا",
+          "transliteration": "ma raa7 aqra",
+          "english": "I won't read"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تقرا",
+          "transliteration": "ma raa7 tiqra",
+          "english": "you (m) won't read"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تقرين",
+          "transliteration": "ma raa7 tiqreen",
+          "english": "you (f) won't read"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يقرا",
+          "transliteration": "ma raa7 yiqra",
+          "english": "he won't read"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تقرا",
+          "transliteration": "ma raa7 tiqra",
+          "english": "she won't read"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نقرا",
+          "transliteration": "ma raa7 niqra",
+          "english": "we won't read"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تقرون",
+          "transliteration": "ma raa7 tiqroon",
+          "english": "you (pl) won't read"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يقرون",
+          "transliteration": "ma raa7 yiqroon",
+          "english": "they won't read"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

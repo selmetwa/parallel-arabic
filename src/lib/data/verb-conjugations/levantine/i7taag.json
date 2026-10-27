@@ -1,0 +1,320 @@
+{
+  "slug": "i7taag",
+  "arabic": "احتاج",
+  "transliteration": "i7taj",
+  "english": "to need",
+  "wordId": null,
+  "rootLetters": "ح و ج",
+  "verbClass": "hollow",
+  "notes": "This is a Form VIII hollow verb. The long vowel 'a' is shortened in the past tense when the suffix begins with a consonant (e.g., i7tajt).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "احتجت",
+          "transliteration": "i7tajt",
+          "english": "I needed"
+        },
+        {
+          "person": "enta",
+          "arabic": "احتجت",
+          "transliteration": "i7tajt",
+          "english": "you (m) needed"
+        },
+        {
+          "person": "enti",
+          "arabic": "احتجتي",
+          "transliteration": "i7tajti",
+          "english": "you (f) needed"
+        },
+        {
+          "person": "howa",
+          "arabic": "احتاج",
+          "transliteration": "i7taj",
+          "english": "he needed"
+        },
+        {
+          "person": "heya",
+          "arabic": "احتاجت",
+          "transliteration": "i7tajit",
+          "english": "she needed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "احتجنا",
+          "transliteration": "i7tajna",
+          "english": "we needed"
+        },
+        {
+          "person": "entu",
+          "arabic": "احتجتوا",
+          "transliteration": "i7tajtu",
+          "english": "you (pl) needed"
+        },
+        {
+          "person": "homma",
+          "arabic": "احتاجوا",
+          "transliteration": "i7taju",
+          "english": "they needed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما احتجت",
+          "transliteration": "ma i7tajt",
+          "english": "I didn't need"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما احتجت",
+          "transliteration": "ma i7tajt",
+          "english": "you (m) didn't need"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما احتجتي",
+          "transliteration": "ma i7tajti",
+          "english": "you (f) didn't need"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما احتاج",
+          "transliteration": "ma i7taj",
+          "english": "he didn't need"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما احتاجت",
+          "transliteration": "ma i7tajit",
+          "english": "she didn't need"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما احتجنا",
+          "transliteration": "ma i7tajna",
+          "english": "we didn't need"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما احتجتوا",
+          "transliteration": "ma i7tajtu",
+          "english": "you (pl) didn't need"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما احتاجوا",
+          "transliteration": "ma i7taju",
+          "english": "they didn't need"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بحتاج",
+          "transliteration": "ba7taj",
+          "english": "I need"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتحتاج",
+          "transliteration": "bti7taj",
+          "english": "you (m) need"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتحتاجي",
+          "transliteration": "bti7taji",
+          "english": "you (f) need"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيحتاج",
+          "transliteration": "byi7taj",
+          "english": "he needs"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتحتاج",
+          "transliteration": "bti7taj",
+          "english": "she needs"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منحتاج",
+          "transliteration": "mni7taj",
+          "english": "we need"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتحتاجوا",
+          "transliteration": "bti7taju",
+          "english": "you (pl) need"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيحتاجوا",
+          "transliteration": "byi7taju",
+          "english": "they need"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بحتاج",
+          "transliteration": "ma ba7taj",
+          "english": "I don't need"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتحتاج",
+          "transliteration": "ma bti7taj",
+          "english": "you (m) don't need"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتحتاجي",
+          "transliteration": "ma bti7taji",
+          "english": "you (f) don't need"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيحتاج",
+          "transliteration": "ma byi7taj",
+          "english": "he doesn't need"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتحتاج",
+          "transliteration": "ma bti7taj",
+          "english": "she doesn't need"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منحتاج",
+          "transliteration": "ma mni7taj",
+          "english": "we don't need"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتحتاجوا",
+          "transliteration": "ma bti7taju",
+          "english": "you (pl) don't need"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيحتاجوا",
+          "transliteration": "ma byi7taju",
+          "english": "they don't need"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح احتاج",
+          "transliteration": "ra7 a7taj",
+          "english": "I will need"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تحتاج",
+          "transliteration": "ra7 ti7taj",
+          "english": "you (m) will need"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تحتاجي",
+          "transliteration": "ra7 ti7taji",
+          "english": "you (f) will need"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يحتاج",
+          "transliteration": "ra7 yi7taj",
+          "english": "he will need"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تحتاج",
+          "transliteration": "ra7 ti7taj",
+          "english": "she will need"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نحتاج",
+          "transliteration": "ra7 ni7taj",
+          "english": "we will need"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تحتاجوا",
+          "transliteration": "ra7 ti7taju",
+          "english": "you (pl) will need"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يحتاجوا",
+          "transliteration": "ra7 yi7taju",
+          "english": "they will need"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح احتاج",
+          "transliteration": "ma ra7 a7taj",
+          "english": "I won't need"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تحتاج",
+          "transliteration": "ma ra7 ti7taj",
+          "english": "you (m) won't need"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تحتاجي",
+          "transliteration": "ma ra7 ti7taji",
+          "english": "you (f) won't need"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يحتاج",
+          "transliteration": "ma ra7 yi7taj",
+          "english": "he won't need"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تحتاج",
+          "transliteration": "ma ra7 ti7taj",
+          "english": "she won't need"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نحتاج",
+          "transliteration": "ma ra7 ni7taj",
+          "english": "we won't need"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تحتاجوا",
+          "transliteration": "ma ra7 ti7taju",
+          "english": "you (pl) won't need"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يحتاجوا",
+          "transliteration": "ma ra7 yi7taju",
+          "english": "they won't need"
+        }
+      ]
+    }
+  },
+  "form": "VIII",
+  "source": "generated"
+}

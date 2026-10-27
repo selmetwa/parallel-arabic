@@ -1,4 +1,5 @@
 <script lang="ts">
+	import GrammarLinks from '$lib/components/grammar/GrammarLinks.svelte';
 	import { page } from '$app/state';
 	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
 	import VocabPractice from '$lib/components/dialect-shared/vocab/VocabPractice.svelte';
@@ -166,6 +167,13 @@
 		topicLabel={categoryLabel ?? dialectName}
 		isSubscribed={page.data.isSubscribed ?? false}
 		practiceHref="/vocabulary?dialect={data.dialect}&search={encodeURIComponent(word.arabic)}"
+	/>
+
+	<GrammarLinks
+		dialect={data.dialect}
+		slugs={word.conjugationSlug
+			? ['present-tense', 'past-tense', 'verb-forms', 'verb-classes']
+			: ['noun-gender', 'plurals', 'possessive-suffixes', 'adjectives']}
 	/>
 
 	<aside class="mt-8 text-center">

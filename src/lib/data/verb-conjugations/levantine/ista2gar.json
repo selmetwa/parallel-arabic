@@ -1,0 +1,320 @@
+{
+  "slug": "ista2gar",
+  "arabic": "استأجر",
+  "transliteration": "sta2jar",
+  "english": "to rent",
+  "wordId": null,
+  "rootLetters": "أ ج ر",
+  "verbClass": "sound",
+  "notes": "Form X verb (rent); many people simply say sta2jar or ajjar.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "استأجرت",
+          "transliteration": "sta2jart",
+          "english": "I rented"
+        },
+        {
+          "person": "enta",
+          "arabic": "استأجرت",
+          "transliteration": "sta2jart",
+          "english": "you (m) rented"
+        },
+        {
+          "person": "enti",
+          "arabic": "استأجرتي",
+          "transliteration": "sta2jarti",
+          "english": "you (f) rented"
+        },
+        {
+          "person": "howa",
+          "arabic": "استأجر",
+          "transliteration": "sta2jar",
+          "english": "he rented"
+        },
+        {
+          "person": "heya",
+          "arabic": "استأجرت",
+          "transliteration": "sta2jarit",
+          "english": "she rented"
+        },
+        {
+          "person": "ehna",
+          "arabic": "استأجرنا",
+          "transliteration": "sta2jarna",
+          "english": "we rented"
+        },
+        {
+          "person": "entu",
+          "arabic": "استأجرتوا",
+          "transliteration": "sta2jartu",
+          "english": "you (pl) rented"
+        },
+        {
+          "person": "homma",
+          "arabic": "استأجروا",
+          "transliteration": "sta2jaru",
+          "english": "they rented"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما استأجرت",
+          "transliteration": "ma sta2jart",
+          "english": "I didn't rent"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما استأجرت",
+          "transliteration": "ma sta2jart",
+          "english": "you (m) didn't rent"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما استأجرتي",
+          "transliteration": "ma sta2jarti",
+          "english": "you (f) didn't rent"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما استأجر",
+          "transliteration": "ma sta2jar",
+          "english": "he didn't rent"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما استأجرت",
+          "transliteration": "ma sta2jarit",
+          "english": "she didn't rent"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما استأجرنا",
+          "transliteration": "ma sta2jarna",
+          "english": "we didn't rent"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما استأجرتوا",
+          "transliteration": "ma sta2jartu",
+          "english": "you (pl) didn't rent"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما استأجروا",
+          "transliteration": "ma sta2jaru",
+          "english": "they didn't rent"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بستأجر",
+          "transliteration": "bsta2jir",
+          "english": "I rent"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتستأجر",
+          "transliteration": "btista2jir",
+          "english": "you (m) rent"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتستأجري",
+          "transliteration": "btista2jri",
+          "english": "you (f) rent"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيستأجر",
+          "transliteration": "byista2jir",
+          "english": "he rents"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتستأجر",
+          "transliteration": "btista2jir",
+          "english": "she rents"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منستأجر",
+          "transliteration": "mnista2jir",
+          "english": "we rent"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتستأجروا",
+          "transliteration": "btista2jru",
+          "english": "you (pl) rent"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيستأجروا",
+          "transliteration": "byista2jru",
+          "english": "they rent"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بستأجر",
+          "transliteration": "ma bsta2jir",
+          "english": "I don't rent"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتستأجر",
+          "transliteration": "ma btista2jir",
+          "english": "you (m) don't rent"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتستأجري",
+          "transliteration": "ma btista2jri",
+          "english": "you (f) don't rent"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيستأجر",
+          "transliteration": "ma byista2jir",
+          "english": "he doesn't rent"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتستأجر",
+          "transliteration": "ma btista2jir",
+          "english": "she doesn't rent"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منستأجر",
+          "transliteration": "ma mnista2jir",
+          "english": "we don't rent"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتستأجروا",
+          "transliteration": "ma btista2jru",
+          "english": "you (pl) don't rent"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيستأجروا",
+          "transliteration": "ma byista2jru",
+          "english": "they don't rent"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح استأجر",
+          "transliteration": "ra7 sta2jir",
+          "english": "I will rent"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تستأجر",
+          "transliteration": "ra7 tista2jir",
+          "english": "you (m) will rent"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تستأجري",
+          "transliteration": "ra7 tista2jri",
+          "english": "you (f) will rent"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يستأجر",
+          "transliteration": "ra7 yista2jir",
+          "english": "he will rent"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تستأجر",
+          "transliteration": "ra7 tista2jir",
+          "english": "she will rent"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نستأجر",
+          "transliteration": "ra7 nista2jir",
+          "english": "we will rent"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تستأجروا",
+          "transliteration": "ra7 tista2jru",
+          "english": "you (pl) will rent"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يستأجروا",
+          "transliteration": "ra7 yista2jru",
+          "english": "they will rent"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح استأجر",
+          "transliteration": "ma ra7 sta2jir",
+          "english": "I won't rent"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تستأجر",
+          "transliteration": "ma ra7 tista2jir",
+          "english": "you (m) won't rent"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تستأجري",
+          "transliteration": "ma ra7 tista2jri",
+          "english": "you (f) won't rent"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يستأجر",
+          "transliteration": "ma ra7 yista2jir",
+          "english": "he won't rent"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تستأجر",
+          "transliteration": "ma ra7 tista2jir",
+          "english": "she won't rent"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نستأجر",
+          "transliteration": "ma ra7 nista2jir",
+          "english": "we won't rent"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تستأجروا",
+          "transliteration": "ma ra7 tista2jru",
+          "english": "you (pl) won't rent"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يستأجروا",
+          "transliteration": "ma ra7 yista2jru",
+          "english": "they won't rent"
+        }
+      ]
+    }
+  },
+  "form": "X",
+  "source": "generated"
+}

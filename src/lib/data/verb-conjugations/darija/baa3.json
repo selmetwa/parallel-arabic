@@ -1,0 +1,320 @@
+{
+  "slug": "baa3",
+  "arabic": "باع",
+  "transliteration": "ba3",
+  "english": "to sell",
+  "wordId": null,
+  "rootLetters": "ب ي ع",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a 'ya' root, so the middle vowel disappears in the past tense for consonant-initial suffixes (e.g., be3t) and becomes 'i' in the present (kanbi3).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بعت",
+          "transliteration": "be3t",
+          "english": "I sold"
+        },
+        {
+          "person": "enta",
+          "arabic": "بعتي",
+          "transliteration": "be3ti",
+          "english": "you (m) sold"
+        },
+        {
+          "person": "enti",
+          "arabic": "بعتي",
+          "transliteration": "be3ti",
+          "english": "you (f) sold"
+        },
+        {
+          "person": "howa",
+          "arabic": "باع",
+          "transliteration": "ba3",
+          "english": "he sold"
+        },
+        {
+          "person": "heya",
+          "arabic": "باعت",
+          "transliteration": "ba3et",
+          "english": "she sold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بعنا",
+          "transliteration": "be3na",
+          "english": "we sold"
+        },
+        {
+          "person": "entu",
+          "arabic": "بعتيو",
+          "transliteration": "be3tiw",
+          "english": "you (pl) sold"
+        },
+        {
+          "person": "homma",
+          "arabic": "باعو",
+          "transliteration": "ba3u",
+          "english": "they sold"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بعتش",
+          "transliteration": "ma be3tsh",
+          "english": "I didn't sell"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بعتيش",
+          "transliteration": "ma be3tish",
+          "english": "you (m) didn't sell"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بعتيش",
+          "transliteration": "ma be3tish",
+          "english": "you (f) didn't sell"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما باعش",
+          "transliteration": "ma ba3sh",
+          "english": "he didn't sell"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما باعتش",
+          "transliteration": "ma ba3etsh",
+          "english": "she didn't sell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بعناش",
+          "transliteration": "ma be3nash",
+          "english": "we didn't sell"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بعتيوش",
+          "transliteration": "ma be3tiwsh",
+          "english": "you (pl) didn't sell"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما باعوش",
+          "transliteration": "ma ba3ush",
+          "english": "they didn't sell"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنبيع",
+          "transliteration": "kanbi3",
+          "english": "I sell"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتبيع",
+          "transliteration": "katbi3",
+          "english": "you (m) sell"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتبيعي",
+          "transliteration": "katbi3i",
+          "english": "you (f) sell"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيبيع",
+          "transliteration": "kaybi3",
+          "english": "he sells"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتبيع",
+          "transliteration": "katbi3",
+          "english": "she sells"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنبيعو",
+          "transliteration": "kanbi3u",
+          "english": "we sell"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتبيعو",
+          "transliteration": "katbi3u",
+          "english": "you (pl) sell"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيبيعو",
+          "transliteration": "kaybi3u",
+          "english": "they sell"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنبيعش",
+          "transliteration": "ma kanbi3sh",
+          "english": "I don't sell"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتبيعش",
+          "transliteration": "ma katbi3sh",
+          "english": "you (m) don't sell"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتبيعيش",
+          "transliteration": "ma katbi3ish",
+          "english": "you (f) don't sell"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيبيعش",
+          "transliteration": "ma kaybi3sh",
+          "english": "he doesn't sell"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتبيعش",
+          "transliteration": "ma katbi3sh",
+          "english": "she doesn't sell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنبيعوش",
+          "transliteration": "ma kanbi3ush",
+          "english": "we don't sell"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتبيعوش",
+          "transliteration": "ma katbi3ush",
+          "english": "you (pl) don't sell"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيبيعوش",
+          "transliteration": "ma kaybi3ush",
+          "english": "they don't sell"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نبيع",
+          "transliteration": "ghadi nbi3",
+          "english": "I will sell"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تبيع",
+          "transliteration": "ghadi tbi3",
+          "english": "you (m) will sell"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تبيعي",
+          "transliteration": "ghadi tbi3i",
+          "english": "you (f) will sell"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يبيع",
+          "transliteration": "ghadi ybi3",
+          "english": "he will sell"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تبيع",
+          "transliteration": "ghadi tbi3",
+          "english": "she will sell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نبيعو",
+          "transliteration": "ghadi nbi3u",
+          "english": "we will sell"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تبيعو",
+          "transliteration": "ghadi tbi3u",
+          "english": "you (pl) will sell"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يبيعو",
+          "transliteration": "ghadi ybi3u",
+          "english": "they will sell"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نبيع",
+          "transliteration": "ma ghadish nbi3",
+          "english": "I won't sell"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تبيع",
+          "transliteration": "ma ghadish tbi3",
+          "english": "you (m) won't sell"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تبيعي",
+          "transliteration": "ma ghadish tbi3i",
+          "english": "you (f) won't sell"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يبيع",
+          "transliteration": "ma ghadish ybi3",
+          "english": "he won't sell"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تبيع",
+          "transliteration": "ma ghadish tbi3",
+          "english": "she won't sell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نبيعو",
+          "transliteration": "ma ghadish nbi3u",
+          "english": "we won't sell"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تبيعو",
+          "transliteration": "ma ghadish tbi3u",
+          "english": "you (pl) won't sell"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يبيعو",
+          "transliteration": "ma ghadish ybi3u",
+          "english": "they won't sell"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

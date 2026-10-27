@@ -10,6 +10,7 @@
 	import { invalidateAll } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { trackEvent } from '$lib/analytics';
+	import { grammarForLesson } from '$lib/data/grammar/lesson-notes';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
@@ -392,7 +393,9 @@
 							class="tip {lesson.x > 0 ? 'tip--left' : 'tip--right'}"
 							class:tip--shown={lesson.status === 'active'}
 						>
-							<span class="tip-num">Lesson {i + 1}</span>
+							<span class="tip-num">
+								Lesson {i + 1}{#if grammarForLesson(lesson.id, lesson.dialect).length} · 📖 Grammar{/if}
+							</span>
 							<h3 class="tip-title">{lesson.title}</h3>
 							<p class="tip-note">{lesson.description}</p>
 						</div>
@@ -420,7 +423,7 @@
 							</button>
 							<!-- Mobile-only label below -->
 							<div class="tip-mobile">
-								<span>{lesson.title}</span>
+								<span>{#if grammarForLesson(lesson.id, lesson.dialect).length}<span aria-label="Includes a grammar explanation">📖 </span>{/if}{lesson.title}</span>
 							</div>
 						</div>
 					</div>
@@ -695,7 +698,13 @@
 		line-height: 1.3;
 		color: var(--text1);
 	}
+	/* Two lines at most, so a card never reaches the next step's (140px apart). */
 	.tip-note {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 		margin-top: 0.25rem;
 		font-size: 0.72rem;
 		line-height: 1.4;

@@ -5,11 +5,18 @@
 	import CreateLessonModal from '$lib/components/dialect-shared/lesson/components/CreateLessonModal.svelte';
 	import { trackEvent } from '$lib/analytics';
 	import { isSelectableDialect } from '$lib/constants/dialects';
+	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { page } from '$app/state';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
 	let isAuthModalOpen = $state(false);
-	let selectedDialect = $state('egyptian-arabic');
+	// A grammar article's "practise this" link carries a focus area and dialect.
+	const focusParam = page.url.searchParams.get('focus') ?? undefined;
+	const dialectParam = page.url.searchParams.get('dialect');
+	let selectedDialect = $state(
+		isSelectableDialect(dialectParam) ? dialectParam : getDefaultDialect(data.user)
+	);
 
 	function handleLessonClick(e: MouseEvent, lessonId: string) {
 		// Check authentication before navigating
@@ -28,7 +35,8 @@
 
 	// Search and filter state
 	let searchQuery = $state('');
-	let filterDialect = $state<string>('all');
+	// Start on the learner's dialect; "All" is one tap away.
+	let filterDialect = $state<string>(getDefaultDialect(data.user));
 	let filterLevel = $state<string>('all');
 	let sortBy = $state<'newest' | 'oldest' | 'level' | 'title'>('newest');
 
@@ -94,6 +102,12 @@
 		{ value: 'all', label: 'All Dialects' },
 		...dialectOptions
 	];
+
+	// Only the learner's dialect shows until they ask for the others.
+	let showAllDialects = $state(false);
+	let visibleDialects = $derived(
+		showAllDialects ? dialectOptions : dialectOptions.filter((d) => d.value === selectedDialect)
+	);
 
 	const levelOptions = [
 		{ value: 'all', label: 'All Levels' },
@@ -238,7 +252,7 @@
 		</div>
 
 		<div class="picks">
-			{#each dialectOptions as option (option.value)}
+			{#each visibleDialects as option (option.value)}
 				{@const d = dialectStyle(option.value)}
 				<button
 					type="button"
@@ -246,7 +260,10 @@
 					class:is-on={selectedDialect === option.value}
 					style="--accent:{d.accent}; --deep:{d.deep};"
 					aria-pressed={selectedDialect === option.value}
-					onclick={() => (selectedDialect = option.value)}
+					onclick={() => {
+						selectedDialect = option.value;
+						showAllDialects = false;
+					}}
 				>
 					<span class="pick-flag" aria-hidden="true">{d.flag}</span>
 					<span class="min-w-0">
@@ -263,9 +280,19 @@
 				</button>
 			{/each}
 		</div>
+		{#if dialectOptions.length > 1}
+			<button
+				type="button"
+				onclick={() => (showAllDialects = !showAllDialects)}
+				aria-expanded={showAllDialects}
+				class="mt-2 text-xs font-semibold text-text-200 underline underline-offset-2 hover:text-text-300"
+			>
+				{showAllDialects ? 'Show only my dialect' : 'Use a different dialect'}
+			</button>
+		{/if}
 
 		<div class="create">
-			<CreateLessonModal dialect={selectedDialect as any} {data}></CreateLessonModal>
+			<CreateLessonModal dialect={selectedDialect as any} {data} initialFocus={focusParam}></CreateLessonModal>
 		</div>
 
 		<!-- Step 2: browse -->

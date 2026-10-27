@@ -5,6 +5,9 @@
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import SpeakSentence from '$lib/components/dialect-shared/speak/SpeakSentence.svelte';
 	import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
+	import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
+	import LessonGrammarSheet from '$lib/components/grammar/LessonGrammarSheet.svelte';
+	import { grammarForLesson } from '$lib/data/grammar/lesson-notes';
 	import LessonTutorStep from '$lib/components/lesson-v2/LessonTutorStep.svelte';
 	import LessonMcqStep from '$lib/components/lesson-v2/LessonMcqStep.svelte';
 	import LessonReorderStep from '$lib/components/lesson-v2/LessonReorderStep.svelte';
@@ -59,6 +62,13 @@
 	};
 	let stepLabel = $derived(currentStep ? (STEP_LABELS[currentStep.type] ?? '') : '');
 
+	// The grammar the lesson teaches: shown before step 1, then one tap away.
+	let grammarTopics = $derived(grammarForLesson(lesson.topicId, lesson.dialect));
+	let grammarIntro = $state(
+		untrack(() => (initialStep ?? 0) === 0 && grammarForLesson(lesson.topicId, lesson.dialect).length > 0)
+	);
+	let grammarOpen = $state(untrack(() => grammarIntro));
+
 	// Global interlinear toggles (per-word English / transliteration).
 	let showEnglish = $state(false);
 	let showTransliteration = $state(true);
@@ -71,6 +81,18 @@
 		description: string;
 		isLoading: boolean;
 	} | null>(null);
+
+	// Only the lesson scrolls while it's open: the path behind it stays put.
+	$effect(() => {
+		const prev = document.body.style.overflow;
+		const prevOverscroll = document.documentElement.style.overscrollBehavior;
+		document.body.style.overflow = 'hidden';
+		document.documentElement.style.overscrollBehavior = 'none';
+		return () => {
+			document.body.style.overflow = prev;
+			document.documentElement.style.overscrollBehavior = prevOverscroll;
+		};
+	});
 
 	function saveProgress() {
 		if (!user?.id || !lesson.topicId) return;
@@ -178,6 +200,9 @@
 			<span class="title">{lesson.title}</span>
 		</div>
 		<div class="spacer"></div>
+		{#if grammarTopics.length}
+			<button class="ghost" onclick={() => (grammarOpen = true)} aria-label="Grammar for this lesson">📖 Grammar</button>
+		{/if}
 		<div class="toggle-group" role="group" aria-label="Show translation lines">
 			<button class="tog" class:on={showEnglish} onclick={() => (showEnglish = !showEnglish)}>EN</button>
 			<button class="tog" class:on={showTransliteration} onclick={() => (showTransliteration = !showTransliteration)}>Aa</button>
@@ -321,28 +346,24 @@
 	</main>
 </div>
 
+<LessonGrammarSheet
+	topics={grammarTopics}
+	dialect={lesson.dialect}
+	open={grammarOpen}
+	intro={grammarIntro}
+	onClose={() => {
+		grammarOpen = false;
+		grammarIntro = false;
+	}}
+/>
+
 {#if activeWord}
-	<div
-		class="word-modal"
-		role="dialog"
-		aria-modal="true"
-		style="--accent:{accent.accent}; --deep:{accent.deep};"
-	>
-		<button class="word-scrim" onclick={() => (activeWord = null)} aria-label="Close definition"></button>
-		<div class="word-box">
-			<button class="icon-btn close-x" onclick={() => (activeWord = null)} aria-label="Close">
-				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg>
-			</button>
-			{#if activeWord.isLoading}
-				<p class="muted">Loading…</p>
-			{:else}
-				<div class="word-ar" dir="rtl">{activeWord.arabic}</div>
-				{#if activeWord.transliterated}<div class="word-tr">{activeWord.transliterated}</div>{/if}
-				{#if activeWord.english}<div class="word-en">{activeWord.english}</div>{/if}
-				{#if activeWord.description}<p class="word-desc">{activeWord.description}</p>{/if}
-			{/if}
-		</div>
-	</div>
+	<DefinitionModal
+		activeWordObj={activeWord}
+		isModalOpen={true}
+		closeModal={() => (activeWord = null)}
+		{dialect}
+	/>
 {/if}
 
 
@@ -356,8 +377,11 @@
 		position: fixed;
 		inset: 0;
 		z-index: 60;
+		height: 100dvh;
 		display: flex;
 		flex-direction: column;
+		padding-top: env(safe-area-inset-top);
+		padding-bottom: env(safe-area-inset-bottom);
 		background: var(--tile2);
 		color: var(--text1);
 		font-family: 'ReadexPro', system-ui, sans-serif;
@@ -505,6 +529,7 @@
 	.body {
 		flex: 1;
 		overflow-y: auto;
+		overscroll-behavior: contain;
 		padding: 1.25rem 1.1rem 5rem;
 	}
 	.step {
@@ -722,63 +747,6 @@
 		padding-inline: 2rem;
 	}
 
-	/* Word definition modal */
-	.word-modal {
-		position: fixed;
-		inset: 0;
-		z-index: 70;
-		display: grid;
-		place-items: center;
-		padding: 1rem;
-	}
-	.word-scrim {
-		position: absolute;
-		inset: 0;
-		background: rgb(0 0 0 / 0.45);
-		cursor: pointer;
-	}
-	.word-box {
-		position: relative;
-		z-index: 1;
-		width: 100%;
-		max-width: 420px;
-		padding: 1.75rem;
-		border-radius: 1.25rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		box-shadow: 0 6px 0 var(--tile5);
-		animation: cardIn 0.3s ease both;
-	}
-	.close-x {
-		position: absolute;
-		top: 0.85rem;
-		right: 0.85rem;
-	}
-	.word-ar {
-		font-size: 2rem;
-		font-weight: 600;
-		color: var(--text1);
-	}
-	.word-tr {
-		margin-top: 0.2rem;
-		font-weight: 600;
-		color: var(--text2);
-	}
-	.word-en {
-		margin-top: 0.3rem;
-		font-weight: 600;
-		color: var(--text1);
-	}
-	.word-desc {
-		margin-top: 0.7rem;
-		line-height: 1.6;
-		white-space: pre-line;
-		color: var(--text2);
-	}
-	.muted {
-		color: var(--text2);
-	}
-
 	@media (max-width: 560px) {
 		.vocab-grid {
 			grid-template-columns: 1fr;
@@ -793,8 +761,7 @@
 	@media (prefers-reduced-motion: reduce) {
 		.step,
 		.vocab,
-		.done,
-		.word-box {
+		.done {
 			animation: none;
 		}
 		.fill,

@@ -1,0 +1,320 @@
+{
+  "slug": "rama",
+  "arabic": "رَمَى",
+  "transliteration": "rama",
+  "english": "to throw",
+  "wordId": null,
+  "rootLetters": "ر م ي",
+  "verbClass": "defective",
+  "notes": "This is a Form I defective verb (ending in a weak letter), so the final root letter changes or drops in certain conjugations, and it takes a visible fatha on the final 'ya' in the singular subjunctive (future negative).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رَمَيْتُ",
+          "transliteration": "ramaytu",
+          "english": "I threw"
+        },
+        {
+          "person": "enta",
+          "arabic": "رَمَيْتَ",
+          "transliteration": "ramayta",
+          "english": "you (m) threw"
+        },
+        {
+          "person": "enti",
+          "arabic": "رَمَيْتِ",
+          "transliteration": "ramayti",
+          "english": "you (f) threw"
+        },
+        {
+          "person": "howa",
+          "arabic": "رَمَى",
+          "transliteration": "rama",
+          "english": "he threw"
+        },
+        {
+          "person": "heya",
+          "arabic": "رَمَتْ",
+          "transliteration": "ramat",
+          "english": "she threw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رَمَيْنَا",
+          "transliteration": "ramayna",
+          "english": "we threw"
+        },
+        {
+          "person": "entu",
+          "arabic": "رَمَيْتُمْ",
+          "transliteration": "ramaytum",
+          "english": "you (pl) threw"
+        },
+        {
+          "person": "homma",
+          "arabic": "رَمَوْا",
+          "transliteration": "ramaw",
+          "english": "they threw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا رَمَيْتُ",
+          "transliteration": "ma ramaytu",
+          "english": "I didn't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا رَمَيْتَ",
+          "transliteration": "ma ramayta",
+          "english": "you (m) didn't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا رَمَيْتِ",
+          "transliteration": "ma ramayti",
+          "english": "you (f) didn't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا رَمَى",
+          "transliteration": "ma rama",
+          "english": "he didn't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا رَمَتْ",
+          "transliteration": "ma ramat",
+          "english": "she didn't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا رَمَيْنَا",
+          "transliteration": "ma ramayna",
+          "english": "we didn't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا رَمَيْتُمْ",
+          "transliteration": "ma ramaytum",
+          "english": "you (pl) didn't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا رَمَوْا",
+          "transliteration": "ma ramaw",
+          "english": "they didn't throw"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَرْمِي",
+          "transliteration": "armi",
+          "english": "I throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَرْمِي",
+          "transliteration": "tarmi",
+          "english": "you (m) throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَرْمِينَ",
+          "transliteration": "tarmina",
+          "english": "you (f) throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَرْمِي",
+          "transliteration": "yarmi",
+          "english": "he throws"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَرْمِي",
+          "transliteration": "tarmi",
+          "english": "she throws"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَرْمِي",
+          "transliteration": "narmi",
+          "english": "we throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَرْمُونَ",
+          "transliteration": "tarmuna",
+          "english": "you (pl) throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَرْمُونَ",
+          "transliteration": "yarmuna",
+          "english": "they throw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَرْمِي",
+          "transliteration": "la armi",
+          "english": "I don't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَرْمِي",
+          "transliteration": "la tarmi",
+          "english": "you (m) don't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَرْمِينَ",
+          "transliteration": "la tarmina",
+          "english": "you (f) don't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَرْمِي",
+          "transliteration": "la yarmi",
+          "english": "he doesn't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَرْمِي",
+          "transliteration": "la tarmi",
+          "english": "she doesn't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَرْمِي",
+          "transliteration": "la narmi",
+          "english": "we don't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَرْمُونَ",
+          "transliteration": "la tarmuna",
+          "english": "you (pl) don't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَرْمُونَ",
+          "transliteration": "la yarmuna",
+          "english": "they don't throw"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَرْمِي",
+          "transliteration": "sa2armi",
+          "english": "I will throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَرْمِي",
+          "transliteration": "satarmi",
+          "english": "you (m) will throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَرْمِينَ",
+          "transliteration": "satarmina",
+          "english": "you (f) will throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَرْمِي",
+          "transliteration": "sayarmi",
+          "english": "he will throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَرْمِي",
+          "transliteration": "satarmi",
+          "english": "she will throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَرْمِي",
+          "transliteration": "sanarmi",
+          "english": "we will throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَرْمُونَ",
+          "transliteration": "satarmuna",
+          "english": "you (pl) will throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَرْمُونَ",
+          "transliteration": "sayarmuna",
+          "english": "they will throw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَرْمِيَ",
+          "transliteration": "lan armiya",
+          "english": "I won't throw"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَرْمِيَ",
+          "transliteration": "lan tarmiya",
+          "english": "you (m) won't throw"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَرْمِي",
+          "transliteration": "lan tarmi",
+          "english": "you (f) won't throw"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَرْمِيَ",
+          "transliteration": "lan yarmiya",
+          "english": "he won't throw"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَرْمِيَ",
+          "transliteration": "lan tarmiya",
+          "english": "she won't throw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَرْمِيَ",
+          "transliteration": "lan narmiya",
+          "english": "we won't throw"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَرْمُوا",
+          "transliteration": "lan tarmu",
+          "english": "you (pl) won't throw"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَرْمُوا",
+          "transliteration": "lan yarmu",
+          "english": "they won't throw"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

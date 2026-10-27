@@ -1,0 +1,320 @@
+{
+  "slug": "gaab",
+  "arabic": "جاب",
+  "transliteration": "yaab",
+  "english": "to bring",
+  "wordId": null,
+  "rootLetters": "ج ي ب",
+  "verbClass": "hollow",
+  "notes": "Hollow Form I verb. In Gulf Arabic, the letter jeem (ج) is commonly pronounced as 'y', so جاب is pronounced 'yaab' and يجيب is 'yeeb'.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "جبت",
+          "transliteration": "yibt",
+          "english": "I brought"
+        },
+        {
+          "person": "enta",
+          "arabic": "جبت",
+          "transliteration": "yibt",
+          "english": "you (m) brought"
+        },
+        {
+          "person": "enti",
+          "arabic": "جبتي",
+          "transliteration": "yibti",
+          "english": "you (f) brought"
+        },
+        {
+          "person": "howa",
+          "arabic": "جاب",
+          "transliteration": "yaab",
+          "english": "he brought"
+        },
+        {
+          "person": "heya",
+          "arabic": "جابت",
+          "transliteration": "yaabat",
+          "english": "she brought"
+        },
+        {
+          "person": "ehna",
+          "arabic": "جبنا",
+          "transliteration": "yibna",
+          "english": "we brought"
+        },
+        {
+          "person": "entu",
+          "arabic": "جبتوا",
+          "transliteration": "yibtaw",
+          "english": "you (pl) brought"
+        },
+        {
+          "person": "homma",
+          "arabic": "جابوا",
+          "transliteration": "yaabaw",
+          "english": "they brought"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما جبت",
+          "transliteration": "ma yibt",
+          "english": "I didn't bring"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما جبت",
+          "transliteration": "ma yibt",
+          "english": "you (m) didn't bring"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما جبتي",
+          "transliteration": "ma yibti",
+          "english": "you (f) didn't bring"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما جاب",
+          "transliteration": "ma yaab",
+          "english": "he didn't bring"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما جابت",
+          "transliteration": "ma yaabat",
+          "english": "she didn't bring"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما جبنا",
+          "transliteration": "ma yibna",
+          "english": "we didn't bring"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما جبتوا",
+          "transliteration": "ma yibtaw",
+          "english": "you (pl) didn't bring"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما جابوا",
+          "transliteration": "ma yaabaw",
+          "english": "they didn't bring"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اجيب",
+          "transliteration": "ayeeb",
+          "english": "I bring"
+        },
+        {
+          "person": "enta",
+          "arabic": "تجيب",
+          "transliteration": "tyeeb",
+          "english": "you (m) bring"
+        },
+        {
+          "person": "enti",
+          "arabic": "تجيبين",
+          "transliteration": "tyeebeen",
+          "english": "you (f) bring"
+        },
+        {
+          "person": "howa",
+          "arabic": "يجيب",
+          "transliteration": "yeeb",
+          "english": "he brings"
+        },
+        {
+          "person": "heya",
+          "arabic": "تجيب",
+          "transliteration": "tyeeb",
+          "english": "she brings"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نجيب",
+          "transliteration": "nyeeb",
+          "english": "we bring"
+        },
+        {
+          "person": "entu",
+          "arabic": "تجيبون",
+          "transliteration": "tyeeboon",
+          "english": "you (pl) bring"
+        },
+        {
+          "person": "homma",
+          "arabic": "يجيبون",
+          "transliteration": "yeeboon",
+          "english": "they bring"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اجيب",
+          "transliteration": "ma ayeeb",
+          "english": "I don't bring"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تجيب",
+          "transliteration": "ma tyeeb",
+          "english": "you (m) don't bring"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تجيبين",
+          "transliteration": "ma tyeebeen",
+          "english": "you (f) don't bring"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يجيب",
+          "transliteration": "ma yeeb",
+          "english": "he doesn't bring"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تجيب",
+          "transliteration": "ma tyeeb",
+          "english": "she doesn't bring"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نجيب",
+          "transliteration": "ma nyeeb",
+          "english": "we don't bring"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تجيبون",
+          "transliteration": "ma tyeeboon",
+          "english": "you (pl) don't bring"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يجيبون",
+          "transliteration": "ma yeeboon",
+          "english": "they don't bring"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اجيب",
+          "transliteration": "raa7 ayeeb",
+          "english": "I will bring"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تجيب",
+          "transliteration": "raa7 tyeeb",
+          "english": "you (m) will bring"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تجيبين",
+          "transliteration": "raa7 tyeebeen",
+          "english": "you (f) will bring"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يجيب",
+          "transliteration": "raa7 yeeb",
+          "english": "he will bring"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تجيب",
+          "transliteration": "raa7 tyeeb",
+          "english": "she will bring"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نجيب",
+          "transliteration": "raa7 nyeeb",
+          "english": "we will bring"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تجيبون",
+          "transliteration": "raa7 tyeeboon",
+          "english": "you (pl) will bring"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يجيبون",
+          "transliteration": "raa7 yeeboon",
+          "english": "they will bring"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اجيب",
+          "transliteration": "ma raa7 ayeeb",
+          "english": "I won't bring"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تجيب",
+          "transliteration": "ma raa7 tyeeb",
+          "english": "you (m) won't bring"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تجيبين",
+          "transliteration": "ma raa7 tyeebeen",
+          "english": "you (f) won't bring"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يجيب",
+          "transliteration": "ma raa7 yeeb",
+          "english": "he won't bring"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تجيب",
+          "transliteration": "ma raa7 tyeeb",
+          "english": "she won't bring"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نجيب",
+          "transliteration": "ma raa7 nyeeb",
+          "english": "we won't bring"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تجيبون",
+          "transliteration": "ma raa7 tyeeboon",
+          "english": "you (pl) won't bring"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يجيبون",
+          "transliteration": "ma raa7 yeeboon",
+          "english": "they won't bring"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

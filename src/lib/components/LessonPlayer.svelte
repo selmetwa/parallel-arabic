@@ -17,6 +17,9 @@
     import { speakArabic } from '$lib/helpers/speak-arabic';
     import { curriculum } from '$lib/data/curriculum';
     import cn from 'classnames';
+    import { untrack } from 'svelte';
+    import LessonGrammarSheet from '$lib/components/grammar/LessonGrammarSheet.svelte';
+    import { grammarForLesson } from '$lib/data/grammar/lesson-notes';
 
     let { lesson, onClose, onLessonComplete, user, initialStep } = $props<{
         lesson: GeneratedLesson,
@@ -25,6 +28,25 @@
         user?: { id: string } | null,
         initialStep?: number
     }>();
+
+    // The grammar the lesson teaches: shown before step 1, then one tap away.
+    let grammarTopics = $derived(grammarForLesson(lesson.topicId, lesson.dialect));
+    let grammarIntro = $state(
+        untrack(() => (initialStep ?? 0) === 0 && grammarForLesson(lesson.topicId, lesson.dialect).length > 0)
+    );
+    let grammarOpen = $state(untrack(() => grammarIntro));
+
+    // Only the lesson scrolls while it's open: the path behind it stays put.
+    $effect(() => {
+        const prev = document.body.style.overflow;
+        const prevOverscroll = document.documentElement.style.overscrollBehavior;
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overscrollBehavior = 'none';
+        return () => {
+            document.body.style.overflow = prev;
+            document.documentElement.style.overscrollBehavior = prevOverscroll;
+        };
+    });
 
     let currentStepIndex = $state(initialStep ?? 0);
     let currentStep = $derived(lesson.steps[currentStepIndex]);
@@ -683,7 +705,7 @@
     }
 </script>
 
-<div class="fixed inset-0 z-[100] bg-tile-200 flex flex-col" transition:fade={{ duration: 200 }}>
+<div class="fixed inset-0 z-[100] h-dvh bg-tile-200 flex flex-col" style="padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom);" transition:fade={{ duration: 200 }}>
 
     <!-- Header -->
     <header class="bg-tile-300 border-b border-tile-500 px-4 py-3 flex items-center gap-4 z-10">
@@ -703,6 +725,15 @@
             </div>
         </div>
 
+        {#if grammarTopics.length}
+            <button
+                onclick={() => (grammarOpen = true)}
+                class="text-xs font-semibold text-text-200 hover:text-text-300 px-3 py-1.5 rounded-lg hover:bg-tile-400 transition-colors"
+                aria-label="Grammar for this lesson"
+            >
+                📖 Grammar
+            </button>
+        {/if}
         <button
             onclick={() => isDiacriticModalOpen = true}
  class="text-xs font-semibold text-text-200 hover:text-text-300 px-3 py-1.5 rounded-lg hover:bg-tile-400 transition-colors"
@@ -714,7 +745,7 @@
     </header>
 
     <!-- Content Area -->
-    <div class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 flex items-start justify-center">
+    <div class="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 lg:p-8 flex items-start justify-center">
         <div class="w-full max-w-2xl lg:max-w-5xl py-4 lg:py-6 flex flex-col">
 
             {#key currentStepIndex}
@@ -1207,3 +1238,14 @@
         </div>
     </footer>
 </div>
+
+<LessonGrammarSheet
+    topics={grammarTopics}
+    dialect={lesson.dialect}
+    open={grammarOpen}
+    intro={grammarIntro}
+    onClose={() => {
+        grammarOpen = false;
+        grammarIntro = false;
+    }}
+/>

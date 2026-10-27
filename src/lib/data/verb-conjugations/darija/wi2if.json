@@ -1,0 +1,320 @@
+{
+  "slug": "wi2if",
+  "arabic": "وقف",
+  "transliteration": "wqef",
+  "english": "to stand",
+  "wordId": null,
+  "rootLetters": "و ق ف",
+  "verbClass": "sound",
+  "notes": "Unlike in Modern Standard Arabic, the initial 'w' is retained in the present tense, so it conjugates like a regular sound verb in Moroccan Darija.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وقفت",
+          "transliteration": "wqeft",
+          "english": "I stood"
+        },
+        {
+          "person": "enta",
+          "arabic": "وقفتي",
+          "transliteration": "wqefti",
+          "english": "you (m) stood"
+        },
+        {
+          "person": "enti",
+          "arabic": "وقفتي",
+          "transliteration": "wqefti",
+          "english": "you (f) stood"
+        },
+        {
+          "person": "howa",
+          "arabic": "وقف",
+          "transliteration": "wqef",
+          "english": "he stood"
+        },
+        {
+          "person": "heya",
+          "arabic": "وقفات",
+          "transliteration": "weqfat",
+          "english": "she stood"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وقفنا",
+          "transliteration": "wqefna",
+          "english": "we stood"
+        },
+        {
+          "person": "entu",
+          "arabic": "وقفتيو",
+          "transliteration": "wqeftiw",
+          "english": "you (pl) stood"
+        },
+        {
+          "person": "homma",
+          "arabic": "وقفو",
+          "transliteration": "weqfu",
+          "english": "they stood"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وقفتش",
+          "transliteration": "ma wqeftsh",
+          "english": "I didn't stand"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وقفتيش",
+          "transliteration": "ma wqeftish",
+          "english": "you (m) didn't stand"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وقفتيش",
+          "transliteration": "ma wqeftish",
+          "english": "you (f) didn't stand"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وقفش",
+          "transliteration": "ma wqefsh",
+          "english": "he didn't stand"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وقفاتش",
+          "transliteration": "ma weqfatsh",
+          "english": "she didn't stand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وقفناش",
+          "transliteration": "ma wqefnash",
+          "english": "we didn't stand"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وقفتيوش",
+          "transliteration": "ma wqeftiwsh",
+          "english": "you (pl) didn't stand"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وقفوش",
+          "transliteration": "ma weqfush",
+          "english": "they didn't stand"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنوقف",
+          "transliteration": "kanwqef",
+          "english": "I stand"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتوقف",
+          "transliteration": "katwqef",
+          "english": "you (m) stand"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتوقفي",
+          "transliteration": "katweqfi",
+          "english": "you (f) stand"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيوقف",
+          "transliteration": "kaywqef",
+          "english": "he stands"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتوقف",
+          "transliteration": "katwqef",
+          "english": "she stands"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنوقفو",
+          "transliteration": "kanweqfu",
+          "english": "we stand"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتوقفو",
+          "transliteration": "katweqfu",
+          "english": "you (pl) stand"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيوقفو",
+          "transliteration": "kayweqfu",
+          "english": "they stand"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنوقفش",
+          "transliteration": "ma kanwqefsh",
+          "english": "I don't stand"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتوقفش",
+          "transliteration": "ma katwqefsh",
+          "english": "you (m) don't stand"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتوقفيش",
+          "transliteration": "ma katweqfish",
+          "english": "you (f) don't stand"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيوقفش",
+          "transliteration": "ma kaywqefsh",
+          "english": "he doesn't stand"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتوقفش",
+          "transliteration": "ma katwqefsh",
+          "english": "she doesn't stand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنوقفوش",
+          "transliteration": "ma kanweqfush",
+          "english": "we don't stand"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتوقفوش",
+          "transliteration": "ma katweqfush",
+          "english": "you (pl) don't stand"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيوقفوش",
+          "transliteration": "ma kayweqfush",
+          "english": "they don't stand"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نوقف",
+          "transliteration": "ghadi nwqef",
+          "english": "I will stand"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي توقف",
+          "transliteration": "ghadi twqef",
+          "english": "you (m) will stand"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي توقفي",
+          "transliteration": "ghadi tweqfi",
+          "english": "you (f) will stand"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يوقف",
+          "transliteration": "ghadi ywqef",
+          "english": "he will stand"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي توقف",
+          "transliteration": "ghadi twqef",
+          "english": "she will stand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نوقفو",
+          "transliteration": "ghadi nweqfu",
+          "english": "we will stand"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي توقفو",
+          "transliteration": "ghadi tweqfu",
+          "english": "you (pl) will stand"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يوقفو",
+          "transliteration": "ghadi yweqfu",
+          "english": "they will stand"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نوقف",
+          "transliteration": "ma ghadish nwqef",
+          "english": "I won't stand"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش توقف",
+          "transliteration": "ma ghadish twqef",
+          "english": "you (m) won't stand"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش توقفي",
+          "transliteration": "ma ghadish tweqfi",
+          "english": "you (f) won't stand"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يوقف",
+          "transliteration": "ma ghadish ywqef",
+          "english": "he won't stand"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش توقف",
+          "transliteration": "ma ghadish twqef",
+          "english": "she won't stand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نوقفو",
+          "transliteration": "ma ghadish nweqfu",
+          "english": "we won't stand"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش توقفو",
+          "transliteration": "ma ghadish tweqfu",
+          "english": "you (pl) won't stand"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يوقفو",
+          "transliteration": "ma ghadish yweqfu",
+          "english": "they won't stand"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

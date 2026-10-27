@@ -2,24 +2,18 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { sidebarCollapsed } from '$lib/store/store';
-
-	interface NavItem {
-		label: string;
-		href: string;
-		icon: string;
-	}
-
-	interface NavSection {
-		title: string;
-		items: NavItem[];
-	}
+	import { getNavSections } from '$lib/constants/nav';
+	import DialectSwitcher from './DialectSwitcher.svelte';
 
 	interface Props {
 		session: any;
 		handleOpenDrawer?: () => void;
+		targetDialect?: string | null;
 	}
 
-	let { session, handleOpenDrawer }: Props = $props();
+	let { session, handleOpenDrawer, targetDialect }: Props = $props();
+
+	const learningDialect = $derived(targetDialect || 'egyptian-arabic');
 
 	// Load collapsed state from localStorage on mount
 	onMount(() => {
@@ -45,44 +39,10 @@
 		sidebarCollapsed.update((collapsed) => !collapsed);
 	}
 
-	const navSections = $derived.by(() => {
-		const baseSections: NavSection[] = [
-			{
-				title: 'Learn',
-				items: [
-					{ label: 'Alphabet', href: '/alphabet', icon: '✍️' },
-					{ label: 'Lessons', href: '/lessons', icon: '📚' },
-					{ label: 'Vocab Review', href: '/review', icon: '🧠' }
-				]
-			},
-			{
-				title: 'Practice',
-				items: [
-					{ label: 'Scenarios', href: '/scenarios', icon: '🗣️' },
-					{ label: 'Game', href: '/learn/game', icon: '🎮' },
-					{ label: 'Sentences', href: '/sentences', icon: '📝' },
-					{ label: 'Conjugations', href: '/conjugations', icon: '🔄' },
-					{ label: 'Stories', href: '/stories', icon: '📖' },
-					{ label: 'Speak', href: '/speak', icon: '🎤' },
-					{ label: 'Tutor', href: '/tutor', icon: '💬' }
-				]
-			},
-			{
-				title: 'General',
-				items: [
-					{ label: 'My words', href: '/review/all-words', icon: '🗂️' },
-					{ label: 'History', href: '/history', icon: '📜' },
-					session
-						? { label: 'Profile', href: '/profile', icon: '👤' }
-						: { label: 'Login', href: '/login', icon: '🔐' }
-				]
-			}
-		];
-		return baseSections;
-	});
+	const navSections = $derived(getNavSections(session, learningDialect));
 
 	let expandedSections = $state<Set<string>>(
-		new Set(['Learn', 'Practice', 'Explore', 'Resources', 'General'])
+		new Set(['Learn', 'Practice', 'General'])
 	);
 
 	function toggleSection(title: string) {
@@ -136,6 +96,12 @@
 				</svg>
 			</button>
 		</div>
+
+		{#if session}
+			<div class="px-4 pb-4">
+				<DialectSwitcher dialect={learningDialect} showLabel align="left" />
+			</div>
+		{/if}
 
 		<div class="bg-tile-500/70 mx-4 h-px"></div>
 

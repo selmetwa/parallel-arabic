@@ -1,0 +1,320 @@
+{
+  "slug": "simi3",
+  "arabic": "سمع",
+  "transliteration": "sima3",
+  "english": "to hear",
+  "wordId": null,
+  "rootLetters": "س م ع",
+  "verbClass": "sound",
+  "notes": "This is a regular Form I sound verb; the middle vowel drops in the 'she' and 'they' past forms (sim3at, sim3aw).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سمعت",
+          "transliteration": "sima3it",
+          "english": "I heard"
+        },
+        {
+          "person": "enta",
+          "arabic": "سمعت",
+          "transliteration": "sima3it",
+          "english": "you (m) heard"
+        },
+        {
+          "person": "enti",
+          "arabic": "سمعتي",
+          "transliteration": "sima3ti",
+          "english": "you (f) heard"
+        },
+        {
+          "person": "howa",
+          "arabic": "سمع",
+          "transliteration": "sima3",
+          "english": "he heard"
+        },
+        {
+          "person": "heya",
+          "arabic": "سمعت",
+          "transliteration": "sim3at",
+          "english": "she heard"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سمعنا",
+          "transliteration": "sima3na",
+          "english": "we heard"
+        },
+        {
+          "person": "entu",
+          "arabic": "سمعتوا",
+          "transliteration": "sima3tu",
+          "english": "you (pl) heard"
+        },
+        {
+          "person": "homma",
+          "arabic": "سمعوا",
+          "transliteration": "sim3aw",
+          "english": "they heard"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سمعت",
+          "transliteration": "ma sima3it",
+          "english": "I didn't hear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سمعت",
+          "transliteration": "ma sima3it",
+          "english": "you (m) didn't hear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سمعتي",
+          "transliteration": "ma sima3ti",
+          "english": "you (f) didn't hear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سمع",
+          "transliteration": "ma sima3",
+          "english": "he didn't hear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سمعت",
+          "transliteration": "ma sim3at",
+          "english": "she didn't hear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سمعنا",
+          "transliteration": "ma sima3na",
+          "english": "we didn't hear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سمعتوا",
+          "transliteration": "ma sima3tu",
+          "english": "you (pl) didn't hear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سمعوا",
+          "transliteration": "ma sim3aw",
+          "english": "they didn't hear"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اسمع",
+          "transliteration": "asma3",
+          "english": "I hear"
+        },
+        {
+          "person": "enta",
+          "arabic": "تسمع",
+          "transliteration": "tisma3",
+          "english": "you (m) hear"
+        },
+        {
+          "person": "enti",
+          "arabic": "تسمعين",
+          "transliteration": "tisma3een",
+          "english": "you (f) hear"
+        },
+        {
+          "person": "howa",
+          "arabic": "يسمع",
+          "transliteration": "yisma3",
+          "english": "he hears"
+        },
+        {
+          "person": "heya",
+          "arabic": "تسمع",
+          "transliteration": "tisma3",
+          "english": "she hears"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نسمع",
+          "transliteration": "nisma3",
+          "english": "we hear"
+        },
+        {
+          "person": "entu",
+          "arabic": "تسمعون",
+          "transliteration": "tisma3oon",
+          "english": "you (pl) hear"
+        },
+        {
+          "person": "homma",
+          "arabic": "يسمعون",
+          "transliteration": "yisma3oon",
+          "english": "they hear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اسمع",
+          "transliteration": "ma asma3",
+          "english": "I don't hear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تسمع",
+          "transliteration": "ma tisma3",
+          "english": "you (m) don't hear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تسمعين",
+          "transliteration": "ma tisma3een",
+          "english": "you (f) don't hear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يسمع",
+          "transliteration": "ma yisma3",
+          "english": "he doesn't hear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تسمع",
+          "transliteration": "ma tisma3",
+          "english": "she doesn't hear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نسمع",
+          "transliteration": "ma nisma3",
+          "english": "we don't hear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تسمعون",
+          "transliteration": "ma tisma3oon",
+          "english": "you (pl) don't hear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يسمعون",
+          "transliteration": "ma yisma3oon",
+          "english": "they don't hear"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اسمع",
+          "transliteration": "raa7 asma3",
+          "english": "I will hear"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تسمع",
+          "transliteration": "raa7 tisma3",
+          "english": "you (m) will hear"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تسمعين",
+          "transliteration": "raa7 tisma3een",
+          "english": "you (f) will hear"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يسمع",
+          "transliteration": "raa7 yisma3",
+          "english": "he will hear"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تسمع",
+          "transliteration": "raa7 tisma3",
+          "english": "she will hear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نسمع",
+          "transliteration": "raa7 nisma3",
+          "english": "we will hear"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تسمعون",
+          "transliteration": "raa7 tisma3oon",
+          "english": "you (pl) will hear"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يسمعون",
+          "transliteration": "raa7 yisma3oon",
+          "english": "they will hear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اسمع",
+          "transliteration": "ma raa7 asma3",
+          "english": "I won't hear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تسمع",
+          "transliteration": "ma raa7 tisma3",
+          "english": "you (m) won't hear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تسمعين",
+          "transliteration": "ma raa7 tisma3een",
+          "english": "you (f) won't hear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يسمع",
+          "transliteration": "ma raa7 yisma3",
+          "english": "he won't hear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تسمع",
+          "transliteration": "ma raa7 tisma3",
+          "english": "she won't hear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نسمع",
+          "transliteration": "ma raa7 nisma3",
+          "english": "we won't hear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تسمعون",
+          "transliteration": "ma raa7 tisma3oon",
+          "english": "you (pl) won't hear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يسمعون",
+          "transliteration": "ma raa7 yisma3oon",
+          "english": "they won't hear"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

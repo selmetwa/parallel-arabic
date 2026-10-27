@@ -1,0 +1,320 @@
+{
+  "slug": "nizil",
+  "arabic": "نَزَلَ",
+  "transliteration": "nazala",
+  "english": "to go down",
+  "wordId": null,
+  "rootLetters": "ن ز ل",
+  "verbClass": "sound",
+  "notes": "This is a regular Form I sound verb with a kasra on the middle root letter in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نَزَلْتُ",
+          "transliteration": "nazaltu",
+          "english": "I went down"
+        },
+        {
+          "person": "enta",
+          "arabic": "نَزَلْتَ",
+          "transliteration": "nazalta",
+          "english": "you (m) went down"
+        },
+        {
+          "person": "enti",
+          "arabic": "نَزَلْتِ",
+          "transliteration": "nazalti",
+          "english": "you (f) went down"
+        },
+        {
+          "person": "howa",
+          "arabic": "نَزَلَ",
+          "transliteration": "nazala",
+          "english": "he went down"
+        },
+        {
+          "person": "heya",
+          "arabic": "نَزَلَتْ",
+          "transliteration": "nazalat",
+          "english": "she went down"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَزَلْنَا",
+          "transliteration": "nazalna",
+          "english": "we went down"
+        },
+        {
+          "person": "entu",
+          "arabic": "نَزَلْتُمْ",
+          "transliteration": "nazaltum",
+          "english": "you (pl) went down"
+        },
+        {
+          "person": "homma",
+          "arabic": "نَزَلُوا",
+          "transliteration": "nazalu",
+          "english": "they went down"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا نَزَلْتُ",
+          "transliteration": "ma nazaltu",
+          "english": "I didn't go down"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا نَزَلْتَ",
+          "transliteration": "ma nazalta",
+          "english": "you (m) didn't go down"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا نَزَلْتِ",
+          "transliteration": "ma nazalti",
+          "english": "you (f) didn't go down"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا نَزَلَ",
+          "transliteration": "ma nazala",
+          "english": "he didn't go down"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا نَزَلَتْ",
+          "transliteration": "ma nazalat",
+          "english": "she didn't go down"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا نَزَلْنَا",
+          "transliteration": "ma nazalna",
+          "english": "we didn't go down"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا نَزَلْتُمْ",
+          "transliteration": "ma nazaltum",
+          "english": "you (pl) didn't go down"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا نَزَلُوا",
+          "transliteration": "ma nazalu",
+          "english": "they didn't go down"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَنْزِلُ",
+          "transliteration": "anzilu",
+          "english": "I go down"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَنْزِلُ",
+          "transliteration": "tanzilu",
+          "english": "you (m) go down"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَنْزِلِينَ",
+          "transliteration": "tanzilina",
+          "english": "you (f) go down"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَنْزِلُ",
+          "transliteration": "yanzilu",
+          "english": "he goes down"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَنْزِلُ",
+          "transliteration": "tanzilu",
+          "english": "she goes down"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَنْزِلُ",
+          "transliteration": "nanzilu",
+          "english": "we go down"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَنْزِلُونَ",
+          "transliteration": "tanziluna",
+          "english": "you (pl) go down"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَنْزِلُونَ",
+          "transliteration": "yanziluna",
+          "english": "they go down"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَنْزِلُ",
+          "transliteration": "la anzilu",
+          "english": "I don't go down"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَنْزِلُ",
+          "transliteration": "la tanzilu",
+          "english": "you (m) don't go down"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَنْزِلِينَ",
+          "transliteration": "la tanzilina",
+          "english": "you (f) don't go down"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَنْزِلُ",
+          "transliteration": "la yanzilu",
+          "english": "he doesn't go down"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَنْزِلُ",
+          "transliteration": "la tanzilu",
+          "english": "she doesn't go down"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَنْزِلُ",
+          "transliteration": "la nanzilu",
+          "english": "we don't go down"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَنْزِلُونَ",
+          "transliteration": "la tanziluna",
+          "english": "you (pl) don't go down"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَنْزِلُونَ",
+          "transliteration": "la yanziluna",
+          "english": "they don't go down"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَنْزِلُ",
+          "transliteration": "sa2anzilu",
+          "english": "I will go down"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَنْزِلُ",
+          "transliteration": "satanzilu",
+          "english": "you (m) will go down"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَنْزِلِينَ",
+          "transliteration": "satanzilina",
+          "english": "you (f) will go down"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَنْزِلُ",
+          "transliteration": "sayanzilu",
+          "english": "he will go down"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَنْزِلُ",
+          "transliteration": "satanzilu",
+          "english": "she will go down"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَنْزِلُ",
+          "transliteration": "sananzilu",
+          "english": "we will go down"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَنْزِلُونَ",
+          "transliteration": "satanziluna",
+          "english": "you (pl) will go down"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَنْزِلُونَ",
+          "transliteration": "sayanziluna",
+          "english": "they will go down"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَنْزِلَ",
+          "transliteration": "lan anzila",
+          "english": "I won't go down"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَنْزِلَ",
+          "transliteration": "lan tanzila",
+          "english": "you (m) won't go down"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَنْزِلِي",
+          "transliteration": "lan tanzili",
+          "english": "you (f) won't go down"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَنْزِلَ",
+          "transliteration": "lan yanzila",
+          "english": "he won't go down"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَنْزِلَ",
+          "transliteration": "lan tanzila",
+          "english": "she won't go down"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَنْزِلَ",
+          "transliteration": "lan nanzila",
+          "english": "we won't go down"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَنْزِلُوا",
+          "transliteration": "lan tanzilu",
+          "english": "you (pl) won't go down"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَنْزِلُوا",
+          "transliteration": "lan yanzilu",
+          "english": "they won't go down"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

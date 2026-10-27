@@ -47,7 +47,11 @@
 	</ul>
 	<p>
 		The three spoken dialects are not slang versions of Fusha. They are full languages with their
-		own grammar, and they share most of their vocabulary with Fusha and each other. What separates
+		own grammar (compare the grammar guides for
+		<a href={resolve('/grammar/egyptian-arabic')}>Egyptian</a>,
+		<a href={resolve('/grammar/levantine')}>Levantine</a>,
+		<a href={resolve('/grammar/darija')}>Darija</a> and <a href={resolve('/grammar/fusha')}>Fusha</a>),
+		and they share most of their vocabulary with Fusha and each other. What separates
 		them is a small set of very common words, and a few sounds.
 	</p>
 

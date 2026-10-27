@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { goto } from '$app/navigation';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -36,7 +37,8 @@
 	let loadMoreTrigger = $state<HTMLElement | null>(null);
 
 	// ── Story filters ────────────────────────────────────────────────────────
-	let filterDialect = $state('all');
+	// Matches the dialect the server loaded: the learner's, unless ?dialect= says otherwise.
+	let filterDialect = $state(untrack(() => data.initialDialect ?? 'all'));
 	let filterDifficulty = $state('all');
 	let filterByMe = $state(false);
 

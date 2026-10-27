@@ -1,0 +1,320 @@
+{
+  "slug": "saafir",
+  "arabic": "سافر",
+  "transliteration": "saafir",
+  "english": "to travel",
+  "wordId": null,
+  "rootLetters": "س ف ر",
+  "verbClass": "sound",
+  "notes": "Form III verbs like سافر (saafir) have a long 'aa' vowel that shortens to 'a' when the stress shifts to another syllable, such as when adding suffixes that create a closed syllable (e.g., safirt, bitsafru).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سافرت",
+          "transliteration": "safirt",
+          "english": "I travelled"
+        },
+        {
+          "person": "enta",
+          "arabic": "سافرت",
+          "transliteration": "safirt",
+          "english": "you (m) travelled"
+        },
+        {
+          "person": "enti",
+          "arabic": "سافرتي",
+          "transliteration": "safirti",
+          "english": "you (f) travelled"
+        },
+        {
+          "person": "howa",
+          "arabic": "سافر",
+          "transliteration": "saafir",
+          "english": "he travelled"
+        },
+        {
+          "person": "heya",
+          "arabic": "سافرت",
+          "transliteration": "safrit",
+          "english": "she travelled"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سافرنا",
+          "transliteration": "safirna",
+          "english": "we travelled"
+        },
+        {
+          "person": "entu",
+          "arabic": "سافرتوا",
+          "transliteration": "safirtu",
+          "english": "you (pl) travelled"
+        },
+        {
+          "person": "homma",
+          "arabic": "سافروا",
+          "transliteration": "safru",
+          "english": "they travelled"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سافرتش",
+          "transliteration": "ma safirtish",
+          "english": "I didn't travel"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سافرتش",
+          "transliteration": "ma safirtish",
+          "english": "you (m) didn't travel"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سافرتيش",
+          "transliteration": "ma safirtiish",
+          "english": "you (f) didn't travel"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سافرش",
+          "transliteration": "ma safirsh",
+          "english": "he didn't travel"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سافرتش",
+          "transliteration": "ma safritsh",
+          "english": "she didn't travel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سافرناش",
+          "transliteration": "ma safirnaash",
+          "english": "we didn't travel"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سافرتوش",
+          "transliteration": "ma safirtuush",
+          "english": "you (pl) didn't travel"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سافروش",
+          "transliteration": "ma safruush",
+          "english": "they didn't travel"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بسافر",
+          "transliteration": "basaafir",
+          "english": "I travel"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتسافر",
+          "transliteration": "bitsaafir",
+          "english": "you (m) travel"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتسافري",
+          "transliteration": "bitsafri",
+          "english": "you (f) travel"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيسافر",
+          "transliteration": "biyisaafir",
+          "english": "he travels"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتسافر",
+          "transliteration": "bitsaafir",
+          "english": "she travels"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنسافر",
+          "transliteration": "binsaafir",
+          "english": "we travel"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتسافروا",
+          "transliteration": "bitsafru",
+          "english": "you (pl) travel"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيسافروا",
+          "transliteration": "biyisafru",
+          "english": "they travel"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابسافرش",
+          "transliteration": "mabasafirsh",
+          "english": "I don't travel"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتسافرش",
+          "transliteration": "mabitsafirsh",
+          "english": "you (m) don't travel"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتسافريش",
+          "transliteration": "mabitsafriish",
+          "english": "you (f) don't travel"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيسافرش",
+          "transliteration": "mabiyisafirsh",
+          "english": "he doesn't travel"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتسافرش",
+          "transliteration": "mabitsafirsh",
+          "english": "she doesn't travel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنسافرش",
+          "transliteration": "mabinsafirsh",
+          "english": "we don't travel"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتسافروش",
+          "transliteration": "mabitsafruush",
+          "english": "you (pl) don't travel"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيسافروش",
+          "transliteration": "mabiyisafruush",
+          "english": "they don't travel"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هسافر",
+          "transliteration": "hasaafir",
+          "english": "I will travel"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتسافر",
+          "transliteration": "hatsaafir",
+          "english": "you (m) will travel"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتسافري",
+          "transliteration": "hatsafri",
+          "english": "you (f) will travel"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيسافر",
+          "transliteration": "hayisaafir",
+          "english": "he will travel"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتسافر",
+          "transliteration": "hatsaafir",
+          "english": "she will travel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنسافر",
+          "transliteration": "hansaafir",
+          "english": "we will travel"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتسافروا",
+          "transliteration": "hatsafru",
+          "english": "you (pl) will travel"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيسافروا",
+          "transliteration": "hayisafru",
+          "english": "they will travel"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هسافر",
+          "transliteration": "mish hasaafir",
+          "english": "I won't travel"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتسافر",
+          "transliteration": "mish hatsaafir",
+          "english": "you (m) won't travel"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتسافري",
+          "transliteration": "mish hatsafri",
+          "english": "you (f) won't travel"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيسافر",
+          "transliteration": "mish hayisaafir",
+          "english": "he won't travel"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتسافر",
+          "transliteration": "mish hatsaafir",
+          "english": "she won't travel"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنسافر",
+          "transliteration": "mish hansaafir",
+          "english": "we won't travel"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتسافروا",
+          "transliteration": "mish hatsafru",
+          "english": "you (pl) won't travel"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيسافروا",
+          "transliteration": "mish hayisafru",
+          "english": "they won't travel"
+        }
+      ]
+    }
+  },
+  "form": "III",
+  "source": "generated"
+}

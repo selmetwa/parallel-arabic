@@ -1,0 +1,320 @@
+{
+  "slug": "itmanna",
+  "arabic": "اتمنى",
+  "transliteration": "itmanna",
+  "english": "to wish",
+  "wordId": null,
+  "rootLetters": "م ن ي",
+  "verbClass": "defective",
+  "notes": "Form V verb ending in a vowel: itmanneet in the past, yitmanna in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اتمنيت",
+          "transliteration": "itmanneet",
+          "english": "I wished"
+        },
+        {
+          "person": "enta",
+          "arabic": "اتمنيت",
+          "transliteration": "itmanneet",
+          "english": "you (m) wished"
+        },
+        {
+          "person": "enti",
+          "arabic": "اتمنيتي",
+          "transliteration": "itmanneeti",
+          "english": "you (f) wished"
+        },
+        {
+          "person": "howa",
+          "arabic": "اتمنى",
+          "transliteration": "itmanna",
+          "english": "he wished"
+        },
+        {
+          "person": "heya",
+          "arabic": "اتمنت",
+          "transliteration": "itmannit",
+          "english": "she wished"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اتمنينا",
+          "transliteration": "itmanneena",
+          "english": "we wished"
+        },
+        {
+          "person": "entu",
+          "arabic": "اتمنيتوا",
+          "transliteration": "itmanneetu",
+          "english": "you (pl) wished"
+        },
+        {
+          "person": "homma",
+          "arabic": "اتمنوا",
+          "transliteration": "itmannu",
+          "english": "they wished"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اتمنيتش",
+          "transliteration": "ma itmanneetsh",
+          "english": "I didn't wish"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اتمنيتش",
+          "transliteration": "ma itmanneetsh",
+          "english": "you (m) didn't wish"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اتمنيتيش",
+          "transliteration": "ma itmanneetiish",
+          "english": "you (f) didn't wish"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اتمناش",
+          "transliteration": "ma itmannaash",
+          "english": "he didn't wish"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اتمنتش",
+          "transliteration": "ma itmannitsh",
+          "english": "she didn't wish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اتمنيناش",
+          "transliteration": "ma itmanneenaash",
+          "english": "we didn't wish"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اتمنيتوش",
+          "transliteration": "ma itmanneetuush",
+          "english": "you (pl) didn't wish"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اتمنوش",
+          "transliteration": "ma itmannuush",
+          "english": "they didn't wish"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بتمنى",
+          "transliteration": "batmanna",
+          "english": "I wish"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتتمنى",
+          "transliteration": "btitmanna",
+          "english": "you (m) wish"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتتمني",
+          "transliteration": "btitmanni",
+          "english": "you (f) wish"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيتمنى",
+          "transliteration": "biyitmanna",
+          "english": "he wishes"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتتمنى",
+          "transliteration": "btitmanna",
+          "english": "she wishes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنتمنى",
+          "transliteration": "bnitmanna",
+          "english": "we wish"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتتمنوا",
+          "transliteration": "btitmannu",
+          "english": "you (pl) wish"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيتمنوا",
+          "transliteration": "biyitmannu",
+          "english": "they wish"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابتمناش",
+          "transliteration": "mabatmannaash",
+          "english": "I don't wish"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتتمناش",
+          "transliteration": "mabtitmannaash",
+          "english": "you (m) don't wish"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتتمنيش",
+          "transliteration": "mabtitmanniish",
+          "english": "you (f) don't wish"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيتمناش",
+          "transliteration": "mabiyitmannaash",
+          "english": "he doesn't wish"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتتمناش",
+          "transliteration": "mabtitmannaash",
+          "english": "she doesn't wish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنتمناش",
+          "transliteration": "mabnitmannaash",
+          "english": "we don't wish"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتتمنوش",
+          "transliteration": "mabtitmannuush",
+          "english": "you (pl) don't wish"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيتمنوش",
+          "transliteration": "mabiyitmannuush",
+          "english": "they don't wish"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاتمنى",
+          "transliteration": "haatmanna",
+          "english": "I will wish"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتتمنى",
+          "transliteration": "hatitmanna",
+          "english": "you (m) will wish"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتتمني",
+          "transliteration": "hatitmanni",
+          "english": "you (f) will wish"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيتمنى",
+          "transliteration": "hayitmanna",
+          "english": "he will wish"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتتمنى",
+          "transliteration": "hatitmanna",
+          "english": "she will wish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنتمنى",
+          "transliteration": "hanitmanna",
+          "english": "we will wish"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتتمنوا",
+          "transliteration": "hatitmannu",
+          "english": "you (pl) will wish"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيتمنوا",
+          "transliteration": "hayitmannu",
+          "english": "they will wish"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاتمنى",
+          "transliteration": "mish haatmanna",
+          "english": "I won't wish"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتتمنى",
+          "transliteration": "mish hatitmanna",
+          "english": "you (m) won't wish"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتتمني",
+          "transliteration": "mish hatitmanni",
+          "english": "you (f) won't wish"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيتمنى",
+          "transliteration": "mish hayitmanna",
+          "english": "he won't wish"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتتمنى",
+          "transliteration": "mish hatitmanna",
+          "english": "she won't wish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنتمنى",
+          "transliteration": "mish hanitmanna",
+          "english": "we won't wish"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتتمنوا",
+          "transliteration": "mish hatitmannu",
+          "english": "you (pl) won't wish"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيتمنوا",
+          "transliteration": "mish hayitmannu",
+          "english": "they won't wish"
+        }
+      ]
+    }
+  },
+  "form": "V",
+  "source": "generated"
+}

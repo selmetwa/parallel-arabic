@@ -1,0 +1,320 @@
+{
+  "slug": "kallim",
+  "arabic": "خابر",
+  "transliteration": "khaabar",
+  "english": "to call (on the phone)",
+  "wordId": null,
+  "rootLetters": "خ ب ر",
+  "verbClass": "sound",
+  "notes": "This is the standard Iraqi verb for 'to call (on the phone)'. In the present tense, the short 'i' in the final syllable drops when adding vowel suffixes (e.g., tkhaabir becomes tkhaabreen).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خابرت",
+          "transliteration": "khaabarit",
+          "english": "I called"
+        },
+        {
+          "person": "enta",
+          "arabic": "خابرت",
+          "transliteration": "khaabarit",
+          "english": "you (m) called"
+        },
+        {
+          "person": "enti",
+          "arabic": "خابرتي",
+          "transliteration": "khaabarti",
+          "english": "you (f) called"
+        },
+        {
+          "person": "howa",
+          "arabic": "خابر",
+          "transliteration": "khaabar",
+          "english": "he called"
+        },
+        {
+          "person": "heya",
+          "arabic": "خابرت",
+          "transliteration": "khaabrat",
+          "english": "she called"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خابرنا",
+          "transliteration": "khaabarna",
+          "english": "we called"
+        },
+        {
+          "person": "entu",
+          "arabic": "خابرتوا",
+          "transliteration": "khaabartu",
+          "english": "you (pl) called"
+        },
+        {
+          "person": "homma",
+          "arabic": "خابروا",
+          "transliteration": "khaabaraw",
+          "english": "they called"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خابرت",
+          "transliteration": "ma khaabarit",
+          "english": "I didn't call"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خابرت",
+          "transliteration": "ma khaabarit",
+          "english": "you (m) didn't call"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خابرتي",
+          "transliteration": "ma khaabarti",
+          "english": "you (f) didn't call"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خابر",
+          "transliteration": "ma khaabar",
+          "english": "he didn't call"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خابرت",
+          "transliteration": "ma khaabrat",
+          "english": "she didn't call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خابرنا",
+          "transliteration": "ma khaabarna",
+          "english": "we didn't call"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خابرتوا",
+          "transliteration": "ma khaabartu",
+          "english": "you (pl) didn't call"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خابروا",
+          "transliteration": "ma khaabaraw",
+          "english": "they didn't call"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اخابر",
+          "transliteration": "akhaabir",
+          "english": "I call"
+        },
+        {
+          "person": "enta",
+          "arabic": "تخابر",
+          "transliteration": "tkhaabir",
+          "english": "you (m) call"
+        },
+        {
+          "person": "enti",
+          "arabic": "تخابرين",
+          "transliteration": "tkhaabreen",
+          "english": "you (f) call"
+        },
+        {
+          "person": "howa",
+          "arabic": "يخابر",
+          "transliteration": "ykhaabir",
+          "english": "he calls"
+        },
+        {
+          "person": "heya",
+          "arabic": "تخابر",
+          "transliteration": "tkhaabir",
+          "english": "she calls"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نخابر",
+          "transliteration": "nkhaabir",
+          "english": "we call"
+        },
+        {
+          "person": "entu",
+          "arabic": "تخابرون",
+          "transliteration": "tkhaabroon",
+          "english": "you (pl) call"
+        },
+        {
+          "person": "homma",
+          "arabic": "يخابرون",
+          "transliteration": "ykhaabroon",
+          "english": "they call"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اخابر",
+          "transliteration": "ma akhaabir",
+          "english": "I don't call"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تخابر",
+          "transliteration": "ma tkhaabir",
+          "english": "you (m) don't call"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تخابرين",
+          "transliteration": "ma tkhaabreen",
+          "english": "you (f) don't call"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يخابر",
+          "transliteration": "ma ykhaabir",
+          "english": "he doesn't call"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تخابر",
+          "transliteration": "ma tkhaabir",
+          "english": "she doesn't call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نخابر",
+          "transliteration": "ma nkhaabir",
+          "english": "we don't call"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تخابرون",
+          "transliteration": "ma tkhaabroon",
+          "english": "you (pl) don't call"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يخابرون",
+          "transliteration": "ma ykhaabroon",
+          "english": "they don't call"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اخابر",
+          "transliteration": "raa7 akhaabir",
+          "english": "I will call"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تخابر",
+          "transliteration": "raa7 tkhaabir",
+          "english": "you (m) will call"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تخابرين",
+          "transliteration": "raa7 tkhaabreen",
+          "english": "you (f) will call"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يخابر",
+          "transliteration": "raa7 ykhaabir",
+          "english": "he will call"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تخابر",
+          "transliteration": "raa7 tkhaabir",
+          "english": "she will call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نخابر",
+          "transliteration": "raa7 nkhaabir",
+          "english": "we will call"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تخابرون",
+          "transliteration": "raa7 tkhaabroon",
+          "english": "you (pl) will call"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يخابرون",
+          "transliteration": "raa7 ykhaabroon",
+          "english": "they will call"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اخابر",
+          "transliteration": "ma raa7 akhaabir",
+          "english": "I won't call"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تخابر",
+          "transliteration": "ma raa7 tkhaabir",
+          "english": "you (m) won't call"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تخابرين",
+          "transliteration": "ma raa7 tkhaabreen",
+          "english": "you (f) won't call"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يخابر",
+          "transliteration": "ma raa7 ykhaabir",
+          "english": "he won't call"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تخابر",
+          "transliteration": "ma raa7 tkhaabir",
+          "english": "she won't call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نخابر",
+          "transliteration": "ma raa7 nkhaabir",
+          "english": "we won't call"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تخابرون",
+          "transliteration": "ma raa7 tkhaabroon",
+          "english": "you (pl) won't call"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يخابرون",
+          "transliteration": "ma raa7 ykhaabroon",
+          "english": "they won't call"
+        }
+      ]
+    }
+  },
+  "form": "III",
+  "source": "generated"
+}

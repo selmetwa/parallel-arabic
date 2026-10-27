@@ -1,0 +1,320 @@
+{
+  "slug": "kibir",
+  "arabic": "كبر",
+  "transliteration": "kibir",
+  "english": "to grow up",
+  "wordId": null,
+  "rootLetters": "ك ب ر",
+  "verbClass": "sound",
+  "notes": "Regular verb with i in the past and a in the present (bikbar).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كبرت",
+          "transliteration": "kbirt",
+          "english": "I grew up"
+        },
+        {
+          "person": "enta",
+          "arabic": "كبرت",
+          "transliteration": "kbirt",
+          "english": "you (m) grew up"
+        },
+        {
+          "person": "enti",
+          "arabic": "كبرتي",
+          "transliteration": "kbirti",
+          "english": "you (f) grew up"
+        },
+        {
+          "person": "howa",
+          "arabic": "كبر",
+          "transliteration": "kibir",
+          "english": "he grew up"
+        },
+        {
+          "person": "heya",
+          "arabic": "كبرت",
+          "transliteration": "kibrit",
+          "english": "she grew up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كبرنا",
+          "transliteration": "kbirna",
+          "english": "we grew up"
+        },
+        {
+          "person": "entu",
+          "arabic": "كبرتوا",
+          "transliteration": "kbirtu",
+          "english": "you (pl) grew up"
+        },
+        {
+          "person": "homma",
+          "arabic": "كبروا",
+          "transliteration": "kibru",
+          "english": "they grew up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كبرت",
+          "transliteration": "ma kbirt",
+          "english": "I didn't grow up"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كبرت",
+          "transliteration": "ma kbirt",
+          "english": "you (m) didn't grow up"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كبرتي",
+          "transliteration": "ma kbirti",
+          "english": "you (f) didn't grow up"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كبر",
+          "transliteration": "ma kibir",
+          "english": "he didn't grow up"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كبرت",
+          "transliteration": "ma kibrit",
+          "english": "she didn't grow up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كبرنا",
+          "transliteration": "ma kbirna",
+          "english": "we didn't grow up"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كبرتوا",
+          "transliteration": "ma kbirtu",
+          "english": "you (pl) didn't grow up"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كبروا",
+          "transliteration": "ma kibru",
+          "english": "they didn't grow up"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بكبر",
+          "transliteration": "bikbar",
+          "english": "I grow up"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتكبر",
+          "transliteration": "btikbar",
+          "english": "you (m) grow up"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتكبري",
+          "transliteration": "btikbari",
+          "english": "you (f) grow up"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيكبر",
+          "transliteration": "byikbar",
+          "english": "he grows up"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتكبر",
+          "transliteration": "btikbar",
+          "english": "she grows up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منكبر",
+          "transliteration": "mnikbar",
+          "english": "we grow up"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتكبروا",
+          "transliteration": "btikbaru",
+          "english": "you (pl) grow up"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيكبروا",
+          "transliteration": "byikbaru",
+          "english": "they grow up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بكبر",
+          "transliteration": "ma bikbar",
+          "english": "I don't grow up"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتكبر",
+          "transliteration": "ma btikbar",
+          "english": "you (m) don't grow up"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتكبري",
+          "transliteration": "ma btikbari",
+          "english": "you (f) don't grow up"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيكبر",
+          "transliteration": "ma byikbar",
+          "english": "he doesn't grow up"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتكبر",
+          "transliteration": "ma btikbar",
+          "english": "she doesn't grow up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منكبر",
+          "transliteration": "ma mnikbar",
+          "english": "we don't grow up"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتكبروا",
+          "transliteration": "ma btikbaru",
+          "english": "you (pl) don't grow up"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيكبروا",
+          "transliteration": "ma byikbaru",
+          "english": "they don't grow up"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اكبر",
+          "transliteration": "ra7 ikbar",
+          "english": "I will grow up"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تكبر",
+          "transliteration": "ra7 tikbar",
+          "english": "you (m) will grow up"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تكبري",
+          "transliteration": "ra7 tikbari",
+          "english": "you (f) will grow up"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يكبر",
+          "transliteration": "ra7 yikbar",
+          "english": "he will grow up"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تكبر",
+          "transliteration": "ra7 tikbar",
+          "english": "she will grow up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نكبر",
+          "transliteration": "ra7 nikbar",
+          "english": "we will grow up"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تكبروا",
+          "transliteration": "ra7 tikbaru",
+          "english": "you (pl) will grow up"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يكبروا",
+          "transliteration": "ra7 yikbaru",
+          "english": "they will grow up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اكبر",
+          "transliteration": "ma ra7 ikbar",
+          "english": "I won't grow up"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تكبر",
+          "transliteration": "ma ra7 tikbar",
+          "english": "you (m) won't grow up"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تكبري",
+          "transliteration": "ma ra7 tikbari",
+          "english": "you (f) won't grow up"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يكبر",
+          "transliteration": "ma ra7 yikbar",
+          "english": "he won't grow up"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تكبر",
+          "transliteration": "ma ra7 tikbar",
+          "english": "she won't grow up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نكبر",
+          "transliteration": "ma ra7 nikbar",
+          "english": "we won't grow up"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تكبروا",
+          "transliteration": "ma ra7 tikbaru",
+          "english": "you (pl) won't grow up"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يكبروا",
+          "transliteration": "ma ra7 yikbaru",
+          "english": "they won't grow up"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

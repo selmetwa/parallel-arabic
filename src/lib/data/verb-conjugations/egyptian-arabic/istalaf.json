@@ -1,0 +1,320 @@
+{
+  "slug": "istalaf",
+  "arabic": "استلف",
+  "transliteration": "istalaf",
+  "english": "to borrow",
+  "wordId": null,
+  "rootLetters": "س ل ف",
+  "verbClass": "sound",
+  "notes": "Form X of the root s-l-f: \"ask to be lent\", so borrow.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "استلفت",
+          "transliteration": "istalaft",
+          "english": "I borrowed"
+        },
+        {
+          "person": "enta",
+          "arabic": "استلفت",
+          "transliteration": "istalaft",
+          "english": "you (m) borrowed"
+        },
+        {
+          "person": "enti",
+          "arabic": "استلفتي",
+          "transliteration": "istalafti",
+          "english": "you (f) borrowed"
+        },
+        {
+          "person": "howa",
+          "arabic": "استلف",
+          "transliteration": "istalaf",
+          "english": "he borrowed"
+        },
+        {
+          "person": "heya",
+          "arabic": "استلفت",
+          "transliteration": "istalafit",
+          "english": "she borrowed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "استلفنا",
+          "transliteration": "istalafna",
+          "english": "we borrowed"
+        },
+        {
+          "person": "entu",
+          "arabic": "استلفتوا",
+          "transliteration": "istalaftu",
+          "english": "you (pl) borrowed"
+        },
+        {
+          "person": "homma",
+          "arabic": "استلفوا",
+          "transliteration": "istalafu",
+          "english": "they borrowed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما استلفتش",
+          "transliteration": "ma istalaftish",
+          "english": "I didn't borrow"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما استلفتش",
+          "transliteration": "ma istalaftish",
+          "english": "you (m) didn't borrow"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما استلفتيش",
+          "transliteration": "ma istalaftiish",
+          "english": "you (f) didn't borrow"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما استلفش",
+          "transliteration": "ma istalafsh",
+          "english": "he didn't borrow"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما استلفتش",
+          "transliteration": "ma istalafitsh",
+          "english": "she didn't borrow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما استلفناش",
+          "transliteration": "ma istalafnaash",
+          "english": "we didn't borrow"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما استلفتوش",
+          "transliteration": "ma istalaftuush",
+          "english": "you (pl) didn't borrow"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما استلفوش",
+          "transliteration": "ma istalafuush",
+          "english": "they didn't borrow"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بستلف",
+          "transliteration": "bastilif",
+          "english": "I borrow"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتستلف",
+          "transliteration": "btistilif",
+          "english": "you (m) borrow"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتستلفي",
+          "transliteration": "btistilifi",
+          "english": "you (f) borrow"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيستلف",
+          "transliteration": "biyistilif",
+          "english": "he borrows"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتستلف",
+          "transliteration": "btistilif",
+          "english": "she borrows"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنستلف",
+          "transliteration": "bnistilif",
+          "english": "we borrow"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتستلفوا",
+          "transliteration": "btistilifu",
+          "english": "you (pl) borrow"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيستلفوا",
+          "transliteration": "biyistilifu",
+          "english": "they borrow"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابستلفش",
+          "transliteration": "mabastilifsh",
+          "english": "I don't borrow"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتستلفش",
+          "transliteration": "mabtistilifsh",
+          "english": "you (m) don't borrow"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتستلفيش",
+          "transliteration": "mabtistilifiish",
+          "english": "you (f) don't borrow"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيستلفش",
+          "transliteration": "mabiyistilifsh",
+          "english": "he doesn't borrow"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتستلفش",
+          "transliteration": "mabtistilifsh",
+          "english": "she doesn't borrow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنستلفش",
+          "transliteration": "mabnistilifsh",
+          "english": "we don't borrow"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتستلفوش",
+          "transliteration": "mabtistilifuush",
+          "english": "you (pl) don't borrow"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيستلفوش",
+          "transliteration": "mabiyistilifuush",
+          "english": "they don't borrow"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاستلف",
+          "transliteration": "haastilif",
+          "english": "I will borrow"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتستلف",
+          "transliteration": "hatistilif",
+          "english": "you (m) will borrow"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتستلفي",
+          "transliteration": "hatistilifi",
+          "english": "you (f) will borrow"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيستلف",
+          "transliteration": "hayistilif",
+          "english": "he will borrow"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتستلف",
+          "transliteration": "hatistilif",
+          "english": "she will borrow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنستلف",
+          "transliteration": "hanistilif",
+          "english": "we will borrow"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتستلفوا",
+          "transliteration": "hatistilifu",
+          "english": "you (pl) will borrow"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيستلفوا",
+          "transliteration": "hayistilifu",
+          "english": "they will borrow"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاستلف",
+          "transliteration": "mish haastilif",
+          "english": "I won't borrow"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتستلف",
+          "transliteration": "mish hatistilif",
+          "english": "you (m) won't borrow"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتستلفي",
+          "transliteration": "mish hatistilifi",
+          "english": "you (f) won't borrow"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيستلف",
+          "transliteration": "mish hayistilif",
+          "english": "he won't borrow"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتستلف",
+          "transliteration": "mish hatistilif",
+          "english": "she won't borrow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنستلف",
+          "transliteration": "mish hanistilif",
+          "english": "we won't borrow"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتستلفوا",
+          "transliteration": "mish hatistilifu",
+          "english": "you (pl) won't borrow"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيستلفوا",
+          "transliteration": "mish hayistilifu",
+          "english": "they won't borrow"
+        }
+      ]
+    }
+  },
+  "form": "X",
+  "source": "generated"
+}

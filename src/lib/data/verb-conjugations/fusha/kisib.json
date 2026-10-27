@@ -1,0 +1,320 @@
+{
+  "slug": "kisib",
+  "arabic": "فَازَ",
+  "transliteration": "faza",
+  "english": "to win",
+  "wordId": null,
+  "rootLetters": "ف و ز",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a waw (و) as its middle root letter, which appears in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "فُزْتُ",
+          "transliteration": "fuztu",
+          "english": "I won"
+        },
+        {
+          "person": "enta",
+          "arabic": "فُزْتَ",
+          "transliteration": "fuzta",
+          "english": "you (m) won"
+        },
+        {
+          "person": "enti",
+          "arabic": "فُزْتِ",
+          "transliteration": "fuzti",
+          "english": "you (f) won"
+        },
+        {
+          "person": "howa",
+          "arabic": "فَازَ",
+          "transliteration": "faza",
+          "english": "he won"
+        },
+        {
+          "person": "heya",
+          "arabic": "فَازَتْ",
+          "transliteration": "fazat",
+          "english": "she won"
+        },
+        {
+          "person": "ehna",
+          "arabic": "فُزْنَا",
+          "transliteration": "fuzna",
+          "english": "we won"
+        },
+        {
+          "person": "entu",
+          "arabic": "فُزْتُمْ",
+          "transliteration": "fuztum",
+          "english": "you (pl) won"
+        },
+        {
+          "person": "homma",
+          "arabic": "فَازُوا",
+          "transliteration": "fazu",
+          "english": "they won"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا فُزْتُ",
+          "transliteration": "ma fuztu",
+          "english": "I didn't win"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا فُزْتَ",
+          "transliteration": "ma fuzta",
+          "english": "you (m) didn't win"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا فُزْتِ",
+          "transliteration": "ma fuzti",
+          "english": "you (f) didn't win"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا فَازَ",
+          "transliteration": "ma faza",
+          "english": "he didn't win"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا فَازَتْ",
+          "transliteration": "ma fazat",
+          "english": "she didn't win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا فُزْنَا",
+          "transliteration": "ma fuzna",
+          "english": "we didn't win"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا فُزْتُمْ",
+          "transliteration": "ma fuztum",
+          "english": "you (pl) didn't win"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا فَازُوا",
+          "transliteration": "ma fazu",
+          "english": "they didn't win"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَفُوزُ",
+          "transliteration": "afuzu",
+          "english": "I win"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَفُوزُ",
+          "transliteration": "tafuzu",
+          "english": "you (m) win"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَفُوزِينَ",
+          "transliteration": "tafuzina",
+          "english": "you (f) win"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَفُوزُ",
+          "transliteration": "yafuzu",
+          "english": "he wins"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَفُوزُ",
+          "transliteration": "tafuzu",
+          "english": "she wins"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَفُوزُ",
+          "transliteration": "nafuzu",
+          "english": "we win"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَفُوزُونَ",
+          "transliteration": "tafuzuna",
+          "english": "you (pl) win"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَفُوزُونَ",
+          "transliteration": "yafuzuna",
+          "english": "they win"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَفُوزُ",
+          "transliteration": "la afuzu",
+          "english": "I don't win"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَفُوزُ",
+          "transliteration": "la tafuzu",
+          "english": "you (m) don't win"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَفُوزِينَ",
+          "transliteration": "la tafuzina",
+          "english": "you (f) don't win"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَفُوزُ",
+          "transliteration": "la yafuzu",
+          "english": "he doesn't win"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَفُوزُ",
+          "transliteration": "la tafuzu",
+          "english": "she doesn't win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَفُوزُ",
+          "transliteration": "la nafuzu",
+          "english": "we don't win"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَفُوزُونَ",
+          "transliteration": "la tafuzuna",
+          "english": "you (pl) don't win"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَفُوزُونَ",
+          "transliteration": "la yafuzuna",
+          "english": "they don't win"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَفُوزُ",
+          "transliteration": "sa2afuzu",
+          "english": "I will win"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَفُوزُ",
+          "transliteration": "satafuzu",
+          "english": "you (m) will win"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَفُوزِينَ",
+          "transliteration": "satafuzina",
+          "english": "you (f) will win"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَفُوزُ",
+          "transliteration": "sayafuzu",
+          "english": "he will win"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَفُوزُ",
+          "transliteration": "satafuzu",
+          "english": "she will win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَفُوزُ",
+          "transliteration": "sanafuzu",
+          "english": "we will win"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَفُوزُونَ",
+          "transliteration": "satafuzuna",
+          "english": "you (pl) will win"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَفُوزُونَ",
+          "transliteration": "sayafuzuna",
+          "english": "they will win"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَفُوزَ",
+          "transliteration": "lan afuza",
+          "english": "I won't win"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَفُوزَ",
+          "transliteration": "lan tafuza",
+          "english": "you (m) won't win"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَفُوزِي",
+          "transliteration": "lan tafuzi",
+          "english": "you (f) won't win"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَفُوزَ",
+          "transliteration": "lan yafuza",
+          "english": "he won't win"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَفُوزَ",
+          "transliteration": "lan tafuza",
+          "english": "she won't win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَفُوزَ",
+          "transliteration": "lan nafuza",
+          "english": "we won't win"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَفُوزُوا",
+          "transliteration": "lan tafuzu",
+          "english": "you (pl) won't win"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَفُوزُوا",
+          "transliteration": "lan yafuzu",
+          "english": "they won't win"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

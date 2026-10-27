@@ -1,4 +1,5 @@
 <script lang="ts">
+  import GrammarLinks from '$lib/components/grammar/GrammarLinks.svelte';
   import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
   import { formatDialectName } from '$lib/utils/seo';
   import type { PhraseEntry } from '$lib/types/phrases';
@@ -139,6 +140,14 @@
       </div>
     </section>
   {/if}
+
+  <div class="mb-10">
+    <GrammarLinks
+      dialect={data.dialect}
+      heading="Grammar for everyday phrases"
+      slugs={['pronouns', 'possessive-suffixes', 'question-words', 'negation']}
+    />
+  </div>
 
   <aside class="rounded-xl border border-tile-500 bg-tile-300 p-6">
     <h2 class="mb-2 text-xl font-bold text-text-300">Practise saying it</h2>

@@ -3,6 +3,7 @@
     import type { Dialect } from '$lib/types/index';
     import SelfStudyPlayer from '$lib/components/SelfStudyPlayer.svelte';
     import { isSelectableDialect } from '$lib/constants/dialects';
+    import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
     let { data } = $props();
 
@@ -28,7 +29,7 @@
 
     let wordList = $state('');
     let grammarNotes = $state('');
-    let selectedDialect = $state<Dialect>('egyptian-arabic');
+    let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
     let selectedLevel = $state('B1');
     let sessionLength = $state(35);
 

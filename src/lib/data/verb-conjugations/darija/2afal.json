@@ -1,0 +1,320 @@
+{
+  "slug": "2afal",
+  "arabic": "سد",
+  "transliteration": "sedd",
+  "english": "to close",
+  "wordId": null,
+  "rootLetters": "س د د",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb. In the past tense, a connecting vowel 'i' is added before consonant-initial suffixes (e.g., seddit).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سديت",
+          "transliteration": "seddit",
+          "english": "I closed"
+        },
+        {
+          "person": "enta",
+          "arabic": "سديتي",
+          "transliteration": "sedditi",
+          "english": "you (m) closed"
+        },
+        {
+          "person": "enti",
+          "arabic": "سديتي",
+          "transliteration": "sedditi",
+          "english": "you (f) closed"
+        },
+        {
+          "person": "howa",
+          "arabic": "سد",
+          "transliteration": "sedd",
+          "english": "he closed"
+        },
+        {
+          "person": "heya",
+          "arabic": "سدات",
+          "transliteration": "seddat",
+          "english": "she closed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سدينا",
+          "transliteration": "seddina",
+          "english": "we closed"
+        },
+        {
+          "person": "entu",
+          "arabic": "سديتيو",
+          "transliteration": "sedditiw",
+          "english": "you (pl) closed"
+        },
+        {
+          "person": "homma",
+          "arabic": "سدو",
+          "transliteration": "seddu",
+          "english": "they closed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سديتش",
+          "transliteration": "ma sedditsh",
+          "english": "I didn't close"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سديتيش",
+          "transliteration": "ma sedditish",
+          "english": "you (m) didn't close"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سديتيش",
+          "transliteration": "ma sedditish",
+          "english": "you (f) didn't close"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سدش",
+          "transliteration": "ma seddsh",
+          "english": "he didn't close"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سداتش",
+          "transliteration": "ma seddatsh",
+          "english": "she didn't close"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سديناش",
+          "transliteration": "ma seddinash",
+          "english": "we didn't close"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سديتيوش",
+          "transliteration": "ma sedditiwsh",
+          "english": "you (pl) didn't close"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سدوش",
+          "transliteration": "ma seddush",
+          "english": "they didn't close"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنسد",
+          "transliteration": "kansedd",
+          "english": "I close"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتسد",
+          "transliteration": "katsedd",
+          "english": "you (m) close"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتسدي",
+          "transliteration": "katseddi",
+          "english": "you (f) close"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيسد",
+          "transliteration": "kaysedd",
+          "english": "he closes"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتسد",
+          "transliteration": "katsedd",
+          "english": "she closes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنسدو",
+          "transliteration": "kanseddu",
+          "english": "we close"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتسدو",
+          "transliteration": "katseddu",
+          "english": "you (pl) close"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيسدو",
+          "transliteration": "kayseddu",
+          "english": "they close"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنسدش",
+          "transliteration": "ma kanseddsh",
+          "english": "I don't close"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتسدش",
+          "transliteration": "ma katseddsh",
+          "english": "you (m) don't close"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتسديش",
+          "transliteration": "ma katseddish",
+          "english": "you (f) don't close"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيسدش",
+          "transliteration": "ma kayseddsh",
+          "english": "he doesn't close"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتسدش",
+          "transliteration": "ma katseddsh",
+          "english": "she doesn't close"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنسدوش",
+          "transliteration": "ma kanseddush",
+          "english": "we don't close"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتسدوش",
+          "transliteration": "ma katseddush",
+          "english": "you (pl) don't close"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيسدوش",
+          "transliteration": "ma kayseddush",
+          "english": "they don't close"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نسد",
+          "transliteration": "ghadi nsedd",
+          "english": "I will close"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تسد",
+          "transliteration": "ghadi tsedd",
+          "english": "you (m) will close"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تسدي",
+          "transliteration": "ghadi tseddi",
+          "english": "you (f) will close"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يسد",
+          "transliteration": "ghadi ysedd",
+          "english": "he will close"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تسد",
+          "transliteration": "ghadi tsedd",
+          "english": "she will close"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نسدو",
+          "transliteration": "ghadi nseddu",
+          "english": "we will close"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تسدو",
+          "transliteration": "ghadi tseddu",
+          "english": "you (pl) will close"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يسدو",
+          "transliteration": "ghadi yseddu",
+          "english": "they will close"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نسد",
+          "transliteration": "ma ghadish nsedd",
+          "english": "I won't close"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تسد",
+          "transliteration": "ma ghadish tsedd",
+          "english": "you (m) won't close"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تسدي",
+          "transliteration": "ma ghadish tseddi",
+          "english": "you (f) won't close"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يسد",
+          "transliteration": "ma ghadish ysedd",
+          "english": "he won't close"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تسد",
+          "transliteration": "ma ghadish tsedd",
+          "english": "she won't close"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نسدو",
+          "transliteration": "ma ghadish nseddu",
+          "english": "we won't close"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تسدو",
+          "transliteration": "ma ghadish tseddu",
+          "english": "you (pl) won't close"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يسدو",
+          "transliteration": "ma ghadish yseddu",
+          "english": "they won't close"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "ista7amma",
+  "arabic": "اِسْتَحَمَّ",
+  "transliteration": "ista7amma",
+  "english": "to shower",
+  "wordId": null,
+  "rootLetters": "ح م م",
+  "verbClass": "doubled",
+  "notes": "This is a Form X doubled verb; the identical second and third root letters merge when followed by a vowel, but separate when followed by a consonant-initial suffix in the past tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اِسْتَحْمَمْتُ",
+          "transliteration": "ista7mamtu",
+          "english": "I showered"
+        },
+        {
+          "person": "enta",
+          "arabic": "اِسْتَحْمَمْتَ",
+          "transliteration": "ista7mamta",
+          "english": "you (m) showered"
+        },
+        {
+          "person": "enti",
+          "arabic": "اِسْتَحْمَمْتِ",
+          "transliteration": "ista7mamti",
+          "english": "you (f) showered"
+        },
+        {
+          "person": "howa",
+          "arabic": "اِسْتَحَمَّ",
+          "transliteration": "ista7amma",
+          "english": "he showered"
+        },
+        {
+          "person": "heya",
+          "arabic": "اِسْتَحَمَّتْ",
+          "transliteration": "ista7ammat",
+          "english": "she showered"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اِسْتَحْمَمْنَا",
+          "transliteration": "ista7mamna",
+          "english": "we showered"
+        },
+        {
+          "person": "entu",
+          "arabic": "اِسْتَحْمَمْتُمْ",
+          "transliteration": "ista7mamtum",
+          "english": "you (pl) showered"
+        },
+        {
+          "person": "homma",
+          "arabic": "اِسْتَحَمُّوا",
+          "transliteration": "ista7ammu",
+          "english": "they showered"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا اِسْتَحْمَمْتُ",
+          "transliteration": "ma ista7mamtu",
+          "english": "I didn't shower"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا اِسْتَحْمَمْتَ",
+          "transliteration": "ma ista7mamta",
+          "english": "you (m) didn't shower"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا اِسْتَحْمَمْتِ",
+          "transliteration": "ma ista7mamti",
+          "english": "you (f) didn't shower"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا اِسْتَحَمَّ",
+          "transliteration": "ma ista7amma",
+          "english": "he didn't shower"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا اِسْتَحَمَّتْ",
+          "transliteration": "ma ista7ammat",
+          "english": "she didn't shower"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا اِسْتَحْمَمْنَا",
+          "transliteration": "ma ista7mamna",
+          "english": "we didn't shower"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا اِسْتَحْمَمْتُمْ",
+          "transliteration": "ma ista7mamtum",
+          "english": "you (pl) didn't shower"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا اِسْتَحَمُّوا",
+          "transliteration": "ma ista7ammu",
+          "english": "they didn't shower"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَسْتَحِمُّ",
+          "transliteration": "asta7immu",
+          "english": "I shower"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَسْتَحِمُّ",
+          "transliteration": "tasta7immu",
+          "english": "you (m) shower"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَسْتَحِمِّينَ",
+          "transliteration": "tasta7immina",
+          "english": "you (f) shower"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَسْتَحِمُّ",
+          "transliteration": "yasta7immu",
+          "english": "he showers"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَسْتَحِمُّ",
+          "transliteration": "tasta7immu",
+          "english": "she showers"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَسْتَحِمُّ",
+          "transliteration": "nasta7immu",
+          "english": "we shower"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَسْتَحِمُّونَ",
+          "transliteration": "tasta7immuna",
+          "english": "you (pl) shower"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَسْتَحِمُّونَ",
+          "transliteration": "yasta7immuna",
+          "english": "they shower"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَسْتَحِمُّ",
+          "transliteration": "la asta7immu",
+          "english": "I don't shower"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَسْتَحِمُّ",
+          "transliteration": "la tasta7immu",
+          "english": "you (m) don't shower"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَسْتَحِمِّينَ",
+          "transliteration": "la tasta7immina",
+          "english": "you (f) don't shower"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَسْتَحِمُّ",
+          "transliteration": "la yasta7immu",
+          "english": "he doesn't shower"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَسْتَحِمُّ",
+          "transliteration": "la tasta7immu",
+          "english": "she doesn't shower"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَسْتَحِمُّ",
+          "transliteration": "la nasta7immu",
+          "english": "we don't shower"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَسْتَحِمُّونَ",
+          "transliteration": "la tasta7immuna",
+          "english": "you (pl) don't shower"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَسْتَحِمُّونَ",
+          "transliteration": "la yasta7immuna",
+          "english": "they don't shower"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَسْتَحِمُّ",
+          "transliteration": "sa2asta7immu",
+          "english": "I will shower"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَسْتَحِمُّ",
+          "transliteration": "satasta7immu",
+          "english": "you (m) will shower"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَسْتَحِمِّينَ",
+          "transliteration": "satasta7immina",
+          "english": "you (f) will shower"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَسْتَحِمُّ",
+          "transliteration": "sayasta7immu",
+          "english": "he will shower"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَسْتَحِمُّ",
+          "transliteration": "satasta7immu",
+          "english": "she will shower"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَسْتَحِمُّ",
+          "transliteration": "sanasta7immu",
+          "english": "we will shower"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَسْتَحِمُّونَ",
+          "transliteration": "satasta7immuna",
+          "english": "you (pl) will shower"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَسْتَحِمُّونَ",
+          "transliteration": "sayasta7immuna",
+          "english": "they will shower"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَسْتَحِمَّ",
+          "transliteration": "lan asta7imma",
+          "english": "I won't shower"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَسْتَحِمَّ",
+          "transliteration": "lan tasta7imma",
+          "english": "you (m) won't shower"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَسْتَحِمِّي",
+          "transliteration": "lan tasta7immi",
+          "english": "you (f) won't shower"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَسْتَحِمَّ",
+          "transliteration": "lan yasta7imma",
+          "english": "he won't shower"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَسْتَحِمَّ",
+          "transliteration": "lan tasta7imma",
+          "english": "she won't shower"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَسْتَحِمَّ",
+          "transliteration": "lan nasta7imma",
+          "english": "we won't shower"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَسْتَحِمُّوا",
+          "transliteration": "lan tasta7immu",
+          "english": "you (pl) won't shower"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَسْتَحِمُّوا",
+          "transliteration": "lan yasta7immu",
+          "english": "they won't shower"
+        }
+      ]
+    }
+  },
+  "form": "X",
+  "source": "generated"
+}

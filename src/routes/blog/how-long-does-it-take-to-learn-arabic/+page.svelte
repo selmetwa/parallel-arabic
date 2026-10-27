@@ -73,8 +73,8 @@
 	<ul>
 		<li><strong>1–2 weeks:</strong> the alphabet</li>
 		<li>
-			<strong>3–6 months:</strong> simple texts with vowel marks, and the core grammar of nouns
-			and verbs
+			<strong>3–6 months:</strong> simple texts with vowel marks, and the
+			<a href={resolve('/grammar/fusha')}>core grammar</a> of nouns and verbs
 		</li>
 		<li>
 			<strong>1–2 years:</strong> simplified news and graded readers without vowel marks

@@ -1,0 +1,320 @@
+{
+  "slug": "3irif",
+  "arabic": "عرف",
+  "transliteration": "3eref",
+  "english": "to know",
+  "wordId": null,
+  "rootLetters": "ع ر ف",
+  "verbClass": "sound",
+  "notes": "A standard Form I sound verb. Note the vowel syncopation in the past tense (e.g., 3reft instead of 3ereft) and present tense (e.g., bta3rfi instead of bta3refi) which is typical of Levantine phonology.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عرفت",
+          "transliteration": "3reft",
+          "english": "I knew"
+        },
+        {
+          "person": "enta",
+          "arabic": "عرفت",
+          "transliteration": "3reft",
+          "english": "you (m) knew"
+        },
+        {
+          "person": "enti",
+          "arabic": "عرفتي",
+          "transliteration": "3refti",
+          "english": "you (f) knew"
+        },
+        {
+          "person": "howa",
+          "arabic": "عرف",
+          "transliteration": "3eref",
+          "english": "he knew"
+        },
+        {
+          "person": "heya",
+          "arabic": "عرفت",
+          "transliteration": "3erfet",
+          "english": "she knew"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عرفنا",
+          "transliteration": "3refna",
+          "english": "we knew"
+        },
+        {
+          "person": "entu",
+          "arabic": "عرفتوا",
+          "transliteration": "3reftu",
+          "english": "you (pl) knew"
+        },
+        {
+          "person": "homma",
+          "arabic": "عرفوا",
+          "transliteration": "3erfu",
+          "english": "they knew"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما عرفت",
+          "transliteration": "ma 3reft",
+          "english": "I didn't know"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما عرفت",
+          "transliteration": "ma 3reft",
+          "english": "you (m) didn't know"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما عرفتي",
+          "transliteration": "ma 3refti",
+          "english": "you (f) didn't know"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما عرف",
+          "transliteration": "ma 3eref",
+          "english": "he didn't know"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما عرفت",
+          "transliteration": "ma 3erfet",
+          "english": "she didn't know"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما عرفنا",
+          "transliteration": "ma 3refna",
+          "english": "we didn't know"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما عرفتوا",
+          "transliteration": "ma 3reftu",
+          "english": "you (pl) didn't know"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما عرفوا",
+          "transliteration": "ma 3erfu",
+          "english": "they didn't know"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بعرف",
+          "transliteration": "ba3ref",
+          "english": "I know"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتعرف",
+          "transliteration": "bta3ref",
+          "english": "you (m) know"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتعرفي",
+          "transliteration": "bta3rfi",
+          "english": "you (f) know"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيعرف",
+          "transliteration": "bya3ref",
+          "english": "he knows"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتعرف",
+          "transliteration": "bta3ref",
+          "english": "she knows"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منعرف",
+          "transliteration": "mna3ref",
+          "english": "we know"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتعرفوا",
+          "transliteration": "bta3rfu",
+          "english": "you (pl) know"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيعرفوا",
+          "transliteration": "bya3rfu",
+          "english": "they know"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بعرف",
+          "transliteration": "ma ba3ref",
+          "english": "I don't know"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتعرف",
+          "transliteration": "ma bta3ref",
+          "english": "you (m) don't know"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتعرفي",
+          "transliteration": "ma bta3rfi",
+          "english": "you (f) don't know"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيعرف",
+          "transliteration": "ma bya3ref",
+          "english": "he doesn't know"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتعرف",
+          "transliteration": "ma bta3ref",
+          "english": "she doesn't know"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منعرف",
+          "transliteration": "ma mna3ref",
+          "english": "we don't know"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتعرفوا",
+          "transliteration": "ma bta3rfu",
+          "english": "you (pl) don't know"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيعرفوا",
+          "transliteration": "ma bya3rfu",
+          "english": "they don't know"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اعرف",
+          "transliteration": "ra7 a3ref",
+          "english": "I will know"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تعرف",
+          "transliteration": "ra7 ta3ref",
+          "english": "you (m) will know"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تعرفي",
+          "transliteration": "ra7 ta3rfi",
+          "english": "you (f) will know"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يعرف",
+          "transliteration": "ra7 ya3ref",
+          "english": "he will know"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تعرف",
+          "transliteration": "ra7 ta3ref",
+          "english": "she will know"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نعرف",
+          "transliteration": "ra7 na3ref",
+          "english": "we will know"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تعرفوا",
+          "transliteration": "ra7 ta3rfu",
+          "english": "you (pl) will know"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يعرفوا",
+          "transliteration": "ra7 ya3rfu",
+          "english": "they will know"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اعرف",
+          "transliteration": "ma ra7 a3ref",
+          "english": "I won't know"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تعرف",
+          "transliteration": "ma ra7 ta3ref",
+          "english": "you (m) won't know"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تعرفي",
+          "transliteration": "ma ra7 ta3rfi",
+          "english": "you (f) won't know"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يعرف",
+          "transliteration": "ma ra7 ya3ref",
+          "english": "he won't know"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تعرف",
+          "transliteration": "ma ra7 ta3ref",
+          "english": "she won't know"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نعرف",
+          "transliteration": "ma ra7 na3ref",
+          "english": "we won't know"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تعرفوا",
+          "transliteration": "ma ra7 ta3rfu",
+          "english": "you (pl) won't know"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يعرفوا",
+          "transliteration": "ma ra7 ya3rfu",
+          "english": "they won't know"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

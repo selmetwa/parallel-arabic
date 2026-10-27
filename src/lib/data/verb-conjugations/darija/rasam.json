@@ -1,0 +1,320 @@
+{
+  "slug": "rasam",
+  "arabic": "رسم",
+  "transliteration": "rsem",
+  "english": "to draw",
+  "wordId": null,
+  "rootLetters": "ر س م",
+  "verbClass": "sound",
+  "notes": "A standard Form I sound verb; note the vowel shift in the feminine and plural forms (e.g., rsem -> resmat, kanrsem -> katresmi) to avoid three consecutive consonants.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رسمت",
+          "transliteration": "rsemt",
+          "english": "I drew"
+        },
+        {
+          "person": "enta",
+          "arabic": "رسمتي",
+          "transliteration": "rsemti",
+          "english": "you (m) drew"
+        },
+        {
+          "person": "enti",
+          "arabic": "رسمتي",
+          "transliteration": "rsemti",
+          "english": "you (f) drew"
+        },
+        {
+          "person": "howa",
+          "arabic": "رسم",
+          "transliteration": "rsem",
+          "english": "he drew"
+        },
+        {
+          "person": "heya",
+          "arabic": "رسمات",
+          "transliteration": "resmat",
+          "english": "she drew"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رسمنا",
+          "transliteration": "rsemna",
+          "english": "we drew"
+        },
+        {
+          "person": "entu",
+          "arabic": "رسمتيو",
+          "transliteration": "rsemtiw",
+          "english": "you (pl) drew"
+        },
+        {
+          "person": "homma",
+          "arabic": "رسمو",
+          "transliteration": "resmu",
+          "english": "they drew"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رسمتش",
+          "transliteration": "ma rsemtsh",
+          "english": "I didn't draw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رسمتيش",
+          "transliteration": "ma rsemtish",
+          "english": "you (m) didn't draw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رسمتيش",
+          "transliteration": "ma rsemtish",
+          "english": "you (f) didn't draw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رسمش",
+          "transliteration": "ma rsemsh",
+          "english": "he didn't draw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رسماتش",
+          "transliteration": "ma resmatsh",
+          "english": "she didn't draw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رسمناش",
+          "transliteration": "ma rsemnash",
+          "english": "we didn't draw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رسمتيوش",
+          "transliteration": "ma rsemtiwsh",
+          "english": "you (pl) didn't draw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رسموش",
+          "transliteration": "ma resmush",
+          "english": "they didn't draw"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنرسم",
+          "transliteration": "kanrsem",
+          "english": "I draw"
+        },
+        {
+          "person": "enta",
+          "arabic": "كترسم",
+          "transliteration": "katrsem",
+          "english": "you (m) draw"
+        },
+        {
+          "person": "enti",
+          "arabic": "كترسمي",
+          "transliteration": "katresmi",
+          "english": "you (f) draw"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيرسم",
+          "transliteration": "kayrsem",
+          "english": "he draws"
+        },
+        {
+          "person": "heya",
+          "arabic": "كترسم",
+          "transliteration": "katrsem",
+          "english": "she draws"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنرسمو",
+          "transliteration": "kanresmu",
+          "english": "we draw"
+        },
+        {
+          "person": "entu",
+          "arabic": "كترسمو",
+          "transliteration": "katresmu",
+          "english": "you (pl) draw"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيرسمو",
+          "transliteration": "kayresmu",
+          "english": "they draw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنرسمش",
+          "transliteration": "ma kanrsemsh",
+          "english": "I don't draw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كترسمش",
+          "transliteration": "ma katrsemsh",
+          "english": "you (m) don't draw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كترسميش",
+          "transliteration": "ma katresmish",
+          "english": "you (f) don't draw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيرسمش",
+          "transliteration": "ma kayrsemsh",
+          "english": "he doesn't draw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كترسمش",
+          "transliteration": "ma katrsemsh",
+          "english": "she doesn't draw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنرسموش",
+          "transliteration": "ma kanresmush",
+          "english": "we don't draw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كترسموش",
+          "transliteration": "ma katresmush",
+          "english": "you (pl) don't draw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيرسموش",
+          "transliteration": "ma kayresmush",
+          "english": "they don't draw"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نرسم",
+          "transliteration": "ghadi nrsem",
+          "english": "I will draw"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي ترسم",
+          "transliteration": "ghadi trsem",
+          "english": "you (m) will draw"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي ترسمي",
+          "transliteration": "ghadi tresmi",
+          "english": "you (f) will draw"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يرسم",
+          "transliteration": "ghadi yrsem",
+          "english": "he will draw"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي ترسم",
+          "transliteration": "ghadi trsem",
+          "english": "she will draw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نرسمو",
+          "transliteration": "ghadi nresmu",
+          "english": "we will draw"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي ترسمو",
+          "transliteration": "ghadi tresmu",
+          "english": "you (pl) will draw"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يرسمو",
+          "transliteration": "ghadi yresmu",
+          "english": "they will draw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نرسم",
+          "transliteration": "ma ghadish nrsem",
+          "english": "I won't draw"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش ترسم",
+          "transliteration": "ma ghadish trsem",
+          "english": "you (m) won't draw"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش ترسمي",
+          "transliteration": "ma ghadish tresmi",
+          "english": "you (f) won't draw"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يرسم",
+          "transliteration": "ma ghadish yrsem",
+          "english": "he won't draw"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش ترسم",
+          "transliteration": "ma ghadish trsem",
+          "english": "she won't draw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نرسمو",
+          "transliteration": "ma ghadish nresmu",
+          "english": "we won't draw"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش ترسمو",
+          "transliteration": "ma ghadish tresmu",
+          "english": "you (pl) won't draw"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يرسمو",
+          "transliteration": "ma ghadish yresmu",
+          "english": "they won't draw"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

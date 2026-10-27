@@ -1,0 +1,320 @@
+{
+  "slug": "it3allim",
+  "arabic": "تعلم",
+  "transliteration": "t3ellem",
+  "english": "to learn",
+  "wordId": null,
+  "rootLetters": "ع ل م",
+  "verbClass": "sound",
+  "notes": "This is a Form V sound verb; the short vowel 'e' in the final syllable is dropped when a vowel suffix is added (e.g., t3ellem -> t3ellmu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "تعلمت",
+          "transliteration": "t3ellemt",
+          "english": "I learned"
+        },
+        {
+          "person": "enta",
+          "arabic": "تعلمتي",
+          "transliteration": "t3ellemti",
+          "english": "you (m) learned"
+        },
+        {
+          "person": "enti",
+          "arabic": "تعلمتي",
+          "transliteration": "t3ellemti",
+          "english": "you (f) learned"
+        },
+        {
+          "person": "howa",
+          "arabic": "تعلم",
+          "transliteration": "t3ellem",
+          "english": "he learned"
+        },
+        {
+          "person": "heya",
+          "arabic": "تعلمات",
+          "transliteration": "t3ellmat",
+          "english": "she learned"
+        },
+        {
+          "person": "ehna",
+          "arabic": "تعلمنا",
+          "transliteration": "t3ellemna",
+          "english": "we learned"
+        },
+        {
+          "person": "entu",
+          "arabic": "تعلمتيو",
+          "transliteration": "t3ellemtiw",
+          "english": "you (pl) learned"
+        },
+        {
+          "person": "homma",
+          "arabic": "تعلمو",
+          "transliteration": "t3ellmu",
+          "english": "they learned"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما تعلمتش",
+          "transliteration": "ma t3ellemtsh",
+          "english": "I didn't learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تعلمتيش",
+          "transliteration": "ma t3ellemtish",
+          "english": "you (m) didn't learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تعلمتيش",
+          "transliteration": "ma t3ellemtish",
+          "english": "you (f) didn't learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما تعلمش",
+          "transliteration": "ma t3ellemsh",
+          "english": "he didn't learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تعلماتش",
+          "transliteration": "ma t3ellmatsh",
+          "english": "she didn't learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما تعلمناش",
+          "transliteration": "ma t3ellemnash",
+          "english": "we didn't learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تعلمتيوش",
+          "transliteration": "ma t3ellemtiwsh",
+          "english": "you (pl) didn't learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما تعلموش",
+          "transliteration": "ma t3ellmush",
+          "english": "they didn't learn"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنتعلم",
+          "transliteration": "kant3ellem",
+          "english": "I learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتتعلم",
+          "transliteration": "katt3ellem",
+          "english": "you (m) learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتتعلمي",
+          "transliteration": "katt3ellmi",
+          "english": "you (f) learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيتعلم",
+          "transliteration": "kayt3ellem",
+          "english": "he learns"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتتعلم",
+          "transliteration": "katt3ellem",
+          "english": "she learns"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنتعلمو",
+          "transliteration": "kant3ellmu",
+          "english": "we learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتتعلمو",
+          "transliteration": "katt3ellmu",
+          "english": "you (pl) learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيتعلمو",
+          "transliteration": "kayt3ellmu",
+          "english": "they learn"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنتعلمش",
+          "transliteration": "ma kant3ellemsh",
+          "english": "I don't learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتتعلمش",
+          "transliteration": "ma katt3ellemsh",
+          "english": "you (m) don't learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتتعلميش",
+          "transliteration": "ma katt3ellmish",
+          "english": "you (f) don't learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيتعلمش",
+          "transliteration": "ma kayt3ellemsh",
+          "english": "he doesn't learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتتعلمش",
+          "transliteration": "ma katt3ellemsh",
+          "english": "she doesn't learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنتعلموش",
+          "transliteration": "ma kant3ellmush",
+          "english": "we don't learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتتعلموش",
+          "transliteration": "ma katt3ellmush",
+          "english": "you (pl) don't learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيتعلموش",
+          "transliteration": "ma kayt3ellmush",
+          "english": "they don't learn"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نتعلم",
+          "transliteration": "ghadi nt3ellem",
+          "english": "I will learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تتعلم",
+          "transliteration": "ghadi tt3ellem",
+          "english": "you (m) will learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تتعلمي",
+          "transliteration": "ghadi tt3ellmi",
+          "english": "you (f) will learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يتعلم",
+          "transliteration": "ghadi yt3ellem",
+          "english": "he will learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تتعلم",
+          "transliteration": "ghadi tt3ellem",
+          "english": "she will learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نتعلمو",
+          "transliteration": "ghadi nt3ellmu",
+          "english": "we will learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تتعلمو",
+          "transliteration": "ghadi tt3ellmu",
+          "english": "you (pl) will learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يتعلمو",
+          "transliteration": "ghadi yt3ellmu",
+          "english": "they will learn"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نتعلم",
+          "transliteration": "ma ghadish nt3ellem",
+          "english": "I won't learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تتعلم",
+          "transliteration": "ma ghadish tt3ellem",
+          "english": "you (m) won't learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تتعلمي",
+          "transliteration": "ma ghadish tt3ellmi",
+          "english": "you (f) won't learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يتعلم",
+          "transliteration": "ma ghadish yt3ellem",
+          "english": "he won't learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تتعلم",
+          "transliteration": "ma ghadish tt3ellem",
+          "english": "she won't learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نتعلمو",
+          "transliteration": "ma ghadish nt3ellmu",
+          "english": "we won't learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تتعلمو",
+          "transliteration": "ma ghadish tt3ellmu",
+          "english": "you (pl) won't learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يتعلمو",
+          "transliteration": "ma ghadish yt3ellmu",
+          "english": "they won't learn"
+        }
+      ]
+    }
+  },
+  "form": "V",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "3amal",
+  "arabic": "دار",
+  "transliteration": "dar",
+  "english": "to do",
+  "wordId": null,
+  "rootLetters": "د و ر",
+  "verbClass": "hollow",
+  "notes": "Darija's everyday \"do, make\" is dar; ash kaddir? means \"what are you doing?\".",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "درت",
+          "transliteration": "dert",
+          "english": "I did"
+        },
+        {
+          "person": "enta",
+          "arabic": "درتي",
+          "transliteration": "derti",
+          "english": "you (m) did"
+        },
+        {
+          "person": "enti",
+          "arabic": "درتي",
+          "transliteration": "derti",
+          "english": "you (f) did"
+        },
+        {
+          "person": "howa",
+          "arabic": "دار",
+          "transliteration": "dar",
+          "english": "he did"
+        },
+        {
+          "person": "heya",
+          "arabic": "دارت",
+          "transliteration": "daret",
+          "english": "she did"
+        },
+        {
+          "person": "ehna",
+          "arabic": "درنا",
+          "transliteration": "derna",
+          "english": "we did"
+        },
+        {
+          "person": "entu",
+          "arabic": "درتيو",
+          "transliteration": "dertiw",
+          "english": "you (pl) did"
+        },
+        {
+          "person": "homma",
+          "arabic": "دارو",
+          "transliteration": "daru",
+          "english": "they did"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما درتش",
+          "transliteration": "ma dertsh",
+          "english": "I didn't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما درتيش",
+          "transliteration": "ma dertish",
+          "english": "you (m) didn't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما درتيش",
+          "transliteration": "ma dertish",
+          "english": "you (f) didn't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما دارش",
+          "transliteration": "ma darsh",
+          "english": "he didn't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما دارتش",
+          "transliteration": "ma daretsh",
+          "english": "she didn't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما درناش",
+          "transliteration": "ma dernash",
+          "english": "we didn't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما درتيوش",
+          "transliteration": "ma dertiwsh",
+          "english": "you (pl) didn't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما داروش",
+          "transliteration": "ma darush",
+          "english": "they didn't do"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كندير",
+          "transliteration": "kandir",
+          "english": "I do"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتدير",
+          "transliteration": "katdir",
+          "english": "you (m) do"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتديري",
+          "transliteration": "katdiri",
+          "english": "you (f) do"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيدير",
+          "transliteration": "kaydir",
+          "english": "he does"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتدير",
+          "transliteration": "katdir",
+          "english": "she does"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنديرو",
+          "transliteration": "kandiru",
+          "english": "we do"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتديرو",
+          "transliteration": "katdiru",
+          "english": "you (pl) do"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيديرو",
+          "transliteration": "kaydiru",
+          "english": "they do"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنديرش",
+          "transliteration": "ma kandirsh",
+          "english": "I don't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتديرش",
+          "transliteration": "ma katdirsh",
+          "english": "you (m) don't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتديريش",
+          "transliteration": "ma katdirish",
+          "english": "you (f) don't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيديرش",
+          "transliteration": "ma kaydirsh",
+          "english": "he doesn't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتديرش",
+          "transliteration": "ma katdirsh",
+          "english": "she doesn't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنديروش",
+          "transliteration": "ma kandirush",
+          "english": "we don't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتديروش",
+          "transliteration": "ma katdirush",
+          "english": "you (pl) don't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيديروش",
+          "transliteration": "ma kaydirush",
+          "english": "they don't do"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي ندير",
+          "transliteration": "ghadi ndir",
+          "english": "I will do"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تدير",
+          "transliteration": "ghadi tdir",
+          "english": "you (m) will do"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تديري",
+          "transliteration": "ghadi tdiri",
+          "english": "you (f) will do"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يدير",
+          "transliteration": "ghadi ydir",
+          "english": "he will do"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تدير",
+          "transliteration": "ghadi tdir",
+          "english": "she will do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نديرو",
+          "transliteration": "ghadi ndiru",
+          "english": "we will do"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تديرو",
+          "transliteration": "ghadi tdiru",
+          "english": "you (pl) will do"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يديرو",
+          "transliteration": "ghadi ydiru",
+          "english": "they will do"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش ندير",
+          "transliteration": "ma ghadish ndir",
+          "english": "I won't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تدير",
+          "transliteration": "ma ghadish tdir",
+          "english": "you (m) won't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تديري",
+          "transliteration": "ma ghadish tdiri",
+          "english": "you (f) won't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يدير",
+          "transliteration": "ma ghadish ydir",
+          "english": "he won't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تدير",
+          "transliteration": "ma ghadish tdir",
+          "english": "she won't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نديرو",
+          "transliteration": "ma ghadish ndiru",
+          "english": "we won't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تديرو",
+          "transliteration": "ma ghadish tdiru",
+          "english": "you (pl) won't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يديرو",
+          "transliteration": "ma ghadish ydiru",
+          "english": "they won't do"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

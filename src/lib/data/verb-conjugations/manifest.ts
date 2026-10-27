@@ -1,5 +1,7 @@
 import type { VerbConjugationData } from '$lib/types/index';
 import { isSelectableDialect } from '$lib/constants/dialects';
+import type { DerivedForm } from './glossary';
+import forms from './forms.json';
 
 export interface VerbIndexEntry {
 	slug: string;
@@ -9,6 +11,14 @@ export interface VerbIndexEntry {
 	wordId: string | null;
 	rootLetters: string;
 	verbClass: 'sound' | 'hollow' | 'defective' | 'irregular' | 'doubled';
+	/** The derived-form pattern (I–X). Kept apart from the generated tables so a rebuild keeps it. */
+	form?: DerivedForm;
+}
+
+const formsByDialect = forms as Record<string, Record<string, DerivedForm>>;
+
+export function verbFormFor(dialect: string, slug: string): DerivedForm | undefined {
+	return formsByDialect[dialect]?.[slug];
 }
 
 /**
@@ -24,7 +34,11 @@ const indexes = import.meta.glob('./*/index.json', { eager: true }) as Record<
 const byDialect = new Map<string, VerbIndexEntry[]>();
 for (const [path, mod] of Object.entries(indexes)) {
 	const dialect = path.match(/^\.\/([^/]+)\/index\.json$/)?.[1];
-	if (dialect) byDialect.set(dialect, mod.default.verbs);
+	if (dialect)
+		byDialect.set(
+			dialect,
+			mod.default.verbs.map((v) => ({ ...v, form: verbFormFor(dialect, v.slug) }))
+		);
 }
 
 /** The full tables, loaded one verb at a time. */
@@ -40,8 +54,9 @@ export function verbIndexFor(dialect: string): VerbIndexEntry[] {
 export async function loadVerb(
 	dialect: string,
 	slug: string
-): Promise<VerbConjugationData | undefined> {
+): Promise<(VerbConjugationData & { form?: DerivedForm }) | undefined> {
 	if (slug === 'index') return undefined;
 	const loader = files[`./${dialect}/${slug}.json`];
-	return loader ? (await loader()).default : undefined;
+	if (!loader) return undefined;
+	return { ...(await loader()).default, form: verbFormFor(dialect, slug) };
 }

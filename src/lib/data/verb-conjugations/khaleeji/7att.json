@@ -1,0 +1,320 @@
+{
+  "slug": "7att",
+  "arabic": "حط",
+  "transliteration": "7att",
+  "english": "to put",
+  "wordId": null,
+  "rootLetters": "ح ط ط",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb, so in the past tense an '-ay-' is inserted before consonant-initial suffixes.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حطيت",
+          "transliteration": "7attayt",
+          "english": "I put"
+        },
+        {
+          "person": "enta",
+          "arabic": "حطيت",
+          "transliteration": "7attayt",
+          "english": "you (m) put"
+        },
+        {
+          "person": "enti",
+          "arabic": "حطيتي",
+          "transliteration": "7attayti",
+          "english": "you (f) put"
+        },
+        {
+          "person": "howa",
+          "arabic": "حط",
+          "transliteration": "7att",
+          "english": "he put"
+        },
+        {
+          "person": "heya",
+          "arabic": "حطت",
+          "transliteration": "7attat",
+          "english": "she put"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حطينا",
+          "transliteration": "7attayna",
+          "english": "we put"
+        },
+        {
+          "person": "entu",
+          "arabic": "حطيتوا",
+          "transliteration": "7attaytaw",
+          "english": "you (pl) put"
+        },
+        {
+          "person": "homma",
+          "arabic": "حطوا",
+          "transliteration": "7attaw",
+          "english": "they put"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حطيت",
+          "transliteration": "ma 7attayt",
+          "english": "I didn't put"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حطيت",
+          "transliteration": "ma 7attayt",
+          "english": "you (m) didn't put"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حطيتي",
+          "transliteration": "ma 7attayti",
+          "english": "you (f) didn't put"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حط",
+          "transliteration": "ma 7att",
+          "english": "he didn't put"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حطت",
+          "transliteration": "ma 7attat",
+          "english": "she didn't put"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حطينا",
+          "transliteration": "ma 7attayna",
+          "english": "we didn't put"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حطيتوا",
+          "transliteration": "ma 7attaytaw",
+          "english": "you (pl) didn't put"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حطوا",
+          "transliteration": "ma 7attaw",
+          "english": "they didn't put"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "احط",
+          "transliteration": "a7itt",
+          "english": "I put"
+        },
+        {
+          "person": "enta",
+          "arabic": "تحط",
+          "transliteration": "ti7itt",
+          "english": "you (m) put"
+        },
+        {
+          "person": "enti",
+          "arabic": "تحطين",
+          "transliteration": "ti7itteen",
+          "english": "you (f) put"
+        },
+        {
+          "person": "howa",
+          "arabic": "يحط",
+          "transliteration": "yi7itt",
+          "english": "he puts"
+        },
+        {
+          "person": "heya",
+          "arabic": "تحط",
+          "transliteration": "ti7itt",
+          "english": "she puts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نحط",
+          "transliteration": "ni7itt",
+          "english": "we put"
+        },
+        {
+          "person": "entu",
+          "arabic": "تحطون",
+          "transliteration": "ti7ittoon",
+          "english": "you (pl) put"
+        },
+        {
+          "person": "homma",
+          "arabic": "يحطون",
+          "transliteration": "yi7ittoon",
+          "english": "they put"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما احط",
+          "transliteration": "ma a7itt",
+          "english": "I don't put"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تحط",
+          "transliteration": "ma ti7itt",
+          "english": "you (m) don't put"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تحطين",
+          "transliteration": "ma ti7itteen",
+          "english": "you (f) don't put"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يحط",
+          "transliteration": "ma yi7itt",
+          "english": "he doesn't put"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تحط",
+          "transliteration": "ma ti7itt",
+          "english": "she doesn't put"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نحط",
+          "transliteration": "ma ni7itt",
+          "english": "we don't put"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تحطون",
+          "transliteration": "ma ti7ittoon",
+          "english": "you (pl) don't put"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يحطون",
+          "transliteration": "ma yi7ittoon",
+          "english": "they don't put"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح احط",
+          "transliteration": "raa7 a7itt",
+          "english": "I will put"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تحط",
+          "transliteration": "raa7 ti7itt",
+          "english": "you (m) will put"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تحطين",
+          "transliteration": "raa7 ti7itteen",
+          "english": "you (f) will put"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يحط",
+          "transliteration": "raa7 yi7itt",
+          "english": "he will put"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تحط",
+          "transliteration": "raa7 ti7itt",
+          "english": "she will put"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نحط",
+          "transliteration": "raa7 ni7itt",
+          "english": "we will put"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تحطون",
+          "transliteration": "raa7 ti7ittoon",
+          "english": "you (pl) will put"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يحطون",
+          "transliteration": "raa7 yi7ittoon",
+          "english": "they will put"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح احط",
+          "transliteration": "ma raa7 a7itt",
+          "english": "I won't put"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تحط",
+          "transliteration": "ma raa7 ti7itt",
+          "english": "you (m) won't put"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تحطين",
+          "transliteration": "ma raa7 ti7itteen",
+          "english": "you (f) won't put"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يحط",
+          "transliteration": "ma raa7 yi7itt",
+          "english": "he won't put"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تحط",
+          "transliteration": "ma raa7 ti7itt",
+          "english": "she won't put"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نحط",
+          "transliteration": "ma raa7 ni7itt",
+          "english": "we won't put"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تحطون",
+          "transliteration": "ma raa7 ti7ittoon",
+          "english": "you (pl) won't put"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يحطون",
+          "transliteration": "ma raa7 yi7ittoon",
+          "english": "they won't put"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

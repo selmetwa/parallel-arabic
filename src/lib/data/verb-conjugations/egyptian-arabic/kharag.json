@@ -1,0 +1,320 @@
+{
+  "slug": "kharag",
+  "arabic": "خرج",
+  "transliteration": "kharag",
+  "english": "to go out",
+  "wordId": null,
+  "rootLetters": "خ ر ج",
+  "verbClass": "sound",
+  "notes": "A regular Form I sound verb with a 'u' stem vowel in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خرجت",
+          "transliteration": "kharagt",
+          "english": "I went out"
+        },
+        {
+          "person": "enta",
+          "arabic": "خرجت",
+          "transliteration": "kharagt",
+          "english": "you (m) went out"
+        },
+        {
+          "person": "enti",
+          "arabic": "خرجتي",
+          "transliteration": "kharagti",
+          "english": "you (f) went out"
+        },
+        {
+          "person": "howa",
+          "arabic": "خرج",
+          "transliteration": "kharag",
+          "english": "he went out"
+        },
+        {
+          "person": "heya",
+          "arabic": "خرجت",
+          "transliteration": "kharagit",
+          "english": "she went out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خرجنا",
+          "transliteration": "kharagna",
+          "english": "we went out"
+        },
+        {
+          "person": "entu",
+          "arabic": "خرجتوا",
+          "transliteration": "kharagtu",
+          "english": "you (pl) went out"
+        },
+        {
+          "person": "homma",
+          "arabic": "خرجوا",
+          "transliteration": "kharagu",
+          "english": "they went out"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خرجتش",
+          "transliteration": "ma kharagtish",
+          "english": "I didn't go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خرجتش",
+          "transliteration": "ma kharagtish",
+          "english": "you (m) didn't go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خرجتيش",
+          "transliteration": "ma kharagtiish",
+          "english": "you (f) didn't go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خرجش",
+          "transliteration": "ma kharagsh",
+          "english": "he didn't go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خرجتش",
+          "transliteration": "ma kharagitsh",
+          "english": "she didn't go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خرجناش",
+          "transliteration": "ma kharagnaash",
+          "english": "we didn't go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خرجتوش",
+          "transliteration": "ma kharagtuush",
+          "english": "you (pl) didn't go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خرجوش",
+          "transliteration": "ma kharaguush",
+          "english": "they didn't go out"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بخرج",
+          "transliteration": "bakhrug",
+          "english": "I go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتخرج",
+          "transliteration": "btukhrug",
+          "english": "you (m) go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتخرجي",
+          "transliteration": "btukhrugi",
+          "english": "you (f) go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيخرج",
+          "transliteration": "biyukhrug",
+          "english": "he goes out"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتخرج",
+          "transliteration": "btukhrug",
+          "english": "she goes out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنخرج",
+          "transliteration": "bnukhrug",
+          "english": "we go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتخرجوا",
+          "transliteration": "btukhrugu",
+          "english": "you (pl) go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيخرجوا",
+          "transliteration": "biyukhrugu",
+          "english": "they go out"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابخرجش",
+          "transliteration": "mabakhrugsh",
+          "english": "I don't go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتخرجش",
+          "transliteration": "mabtukhrugsh",
+          "english": "you (m) don't go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتخرجيش",
+          "transliteration": "mabtukhrugiish",
+          "english": "you (f) don't go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيخرجش",
+          "transliteration": "mabiyukhrugsh",
+          "english": "he doesn't go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتخرجش",
+          "transliteration": "mabtukhrugsh",
+          "english": "she doesn't go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنخرجش",
+          "transliteration": "mabnukhrugsh",
+          "english": "we don't go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتخرجوش",
+          "transliteration": "mabtukhruguush",
+          "english": "you (pl) don't go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيخرجوش",
+          "transliteration": "mabiyukhruguush",
+          "english": "they don't go out"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاخرج",
+          "transliteration": "haakhrug",
+          "english": "I will go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "هاتخرج",
+          "transliteration": "hatukhrug",
+          "english": "you (m) will go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "هاتخرجي",
+          "transliteration": "hatukhrugi",
+          "english": "you (f) will go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "هايخرج",
+          "transliteration": "hayukhrug",
+          "english": "he will go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "هاتخرج",
+          "transliteration": "hatukhrug",
+          "english": "she will go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هانخرج",
+          "transliteration": "hanukhrug",
+          "english": "we will go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "هاتخرجوا",
+          "transliteration": "hatukhrugu",
+          "english": "you (pl) will go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "هايخرجوا",
+          "transliteration": "hayukhrugu",
+          "english": "they will go out"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاخرج",
+          "transliteration": "mish haakhrug",
+          "english": "I won't go out"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هاتخرج",
+          "transliteration": "mish hatukhrug",
+          "english": "you (m) won't go out"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هاتخرجي",
+          "transliteration": "mish hatukhrugi",
+          "english": "you (f) won't go out"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هايخرج",
+          "transliteration": "mish hayukhrug",
+          "english": "he won't go out"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هاتخرج",
+          "transliteration": "mish hatukhrug",
+          "english": "she won't go out"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هانخرج",
+          "transliteration": "mish hanukhrug",
+          "english": "we won't go out"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هاتخرجوا",
+          "transliteration": "mish hatukhrugu",
+          "english": "you (pl) won't go out"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هايخرجوا",
+          "transliteration": "mish hayukhrugu",
+          "english": "they won't go out"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,610 @@
+# Moroccan Darija second-batch verbs, hand-written. See scripts/verb-conjugations/write-tables.ts.
+# bare: the form after bghit ("I want to …"); ka- and ghadi are added by the script.
+# Flag for native review: Darija lexical choices vary by region.
+
+## katab
+cit: كتب/kteb
+root: ك ت ب
+class: sound
+form: I
+note: Regular verb: the e moves when an ending starts with a vowel (ketbat, ketbu).
+past: كتبت/ktebt; كتبتي/ktebti; كتبتي/ktebti; كتب/kteb; كتبات/ketbat; كتبنا/ktebna; كتبتيو/ktebtiw; كتبو/ketbu
+bare: نكتب/nkteb; تكتب/tkteb; تكتبي/tketbi; يكتب/ykteb; تكتب/tkteb; نكتبو/nketbu; تكتبو/tketbu; يكتبو/yketbu
+
+## ishtaghal
+cit: خدم/khdem
+root: خ د م
+class: sound
+form: I
+note: Darija says khdem for "work"; khedma is a job.
+past: خدمت/khdemt; خدمتي/khdemti; خدمتي/khdemti; خدم/khdem; خدمات/khedmat; خدمنا/khdemna; خدمتيو/khdemtiw; خدمو/khedmu
+bare: نخدم/nkhdem; تخدم/tkhdem; تخدمي/tkhedmi; يخدم/ykhdem; تخدم/tkhdem; نخدمو/nkhedmu; تخدمو/tkhedmu; يخدمو/ykhedmu
+
+## wisil
+cit: وصل/wsel
+root: و ص ل
+class: sound
+form: I
+note: Regular verb: wselt (I arrived), weslat (she arrived).
+past: وصلت/wselt; وصلتي/wselti; وصلتي/wselti; وصل/wsel; وصلات/weslat; وصلنا/wselna; وصلتيو/wseltiw; وصلو/weslu
+bare: نوصل/nwsel; توصل/twsel; توصلي/twesli; يوصل/ywsel; توصل/twsel; نوصلو/nweslu; توصلو/tweslu; يوصلو/yweslu
+
+## radd
+cit: جاوب/jaweb
+root: ج و ب
+class: sound
+form: III
+note: Darija answers with jaweb (Form III); jawbni means "answer me".
+past: جاوبت/jawebt; جاوبتي/jawebti; جاوبتي/jawebti; جاوب/jaweb; جاوبات/jawbat; جاوبنا/jawebna; جاوبتيو/jawebtiw; جاوبو/jawbu
+bare: نجاوب/njaweb; تجاوب/tjaweb; تجاوبي/tjawbi; يجاوب/yjaweb; تجاوب/tjaweb; نجاوبو/njawbu; تجاوبو/tjawbu; يجاوبو/yjawbu
+
+## 2idir
+cit: قدر/qder
+root: ق د ر
+class: sound
+form: I
+note: "Can": qder + the bare form of another verb (nqder nji, I can come).
+past: قدرت/qdert; قدرتي/qderti; قدرتي/qderti; قدر/qder; قدرات/qedrat; قدرنا/qderna; قدرتيو/qdertiw; قدرو/qedru
+bare: نقدر/nqder; تقدر/tqder; تقدري/tqedri; يقدر/yqder; تقدر/tqder; نقدرو/nqedru; تقدرو/tqedru; يقدرو/yqedru
+
+## zaar
+cit: زار/zar
+root: ز و ر
+class: hollow
+form: I
+note: Hollow verb: zert in the first and second person past, nzur in the present.
+past: زرت/zert; زرتي/zerti; زرتي/zerti; زار/zar; زارت/zaret; زرنا/zerna; زرتيو/zertiw; زارو/zaru
+bare: نزور/nzur; تزور/tzur; تزوري/tzuri; يزور/yzur; تزور/tzur; نزورو/nzuru; تزورو/tzuru; يزورو/yzuru
+
+## sadda2
+cit: صدق/seddeq
+root: ص د ق
+class: sound
+form: II
+note: Form II verb with a doubled middle letter; ma kanseddeqsh means "I can't believe it".
+past: صدقت/seddeqt; صدقتي/seddeqti; صدقتي/seddeqti; صدق/seddeq; صدقات/seddqat; صدقنا/seddeqna; صدقتيو/seddeqtiw; صدقو/seddqu
+bare: نصدق/nseddeq; تصدق/tseddeq; تصدقي/tseddqi; يصدق/yseddeq; تصدق/tseddeq; نصدقو/nseddqu; تصدقو/tseddqu; يصدقو/yseddqu
+
+## i2tara7
+cit: اقترح/qtare7
+root: ق ر ح
+class: sound
+form: VIII
+note: Form VIII verb, used as in Fusha; present nqtare7.
+past: اقترحت/qtare7t; اقترحتي/qtare7ti; اقترحتي/qtare7ti; اقترح/qtare7; اقترحات/qtar7at; اقترحنا/qtare7na; اقترحتيو/qtare7tiw; اقترحو/qtar7u
+bare: نقترح/nqtare7; تقترح/tqtare7; تقترحي/tqtar7i; يقترح/yqtare7; تقترح/tqtare7; نقترحو/nqtar7u; تقترحو/tqtar7u; يقترحو/yqtar7u
+
+## khaaf
+cit: خاف/khaf
+root: خ و ف
+class: hollow
+form: I
+note: Hollow verb: khft in the past, nkhaf in the present; khaf men means "afraid of".
+past: خفت/khft; خفتي/khfti; خفتي/khfti; خاف/khaf; خافت/khafet; خفنا/khfna; خفتيو/khftiw; خافو/khafu
+bare: نخاف/nkhaf; تخاف/tkhaf; تخافي/tkhafi; يخاف/ykhaf; تخاف/tkhaf; نخافو/nkhafu; تخافو/tkhafu; يخافو/ykhafu
+
+## zi3il
+cit: تقلق/tqelleq
+root: ق ل ق
+class: sound
+form: V
+note: Darija says tqelleq for getting upset or annoyed; ma tqelleqsh means "don't get upset".
+past: تقلقت/tqelleqt; تقلقتي/tqelleqti; تقلقتي/tqelleqti; تقلق/tqelleq; تقلقات/tqellqat; تقلقنا/tqelleqna; تقلقتيو/tqelleqtiw; تقلقو/tqellqu
+bare: نتقلق/ntqelleq; تتقلق/ttqelleq; تتقلقي/ttqellqi; يتقلق/ytqelleq; تتقلق/ttqelleq; نتقلقو/ntqellqu; تتقلقو/ttqellqu; يتقلقو/ytqellqu
+
+## firi7
+cit: فرح/fre7
+root: ف ر ح
+class: sound
+form: I
+note: Regular verb (be happy, be glad); fer7an means "happy".
+past: فرحت/fre7t; فرحتي/fre7ti; فرحتي/fre7ti; فرح/fre7; فرحات/fer7at; فرحنا/fre7na; فرحتيو/fre7tiw; فرحو/fer7u
+bare: نفرح/nfre7; تفرح/tfre7; تفرحي/tfer7i; يفرح/yfre7; تفرح/tfre7; نفرحو/nfer7u; تفرحو/tfer7u; يفرحو/yfer7u
+
+## ti3ib
+cit: عيا/3ya
+root: ع ي ي
+class: defective
+form: I
+note: Darija's word for getting tired is 3ya; 3yit means "I'm tired".
+past: عييت/3yit; عييتي/3yiti; عييتي/3yiti; عيا/3ya; عيات/3yat; عيينا/3yina; عييتيو/3yitiw; عياو/3yaw
+bare: نعيا/n3ya; تعيا/t3ya; تعياي/t3yay; يعيا/y3ya; تعيا/t3ya; نعياو/n3yaw; تعياو/t3yaw; يعياو/y3yaw
+
+## istara77
+cit: رتاح/rta7
+root: ر و ح
+class: hollow
+form: VIII
+note: Form VIII hollow verb: rta7t in the past, nrta7 in the present.
+past: رتحت/rta7t; رتحتي/rta7ti; رتحتي/rta7ti; رتاح/rta7; رتاحت/rta7et; رتحنا/rta7na; رتحتيو/rta7tiw; رتاحو/rta7u
+bare: نرتاح/nrta7; ترتاح/trta7; ترتاحي/trta7i; يرتاح/yrta7; ترتاح/trta7; نرتاحو/nrta7u; ترتاحو/trta7u; يرتاحو/yrta7u
+
+## i7tafal
+cit: احتفل/7tafel
+root: ح ف ل
+class: sound
+form: VIII
+note: Form VIII verb; present n7tafel.
+past: احتفلت/7tafelt; احتفلتي/7tafelti; احتفلتي/7tafelti; احتفل/7tafel; احتفلات/7taflat; احتفلنا/7tafelna; احتفلتيو/7tafeltiw; احتفلو/7taflu
+bare: نحتفل/n7tafel; تحتفل/t7tafel; تحتفلي/t7tafli; يحتفل/y7tafel; تحتفل/t7tafel; نحتفلو/n7taflu; تحتفلو/t7taflu; يحتفلو/y7taflu
+
+## dawwar
+cit: قلب/qelleb
+root: ق ل ب
+class: sound
+form: II
+note: To look for something is qelleb 3la in Darija; the 3la follows every form.
+tail: على/3la
+past: قلبت/qellebt; قلبتي/qellebti; قلبتي/qellebti; قلب/qelleb; قلبات/qellbat; قلبنا/qellebna; قلبتيو/qellebtiw; قلبو/qellbu
+bare: نقلب/nqelleb; تقلب/tqelleb; تقلبي/tqellbi; يقلب/yqelleb; تقلب/tqelleb; نقلبو/nqellbu; تقلبو/tqellbu; يقلبو/yqellbu
+
+## 7afaz
+cit: حفظ/7fed
+root: ح ف ظ
+class: sound
+form: I
+note: Regular verb; ظ is said d in Darija (7fedt, I memorized).
+past: حفظت/7fedt; حفظتي/7fedti; حفظتي/7fedti; حفظ/7fed; حفظات/7efdat; حفظنا/7fedna; حفظتيو/7fedtiw; حفظو/7efdu
+bare: نحفظ/n7fed; تحفظ/t7fed; تحفظي/t7efdi; يحفظ/y7fed; تحفظ/t7fed; نحفظو/n7efdu; تحفظو/t7efdu; يحفظو/y7efdu
+
+## mala
+cit: عمر/3mmer
+root: ع م ر
+class: sound
+form: II
+note: Darija fills things with 3mmer (Form II); 3amer means "full".
+past: عمرت/3mmert; عمرتي/3mmerti; عمرتي/3mmerti; عمر/3mmer; عمرات/3mmrat; عمرنا/3mmerna; عمرتيو/3mmertiw; عمرو/3mmru
+bare: نعمر/n3mmer; تعمر/t3mmer; تعمري/t3mmri; يعمر/y3mmer; تعمر/t3mmer; نعمرو/n3mmru; تعمرو/t3mmru; يعمرو/y3mmru
+
+## 2ata3
+cit: قطع/qta3
+root: ق ط ع
+class: sound
+form: I
+note: Regular verb; ق keeps its q sound in Darija.
+past: قطعت/qta3t; قطعتي/qta3ti; قطعتي/qta3ti; قطع/qta3; قطعات/qet3at; قطعنا/qta3na; قطعتيو/qta3tiw; قطعو/qet3u
+bare: نقطع/nqta3; تقطع/tqta3; تقطعي/tqet3i; يقطع/yqta3; تقطع/tqta3; نقطعو/nqet3u; تقطعو/tqet3u; يقطعو/yqet3u
+
+## rattib
+cit: رتب/retteb
+root: ر ت ب
+class: sound
+form: II
+note: Form II verb with a doubled middle letter; present nretteb.
+past: رتبت/rettebt; رتبتي/rettebti; رتبتي/rettebti; رتب/retteb; رتبات/rettbat; رتبنا/rettebna; رتبتيو/rettebtiw; رتبو/rettbu
+bare: نرتب/nretteb; ترتب/tretteb; ترتبي/trettbi; يرتب/yretteb; ترتب/tretteb; نرتبو/nrettbu; ترتبو/trettbu; يرتبو/yrettbu
+
+## salla
+cit: صلى/sella
+root: ص ل ي
+class: defective
+form: II
+note: Form II verb ending in a vowel: sellit in the past, nselli in the present.
+past: صليت/sellit; صليتي/selliti; صليتي/selliti; صلى/sella; صلات/sellat; صلينا/sellina; صليتيو/sellitiw; صلاو/sellaw
+bare: نصلي/nselli; تصلي/tselli; تصلي/tselli; يصلي/yselli; تصلي/tselli; نصليو/nselliw; تصليو/tselliw; يصليو/yselliw
+
+## saam
+cit: صام/sam
+root: ص و م
+class: hollow
+form: I
+note: Hollow verb: semt in the past, nsum in the present.
+past: صمت/semt; صمتي/semti; صمتي/semti; صام/sam; صامت/samet; صمنا/semna; صمتيو/semtiw; صامو/samu
+bare: نصوم/nsum; تصوم/tsum; تصومي/tsumi; يصوم/ysum; تصوم/tsum; نصومو/nsumu; تصومو/tsumu; يصومو/ysumu
+
+## ista7amma
+cit: دوش/dewwesh
+root: د و ش
+class: sound
+form: II
+note: From French "douche": dewwesh means to take a shower.
+past: دوشت/dewwesht; دوشتي/dewweshti; دوشتي/dewweshti; دوش/dewwesh; دوشات/dewwshat; دوشنا/dewweshna; دوشتيو/dewweshtiw; دوشو/dewwshu
+bare: ندوش/ndewwesh; تدوش/tdewwesh; تدوشي/tdewwshi; يدوش/ydewwesh; تدوش/tdewwesh; ندوشو/ndewwshu; تدوشو/tdewwshu; يدوشو/ydewwshu
+
+## 7ala2
+cit: حسن/7ssen
+root: ح س ن
+class: sound
+form: II
+note: Darija says 7ssen for shaving or getting a haircut (l-7essan is the barber).
+past: حسنت/7ssent; حسنتي/7ssenti; حسنتي/7ssenti; حسن/7ssen; حسنات/7ssnat; حسنا/7ssenna; حسنتيو/7ssentiw; حسنو/7ssnu
+bare: نحسن/n7ssen; تحسن/t7ssen; تحسني/t7ssni; يحسن/y7ssen; تحسن/t7ssen; نحسنو/n7ssnu; تحسنو/t7ssnu; يحسنو/y7ssnu
+
+## 2anna3
+cit: قنع/qenne3
+root: ق ن ع
+class: sound
+form: II
+note: Form II verb with a doubled n; present nqenne3.
+past: قنعت/qenne3t; قنعتي/qenne3ti; قنعتي/qenne3ti; قنع/qenne3; قنعات/qenn3at; قنعنا/qenne3na; قنعتيو/qenne3tiw; قنعو/qenn3u
+bare: نقنع/nqenne3; تقنع/tqenne3; تقنعي/tqenn3i; يقنع/yqenne3; تقنع/tqenne3; نقنعو/nqenn3u; تقنعو/tqenn3u; يقنعو/yqenn3u
+
+## nadah
+cit: عيط/3eyyet
+root: ع ي ط
+class: sound
+form: II
+note: To call out to someone is 3eyyet 3la; on its own 3eyyet also means to phone.
+tail: على/3la
+past: عيطت/3eyyett; عيطتي/3eyyetti; عيطتي/3eyyetti; عيط/3eyyet; عيطات/3eyytat; عيطنا/3eyyetna; عيطتيو/3eyyettiw; عيطو/3eyytu
+bare: نعيط/n3eyyet; تعيط/t3eyyet; تعيطي/t3eyyti; يعيط/y3eyyet; تعيط/t3eyyet; نعيطو/n3eyytu; تعيطو/t3eyytu; يعيطو/y3eyytu
+
+## bana
+cit: بنى/bna
+root: ب ن ي
+class: defective
+form: I
+note: Defective verb: bnit in the past, nbni in the present.
+past: بنيت/bnit; بنيتي/bniti; بنيتي/bniti; بنى/bna; بنات/bnat; بنينا/bnina; بنيتيو/bnitiw; بناو/bnaw
+bare: نبني/nbni; تبني/tbni; تبني/tbni; يبني/ybni; تبني/tbni; نبنيو/nbniw; تبنيو/tbniw; يبنيو/ybniw
+
+## zara3
+cit: زرع/zre3
+root: ز ر ع
+class: sound
+form: I
+note: Regular verb; present nzre3.
+past: زرعت/zre3t; زرعتي/zre3ti; زرعتي/zre3ti; زرع/zre3; زرعات/zer3at; زرعنا/zre3na; زرعتيو/zre3tiw; زرعو/zer3u
+bare: نزرع/nzre3; تزرع/tzre3; تزرعي/tzer3i; يزرع/yzre3; تزرع/tzre3; نزرعو/nzer3u; تزرعو/tzer3u; يزرعو/yzer3u
+
+## itfarrag
+cit: تفرج/tferrej
+root: ف ر ج
+class: sound
+form: V
+note: Form V verb; tferrej f means "watch (something)".
+past: تفرجت/tferrejt; تفرجتي/tferrejti; تفرجتي/tferrejti; تفرج/tferrej; تفرجات/tferrjat; تفرجنا/tferrejna; تفرجتيو/tferrejtiw; تفرجو/tferrju
+bare: نتفرج/ntferrej; تتفرج/ttferrej; تتفرجي/ttferrji; يتفرج/ytferrej; تتفرج/ttferrej; نتفرجو/ntferrju; تتفرجو/ttferrju; يتفرجو/ytferrju
+
+## istaghrab
+cit: استغرب/staghreb
+root: غ ر ب
+class: sound
+form: X
+note: Form X verb (be surprised, find strange); present nstaghreb.
+past: استغربت/staghrebt; استغربتي/staghrebti; استغربتي/staghrebti; استغرب/staghreb; استغربات/staghrbat; استغربنا/staghrebna; استغربتيو/staghrebtiw; استغربو/staghrbu
+bare: نستغرب/nstaghreb; تستغرب/tstaghreb; تستغربي/tstaghrbi; يستغرب/ystaghreb; تستغرب/tstaghreb; نستغربو/nstaghrbu; تستغربو/tstaghrbu; يستغربو/ystaghrbu
+
+## shamm
+cit: شم/shemm
+root: ش م م
+class: doubled
+form: I
+note: Doubled verb: -it before consonant endings in the past (shemmit).
+past: شميت/shemmit; شميتي/shemmiti; شميتي/shemmiti; شم/shemm; شمات/shemmat; شمينا/shemmina; شميتيو/shemmitiw; شمو/shemmu
+bare: نشم/nshemm; تشم/tshemm; تشمي/tshemmi; يشم/yshemm; تشم/tshemm; نشمو/nshemmu; تشمو/tshemmu; يشمو/yshemmu
+
+## daa2
+cit: داق/daq
+root: ذ و ق
+class: hollow
+form: I
+note: Hollow verb: dqt in the past, nduq in the present; written with د as it is said.
+past: دقت/dqt; دقتي/dqti; دقتي/dqti; داق/daq; داقت/daqet; دقنا/dqna; دقتيو/dqtiw; داقو/daqu
+bare: ندوق/nduq; تدوق/tduq; تدوقي/tduqi; يدوق/yduq; تدوق/tduq; ندوقو/nduqu; تدوقو/tduqu; يدوقو/yduqu
+
+## misik
+cit: شد/shedd
+root: ش د د
+class: doubled
+form: I
+note: Darija shedd means "hold, catch, grab"; it's also used for "take" a seat or a bus.
+past: شديت/sheddit; شديتي/shedditi; شديتي/shedditi; شد/shedd; شدات/sheddat; شدينا/sheddina; شديتيو/shedditiw; شدو/sheddu
+bare: نشد/nshedd; تشد/tshedd; تشدي/tsheddi; يشد/yshedd; تشد/tshedd; نشدو/nsheddu; تشدو/tsheddu; يشدو/ysheddu
+
+## rama
+cit: لوح/lowwe7
+root: ل و ح
+class: sound
+form: II
+note: Darija throws with lowwe7 (Form II); lowwe7 also means "throw away".
+past: لوحت/lowwe7t; لوحتي/lowwe7ti; لوحتي/lowwe7ti; لوح/lowwe7; لوحات/loww7at; لوحنا/lowwe7na; لوحتيو/lowwe7tiw; لوحو/loww7u
+bare: نلوح/nlowwe7; تلوح/tlowwe7; تلوحي/tloww7i; يلوح/ylowwe7; تلوح/tlowwe7; نلوحو/nloww7u; تلوحو/tloww7u; يلوحو/yloww7u
+
+## shadd
+cit: جبد/jbed
+root: ج ب د
+class: sound
+form: I
+note: Darija pulls with jbed; it also means "take out" (jbed l-flus, take out money).
+past: جبدت/jbedt; جبدتي/jbedti; جبدتي/jbedti; جبد/jbed; جبدات/jebdat; جبدنا/jbedna; جبدتيو/jbedtiw; جبدو/jebdu
+bare: نجبد/njbed; تجبد/tjbed; تجبدي/tjebdi; يجبد/yjbed; تجبد/tjbed; نجبدو/njebdu; تجبدو/tjebdu; يجبدو/yjebdu
+
+## za22
+cit: دفع/dfe3
+root: د ف ع
+class: sound
+form: I
+note: Regular verb for pushing; present ndfe3.
+past: دفعت/dfe3t; دفعتي/dfe3ti; دفعتي/dfe3ti; دفع/dfe3; دفعات/def3at; دفعنا/dfe3na; دفعتيو/dfe3tiw; دفعو/def3u
+bare: ندفع/ndfe3; تدفع/tdfe3; تدفعي/tdef3i; يدفع/ydfe3; تدفع/tdfe3; ندفعو/ndef3u; تدفعو/tdef3u; يدفعو/ydef3u
+
+## inbasat
+cit: نشط/nshet
+root: ن ش ط
+class: sound
+form: I
+note: In Darija nshet means to have fun or enjoy yourself (nashet: in a good mood).
+past: نشطت/nshett; نشطتي/nshetti; نشطتي/nshetti; نشط/nshet; نشطات/neshtat; نشطنا/nshetna; نشطتيو/nshettiw; نشطو/neshtu
+bare: ننشط/nnshet; تنشط/tnshet; تنشطي/tneshti; ينشط/ynshet; تنشط/tnshet; ننشطو/nneshtu; تنشطو/tneshtu; ينشطو/yneshtu
+
+## itkhaani2
+cit: تخاصم/tkhasem
+root: خ ص م
+class: sound
+form: VI
+note: Form VI verb for falling out or quarrelling with someone (tkhasem m3a).
+past: تخاصمت/tkhasemt; تخاصمتي/tkhasemti; تخاصمتي/tkhasemti; تخاصم/tkhasem; تخاصمات/tkhasmat; تخاصمنا/tkhasemna; تخاصمتيو/tkhasemtiw; تخاصمو/tkhasmu
+bare: نتخاصم/ntkhasem; تتخاصم/ttkhasem; تتخاصمي/ttkhasmi; يتخاصم/ytkhasem; تتخاصم/ttkhasem; نتخاصمو/ntkhasmu; تتخاصمو/ttkhasmu; يتخاصمو/ytkhasmu
+
+## 2aabil
+cit: تلاقى/tlaqa
+root: ل ق ي
+class: defective
+form: VI
+note: To meet someone is tlaqa m3a; the m3a follows every form.
+tail: مع/m3a
+past: تلاقيت/tlaqit; تلاقيتي/tlaqiti; تلاقيتي/tlaqiti; تلاقى/tlaqa; تلاقات/tlaqat; تلاقينا/tlaqina; تلاقيتيو/tlaqitiw; تلاقاو/tlaqaw
+bare: نتلاقى/ntlaqa; تتلاقى/ttlaqa; تتلاقاي/ttlaqay; يتلاقى/ytlaqa; تتلاقى/ttlaqa; نتلاقاو/ntlaqaw; تتلاقاو/ttlaqaw; يتلاقاو/ytlaqaw
+
+## sallim
+cit: سلم/sellem
+root: س ل م
+class: sound
+form: II
+note: To greet someone is sellem 3la; the 3la follows every form.
+tail: على/3la
+past: سلمت/sellemt; سلمتي/sellemti; سلمتي/sellemti; سلم/sellem; سلمات/sellmat; سلمنا/sellemna; سلمتيو/sellemtiw; سلمو/sellmu
+bare: نسلم/nsellem; تسلم/tsellem; تسلمي/tsellmi; يسلم/ysellem; تسلم/tsellem; نسلمو/nsellmu; تسلمو/tsellmu; يسلمو/ysellmu
+
+## fidil
+cit: بقى/bqa
+root: ب ق ي
+class: defective
+form: I
+note: Darija bqa means "stay, remain"; bqa + a verb means "keep doing".
+past: بقيت/bqit; بقيتي/bqiti; بقيتي/bqiti; بقى/bqa; بقات/bqat; بقينا/bqina; بقيتيو/bqitiw; بقاو/bqaw
+bare: نبقى/nbqa; تبقى/tbqa; تبقاي/tbqay; يبقى/ybqa; تبقى/tbqa; نبقاو/nbqaw; تبقاو/tbqaw; يبقاو/ybqaw
+
+## 2assim
+cit: قسم/qsem
+root: ق س م
+class: sound
+form: I
+note: Regular verb (divide, share out); present nqsem.
+past: قسمت/qsemt; قسمتي/qsemti; قسمتي/qsemti; قسم/qsem; قسمات/qesmat; قسمنا/qsemna; قسمتيو/qsemtiw; قسمو/qesmu
+bare: نقسم/nqsem; تقسم/tqsem; تقسمي/tqesmi; يقسم/yqsem; تقسم/tqsem; نقسمو/nqesmu; تقسمو/tqesmu; يقسمو/yqesmu
+
+## gamma3
+cit: جمع/jme3
+root: ج م ع
+class: sound
+form: I
+note: Regular verb (collect, gather); present njme3.
+past: جمعت/jme3t; جمعتي/jme3ti; جمعتي/jme3ti; جمع/jme3; جمعات/jem3at; جمعنا/jme3na; جمعتيو/jme3tiw; جمعو/jem3u
+bare: نجمع/njme3; تجمع/tjme3; تجمعي/tjem3i; يجمع/yjme3; تجمع/tjme3; نجمعو/njem3u; تجمعو/tjem3u; يجمعو/yjem3u
+
+## 7asab
+cit: حسب/7seb
+root: ح س ب
+class: sound
+form: I
+note: Regular verb (calculate, count up); present n7seb.
+past: حسبت/7sebt; حسبتي/7sebti; حسبتي/7sebti; حسب/7seb; حسبات/7esbat; حسبنا/7sebna; حسبتيو/7sebtiw; حسبو/7esbu
+bare: نحسب/n7seb; تحسب/t7seb; تحسبي/t7esbi; يحسب/y7seb; تحسب/t7seb; نحسبو/n7esbu; تحسبو/t7esbu; يحسبو/y7esbu
+
+## 3add
+cit: عد/3edd
+root: ع د د
+class: doubled
+form: I
+note: Doubled verb: -it before consonant endings in the past (3eddit).
+past: عديت/3eddit; عديتي/3edditi; عديتي/3edditi; عد/3edd; عدات/3eddat; عدينا/3eddina; عديتيو/3edditiw; عدو/3eddu
+bare: نعد/n3edd; تعد/t3edd; تعدي/t3eddi; يعد/y3edd; تعد/t3edd; نعدو/n3eddu; تعدو/t3eddu; يعدو/y3eddu
+
+## si2it
+cit: سقط/sqet
+root: س ق ط
+class: sound
+form: I
+note: For failing an exam Darija says sqet f l-imti7an.
+past: سقطت/sqett; سقطتي/sqetti; سقطتي/sqetti; سقط/sqet; سقطات/seqtat; سقطنا/sqetna; سقطتيو/sqettiw; سقطو/seqtu
+bare: نسقط/nsqet; تسقط/tsqet; تسقطي/tseqti; يسقط/ysqet; تسقط/tsqet; نسقطو/nseqtu; تسقطو/tseqtu; يسقطو/yseqtu
+
+## kibir
+cit: كبر/kber
+root: ك ب ر
+class: sound
+form: I
+note: Regular verb (grow up, get bigger); present nkber.
+past: كبرت/kbert; كبرتي/kberti; كبرتي/kberti; كبر/kber; كبرات/kebrat; كبرنا/kberna; كبرتيو/kbertiw; كبرو/kebru
+bare: نكبر/nkber; تكبر/tkber; تكبري/tkebri; يكبر/ykber; تكبر/tkber; نكبرو/nkebru; تكبرو/tkebru; يكبرو/ykebru
+
+## zaad
+cit: زاد/zad
+root: ز ي د
+class: hollow
+form: I
+note: Hollow verb: zedt in the past, nzid in the present.
+past: زدت/zedt; زدتي/zedti; زدتي/zedti; زاد/zad; زادت/zadet; زدنا/zedna; زدتيو/zedtiw; زادو/zadu
+bare: نزيد/nzid; تزيد/tzid; تزيدي/tzidi; يزيد/yzid; تزيد/tzid; نزيدو/nzidu; تزيدو/tzidu; يزيدو/yzidu
+
+## 2all
+cit: نقص/nqes
+root: ن ق ص
+class: sound
+form: I
+note: Darija uses nqes for "go down, decrease" (and nqes men, cut down on).
+past: نقصت/nqest; نقصتي/nqesti; نقصتي/nqesti; نقص/nqes; نقصات/neqsat; نقصنا/nqesna; نقصتيو/nqestiw; نقصو/neqsu
+bare: ننقص/nnqes; تنقص/tnqes; تنقصي/tneqsi; ينقص/ynqes; تنقص/tnqes; ننقصو/nneqsu; تنقصو/tneqsu; ينقصو/yneqsu
+
+## tafa
+cit: طفى/tfa
+root: ط ف ي
+class: defective
+form: I
+note: Defective verb: tfit in the past, ntfi in the present (tfi d-daw, turn off the light).
+past: طفيت/tfit; طفيتي/tfiti; طفيتي/tfiti; طفى/tfa; طفات/tfat; طفينا/tfina; طفيتيو/tfitiw; طفاو/tfaw
+bare: نطفي/ntfi; تطفي/ttfi; تطفي/ttfi; يطفي/ytfi; تطفي/ttfi; نطفيو/ntfiw; تطفيو/ttfiw; يطفيو/ytfiw
+
+## shaghghal
+cit: شعل/she33el
+root: ش ع ل
+class: sound
+form: II
+note: Darija turns things on with she33el (light up); she33el d-daw means "turn on the light".
+past: شعلت/she33elt; شعلتي/she33elti; شعلتي/she33elti; شعل/she33el; شعلات/she33lat; شعلنا/she33elna; شعلتيو/she33eltiw; شعلو/she33lu
+bare: نشعل/nshe33el; تشعل/tshe33el; تشعلي/tshe33li; يشعل/yshe33el; تشعل/tshe33el; نشعلو/nshe33lu; تشعلو/tshe33lu; يشعلو/yshe33lu
+
+## sawwar
+cit: صور/sewwer
+root: ص و ر
+class: sound
+form: II
+note: Form II verb with a doubled w; present nsewwer.
+past: صورت/sewwert; صورتي/sewwerti; صورتي/sewwerti; صور/sewwer; صورات/sewwrat; صورنا/sewwerna; صورتيو/sewwertiw; صورو/sewwru
+bare: نصور/nsewwer; تصور/tsewwer; تصوري/tsewwri; يصور/ysewwer; تصور/tsewwer; نصورو/nsewwru; تصورو/tsewwru; يصورو/ysewwru
+
+## itmanna
+cit: تمنى/tmenna
+root: م ن ي
+class: defective
+form: V
+note: Form V verb ending in a vowel: tmennit in the past, ntmenna in the present.
+past: تمنيت/tmennit; تمنيتي/tmenniti; تمنيتي/tmenniti; تمنى/tmenna; تمنات/tmennat; تمنينا/tmennina; تمنيتيو/tmennitiw; تمناو/tmennaw
+bare: نتمنى/ntmenna; تتمنى/ttmenna; تتمناي/ttmennay; يتمنى/ytmenna; تتمنى/ttmenna; نتمناو/ntmennaw; تتمناو/ttmennaw; يتمناو/ytmennaw
+
+## hirib
+cit: هرب/hreb
+root: ه ر ب
+class: sound
+form: I
+note: Regular verb; present nhreb.
+past: هربت/hrebt; هربتي/hrebti; هربتي/hrebti; هرب/hreb; هربات/herbat; هربنا/hrebna; هربتيو/hrebtiw; هربو/herbu
+bare: نهرب/nhreb; تهرب/threb; تهربي/therbi; يهرب/yhreb; تهرب/threb; نهربو/nherbu; تهربو/therbu; يهربو/yherbu
+
+## istakhabba
+cit: تخبى/tkhebba
+root: خ ب ي
+class: defective
+form: V
+note: Form V verb ending in a vowel: tkhebbit in the past, ntkhebba in the present.
+past: تخبيت/tkhebbit; تخبيتي/tkhebbiti; تخبيتي/tkhebbiti; تخبى/tkhebba; تخبات/tkhebbat; تخبينا/tkhebbina; تخبيتيو/tkhebbitiw; تخباو/tkhebbaw
+bare: نتخبى/ntkhebba; تتخبى/ttkhebba; تتخباي/ttkhebbay; يتخبى/ytkhebba; تتخبى/ttkhebba; نتخباو/ntkhebbaw; تتخباو/ttkhebbaw; يتخباو/ytkhebbaw
+
+## waga3
+cit: وجع/wje3
+root: و ج ع
+class: sound
+form: I
+note: Said of a body part that hurts: kaywje3ni rasi (my head hurts).
+past: وجعت/wje3t; وجعتي/wje3ti; وجعتي/wje3ti; وجع/wje3; وجعات/wej3at; وجعنا/wje3na; وجعتيو/wje3tiw; وجعو/wej3u
+bare: نوجع/nwje3; توجع/twje3; توجعي/twej3i; يوجع/ywje3; توجع/twje3; نوجعو/nwej3u; توجعو/twej3u; يوجعو/ywej3u
+
+## targim
+cit: ترجم/terjem
+root: ت ر ج م
+class: sound
+form: Q
+note: A four-letter verb that conjugates like Form II; present nterjem.
+past: ترجمت/terjemt; ترجمتي/terjemti; ترجمتي/terjemti; ترجم/terjem; ترجمات/terjmat; ترجمنا/terjemna; ترجمتيو/terjemtiw; ترجمو/terjmu
+bare: نترجم/nterjem; تترجم/tterjem; تترجمي/tterjmi; يترجم/yterjem; تترجم/tterjem; نترجمو/nterjmu; تترجمو/tterjmu; يترجمو/yterjmu
+
+## shara7
+cit: شرح/shre7
+root: ش ر ح
+class: sound
+form: I
+note: Regular verb; present nshre7.
+past: شرحت/shre7t; شرحتي/shre7ti; شرحتي/shre7ti; شرح/shre7; شرحات/sher7at; شرحنا/shre7na; شرحتيو/shre7tiw; شرحو/sher7u
+bare: نشرح/nshre7; تشرح/tshre7; تشرحي/tsher7i; يشرح/yshre7; تشرح/tshre7; نشرحو/nsher7u; تشرحو/tsher7u; يشرحو/ysher7u
+
+## 3amal
+cit: دار/dar
+root: د و ر
+class: hollow
+form: I
+note: Darija's everyday "do, make" is dar; ash kaddir? means "what are you doing?".
+past: درت/dert; درتي/derti; درتي/derti; دار/dar; دارت/daret; درنا/derna; درتيو/dertiw; دارو/daru
+bare: ندير/ndir; تدير/tdir; تديري/tdiri; يدير/ydir; تدير/tdir; نديرو/ndiru; تديرو/tdiru; يديرو/ydiru
+
+## khalla
+cit: خلى/khlla
+root: خ ل ي
+class: defective
+form: II
+note: Form II verb ending in a vowel: khllit in the past, nkhlli in the present; khllini means "let me".
+past: خليت/khllit; خليتي/khlliti; خليتي/khlliti; خلى/khlla; خلات/khllat; خلينا/khllina; خليتيو/khllitiw; خلاو/khllaw
+bare: نخلي/nkhlli; تخلي/tkhlli; تخلي/tkhlli; يخلي/ykhlli; تخلي/tkhlli; نخليو/nkhlliw; تخليو/tkhlliw; يخليو/ykhlliw
+
+## ba2a
+cit: ولى/wella
+root: و ل ي
+class: defective
+form: II
+note: Darija says wella for "become" (wella kbir, he's grown up).
+past: وليت/wellit; وليتي/welliti; وليتي/welliti; ولى/wella; ولات/wellat; ولينا/wellina; وليتيو/wellitiw; ولاو/wellaw
+bare: نولي/nwelli; تولي/twelli; تولي/twelli; يولي/ywelli; تولي/twelli; نوليو/nwelliw; توليو/twelliw; يوليو/ywelliw
+
+## laff
+cit: دور/dewwer
+root: د و ر
+class: sound
+form: II
+note: Darija turns with dewwer (dewwer 3la l-limen, turn right).
+past: دورت/dewwert; دورتي/dewwerti; دورتي/dewwerti; دور/dewwer; دورات/dewwrat; دورنا/dewwerna; دورتيو/dewwertiw; دورو/dewwru
+bare: ندور/ndewwer; تدور/tdewwer; تدوري/tdewwri; يدور/ydewwer; تدور/tdewwer; ندورو/ndewwru; تدورو/tdewwru; يدورو/ydewwru
+
+## 3adda
+cit: دوز/dewwez
+root: د و ز
+class: sound
+form: II
+note: Darija crosses or passes with dewwez (dewwez t-triq, cross the road); it also means "spend (time)".
+past: دوزت/dewwezt; دوزتي/dewwezti; دوزتي/dewwezti; دوز/dewwez; دوزات/dewwzat; دوزنا/dewwezna; دوزتيو/dewweztiw; دوزو/dewwzu
+bare: ندوز/ndewwez; تدوز/tdewwez; تدوزي/tdewwzi; يدوز/ydewwez; تدوز/tdewwez; ندوزو/ndewwzu; تدوزو/tdewwzu; يدوزو/ydewwzu
+
+## nasa7
+cit: نصح/nse7
+root: ن ص ح
+class: sound
+form: I
+note: Regular verb; present nnse7.
+past: نصحت/nse7t; نصحتي/nse7ti; نصحتي/nse7ti; نصح/nse7; نصحات/nes7at; نصحنا/nse7na; نصحتيو/nse7tiw; نصحو/nes7u
+bare: ننصح/nnse7; تنصح/tnse7; تنصحي/tnes7i; ينصح/ynse7; تنصح/tnse7; ننصحو/nnes7u; تنصحو/tnes7u; ينصحو/ynes7u
+
+## ista2bil
+cit: استقبل/staqbel
+root: ق ب ل
+class: sound
+form: X
+note: Form X verb (receive, welcome); present nstaqbel.
+past: استقبلت/staqbelt; استقبلتي/staqbelti; استقبلتي/staqbelti; استقبل/staqbel; استقبلات/staqblat; استقبلنا/staqbelna; استقبلتيو/staqbeltiw; استقبلو/staqblu
+bare: نستقبل/nstaqbel; تستقبل/tstaqbel; تستقبلي/tstaqbli; يستقبل/ystaqbel; تستقبل/tstaqbel; نستقبلو/nstaqblu; تستقبلو/tstaqblu; يستقبلو/ystaqblu
+
+## 7agaz
+cit: حجز/7jez
+root: ح ج ز
+class: sound
+form: I
+note: Regular verb (book, reserve); present n7jez.
+past: حجزت/7jezt; حجزتي/7jezti; حجزتي/7jezti; حجز/7jez; حجزات/7ejzat; حجزنا/7jezna; حجزتيو/7jeztiw; حجزو/7ejzu
+bare: نحجز/n7jez; تحجز/t7jez; تحجزي/t7ejzi; يحجز/y7jez; تحجز/t7jez; نحجزو/n7ejzu; تحجزو/t7ejzu; يحجزو/y7ejzu
+
+## ista2gar
+cit: كرا/kra
+root: ك ر ي
+class: defective
+form: I
+note: Darija rents with kra (kra l-bit, rent a room); l-kra is the rent.
+past: كريت/krit; كريتي/kriti; كريتي/kriti; كرا/kra; كرات/krat; كرينا/krina; كريتيو/kritiw; كراو/kraw
+bare: نكري/nkri; تكري/tkri; تكري/tkri; يكري/ykri; تكري/tkri; نكريو/nkriw; تكريو/tkriw; يكريو/ykriw
+
+## itghadda
+cit: تغدى/tghedda
+root: غ د ي
+class: defective
+form: V
+note: Form V verb ending in a vowel: tgheddit in the past, ntghedda in the present.
+past: تغديت/tgheddit; تغديتي/tghedditi; تغديتي/tghedditi; تغدى/tghedda; تغدات/tgheddat; تغدينا/tgheddina; تغديتيو/tghedditiw; تغداو/tgheddaw
+bare: نتغدى/ntghedda; تتغدى/ttghedda; تتغداي/ttgheddai; يتغدى/ytghedda; تتغدى/ttghedda; نتغداو/ntgheddaw; تتغداو/ttgheddaw; يتغداو/ytgheddaw

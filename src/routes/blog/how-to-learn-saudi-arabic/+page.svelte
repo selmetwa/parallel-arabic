@@ -114,7 +114,7 @@
 	<p>
 		If you already know some Egyptian, these three will feel familiar, and Hijazi will come quickly.
 		The <a href={resolve('/saudi/conjugations')}>Saudi Arabic conjugation tables</a> have every tense
-		of 72 common verbs, affirmative and negative.
+		of 200 common verbs, affirmative and negative.
 	</p>
 
 	<h2>6. Follow a course for the structure (month 1 onwards)</h2>

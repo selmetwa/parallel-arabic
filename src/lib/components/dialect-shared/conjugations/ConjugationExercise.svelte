@@ -3,6 +3,7 @@
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
+	import VerbTermBadges from './VerbTermBadges.svelte';
 
 	interface Props {
 		verb: VerbConjugationData;
@@ -197,9 +198,7 @@
 		<p class="text-xl text-text-200">{verb.transliteration}</p>
 		<p class="text-lg text-text-300 font-semibold">{verb.english}</p>
 		<p class="text-sm text-text-200 mt-2">{verb.rootLetters}</p>
-		<span class="inline-block mt-2 px-2 py-0.5 text-xs font-semibold rounded bg-tile-500 border border-tile-600 text-text-200">
-			{verb.verbClass}
-		</span>
+		<VerbTermBadges form={verb.form} verbClass={verb.verbClass} />
 		{#if verb.notes}
 			<p class="text-sm text-text-200 mt-2 italic">{verb.notes}</p>
 		{/if}

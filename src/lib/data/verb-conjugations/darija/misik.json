@@ -1,0 +1,320 @@
+{
+  "slug": "misik",
+  "arabic": "شد",
+  "transliteration": "shedd",
+  "english": "to hold",
+  "wordId": null,
+  "rootLetters": "ش د د",
+  "verbClass": "doubled",
+  "notes": "Darija shedd means \"hold, catch, grab\"; it's also used for \"take\" a seat or a bus.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شديت",
+          "transliteration": "sheddit",
+          "english": "I held"
+        },
+        {
+          "person": "enta",
+          "arabic": "شديتي",
+          "transliteration": "shedditi",
+          "english": "you (m) held"
+        },
+        {
+          "person": "enti",
+          "arabic": "شديتي",
+          "transliteration": "shedditi",
+          "english": "you (f) held"
+        },
+        {
+          "person": "howa",
+          "arabic": "شد",
+          "transliteration": "shedd",
+          "english": "he held"
+        },
+        {
+          "person": "heya",
+          "arabic": "شدات",
+          "transliteration": "sheddat",
+          "english": "she held"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شدينا",
+          "transliteration": "sheddina",
+          "english": "we held"
+        },
+        {
+          "person": "entu",
+          "arabic": "شديتيو",
+          "transliteration": "shedditiw",
+          "english": "you (pl) held"
+        },
+        {
+          "person": "homma",
+          "arabic": "شدو",
+          "transliteration": "sheddu",
+          "english": "they held"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما شديتش",
+          "transliteration": "ma shedditsh",
+          "english": "I didn't hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما شديتيش",
+          "transliteration": "ma shedditish",
+          "english": "you (m) didn't hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما شديتيش",
+          "transliteration": "ma shedditish",
+          "english": "you (f) didn't hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما شدش",
+          "transliteration": "ma sheddsh",
+          "english": "he didn't hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما شداتش",
+          "transliteration": "ma sheddatsh",
+          "english": "she didn't hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما شديناش",
+          "transliteration": "ma sheddinash",
+          "english": "we didn't hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما شديتيوش",
+          "transliteration": "ma shedditiwsh",
+          "english": "you (pl) didn't hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما شدوش",
+          "transliteration": "ma sheddush",
+          "english": "they didn't hold"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنشد",
+          "transliteration": "kanshedd",
+          "english": "I hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتشد",
+          "transliteration": "katshedd",
+          "english": "you (m) hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتشدي",
+          "transliteration": "katsheddi",
+          "english": "you (f) hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيشد",
+          "transliteration": "kayshedd",
+          "english": "he holds"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتشد",
+          "transliteration": "katshedd",
+          "english": "she holds"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنشدو",
+          "transliteration": "kansheddu",
+          "english": "we hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتشدو",
+          "transliteration": "katsheddu",
+          "english": "you (pl) hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيشدو",
+          "transliteration": "kaysheddu",
+          "english": "they hold"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنشدش",
+          "transliteration": "ma kansheddsh",
+          "english": "I don't hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتشدش",
+          "transliteration": "ma katsheddsh",
+          "english": "you (m) don't hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتشديش",
+          "transliteration": "ma katsheddish",
+          "english": "you (f) don't hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيشدش",
+          "transliteration": "ma kaysheddsh",
+          "english": "he doesn't hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتشدش",
+          "transliteration": "ma katsheddsh",
+          "english": "she doesn't hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنشدوش",
+          "transliteration": "ma kansheddush",
+          "english": "we don't hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتشدوش",
+          "transliteration": "ma katsheddush",
+          "english": "you (pl) don't hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيشدوش",
+          "transliteration": "ma kaysheddush",
+          "english": "they don't hold"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نشد",
+          "transliteration": "ghadi nshedd",
+          "english": "I will hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تشد",
+          "transliteration": "ghadi tshedd",
+          "english": "you (m) will hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تشدي",
+          "transliteration": "ghadi tsheddi",
+          "english": "you (f) will hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يشد",
+          "transliteration": "ghadi yshedd",
+          "english": "he will hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تشد",
+          "transliteration": "ghadi tshedd",
+          "english": "she will hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نشدو",
+          "transliteration": "ghadi nsheddu",
+          "english": "we will hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تشدو",
+          "transliteration": "ghadi tsheddu",
+          "english": "you (pl) will hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يشدو",
+          "transliteration": "ghadi ysheddu",
+          "english": "they will hold"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نشد",
+          "transliteration": "ma ghadish nshedd",
+          "english": "I won't hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تشد",
+          "transliteration": "ma ghadish tshedd",
+          "english": "you (m) won't hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تشدي",
+          "transliteration": "ma ghadish tsheddi",
+          "english": "you (f) won't hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يشد",
+          "transliteration": "ma ghadish yshedd",
+          "english": "he won't hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تشد",
+          "transliteration": "ma ghadish tshedd",
+          "english": "she won't hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نشدو",
+          "transliteration": "ma ghadish nsheddu",
+          "english": "we won't hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تشدو",
+          "transliteration": "ma ghadish tsheddu",
+          "english": "you (pl) won't hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يشدو",
+          "transliteration": "ma ghadish ysheddu",
+          "english": "they won't hold"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

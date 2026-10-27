@@ -1,0 +1,320 @@
+{
+  "slug": "si7i",
+  "arabic": "اِسْتَيْقَظَ",
+  "transliteration": "istayqaza",
+  "english": "to wake up",
+  "wordId": null,
+  "rootLetters": "ي ق ظ",
+  "verbClass": "sound",
+  "notes": "This is a Form X verb meaning 'to wake up'. Although its first root letter is a weak letter (ي), it conjugates completely regularly in this form without dropping any letters.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اِسْتَيْقَظْتُ",
+          "transliteration": "istayqaztu",
+          "english": "I woke up"
+        },
+        {
+          "person": "enta",
+          "arabic": "اِسْتَيْقَظْتَ",
+          "transliteration": "istayqazta",
+          "english": "you (m) woke up"
+        },
+        {
+          "person": "enti",
+          "arabic": "اِسْتَيْقَظْتِ",
+          "transliteration": "istayqazti",
+          "english": "you (f) woke up"
+        },
+        {
+          "person": "howa",
+          "arabic": "اِسْتَيْقَظَ",
+          "transliteration": "istayqaza",
+          "english": "he woke up"
+        },
+        {
+          "person": "heya",
+          "arabic": "اِسْتَيْقَظَتْ",
+          "transliteration": "istayqazat",
+          "english": "she woke up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اِسْتَيْقَظْنَا",
+          "transliteration": "istayqazna",
+          "english": "we woke up"
+        },
+        {
+          "person": "entu",
+          "arabic": "اِسْتَيْقَظْتُمْ",
+          "transliteration": "istayqaztum",
+          "english": "you (pl) woke up"
+        },
+        {
+          "person": "homma",
+          "arabic": "اِسْتَيْقَظُوا",
+          "transliteration": "istayqazu",
+          "english": "they woke up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا اِسْتَيْقَظْتُ",
+          "transliteration": "ma istayqaztu",
+          "english": "I didn't wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا اِسْتَيْقَظْتَ",
+          "transliteration": "ma istayqazta",
+          "english": "you (m) didn't wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا اِسْتَيْقَظْتِ",
+          "transliteration": "ma istayqazti",
+          "english": "you (f) didn't wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا اِسْتَيْقَظَ",
+          "transliteration": "ma istayqaza",
+          "english": "he didn't wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا اِسْتَيْقَظَتْ",
+          "transliteration": "ma istayqazat",
+          "english": "she didn't wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا اِسْتَيْقَظْنَا",
+          "transliteration": "ma istayqazna",
+          "english": "we didn't wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا اِسْتَيْقَظْتُمْ",
+          "transliteration": "ma istayqaztum",
+          "english": "you (pl) didn't wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا اِسْتَيْقَظُوا",
+          "transliteration": "ma istayqazu",
+          "english": "they didn't wake up"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَسْتَيْقِظُ",
+          "transliteration": "astayqizu",
+          "english": "I wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَسْتَيْقِظُ",
+          "transliteration": "tastayqizu",
+          "english": "you (m) wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَسْتَيْقِظِينَ",
+          "transliteration": "tastayqizina",
+          "english": "you (f) wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَسْتَيْقِظُ",
+          "transliteration": "yastayqizu",
+          "english": "he wakes up"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَسْتَيْقِظُ",
+          "transliteration": "tastayqizu",
+          "english": "she wakes up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَسْتَيْقِظُ",
+          "transliteration": "nastayqizu",
+          "english": "we wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَسْتَيْقِظُونَ",
+          "transliteration": "tastayqizuna",
+          "english": "you (pl) wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَسْتَيْقِظُونَ",
+          "transliteration": "yastayqizuna",
+          "english": "they wake up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَسْتَيْقِظُ",
+          "transliteration": "la astayqizu",
+          "english": "I don't wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَسْتَيْقِظُ",
+          "transliteration": "la tastayqizu",
+          "english": "you (m) don't wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَسْتَيْقِظِينَ",
+          "transliteration": "la tastayqizina",
+          "english": "you (f) don't wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَسْتَيْقِظُ",
+          "transliteration": "la yastayqizu",
+          "english": "he doesn't wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَسْتَيْقِظُ",
+          "transliteration": "la tastayqizu",
+          "english": "she doesn't wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَسْتَيْقِظُ",
+          "transliteration": "la nastayqizu",
+          "english": "we don't wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَسْتَيْقِظُونَ",
+          "transliteration": "la tastayqizuna",
+          "english": "you (pl) don't wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَسْتَيْقِظُونَ",
+          "transliteration": "la yastayqizuna",
+          "english": "they don't wake up"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَسْتَيْقِظُ",
+          "transliteration": "sa2astayqizu",
+          "english": "I will wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَسْتَيْقِظُ",
+          "transliteration": "satastayqizu",
+          "english": "you (m) will wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَسْتَيْقِظِينَ",
+          "transliteration": "satastayqizina",
+          "english": "you (f) will wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَسْتَيْقِظُ",
+          "transliteration": "sayastayqizu",
+          "english": "he will wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَسْتَيْقِظُ",
+          "transliteration": "satastayqizu",
+          "english": "she will wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَسْتَيْقِظُ",
+          "transliteration": "sanastayqizu",
+          "english": "we will wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَسْتَيْقِظُونَ",
+          "transliteration": "satastayqizuna",
+          "english": "you (pl) will wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَسْتَيْقِظُونَ",
+          "transliteration": "sayastayqizuna",
+          "english": "they will wake up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَسْتَيْقِظَ",
+          "transliteration": "lan astayqiza",
+          "english": "I won't wake up"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَسْتَيْقِظَ",
+          "transliteration": "lan tastayqiza",
+          "english": "you (m) won't wake up"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَسْتَيْقِظِي",
+          "transliteration": "lan tastayqizi",
+          "english": "you (f) won't wake up"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَسْتَيْقِظَ",
+          "transliteration": "lan yastayqiza",
+          "english": "he won't wake up"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَسْتَيْقِظَ",
+          "transliteration": "lan tastayqiza",
+          "english": "she won't wake up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَسْتَيْقِظَ",
+          "transliteration": "lan nastayqiza",
+          "english": "we won't wake up"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَسْتَيْقِظُوا",
+          "transliteration": "lan tastayqizu",
+          "english": "you (pl) won't wake up"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَسْتَيْقِظُوا",
+          "transliteration": "lan yastayqizu",
+          "english": "they won't wake up"
+        }
+      ]
+    }
+  },
+  "form": "X",
+  "source": "generated"
+}
