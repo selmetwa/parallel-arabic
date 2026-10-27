@@ -1,4 +1,5 @@
 <script lang="ts">
+  import GrammarLinks from '$lib/components/grammar/GrammarLinks.svelte';
   import type { PageData } from './$types';
   import ConjugationExercise from '$lib/components/dialect-shared/conjugations/ConjugationExercise.svelte';
   import { formatDialectName } from '$lib/utils/seo';
@@ -16,6 +17,12 @@
   </a>
 
   <ConjugationExercise verb={data.verb} />
+
+  <GrammarLinks
+    dialect={data.dialect}
+    heading="How these tenses work"
+    slugs={['present-tense', 'past-tense', 'future', 'negation', 'verb-forms', 'verb-classes']}
+  />
 
   {#if data.otherDialects.length}
     <section class="mt-10">

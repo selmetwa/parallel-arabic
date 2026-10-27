@@ -1,0 +1,320 @@
+{
+  "slug": "shaal",
+  "arabic": "شال",
+  "transliteration": "shaal",
+  "english": "to carry",
+  "wordId": null,
+  "rootLetters": "ش ي ل",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a 'ya' root, so the middle vowel becomes 'ee' in the present tense and drops in the past tense for consonant-initial suffixes.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شلت",
+          "transliteration": "shilt",
+          "english": "I carried"
+        },
+        {
+          "person": "enta",
+          "arabic": "شلت",
+          "transliteration": "shilt",
+          "english": "you (m) carried"
+        },
+        {
+          "person": "enti",
+          "arabic": "شلتي",
+          "transliteration": "shilti",
+          "english": "you (f) carried"
+        },
+        {
+          "person": "howa",
+          "arabic": "شال",
+          "transliteration": "shaal",
+          "english": "he carried"
+        },
+        {
+          "person": "heya",
+          "arabic": "شالت",
+          "transliteration": "shaalat",
+          "english": "she carried"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شلنا",
+          "transliteration": "shilna",
+          "english": "we carried"
+        },
+        {
+          "person": "entu",
+          "arabic": "شلتوا",
+          "transliteration": "shiltu",
+          "english": "you (pl) carried"
+        },
+        {
+          "person": "homma",
+          "arabic": "شالوا",
+          "transliteration": "shaalu",
+          "english": "they carried"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما شلت",
+          "transliteration": "ma shilt",
+          "english": "I didn't carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما شلت",
+          "transliteration": "ma shilt",
+          "english": "you (m) didn't carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما شلتي",
+          "transliteration": "ma shilti",
+          "english": "you (f) didn't carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما شال",
+          "transliteration": "ma shaal",
+          "english": "he didn't carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما شالت",
+          "transliteration": "ma shaalat",
+          "english": "she didn't carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما شلنا",
+          "transliteration": "ma shilna",
+          "english": "we didn't carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما شلتوا",
+          "transliteration": "ma shiltu",
+          "english": "you (pl) didn't carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما شالوا",
+          "transliteration": "ma shaalu",
+          "english": "they didn't carry"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باشيل",
+          "transliteration": "basheel",
+          "english": "I carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتشيل",
+          "transliteration": "btisheel",
+          "english": "you (m) carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتشيلي",
+          "transliteration": "btisheeli",
+          "english": "you (f) carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيشيل",
+          "transliteration": "byisheel",
+          "english": "he carries"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتشيل",
+          "transliteration": "btisheel",
+          "english": "she carries"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنشيل",
+          "transliteration": "bnisheel",
+          "english": "we carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتشيلوا",
+          "transliteration": "btisheelu",
+          "english": "you (pl) carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيشيلوا",
+          "transliteration": "byisheelu",
+          "english": "they carry"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باشيل",
+          "transliteration": "ma basheel",
+          "english": "I don't carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتشيل",
+          "transliteration": "ma btisheel",
+          "english": "you (m) don't carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتشيلي",
+          "transliteration": "ma btisheeli",
+          "english": "you (f) don't carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيشيل",
+          "transliteration": "ma byisheel",
+          "english": "he doesn't carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتشيل",
+          "transliteration": "ma btisheel",
+          "english": "she doesn't carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنشيل",
+          "transliteration": "ma bnisheel",
+          "english": "we don't carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتشيلوا",
+          "transliteration": "ma btisheelu",
+          "english": "you (pl) don't carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيشيلوا",
+          "transliteration": "ma byisheelu",
+          "english": "they don't carry"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاشيل",
+          "transliteration": "7asheel",
+          "english": "I will carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتشيل",
+          "transliteration": "7atisheel",
+          "english": "you (m) will carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتشيلي",
+          "transliteration": "7atisheeli",
+          "english": "you (f) will carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيشيل",
+          "transliteration": "7ayisheel",
+          "english": "he will carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتشيل",
+          "transliteration": "7atisheel",
+          "english": "she will carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنشيل",
+          "transliteration": "7anisheel",
+          "english": "we will carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتشيلوا",
+          "transliteration": "7atisheelu",
+          "english": "you (pl) will carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيشيلوا",
+          "transliteration": "7ayisheelu",
+          "english": "they will carry"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاشيل",
+          "transliteration": "ma 7asheel",
+          "english": "I won't carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتشيل",
+          "transliteration": "ma 7atisheel",
+          "english": "you (m) won't carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتشيلي",
+          "transliteration": "ma 7atisheeli",
+          "english": "you (f) won't carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيشيل",
+          "transliteration": "ma 7ayisheel",
+          "english": "he won't carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتشيل",
+          "transliteration": "ma 7atisheel",
+          "english": "she won't carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنشيل",
+          "transliteration": "ma 7anisheel",
+          "english": "we won't carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتشيلوا",
+          "transliteration": "ma 7atisheelu",
+          "english": "you (pl) won't carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيشيلوا",
+          "transliteration": "ma 7ayisheelu",
+          "english": "they won't carry"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

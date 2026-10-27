@@ -1,0 +1,320 @@
+{
+  "slug": "3ayyat",
+  "arabic": "بَكَى",
+  "transliteration": "baka",
+  "english": "to cry",
+  "wordId": null,
+  "rootLetters": "ب ك ي",
+  "verbClass": "defective",
+  "notes": "As a Form I defective verb ending in ya, the final root letter is dropped in the 'they' and 'you (pl)' forms, and the subjunctive takes a visible fatha on the ya.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بَكَيْتُ",
+          "transliteration": "bakaytu",
+          "english": "I cried"
+        },
+        {
+          "person": "enta",
+          "arabic": "بَكَيْتَ",
+          "transliteration": "bakayta",
+          "english": "you (m) cried"
+        },
+        {
+          "person": "enti",
+          "arabic": "بَكَيْتِ",
+          "transliteration": "bakayti",
+          "english": "you (f) cried"
+        },
+        {
+          "person": "howa",
+          "arabic": "بَكَى",
+          "transliteration": "baka",
+          "english": "he cried"
+        },
+        {
+          "person": "heya",
+          "arabic": "بَكَتْ",
+          "transliteration": "bakat",
+          "english": "she cried"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بَكَيْنَا",
+          "transliteration": "bakayna",
+          "english": "we cried"
+        },
+        {
+          "person": "entu",
+          "arabic": "بَكَيْتُمْ",
+          "transliteration": "bakaytum",
+          "english": "you (pl) cried"
+        },
+        {
+          "person": "homma",
+          "arabic": "بَكَوْا",
+          "transliteration": "bakaw",
+          "english": "they cried"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا بَكَيْتُ",
+          "transliteration": "ma bakaytu",
+          "english": "I didn't cry"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا بَكَيْتَ",
+          "transliteration": "ma bakayta",
+          "english": "you (m) didn't cry"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا بَكَيْتِ",
+          "transliteration": "ma bakayti",
+          "english": "you (f) didn't cry"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا بَكَى",
+          "transliteration": "ma baka",
+          "english": "he didn't cry"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا بَكَتْ",
+          "transliteration": "ma bakat",
+          "english": "she didn't cry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا بَكَيْنَا",
+          "transliteration": "ma bakayna",
+          "english": "we didn't cry"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا بَكَيْتُمْ",
+          "transliteration": "ma bakaytum",
+          "english": "you (pl) didn't cry"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا بَكَوْا",
+          "transliteration": "ma bakaw",
+          "english": "they didn't cry"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَبْكِي",
+          "transliteration": "abki",
+          "english": "I cry"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَبْكِي",
+          "transliteration": "tabki",
+          "english": "you (m) cry"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَبْكِينَ",
+          "transliteration": "tabkina",
+          "english": "you (f) cry"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَبْكِي",
+          "transliteration": "yabki",
+          "english": "he cries"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَبْكِي",
+          "transliteration": "tabki",
+          "english": "she cries"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَبْكِي",
+          "transliteration": "nabki",
+          "english": "we cry"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَبْكُونَ",
+          "transliteration": "tabkuna",
+          "english": "you (pl) cry"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَبْكُونَ",
+          "transliteration": "yabkuna",
+          "english": "they cry"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَبْكِي",
+          "transliteration": "la abki",
+          "english": "I don't cry"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَبْكِي",
+          "transliteration": "la tabki",
+          "english": "you (m) don't cry"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَبْكِينَ",
+          "transliteration": "la tabkina",
+          "english": "you (f) don't cry"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَبْكِي",
+          "transliteration": "la yabki",
+          "english": "he doesn't cry"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَبْكِي",
+          "transliteration": "la tabki",
+          "english": "she doesn't cry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَبْكِي",
+          "transliteration": "la nabki",
+          "english": "we don't cry"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَبْكُونَ",
+          "transliteration": "la tabkuna",
+          "english": "you (pl) don't cry"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَبْكُونَ",
+          "transliteration": "la yabkuna",
+          "english": "they don't cry"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَبْكِي",
+          "transliteration": "sa2abki",
+          "english": "I will cry"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَبْكِي",
+          "transliteration": "satabki",
+          "english": "you (m) will cry"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَبْكِينَ",
+          "transliteration": "satabkina",
+          "english": "you (f) will cry"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَبْكِي",
+          "transliteration": "sayabki",
+          "english": "he will cry"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَبْكِي",
+          "transliteration": "satabki",
+          "english": "she will cry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَبْكِي",
+          "transliteration": "sanabki",
+          "english": "we will cry"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَبْكُونَ",
+          "transliteration": "satabkuna",
+          "english": "you (pl) will cry"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَبْكُونَ",
+          "transliteration": "sayabkuna",
+          "english": "they will cry"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَبْكِيَ",
+          "transliteration": "lan abkiya",
+          "english": "I won't cry"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَبْكِيَ",
+          "transliteration": "lan tabkiya",
+          "english": "you (m) won't cry"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَبْكِي",
+          "transliteration": "lan tabki",
+          "english": "you (f) won't cry"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَبْكِيَ",
+          "transliteration": "lan yabkiya",
+          "english": "he won't cry"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَبْكِيَ",
+          "transliteration": "lan tabkiya",
+          "english": "she won't cry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَبْكِيَ",
+          "transliteration": "lan nabkiya",
+          "english": "we won't cry"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَبْكُوا",
+          "transliteration": "lan tabku",
+          "english": "you (pl) won't cry"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَبْكُوا",
+          "transliteration": "lan yabku",
+          "english": "they won't cry"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "sallim",
+  "arabic": "سلم",
+  "transliteration": "sallam",
+  "english": "to greet",
+  "wordId": null,
+  "rootLetters": "س ل م",
+  "verbClass": "sound",
+  "notes": "This verb means 'to greet' and is typically followed by the preposition على (3ala) to specify who is being greeted (e.g., سلمت عليه - I greeted him). It conjugates as a regular Form II sound verb.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سلمت",
+          "transliteration": "sallamit",
+          "english": "I greeted"
+        },
+        {
+          "person": "enta",
+          "arabic": "سلمت",
+          "transliteration": "sallamit",
+          "english": "you (m) greeted"
+        },
+        {
+          "person": "enti",
+          "arabic": "سلمتي",
+          "transliteration": "sallamti",
+          "english": "you (f) greeted"
+        },
+        {
+          "person": "howa",
+          "arabic": "سلم",
+          "transliteration": "sallam",
+          "english": "he greeted"
+        },
+        {
+          "person": "heya",
+          "arabic": "سلمت",
+          "transliteration": "sallamat",
+          "english": "she greeted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سلمنا",
+          "transliteration": "sallamna",
+          "english": "we greeted"
+        },
+        {
+          "person": "entu",
+          "arabic": "سلمتوا",
+          "transliteration": "sallamtu",
+          "english": "you (pl) greeted"
+        },
+        {
+          "person": "homma",
+          "arabic": "سلموا",
+          "transliteration": "sallamaw",
+          "english": "they greeted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سلمت",
+          "transliteration": "ma sallamit",
+          "english": "I didn't greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سلمت",
+          "transliteration": "ma sallamit",
+          "english": "you (m) didn't greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سلمتي",
+          "transliteration": "ma sallamti",
+          "english": "you (f) didn't greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سلم",
+          "transliteration": "ma sallam",
+          "english": "he didn't greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سلمت",
+          "transliteration": "ma sallamat",
+          "english": "she didn't greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سلمنا",
+          "transliteration": "ma sallamna",
+          "english": "we didn't greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سلمتوا",
+          "transliteration": "ma sallamtu",
+          "english": "you (pl) didn't greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سلموا",
+          "transliteration": "ma sallamaw",
+          "english": "they didn't greet"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اسلم",
+          "transliteration": "asallim",
+          "english": "I greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "تسلم",
+          "transliteration": "tsallim",
+          "english": "you (m) greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "تسلمين",
+          "transliteration": "tsallimeen",
+          "english": "you (f) greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "يسلم",
+          "transliteration": "ysallim",
+          "english": "he greets"
+        },
+        {
+          "person": "heya",
+          "arabic": "تسلم",
+          "transliteration": "tsallim",
+          "english": "she greets"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نسلم",
+          "transliteration": "nsallim",
+          "english": "we greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "تسلمون",
+          "transliteration": "tsallimoon",
+          "english": "you (pl) greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "يسلمون",
+          "transliteration": "ysallimoon",
+          "english": "they greet"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اسلم",
+          "transliteration": "ma asallim",
+          "english": "I don't greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تسلم",
+          "transliteration": "ma tsallim",
+          "english": "you (m) don't greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تسلمين",
+          "transliteration": "ma tsallimeen",
+          "english": "you (f) don't greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يسلم",
+          "transliteration": "ma ysallim",
+          "english": "he doesn't greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تسلم",
+          "transliteration": "ma tsallim",
+          "english": "she doesn't greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نسلم",
+          "transliteration": "ma nsallim",
+          "english": "we don't greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تسلمون",
+          "transliteration": "ma tsallimoon",
+          "english": "you (pl) don't greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يسلمون",
+          "transliteration": "ma ysallimoon",
+          "english": "they don't greet"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اسلم",
+          "transliteration": "raa7 asallim",
+          "english": "I will greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تسلم",
+          "transliteration": "raa7 tsallim",
+          "english": "you (m) will greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تسلمين",
+          "transliteration": "raa7 tsallimeen",
+          "english": "you (f) will greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يسلم",
+          "transliteration": "raa7 ysallim",
+          "english": "he will greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تسلم",
+          "transliteration": "raa7 tsallim",
+          "english": "she will greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نسلم",
+          "transliteration": "raa7 nsallim",
+          "english": "we will greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تسلمون",
+          "transliteration": "raa7 tsallimoon",
+          "english": "you (pl) will greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يسلمون",
+          "transliteration": "raa7 ysallimoon",
+          "english": "they will greet"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اسلم",
+          "transliteration": "ma raa7 asallim",
+          "english": "I won't greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تسلم",
+          "transliteration": "ma raa7 tsallim",
+          "english": "you (m) won't greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تسلمين",
+          "transliteration": "ma raa7 tsallimeen",
+          "english": "you (f) won't greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يسلم",
+          "transliteration": "ma raa7 ysallim",
+          "english": "he won't greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تسلم",
+          "transliteration": "ma raa7 tsallim",
+          "english": "she won't greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نسلم",
+          "transliteration": "ma raa7 nsallim",
+          "english": "we won't greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تسلمون",
+          "transliteration": "ma raa7 tsallimoon",
+          "english": "you (pl) won't greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يسلمون",
+          "transliteration": "ma raa7 ysallimoon",
+          "english": "they won't greet"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

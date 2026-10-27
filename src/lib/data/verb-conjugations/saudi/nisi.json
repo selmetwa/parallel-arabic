@@ -1,0 +1,320 @@
+{
+  "slug": "nisi",
+  "arabic": "نسي",
+  "transliteration": "nisi",
+  "english": "to forget",
+  "wordId": null,
+  "rootLetters": "ن س ي",
+  "verbClass": "defective",
+  "notes": "This is a Form I defective verb; the past tense has an 'i' stem (nisi) which changes to 'ee' before consonant endings, while the present tense has an 'a' stem (-nsa).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نسيت",
+          "transliteration": "niseet",
+          "english": "I forgot"
+        },
+        {
+          "person": "enta",
+          "arabic": "نسيت",
+          "transliteration": "niseet",
+          "english": "you (m) forgot"
+        },
+        {
+          "person": "enti",
+          "arabic": "نسيتي",
+          "transliteration": "niseeti",
+          "english": "you (f) forgot"
+        },
+        {
+          "person": "howa",
+          "arabic": "نسي",
+          "transliteration": "nisi",
+          "english": "he forgot"
+        },
+        {
+          "person": "heya",
+          "arabic": "نسيت",
+          "transliteration": "nisyat",
+          "english": "she forgot"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نسينا",
+          "transliteration": "niseena",
+          "english": "we forgot"
+        },
+        {
+          "person": "entu",
+          "arabic": "نسيتوا",
+          "transliteration": "niseetu",
+          "english": "you (pl) forgot"
+        },
+        {
+          "person": "homma",
+          "arabic": "نسيوا",
+          "transliteration": "nisyu",
+          "english": "they forgot"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما نسيت",
+          "transliteration": "ma niseet",
+          "english": "I didn't forget"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما نسيت",
+          "transliteration": "ma niseet",
+          "english": "you (m) didn't forget"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما نسيتي",
+          "transliteration": "ma niseeti",
+          "english": "you (f) didn't forget"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما نسي",
+          "transliteration": "ma nisi",
+          "english": "he didn't forget"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما نسيت",
+          "transliteration": "ma nisyat",
+          "english": "she didn't forget"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نسينا",
+          "transliteration": "ma niseena",
+          "english": "we didn't forget"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما نسيتوا",
+          "transliteration": "ma niseetu",
+          "english": "you (pl) didn't forget"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما نسيوا",
+          "transliteration": "ma nisyu",
+          "english": "they didn't forget"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بانسى",
+          "transliteration": "bansa",
+          "english": "I forget"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتنسى",
+          "transliteration": "btinsa",
+          "english": "you (m) forget"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتنسي",
+          "transliteration": "btinsi",
+          "english": "you (f) forget"
+        },
+        {
+          "person": "howa",
+          "arabic": "بينسى",
+          "transliteration": "byinsa",
+          "english": "he forgets"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتنسى",
+          "transliteration": "btinsa",
+          "english": "she forgets"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بننسى",
+          "transliteration": "bninsa",
+          "english": "we forget"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتنسوا",
+          "transliteration": "btinsu",
+          "english": "you (pl) forget"
+        },
+        {
+          "person": "homma",
+          "arabic": "بينسوا",
+          "transliteration": "byinsu",
+          "english": "they forget"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بانسى",
+          "transliteration": "ma bansa",
+          "english": "I don't forget"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتنسى",
+          "transliteration": "ma btinsa",
+          "english": "you (m) don't forget"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتنسي",
+          "transliteration": "ma btinsi",
+          "english": "you (f) don't forget"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بينسى",
+          "transliteration": "ma byinsa",
+          "english": "he doesn't forget"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتنسى",
+          "transliteration": "ma btinsa",
+          "english": "she doesn't forget"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بننسى",
+          "transliteration": "ma bninsa",
+          "english": "we don't forget"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتنسوا",
+          "transliteration": "ma btinsu",
+          "english": "you (pl) don't forget"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بينسوا",
+          "transliteration": "ma byinsu",
+          "english": "they don't forget"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حانسى",
+          "transliteration": "7ansa",
+          "english": "I will forget"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتنسى",
+          "transliteration": "7atinsa",
+          "english": "you (m) will forget"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتنسي",
+          "transliteration": "7atinsi",
+          "english": "you (f) will forget"
+        },
+        {
+          "person": "howa",
+          "arabic": "حينسى",
+          "transliteration": "7ayinsa",
+          "english": "he will forget"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتنسى",
+          "transliteration": "7atinsa",
+          "english": "she will forget"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حننسى",
+          "transliteration": "7aninsa",
+          "english": "we will forget"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتنسوا",
+          "transliteration": "7atinsu",
+          "english": "you (pl) will forget"
+        },
+        {
+          "person": "homma",
+          "arabic": "حينسوا",
+          "transliteration": "7ayinsu",
+          "english": "they will forget"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حانسى",
+          "transliteration": "ma 7ansa",
+          "english": "I won't forget"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتنسى",
+          "transliteration": "ma 7atinsa",
+          "english": "you (m) won't forget"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتنسي",
+          "transliteration": "ma 7atinsi",
+          "english": "you (f) won't forget"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حينسى",
+          "transliteration": "ma 7ayinsa",
+          "english": "he won't forget"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتنسى",
+          "transliteration": "ma 7atinsa",
+          "english": "she won't forget"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حننسى",
+          "transliteration": "ma 7aninsa",
+          "english": "we won't forget"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتنسوا",
+          "transliteration": "ma 7atinsu",
+          "english": "you (pl) won't forget"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حينسوا",
+          "transliteration": "ma 7ayinsu",
+          "english": "they won't forget"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,227 @@
+# Levantine second-batch verbs, hand-written. See scripts/verb-conjugations/write-tables.ts.
+# bare: the form after badd- ("I want to …"); b-/mn- and ra7 are added by the script.
+
+## kallim
+cit: كلم/kallam
+root: ك ل م
+class: sound
+form: II
+note: Form II verb used for talking to someone and calling them on the phone (kallamto: I called him).
+past: كلمت/kallamt; كلمت/kallamt; كلمتي/kallamti; كلم/kallam; كلمت/kallamit; كلمنا/kallamna; كلمتوا/kallamtu; كلموا/kallamu
+bare: كلم/kallim; تكلم/tkallim; تكلمي/tkallmi; يكلم/ykallim; تكلم/tkallim; نكلم/nkallim; تكلموا/tkallmu; يكلموا/ykallmu
+
+## 3add
+cit: عد/3add
+root: ع د د
+class: doubled
+form: I
+note: Doubled verb: -eit before consonant endings in the past (3addeit), i in the present (bi3idd).
+past: عديت/3addeit; عديت/3addeit; عديتي/3addeiti; عد/3add; عدت/3addit; عدينا/3addeina; عديتوا/3addeitu; عدوا/3addu
+bare: عد/3idd; تعد/t3idd; تعدي/t3iddi; يعد/y3idd; تعد/t3idd; نعد/n3idd; تعدوا/t3iddu; يعدوا/y3iddu
+
+## si2it
+cit: رسب/rasab
+root: ر س ب
+class: sound
+form: I
+note: For failing an exam Levantine says rasab; present birsab.
+past: رسبت/rasabt; رسبت/rasabt; رسبتي/rasabti; رسب/rasab; رسبت/rasbit; رسبنا/rasabna; رسبتوا/rasabtu; رسبوا/rasbu
+bare: ارسب/irsab; ترسب/tirsab; ترسبي/tirsabi; يرسب/yirsab; ترسب/tirsab; نرسب/nirsab; ترسبوا/tirsabu; يرسبوا/yirsabu
+
+## kibir
+cit: كبر/kibir
+root: ك ب ر
+class: sound
+form: I
+note: Regular verb with i in the past and a in the present (bikbar).
+past: كبرت/kbirt; كبرت/kbirt; كبرتي/kbirti; كبر/kibir; كبرت/kibrit; كبرنا/kbirna; كبرتوا/kbirtu; كبروا/kibru
+bare: اكبر/ikbar; تكبر/tikbar; تكبري/tikbari; يكبر/yikbar; تكبر/tikbar; نكبر/nikbar; تكبروا/tikbaru; يكبروا/yikbaru
+
+## zaad
+cit: زاد/zad
+root: ز ي د
+class: hollow
+form: I
+note: Hollow verb: the long a becomes i before consonant endings (zidt), and the present is bzid.
+past: زدت/zidt; زدت/zidt; زدتي/zidti; زاد/zad; زادت/zadit; زدنا/zidna; زدتوا/zidtu; زادوا/zadu
+bare: زيد/zid; تزيد/tzid; تزيدي/tzidi; يزيد/yzid; تزيد/tzid; نزيد/nzid; تزيدوا/tzidu; يزيدوا/yzidu
+
+## 2all
+cit: قل/2all
+root: ق ل ل
+class: doubled
+form: I
+note: Doubled verb: -eit before consonant endings in the past (2alleit); ق is a glottal stop.
+past: قليت/2alleit; قليت/2alleit; قليتي/2alleiti; قل/2all; قلت/2allit; قلينا/2alleina; قليتوا/2alleitu; قلوا/2allu
+bare: قل/2ill; تقل/t2ill; تقلي/t2illi; يقل/y2ill; تقل/t2ill; نقل/n2ill; تقلوا/t2illu; يقلوا/y2illu
+
+## tafa
+cit: طفى/tafa
+root: ط ف ي
+class: defective
+form: I
+note: Defective verb: tafeit in the past, bitfi in the present.
+past: طفيت/tafeit; طفيت/tafeit; طفيتي/tafeiti; طفى/tafa; طفت/tafit; طفينا/tafeina; طفيتوا/tafeitu; طفوا/tafu
+bare: اطفي/itfi; تطفي/titfi; تطفي/titfi; يطفي/yitfi; تطفي/titfi; نطفي/nitfi; تطفوا/titfu; يطفوا/yitfu
+
+## shaghghal
+cit: شغل/shaghghal
+root: ش غ ل
+class: sound
+form: II
+note: Form II verb (switch on, run a machine); present bshaghghil.
+past: شغلت/shaghghalt; شغلت/shaghghalt; شغلتي/shaghghalti; شغل/shaghghal; شغلت/shaghghalit; شغلنا/shaghghalna; شغلتوا/shaghghaltu; شغلوا/shaghghalu
+bare: شغل/shaghghil; تشغل/tshaghghil; تشغلي/tshaghghli; يشغل/yshaghghil; تشغل/tshaghghil; نشغل/nshaghghil; تشغلوا/tshaghghlu; يشغلوا/yshaghghlu
+
+## sawwar
+cit: صور/sawwar
+root: ص و ر
+class: sound
+form: II
+note: Form II verb with a doubled w; present bsawwir.
+past: صورت/sawwart; صورت/sawwart; صورتي/sawwarti; صور/sawwar; صورت/sawwarit; صورنا/sawwarna; صورتوا/sawwartu; صوروا/sawwaru
+bare: صور/sawwir; تصور/tsawwir; تصوري/tsawwri; يصور/ysawwir; تصور/tsawwir; نصور/nsawwir; تصوروا/tsawwru; يصوروا/ysawwru
+
+## itmanna
+cit: اتمنى/itmanna
+root: م ن ي
+class: defective
+form: V
+note: Form V verb ending in a vowel: itmanneit in the past, bitmanna in the present.
+past: اتمنيت/itmanneit; اتمنيت/itmanneit; اتمنيتي/itmanneiti; اتمنى/itmanna; اتمنت/itmannit; اتمنينا/itmanneina; اتمنيتوا/itmanneitu; اتمنوا/itmannu
+bare: اتمنى/itmanna; تتمنى/titmanna; تتمني/titmanni; يتمنى/yitmanna; تتمنى/titmanna; نتمنى/nitmanna; تتمنوا/titmannu; يتمنوا/yitmannu
+
+## hirib
+cit: هرب/harab
+root: ه ر ب
+class: sound
+form: I
+note: Regular verb with a in the present (bihrab).
+past: هربت/harabt; هربت/harabt; هربتي/harabti; هرب/harab; هربت/harbit; هربنا/harabna; هربتوا/harabtu; هربوا/harbu
+bare: اهرب/ihrab; تهرب/tihrab; تهربي/tihrabi; يهرب/yihrab; تهرب/tihrab; نهرب/nihrab; تهربوا/tihrabu; يهربوا/yihrabu
+
+## istakhabba
+cit: تخبى/tkhabba
+root: خ ب ي
+class: defective
+form: V
+note: Levantine says tkhabba for "hide (yourself)": tkhabbeit in the past, bitkhabba in the present.
+past: تخبيت/tkhabbeit; تخبيت/tkhabbeit; تخبيتي/tkhabbeiti; تخبى/tkhabba; تخبت/tkhabbit; تخبينا/tkhabbeina; تخبيتوا/tkhabbeitu; تخبوا/tkhabbu
+bare: اتخبى/itkhabba; تتخبى/titkhabba; تتخبي/titkhabbi; يتخبى/yitkhabba; تتخبى/titkhabba; نتخبى/nitkhabba; تتخبوا/titkhabbu; يتخبوا/yitkhabbu
+
+## waga3
+cit: وجع/waja3
+root: و ج ع
+class: sound
+form: I
+note: Said of a body part that hurts: rasi 3am byuja3ni (my head is hurting me).
+past: وجعت/waja3t; وجعت/waja3t; وجعتي/waja3ti; وجع/waja3; وجعت/waja3it; وجعنا/waja3na; وجعتوا/waja3tu; وجعوا/waja3u
+bare: اوجع/uja3; توجع/tuja3; توجعي/tuja3i; يوجع/yuja3; توجع/tuja3; نوجع/nuja3; توجعوا/tuja3u; يوجعوا/yuja3u
+
+## targim
+cit: ترجم/tarjam
+root: ت ر ج م
+class: sound
+form: Q
+note: A four-letter verb that conjugates like Form II; present btarjim.
+past: ترجمت/tarjamt; ترجمت/tarjamt; ترجمتي/tarjamti; ترجم/tarjam; ترجمت/tarjamit; ترجمنا/tarjamna; ترجمتوا/tarjamtu; ترجموا/tarjamu
+bare: ترجم/tarjim; تترجم/ttarjim; تترجمي/ttarjmi; يترجم/ytarjim; تترجم/ttarjim; نترجم/ntarjim; تترجموا/ttarjmu; يترجموا/ytarjmu
+
+## shara7
+cit: شرح/shara7
+root: ش ر ح
+class: sound
+form: I
+note: Regular verb with a in the present (bishra7).
+past: شرحت/shara7t; شرحت/shara7t; شرحتي/shara7ti; شرح/shara7; شرحت/shar7it; شرحنا/shara7na; شرحتوا/shara7tu; شرحوا/shar7u
+bare: اشرح/ishra7; تشرح/tishra7; تشرحي/tishra7i; يشرح/yishra7; تشرح/tishra7; نشرح/nishra7; تشرحوا/tishra7u; يشرحوا/yishra7u
+
+## 3amal
+cit: عمل/3imil
+root: ع م ل
+class: sound
+form: I
+note: Past 3imil with i, present ba3mel with a; shu 3am ta3mel? means "what are you doing?".
+past: عملت/3milt; عملت/3milt; عملتي/3milti; عمل/3imil; عملت/3imlit; عملنا/3milna; عملتوا/3miltu; عملوا/3imlu
+bare: اعمل/a3mel; تعمل/ta3mel; تعملي/ta3mli; يعمل/ya3mel; تعمل/ta3mel; نعمل/na3mel; تعملوا/ta3mlu; يعملوا/ya3mlu
+
+## khalla
+cit: خلى/khalla
+root: خ ل ي
+class: defective
+form: II
+note: Form II verb ending in a vowel; khallini means "let me".
+past: خليت/khalleit; خليت/khalleit; خليتي/khalleiti; خلى/khalla; خلت/khallit; خلينا/khalleina; خليتوا/khalleitu; خلوا/khallu
+bare: خلي/khalli; تخلي/tkhalli; تخلي/tkhalli; يخلي/ykhalli; تخلي/tkhalli; نخلي/nkhalli; تخلوا/tkhallu; يخلوا/ykhallu
+
+## ba2a
+cit: صار/sar
+root: ص ي ر
+class: hollow
+form: I
+note: Levantine says sar for "become"; the long a shortens to i before consonant endings (sirt).
+past: صرت/sirt; صرت/sirt; صرتي/sirti; صار/sar; صارت/sarit; صرنا/sirna; صرتوا/sirtu; صاروا/saru
+bare: صير/sir; تصير/tsir; تصيري/tsiri; يصير/ysir; تصير/tsir; نصير/nsir; تصيروا/tsiru; يصيروا/ysiru
+
+## laff
+cit: لف/laff
+root: ل ف ف
+class: doubled
+form: I
+note: Doubled verb: -eit before consonant endings in the past (laffeit), i in the present (bliff).
+past: لفيت/laffeit; لفيت/laffeit; لفيتي/laffeiti; لف/laff; لفت/laffit; لفينا/laffeina; لفيتوا/laffeitu; لفوا/laffu
+bare: لف/liff; تلف/tliff; تلفي/tliffi; يلف/yliff; تلف/tliff; نلف/nliff; تلفوا/tliffu; يلفوا/yliffu
+
+## 3adda
+cit: قطع/2ata3
+root: ق ط ع
+class: sound
+form: I
+note: To cross a street you 2ata3 it ("cut across"); ق is a glottal stop.
+past: قطعت/2ata3t; قطعت/2ata3t; قطعتي/2ata3ti; قطع/2ata3; قطعت/2at3it; قطعنا/2ata3na; قطعتوا/2ata3tu; قطعوا/2at3u
+bare: اقطع/i2ta3; تقطع/ti2ta3; تقطعي/ti2ta3i; يقطع/yi2ta3; تقطع/ti2ta3; نقطع/ni2ta3; تقطعوا/ti2ta3u; يقطعوا/yi2ta3u
+
+## nasa7
+cit: نصح/nasa7
+root: ن ص ح
+class: sound
+form: I
+note: Regular verb with a in the present (binsa7).
+past: نصحت/nasa7t; نصحت/nasa7t; نصحتي/nasa7ti; نصح/nasa7; نصحت/nas7it; نصحنا/nasa7na; نصحتوا/nasa7tu; نصحوا/nas7u
+bare: انصح/insa7; تنصح/tinsa7; تنصحي/tinsa7i; ينصح/yinsa7; تنصح/tinsa7; ننصح/ninsa7; تنصحوا/tinsa7u; ينصحوا/yinsa7u
+
+## ista2bil
+cit: استقبل/sta2bal
+root: ق ب ل
+class: sound
+form: X
+note: Form X verb (receive, welcome guests); ق is a glottal stop, present bista2bil.
+past: استقبلت/sta2balt; استقبلت/sta2balt; استقبلتي/sta2balti; استقبل/sta2bal; استقبلت/sta2balit; استقبلنا/sta2balna; استقبلتوا/sta2baltu; استقبلوا/sta2balu
+bare: استقبل/sta2bil; تستقبل/tista2bil; تستقبلي/tista2bli; يستقبل/yista2bil; تستقبل/tista2bil; نستقبل/nista2bil; تستقبلوا/tista2blu; يستقبلوا/yista2blu
+
+## 7agaz
+cit: حجز/7ajaz
+root: ح ج ز
+class: sound
+form: I
+note: Regular verb with i in the present (bi7jiz).
+past: حجزت/7ajazt; حجزت/7ajazt; حجزتي/7ajazti; حجز/7ajaz; حجزت/7ajzit; حجزنا/7ajazna; حجزتوا/7ajaztu; حجزوا/7ajzu
+bare: احجز/i7jiz; تحجز/ti7jiz; تحجزي/ti7jzi; يحجز/yi7jiz; تحجز/ti7jiz; نحجز/ni7jiz; تحجزوا/ti7jzu; يحجزوا/yi7jzu
+
+## ista2gar
+cit: استأجر/sta2jar
+root: أ ج ر
+class: sound
+form: X
+note: Form X verb (rent); many people simply say sta2jar or ajjar.
+past: استأجرت/sta2jart; استأجرت/sta2jart; استأجرتي/sta2jarti; استأجر/sta2jar; استأجرت/sta2jarit; استأجرنا/sta2jarna; استأجرتوا/sta2jartu; استأجروا/sta2jaru
+bare: استأجر/sta2jir; تستأجر/tista2jir; تستأجري/tista2jri; يستأجر/yista2jir; تستأجر/tista2jir; نستأجر/nista2jir; تستأجروا/tista2jru; يستأجروا/yista2jru
+
+## itghadda
+cit: تغدى/tghadda
+root: غ د ي
+class: defective
+form: V
+note: Form V verb ending in a vowel: tghaddeit in the past, bitghadda in the present.
+past: تغديت/tghaddeit; تغديت/tghaddeit; تغديتي/tghaddeiti; تغدى/tghadda; تغدت/tghaddit; تغدينا/tghaddeina; تغديتوا/tghaddeitu; تغدوا/tghaddu
+bare: اتغدى/itghadda; تتغدى/titghadda; تتغدي/titghaddi; يتغدى/yitghadda; تتغدى/titghadda; نتغدى/nitghadda; تتغدوا/titghaddu; يتغدوا/yitghaddu

@@ -1,0 +1,320 @@
+{
+  "slug": "3amal",
+  "arabic": "عمل",
+  "transliteration": "3imil",
+  "english": "to do",
+  "wordId": null,
+  "rootLetters": "ع م ل",
+  "verbClass": "sound",
+  "notes": "Past 3imil with i, present ba3mel with a; shu 3am ta3mel? means \"what are you doing?\".",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عملت",
+          "transliteration": "3milt",
+          "english": "I did"
+        },
+        {
+          "person": "enta",
+          "arabic": "عملت",
+          "transliteration": "3milt",
+          "english": "you (m) did"
+        },
+        {
+          "person": "enti",
+          "arabic": "عملتي",
+          "transliteration": "3milti",
+          "english": "you (f) did"
+        },
+        {
+          "person": "howa",
+          "arabic": "عمل",
+          "transliteration": "3imil",
+          "english": "he did"
+        },
+        {
+          "person": "heya",
+          "arabic": "عملت",
+          "transliteration": "3imlit",
+          "english": "she did"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عملنا",
+          "transliteration": "3milna",
+          "english": "we did"
+        },
+        {
+          "person": "entu",
+          "arabic": "عملتوا",
+          "transliteration": "3miltu",
+          "english": "you (pl) did"
+        },
+        {
+          "person": "homma",
+          "arabic": "عملوا",
+          "transliteration": "3imlu",
+          "english": "they did"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما عملت",
+          "transliteration": "ma 3milt",
+          "english": "I didn't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما عملت",
+          "transliteration": "ma 3milt",
+          "english": "you (m) didn't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما عملتي",
+          "transliteration": "ma 3milti",
+          "english": "you (f) didn't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما عمل",
+          "transliteration": "ma 3imil",
+          "english": "he didn't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما عملت",
+          "transliteration": "ma 3imlit",
+          "english": "she didn't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما عملنا",
+          "transliteration": "ma 3milna",
+          "english": "we didn't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما عملتوا",
+          "transliteration": "ma 3miltu",
+          "english": "you (pl) didn't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما عملوا",
+          "transliteration": "ma 3imlu",
+          "english": "they didn't do"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بعمل",
+          "transliteration": "ba3mel",
+          "english": "I do"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتعمل",
+          "transliteration": "bta3mel",
+          "english": "you (m) do"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتعملي",
+          "transliteration": "bta3mli",
+          "english": "you (f) do"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيعمل",
+          "transliteration": "bya3mel",
+          "english": "he does"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتعمل",
+          "transliteration": "bta3mel",
+          "english": "she does"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منعمل",
+          "transliteration": "mna3mel",
+          "english": "we do"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتعملوا",
+          "transliteration": "bta3mlu",
+          "english": "you (pl) do"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيعملوا",
+          "transliteration": "bya3mlu",
+          "english": "they do"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بعمل",
+          "transliteration": "ma ba3mel",
+          "english": "I don't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتعمل",
+          "transliteration": "ma bta3mel",
+          "english": "you (m) don't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتعملي",
+          "transliteration": "ma bta3mli",
+          "english": "you (f) don't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيعمل",
+          "transliteration": "ma bya3mel",
+          "english": "he doesn't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتعمل",
+          "transliteration": "ma bta3mel",
+          "english": "she doesn't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منعمل",
+          "transliteration": "ma mna3mel",
+          "english": "we don't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتعملوا",
+          "transliteration": "ma bta3mlu",
+          "english": "you (pl) don't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيعملوا",
+          "transliteration": "ma bya3mlu",
+          "english": "they don't do"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اعمل",
+          "transliteration": "ra7 a3mel",
+          "english": "I will do"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تعمل",
+          "transliteration": "ra7 ta3mel",
+          "english": "you (m) will do"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تعملي",
+          "transliteration": "ra7 ta3mli",
+          "english": "you (f) will do"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يعمل",
+          "transliteration": "ra7 ya3mel",
+          "english": "he will do"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تعمل",
+          "transliteration": "ra7 ta3mel",
+          "english": "she will do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نعمل",
+          "transliteration": "ra7 na3mel",
+          "english": "we will do"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تعملوا",
+          "transliteration": "ra7 ta3mlu",
+          "english": "you (pl) will do"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يعملوا",
+          "transliteration": "ra7 ya3mlu",
+          "english": "they will do"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اعمل",
+          "transliteration": "ma ra7 a3mel",
+          "english": "I won't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تعمل",
+          "transliteration": "ma ra7 ta3mel",
+          "english": "you (m) won't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تعملي",
+          "transliteration": "ma ra7 ta3mli",
+          "english": "you (f) won't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يعمل",
+          "transliteration": "ma ra7 ya3mel",
+          "english": "he won't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تعمل",
+          "transliteration": "ma ra7 ta3mel",
+          "english": "she won't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نعمل",
+          "transliteration": "ma ra7 na3mel",
+          "english": "we won't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تعملوا",
+          "transliteration": "ma ra7 ta3mlu",
+          "english": "you (pl) won't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يعملوا",
+          "transliteration": "ma ra7 ya3mlu",
+          "english": "they won't do"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "sadda2",
+  "arabic": "صدق",
+  "transliteration": "seddeq",
+  "english": "to believe",
+  "wordId": null,
+  "rootLetters": "ص د ق",
+  "verbClass": "sound",
+  "notes": "Form II verb with a doubled middle letter; ma kanseddeqsh means \"I can't believe it\".",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صدقت",
+          "transliteration": "seddeqt",
+          "english": "I believed"
+        },
+        {
+          "person": "enta",
+          "arabic": "صدقتي",
+          "transliteration": "seddeqti",
+          "english": "you (m) believed"
+        },
+        {
+          "person": "enti",
+          "arabic": "صدقتي",
+          "transliteration": "seddeqti",
+          "english": "you (f) believed"
+        },
+        {
+          "person": "howa",
+          "arabic": "صدق",
+          "transliteration": "seddeq",
+          "english": "he believed"
+        },
+        {
+          "person": "heya",
+          "arabic": "صدقات",
+          "transliteration": "seddqat",
+          "english": "she believed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صدقنا",
+          "transliteration": "seddeqna",
+          "english": "we believed"
+        },
+        {
+          "person": "entu",
+          "arabic": "صدقتيو",
+          "transliteration": "seddeqtiw",
+          "english": "you (pl) believed"
+        },
+        {
+          "person": "homma",
+          "arabic": "صدقو",
+          "transliteration": "seddqu",
+          "english": "they believed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما صدقتش",
+          "transliteration": "ma seddeqtsh",
+          "english": "I didn't believe"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما صدقتيش",
+          "transliteration": "ma seddeqtish",
+          "english": "you (m) didn't believe"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما صدقتيش",
+          "transliteration": "ma seddeqtish",
+          "english": "you (f) didn't believe"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما صدقش",
+          "transliteration": "ma seddeqsh",
+          "english": "he didn't believe"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما صدقاتش",
+          "transliteration": "ma seddqatsh",
+          "english": "she didn't believe"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما صدقناش",
+          "transliteration": "ma seddeqnash",
+          "english": "we didn't believe"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما صدقتيوش",
+          "transliteration": "ma seddeqtiwsh",
+          "english": "you (pl) didn't believe"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما صدقوش",
+          "transliteration": "ma seddqush",
+          "english": "they didn't believe"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنصدق",
+          "transliteration": "kanseddeq",
+          "english": "I believe"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتصدق",
+          "transliteration": "katseddeq",
+          "english": "you (m) believe"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتصدقي",
+          "transliteration": "katseddqi",
+          "english": "you (f) believe"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيصدق",
+          "transliteration": "kayseddeq",
+          "english": "he believes"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتصدق",
+          "transliteration": "katseddeq",
+          "english": "she believes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنصدقو",
+          "transliteration": "kanseddqu",
+          "english": "we believe"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتصدقو",
+          "transliteration": "katseddqu",
+          "english": "you (pl) believe"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيصدقو",
+          "transliteration": "kayseddqu",
+          "english": "they believe"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنصدقش",
+          "transliteration": "ma kanseddeqsh",
+          "english": "I don't believe"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتصدقش",
+          "transliteration": "ma katseddeqsh",
+          "english": "you (m) don't believe"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتصدقيش",
+          "transliteration": "ma katseddqish",
+          "english": "you (f) don't believe"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيصدقش",
+          "transliteration": "ma kayseddeqsh",
+          "english": "he doesn't believe"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتصدقش",
+          "transliteration": "ma katseddeqsh",
+          "english": "she doesn't believe"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنصدقوش",
+          "transliteration": "ma kanseddqush",
+          "english": "we don't believe"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتصدقوش",
+          "transliteration": "ma katseddqush",
+          "english": "you (pl) don't believe"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيصدقوش",
+          "transliteration": "ma kayseddqush",
+          "english": "they don't believe"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نصدق",
+          "transliteration": "ghadi nseddeq",
+          "english": "I will believe"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تصدق",
+          "transliteration": "ghadi tseddeq",
+          "english": "you (m) will believe"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تصدقي",
+          "transliteration": "ghadi tseddqi",
+          "english": "you (f) will believe"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يصدق",
+          "transliteration": "ghadi yseddeq",
+          "english": "he will believe"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تصدق",
+          "transliteration": "ghadi tseddeq",
+          "english": "she will believe"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نصدقو",
+          "transliteration": "ghadi nseddqu",
+          "english": "we will believe"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تصدقو",
+          "transliteration": "ghadi tseddqu",
+          "english": "you (pl) will believe"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يصدقو",
+          "transliteration": "ghadi yseddqu",
+          "english": "they will believe"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نصدق",
+          "transliteration": "ma ghadish nseddeq",
+          "english": "I won't believe"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تصدق",
+          "transliteration": "ma ghadish tseddeq",
+          "english": "you (m) won't believe"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تصدقي",
+          "transliteration": "ma ghadish tseddqi",
+          "english": "you (f) won't believe"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يصدق",
+          "transliteration": "ma ghadish yseddeq",
+          "english": "he won't believe"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تصدق",
+          "transliteration": "ma ghadish tseddeq",
+          "english": "she won't believe"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نصدقو",
+          "transliteration": "ma ghadish nseddqu",
+          "english": "we won't believe"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تصدقو",
+          "transliteration": "ma ghadish tseddqu",
+          "english": "you (pl) won't believe"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يصدقو",
+          "transliteration": "ma ghadish yseddqu",
+          "english": "they won't believe"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "sallif",
+  "arabic": "سلف",
+  "transliteration": "sellef",
+  "english": "to lend",
+  "wordId": null,
+  "rootLetters": "س ل ف",
+  "verbClass": "sound",
+  "notes": "Regular Form II sound verb, conjugated exactly like 'herres' (to break). The middle vowel drops when a vowel-initial suffix is added (e.g., sellef + u = sellfu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سلفت",
+          "transliteration": "selleft",
+          "english": "I lent"
+        },
+        {
+          "person": "enta",
+          "arabic": "سلفتي",
+          "transliteration": "sellefti",
+          "english": "you (m) lent"
+        },
+        {
+          "person": "enti",
+          "arabic": "سلفتي",
+          "transliteration": "sellefti",
+          "english": "you (f) lent"
+        },
+        {
+          "person": "howa",
+          "arabic": "سلف",
+          "transliteration": "sellef",
+          "english": "he lent"
+        },
+        {
+          "person": "heya",
+          "arabic": "سلفات",
+          "transliteration": "sellfat",
+          "english": "she lent"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سلفنا",
+          "transliteration": "sellefna",
+          "english": "we lent"
+        },
+        {
+          "person": "entu",
+          "arabic": "سلفتيو",
+          "transliteration": "selleftiw",
+          "english": "you (pl) lent"
+        },
+        {
+          "person": "homma",
+          "arabic": "سلفو",
+          "transliteration": "sellfu",
+          "english": "they lent"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سلفتش",
+          "transliteration": "ma selleftsh",
+          "english": "I didn't lend"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سلفتيش",
+          "transliteration": "ma selleftish",
+          "english": "you (m) didn't lend"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سلفتيش",
+          "transliteration": "ma selleftish",
+          "english": "you (f) didn't lend"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سلفش",
+          "transliteration": "ma sellefsh",
+          "english": "he didn't lend"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سلفاتش",
+          "transliteration": "ma sellfatsh",
+          "english": "she didn't lend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سلفناش",
+          "transliteration": "ma sellefnash",
+          "english": "we didn't lend"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سلفتيوش",
+          "transliteration": "ma selleftiwsh",
+          "english": "you (pl) didn't lend"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سلفوش",
+          "transliteration": "ma sellfush",
+          "english": "they didn't lend"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنسلف",
+          "transliteration": "kansellef",
+          "english": "I lend"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتسلف",
+          "transliteration": "katsellef",
+          "english": "you (m) lend"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتسلفي",
+          "transliteration": "katsellfi",
+          "english": "you (f) lend"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيسلف",
+          "transliteration": "kaysellef",
+          "english": "he lends"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتسلف",
+          "transliteration": "katsellef",
+          "english": "she lends"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنسلفو",
+          "transliteration": "kansellfu",
+          "english": "we lend"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتسلفو",
+          "transliteration": "katsellfu",
+          "english": "you (pl) lend"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيسلفو",
+          "transliteration": "kaysellfu",
+          "english": "they lend"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنسلفش",
+          "transliteration": "ma kansellefsh",
+          "english": "I don't lend"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتسلفش",
+          "transliteration": "ma katsellefsh",
+          "english": "you (m) don't lend"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتسلفيش",
+          "transliteration": "ma katsellfish",
+          "english": "you (f) don't lend"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيسلفش",
+          "transliteration": "ma kaysellefsh",
+          "english": "he doesn't lend"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتسلفش",
+          "transliteration": "ma katsellefsh",
+          "english": "she doesn't lend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنسلفوش",
+          "transliteration": "ma kansellfush",
+          "english": "we don't lend"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتسلفوش",
+          "transliteration": "ma katsellfush",
+          "english": "you (pl) don't lend"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيسلفوش",
+          "transliteration": "ma kaysellfush",
+          "english": "they don't lend"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نسلف",
+          "transliteration": "ghadi nsellef",
+          "english": "I will lend"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تسلف",
+          "transliteration": "ghadi tsellef",
+          "english": "you (m) will lend"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تسلفي",
+          "transliteration": "ghadi tsellfi",
+          "english": "you (f) will lend"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يسلف",
+          "transliteration": "ghadi ysellef",
+          "english": "he will lend"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تسلف",
+          "transliteration": "ghadi tsellef",
+          "english": "she will lend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نسلفو",
+          "transliteration": "ghadi nsellfu",
+          "english": "we will lend"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تسلفو",
+          "transliteration": "ghadi tsellfu",
+          "english": "you (pl) will lend"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يسلفو",
+          "transliteration": "ghadi ysellfu",
+          "english": "they will lend"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نسلف",
+          "transliteration": "ma ghadish nsellef",
+          "english": "I won't lend"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تسلف",
+          "transliteration": "ma ghadish tsellef",
+          "english": "you (m) won't lend"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تسلفي",
+          "transliteration": "ma ghadish tsellfi",
+          "english": "you (f) won't lend"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يسلف",
+          "transliteration": "ma ghadish ysellef",
+          "english": "he won't lend"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تسلف",
+          "transliteration": "ma ghadish tsellef",
+          "english": "she won't lend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نسلفو",
+          "transliteration": "ma ghadish nsellfu",
+          "english": "we won't lend"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تسلفو",
+          "transliteration": "ma ghadish tsellfu",
+          "english": "you (pl) won't lend"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يسلفو",
+          "transliteration": "ma ghadish ysellfu",
+          "english": "they won't lend"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

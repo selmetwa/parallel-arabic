@@ -1,0 +1,320 @@
+{
+  "slug": "ghanna",
+  "arabic": "غنى",
+  "transliteration": "ghanna",
+  "english": "to sing",
+  "wordId": null,
+  "rootLetters": "غ ن ي",
+  "verbClass": "defective",
+  "notes": "This is a Form II defective verb; the final weak root letter appears as an 'e' sound in most past tense forms and an 'i' sound in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غنيت",
+          "transliteration": "ghannet",
+          "english": "I sang"
+        },
+        {
+          "person": "enta",
+          "arabic": "غنيت",
+          "transliteration": "ghannet",
+          "english": "you (m) sang"
+        },
+        {
+          "person": "enti",
+          "arabic": "غنيتي",
+          "transliteration": "ghanneti",
+          "english": "you (f) sang"
+        },
+        {
+          "person": "howa",
+          "arabic": "غنى",
+          "transliteration": "ghanna",
+          "english": "he sang"
+        },
+        {
+          "person": "heya",
+          "arabic": "غنت",
+          "transliteration": "ghannit",
+          "english": "she sang"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غنينا",
+          "transliteration": "ghannena",
+          "english": "we sang"
+        },
+        {
+          "person": "entu",
+          "arabic": "غنيتوا",
+          "transliteration": "ghannetu",
+          "english": "you (pl) sang"
+        },
+        {
+          "person": "homma",
+          "arabic": "غنوا",
+          "transliteration": "ghannu",
+          "english": "they sang"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غنيت",
+          "transliteration": "ma ghannet",
+          "english": "I didn't sing"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غنيت",
+          "transliteration": "ma ghannet",
+          "english": "you (m) didn't sing"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غنيتي",
+          "transliteration": "ma ghanneti",
+          "english": "you (f) didn't sing"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غنى",
+          "transliteration": "ma ghanna",
+          "english": "he didn't sing"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غنت",
+          "transliteration": "ma ghannit",
+          "english": "she didn't sing"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غنينا",
+          "transliteration": "ma ghannena",
+          "english": "we didn't sing"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غنيتوا",
+          "transliteration": "ma ghannetu",
+          "english": "you (pl) didn't sing"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غنوا",
+          "transliteration": "ma ghannu",
+          "english": "they didn't sing"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بغني",
+          "transliteration": "bghanni",
+          "english": "I sing"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتغني",
+          "transliteration": "btghanni",
+          "english": "you (m) sing"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتغني",
+          "transliteration": "btghanni",
+          "english": "you (f) sing"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيغني",
+          "transliteration": "bighanni",
+          "english": "he sings"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتغني",
+          "transliteration": "btghanni",
+          "english": "she sings"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منغني",
+          "transliteration": "mnghanni",
+          "english": "we sing"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتغنوا",
+          "transliteration": "btghannu",
+          "english": "you (pl) sing"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيغنوا",
+          "transliteration": "bighannu",
+          "english": "they sing"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بغني",
+          "transliteration": "ma bghanni",
+          "english": "I don't sing"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتغني",
+          "transliteration": "ma btghanni",
+          "english": "you (m) don't sing"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتغني",
+          "transliteration": "ma btghanni",
+          "english": "you (f) don't sing"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيغني",
+          "transliteration": "ma bighanni",
+          "english": "he doesn't sing"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتغني",
+          "transliteration": "ma btghanni",
+          "english": "she doesn't sing"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منغني",
+          "transliteration": "ma mnghanni",
+          "english": "we don't sing"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتغنوا",
+          "transliteration": "ma btghannu",
+          "english": "you (pl) don't sing"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيغنوا",
+          "transliteration": "ma bighannu",
+          "english": "they don't sing"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اغني",
+          "transliteration": "ra7 aghanni",
+          "english": "I will sing"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تغني",
+          "transliteration": "ra7 tghanni",
+          "english": "you (m) will sing"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تغني",
+          "transliteration": "ra7 tghanni",
+          "english": "you (f) will sing"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يغني",
+          "transliteration": "ra7 yghanni",
+          "english": "he will sing"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تغني",
+          "transliteration": "ra7 tghanni",
+          "english": "she will sing"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نغني",
+          "transliteration": "ra7 nghanni",
+          "english": "we will sing"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تغنوا",
+          "transliteration": "ra7 tghannu",
+          "english": "you (pl) will sing"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يغنوا",
+          "transliteration": "ra7 yghannu",
+          "english": "they will sing"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اغني",
+          "transliteration": "ma ra7 aghanni",
+          "english": "I won't sing"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تغني",
+          "transliteration": "ma ra7 tghanni",
+          "english": "you (m) won't sing"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تغني",
+          "transliteration": "ma ra7 tghanni",
+          "english": "you (f) won't sing"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يغني",
+          "transliteration": "ma ra7 yghanni",
+          "english": "he won't sing"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تغني",
+          "transliteration": "ma ra7 tghanni",
+          "english": "she won't sing"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نغني",
+          "transliteration": "ma ra7 nghanni",
+          "english": "we won't sing"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تغنوا",
+          "transliteration": "ma ra7 tghannu",
+          "english": "you (pl) won't sing"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يغنوا",
+          "transliteration": "ma ra7 yghannu",
+          "english": "they won't sing"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

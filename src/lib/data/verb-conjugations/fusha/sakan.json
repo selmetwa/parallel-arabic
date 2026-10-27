@@ -1,0 +1,320 @@
+{
+  "slug": "sakan",
+  "arabic": "سَكَنَ فِي",
+  "transliteration": "sakana fi",
+  "english": "to live in",
+  "wordId": null,
+  "rootLetters": "س ك ن",
+  "verbClass": "sound",
+  "notes": "Form I sound verb; the present tense stem vowel is 'u' (damma). Note that the 'na' suffix in the 'we' past form merges with the root's final 'n' to form a shadda (سَكَنَّا).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَكَنْتُ فِي",
+          "transliteration": "sakantu fi",
+          "english": "I lived in"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَكَنْتَ فِي",
+          "transliteration": "sakanta fi",
+          "english": "you (m) lived in"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَكَنْتِ فِي",
+          "transliteration": "sakanti fi",
+          "english": "you (f) lived in"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَكَنَ فِي",
+          "transliteration": "sakana fi",
+          "english": "he lived in"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَكَنَتْ فِي",
+          "transliteration": "sakanat fi",
+          "english": "she lived in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَكَنَّا فِي",
+          "transliteration": "sakanna fi",
+          "english": "we lived in"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَكَنْتُمْ فِي",
+          "transliteration": "sakantum fi",
+          "english": "you (pl) lived in"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَكَنُوا فِي",
+          "transliteration": "sakanu fi",
+          "english": "they lived in"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا سَكَنْتُ فِي",
+          "transliteration": "ma sakantu fi",
+          "english": "I didn't live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا سَكَنْتَ فِي",
+          "transliteration": "ma sakanta fi",
+          "english": "you (m) didn't live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا سَكَنْتِ فِي",
+          "transliteration": "ma sakanti fi",
+          "english": "you (f) didn't live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا سَكَنَ فِي",
+          "transliteration": "ma sakana fi",
+          "english": "he didn't live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا سَكَنَتْ فِي",
+          "transliteration": "ma sakanat fi",
+          "english": "she didn't live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا سَكَنَّا فِي",
+          "transliteration": "ma sakanna fi",
+          "english": "we didn't live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا سَكَنْتُمْ فِي",
+          "transliteration": "ma sakantum fi",
+          "english": "you (pl) didn't live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا سَكَنُوا فِي",
+          "transliteration": "ma sakanu fi",
+          "english": "they didn't live in"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَسْكُنُ فِي",
+          "transliteration": "askunu fi",
+          "english": "I live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَسْكُنُ فِي",
+          "transliteration": "taskunu fi",
+          "english": "you (m) live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَسْكُنِينَ فِي",
+          "transliteration": "taskunina fi",
+          "english": "you (f) live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَسْكُنُ فِي",
+          "transliteration": "yaskunu fi",
+          "english": "he lives in"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَسْكُنُ فِي",
+          "transliteration": "taskunu fi",
+          "english": "she lives in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَسْكُنُ فِي",
+          "transliteration": "naskunu fi",
+          "english": "we live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَسْكُنُونَ فِي",
+          "transliteration": "taskununa fi",
+          "english": "you (pl) live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَسْكُنُونَ فِي",
+          "transliteration": "yaskununa fi",
+          "english": "they live in"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَسْكُنُ فِي",
+          "transliteration": "la askunu fi",
+          "english": "I don't live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَسْكُنُ فِي",
+          "transliteration": "la taskunu fi",
+          "english": "you (m) don't live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَسْكُنِينَ فِي",
+          "transliteration": "la taskunina fi",
+          "english": "you (f) don't live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَسْكُنُ فِي",
+          "transliteration": "la yaskunu fi",
+          "english": "he doesn't live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَسْكُنُ فِي",
+          "transliteration": "la taskunu fi",
+          "english": "she doesn't live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَسْكُنُ فِي",
+          "transliteration": "la naskunu fi",
+          "english": "we don't live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَسْكُنُونَ فِي",
+          "transliteration": "la taskununa fi",
+          "english": "you (pl) don't live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَسْكُنُونَ فِي",
+          "transliteration": "la yaskununa fi",
+          "english": "they don't live in"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَسْكُنُ فِي",
+          "transliteration": "sa2askunu fi",
+          "english": "I will live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَسْكُنُ فِي",
+          "transliteration": "sataskunu fi",
+          "english": "you (m) will live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَسْكُنِينَ فِي",
+          "transliteration": "sataskunina fi",
+          "english": "you (f) will live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَسْكُنُ فِي",
+          "transliteration": "sayaskunu fi",
+          "english": "he will live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَسْكُنُ فِي",
+          "transliteration": "sataskunu fi",
+          "english": "she will live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَسْكُنُ فِي",
+          "transliteration": "sanaskunu fi",
+          "english": "we will live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَسْكُنُونَ فِي",
+          "transliteration": "sataskununa fi",
+          "english": "you (pl) will live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَسْكُنُونَ فِي",
+          "transliteration": "sayaskununa fi",
+          "english": "they will live in"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَسْكُنَ فِي",
+          "transliteration": "lan askuna fi",
+          "english": "I won't live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَسْكُنَ فِي",
+          "transliteration": "lan taskuna fi",
+          "english": "you (m) won't live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَسْكُنِي فِي",
+          "transliteration": "lan taskuni fi",
+          "english": "you (f) won't live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَسْكُنَ فِي",
+          "transliteration": "lan yaskuna fi",
+          "english": "he won't live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَسْكُنَ فِي",
+          "transliteration": "lan taskuna fi",
+          "english": "she won't live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَسْكُنَ فِي",
+          "transliteration": "lan naskuna fi",
+          "english": "we won't live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَسْكُنُوا فِي",
+          "transliteration": "lan taskunu fi",
+          "english": "you (pl) won't live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَسْكُنُوا فِي",
+          "transliteration": "lan yaskunu fi",
+          "english": "they won't live in"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

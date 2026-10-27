@@ -50,7 +50,10 @@
 		);
 	}
 
-	let selectedDialect = $state(session.dialect || getDefaultDialect(data.user));
+	// Sentences in progress keep their dialect; otherwise start from the learner's.
+	let selectedDialect = $state(
+		(session.sentences.length > 0 && session.dialect) || getDefaultDialect(data.user)
+	);
 
 	let sentence = $derived(session.sentences[session.index]);
 	$effect(() => {

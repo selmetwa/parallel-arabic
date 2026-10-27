@@ -1,0 +1,320 @@
+{
+  "slug": "sakan",
+  "arabic": "سكن",
+  "transliteration": "sken",
+  "english": "to live in",
+  "wordId": null,
+  "rootLetters": "س ك ن",
+  "verbClass": "sound",
+  "notes": "Form I sound verb. Note the vowel shift in forms with vowel suffixes (e.g., sken -> seknat, kansken -> katskni) due to Moroccan Darija's consonant cluster rules.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سكنت",
+          "transliteration": "skent",
+          "english": "I lived in"
+        },
+        {
+          "person": "enta",
+          "arabic": "سكنتي",
+          "transliteration": "skenti",
+          "english": "you (m) lived in"
+        },
+        {
+          "person": "enti",
+          "arabic": "سكنتي",
+          "transliteration": "skenti",
+          "english": "you (f) lived in"
+        },
+        {
+          "person": "howa",
+          "arabic": "سكن",
+          "transliteration": "sken",
+          "english": "he lived in"
+        },
+        {
+          "person": "heya",
+          "arabic": "سكنات",
+          "transliteration": "seknat",
+          "english": "she lived in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سكنا",
+          "transliteration": "skenna",
+          "english": "we lived in"
+        },
+        {
+          "person": "entu",
+          "arabic": "سكنتيو",
+          "transliteration": "skentiw",
+          "english": "you (pl) lived in"
+        },
+        {
+          "person": "homma",
+          "arabic": "سكنو",
+          "transliteration": "seknu",
+          "english": "they lived in"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سكنتش",
+          "transliteration": "ma skentsh",
+          "english": "I didn't live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سكنتيش",
+          "transliteration": "ma skentish",
+          "english": "you (m) didn't live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سكنتيش",
+          "transliteration": "ma skentish",
+          "english": "you (f) didn't live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سكنش",
+          "transliteration": "ma skensh",
+          "english": "he didn't live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سكناتش",
+          "transliteration": "ma seknatsh",
+          "english": "she didn't live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سكناش",
+          "transliteration": "ma skennash",
+          "english": "we didn't live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سكنتيوش",
+          "transliteration": "ma skentiwsh",
+          "english": "you (pl) didn't live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سكنوش",
+          "transliteration": "ma seknush",
+          "english": "they didn't live in"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنسكن",
+          "transliteration": "kansken",
+          "english": "I live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتسكن",
+          "transliteration": "katsken",
+          "english": "you (m) live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتسكني",
+          "transliteration": "katskni",
+          "english": "you (f) live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيسكن",
+          "transliteration": "kaysken",
+          "english": "he lives in"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتسكن",
+          "transliteration": "katsken",
+          "english": "she lives in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنسكنو",
+          "transliteration": "kansknu",
+          "english": "we live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتسكنو",
+          "transliteration": "katsknu",
+          "english": "you (pl) live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيسكنو",
+          "transliteration": "kaysknu",
+          "english": "they live in"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنسكنش",
+          "transliteration": "ma kanskensh",
+          "english": "I don't live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتسكنش",
+          "transliteration": "ma katskensh",
+          "english": "you (m) don't live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتسكنيش",
+          "transliteration": "ma katsknish",
+          "english": "you (f) don't live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيسكنش",
+          "transliteration": "ma kayskensh",
+          "english": "he doesn't live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتسكنش",
+          "transliteration": "ma katskensh",
+          "english": "she doesn't live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنسكنوش",
+          "transliteration": "ma kansknush",
+          "english": "we don't live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتسكنوش",
+          "transliteration": "ma katsknush",
+          "english": "you (pl) don't live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيسكنوش",
+          "transliteration": "ma kaysknush",
+          "english": "they don't live in"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نسكن",
+          "transliteration": "ghadi nsken",
+          "english": "I will live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تسكن",
+          "transliteration": "ghadi tsken",
+          "english": "you (m) will live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تسكني",
+          "transliteration": "ghadi tskni",
+          "english": "you (f) will live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يسكن",
+          "transliteration": "ghadi ysken",
+          "english": "he will live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تسكن",
+          "transliteration": "ghadi tsken",
+          "english": "she will live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نسكنو",
+          "transliteration": "ghadi nsknu",
+          "english": "we will live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تسكنو",
+          "transliteration": "ghadi tsknu",
+          "english": "you (pl) will live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يسكنو",
+          "transliteration": "ghadi ysknu",
+          "english": "they will live in"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نسكن",
+          "transliteration": "ma ghadish nsken",
+          "english": "I won't live in"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تسكن",
+          "transliteration": "ma ghadish tsken",
+          "english": "you (m) won't live in"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تسكني",
+          "transliteration": "ma ghadish tskni",
+          "english": "you (f) won't live in"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يسكن",
+          "transliteration": "ma ghadish ysken",
+          "english": "he won't live in"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تسكن",
+          "transliteration": "ma ghadish tsken",
+          "english": "she won't live in"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نسكنو",
+          "transliteration": "ma ghadish nsknu",
+          "english": "we won't live in"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تسكنو",
+          "transliteration": "ma ghadish tsknu",
+          "english": "you (pl) won't live in"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يسكنو",
+          "transliteration": "ma ghadish ysknu",
+          "english": "they won't live in"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

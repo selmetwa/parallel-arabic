@@ -1,0 +1,320 @@
+{
+  "slug": "it3allim",
+  "arabic": "تَعَلَّمَ",
+  "transliteration": "ta3allama",
+  "english": "to learn",
+  "wordId": null,
+  "rootLetters": "ع ل م",
+  "verbClass": "sound",
+  "notes": "This is a Form V sound verb, characterized by the prefix ta- and a doubled middle radical, often indicating an acquired state or action.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "تَعَلَّمْتُ",
+          "transliteration": "ta3allamtu",
+          "english": "I learned"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَعَلَّمْتَ",
+          "transliteration": "ta3allamta",
+          "english": "you (m) learned"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَعَلَّمْتِ",
+          "transliteration": "ta3allamti",
+          "english": "you (f) learned"
+        },
+        {
+          "person": "howa",
+          "arabic": "تَعَلَّمَ",
+          "transliteration": "ta3allama",
+          "english": "he learned"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَعَلَّمَتْ",
+          "transliteration": "ta3allamat",
+          "english": "she learned"
+        },
+        {
+          "person": "ehna",
+          "arabic": "تَعَلَّمْنَا",
+          "transliteration": "ta3allamna",
+          "english": "we learned"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَعَلَّمْتُمْ",
+          "transliteration": "ta3allamtum",
+          "english": "you (pl) learned"
+        },
+        {
+          "person": "homma",
+          "arabic": "تَعَلَّمُوا",
+          "transliteration": "ta3allamu",
+          "english": "they learned"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا تَعَلَّمْتُ",
+          "transliteration": "ma ta3allamtu",
+          "english": "I didn't learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا تَعَلَّمْتَ",
+          "transliteration": "ma ta3allamta",
+          "english": "you (m) didn't learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا تَعَلَّمْتِ",
+          "transliteration": "ma ta3allamti",
+          "english": "you (f) didn't learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا تَعَلَّمَ",
+          "transliteration": "ma ta3allama",
+          "english": "he didn't learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا تَعَلَّمَتْ",
+          "transliteration": "ma ta3allamat",
+          "english": "she didn't learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا تَعَلَّمْنَا",
+          "transliteration": "ma ta3allamna",
+          "english": "we didn't learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا تَعَلَّمْتُمْ",
+          "transliteration": "ma ta3allamtum",
+          "english": "you (pl) didn't learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا تَعَلَّمُوا",
+          "transliteration": "ma ta3allamu",
+          "english": "they didn't learn"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَتَعَلَّمُ",
+          "transliteration": "ata3allamu",
+          "english": "I learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَتَعَلَّمُ",
+          "transliteration": "tata3allamu",
+          "english": "you (m) learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَتَعَلَّمِينَ",
+          "transliteration": "tata3allamina",
+          "english": "you (f) learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَتَعَلَّمُ",
+          "transliteration": "yata3allamu",
+          "english": "he learns"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَتَعَلَّمُ",
+          "transliteration": "tata3allamu",
+          "english": "she learns"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَتَعَلَّمُ",
+          "transliteration": "nata3allamu",
+          "english": "we learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَتَعَلَّمُونَ",
+          "transliteration": "tata3allamuna",
+          "english": "you (pl) learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَتَعَلَّمُونَ",
+          "transliteration": "yata3allamuna",
+          "english": "they learn"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَتَعَلَّمُ",
+          "transliteration": "la ata3allamu",
+          "english": "I don't learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَتَعَلَّمُ",
+          "transliteration": "la tata3allamu",
+          "english": "you (m) don't learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَتَعَلَّمِينَ",
+          "transliteration": "la tata3allamina",
+          "english": "you (f) don't learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَتَعَلَّمُ",
+          "transliteration": "la yata3allamu",
+          "english": "he doesn't learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَتَعَلَّمُ",
+          "transliteration": "la tata3allamu",
+          "english": "she doesn't learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَتَعَلَّمُ",
+          "transliteration": "la nata3allamu",
+          "english": "we don't learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَتَعَلَّمُونَ",
+          "transliteration": "la tata3allamuna",
+          "english": "you (pl) don't learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَتَعَلَّمُونَ",
+          "transliteration": "la yata3allamuna",
+          "english": "they don't learn"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَتَعَلَّمُ",
+          "transliteration": "sa2ata3allamu",
+          "english": "I will learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَتَعَلَّمُ",
+          "transliteration": "satata3allamu",
+          "english": "you (m) will learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَتَعَلَّمِينَ",
+          "transliteration": "satata3allamina",
+          "english": "you (f) will learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَتَعَلَّمُ",
+          "transliteration": "sayata3allamu",
+          "english": "he will learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَتَعَلَّمُ",
+          "transliteration": "satata3allamu",
+          "english": "she will learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَتَعَلَّمُ",
+          "transliteration": "sanata3allamu",
+          "english": "we will learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَتَعَلَّمُونَ",
+          "transliteration": "satata3allamuna",
+          "english": "you (pl) will learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَتَعَلَّمُونَ",
+          "transliteration": "sayata3allamuna",
+          "english": "they will learn"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَتَعَلَّمَ",
+          "transliteration": "lan ata3allama",
+          "english": "I won't learn"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَتَعَلَّمَ",
+          "transliteration": "lan tata3allama",
+          "english": "you (m) won't learn"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَتَعَلَّمِي",
+          "transliteration": "lan tata3allami",
+          "english": "you (f) won't learn"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَتَعَلَّمَ",
+          "transliteration": "lan yata3allama",
+          "english": "he won't learn"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَتَعَلَّمَ",
+          "transliteration": "lan tata3allama",
+          "english": "she won't learn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَتَعَلَّمَ",
+          "transliteration": "lan nata3allama",
+          "english": "we won't learn"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَتَعَلَّمُوا",
+          "transliteration": "lan tata3allamu",
+          "english": "you (pl) won't learn"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَتَعَلَّمُوا",
+          "transliteration": "lan yata3allamu",
+          "english": "they won't learn"
+        }
+      ]
+    }
+  },
+  "form": "V",
+  "source": "generated"
+}

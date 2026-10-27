@@ -1,0 +1,320 @@
+{
+  "slug": "bada2",
+  "arabic": "بدا",
+  "transliteration": "bda",
+  "english": "to start",
+  "wordId": null,
+  "rootLetters": "ب د ي",
+  "verbClass": "defective",
+  "notes": "This is a Form I defective verb. The final vowel changes to 'i' in the past tense before consonant suffixes (like 'bdit') and drops before vowel suffixes (like 'bdaw').",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بديت",
+          "transliteration": "bdit",
+          "english": "I started"
+        },
+        {
+          "person": "enta",
+          "arabic": "بديتي",
+          "transliteration": "bditi",
+          "english": "you (m) started"
+        },
+        {
+          "person": "enti",
+          "arabic": "بديتي",
+          "transliteration": "bditi",
+          "english": "you (f) started"
+        },
+        {
+          "person": "howa",
+          "arabic": "بدا",
+          "transliteration": "bda",
+          "english": "he started"
+        },
+        {
+          "person": "heya",
+          "arabic": "بدات",
+          "transliteration": "bdat",
+          "english": "she started"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بدينا",
+          "transliteration": "bdina",
+          "english": "we started"
+        },
+        {
+          "person": "entu",
+          "arabic": "بديتيو",
+          "transliteration": "bditiw",
+          "english": "you (pl) started"
+        },
+        {
+          "person": "homma",
+          "arabic": "بداو",
+          "transliteration": "bdaw",
+          "english": "they started"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بديتش",
+          "transliteration": "ma bditsh",
+          "english": "I didn't start"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بديتيش",
+          "transliteration": "ma bditish",
+          "english": "you (m) didn't start"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بديتيش",
+          "transliteration": "ma bditish",
+          "english": "you (f) didn't start"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بداش",
+          "transliteration": "ma bdash",
+          "english": "he didn't start"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بداتش",
+          "transliteration": "ma bdatsh",
+          "english": "she didn't start"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بديناش",
+          "transliteration": "ma bdinash",
+          "english": "we didn't start"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بديتيوش",
+          "transliteration": "ma bditiwsh",
+          "english": "you (pl) didn't start"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بداوش",
+          "transliteration": "ma bdawsh",
+          "english": "they didn't start"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنبدا",
+          "transliteration": "kanbda",
+          "english": "I start"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتبدا",
+          "transliteration": "katbda",
+          "english": "you (m) start"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتبداي",
+          "transliteration": "katbday",
+          "english": "you (f) start"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيبدا",
+          "transliteration": "kaybda",
+          "english": "he starts"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتبدا",
+          "transliteration": "katbda",
+          "english": "she starts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنبداو",
+          "transliteration": "kanbdaw",
+          "english": "we start"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتبداو",
+          "transliteration": "katbdaw",
+          "english": "you (pl) start"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيبداو",
+          "transliteration": "kaybdaw",
+          "english": "they start"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنبداش",
+          "transliteration": "ma kanbdash",
+          "english": "I don't start"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتبداش",
+          "transliteration": "ma katbdash",
+          "english": "you (m) don't start"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتبدايش",
+          "transliteration": "ma katbdaysh",
+          "english": "you (f) don't start"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيبداش",
+          "transliteration": "ma kaybdash",
+          "english": "he doesn't start"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتبداش",
+          "transliteration": "ma katbdash",
+          "english": "she doesn't start"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنبداوش",
+          "transliteration": "ma kanbdawsh",
+          "english": "we don't start"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتبداوش",
+          "transliteration": "ma katbdawsh",
+          "english": "you (pl) don't start"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيبداوش",
+          "transliteration": "ma kaybdawsh",
+          "english": "they don't start"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نبدا",
+          "transliteration": "ghadi nbda",
+          "english": "I will start"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تبدا",
+          "transliteration": "ghadi tbda",
+          "english": "you (m) will start"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تبداي",
+          "transliteration": "ghadi tbday",
+          "english": "you (f) will start"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يبدا",
+          "transliteration": "ghadi ybda",
+          "english": "he will start"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تبدا",
+          "transliteration": "ghadi tbda",
+          "english": "she will start"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نبداو",
+          "transliteration": "ghadi nbdaw",
+          "english": "we will start"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تبداو",
+          "transliteration": "ghadi tbdaw",
+          "english": "you (pl) will start"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يبداو",
+          "transliteration": "ghadi ybdaw",
+          "english": "they will start"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نبدا",
+          "transliteration": "ma ghadish nbda",
+          "english": "I won't start"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تبدا",
+          "transliteration": "ma ghadish tbda",
+          "english": "you (m) won't start"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تبداي",
+          "transliteration": "ma ghadish tbday",
+          "english": "you (f) won't start"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يبدا",
+          "transliteration": "ma ghadish ybda",
+          "english": "he won't start"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تبدا",
+          "transliteration": "ma ghadish tbda",
+          "english": "she won't start"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نبداو",
+          "transliteration": "ma ghadish nbdaw",
+          "english": "we won't start"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تبداو",
+          "transliteration": "ma ghadish tbdaw",
+          "english": "you (pl) won't start"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يبداو",
+          "transliteration": "ma ghadish ybdaw",
+          "english": "they won't start"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

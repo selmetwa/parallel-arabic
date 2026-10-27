@@ -4,6 +4,7 @@
  */
 import { mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
+import { rebuildIndex } from './generate-more-index';
 import * as levantine from './levantine';
 import * as darija from './darija';
 import * as fusha from './fusha';
@@ -15,16 +16,10 @@ const DIALECTS = { levantine, darija, fusha } as const;
 for (const [dialect, mod] of Object.entries(DIALECTS)) {
 	const dir = join(OUT, dialect);
 	mkdirSync(dir, { recursive: true });
-	const verbs = mod.SPECS.map((spec) => {
+	for (const spec of mod.SPECS) {
 		const file = mod.build(spec);
 		writeFileSync(join(dir, `${spec.slug}.json`), JSON.stringify(file, null, 2) + '\n');
-		const { conjugations: _, notes: __, ...summary } = file;
-		return summary;
-	});
-	verbs.sort((a, b) => String(a.english).localeCompare(String(b.english)));
-	writeFileSync(
-		join(dir, 'index.json'),
-		JSON.stringify({ dialect, generatedAt: new Date().toISOString(), verbs }, null, 2) + '\n'
-	);
-	console.log(`${dialect}: ${verbs.length} verbs`);
+	}
+	// The index also lists the generated tables (generate-more.ts) in the folder.
+	console.log(`${dialect}: ${rebuildIndex(dir, dialect)} verbs`);
 }

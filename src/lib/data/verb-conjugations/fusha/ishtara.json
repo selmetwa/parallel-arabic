@@ -1,0 +1,320 @@
+{
+  "slug": "ishtara",
+  "arabic": "اِشْتَرَى",
+  "transliteration": "ishtara",
+  "english": "to buy",
+  "wordId": null,
+  "rootLetters": "ش ر ي",
+  "verbClass": "defective",
+  "notes": "This is a Form VIII defective verb; the final weak root letter (ي) is dropped in the third-person feminine singular and plural forms, and changes to alif maqsurah in the third-person masculine singular past.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اِشْتَرَيْتُ",
+          "transliteration": "ishtaraytu",
+          "english": "I bought"
+        },
+        {
+          "person": "enta",
+          "arabic": "اِشْتَرَيْتَ",
+          "transliteration": "ishtarayta",
+          "english": "you (m) bought"
+        },
+        {
+          "person": "enti",
+          "arabic": "اِشْتَرَيْتِ",
+          "transliteration": "ishtarayti",
+          "english": "you (f) bought"
+        },
+        {
+          "person": "howa",
+          "arabic": "اِشْتَرَى",
+          "transliteration": "ishtara",
+          "english": "he bought"
+        },
+        {
+          "person": "heya",
+          "arabic": "اِشْتَرَتْ",
+          "transliteration": "ishtarat",
+          "english": "she bought"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اِشْتَرَيْنَا",
+          "transliteration": "ishtarayna",
+          "english": "we bought"
+        },
+        {
+          "person": "entu",
+          "arabic": "اِشْتَرَيْتُمْ",
+          "transliteration": "ishtaraytum",
+          "english": "you (pl) bought"
+        },
+        {
+          "person": "homma",
+          "arabic": "اِشْتَرَوْا",
+          "transliteration": "ishtaraw",
+          "english": "they bought"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا اِشْتَرَيْتُ",
+          "transliteration": "ma ishtaraytu",
+          "english": "I didn't buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا اِشْتَرَيْتَ",
+          "transliteration": "ma ishtarayta",
+          "english": "you (m) didn't buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا اِشْتَرَيْتِ",
+          "transliteration": "ma ishtarayti",
+          "english": "you (f) didn't buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا اِشْتَرَى",
+          "transliteration": "ma ishtara",
+          "english": "he didn't buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا اِشْتَرَتْ",
+          "transliteration": "ma ishtarat",
+          "english": "she didn't buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا اِشْتَرَيْنَا",
+          "transliteration": "ma ishtarayna",
+          "english": "we didn't buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا اِشْتَرَيْتُمْ",
+          "transliteration": "ma ishtaraytum",
+          "english": "you (pl) didn't buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا اِشْتَرَوْا",
+          "transliteration": "ma ishtaraw",
+          "english": "they didn't buy"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَشْتَرِي",
+          "transliteration": "ashtari",
+          "english": "I buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَشْتَرِي",
+          "transliteration": "tashtari",
+          "english": "you (m) buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَشْتَرِينَ",
+          "transliteration": "tashtarina",
+          "english": "you (f) buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَشْتَرِي",
+          "transliteration": "yashtari",
+          "english": "he buys"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَشْتَرِي",
+          "transliteration": "tashtari",
+          "english": "she buys"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَشْتَرِي",
+          "transliteration": "nashtari",
+          "english": "we buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَشْتَرُونَ",
+          "transliteration": "tashtaruna",
+          "english": "you (pl) buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَشْتَرُونَ",
+          "transliteration": "yashtaruna",
+          "english": "they buy"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَشْتَرِي",
+          "transliteration": "la ashtari",
+          "english": "I don't buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَشْتَرِي",
+          "transliteration": "la tashtari",
+          "english": "you (m) don't buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَشْتَرِينَ",
+          "transliteration": "la tashtarina",
+          "english": "you (f) don't buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَشْتَرِي",
+          "transliteration": "la yashtari",
+          "english": "he doesn't buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَشْتَرِي",
+          "transliteration": "la tashtari",
+          "english": "she doesn't buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَشْتَرِي",
+          "transliteration": "la nashtari",
+          "english": "we don't buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَشْتَرُونَ",
+          "transliteration": "la tashtaruna",
+          "english": "you (pl) don't buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَشْتَرُونَ",
+          "transliteration": "la yashtaruna",
+          "english": "they don't buy"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَشْتَرِي",
+          "transliteration": "sa2ashtari",
+          "english": "I will buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَشْتَرِي",
+          "transliteration": "satashtari",
+          "english": "you (m) will buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَشْتَرِينَ",
+          "transliteration": "satashtarina",
+          "english": "you (f) will buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَشْتَرِي",
+          "transliteration": "sayashtari",
+          "english": "he will buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَشْتَرِي",
+          "transliteration": "satashtari",
+          "english": "she will buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَشْتَرِي",
+          "transliteration": "sanashtari",
+          "english": "we will buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَشْتَرُونَ",
+          "transliteration": "satashtaruna",
+          "english": "you (pl) will buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَشْتَرُونَ",
+          "transliteration": "sayashtaruna",
+          "english": "they will buy"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَشْتَرِيَ",
+          "transliteration": "lan ashtariya",
+          "english": "I won't buy"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَشْتَرِيَ",
+          "transliteration": "lan tashtariya",
+          "english": "you (m) won't buy"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَشْتَرِي",
+          "transliteration": "lan tashtari",
+          "english": "you (f) won't buy"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَشْتَرِيَ",
+          "transliteration": "lan yashtariya",
+          "english": "he won't buy"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَشْتَرِيَ",
+          "transliteration": "lan tashtariya",
+          "english": "she won't buy"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَشْتَرِيَ",
+          "transliteration": "lan nashtariya",
+          "english": "we won't buy"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَشْتَرُوا",
+          "transliteration": "lan tashtaru",
+          "english": "you (pl) won't buy"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَشْتَرُوا",
+          "transliteration": "lan yashtaru",
+          "english": "they won't buy"
+        }
+      ]
+    }
+  },
+  "form": "VIII",
+  "source": "generated"
+}

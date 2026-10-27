@@ -1,0 +1,320 @@
+{
+  "slug": "3allim",
+  "arabic": "عَلَّمَ",
+  "transliteration": "3allama",
+  "english": "to teach",
+  "wordId": null,
+  "rootLetters": "ع ل م",
+  "verbClass": "sound",
+  "notes": "This is a regular Form II sound verb; note the shadda (doubling) on the middle root letter and the 'u' vowel on the present tense prefixes.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عَلَّمْتُ",
+          "transliteration": "3allamtu",
+          "english": "I taught"
+        },
+        {
+          "person": "enta",
+          "arabic": "عَلَّمْتَ",
+          "transliteration": "3allamta",
+          "english": "you (m) taught"
+        },
+        {
+          "person": "enti",
+          "arabic": "عَلَّمْتِ",
+          "transliteration": "3allamti",
+          "english": "you (f) taught"
+        },
+        {
+          "person": "howa",
+          "arabic": "عَلَّمَ",
+          "transliteration": "3allama",
+          "english": "he taught"
+        },
+        {
+          "person": "heya",
+          "arabic": "عَلَّمَتْ",
+          "transliteration": "3allamat",
+          "english": "she taught"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عَلَّمْنَا",
+          "transliteration": "3allamna",
+          "english": "we taught"
+        },
+        {
+          "person": "entu",
+          "arabic": "عَلَّمْتُمْ",
+          "transliteration": "3allamtum",
+          "english": "you (pl) taught"
+        },
+        {
+          "person": "homma",
+          "arabic": "عَلَّمُوا",
+          "transliteration": "3allamu",
+          "english": "they taught"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا عَلَّمْتُ",
+          "transliteration": "ma 3allamtu",
+          "english": "I didn't teach"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا عَلَّمْتَ",
+          "transliteration": "ma 3allamta",
+          "english": "you (m) didn't teach"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا عَلَّمْتِ",
+          "transliteration": "ma 3allamti",
+          "english": "you (f) didn't teach"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا عَلَّمَ",
+          "transliteration": "ma 3allama",
+          "english": "he didn't teach"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا عَلَّمَتْ",
+          "transliteration": "ma 3allamat",
+          "english": "she didn't teach"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا عَلَّمْنَا",
+          "transliteration": "ma 3allamna",
+          "english": "we didn't teach"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا عَلَّمْتُمْ",
+          "transliteration": "ma 3allamtum",
+          "english": "you (pl) didn't teach"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا عَلَّمُوا",
+          "transliteration": "ma 3allamu",
+          "english": "they didn't teach"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أُعَلِّمُ",
+          "transliteration": "u3allimu",
+          "english": "I teach"
+        },
+        {
+          "person": "enta",
+          "arabic": "تُعَلِّمُ",
+          "transliteration": "tu3allimu",
+          "english": "you (m) teach"
+        },
+        {
+          "person": "enti",
+          "arabic": "تُعَلِّمِينَ",
+          "transliteration": "tu3allimina",
+          "english": "you (f) teach"
+        },
+        {
+          "person": "howa",
+          "arabic": "يُعَلِّمُ",
+          "transliteration": "yu3allimu",
+          "english": "he teaches"
+        },
+        {
+          "person": "heya",
+          "arabic": "تُعَلِّمُ",
+          "transliteration": "tu3allimu",
+          "english": "she teaches"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نُعَلِّمُ",
+          "transliteration": "nu3allimu",
+          "english": "we teach"
+        },
+        {
+          "person": "entu",
+          "arabic": "تُعَلِّمُونَ",
+          "transliteration": "tu3allimuna",
+          "english": "you (pl) teach"
+        },
+        {
+          "person": "homma",
+          "arabic": "يُعَلِّمُونَ",
+          "transliteration": "yu3allimuna",
+          "english": "they teach"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أُعَلِّمُ",
+          "transliteration": "la u3allimu",
+          "english": "I don't teach"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تُعَلِّمُ",
+          "transliteration": "la tu3allimu",
+          "english": "you (m) don't teach"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تُعَلِّمِينَ",
+          "transliteration": "la tu3allimina",
+          "english": "you (f) don't teach"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يُعَلِّمُ",
+          "transliteration": "la yu3allimu",
+          "english": "he doesn't teach"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تُعَلِّمُ",
+          "transliteration": "la tu3allimu",
+          "english": "she doesn't teach"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نُعَلِّمُ",
+          "transliteration": "la nu3allimu",
+          "english": "we don't teach"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تُعَلِّمُونَ",
+          "transliteration": "la tu3allimuna",
+          "english": "you (pl) don't teach"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يُعَلِّمُونَ",
+          "transliteration": "la yu3allimuna",
+          "english": "they don't teach"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأُعَلِّمُ",
+          "transliteration": "sa2u3allimu",
+          "english": "I will teach"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتُعَلِّمُ",
+          "transliteration": "satu3allimu",
+          "english": "you (m) will teach"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتُعَلِّمِينَ",
+          "transliteration": "satu3allimina",
+          "english": "you (f) will teach"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيُعَلِّمُ",
+          "transliteration": "sayu3allimu",
+          "english": "he will teach"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتُعَلِّمُ",
+          "transliteration": "satu3allimu",
+          "english": "she will teach"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنُعَلِّمُ",
+          "transliteration": "sanu3allimu",
+          "english": "we will teach"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتُعَلِّمُونَ",
+          "transliteration": "satu3allimuna",
+          "english": "you (pl) will teach"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيُعَلِّمُونَ",
+          "transliteration": "sayu3allimuna",
+          "english": "they will teach"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أُعَلِّمَ",
+          "transliteration": "lan u3allima",
+          "english": "I won't teach"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تُعَلِّمَ",
+          "transliteration": "lan tu3allima",
+          "english": "you (m) won't teach"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تُعَلِّمِي",
+          "transliteration": "lan tu3allimi",
+          "english": "you (f) won't teach"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يُعَلِّمَ",
+          "transliteration": "lan yu3allima",
+          "english": "he won't teach"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تُعَلِّمَ",
+          "transliteration": "lan tu3allima",
+          "english": "she won't teach"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نُعَلِّمَ",
+          "transliteration": "lan nu3allima",
+          "english": "we won't teach"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تُعَلِّمُوا",
+          "transliteration": "lan tu3allimu",
+          "english": "you (pl) won't teach"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يُعَلِّمُوا",
+          "transliteration": "lan yu3allimu",
+          "english": "they won't teach"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

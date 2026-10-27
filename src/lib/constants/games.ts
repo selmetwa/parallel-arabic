@@ -712,10 +712,10 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Verb Conjugation Game | Parallel Arabic',
 			description:
-				'Pick the right form of an Arabic verb for each person and tense, affirmative and negative. 72 verbs in seven Arabic dialects.'
+				'Pick the right form of an Arabic verb for each person and tense, affirmative and negative. 200 verbs in seven Arabic dialects.'
 		},
 		intro:
-			'Arabic verbs change for every person and tense: عاش is “he lived”, عاشت “she lived”, بيعيش “he lives”. Each question gives you a verb, a person and a tense, and you pick the right form from four. 72 everyday verbs, past, present and future, including the negative.',
+			'Arabic verbs change for every person and tense: عاش is “he lived”, عاشت “she lived”, بيعيش “he lives”. Each question gives you a verb, a person and a tense, and you pick the right form from four. 200 everyday verbs, past, present and future, including the negative.',
 		howToPlay: [
 			'Pick a dialect and a tense, or Mixed, then press Start. A round is ten verbs.',
 			'Read the verb, the person (أنا, هي, إحنا…) and the tense. Some questions are negative.',

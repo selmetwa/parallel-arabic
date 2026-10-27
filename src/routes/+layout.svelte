@@ -361,7 +361,7 @@
 {/if}
 
 <!-- Desktop Sidebar -->
-<Sidebar {session} {handleOpenDrawer} />
+<Sidebar {session} {handleOpenDrawer} targetDialect={data.targetDialect} />
 
 <!-- Expand Sidebar Button (shown when collapsed) -->
 {#if $sidebarCollapsed}

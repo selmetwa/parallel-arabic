@@ -1,0 +1,320 @@
+{
+  "slug": "khalla",
+  "arabic": "خلى",
+  "transliteration": "khlla",
+  "english": "to let",
+  "wordId": null,
+  "rootLetters": "خ ل ي",
+  "verbClass": "defective",
+  "notes": "Form II verb ending in a vowel: khllit in the past, nkhlli in the present; khllini means \"let me\".",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خليت",
+          "transliteration": "khllit",
+          "english": "I let"
+        },
+        {
+          "person": "enta",
+          "arabic": "خليتي",
+          "transliteration": "khlliti",
+          "english": "you (m) let"
+        },
+        {
+          "person": "enti",
+          "arabic": "خليتي",
+          "transliteration": "khlliti",
+          "english": "you (f) let"
+        },
+        {
+          "person": "howa",
+          "arabic": "خلى",
+          "transliteration": "khlla",
+          "english": "he let"
+        },
+        {
+          "person": "heya",
+          "arabic": "خلات",
+          "transliteration": "khllat",
+          "english": "she let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خلينا",
+          "transliteration": "khllina",
+          "english": "we let"
+        },
+        {
+          "person": "entu",
+          "arabic": "خليتيو",
+          "transliteration": "khllitiw",
+          "english": "you (pl) let"
+        },
+        {
+          "person": "homma",
+          "arabic": "خلاو",
+          "transliteration": "khllaw",
+          "english": "they let"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خليتش",
+          "transliteration": "ma khllitsh",
+          "english": "I didn't let"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خليتيش",
+          "transliteration": "ma khllitish",
+          "english": "you (m) didn't let"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خليتيش",
+          "transliteration": "ma khllitish",
+          "english": "you (f) didn't let"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خلاش",
+          "transliteration": "ma khllash",
+          "english": "he didn't let"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خلاتش",
+          "transliteration": "ma khllatsh",
+          "english": "she didn't let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خليناش",
+          "transliteration": "ma khllinash",
+          "english": "we didn't let"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خليتيوش",
+          "transliteration": "ma khllitiwsh",
+          "english": "you (pl) didn't let"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خلاوش",
+          "transliteration": "ma khllawsh",
+          "english": "they didn't let"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنخلي",
+          "transliteration": "kankhlli",
+          "english": "I let"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتخلي",
+          "transliteration": "katkhlli",
+          "english": "you (m) let"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتخلي",
+          "transliteration": "katkhlli",
+          "english": "you (f) let"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيخلي",
+          "transliteration": "kaykhlli",
+          "english": "he lets"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتخلي",
+          "transliteration": "katkhlli",
+          "english": "she lets"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنخليو",
+          "transliteration": "kankhlliw",
+          "english": "we let"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتخليو",
+          "transliteration": "katkhlliw",
+          "english": "you (pl) let"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيخليو",
+          "transliteration": "kaykhlliw",
+          "english": "they let"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنخليش",
+          "transliteration": "ma kankhllish",
+          "english": "I don't let"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتخليش",
+          "transliteration": "ma katkhllish",
+          "english": "you (m) don't let"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتخليش",
+          "transliteration": "ma katkhllish",
+          "english": "you (f) don't let"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيخليش",
+          "transliteration": "ma kaykhllish",
+          "english": "he doesn't let"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتخليش",
+          "transliteration": "ma katkhllish",
+          "english": "she doesn't let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنخليوش",
+          "transliteration": "ma kankhlliwsh",
+          "english": "we don't let"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتخليوش",
+          "transliteration": "ma katkhlliwsh",
+          "english": "you (pl) don't let"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيخليوش",
+          "transliteration": "ma kaykhlliwsh",
+          "english": "they don't let"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نخلي",
+          "transliteration": "ghadi nkhlli",
+          "english": "I will let"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تخلي",
+          "transliteration": "ghadi tkhlli",
+          "english": "you (m) will let"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تخلي",
+          "transliteration": "ghadi tkhlli",
+          "english": "you (f) will let"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يخلي",
+          "transliteration": "ghadi ykhlli",
+          "english": "he will let"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تخلي",
+          "transliteration": "ghadi tkhlli",
+          "english": "she will let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نخليو",
+          "transliteration": "ghadi nkhlliw",
+          "english": "we will let"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تخليو",
+          "transliteration": "ghadi tkhlliw",
+          "english": "you (pl) will let"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يخليو",
+          "transliteration": "ghadi ykhlliw",
+          "english": "they will let"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نخلي",
+          "transliteration": "ma ghadish nkhlli",
+          "english": "I won't let"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تخلي",
+          "transliteration": "ma ghadish tkhlli",
+          "english": "you (m) won't let"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تخلي",
+          "transliteration": "ma ghadish tkhlli",
+          "english": "you (f) won't let"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يخلي",
+          "transliteration": "ma ghadish ykhlli",
+          "english": "he won't let"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تخلي",
+          "transliteration": "ma ghadish tkhlli",
+          "english": "she won't let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نخليو",
+          "transliteration": "ma ghadish nkhlliw",
+          "english": "we won't let"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تخليو",
+          "transliteration": "ma ghadish tkhlliw",
+          "english": "you (pl) won't let"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يخليو",
+          "transliteration": "ma ghadish ykhlliw",
+          "english": "they won't let"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

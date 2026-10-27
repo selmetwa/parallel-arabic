@@ -20,6 +20,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { writeFileSync, existsSync, mkdirSync, readFileSync } from 'fs';
 import { egyptianArabicVerbs } from './verb-data-egyptian.js';
+import { rebuildIndex } from './verb-conjugations/generate-more-index';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -368,15 +369,9 @@ async function main() {
     await sleep(600);
   }
 
-  // Write index.json
+  // Write index.json: every table in the folder, including generate-more.ts's.
   if (!dryRun && indexEntries.length > 0) {
-    const indexData = {
-      dialect: 'egyptian-arabic',
-      generatedAt: new Date().toISOString(),
-      verbs: indexEntries.sort((a, b) => a.english.localeCompare(b.english))
-    };
-    writeFileSync(indexPath, JSON.stringify(indexData, null, 2), 'utf-8');
-    console.log(`\n✅ Written index.json (${indexEntries.length} verbs)`);
+    console.log(`\n✅ Written index.json (${rebuildIndex(OUTPUT_DIR, 'egyptian-arabic')} verbs)`);
   }
 
   console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');

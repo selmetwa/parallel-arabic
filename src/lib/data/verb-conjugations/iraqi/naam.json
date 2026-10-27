@@ -1,0 +1,320 @@
+{
+  "slug": "naam",
+  "arabic": "نام",
+  "transliteration": "naam",
+  "english": "to sleep",
+  "wordId": null,
+  "rootLetters": "ن و م",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb; the middle root letter drops in the first and second person past tense forms, taking an 'i' vowel (nimit).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نمت",
+          "transliteration": "nimit",
+          "english": "I slept"
+        },
+        {
+          "person": "enta",
+          "arabic": "نمت",
+          "transliteration": "nimit",
+          "english": "you (m) slept"
+        },
+        {
+          "person": "enti",
+          "arabic": "نمتي",
+          "transliteration": "nimti",
+          "english": "you (f) slept"
+        },
+        {
+          "person": "howa",
+          "arabic": "نام",
+          "transliteration": "naam",
+          "english": "he slept"
+        },
+        {
+          "person": "heya",
+          "arabic": "نامت",
+          "transliteration": "naamat",
+          "english": "she slept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نمنا",
+          "transliteration": "nimna",
+          "english": "we slept"
+        },
+        {
+          "person": "entu",
+          "arabic": "نمتوا",
+          "transliteration": "nimtu",
+          "english": "you (pl) slept"
+        },
+        {
+          "person": "homma",
+          "arabic": "ناموا",
+          "transliteration": "naamaw",
+          "english": "they slept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما نمت",
+          "transliteration": "ma nimit",
+          "english": "I didn't sleep"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما نمت",
+          "transliteration": "ma nimit",
+          "english": "you (m) didn't sleep"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما نمتي",
+          "transliteration": "ma nimti",
+          "english": "you (f) didn't sleep"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما نام",
+          "transliteration": "ma naam",
+          "english": "he didn't sleep"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما نامت",
+          "transliteration": "ma naamat",
+          "english": "she didn't sleep"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نمنا",
+          "transliteration": "ma nimna",
+          "english": "we didn't sleep"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما نمتوا",
+          "transliteration": "ma nimtu",
+          "english": "you (pl) didn't sleep"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ناموا",
+          "transliteration": "ma naamaw",
+          "english": "they didn't sleep"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "انام",
+          "transliteration": "anaam",
+          "english": "I sleep"
+        },
+        {
+          "person": "enta",
+          "arabic": "تنام",
+          "transliteration": "tnaam",
+          "english": "you (m) sleep"
+        },
+        {
+          "person": "enti",
+          "arabic": "تنامين",
+          "transliteration": "tnaameen",
+          "english": "you (f) sleep"
+        },
+        {
+          "person": "howa",
+          "arabic": "ينام",
+          "transliteration": "ynaam",
+          "english": "he sleeps"
+        },
+        {
+          "person": "heya",
+          "arabic": "تنام",
+          "transliteration": "tnaam",
+          "english": "she sleeps"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ننام",
+          "transliteration": "nnaam",
+          "english": "we sleep"
+        },
+        {
+          "person": "entu",
+          "arabic": "تنامون",
+          "transliteration": "tnaamoon",
+          "english": "you (pl) sleep"
+        },
+        {
+          "person": "homma",
+          "arabic": "ينامون",
+          "transliteration": "ynaamoon",
+          "english": "they sleep"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما انام",
+          "transliteration": "ma anaam",
+          "english": "I don't sleep"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تنام",
+          "transliteration": "ma tnaam",
+          "english": "you (m) don't sleep"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تنامين",
+          "transliteration": "ma tnaameen",
+          "english": "you (f) don't sleep"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ينام",
+          "transliteration": "ma ynaam",
+          "english": "he doesn't sleep"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تنام",
+          "transliteration": "ma tnaam",
+          "english": "she doesn't sleep"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ننام",
+          "transliteration": "ma nnaam",
+          "english": "we don't sleep"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تنامون",
+          "transliteration": "ma tnaamoon",
+          "english": "you (pl) don't sleep"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ينامون",
+          "transliteration": "ma ynaamoon",
+          "english": "they don't sleep"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح انام",
+          "transliteration": "raa7 anaam",
+          "english": "I will sleep"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تنام",
+          "transliteration": "raa7 tnaam",
+          "english": "you (m) will sleep"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تنامين",
+          "transliteration": "raa7 tnaameen",
+          "english": "you (f) will sleep"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح ينام",
+          "transliteration": "raa7 ynaam",
+          "english": "he will sleep"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تنام",
+          "transliteration": "raa7 tnaam",
+          "english": "she will sleep"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح ننام",
+          "transliteration": "raa7 nnaam",
+          "english": "we will sleep"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تنامون",
+          "transliteration": "raa7 tnaamoon",
+          "english": "you (pl) will sleep"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح ينامون",
+          "transliteration": "raa7 ynaamoon",
+          "english": "they will sleep"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح انام",
+          "transliteration": "ma raa7 anaam",
+          "english": "I won't sleep"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تنام",
+          "transliteration": "ma raa7 tnaam",
+          "english": "you (m) won't sleep"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تنامين",
+          "transliteration": "ma raa7 tnaameen",
+          "english": "you (f) won't sleep"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح ينام",
+          "transliteration": "ma raa7 ynaam",
+          "english": "he won't sleep"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تنام",
+          "transliteration": "ma raa7 tnaam",
+          "english": "she won't sleep"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح ننام",
+          "transliteration": "ma raa7 nnaam",
+          "english": "we won't sleep"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تنامون",
+          "transliteration": "ma raa7 tnaamoon",
+          "english": "you (pl) won't sleep"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح ينامون",
+          "transliteration": "ma raa7 ynaamoon",
+          "english": "they won't sleep"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

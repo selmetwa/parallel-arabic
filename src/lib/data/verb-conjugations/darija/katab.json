@@ -1,0 +1,320 @@
+{
+  "slug": "katab",
+  "arabic": "كتب",
+  "transliteration": "kteb",
+  "english": "to write",
+  "wordId": null,
+  "rootLetters": "ك ت ب",
+  "verbClass": "sound",
+  "notes": "Regular verb: the e moves when an ending starts with a vowel (ketbat, ketbu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كتبت",
+          "transliteration": "ktebt",
+          "english": "I wrote"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتبتي",
+          "transliteration": "ktebti",
+          "english": "you (m) wrote"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتبتي",
+          "transliteration": "ktebti",
+          "english": "you (f) wrote"
+        },
+        {
+          "person": "howa",
+          "arabic": "كتب",
+          "transliteration": "kteb",
+          "english": "he wrote"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتبات",
+          "transliteration": "ketbat",
+          "english": "she wrote"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كتبنا",
+          "transliteration": "ktebna",
+          "english": "we wrote"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتبتيو",
+          "transliteration": "ktebtiw",
+          "english": "you (pl) wrote"
+        },
+        {
+          "person": "homma",
+          "arabic": "كتبو",
+          "transliteration": "ketbu",
+          "english": "they wrote"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كتبتش",
+          "transliteration": "ma ktebtsh",
+          "english": "I didn't write"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتبتيش",
+          "transliteration": "ma ktebtish",
+          "english": "you (m) didn't write"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتبتيش",
+          "transliteration": "ma ktebtish",
+          "english": "you (f) didn't write"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كتبش",
+          "transliteration": "ma ktebsh",
+          "english": "he didn't write"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتباتش",
+          "transliteration": "ma ketbatsh",
+          "english": "she didn't write"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كتبناش",
+          "transliteration": "ma ktebnash",
+          "english": "we didn't write"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتبتيوش",
+          "transliteration": "ma ktebtiwsh",
+          "english": "you (pl) didn't write"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كتبوش",
+          "transliteration": "ma ketbush",
+          "english": "they didn't write"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنكتب",
+          "transliteration": "kankteb",
+          "english": "I write"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتكتب",
+          "transliteration": "katkteb",
+          "english": "you (m) write"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتكتبي",
+          "transliteration": "katketbi",
+          "english": "you (f) write"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيكتب",
+          "transliteration": "kaykteb",
+          "english": "he writes"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتكتب",
+          "transliteration": "katkteb",
+          "english": "she writes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنكتبو",
+          "transliteration": "kanketbu",
+          "english": "we write"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتكتبو",
+          "transliteration": "katketbu",
+          "english": "you (pl) write"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيكتبو",
+          "transliteration": "kayketbu",
+          "english": "they write"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنكتبش",
+          "transliteration": "ma kanktebsh",
+          "english": "I don't write"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتكتبش",
+          "transliteration": "ma katktebsh",
+          "english": "you (m) don't write"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتكتبيش",
+          "transliteration": "ma katketbish",
+          "english": "you (f) don't write"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيكتبش",
+          "transliteration": "ma kayktebsh",
+          "english": "he doesn't write"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتكتبش",
+          "transliteration": "ma katktebsh",
+          "english": "she doesn't write"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنكتبوش",
+          "transliteration": "ma kanketbush",
+          "english": "we don't write"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتكتبوش",
+          "transliteration": "ma katketbush",
+          "english": "you (pl) don't write"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيكتبوش",
+          "transliteration": "ma kayketbush",
+          "english": "they don't write"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نكتب",
+          "transliteration": "ghadi nkteb",
+          "english": "I will write"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تكتب",
+          "transliteration": "ghadi tkteb",
+          "english": "you (m) will write"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تكتبي",
+          "transliteration": "ghadi tketbi",
+          "english": "you (f) will write"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يكتب",
+          "transliteration": "ghadi ykteb",
+          "english": "he will write"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تكتب",
+          "transliteration": "ghadi tkteb",
+          "english": "she will write"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نكتبو",
+          "transliteration": "ghadi nketbu",
+          "english": "we will write"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تكتبو",
+          "transliteration": "ghadi tketbu",
+          "english": "you (pl) will write"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يكتبو",
+          "transliteration": "ghadi yketbu",
+          "english": "they will write"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نكتب",
+          "transliteration": "ma ghadish nkteb",
+          "english": "I won't write"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تكتب",
+          "transliteration": "ma ghadish tkteb",
+          "english": "you (m) won't write"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تكتبي",
+          "transliteration": "ma ghadish tketbi",
+          "english": "you (f) won't write"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يكتب",
+          "transliteration": "ma ghadish ykteb",
+          "english": "he won't write"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تكتب",
+          "transliteration": "ma ghadish tkteb",
+          "english": "she won't write"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نكتبو",
+          "transliteration": "ma ghadish nketbu",
+          "english": "we won't write"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تكتبو",
+          "transliteration": "ma ghadish tketbu",
+          "english": "you (pl) won't write"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يكتبو",
+          "transliteration": "ma ghadish yketbu",
+          "english": "they won't write"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "misik",
+  "arabic": "مسك",
+  "transliteration": "masak",
+  "english": "to hold",
+  "wordId": null,
+  "rootLetters": "م س ك",
+  "verbClass": "sound",
+  "notes": "A regular Form I sound verb. Note the vowel elision in the 'heya' and 'homma' past forms (maskat, maskaw) typical of Gulf Arabic.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "مسكت",
+          "transliteration": "masakt",
+          "english": "I held"
+        },
+        {
+          "person": "enta",
+          "arabic": "مسكت",
+          "transliteration": "masakt",
+          "english": "you (m) held"
+        },
+        {
+          "person": "enti",
+          "arabic": "مسكتي",
+          "transliteration": "masakti",
+          "english": "you (f) held"
+        },
+        {
+          "person": "howa",
+          "arabic": "مسك",
+          "transliteration": "masak",
+          "english": "he held"
+        },
+        {
+          "person": "heya",
+          "arabic": "مسكت",
+          "transliteration": "maskat",
+          "english": "she held"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مسكنا",
+          "transliteration": "masakna",
+          "english": "we held"
+        },
+        {
+          "person": "entu",
+          "arabic": "مسكتوا",
+          "transliteration": "masaktaw",
+          "english": "you (pl) held"
+        },
+        {
+          "person": "homma",
+          "arabic": "مسكوا",
+          "transliteration": "maskaw",
+          "english": "they held"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما مسكت",
+          "transliteration": "ma masakt",
+          "english": "I didn't hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما مسكت",
+          "transliteration": "ma masakt",
+          "english": "you (m) didn't hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما مسكتي",
+          "transliteration": "ma masakti",
+          "english": "you (f) didn't hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما مسك",
+          "transliteration": "ma masak",
+          "english": "he didn't hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما مسكت",
+          "transliteration": "ma maskat",
+          "english": "she didn't hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما مسكنا",
+          "transliteration": "ma masakna",
+          "english": "we didn't hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما مسكتوا",
+          "transliteration": "ma masaktaw",
+          "english": "you (pl) didn't hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما مسكوا",
+          "transliteration": "ma maskaw",
+          "english": "they didn't hold"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "امسك",
+          "transliteration": "amsik",
+          "english": "I hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "تمسك",
+          "transliteration": "timsik",
+          "english": "you (m) hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "تمسكين",
+          "transliteration": "timsikeen",
+          "english": "you (f) hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "يمسك",
+          "transliteration": "yimsik",
+          "english": "he holds"
+        },
+        {
+          "person": "heya",
+          "arabic": "تمسك",
+          "transliteration": "timsik",
+          "english": "she holds"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نمسك",
+          "transliteration": "nimsik",
+          "english": "we hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "تمسكون",
+          "transliteration": "timsikoon",
+          "english": "you (pl) hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "يمسكون",
+          "transliteration": "yimsikoon",
+          "english": "they hold"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما امسك",
+          "transliteration": "ma amsik",
+          "english": "I don't hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تمسك",
+          "transliteration": "ma timsik",
+          "english": "you (m) don't hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تمسكين",
+          "transliteration": "ma timsikeen",
+          "english": "you (f) don't hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يمسك",
+          "transliteration": "ma yimsik",
+          "english": "he doesn't hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تمسك",
+          "transliteration": "ma timsik",
+          "english": "she doesn't hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نمسك",
+          "transliteration": "ma nimsik",
+          "english": "we don't hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تمسكون",
+          "transliteration": "ma timsikoon",
+          "english": "you (pl) don't hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يمسكون",
+          "transliteration": "ma yimsikoon",
+          "english": "they don't hold"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح امسك",
+          "transliteration": "raa7 amsik",
+          "english": "I will hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تمسك",
+          "transliteration": "raa7 timsik",
+          "english": "you (m) will hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تمسكين",
+          "transliteration": "raa7 timsikeen",
+          "english": "you (f) will hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يمسك",
+          "transliteration": "raa7 yimsik",
+          "english": "he will hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تمسك",
+          "transliteration": "raa7 timsik",
+          "english": "she will hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نمسك",
+          "transliteration": "raa7 nimsik",
+          "english": "we will hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تمسكون",
+          "transliteration": "raa7 timsikoon",
+          "english": "you (pl) will hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يمسكون",
+          "transliteration": "raa7 yimsikoon",
+          "english": "they will hold"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح امسك",
+          "transliteration": "ma raa7 amsik",
+          "english": "I won't hold"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تمسك",
+          "transliteration": "ma raa7 timsik",
+          "english": "you (m) won't hold"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تمسكين",
+          "transliteration": "ma raa7 timsikeen",
+          "english": "you (f) won't hold"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يمسك",
+          "transliteration": "ma raa7 yimsik",
+          "english": "he won't hold"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تمسك",
+          "transliteration": "ma raa7 timsik",
+          "english": "she won't hold"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نمسك",
+          "transliteration": "ma raa7 nimsik",
+          "english": "we won't hold"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تمسكون",
+          "transliteration": "ma raa7 timsikoon",
+          "english": "you (pl) won't hold"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يمسكون",
+          "transliteration": "ma raa7 yimsikoon",
+          "english": "they won't hold"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

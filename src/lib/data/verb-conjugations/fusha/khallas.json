@@ -1,0 +1,320 @@
+{
+  "slug": "khallas",
+  "arabic": "أَنْهَى",
+  "transliteration": "anha",
+  "english": "to finish",
+  "wordId": null,
+  "rootLetters": "ن ه ي",
+  "verbClass": "defective",
+  "notes": "Form IV defective verb; the final weak letter appears as ya' in most forms but is dropped in the third-person feminine singular and masculine plural past, as well as the masculine plural and feminine singular present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَنْهَيْتُ",
+          "transliteration": "anhaytu",
+          "english": "I finished"
+        },
+        {
+          "person": "enta",
+          "arabic": "أَنْهَيْتَ",
+          "transliteration": "anhayta",
+          "english": "you (m) finished"
+        },
+        {
+          "person": "enti",
+          "arabic": "أَنْهَيْتِ",
+          "transliteration": "anhayti",
+          "english": "you (f) finished"
+        },
+        {
+          "person": "howa",
+          "arabic": "أَنْهَى",
+          "transliteration": "anha",
+          "english": "he finished"
+        },
+        {
+          "person": "heya",
+          "arabic": "أَنْهَتْ",
+          "transliteration": "anhat",
+          "english": "she finished"
+        },
+        {
+          "person": "ehna",
+          "arabic": "أَنْهَيْنَا",
+          "transliteration": "anhayna",
+          "english": "we finished"
+        },
+        {
+          "person": "entu",
+          "arabic": "أَنْهَيْتُمْ",
+          "transliteration": "anhaytum",
+          "english": "you (pl) finished"
+        },
+        {
+          "person": "homma",
+          "arabic": "أَنْهَوْا",
+          "transliteration": "anhaw",
+          "english": "they finished"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا أَنْهَيْتُ",
+          "transliteration": "ma anhaytu",
+          "english": "I didn't finish"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا أَنْهَيْتَ",
+          "transliteration": "ma anhayta",
+          "english": "you (m) didn't finish"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا أَنْهَيْتِ",
+          "transliteration": "ma anhayti",
+          "english": "you (f) didn't finish"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا أَنْهَى",
+          "transliteration": "ma anha",
+          "english": "he didn't finish"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا أَنْهَتْ",
+          "transliteration": "ma anhat",
+          "english": "she didn't finish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا أَنْهَيْنَا",
+          "transliteration": "ma anhayna",
+          "english": "we didn't finish"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا أَنْهَيْتُمْ",
+          "transliteration": "ma anhaytum",
+          "english": "you (pl) didn't finish"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا أَنْهَوْا",
+          "transliteration": "ma anhaw",
+          "english": "they didn't finish"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أُنْهِي",
+          "transliteration": "unhi",
+          "english": "I finish"
+        },
+        {
+          "person": "enta",
+          "arabic": "تُنْهِي",
+          "transliteration": "tunhi",
+          "english": "you (m) finish"
+        },
+        {
+          "person": "enti",
+          "arabic": "تُنْهِينَ",
+          "transliteration": "tunhina",
+          "english": "you (f) finish"
+        },
+        {
+          "person": "howa",
+          "arabic": "يُنْهِي",
+          "transliteration": "yunhi",
+          "english": "he finishes"
+        },
+        {
+          "person": "heya",
+          "arabic": "تُنْهِي",
+          "transliteration": "tunhi",
+          "english": "she finishes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نُنْهِي",
+          "transliteration": "nunhi",
+          "english": "we finish"
+        },
+        {
+          "person": "entu",
+          "arabic": "تُنْهُونَ",
+          "transliteration": "tunhuna",
+          "english": "you (pl) finish"
+        },
+        {
+          "person": "homma",
+          "arabic": "يُنْهُونَ",
+          "transliteration": "yunhuna",
+          "english": "they finish"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أُنْهِي",
+          "transliteration": "la unhi",
+          "english": "I don't finish"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تُنْهِي",
+          "transliteration": "la tunhi",
+          "english": "you (m) don't finish"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تُنْهِينَ",
+          "transliteration": "la tunhina",
+          "english": "you (f) don't finish"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يُنْهِي",
+          "transliteration": "la yunhi",
+          "english": "he doesn't finish"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تُنْهِي",
+          "transliteration": "la tunhi",
+          "english": "she doesn't finish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نُنْهِي",
+          "transliteration": "la nunhi",
+          "english": "we don't finish"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تُنْهُونَ",
+          "transliteration": "la tunhuna",
+          "english": "you (pl) don't finish"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يُنْهُونَ",
+          "transliteration": "la yunhuna",
+          "english": "they don't finish"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأُنْهِي",
+          "transliteration": "sa2unhi",
+          "english": "I will finish"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتُنْهِي",
+          "transliteration": "satunhi",
+          "english": "you (m) will finish"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتُنْهِينَ",
+          "transliteration": "satunhina",
+          "english": "you (f) will finish"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيُنْهِي",
+          "transliteration": "sayunhi",
+          "english": "he will finish"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتُنْهِي",
+          "transliteration": "satunhi",
+          "english": "she will finish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنُنْهِي",
+          "transliteration": "sanunhi",
+          "english": "we will finish"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتُنْهُونَ",
+          "transliteration": "satunhuna",
+          "english": "you (pl) will finish"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيُنْهُونَ",
+          "transliteration": "sayunhuna",
+          "english": "they will finish"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أُنْهِيَ",
+          "transliteration": "lan unhiya",
+          "english": "I won't finish"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تُنْهِيَ",
+          "transliteration": "lan tunhiya",
+          "english": "you (m) won't finish"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تُنْهِي",
+          "transliteration": "lan tunhi",
+          "english": "you (f) won't finish"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يُنْهِيَ",
+          "transliteration": "lan yunhiya",
+          "english": "he won't finish"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تُنْهِيَ",
+          "transliteration": "lan tunhiya",
+          "english": "she won't finish"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نُنْهِيَ",
+          "transliteration": "lan nunhiya",
+          "english": "we won't finish"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تُنْهُوا",
+          "transliteration": "lan tunhu",
+          "english": "you (pl) won't finish"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يُنْهُوا",
+          "transliteration": "lan yunhu",
+          "english": "they won't finish"
+        }
+      ]
+    }
+  },
+  "form": "IV",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "shaal",
+  "arabic": "هز",
+  "transliteration": "hezz",
+  "english": "to carry",
+  "wordId": null,
+  "rootLetters": "ه ز ز",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb, meaning the second and third root letters are the same; in the past tense, an 'i' is inserted before consonant-initial suffixes (e.g., hezzit).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هزيت",
+          "transliteration": "hezzit",
+          "english": "I carried"
+        },
+        {
+          "person": "enta",
+          "arabic": "هزيتي",
+          "transliteration": "hezziti",
+          "english": "you (m) carried"
+        },
+        {
+          "person": "enti",
+          "arabic": "هزيتي",
+          "transliteration": "hezziti",
+          "english": "you (f) carried"
+        },
+        {
+          "person": "howa",
+          "arabic": "هز",
+          "transliteration": "hezz",
+          "english": "he carried"
+        },
+        {
+          "person": "heya",
+          "arabic": "هزات",
+          "transliteration": "hezzat",
+          "english": "she carried"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هزينا",
+          "transliteration": "hezzina",
+          "english": "we carried"
+        },
+        {
+          "person": "entu",
+          "arabic": "هزيتيو",
+          "transliteration": "hezzitiw",
+          "english": "you (pl) carried"
+        },
+        {
+          "person": "homma",
+          "arabic": "هزو",
+          "transliteration": "hezzu",
+          "english": "they carried"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما هزيتش",
+          "transliteration": "ma hezzitsh",
+          "english": "I didn't carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما هزيتيش",
+          "transliteration": "ma hezzitish",
+          "english": "you (m) didn't carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما هزيتيش",
+          "transliteration": "ma hezzitish",
+          "english": "you (f) didn't carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما هزش",
+          "transliteration": "ma hezzsh",
+          "english": "he didn't carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما هزاتش",
+          "transliteration": "ma hezzatsh",
+          "english": "she didn't carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما هزيناش",
+          "transliteration": "ma hezzinash",
+          "english": "we didn't carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما هزيتيوش",
+          "transliteration": "ma hezzitiwsh",
+          "english": "you (pl) didn't carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما هزوش",
+          "transliteration": "ma hezzush",
+          "english": "they didn't carry"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنهز",
+          "transliteration": "kanhezz",
+          "english": "I carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتهز",
+          "transliteration": "kathezz",
+          "english": "you (m) carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتهزي",
+          "transliteration": "kathezzi",
+          "english": "you (f) carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيهز",
+          "transliteration": "kayhezz",
+          "english": "he carries"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتهز",
+          "transliteration": "kathezz",
+          "english": "she carries"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنهزو",
+          "transliteration": "kanhezzu",
+          "english": "we carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتهزو",
+          "transliteration": "kathezzu",
+          "english": "you (pl) carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيهزو",
+          "transliteration": "kayhezzu",
+          "english": "they carry"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنهزش",
+          "transliteration": "ma kanhezzsh",
+          "english": "I don't carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتهزش",
+          "transliteration": "ma kathezzsh",
+          "english": "you (m) don't carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتهزيش",
+          "transliteration": "ma kathezzish",
+          "english": "you (f) don't carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيهزش",
+          "transliteration": "ma kayhezzsh",
+          "english": "he doesn't carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتهزش",
+          "transliteration": "ma kathezzsh",
+          "english": "she doesn't carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنهزوش",
+          "transliteration": "ma kanhezzush",
+          "english": "we don't carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتهزوش",
+          "transliteration": "ma kathezzush",
+          "english": "you (pl) don't carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيهزوش",
+          "transliteration": "ma kayhezzush",
+          "english": "they don't carry"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نهز",
+          "transliteration": "ghadi nhezz",
+          "english": "I will carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تهز",
+          "transliteration": "ghadi thezz",
+          "english": "you (m) will carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تهزي",
+          "transliteration": "ghadi thezzi",
+          "english": "you (f) will carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يهز",
+          "transliteration": "ghadi yhezz",
+          "english": "he will carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تهز",
+          "transliteration": "ghadi thezz",
+          "english": "she will carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نهزو",
+          "transliteration": "ghadi nhezzu",
+          "english": "we will carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تهزو",
+          "transliteration": "ghadi thezzu",
+          "english": "you (pl) will carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يهزو",
+          "transliteration": "ghadi yhezzu",
+          "english": "they will carry"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نهز",
+          "transliteration": "ma ghadish nhezz",
+          "english": "I won't carry"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تهز",
+          "transliteration": "ma ghadish thezz",
+          "english": "you (m) won't carry"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تهزي",
+          "transliteration": "ma ghadish thezzi",
+          "english": "you (f) won't carry"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يهز",
+          "transliteration": "ma ghadish yhezz",
+          "english": "he won't carry"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تهز",
+          "transliteration": "ma ghadish thezz",
+          "english": "she won't carry"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نهزو",
+          "transliteration": "ma ghadish nhezzu",
+          "english": "we won't carry"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تهزو",
+          "transliteration": "ma ghadish thezzu",
+          "english": "you (pl) won't carry"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يهزو",
+          "transliteration": "ma ghadish yhezzu",
+          "english": "they won't carry"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

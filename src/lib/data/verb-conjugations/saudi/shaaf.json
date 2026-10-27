@@ -1,0 +1,320 @@
+{
+  "slug": "shaaf",
+  "arabic": "شاف",
+  "transliteration": "shaaf",
+  "english": "to see",
+  "wordId": null,
+  "rootLetters": "ش و ف",
+  "verbClass": "hollow",
+  "notes": "A hollow Form I verb with a 'waw' root, meaning the middle vowel shortens to 'u' in the first and second person past tense (shuft) and becomes 'oo' in the present and future tenses (bashoof).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شفت",
+          "transliteration": "shuft",
+          "english": "I saw"
+        },
+        {
+          "person": "enta",
+          "arabic": "شفت",
+          "transliteration": "shuft",
+          "english": "you (m) saw"
+        },
+        {
+          "person": "enti",
+          "arabic": "شفتي",
+          "transliteration": "shufti",
+          "english": "you (f) saw"
+        },
+        {
+          "person": "howa",
+          "arabic": "شاف",
+          "transliteration": "shaaf",
+          "english": "he saw"
+        },
+        {
+          "person": "heya",
+          "arabic": "شافت",
+          "transliteration": "shaafat",
+          "english": "she saw"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شفنا",
+          "transliteration": "shufna",
+          "english": "we saw"
+        },
+        {
+          "person": "entu",
+          "arabic": "شفتوا",
+          "transliteration": "shuftu",
+          "english": "you (pl) saw"
+        },
+        {
+          "person": "homma",
+          "arabic": "شافوا",
+          "transliteration": "shaafu",
+          "english": "they saw"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما شفت",
+          "transliteration": "ma shuft",
+          "english": "I didn't see"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما شفت",
+          "transliteration": "ma shuft",
+          "english": "you (m) didn't see"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما شفتي",
+          "transliteration": "ma shufti",
+          "english": "you (f) didn't see"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما شاف",
+          "transliteration": "ma shaaf",
+          "english": "he didn't see"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما شافت",
+          "transliteration": "ma shaafat",
+          "english": "she didn't see"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما شفنا",
+          "transliteration": "ma shufna",
+          "english": "we didn't see"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما شفتوا",
+          "transliteration": "ma shuftu",
+          "english": "you (pl) didn't see"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما شافوا",
+          "transliteration": "ma shaafu",
+          "english": "they didn't see"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باشوف",
+          "transliteration": "bashoof",
+          "english": "I see"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتشوف",
+          "transliteration": "btishoof",
+          "english": "you (m) see"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتشوفي",
+          "transliteration": "btishoofi",
+          "english": "you (f) see"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيشوف",
+          "transliteration": "byishoof",
+          "english": "he sees"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتشوف",
+          "transliteration": "btishoof",
+          "english": "she sees"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنشوف",
+          "transliteration": "bnishoof",
+          "english": "we see"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتشوفوا",
+          "transliteration": "btishoofu",
+          "english": "you (pl) see"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيشوفوا",
+          "transliteration": "byishoofu",
+          "english": "they see"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باشوف",
+          "transliteration": "ma bashoof",
+          "english": "I don't see"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتشوف",
+          "transliteration": "ma btishoof",
+          "english": "you (m) don't see"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتشوفي",
+          "transliteration": "ma btishoofi",
+          "english": "you (f) don't see"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيشوف",
+          "transliteration": "ma byishoof",
+          "english": "he doesn't see"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتشوف",
+          "transliteration": "ma btishoof",
+          "english": "she doesn't see"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنشوف",
+          "transliteration": "ma bnishoof",
+          "english": "we don't see"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتشوفوا",
+          "transliteration": "ma btishoofu",
+          "english": "you (pl) don't see"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيشوفوا",
+          "transliteration": "ma byishoofu",
+          "english": "they don't see"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاشوف",
+          "transliteration": "7ashoof",
+          "english": "I will see"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتشوف",
+          "transliteration": "7atishoof",
+          "english": "you (m) will see"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتشوفي",
+          "transliteration": "7atishoofi",
+          "english": "you (f) will see"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيشوف",
+          "transliteration": "7ayishoof",
+          "english": "he will see"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتشوف",
+          "transliteration": "7atishoof",
+          "english": "she will see"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنشوف",
+          "transliteration": "7anishoof",
+          "english": "we will see"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتشوفوا",
+          "transliteration": "7atishoofu",
+          "english": "you (pl) will see"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيشوفوا",
+          "transliteration": "7ayishoofu",
+          "english": "they will see"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاشوف",
+          "transliteration": "ma 7ashoof",
+          "english": "I won't see"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتشوف",
+          "transliteration": "ma 7atishoof",
+          "english": "you (m) won't see"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتشوفي",
+          "transliteration": "ma 7atishoofi",
+          "english": "you (f) won't see"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيشوف",
+          "transliteration": "ma 7ayishoof",
+          "english": "he won't see"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتشوف",
+          "transliteration": "ma 7atishoof",
+          "english": "she won't see"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنشوف",
+          "transliteration": "ma 7anishoof",
+          "english": "we won't see"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتشوفوا",
+          "transliteration": "ma 7atishoofu",
+          "english": "you (pl) won't see"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيشوفوا",
+          "transliteration": "ma 7ayishoofu",
+          "english": "they won't see"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

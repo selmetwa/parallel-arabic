@@ -17,10 +17,16 @@ function verbs(dialect: string) {
 describe.each(DIALECTS)('%s conjugations', (dialect) => {
 	const all = verbs(dialect);
 
-	it('has the same 72 verbs as Egyptian', () => {
-		expect(all).toHaveLength(72);
-		const slugs = new Set(verbs('egyptian-arabic').map((v) => v.slug));
+	it('has the same verbs as Egyptian', () => {
+		const egyptian = verbs('egyptian-arabic');
+		expect(all).toHaveLength(egyptian.length);
+		const slugs = new Set(egyptian.map((v) => v.slug));
 		for (const v of all) expect(slugs.has(v.slug), v.slug).toBe(true);
+	});
+
+	it('has a derived form (I–X) for every verb', () => {
+		const forms = JSON.parse(readFileSync(join(DIR, 'forms.json'), 'utf8'))[dialect] ?? {};
+		for (const v of all) expect(forms[v.slug], v.slug).toMatch(/^(I|II|III|IV|V|VI|VII|VIII|IX|X|Q)$/);
 	});
 
 	it('fills every tense, polarity and person', () => {
@@ -65,6 +71,6 @@ describe.each(NEW_DIALECTS)('%s writing rules', (dialect) => {
 	it('lists every verb in the index', () => {
 		const index = JSON.parse(readFileSync(join(DIR, dialect, 'index.json'), 'utf8'));
 		expect(index.dialect).toBe(dialect);
-		expect(index.verbs).toHaveLength(72);
+		expect(index.verbs).toHaveLength(all.length);
 	});
 });

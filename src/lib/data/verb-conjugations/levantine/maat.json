@@ -1,0 +1,320 @@
+{
+  "slug": "maat",
+  "arabic": "مات",
+  "transliteration": "mat",
+  "english": "to die",
+  "wordId": null,
+  "rootLetters": "م و ت",
+  "verbClass": "hollow",
+  "notes": "Hollow Form I verb. In the past tense, the long vowel drops for first and second person, typically pronounced with an 'i' (mitt) or 'u' (mutt) in Levantine Arabic.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "متت",
+          "transliteration": "mitt",
+          "english": "I died"
+        },
+        {
+          "person": "enta",
+          "arabic": "متت",
+          "transliteration": "mitt",
+          "english": "you (m) died"
+        },
+        {
+          "person": "enti",
+          "arabic": "متتي",
+          "transliteration": "mitti",
+          "english": "you (f) died"
+        },
+        {
+          "person": "howa",
+          "arabic": "مات",
+          "transliteration": "mat",
+          "english": "he died"
+        },
+        {
+          "person": "heya",
+          "arabic": "ماتت",
+          "transliteration": "matit",
+          "english": "she died"
+        },
+        {
+          "person": "ehna",
+          "arabic": "متنا",
+          "transliteration": "mitna",
+          "english": "we died"
+        },
+        {
+          "person": "entu",
+          "arabic": "متوا",
+          "transliteration": "mittu",
+          "english": "you (pl) died"
+        },
+        {
+          "person": "homma",
+          "arabic": "ماتوا",
+          "transliteration": "matu",
+          "english": "they died"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما متت",
+          "transliteration": "ma mitt",
+          "english": "I didn't die"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما متت",
+          "transliteration": "ma mitt",
+          "english": "you (m) didn't die"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما متتي",
+          "transliteration": "ma mitti",
+          "english": "you (f) didn't die"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما مات",
+          "transliteration": "ma mat",
+          "english": "he didn't die"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ماتت",
+          "transliteration": "ma matit",
+          "english": "she didn't die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما متنا",
+          "transliteration": "ma mitna",
+          "english": "we didn't die"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما متوا",
+          "transliteration": "ma mittu",
+          "english": "you (pl) didn't die"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ماتوا",
+          "transliteration": "ma matu",
+          "english": "they didn't die"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بموت",
+          "transliteration": "bmut",
+          "english": "I die"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتموت",
+          "transliteration": "btmut",
+          "english": "you (m) die"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتموتي",
+          "transliteration": "btmuti",
+          "english": "you (f) die"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيموت",
+          "transliteration": "bimut",
+          "english": "he dies"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتموت",
+          "transliteration": "btmut",
+          "english": "she dies"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منموت",
+          "transliteration": "mnmut",
+          "english": "we die"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتموتوا",
+          "transliteration": "btmutu",
+          "english": "you (pl) die"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيموتوا",
+          "transliteration": "bimutu",
+          "english": "they die"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بموت",
+          "transliteration": "ma bmut",
+          "english": "I don't die"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتموت",
+          "transliteration": "ma btmut",
+          "english": "you (m) don't die"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتموتي",
+          "transliteration": "ma btmuti",
+          "english": "you (f) don't die"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيموت",
+          "transliteration": "ma bimut",
+          "english": "he doesn't die"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتموت",
+          "transliteration": "ma btmut",
+          "english": "she doesn't die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منموت",
+          "transliteration": "ma mnmut",
+          "english": "we don't die"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتموتوا",
+          "transliteration": "ma btmutu",
+          "english": "you (pl) don't die"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيموتوا",
+          "transliteration": "ma bimutu",
+          "english": "they don't die"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح موت",
+          "transliteration": "ra7 mut",
+          "english": "I will die"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تموت",
+          "transliteration": "ra7 tmut",
+          "english": "you (m) will die"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تموتي",
+          "transliteration": "ra7 tmuti",
+          "english": "you (f) will die"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يموت",
+          "transliteration": "ra7 ymut",
+          "english": "he will die"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تموت",
+          "transliteration": "ra7 tmut",
+          "english": "she will die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نموت",
+          "transliteration": "ra7 nmut",
+          "english": "we will die"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تموتوا",
+          "transliteration": "ra7 tmutu",
+          "english": "you (pl) will die"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يموتوا",
+          "transliteration": "ra7 ymutu",
+          "english": "they will die"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح موت",
+          "transliteration": "ma ra7 mut",
+          "english": "I won't die"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تموت",
+          "transliteration": "ma ra7 tmut",
+          "english": "you (m) won't die"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تموتي",
+          "transliteration": "ma ra7 tmuti",
+          "english": "you (f) won't die"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يموت",
+          "transliteration": "ma ra7 ymut",
+          "english": "he won't die"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تموت",
+          "transliteration": "ma ra7 tmut",
+          "english": "she won't die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نموت",
+          "transliteration": "ma ra7 nmut",
+          "english": "we won't die"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تموتوا",
+          "transliteration": "ma ra7 tmutu",
+          "english": "you (pl) won't die"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يموتوا",
+          "transliteration": "ma ra7 ymutu",
+          "english": "they won't die"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

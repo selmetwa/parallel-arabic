@@ -1,0 +1,320 @@
+{
+  "slug": "2idir",
+  "arabic": "قدر",
+  "transliteration": "2idir",
+  "english": "to be able to",
+  "wordId": null,
+  "rootLetters": "ق د ر",
+  "verbClass": "sound",
+  "notes": "The past tense follows the fi3il pattern, meaning the second 'i' vowel drops when a vowel-initial suffix is added (e.g., 2idrit, 2idru).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قدرت",
+          "transliteration": "2idirt",
+          "english": "I could"
+        },
+        {
+          "person": "enta",
+          "arabic": "قدرت",
+          "transliteration": "2idirt",
+          "english": "you (m) could"
+        },
+        {
+          "person": "enti",
+          "arabic": "قدرتي",
+          "transliteration": "2idirti",
+          "english": "you (f) could"
+        },
+        {
+          "person": "howa",
+          "arabic": "قدر",
+          "transliteration": "2idir",
+          "english": "he could"
+        },
+        {
+          "person": "heya",
+          "arabic": "قدرت",
+          "transliteration": "2idrit",
+          "english": "she could"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قدرنا",
+          "transliteration": "2idirna",
+          "english": "we could"
+        },
+        {
+          "person": "entu",
+          "arabic": "قدرتوا",
+          "transliteration": "2idirtu",
+          "english": "you (pl) could"
+        },
+        {
+          "person": "homma",
+          "arabic": "قدروا",
+          "transliteration": "2idru",
+          "english": "they could"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما قدرتش",
+          "transliteration": "ma 2idirtish",
+          "english": "I didn't can"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما قدرتش",
+          "transliteration": "ma 2idirtish",
+          "english": "you (m) didn't can"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما قدرتيش",
+          "transliteration": "ma 2idirtiish",
+          "english": "you (f) didn't can"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما قدرش",
+          "transliteration": "ma 2idirsh",
+          "english": "he didn't can"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما قدرتش",
+          "transliteration": "ma 2idritsh",
+          "english": "she didn't can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما قدرناش",
+          "transliteration": "ma 2idirnaash",
+          "english": "we didn't can"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما قدرتوش",
+          "transliteration": "ma 2idirtuush",
+          "english": "you (pl) didn't can"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما قدروش",
+          "transliteration": "ma 2idruush",
+          "english": "they didn't can"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بقدر",
+          "transliteration": "ba2dar",
+          "english": "I can"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتقدر",
+          "transliteration": "bti2dar",
+          "english": "you (m) can"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتقدري",
+          "transliteration": "bti2dari",
+          "english": "you (f) can"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيقدر",
+          "transliteration": "biyi2dar",
+          "english": "he can"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتقدر",
+          "transliteration": "bti2dar",
+          "english": "she can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنقدر",
+          "transliteration": "bni2dar",
+          "english": "we can"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتقدروا",
+          "transliteration": "bti2daru",
+          "english": "you (pl) can"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيقدروا",
+          "transliteration": "biyi2daru",
+          "english": "they can"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابقدرش",
+          "transliteration": "maba2darsh",
+          "english": "I don't can"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتقدرش",
+          "transliteration": "mabti2darsh",
+          "english": "you (m) don't can"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتقدريش",
+          "transliteration": "mabti2dariish",
+          "english": "you (f) don't can"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيقدرش",
+          "transliteration": "mabiyi2darsh",
+          "english": "he doesn't can"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتقدرش",
+          "transliteration": "mabti2darsh",
+          "english": "she doesn't can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنقدرش",
+          "transliteration": "mabni2darsh",
+          "english": "we don't can"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتقدروش",
+          "transliteration": "mabti2daruush",
+          "english": "you (pl) don't can"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيقدروش",
+          "transliteration": "mabiyi2daruush",
+          "english": "they don't can"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاقدر",
+          "transliteration": "ha2dar",
+          "english": "I will can"
+        },
+        {
+          "person": "enta",
+          "arabic": "هاتقدر",
+          "transliteration": "hati2dar",
+          "english": "you (m) will can"
+        },
+        {
+          "person": "enti",
+          "arabic": "هاتقدري",
+          "transliteration": "hati2dari",
+          "english": "you (f) will can"
+        },
+        {
+          "person": "howa",
+          "arabic": "هايقدر",
+          "transliteration": "hayi2dar",
+          "english": "he will can"
+        },
+        {
+          "person": "heya",
+          "arabic": "هاتقدر",
+          "transliteration": "hati2dar",
+          "english": "she will can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هانقدر",
+          "transliteration": "hani2dar",
+          "english": "we will can"
+        },
+        {
+          "person": "entu",
+          "arabic": "هاتقدروا",
+          "transliteration": "hati2daru",
+          "english": "you (pl) will can"
+        },
+        {
+          "person": "homma",
+          "arabic": "هايقدروا",
+          "transliteration": "hayi2daru",
+          "english": "they will can"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاقدر",
+          "transliteration": "mish ha2dar",
+          "english": "I won't can"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هاتقدر",
+          "transliteration": "mish hati2dar",
+          "english": "you (m) won't can"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هاتقدري",
+          "transliteration": "mish hati2dari",
+          "english": "you (f) won't can"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هايقدر",
+          "transliteration": "mish hayi2dar",
+          "english": "he won't can"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هاتقدر",
+          "transliteration": "mish hati2dar",
+          "english": "she won't can"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هانقدر",
+          "transliteration": "mish hani2dar",
+          "english": "we won't can"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هاتقدروا",
+          "transliteration": "mish hati2daru",
+          "english": "you (pl) won't can"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هايقدروا",
+          "transliteration": "mish hayi2daru",
+          "english": "they won't can"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

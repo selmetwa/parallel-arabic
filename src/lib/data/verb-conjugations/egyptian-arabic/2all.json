@@ -1,0 +1,320 @@
+{
+  "slug": "2all",
+  "arabic": "قل",
+  "transliteration": "2all",
+  "english": "to decrease",
+  "wordId": null,
+  "rootLetters": "ق ل ل",
+  "verbClass": "doubled",
+  "notes": "Doubled verb: 2alleet in the past, yi2ill in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قليت",
+          "transliteration": "2alleet",
+          "english": "I decreased"
+        },
+        {
+          "person": "enta",
+          "arabic": "قليت",
+          "transliteration": "2alleet",
+          "english": "you (m) decreased"
+        },
+        {
+          "person": "enti",
+          "arabic": "قليتي",
+          "transliteration": "2alleeti",
+          "english": "you (f) decreased"
+        },
+        {
+          "person": "howa",
+          "arabic": "قل",
+          "transliteration": "2all",
+          "english": "he decreased"
+        },
+        {
+          "person": "heya",
+          "arabic": "قلت",
+          "transliteration": "2allit",
+          "english": "she decreased"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قلينا",
+          "transliteration": "2alleena",
+          "english": "we decreased"
+        },
+        {
+          "person": "entu",
+          "arabic": "قليتوا",
+          "transliteration": "2alleetu",
+          "english": "you (pl) decreased"
+        },
+        {
+          "person": "homma",
+          "arabic": "قلوا",
+          "transliteration": "2allu",
+          "english": "they decreased"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما قليتش",
+          "transliteration": "ma 2alleetsh",
+          "english": "I didn't decrease"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما قليتش",
+          "transliteration": "ma 2alleetsh",
+          "english": "you (m) didn't decrease"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما قليتيش",
+          "transliteration": "ma 2alleetiish",
+          "english": "you (f) didn't decrease"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما قلش",
+          "transliteration": "ma 2allish",
+          "english": "he didn't decrease"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما قلتش",
+          "transliteration": "ma 2allitsh",
+          "english": "she didn't decrease"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما قليناش",
+          "transliteration": "ma 2alleenaash",
+          "english": "we didn't decrease"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما قليتوش",
+          "transliteration": "ma 2alleetuush",
+          "english": "you (pl) didn't decrease"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما قلوش",
+          "transliteration": "ma 2alluush",
+          "english": "they didn't decrease"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بقل",
+          "transliteration": "ba2ill",
+          "english": "I decrease"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتقل",
+          "transliteration": "bti2ill",
+          "english": "you (m) decrease"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتقلي",
+          "transliteration": "bti2illi",
+          "english": "you (f) decrease"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيقل",
+          "transliteration": "biyi2ill",
+          "english": "he decreases"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتقل",
+          "transliteration": "bti2ill",
+          "english": "she decreases"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنقل",
+          "transliteration": "bni2ill",
+          "english": "we decrease"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتقلوا",
+          "transliteration": "bti2illu",
+          "english": "you (pl) decrease"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيقلوا",
+          "transliteration": "biyi2illu",
+          "english": "they decrease"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابقلش",
+          "transliteration": "maba2illish",
+          "english": "I don't decrease"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتقلش",
+          "transliteration": "mabti2illish",
+          "english": "you (m) don't decrease"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتقليش",
+          "transliteration": "mabti2illiish",
+          "english": "you (f) don't decrease"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيقلش",
+          "transliteration": "mabiyi2illish",
+          "english": "he doesn't decrease"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتقلش",
+          "transliteration": "mabti2illish",
+          "english": "she doesn't decrease"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنقلش",
+          "transliteration": "mabni2illish",
+          "english": "we don't decrease"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتقلوش",
+          "transliteration": "mabti2illuush",
+          "english": "you (pl) don't decrease"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيقلوش",
+          "transliteration": "mabiyi2illuush",
+          "english": "they don't decrease"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاقل",
+          "transliteration": "haa2ill",
+          "english": "I will decrease"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتقل",
+          "transliteration": "hati2ill",
+          "english": "you (m) will decrease"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتقلي",
+          "transliteration": "hati2illi",
+          "english": "you (f) will decrease"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيقل",
+          "transliteration": "hayi2ill",
+          "english": "he will decrease"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتقل",
+          "transliteration": "hati2ill",
+          "english": "she will decrease"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنقل",
+          "transliteration": "hani2ill",
+          "english": "we will decrease"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتقلوا",
+          "transliteration": "hati2illu",
+          "english": "you (pl) will decrease"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيقلوا",
+          "transliteration": "hayi2illu",
+          "english": "they will decrease"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاقل",
+          "transliteration": "mish haa2ill",
+          "english": "I won't decrease"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتقل",
+          "transliteration": "mish hati2ill",
+          "english": "you (m) won't decrease"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتقلي",
+          "transliteration": "mish hati2illi",
+          "english": "you (f) won't decrease"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيقل",
+          "transliteration": "mish hayi2ill",
+          "english": "he won't decrease"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتقل",
+          "transliteration": "mish hati2ill",
+          "english": "she won't decrease"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنقل",
+          "transliteration": "mish hani2ill",
+          "english": "we won't decrease"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتقلوا",
+          "transliteration": "mish hati2illu",
+          "english": "you (pl) won't decrease"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيقلوا",
+          "transliteration": "mish hayi2illu",
+          "english": "they won't decrease"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

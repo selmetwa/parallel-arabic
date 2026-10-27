@@ -1,0 +1,320 @@
+{
+  "slug": "3amal",
+  "arabic": "سوى",
+  "transliteration": "sawwa",
+  "english": "to do",
+  "wordId": null,
+  "rootLetters": "س و ي",
+  "verbClass": "defective",
+  "notes": "Hijazi uses sawwa for \"do, make\"; the past adds -ait (sawwait).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سويت",
+          "transliteration": "sawwait",
+          "english": "I did"
+        },
+        {
+          "person": "enta",
+          "arabic": "سويت",
+          "transliteration": "sawwait",
+          "english": "you (m) did"
+        },
+        {
+          "person": "enti",
+          "arabic": "سويتي",
+          "transliteration": "sawwaiti",
+          "english": "you (f) did"
+        },
+        {
+          "person": "howa",
+          "arabic": "سوى",
+          "transliteration": "sawwa",
+          "english": "he did"
+        },
+        {
+          "person": "heya",
+          "arabic": "سوت",
+          "transliteration": "sawwat",
+          "english": "she did"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سوينا",
+          "transliteration": "sawwaina",
+          "english": "we did"
+        },
+        {
+          "person": "entu",
+          "arabic": "سويتوا",
+          "transliteration": "sawwaitu",
+          "english": "you (pl) did"
+        },
+        {
+          "person": "homma",
+          "arabic": "سووا",
+          "transliteration": "sawwu",
+          "english": "they did"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سويت",
+          "transliteration": "ma sawwait",
+          "english": "I didn't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سويت",
+          "transliteration": "ma sawwait",
+          "english": "you (m) didn't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سويتي",
+          "transliteration": "ma sawwaiti",
+          "english": "you (f) didn't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سوى",
+          "transliteration": "ma sawwa",
+          "english": "he didn't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سوت",
+          "transliteration": "ma sawwat",
+          "english": "she didn't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سوينا",
+          "transliteration": "ma sawwaina",
+          "english": "we didn't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سويتوا",
+          "transliteration": "ma sawwaitu",
+          "english": "you (pl) didn't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سووا",
+          "transliteration": "ma sawwu",
+          "english": "they didn't do"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باسوي",
+          "transliteration": "basawwi",
+          "english": "I do"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتسوي",
+          "transliteration": "btisawwi",
+          "english": "you (m) do"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتسوي",
+          "transliteration": "btisawwi",
+          "english": "you (f) do"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيسوي",
+          "transliteration": "byisawwi",
+          "english": "he does"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتسوي",
+          "transliteration": "btisawwi",
+          "english": "she does"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنسوي",
+          "transliteration": "bnisawwi",
+          "english": "we do"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتسووا",
+          "transliteration": "btisawwu",
+          "english": "you (pl) do"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيسووا",
+          "transliteration": "byisawwu",
+          "english": "they do"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باسوي",
+          "transliteration": "ma basawwi",
+          "english": "I don't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتسوي",
+          "transliteration": "ma btisawwi",
+          "english": "you (m) don't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتسوي",
+          "transliteration": "ma btisawwi",
+          "english": "you (f) don't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيسوي",
+          "transliteration": "ma byisawwi",
+          "english": "he doesn't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتسوي",
+          "transliteration": "ma btisawwi",
+          "english": "she doesn't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنسوي",
+          "transliteration": "ma bnisawwi",
+          "english": "we don't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتسووا",
+          "transliteration": "ma btisawwu",
+          "english": "you (pl) don't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيسووا",
+          "transliteration": "ma byisawwu",
+          "english": "they don't do"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاسوي",
+          "transliteration": "7asawwi",
+          "english": "I will do"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتسوي",
+          "transliteration": "7atisawwi",
+          "english": "you (m) will do"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتسوي",
+          "transliteration": "7atisawwi",
+          "english": "you (f) will do"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيسوي",
+          "transliteration": "7ayisawwi",
+          "english": "he will do"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتسوي",
+          "transliteration": "7atisawwi",
+          "english": "she will do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنسوي",
+          "transliteration": "7anisawwi",
+          "english": "we will do"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتسووا",
+          "transliteration": "7atisawwu",
+          "english": "you (pl) will do"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيسووا",
+          "transliteration": "7ayisawwu",
+          "english": "they will do"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاسوي",
+          "transliteration": "ma 7asawwi",
+          "english": "I won't do"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتسوي",
+          "transliteration": "ma 7atisawwi",
+          "english": "you (m) won't do"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتسوي",
+          "transliteration": "ma 7atisawwi",
+          "english": "you (f) won't do"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيسوي",
+          "transliteration": "ma 7ayisawwi",
+          "english": "he won't do"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتسوي",
+          "transliteration": "ma 7atisawwi",
+          "english": "she won't do"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنسوي",
+          "transliteration": "ma 7anisawwi",
+          "english": "we won't do"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتسووا",
+          "transliteration": "ma 7atisawwu",
+          "english": "you (pl) won't do"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيسووا",
+          "transliteration": "ma 7ayisawwu",
+          "english": "they won't do"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

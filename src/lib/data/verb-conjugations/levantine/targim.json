@@ -1,0 +1,320 @@
+{
+  "slug": "targim",
+  "arabic": "ترجم",
+  "transliteration": "tarjam",
+  "english": "to translate",
+  "wordId": null,
+  "rootLetters": "ت ر ج م",
+  "verbClass": "sound",
+  "notes": "A four-letter verb that conjugates like Form II; present btarjim.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ترجمت",
+          "transliteration": "tarjamt",
+          "english": "I translated"
+        },
+        {
+          "person": "enta",
+          "arabic": "ترجمت",
+          "transliteration": "tarjamt",
+          "english": "you (m) translated"
+        },
+        {
+          "person": "enti",
+          "arabic": "ترجمتي",
+          "transliteration": "tarjamti",
+          "english": "you (f) translated"
+        },
+        {
+          "person": "howa",
+          "arabic": "ترجم",
+          "transliteration": "tarjam",
+          "english": "he translated"
+        },
+        {
+          "person": "heya",
+          "arabic": "ترجمت",
+          "transliteration": "tarjamit",
+          "english": "she translated"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ترجمنا",
+          "transliteration": "tarjamna",
+          "english": "we translated"
+        },
+        {
+          "person": "entu",
+          "arabic": "ترجمتوا",
+          "transliteration": "tarjamtu",
+          "english": "you (pl) translated"
+        },
+        {
+          "person": "homma",
+          "arabic": "ترجموا",
+          "transliteration": "tarjamu",
+          "english": "they translated"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ترجمت",
+          "transliteration": "ma tarjamt",
+          "english": "I didn't translate"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما ترجمت",
+          "transliteration": "ma tarjamt",
+          "english": "you (m) didn't translate"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما ترجمتي",
+          "transliteration": "ma tarjamti",
+          "english": "you (f) didn't translate"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ترجم",
+          "transliteration": "ma tarjam",
+          "english": "he didn't translate"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ترجمت",
+          "transliteration": "ma tarjamit",
+          "english": "she didn't translate"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ترجمنا",
+          "transliteration": "ma tarjamna",
+          "english": "we didn't translate"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما ترجمتوا",
+          "transliteration": "ma tarjamtu",
+          "english": "you (pl) didn't translate"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ترجموا",
+          "transliteration": "ma tarjamu",
+          "english": "they didn't translate"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بترجم",
+          "transliteration": "btarjim",
+          "english": "I translate"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتترجم",
+          "transliteration": "bttarjim",
+          "english": "you (m) translate"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتترجمي",
+          "transliteration": "bttarjmi",
+          "english": "you (f) translate"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيترجم",
+          "transliteration": "bitarjim",
+          "english": "he translates"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتترجم",
+          "transliteration": "bttarjim",
+          "english": "she translates"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منترجم",
+          "transliteration": "mntarjim",
+          "english": "we translate"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتترجموا",
+          "transliteration": "bttarjmu",
+          "english": "you (pl) translate"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيترجموا",
+          "transliteration": "bitarjmu",
+          "english": "they translate"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بترجم",
+          "transliteration": "ma btarjim",
+          "english": "I don't translate"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتترجم",
+          "transliteration": "ma bttarjim",
+          "english": "you (m) don't translate"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتترجمي",
+          "transliteration": "ma bttarjmi",
+          "english": "you (f) don't translate"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيترجم",
+          "transliteration": "ma bitarjim",
+          "english": "he doesn't translate"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتترجم",
+          "transliteration": "ma bttarjim",
+          "english": "she doesn't translate"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منترجم",
+          "transliteration": "ma mntarjim",
+          "english": "we don't translate"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتترجموا",
+          "transliteration": "ma bttarjmu",
+          "english": "you (pl) don't translate"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيترجموا",
+          "transliteration": "ma bitarjmu",
+          "english": "they don't translate"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح ترجم",
+          "transliteration": "ra7 tarjim",
+          "english": "I will translate"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تترجم",
+          "transliteration": "ra7 ttarjim",
+          "english": "you (m) will translate"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تترجمي",
+          "transliteration": "ra7 ttarjmi",
+          "english": "you (f) will translate"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يترجم",
+          "transliteration": "ra7 ytarjim",
+          "english": "he will translate"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تترجم",
+          "transliteration": "ra7 ttarjim",
+          "english": "she will translate"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نترجم",
+          "transliteration": "ra7 ntarjim",
+          "english": "we will translate"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تترجموا",
+          "transliteration": "ra7 ttarjmu",
+          "english": "you (pl) will translate"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يترجموا",
+          "transliteration": "ra7 ytarjmu",
+          "english": "they will translate"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح ترجم",
+          "transliteration": "ma ra7 tarjim",
+          "english": "I won't translate"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تترجم",
+          "transliteration": "ma ra7 ttarjim",
+          "english": "you (m) won't translate"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تترجمي",
+          "transliteration": "ma ra7 ttarjmi",
+          "english": "you (f) won't translate"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يترجم",
+          "transliteration": "ma ra7 ytarjim",
+          "english": "he won't translate"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تترجم",
+          "transliteration": "ma ra7 ttarjim",
+          "english": "she won't translate"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نترجم",
+          "transliteration": "ma ra7 ntarjim",
+          "english": "we won't translate"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تترجموا",
+          "transliteration": "ma ra7 ttarjmu",
+          "english": "you (pl) won't translate"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يترجموا",
+          "transliteration": "ma ra7 ytarjmu",
+          "english": "they won't translate"
+        }
+      ]
+    }
+  },
+  "form": "Q",
+  "source": "generated"
+}

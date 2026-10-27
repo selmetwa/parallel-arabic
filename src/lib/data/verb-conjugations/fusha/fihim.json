@@ -1,0 +1,320 @@
+{
+  "slug": "fihim",
+  "arabic": "فَهِمَ",
+  "transliteration": "fahima",
+  "english": "to understand",
+  "wordId": null,
+  "rootLetters": "ف ه م",
+  "verbClass": "sound",
+  "notes": "This is a regular Form I sound verb with a kasra on the middle root letter in the past tense and a fatha in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "فَهِمْتُ",
+          "transliteration": "fahimtu",
+          "english": "I understood"
+        },
+        {
+          "person": "enta",
+          "arabic": "فَهِمْتَ",
+          "transliteration": "fahimta",
+          "english": "you (m) understood"
+        },
+        {
+          "person": "enti",
+          "arabic": "فَهِمْتِ",
+          "transliteration": "fahimti",
+          "english": "you (f) understood"
+        },
+        {
+          "person": "howa",
+          "arabic": "فَهِمَ",
+          "transliteration": "fahima",
+          "english": "he understood"
+        },
+        {
+          "person": "heya",
+          "arabic": "فَهِمَتْ",
+          "transliteration": "fahimat",
+          "english": "she understood"
+        },
+        {
+          "person": "ehna",
+          "arabic": "فَهِمْنَا",
+          "transliteration": "fahimna",
+          "english": "we understood"
+        },
+        {
+          "person": "entu",
+          "arabic": "فَهِمْتُمْ",
+          "transliteration": "fahimtum",
+          "english": "you (pl) understood"
+        },
+        {
+          "person": "homma",
+          "arabic": "فَهِمُوا",
+          "transliteration": "fahimu",
+          "english": "they understood"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا فَهِمْتُ",
+          "transliteration": "ma fahimtu",
+          "english": "I didn't understand"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا فَهِمْتَ",
+          "transliteration": "ma fahimta",
+          "english": "you (m) didn't understand"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا فَهِمْتِ",
+          "transliteration": "ma fahimti",
+          "english": "you (f) didn't understand"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا فَهِمَ",
+          "transliteration": "ma fahima",
+          "english": "he didn't understand"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا فَهِمَتْ",
+          "transliteration": "ma fahimat",
+          "english": "she didn't understand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا فَهِمْنَا",
+          "transliteration": "ma fahimna",
+          "english": "we didn't understand"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا فَهِمْتُمْ",
+          "transliteration": "ma fahimtum",
+          "english": "you (pl) didn't understand"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا فَهِمُوا",
+          "transliteration": "ma fahimu",
+          "english": "they didn't understand"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَفْهَمُ",
+          "transliteration": "afhamu",
+          "english": "I understand"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَفْهَمُ",
+          "transliteration": "tafhamu",
+          "english": "you (m) understand"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَفْهَمِينَ",
+          "transliteration": "tafhamina",
+          "english": "you (f) understand"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَفْهَمُ",
+          "transliteration": "yafhamu",
+          "english": "he understands"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَفْهَمُ",
+          "transliteration": "tafhamu",
+          "english": "she understands"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَفْهَمُ",
+          "transliteration": "nafhamu",
+          "english": "we understand"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَفْهَمُونَ",
+          "transliteration": "tafhamuna",
+          "english": "you (pl) understand"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَفْهَمُونَ",
+          "transliteration": "yafhamuna",
+          "english": "they understand"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَفْهَمُ",
+          "transliteration": "la afhamu",
+          "english": "I don't understand"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَفْهَمُ",
+          "transliteration": "la tafhamu",
+          "english": "you (m) don't understand"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَفْهَمِينَ",
+          "transliteration": "la tafhamina",
+          "english": "you (f) don't understand"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَفْهَمُ",
+          "transliteration": "la yafhamu",
+          "english": "he doesn't understand"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَفْهَمُ",
+          "transliteration": "la tafhamu",
+          "english": "she doesn't understand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَفْهَمُ",
+          "transliteration": "la nafhamu",
+          "english": "we don't understand"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَفْهَمُونَ",
+          "transliteration": "la tafhamuna",
+          "english": "you (pl) don't understand"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَفْهَمُونَ",
+          "transliteration": "la yafhamuna",
+          "english": "they don't understand"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَفْهَمُ",
+          "transliteration": "sa2afhamu",
+          "english": "I will understand"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَفْهَمُ",
+          "transliteration": "satafhamu",
+          "english": "you (m) will understand"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَفْهَمِينَ",
+          "transliteration": "satafhamina",
+          "english": "you (f) will understand"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَفْهَمُ",
+          "transliteration": "sayafhamu",
+          "english": "he will understand"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَفْهَمُ",
+          "transliteration": "satafhamu",
+          "english": "she will understand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَفْهَمُ",
+          "transliteration": "sanafhamu",
+          "english": "we will understand"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَفْهَمُونَ",
+          "transliteration": "satafhamuna",
+          "english": "you (pl) will understand"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَفْهَمُونَ",
+          "transliteration": "sayafhamuna",
+          "english": "they will understand"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَفْهَمَ",
+          "transliteration": "lan afhama",
+          "english": "I won't understand"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَفْهَمَ",
+          "transliteration": "lan tafhama",
+          "english": "you (m) won't understand"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَفْهَمِي",
+          "transliteration": "lan tafhami",
+          "english": "you (f) won't understand"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَفْهَمَ",
+          "transliteration": "lan yafhama",
+          "english": "he won't understand"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَفْهَمَ",
+          "transliteration": "lan tafhama",
+          "english": "she won't understand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَفْهَمَ",
+          "transliteration": "lan nafhama",
+          "english": "we won't understand"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَفْهَمُوا",
+          "transliteration": "lan tafhamu",
+          "english": "you (pl) won't understand"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَفْهَمُوا",
+          "transliteration": "lan yafhamu",
+          "english": "they won't understand"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

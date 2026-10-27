@@ -1,0 +1,320 @@
+{
+  "slug": "kallim",
+  "arabic": "دق",
+  "transliteration": "dagg",
+  "english": "to call (on the phone)",
+  "wordId": null,
+  "rootLetters": "د ق ق",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb. In Gulf Arabic, 'دق' (dagg) is the most common everyday word for 'to call (on the phone)', often followed by the preposition على (3ala) to indicate who is being called.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "دقيت",
+          "transliteration": "daggeyt",
+          "english": "I called"
+        },
+        {
+          "person": "enta",
+          "arabic": "دقيت",
+          "transliteration": "daggeyt",
+          "english": "you (m) called"
+        },
+        {
+          "person": "enti",
+          "arabic": "دقيتي",
+          "transliteration": "daggeyti",
+          "english": "you (f) called"
+        },
+        {
+          "person": "howa",
+          "arabic": "دق",
+          "transliteration": "dagg",
+          "english": "he called"
+        },
+        {
+          "person": "heya",
+          "arabic": "دقت",
+          "transliteration": "daggat",
+          "english": "she called"
+        },
+        {
+          "person": "ehna",
+          "arabic": "دقينا",
+          "transliteration": "daggeyna",
+          "english": "we called"
+        },
+        {
+          "person": "entu",
+          "arabic": "دقيتوا",
+          "transliteration": "daggeytaw",
+          "english": "you (pl) called"
+        },
+        {
+          "person": "homma",
+          "arabic": "دقوا",
+          "transliteration": "daggaw",
+          "english": "they called"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما دقيت",
+          "transliteration": "ma daggeyt",
+          "english": "I didn't call"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما دقيت",
+          "transliteration": "ma daggeyt",
+          "english": "you (m) didn't call"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما دقيتي",
+          "transliteration": "ma daggeyti",
+          "english": "you (f) didn't call"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما دق",
+          "transliteration": "ma dagg",
+          "english": "he didn't call"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما دقت",
+          "transliteration": "ma daggat",
+          "english": "she didn't call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما دقينا",
+          "transliteration": "ma daggeyna",
+          "english": "we didn't call"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما دقيتوا",
+          "transliteration": "ma daggeytaw",
+          "english": "you (pl) didn't call"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما دقوا",
+          "transliteration": "ma daggaw",
+          "english": "they didn't call"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ادق",
+          "transliteration": "adigg",
+          "english": "I call"
+        },
+        {
+          "person": "enta",
+          "arabic": "تدق",
+          "transliteration": "tdigg",
+          "english": "you (m) call"
+        },
+        {
+          "person": "enti",
+          "arabic": "تدقين",
+          "transliteration": "tdiggeen",
+          "english": "you (f) call"
+        },
+        {
+          "person": "howa",
+          "arabic": "يدق",
+          "transliteration": "ydigg",
+          "english": "he calls"
+        },
+        {
+          "person": "heya",
+          "arabic": "تدق",
+          "transliteration": "tdigg",
+          "english": "she calls"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ندق",
+          "transliteration": "ndigg",
+          "english": "we call"
+        },
+        {
+          "person": "entu",
+          "arabic": "تدقون",
+          "transliteration": "tdiggoon",
+          "english": "you (pl) call"
+        },
+        {
+          "person": "homma",
+          "arabic": "يدقون",
+          "transliteration": "ydiggoon",
+          "english": "they call"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ادق",
+          "transliteration": "ma adigg",
+          "english": "I don't call"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تدق",
+          "transliteration": "ma tdigg",
+          "english": "you (m) don't call"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تدقين",
+          "transliteration": "ma tdiggeen",
+          "english": "you (f) don't call"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يدق",
+          "transliteration": "ma ydigg",
+          "english": "he doesn't call"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تدق",
+          "transliteration": "ma tdigg",
+          "english": "she doesn't call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ندق",
+          "transliteration": "ma ndigg",
+          "english": "we don't call"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تدقون",
+          "transliteration": "ma tdiggoon",
+          "english": "you (pl) don't call"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يدقون",
+          "transliteration": "ma ydiggoon",
+          "english": "they don't call"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بدق",
+          "transliteration": "badigg",
+          "english": "I will call"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتدق",
+          "transliteration": "bitdigg",
+          "english": "you (m) will call"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتدقين",
+          "transliteration": "bitdiggeen",
+          "english": "you (f) will call"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيدق",
+          "transliteration": "biydigg",
+          "english": "he will call"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتدق",
+          "transliteration": "bitdigg",
+          "english": "she will call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بندق",
+          "transliteration": "bindigg",
+          "english": "we will call"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتدقون",
+          "transliteration": "bitdiggoon",
+          "english": "you (pl) will call"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيدقون",
+          "transliteration": "biydiggoon",
+          "english": "they will call"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بدق",
+          "transliteration": "ma badigg",
+          "english": "I won't call"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتدق",
+          "transliteration": "ma bitdigg",
+          "english": "you (m) won't call"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتدقين",
+          "transliteration": "ma bitdiggeen",
+          "english": "you (f) won't call"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيدق",
+          "transliteration": "ma biydigg",
+          "english": "he won't call"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتدق",
+          "transliteration": "ma bitdigg",
+          "english": "she won't call"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بندق",
+          "transliteration": "ma bindigg",
+          "english": "we won't call"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتدقون",
+          "transliteration": "ma bitdiggoon",
+          "english": "you (pl) won't call"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيدقون",
+          "transliteration": "ma biydiggoon",
+          "english": "they won't call"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

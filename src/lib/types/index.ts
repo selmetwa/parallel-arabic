@@ -125,6 +125,8 @@ export interface VerbConjugationData {
   english: string;
   rootLetters: string;
   verbClass: VerbClass;
+  /** Derived-form pattern (I–X, Q), merged in from verb-conjugations/forms.json. */
+  form?: string;
   notes: string;
   conjugations: {
     past: {

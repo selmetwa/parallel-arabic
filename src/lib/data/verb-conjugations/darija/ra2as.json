@@ -1,0 +1,320 @@
+{
+  "slug": "ra2as",
+  "arabic": "شطح",
+  "transliteration": "shte7",
+  "english": "to dance",
+  "wordId": null,
+  "rootLetters": "ش ط ح",
+  "verbClass": "sound",
+  "notes": "Regular Form I sound verb. Note the typical Moroccan Darija vowel shift when a vowel suffix is added (e.g., 'shte7' becomes 'shet7at' for 'she danced').",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شطحت",
+          "transliteration": "shte7t",
+          "english": "I danced"
+        },
+        {
+          "person": "enta",
+          "arabic": "شطحتي",
+          "transliteration": "shte7ti",
+          "english": "you (m) danced"
+        },
+        {
+          "person": "enti",
+          "arabic": "شطحتي",
+          "transliteration": "shte7ti",
+          "english": "you (f) danced"
+        },
+        {
+          "person": "howa",
+          "arabic": "شطح",
+          "transliteration": "shte7",
+          "english": "he danced"
+        },
+        {
+          "person": "heya",
+          "arabic": "شطحات",
+          "transliteration": "shet7at",
+          "english": "she danced"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شطحنا",
+          "transliteration": "shte7na",
+          "english": "we danced"
+        },
+        {
+          "person": "entu",
+          "arabic": "شطحتيو",
+          "transliteration": "shte7tiw",
+          "english": "you (pl) danced"
+        },
+        {
+          "person": "homma",
+          "arabic": "شطحو",
+          "transliteration": "shet7u",
+          "english": "they danced"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما شطحتش",
+          "transliteration": "ma shte7tsh",
+          "english": "I didn't dance"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما شطحتيش",
+          "transliteration": "ma shte7tish",
+          "english": "you (m) didn't dance"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما شطحتيش",
+          "transliteration": "ma shte7tish",
+          "english": "you (f) didn't dance"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما شطحش",
+          "transliteration": "ma shte7sh",
+          "english": "he didn't dance"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما شطحاتش",
+          "transliteration": "ma shet7atsh",
+          "english": "she didn't dance"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما شطحناش",
+          "transliteration": "ma shte7nash",
+          "english": "we didn't dance"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما شطحتيوش",
+          "transliteration": "ma shte7tiwsh",
+          "english": "you (pl) didn't dance"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما شطحوش",
+          "transliteration": "ma shet7ush",
+          "english": "they didn't dance"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنشطح",
+          "transliteration": "kanshte7",
+          "english": "I dance"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتشطح",
+          "transliteration": "katshte7",
+          "english": "you (m) dance"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتشطحي",
+          "transliteration": "katshet7i",
+          "english": "you (f) dance"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيشطح",
+          "transliteration": "kayshte7",
+          "english": "he dances"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتشطح",
+          "transliteration": "katshte7",
+          "english": "she dances"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنشطحو",
+          "transliteration": "kanshet7u",
+          "english": "we dance"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتشطحو",
+          "transliteration": "katshet7u",
+          "english": "you (pl) dance"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيشطحو",
+          "transliteration": "kayshet7u",
+          "english": "they dance"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنشطحش",
+          "transliteration": "ma kanshte7sh",
+          "english": "I don't dance"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتشطحش",
+          "transliteration": "ma katshte7sh",
+          "english": "you (m) don't dance"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتشطحيش",
+          "transliteration": "ma katshet7ish",
+          "english": "you (f) don't dance"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيشطحش",
+          "transliteration": "ma kayshte7sh",
+          "english": "he doesn't dance"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتشطحش",
+          "transliteration": "ma katshte7sh",
+          "english": "she doesn't dance"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنشطحوش",
+          "transliteration": "ma kanshet7ush",
+          "english": "we don't dance"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتشطحوش",
+          "transliteration": "ma katshet7ush",
+          "english": "you (pl) don't dance"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيشطحوش",
+          "transliteration": "ma kayshet7ush",
+          "english": "they don't dance"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نشطح",
+          "transliteration": "ghadi nshte7",
+          "english": "I will dance"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تشطح",
+          "transliteration": "ghadi tshte7",
+          "english": "you (m) will dance"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تشطحي",
+          "transliteration": "ghadi tshet7i",
+          "english": "you (f) will dance"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يشطح",
+          "transliteration": "ghadi yshte7",
+          "english": "he will dance"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تشطح",
+          "transliteration": "ghadi tshte7",
+          "english": "she will dance"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نشطحو",
+          "transliteration": "ghadi nshet7u",
+          "english": "we will dance"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تشطحو",
+          "transliteration": "ghadi tshet7u",
+          "english": "you (pl) will dance"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يشطحو",
+          "transliteration": "ghadi yshet7u",
+          "english": "they will dance"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نشطح",
+          "transliteration": "ma ghadish nshte7",
+          "english": "I won't dance"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تشطح",
+          "transliteration": "ma ghadish tshte7",
+          "english": "you (m) won't dance"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تشطحي",
+          "transliteration": "ma ghadish tshet7i",
+          "english": "you (f) won't dance"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يشطح",
+          "transliteration": "ma ghadish yshte7",
+          "english": "he won't dance"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تشطح",
+          "transliteration": "ma ghadish tshte7",
+          "english": "she won't dance"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نشطحو",
+          "transliteration": "ma ghadish nshet7u",
+          "english": "we won't dance"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تشطحو",
+          "transliteration": "ma ghadish tshet7u",
+          "english": "you (pl) won't dance"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يشطحو",
+          "transliteration": "ma ghadish yshet7u",
+          "english": "they won't dance"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

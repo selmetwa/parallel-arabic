@@ -1,0 +1,320 @@
+{
+  "slug": "khalla",
+  "arabic": "خلى",
+  "transliteration": "khalla",
+  "english": "to let",
+  "wordId": null,
+  "rootLetters": "خ ل ي",
+  "verbClass": "defective",
+  "notes": "Form II verb ending in a vowel; also means \"to leave (something somewhere)\".",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خليت",
+          "transliteration": "khalleit",
+          "english": "I let"
+        },
+        {
+          "person": "enta",
+          "arabic": "خليت",
+          "transliteration": "khalleit",
+          "english": "you (m) let"
+        },
+        {
+          "person": "enti",
+          "arabic": "خليتي",
+          "transliteration": "khalleiti",
+          "english": "you (f) let"
+        },
+        {
+          "person": "howa",
+          "arabic": "خلى",
+          "transliteration": "khalla",
+          "english": "he let"
+        },
+        {
+          "person": "heya",
+          "arabic": "خلت",
+          "transliteration": "khallat",
+          "english": "she let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خلينا",
+          "transliteration": "khalleina",
+          "english": "we let"
+        },
+        {
+          "person": "entu",
+          "arabic": "خليتوا",
+          "transliteration": "khalleitu",
+          "english": "you (pl) let"
+        },
+        {
+          "person": "homma",
+          "arabic": "خلوا",
+          "transliteration": "khallaw",
+          "english": "they let"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خليت",
+          "transliteration": "ma khalleit",
+          "english": "I didn't let"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خليت",
+          "transliteration": "ma khalleit",
+          "english": "you (m) didn't let"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خليتي",
+          "transliteration": "ma khalleiti",
+          "english": "you (f) didn't let"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خلى",
+          "transliteration": "ma khalla",
+          "english": "he didn't let"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خلت",
+          "transliteration": "ma khallat",
+          "english": "she didn't let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خلينا",
+          "transliteration": "ma khalleina",
+          "english": "we didn't let"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خليتوا",
+          "transliteration": "ma khalleitu",
+          "english": "you (pl) didn't let"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خلوا",
+          "transliteration": "ma khallaw",
+          "english": "they didn't let"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اخلي",
+          "transliteration": "akhalli",
+          "english": "I let"
+        },
+        {
+          "person": "enta",
+          "arabic": "تخلي",
+          "transliteration": "tkhalli",
+          "english": "you (m) let"
+        },
+        {
+          "person": "enti",
+          "arabic": "تخلين",
+          "transliteration": "tkhalleen",
+          "english": "you (f) let"
+        },
+        {
+          "person": "howa",
+          "arabic": "يخلي",
+          "transliteration": "ykhalli",
+          "english": "he lets"
+        },
+        {
+          "person": "heya",
+          "arabic": "تخلي",
+          "transliteration": "tkhalli",
+          "english": "she lets"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نخلي",
+          "transliteration": "nkhalli",
+          "english": "we let"
+        },
+        {
+          "person": "entu",
+          "arabic": "تخلون",
+          "transliteration": "tkhalloon",
+          "english": "you (pl) let"
+        },
+        {
+          "person": "homma",
+          "arabic": "يخلون",
+          "transliteration": "ykhalloon",
+          "english": "they let"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اخلي",
+          "transliteration": "ma akhalli",
+          "english": "I don't let"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تخلي",
+          "transliteration": "ma tkhalli",
+          "english": "you (m) don't let"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تخلين",
+          "transliteration": "ma tkhalleen",
+          "english": "you (f) don't let"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يخلي",
+          "transliteration": "ma ykhalli",
+          "english": "he doesn't let"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تخلي",
+          "transliteration": "ma tkhalli",
+          "english": "she doesn't let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نخلي",
+          "transliteration": "ma nkhalli",
+          "english": "we don't let"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تخلون",
+          "transliteration": "ma tkhalloon",
+          "english": "you (pl) don't let"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يخلون",
+          "transliteration": "ma ykhalloon",
+          "english": "they don't let"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اخلي",
+          "transliteration": "raa7 akhalli",
+          "english": "I will let"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تخلي",
+          "transliteration": "raa7 tkhalli",
+          "english": "you (m) will let"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تخلين",
+          "transliteration": "raa7 tkhalleen",
+          "english": "you (f) will let"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يخلي",
+          "transliteration": "raa7 ykhalli",
+          "english": "he will let"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تخلي",
+          "transliteration": "raa7 tkhalli",
+          "english": "she will let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نخلي",
+          "transliteration": "raa7 nkhalli",
+          "english": "we will let"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تخلون",
+          "transliteration": "raa7 tkhalloon",
+          "english": "you (pl) will let"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يخلون",
+          "transliteration": "raa7 ykhalloon",
+          "english": "they will let"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اخلي",
+          "transliteration": "ma raa7 akhalli",
+          "english": "I won't let"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تخلي",
+          "transliteration": "ma raa7 tkhalli",
+          "english": "you (m) won't let"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تخلين",
+          "transliteration": "ma raa7 tkhalleen",
+          "english": "you (f) won't let"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يخلي",
+          "transliteration": "ma raa7 ykhalli",
+          "english": "he won't let"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تخلي",
+          "transliteration": "ma raa7 tkhalli",
+          "english": "she won't let"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نخلي",
+          "transliteration": "ma raa7 nkhalli",
+          "english": "we won't let"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تخلون",
+          "transliteration": "ma raa7 tkhalloon",
+          "english": "you (pl) won't let"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يخلون",
+          "transliteration": "ma raa7 ykhalloon",
+          "english": "they won't let"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "zaakir",
+  "arabic": "درس",
+  "transliteration": "daras",
+  "english": "to study",
+  "wordId": null,
+  "rootLetters": "د ر س",
+  "verbClass": "sound",
+  "notes": "A regular Form I sound verb, very common in everyday Levantine speech.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "درست",
+          "transliteration": "darast",
+          "english": "I studied"
+        },
+        {
+          "person": "enta",
+          "arabic": "درست",
+          "transliteration": "darast",
+          "english": "you (m) studied"
+        },
+        {
+          "person": "enti",
+          "arabic": "درستي",
+          "transliteration": "darasti",
+          "english": "you (f) studied"
+        },
+        {
+          "person": "howa",
+          "arabic": "درس",
+          "transliteration": "daras",
+          "english": "he studied"
+        },
+        {
+          "person": "heya",
+          "arabic": "درست",
+          "transliteration": "darasit",
+          "english": "she studied"
+        },
+        {
+          "person": "ehna",
+          "arabic": "درسنا",
+          "transliteration": "darasna",
+          "english": "we studied"
+        },
+        {
+          "person": "entu",
+          "arabic": "درستوا",
+          "transliteration": "darastu",
+          "english": "you (pl) studied"
+        },
+        {
+          "person": "homma",
+          "arabic": "درسوا",
+          "transliteration": "darasu",
+          "english": "they studied"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما درست",
+          "transliteration": "ma darast",
+          "english": "I didn't study"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما درست",
+          "transliteration": "ma darast",
+          "english": "you (m) didn't study"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما درستي",
+          "transliteration": "ma darasti",
+          "english": "you (f) didn't study"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما درس",
+          "transliteration": "ma daras",
+          "english": "he didn't study"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما درست",
+          "transliteration": "ma darasit",
+          "english": "she didn't study"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما درسنا",
+          "transliteration": "ma darasna",
+          "english": "we didn't study"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما درستوا",
+          "transliteration": "ma darastu",
+          "english": "you (pl) didn't study"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما درسوا",
+          "transliteration": "ma darasu",
+          "english": "they didn't study"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بدرس",
+          "transliteration": "bidros",
+          "english": "I study"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتدرس",
+          "transliteration": "btidros",
+          "english": "you (m) study"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتدرسي",
+          "transliteration": "btidrsi",
+          "english": "you (f) study"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيدرس",
+          "transliteration": "byidros",
+          "english": "he studies"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتدرس",
+          "transliteration": "btidros",
+          "english": "she studies"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مندرس",
+          "transliteration": "mnidros",
+          "english": "we study"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتدرسوا",
+          "transliteration": "btidrsu",
+          "english": "you (pl) study"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيدرسوا",
+          "transliteration": "byidrsu",
+          "english": "they study"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بدرس",
+          "transliteration": "ma bidros",
+          "english": "I don't study"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتدرس",
+          "transliteration": "ma btidros",
+          "english": "you (m) don't study"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتدرسي",
+          "transliteration": "ma btidrsi",
+          "english": "you (f) don't study"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيدرس",
+          "transliteration": "ma byidros",
+          "english": "he doesn't study"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتدرس",
+          "transliteration": "ma btidros",
+          "english": "she doesn't study"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما مندرس",
+          "transliteration": "ma mnidros",
+          "english": "we don't study"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتدرسوا",
+          "transliteration": "ma btidrsu",
+          "english": "you (pl) don't study"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيدرسوا",
+          "transliteration": "ma byidrsu",
+          "english": "they don't study"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح ادرس",
+          "transliteration": "ra7 idros",
+          "english": "I will study"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تدرس",
+          "transliteration": "ra7 tidros",
+          "english": "you (m) will study"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تدرسي",
+          "transliteration": "ra7 tidrsi",
+          "english": "you (f) will study"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يدرس",
+          "transliteration": "ra7 yidros",
+          "english": "he will study"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تدرس",
+          "transliteration": "ra7 tidros",
+          "english": "she will study"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح ندرس",
+          "transliteration": "ra7 nidros",
+          "english": "we will study"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تدرسوا",
+          "transliteration": "ra7 tidrsu",
+          "english": "you (pl) will study"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يدرسوا",
+          "transliteration": "ra7 yidrsu",
+          "english": "they will study"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح ادرس",
+          "transliteration": "ma ra7 idros",
+          "english": "I won't study"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تدرس",
+          "transliteration": "ma ra7 tidros",
+          "english": "you (m) won't study"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تدرسي",
+          "transliteration": "ma ra7 tidrsi",
+          "english": "you (f) won't study"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يدرس",
+          "transliteration": "ma ra7 yidros",
+          "english": "he won't study"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تدرس",
+          "transliteration": "ma ra7 tidros",
+          "english": "she won't study"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح ندرس",
+          "transliteration": "ma ra7 nidros",
+          "english": "we won't study"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تدرسوا",
+          "transliteration": "ma ra7 tidrsu",
+          "english": "you (pl) won't study"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يدرسوا",
+          "transliteration": "ma ra7 yidrsu",
+          "english": "they won't study"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

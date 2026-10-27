@@ -1,0 +1,320 @@
+{
+  "slug": "maat",
+  "arabic": "مَاتَ",
+  "transliteration": "mata",
+  "english": "to die",
+  "wordId": null,
+  "rootLetters": "م و ت",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a middle waw. The past stem vowel is 'u' (muttu), though 'i' (mittu) is also widely accepted and common.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "مُتُّ",
+          "transliteration": "muttu",
+          "english": "I died"
+        },
+        {
+          "person": "enta",
+          "arabic": "مُتَّ",
+          "transliteration": "mutta",
+          "english": "you (m) died"
+        },
+        {
+          "person": "enti",
+          "arabic": "مُتِّ",
+          "transliteration": "mutti",
+          "english": "you (f) died"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَاتَ",
+          "transliteration": "mata",
+          "english": "he died"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَاتَتْ",
+          "transliteration": "matat",
+          "english": "she died"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مُتْنَا",
+          "transliteration": "mutna",
+          "english": "we died"
+        },
+        {
+          "person": "entu",
+          "arabic": "مُتُّمْ",
+          "transliteration": "muttum",
+          "english": "you (pl) died"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَاتُوا",
+          "transliteration": "matu",
+          "english": "they died"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا مُتُّ",
+          "transliteration": "ma muttu",
+          "english": "I didn't die"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا مُتَّ",
+          "transliteration": "ma mutta",
+          "english": "you (m) didn't die"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا مُتِّ",
+          "transliteration": "ma mutti",
+          "english": "you (f) didn't die"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا مَاتَ",
+          "transliteration": "ma mata",
+          "english": "he didn't die"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا مَاتَتْ",
+          "transliteration": "ma matat",
+          "english": "she didn't die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا مُتْنَا",
+          "transliteration": "ma mutna",
+          "english": "we didn't die"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا مُتُّمْ",
+          "transliteration": "ma muttum",
+          "english": "you (pl) didn't die"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا مَاتُوا",
+          "transliteration": "ma matu",
+          "english": "they didn't die"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَمُوتُ",
+          "transliteration": "amutu",
+          "english": "I die"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَمُوتُ",
+          "transliteration": "tamutu",
+          "english": "you (m) die"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَمُوتِينَ",
+          "transliteration": "tamutina",
+          "english": "you (f) die"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَمُوتُ",
+          "transliteration": "yamutu",
+          "english": "he dies"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَمُوتُ",
+          "transliteration": "tamutu",
+          "english": "she dies"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَمُوتُ",
+          "transliteration": "namutu",
+          "english": "we die"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَمُوتُونَ",
+          "transliteration": "tamutuna",
+          "english": "you (pl) die"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَمُوتُونَ",
+          "transliteration": "yamutuna",
+          "english": "they die"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَمُوتُ",
+          "transliteration": "la amutu",
+          "english": "I don't die"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَمُوتُ",
+          "transliteration": "la tamutu",
+          "english": "you (m) don't die"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَمُوتِينَ",
+          "transliteration": "la tamutina",
+          "english": "you (f) don't die"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَمُوتُ",
+          "transliteration": "la yamutu",
+          "english": "he doesn't die"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَمُوتُ",
+          "transliteration": "la tamutu",
+          "english": "she doesn't die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَمُوتُ",
+          "transliteration": "la namutu",
+          "english": "we don't die"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَمُوتُونَ",
+          "transliteration": "la tamutuna",
+          "english": "you (pl) don't die"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَمُوتُونَ",
+          "transliteration": "la yamutuna",
+          "english": "they don't die"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَمُوتُ",
+          "transliteration": "sa2amutu",
+          "english": "I will die"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَمُوتُ",
+          "transliteration": "satamutu",
+          "english": "you (m) will die"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَمُوتِينَ",
+          "transliteration": "satamutina",
+          "english": "you (f) will die"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَمُوتُ",
+          "transliteration": "sayamutu",
+          "english": "he will die"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَمُوتُ",
+          "transliteration": "satamutu",
+          "english": "she will die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَمُوتُ",
+          "transliteration": "sanamutu",
+          "english": "we will die"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَمُوتُونَ",
+          "transliteration": "satamutuna",
+          "english": "you (pl) will die"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَمُوتُونَ",
+          "transliteration": "sayamutuna",
+          "english": "they will die"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَمُوتَ",
+          "transliteration": "lan amuta",
+          "english": "I won't die"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَمُوتَ",
+          "transliteration": "lan tamuta",
+          "english": "you (m) won't die"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَمُوتِي",
+          "transliteration": "lan tamuti",
+          "english": "you (f) won't die"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَمُوتَ",
+          "transliteration": "lan yamuta",
+          "english": "he won't die"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَمُوتَ",
+          "transliteration": "lan tamuta",
+          "english": "she won't die"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَمُوتَ",
+          "transliteration": "lan namuta",
+          "english": "we won't die"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَمُوتُوا",
+          "transliteration": "lan tamutu",
+          "english": "you (pl) won't die"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَمُوتُوا",
+          "transliteration": "lan yamutu",
+          "english": "they won't die"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

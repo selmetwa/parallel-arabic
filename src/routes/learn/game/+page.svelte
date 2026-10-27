@@ -34,9 +34,11 @@
 	const target = untrack(() => data.targetDialect);
 	let dialect = $state<GameDialect>(initialDialect(null, target));
 	let chosen = $state(isGameDialect(target));
+	// A signed-in learner's dialect comes from the header switcher; the saved
+	// pick only stands in for visitors without one.
 	onMount(() => {
 		const saved = savedDialect();
-		if (saved) {
+		if (saved && !isGameDialect(target)) {
 			dialect = saved;
 			chosen = true;
 		}

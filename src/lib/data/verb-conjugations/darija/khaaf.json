@@ -1,0 +1,320 @@
+{
+  "slug": "khaaf",
+  "arabic": "خاف",
+  "transliteration": "khaf",
+  "english": "to fear",
+  "wordId": null,
+  "rootLetters": "خ و ف",
+  "verbClass": "hollow",
+  "notes": "Hollow verb: khft in the past, nkhaf in the present; khaf men means \"afraid of\".",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خفت",
+          "transliteration": "khft",
+          "english": "I feared"
+        },
+        {
+          "person": "enta",
+          "arabic": "خفتي",
+          "transliteration": "khfti",
+          "english": "you (m) feared"
+        },
+        {
+          "person": "enti",
+          "arabic": "خفتي",
+          "transliteration": "khfti",
+          "english": "you (f) feared"
+        },
+        {
+          "person": "howa",
+          "arabic": "خاف",
+          "transliteration": "khaf",
+          "english": "he feared"
+        },
+        {
+          "person": "heya",
+          "arabic": "خافت",
+          "transliteration": "khafet",
+          "english": "she feared"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خفنا",
+          "transliteration": "khfna",
+          "english": "we feared"
+        },
+        {
+          "person": "entu",
+          "arabic": "خفتيو",
+          "transliteration": "khftiw",
+          "english": "you (pl) feared"
+        },
+        {
+          "person": "homma",
+          "arabic": "خافو",
+          "transliteration": "khafu",
+          "english": "they feared"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خفتش",
+          "transliteration": "ma khftsh",
+          "english": "I didn't fear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خفتيش",
+          "transliteration": "ma khftish",
+          "english": "you (m) didn't fear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خفتيش",
+          "transliteration": "ma khftish",
+          "english": "you (f) didn't fear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خافش",
+          "transliteration": "ma khafsh",
+          "english": "he didn't fear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خافتش",
+          "transliteration": "ma khafetsh",
+          "english": "she didn't fear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خفناش",
+          "transliteration": "ma khfnash",
+          "english": "we didn't fear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خفتيوش",
+          "transliteration": "ma khftiwsh",
+          "english": "you (pl) didn't fear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خافوش",
+          "transliteration": "ma khafush",
+          "english": "they didn't fear"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنخاف",
+          "transliteration": "kankhaf",
+          "english": "I fear"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتخاف",
+          "transliteration": "katkhaf",
+          "english": "you (m) fear"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتخافي",
+          "transliteration": "katkhafi",
+          "english": "you (f) fear"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيخاف",
+          "transliteration": "kaykhaf",
+          "english": "he fears"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتخاف",
+          "transliteration": "katkhaf",
+          "english": "she fears"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنخافو",
+          "transliteration": "kankhafu",
+          "english": "we fear"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتخافو",
+          "transliteration": "katkhafu",
+          "english": "you (pl) fear"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيخافو",
+          "transliteration": "kaykhafu",
+          "english": "they fear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنخافش",
+          "transliteration": "ma kankhafsh",
+          "english": "I don't fear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتخافش",
+          "transliteration": "ma katkhafsh",
+          "english": "you (m) don't fear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتخافيش",
+          "transliteration": "ma katkhafish",
+          "english": "you (f) don't fear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيخافش",
+          "transliteration": "ma kaykhafsh",
+          "english": "he doesn't fear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتخافش",
+          "transliteration": "ma katkhafsh",
+          "english": "she doesn't fear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنخافوش",
+          "transliteration": "ma kankhafush",
+          "english": "we don't fear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتخافوش",
+          "transliteration": "ma katkhafush",
+          "english": "you (pl) don't fear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيخافوش",
+          "transliteration": "ma kaykhafush",
+          "english": "they don't fear"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نخاف",
+          "transliteration": "ghadi nkhaf",
+          "english": "I will fear"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تخاف",
+          "transliteration": "ghadi tkhaf",
+          "english": "you (m) will fear"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تخافي",
+          "transliteration": "ghadi tkhafi",
+          "english": "you (f) will fear"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يخاف",
+          "transliteration": "ghadi ykhaf",
+          "english": "he will fear"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تخاف",
+          "transliteration": "ghadi tkhaf",
+          "english": "she will fear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نخافو",
+          "transliteration": "ghadi nkhafu",
+          "english": "we will fear"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تخافو",
+          "transliteration": "ghadi tkhafu",
+          "english": "you (pl) will fear"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يخافو",
+          "transliteration": "ghadi ykhafu",
+          "english": "they will fear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نخاف",
+          "transliteration": "ma ghadish nkhaf",
+          "english": "I won't fear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تخاف",
+          "transliteration": "ma ghadish tkhaf",
+          "english": "you (m) won't fear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تخافي",
+          "transliteration": "ma ghadish tkhafi",
+          "english": "you (f) won't fear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يخاف",
+          "transliteration": "ma ghadish ykhaf",
+          "english": "he won't fear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تخاف",
+          "transliteration": "ma ghadish tkhaf",
+          "english": "she won't fear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نخافو",
+          "transliteration": "ma ghadish nkhafu",
+          "english": "we won't fear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تخافو",
+          "transliteration": "ma ghadish tkhafu",
+          "english": "you (pl) won't fear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يخافو",
+          "transliteration": "ma ghadish ykhafu",
+          "english": "they won't fear"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

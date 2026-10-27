@@ -1,0 +1,320 @@
+{
+  "slug": "mishi",
+  "arabic": "مشي",
+  "transliteration": "mishi",
+  "english": "to walk",
+  "wordId": null,
+  "rootLetters": "م ش ي",
+  "verbClass": "defective",
+  "notes": "This is a Form I defective verb. Because the root ends in a vowel, the 'you (m)' and 'you (f)' forms are identical in the present and future tenses.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "مشيت",
+          "transliteration": "mshit",
+          "english": "I walked"
+        },
+        {
+          "person": "enta",
+          "arabic": "مشيت",
+          "transliteration": "mshit",
+          "english": "you (m) walked"
+        },
+        {
+          "person": "enti",
+          "arabic": "مشيتي",
+          "transliteration": "mshiti",
+          "english": "you (f) walked"
+        },
+        {
+          "person": "howa",
+          "arabic": "مشي",
+          "transliteration": "mishi",
+          "english": "he walked"
+        },
+        {
+          "person": "heya",
+          "arabic": "مشيت",
+          "transliteration": "mishyet",
+          "english": "she walked"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مشينا",
+          "transliteration": "mshina",
+          "english": "we walked"
+        },
+        {
+          "person": "entu",
+          "arabic": "مشيتوا",
+          "transliteration": "mshitu",
+          "english": "you (pl) walked"
+        },
+        {
+          "person": "homma",
+          "arabic": "مشوا",
+          "transliteration": "mishu",
+          "english": "they walked"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما مشيت",
+          "transliteration": "ma mshit",
+          "english": "I didn't walk"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما مشيت",
+          "transliteration": "ma mshit",
+          "english": "you (m) didn't walk"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما مشيتي",
+          "transliteration": "ma mshiti",
+          "english": "you (f) didn't walk"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما مشي",
+          "transliteration": "ma mishi",
+          "english": "he didn't walk"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما مشيت",
+          "transliteration": "ma mishyet",
+          "english": "she didn't walk"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما مشينا",
+          "transliteration": "ma mshina",
+          "english": "we didn't walk"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما مشيتوا",
+          "transliteration": "ma mshitu",
+          "english": "you (pl) didn't walk"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما مشوا",
+          "transliteration": "ma mishu",
+          "english": "they didn't walk"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بمشي",
+          "transliteration": "bimshi",
+          "english": "I walk"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتمشي",
+          "transliteration": "btimshi",
+          "english": "you (m) walk"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتمشي",
+          "transliteration": "btimshi",
+          "english": "you (f) walk"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيمشي",
+          "transliteration": "byimshi",
+          "english": "he walks"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتمشي",
+          "transliteration": "btimshi",
+          "english": "she walks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منمشي",
+          "transliteration": "mnimshi",
+          "english": "we walk"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتمشوا",
+          "transliteration": "btimshu",
+          "english": "you (pl) walk"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيمشوا",
+          "transliteration": "byimshu",
+          "english": "they walk"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بمشي",
+          "transliteration": "ma bimshi",
+          "english": "I don't walk"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتمشي",
+          "transliteration": "ma btimshi",
+          "english": "you (m) don't walk"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتمشي",
+          "transliteration": "ma btimshi",
+          "english": "you (f) don't walk"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيمشي",
+          "transliteration": "ma byimshi",
+          "english": "he doesn't walk"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتمشي",
+          "transliteration": "ma btimshi",
+          "english": "she doesn't walk"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منمشي",
+          "transliteration": "ma mnimshi",
+          "english": "we don't walk"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتمشوا",
+          "transliteration": "ma btimshu",
+          "english": "you (pl) don't walk"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيمشوا",
+          "transliteration": "ma byimshu",
+          "english": "they don't walk"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح امشي",
+          "transliteration": "ra7 imshi",
+          "english": "I will walk"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تمشي",
+          "transliteration": "ra7 timshi",
+          "english": "you (m) will walk"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تمشي",
+          "transliteration": "ra7 timshi",
+          "english": "you (f) will walk"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يمشي",
+          "transliteration": "ra7 yimshi",
+          "english": "he will walk"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تمشي",
+          "transliteration": "ra7 timshi",
+          "english": "she will walk"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نمشي",
+          "transliteration": "ra7 nimshi",
+          "english": "we will walk"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تمشوا",
+          "transliteration": "ra7 timshu",
+          "english": "you (pl) will walk"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يمشوا",
+          "transliteration": "ra7 yimshu",
+          "english": "they will walk"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح امشي",
+          "transliteration": "ma ra7 imshi",
+          "english": "I won't walk"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تمشي",
+          "transliteration": "ma ra7 timshi",
+          "english": "you (m) won't walk"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تمشي",
+          "transliteration": "ma ra7 timshi",
+          "english": "you (f) won't walk"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يمشي",
+          "transliteration": "ma ra7 yimshi",
+          "english": "he won't walk"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تمشي",
+          "transliteration": "ma ra7 timshi",
+          "english": "she won't walk"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نمشي",
+          "transliteration": "ma ra7 nimshi",
+          "english": "we won't walk"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تمشوا",
+          "transliteration": "ma ra7 timshu",
+          "english": "you (pl) won't walk"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يمشوا",
+          "transliteration": "ma ra7 yimshu",
+          "english": "they won't walk"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

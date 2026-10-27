@@ -1,0 +1,320 @@
+{
+  "slug": "wisil",
+  "arabic": "وصل",
+  "transliteration": "wisel",
+  "english": "to arrive",
+  "wordId": null,
+  "rootLetters": "و ص ل",
+  "verbClass": "irregular",
+  "notes": "This is an assimilated (mithal) verb where the first root letter is waw (و), which changes to a 'u' sound in the present and future tenses in Levantine Arabic.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وصلت",
+          "transliteration": "wsilt",
+          "english": "I arrived"
+        },
+        {
+          "person": "enta",
+          "arabic": "وصلت",
+          "transliteration": "wsilt",
+          "english": "you (m) arrived"
+        },
+        {
+          "person": "enti",
+          "arabic": "وصلتي",
+          "transliteration": "wsilti",
+          "english": "you (f) arrived"
+        },
+        {
+          "person": "howa",
+          "arabic": "وصل",
+          "transliteration": "wisel",
+          "english": "he arrived"
+        },
+        {
+          "person": "heya",
+          "arabic": "وصلت",
+          "transliteration": "wislit",
+          "english": "she arrived"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وصلنا",
+          "transliteration": "wsilna",
+          "english": "we arrived"
+        },
+        {
+          "person": "entu",
+          "arabic": "وصلتوا",
+          "transliteration": "wsiltu",
+          "english": "you (pl) arrived"
+        },
+        {
+          "person": "homma",
+          "arabic": "وصلوا",
+          "transliteration": "wislu",
+          "english": "they arrived"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وصلت",
+          "transliteration": "ma wsilt",
+          "english": "I didn't arrive"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وصلت",
+          "transliteration": "ma wsilt",
+          "english": "you (m) didn't arrive"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وصلتي",
+          "transliteration": "ma wsilti",
+          "english": "you (f) didn't arrive"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وصل",
+          "transliteration": "ma wisel",
+          "english": "he didn't arrive"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وصلت",
+          "transliteration": "ma wislit",
+          "english": "she didn't arrive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وصلنا",
+          "transliteration": "ma wsilna",
+          "english": "we didn't arrive"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وصلتوا",
+          "transliteration": "ma wsiltu",
+          "english": "you (pl) didn't arrive"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وصلوا",
+          "transliteration": "ma wislu",
+          "english": "they didn't arrive"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بوصل",
+          "transliteration": "busal",
+          "english": "I arrive"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتوصل",
+          "transliteration": "btusal",
+          "english": "you (m) arrive"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتوصلي",
+          "transliteration": "btusli",
+          "english": "you (f) arrive"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيوصل",
+          "transliteration": "byusal",
+          "english": "he arrives"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتوصل",
+          "transliteration": "btusal",
+          "english": "she arrives"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منوصل",
+          "transliteration": "mnusal",
+          "english": "we arrive"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتوصلوا",
+          "transliteration": "btuslu",
+          "english": "you (pl) arrive"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيوصلوا",
+          "transliteration": "byuslu",
+          "english": "they arrive"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بوصل",
+          "transliteration": "ma busal",
+          "english": "I don't arrive"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتوصل",
+          "transliteration": "ma btusal",
+          "english": "you (m) don't arrive"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتوصلي",
+          "transliteration": "ma btusli",
+          "english": "you (f) don't arrive"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيوصل",
+          "transliteration": "ma byusal",
+          "english": "he doesn't arrive"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتوصل",
+          "transliteration": "ma btusal",
+          "english": "she doesn't arrive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منوصل",
+          "transliteration": "ma mnusal",
+          "english": "we don't arrive"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتوصلوا",
+          "transliteration": "ma btuslu",
+          "english": "you (pl) don't arrive"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيوصلوا",
+          "transliteration": "ma byuslu",
+          "english": "they don't arrive"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اوصل",
+          "transliteration": "ra7 usal",
+          "english": "I will arrive"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح توصل",
+          "transliteration": "ra7 tusal",
+          "english": "you (m) will arrive"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح توصلي",
+          "transliteration": "ra7 tusli",
+          "english": "you (f) will arrive"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يوصل",
+          "transliteration": "ra7 yusal",
+          "english": "he will arrive"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح توصل",
+          "transliteration": "ra7 tusal",
+          "english": "she will arrive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نوصل",
+          "transliteration": "ra7 nusal",
+          "english": "we will arrive"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح توصلوا",
+          "transliteration": "ra7 tuslu",
+          "english": "you (pl) will arrive"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يوصلوا",
+          "transliteration": "ra7 yuslu",
+          "english": "they will arrive"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اوصل",
+          "transliteration": "ma ra7 usal",
+          "english": "I won't arrive"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح توصل",
+          "transliteration": "ma ra7 tusal",
+          "english": "you (m) won't arrive"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح توصلي",
+          "transliteration": "ma ra7 tusli",
+          "english": "you (f) won't arrive"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يوصل",
+          "transliteration": "ma ra7 yusal",
+          "english": "he won't arrive"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح توصل",
+          "transliteration": "ma ra7 tusal",
+          "english": "she won't arrive"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نوصل",
+          "transliteration": "ma ra7 nusal",
+          "english": "we won't arrive"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح توصلوا",
+          "transliteration": "ma ra7 tuslu",
+          "english": "you (pl) won't arrive"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يوصلوا",
+          "transliteration": "ma ra7 yuslu",
+          "english": "they won't arrive"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

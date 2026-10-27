@@ -1,0 +1,320 @@
+{
+  "slug": "tili3",
+  "arabic": "صَعِدَ",
+  "transliteration": "sa3ida",
+  "english": "to go up",
+  "wordId": null,
+  "rootLetters": "ص ع د",
+  "verbClass": "sound",
+  "notes": "Form I sound verb with a kasra on the middle root letter in the past tense and a fatha in the present tense (fa'ila/yaf'alu pattern).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صَعِدْتُ",
+          "transliteration": "sa3idtu",
+          "english": "I went up"
+        },
+        {
+          "person": "enta",
+          "arabic": "صَعِدْتَ",
+          "transliteration": "sa3idta",
+          "english": "you (m) went up"
+        },
+        {
+          "person": "enti",
+          "arabic": "صَعِدْتِ",
+          "transliteration": "sa3idti",
+          "english": "you (f) went up"
+        },
+        {
+          "person": "howa",
+          "arabic": "صَعِدَ",
+          "transliteration": "sa3ida",
+          "english": "he went up"
+        },
+        {
+          "person": "heya",
+          "arabic": "صَعِدَتْ",
+          "transliteration": "sa3idat",
+          "english": "she went up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صَعِدْنَا",
+          "transliteration": "sa3idna",
+          "english": "we went up"
+        },
+        {
+          "person": "entu",
+          "arabic": "صَعِدْتُمْ",
+          "transliteration": "sa3idtum",
+          "english": "you (pl) went up"
+        },
+        {
+          "person": "homma",
+          "arabic": "صَعِدُوا",
+          "transliteration": "sa3idu",
+          "english": "they went up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا صَعِدْتُ",
+          "transliteration": "ma sa3idtu",
+          "english": "I didn't go up"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا صَعِدْتَ",
+          "transliteration": "ma sa3idta",
+          "english": "you (m) didn't go up"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا صَعِدْتِ",
+          "transliteration": "ma sa3idti",
+          "english": "you (f) didn't go up"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا صَعِدَ",
+          "transliteration": "ma sa3ida",
+          "english": "he didn't go up"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا صَعِدَتْ",
+          "transliteration": "ma sa3idat",
+          "english": "she didn't go up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا صَعِدْنَا",
+          "transliteration": "ma sa3idna",
+          "english": "we didn't go up"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا صَعِدْتُمْ",
+          "transliteration": "ma sa3idtum",
+          "english": "you (pl) didn't go up"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا صَعِدُوا",
+          "transliteration": "ma sa3idu",
+          "english": "they didn't go up"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَصْعَدُ",
+          "transliteration": "as3adu",
+          "english": "I go up"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَصْعَدُ",
+          "transliteration": "tas3adu",
+          "english": "you (m) go up"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَصْعَدِينَ",
+          "transliteration": "tas3adina",
+          "english": "you (f) go up"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَصْعَدُ",
+          "transliteration": "yas3adu",
+          "english": "he goes up"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَصْعَدُ",
+          "transliteration": "tas3adu",
+          "english": "she goes up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَصْعَدُ",
+          "transliteration": "nas3adu",
+          "english": "we go up"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَصْعَدُونَ",
+          "transliteration": "tas3aduna",
+          "english": "you (pl) go up"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَصْعَدُونَ",
+          "transliteration": "yas3aduna",
+          "english": "they go up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَصْعَدُ",
+          "transliteration": "la as3adu",
+          "english": "I don't go up"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَصْعَدُ",
+          "transliteration": "la tas3adu",
+          "english": "you (m) don't go up"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَصْعَدِينَ",
+          "transliteration": "la tas3adina",
+          "english": "you (f) don't go up"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَصْعَدُ",
+          "transliteration": "la yas3adu",
+          "english": "he doesn't go up"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَصْعَدُ",
+          "transliteration": "la tas3adu",
+          "english": "she doesn't go up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَصْعَدُ",
+          "transliteration": "la nas3adu",
+          "english": "we don't go up"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَصْعَدُونَ",
+          "transliteration": "la tas3aduna",
+          "english": "you (pl) don't go up"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَصْعَدُونَ",
+          "transliteration": "la yas3aduna",
+          "english": "they don't go up"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَصْعَدُ",
+          "transliteration": "sa2as3adu",
+          "english": "I will go up"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَصْعَدُ",
+          "transliteration": "satas3adu",
+          "english": "you (m) will go up"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَصْعَدِينَ",
+          "transliteration": "satas3adina",
+          "english": "you (f) will go up"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَصْعَدُ",
+          "transliteration": "sayas3adu",
+          "english": "he will go up"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَصْعَدُ",
+          "transliteration": "satas3adu",
+          "english": "she will go up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَصْعَدُ",
+          "transliteration": "sanas3adu",
+          "english": "we will go up"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَصْعَدُونَ",
+          "transliteration": "satas3aduna",
+          "english": "you (pl) will go up"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَصْعَدُونَ",
+          "transliteration": "sayas3aduna",
+          "english": "they will go up"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَصْعَدَ",
+          "transliteration": "lan as3ada",
+          "english": "I won't go up"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَصْعَدَ",
+          "transliteration": "lan tas3ada",
+          "english": "you (m) won't go up"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَصْعَدِي",
+          "transliteration": "lan tas3adi",
+          "english": "you (f) won't go up"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَصْعَدَ",
+          "transliteration": "lan yas3ada",
+          "english": "he won't go up"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَصْعَدَ",
+          "transliteration": "lan tas3ada",
+          "english": "she won't go up"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَصْعَدَ",
+          "transliteration": "lan nas3ada",
+          "english": "we won't go up"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَصْعَدُوا",
+          "transliteration": "lan tas3adu",
+          "english": "you (pl) won't go up"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَصْعَدُوا",
+          "transliteration": "lan yas3adu",
+          "english": "they won't go up"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

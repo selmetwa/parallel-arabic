@@ -1,0 +1,320 @@
+{
+  "slug": "hirib",
+  "arabic": "هرب",
+  "transliteration": "hreb",
+  "english": "to run away",
+  "wordId": null,
+  "rootLetters": "ه ر ب",
+  "verbClass": "sound",
+  "notes": "Regular verb; present nhreb.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هربت",
+          "transliteration": "hrebt",
+          "english": "I ran away"
+        },
+        {
+          "person": "enta",
+          "arabic": "هربتي",
+          "transliteration": "hrebti",
+          "english": "you (m) ran away"
+        },
+        {
+          "person": "enti",
+          "arabic": "هربتي",
+          "transliteration": "hrebti",
+          "english": "you (f) ran away"
+        },
+        {
+          "person": "howa",
+          "arabic": "هرب",
+          "transliteration": "hreb",
+          "english": "he ran away"
+        },
+        {
+          "person": "heya",
+          "arabic": "هربات",
+          "transliteration": "herbat",
+          "english": "she ran away"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هربنا",
+          "transliteration": "hrebna",
+          "english": "we ran away"
+        },
+        {
+          "person": "entu",
+          "arabic": "هربتيو",
+          "transliteration": "hrebtiw",
+          "english": "you (pl) ran away"
+        },
+        {
+          "person": "homma",
+          "arabic": "هربو",
+          "transliteration": "herbu",
+          "english": "they ran away"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما هربتش",
+          "transliteration": "ma hrebtsh",
+          "english": "I didn't run away"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما هربتيش",
+          "transliteration": "ma hrebtish",
+          "english": "you (m) didn't run away"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما هربتيش",
+          "transliteration": "ma hrebtish",
+          "english": "you (f) didn't run away"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما هربش",
+          "transliteration": "ma hrebsh",
+          "english": "he didn't run away"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما هرباتش",
+          "transliteration": "ma herbatsh",
+          "english": "she didn't run away"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما هربناش",
+          "transliteration": "ma hrebnash",
+          "english": "we didn't run away"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما هربتيوش",
+          "transliteration": "ma hrebtiwsh",
+          "english": "you (pl) didn't run away"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما هربوش",
+          "transliteration": "ma herbush",
+          "english": "they didn't run away"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنهرب",
+          "transliteration": "kanhreb",
+          "english": "I run away"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتهرب",
+          "transliteration": "kathreb",
+          "english": "you (m) run away"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتهربي",
+          "transliteration": "katherbi",
+          "english": "you (f) run away"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيهرب",
+          "transliteration": "kayhreb",
+          "english": "he runs away"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتهرب",
+          "transliteration": "kathreb",
+          "english": "she runs away"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنهربو",
+          "transliteration": "kanherbu",
+          "english": "we run away"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتهربو",
+          "transliteration": "katherbu",
+          "english": "you (pl) run away"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيهربو",
+          "transliteration": "kayherbu",
+          "english": "they run away"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنهربش",
+          "transliteration": "ma kanhrebsh",
+          "english": "I don't run away"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتهربش",
+          "transliteration": "ma kathrebsh",
+          "english": "you (m) don't run away"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتهربيش",
+          "transliteration": "ma katherbish",
+          "english": "you (f) don't run away"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيهربش",
+          "transliteration": "ma kayhrebsh",
+          "english": "he doesn't run away"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتهربش",
+          "transliteration": "ma kathrebsh",
+          "english": "she doesn't run away"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنهربوش",
+          "transliteration": "ma kanherbush",
+          "english": "we don't run away"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتهربوش",
+          "transliteration": "ma katherbush",
+          "english": "you (pl) don't run away"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيهربوش",
+          "transliteration": "ma kayherbush",
+          "english": "they don't run away"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نهرب",
+          "transliteration": "ghadi nhreb",
+          "english": "I will run away"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تهرب",
+          "transliteration": "ghadi threb",
+          "english": "you (m) will run away"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تهربي",
+          "transliteration": "ghadi therbi",
+          "english": "you (f) will run away"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يهرب",
+          "transliteration": "ghadi yhreb",
+          "english": "he will run away"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تهرب",
+          "transliteration": "ghadi threb",
+          "english": "she will run away"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نهربو",
+          "transliteration": "ghadi nherbu",
+          "english": "we will run away"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تهربو",
+          "transliteration": "ghadi therbu",
+          "english": "you (pl) will run away"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يهربو",
+          "transliteration": "ghadi yherbu",
+          "english": "they will run away"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نهرب",
+          "transliteration": "ma ghadish nhreb",
+          "english": "I won't run away"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تهرب",
+          "transliteration": "ma ghadish threb",
+          "english": "you (m) won't run away"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تهربي",
+          "transliteration": "ma ghadish therbi",
+          "english": "you (f) won't run away"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يهرب",
+          "transliteration": "ma ghadish yhreb",
+          "english": "he won't run away"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تهرب",
+          "transliteration": "ma ghadish threb",
+          "english": "she won't run away"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نهربو",
+          "transliteration": "ma ghadish nherbu",
+          "english": "we won't run away"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تهربو",
+          "transliteration": "ma ghadish therbu",
+          "english": "you (pl) won't run away"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يهربو",
+          "transliteration": "ma ghadish yherbu",
+          "english": "they won't run away"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

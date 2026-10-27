@@ -1,0 +1,320 @@
+{
+  "slug": "kisib",
+  "arabic": "ربح",
+  "transliteration": "rbe7",
+  "english": "to win",
+  "wordId": null,
+  "rootLetters": "ر ب ح",
+  "verbClass": "sound",
+  "notes": "Form I sound verb. Notice the vowel shift when a vowel-initial suffix is added to avoid a consonant cluster (e.g., 'rbe7' becomes 'reb7u' for 'they won').",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ربحت",
+          "transliteration": "rbe7t",
+          "english": "I won"
+        },
+        {
+          "person": "enta",
+          "arabic": "ربحتي",
+          "transliteration": "rbe7ti",
+          "english": "you (m) won"
+        },
+        {
+          "person": "enti",
+          "arabic": "ربحتي",
+          "transliteration": "rbe7ti",
+          "english": "you (f) won"
+        },
+        {
+          "person": "howa",
+          "arabic": "ربح",
+          "transliteration": "rbe7",
+          "english": "he won"
+        },
+        {
+          "person": "heya",
+          "arabic": "ربحات",
+          "transliteration": "reb7at",
+          "english": "she won"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ربحنا",
+          "transliteration": "rbe7na",
+          "english": "we won"
+        },
+        {
+          "person": "entu",
+          "arabic": "ربحتيو",
+          "transliteration": "rbe7tiw",
+          "english": "you (pl) won"
+        },
+        {
+          "person": "homma",
+          "arabic": "ربحو",
+          "transliteration": "reb7u",
+          "english": "they won"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ربحتش",
+          "transliteration": "ma rbe7tsh",
+          "english": "I didn't win"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما ربحتيش",
+          "transliteration": "ma rbe7tish",
+          "english": "you (m) didn't win"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما ربحتيش",
+          "transliteration": "ma rbe7tish",
+          "english": "you (f) didn't win"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ربحش",
+          "transliteration": "ma rbe7sh",
+          "english": "he didn't win"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ربحاتش",
+          "transliteration": "ma reb7atsh",
+          "english": "she didn't win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ربحناش",
+          "transliteration": "ma rbe7nash",
+          "english": "we didn't win"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما ربحتيوش",
+          "transliteration": "ma rbe7tiwsh",
+          "english": "you (pl) didn't win"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ربحوش",
+          "transliteration": "ma reb7ush",
+          "english": "they didn't win"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنربح",
+          "transliteration": "kanrbe7",
+          "english": "I win"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتربح",
+          "transliteration": "katrbe7",
+          "english": "you (m) win"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتربحي",
+          "transliteration": "katreb7i",
+          "english": "you (f) win"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيربح",
+          "transliteration": "kayrbe7",
+          "english": "he wins"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتربح",
+          "transliteration": "katrbe7",
+          "english": "she wins"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنربحو",
+          "transliteration": "kanreb7u",
+          "english": "we win"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتربحو",
+          "transliteration": "katreb7u",
+          "english": "you (pl) win"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيربحو",
+          "transliteration": "kayreb7u",
+          "english": "they win"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنربحش",
+          "transliteration": "ma kanrbe7sh",
+          "english": "I don't win"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتربحش",
+          "transliteration": "ma katrbe7sh",
+          "english": "you (m) don't win"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتربحيش",
+          "transliteration": "ma katreb7ish",
+          "english": "you (f) don't win"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيربحش",
+          "transliteration": "ma kayrbe7sh",
+          "english": "he doesn't win"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتربحش",
+          "transliteration": "ma katrbe7sh",
+          "english": "she doesn't win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنربحوش",
+          "transliteration": "ma kanreb7ush",
+          "english": "we don't win"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتربحوش",
+          "transliteration": "ma katreb7ush",
+          "english": "you (pl) don't win"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيربحوش",
+          "transliteration": "ma kayreb7ush",
+          "english": "they don't win"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نربح",
+          "transliteration": "ghadi nrbe7",
+          "english": "I will win"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تربح",
+          "transliteration": "ghadi trbe7",
+          "english": "you (m) will win"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تربحي",
+          "transliteration": "ghadi treb7i",
+          "english": "you (f) will win"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يربح",
+          "transliteration": "ghadi yrbe7",
+          "english": "he will win"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تربح",
+          "transliteration": "ghadi trbe7",
+          "english": "she will win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نربحو",
+          "transliteration": "ghadi nreb7u",
+          "english": "we will win"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تربحو",
+          "transliteration": "ghadi treb7u",
+          "english": "you (pl) will win"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يربحو",
+          "transliteration": "ghadi yreb7u",
+          "english": "they will win"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نربح",
+          "transliteration": "ma ghadish nrbe7",
+          "english": "I won't win"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تربح",
+          "transliteration": "ma ghadish trbe7",
+          "english": "you (m) won't win"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تربحي",
+          "transliteration": "ma ghadish treb7i",
+          "english": "you (f) won't win"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يربح",
+          "transliteration": "ma ghadish yrbe7",
+          "english": "he won't win"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تربح",
+          "transliteration": "ma ghadish trbe7",
+          "english": "she won't win"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نربحو",
+          "transliteration": "ma ghadish nreb7u",
+          "english": "we won't win"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تربحو",
+          "transliteration": "ma ghadish treb7u",
+          "english": "you (pl) won't win"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يربحو",
+          "transliteration": "ma ghadish yreb7u",
+          "english": "they won't win"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

@@ -22,8 +22,17 @@
 
 	const exampleVerbs = ['to write', 'to eat', 'to go', 'to drink', 'to study', 'to speak'];
 
+	// Only the learner's dialect shows until they ask for the others.
+	let showAllDialects = $state(false);
+	let visibleDialects = $derived(
+		showAllDialects ? dialectOptions : dialectOptions.filter((d) => d.value === selectedDialect)
+	);
+
 	// Generated exercise lives in global state so it survives navigating away
-	let selectedDialect = $state(session.dialect || getDefaultDialect(data.user));
+	// A finished-generating exercise keeps its dialect; otherwise start from the learner's.
+	let selectedDialect = $state(
+		(session.exercise && session.dialect) || getDefaultDialect(data.user)
+	);
 	let verb = $state(session.verb);
 
 	let isLoading = $state(false);
@@ -141,10 +150,13 @@
 					</div>
 					<div class="p-4 pt-2">
 						<div class="grid grid-cols-2 gap-2">
-							{#each dialectOptions as d (d.value)}
+							{#each visibleDialects as d (d.value)}
 								<button
 									type="button"
-									onclick={() => (selectedDialect = d.value)}
+									onclick={() => {
+									selectedDialect = d.value;
+									showAllDialects = false;
+								}}
 									class="flex items-center gap-2 p-3 rounded-lg border transition-all duration-200 text-left {selectedDialect === d.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 								>
 									<span class="text-xl">{d.emoji}</span>
@@ -152,6 +164,16 @@
 								</button>
 							{/each}
 						</div>
+						{#if dialectOptions.length > 1}
+							<button
+								type="button"
+								onclick={() => (showAllDialects = !showAllDialects)}
+								aria-expanded={showAllDialects}
+								class="mt-2 text-xs font-semibold text-text-200 underline underline-offset-2 hover:text-text-300"
+							>
+								{showAllDialects ? 'Show only my dialect' : 'Practise a different dialect'}
+							</button>
+						{/if}
 					</div>
 				</div>
 

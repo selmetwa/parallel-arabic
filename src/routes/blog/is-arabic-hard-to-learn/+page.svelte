@@ -66,14 +66,19 @@
 	<p>
 		Verbs, adjectives and even "you" change depending on whether you're talking to a man, a woman
 		or a group. In Levantine, "how are you" is <em>kifak</em> to a man and <em>kifik</em> to a
-		woman. It's a lot to track at first and becomes automatic with practice.
+		woman. It's a lot to track at first and becomes automatic with practice. The grammar guide
+		explains <a href={resolve('/grammar/levantine/noun-gender')}>how to tell a noun's gender</a> and
+		<a href={resolve('/grammar/levantine/pronouns')}>which "you" to use</a>.
 	</p>
 
 	<h3>Plurals</h3>
 	<p>
 		Many Arabic plurals are "broken": instead of adding an ending, the vowels inside the word change.
 		<em>kitaab</em> (book) becomes <em>kutub</em> (books). There are patterns, but for a lot of
-		nouns you learn the plural along with the word.
+		nouns you learn the plural along with the word. See
+		<a href={resolve('/grammar/egyptian-arabic/plurals')}>sound and broken plurals</a> for the common
+		patterns, and <a href={resolve('/grammar/egyptian-arabic/numbers-counting')}>counting things</a>
+		for why "thirty apple" is correct Arabic.
 	</p>
 
 	<h3>The missing short vowels</h3>

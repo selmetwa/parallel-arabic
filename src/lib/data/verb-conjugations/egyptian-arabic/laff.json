@@ -1,0 +1,320 @@
+{
+  "slug": "laff",
+  "arabic": "لف",
+  "transliteration": "laff",
+  "english": "to turn",
+  "wordId": null,
+  "rootLetters": "ل ف ف",
+  "verbClass": "doubled",
+  "notes": "Doubled verb: laffeet in the past, yiliff in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "لفيت",
+          "transliteration": "laffeet",
+          "english": "I turned"
+        },
+        {
+          "person": "enta",
+          "arabic": "لفيت",
+          "transliteration": "laffeet",
+          "english": "you (m) turned"
+        },
+        {
+          "person": "enti",
+          "arabic": "لفيتي",
+          "transliteration": "laffeeti",
+          "english": "you (f) turned"
+        },
+        {
+          "person": "howa",
+          "arabic": "لف",
+          "transliteration": "laff",
+          "english": "he turned"
+        },
+        {
+          "person": "heya",
+          "arabic": "لفت",
+          "transliteration": "laffit",
+          "english": "she turned"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لفينا",
+          "transliteration": "laffeena",
+          "english": "we turned"
+        },
+        {
+          "person": "entu",
+          "arabic": "لفيتوا",
+          "transliteration": "laffeetu",
+          "english": "you (pl) turned"
+        },
+        {
+          "person": "homma",
+          "arabic": "لفوا",
+          "transliteration": "laffu",
+          "english": "they turned"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما لفيتش",
+          "transliteration": "ma laffeetsh",
+          "english": "I didn't turn"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما لفيتش",
+          "transliteration": "ma laffeetsh",
+          "english": "you (m) didn't turn"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما لفيتيش",
+          "transliteration": "ma laffeetiish",
+          "english": "you (f) didn't turn"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما لفش",
+          "transliteration": "ma laffish",
+          "english": "he didn't turn"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما لفتش",
+          "transliteration": "ma laffitsh",
+          "english": "she didn't turn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما لفيناش",
+          "transliteration": "ma laffeenaash",
+          "english": "we didn't turn"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما لفيتوش",
+          "transliteration": "ma laffeetuush",
+          "english": "you (pl) didn't turn"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما لفوش",
+          "transliteration": "ma laffuush",
+          "english": "they didn't turn"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بلف",
+          "transliteration": "baliff",
+          "english": "I turn"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتلف",
+          "transliteration": "btiliff",
+          "english": "you (m) turn"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتلفي",
+          "transliteration": "btiliffi",
+          "english": "you (f) turn"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيلف",
+          "transliteration": "biyiliff",
+          "english": "he turns"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتلف",
+          "transliteration": "btiliff",
+          "english": "she turns"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنلف",
+          "transliteration": "bniliff",
+          "english": "we turn"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتلفوا",
+          "transliteration": "btiliffu",
+          "english": "you (pl) turn"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيلفوا",
+          "transliteration": "biyiliffu",
+          "english": "they turn"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابلفش",
+          "transliteration": "mabaliffish",
+          "english": "I don't turn"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتلفش",
+          "transliteration": "mabtiliffish",
+          "english": "you (m) don't turn"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتلفيش",
+          "transliteration": "mabtiliffiish",
+          "english": "you (f) don't turn"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيلفش",
+          "transliteration": "mabiyiliffish",
+          "english": "he doesn't turn"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتلفش",
+          "transliteration": "mabtiliffish",
+          "english": "she doesn't turn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنلفش",
+          "transliteration": "mabniliffish",
+          "english": "we don't turn"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتلفوش",
+          "transliteration": "mabtiliffuush",
+          "english": "you (pl) don't turn"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيلفوش",
+          "transliteration": "mabiyiliffuush",
+          "english": "they don't turn"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هالف",
+          "transliteration": "haaliff",
+          "english": "I will turn"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتلف",
+          "transliteration": "hatiliff",
+          "english": "you (m) will turn"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتلفي",
+          "transliteration": "hatiliffi",
+          "english": "you (f) will turn"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيلف",
+          "transliteration": "hayiliff",
+          "english": "he will turn"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتلف",
+          "transliteration": "hatiliff",
+          "english": "she will turn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنلف",
+          "transliteration": "haniliff",
+          "english": "we will turn"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتلفوا",
+          "transliteration": "hatiliffu",
+          "english": "you (pl) will turn"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيلفوا",
+          "transliteration": "hayiliffu",
+          "english": "they will turn"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هالف",
+          "transliteration": "mish haaliff",
+          "english": "I won't turn"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتلف",
+          "transliteration": "mish hatiliff",
+          "english": "you (m) won't turn"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتلفي",
+          "transliteration": "mish hatiliffi",
+          "english": "you (f) won't turn"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيلف",
+          "transliteration": "mish hayiliff",
+          "english": "he won't turn"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتلف",
+          "transliteration": "mish hatiliff",
+          "english": "she won't turn"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنلف",
+          "transliteration": "mish haniliff",
+          "english": "we won't turn"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتلفوا",
+          "transliteration": "mish hatiliffu",
+          "english": "you (pl) won't turn"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيلفوا",
+          "transliteration": "mish hayiliffu",
+          "english": "they won't turn"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

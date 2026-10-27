@@ -66,7 +66,7 @@
 			<li>
 				<a class="underline hover:text-text-300" href={resolve('/egyptian-arabic/conjugations')}>
 					Verb conjugations
-				</a> — full tables for 72 common verbs.
+				</a> — full tables for 200 common verbs.
 			</li>
 			<li>
 				<a class="underline hover:text-text-300" href={resolve('/egyptian-arabic/pronunciation')}>

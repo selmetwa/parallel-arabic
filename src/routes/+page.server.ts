@@ -206,7 +206,15 @@ export const load: PageServerLoad = async ({ parent }) => {
   // Check for in-progress lesson to show resume card on homepage
   let inProgressLesson: { topicId: string; dialect: string; stepIndex: number; title: string } | null = null;
 
-  if (user?.id && user?.last_content_type === 'lessons' && user?.last_content_id && user?.last_content_dialect) {
+  // Only resume a lesson in the dialect they're learning now: after a switch,
+  // the old dialect's lesson would pull them back.
+  if (
+    user?.id &&
+    user?.last_content_type === 'lessons' &&
+    user?.last_content_id &&
+    user?.last_content_dialect &&
+    (!user.target_dialect || user.last_content_dialect === user.target_dialect)
+  ) {
     const { data: lp } = await supabase
       .from('structured_lesson_progress')
       .select('status')

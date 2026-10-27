@@ -99,11 +99,14 @@
 		<li>
 			<strong>The negative wraps the verb in ma...sh.</strong> <em>ma kanfhemsh</em>, I don't
 			understand. You'll use that one a lot at first.
+			(<a href={resolve('/grammar/darija/negation')}>More on saying "not"</a>.)
 		</li>
 	</ul>
 	<p>
-		The <a href={resolve('/darija/conjugations')}>Darija conjugation tables</a> cover the common
-		verbs in every tense.
+		The <a href={resolve('/darija/conjugations')}>Darija conjugation tables</a> cover 200 common
+		verbs in every tense, and the <a href={resolve('/grammar/darija')}>Darija grammar guide</a>
+		explains the <a href={resolve('/grammar/darija/present-tense')}>ka- present</a>,
+		<a href={resolve('/grammar/darija/possession')}>dyal</a> and the rest.
 	</p>
 
 	<h2>6. Find listening practice (month 3 onwards)</h2>

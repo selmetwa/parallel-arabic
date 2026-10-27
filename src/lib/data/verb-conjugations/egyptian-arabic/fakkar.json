@@ -1,0 +1,320 @@
+{
+  "slug": "fakkar",
+  "arabic": "فكر",
+  "transliteration": "fakkar",
+  "english": "to think",
+  "wordId": null,
+  "rootLetters": "ف ك ر",
+  "verbClass": "sound",
+  "notes": "A regular Form II sound verb, characterized by the doubling of the middle root letter.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "فكرت",
+          "transliteration": "fakkart",
+          "english": "I thought"
+        },
+        {
+          "person": "enta",
+          "arabic": "فكرت",
+          "transliteration": "fakkart",
+          "english": "you (m) thought"
+        },
+        {
+          "person": "enti",
+          "arabic": "فكرتي",
+          "transliteration": "fakkarti",
+          "english": "you (f) thought"
+        },
+        {
+          "person": "howa",
+          "arabic": "فكر",
+          "transliteration": "fakkar",
+          "english": "he thought"
+        },
+        {
+          "person": "heya",
+          "arabic": "فكرت",
+          "transliteration": "fakkarit",
+          "english": "she thought"
+        },
+        {
+          "person": "ehna",
+          "arabic": "فكرنا",
+          "transliteration": "fakkarna",
+          "english": "we thought"
+        },
+        {
+          "person": "entu",
+          "arabic": "فكرتوا",
+          "transliteration": "fakkartu",
+          "english": "you (pl) thought"
+        },
+        {
+          "person": "homma",
+          "arabic": "فكروا",
+          "transliteration": "fakkaru",
+          "english": "they thought"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما فكرتش",
+          "transliteration": "ma fakkartish",
+          "english": "I didn't think"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما فكرتش",
+          "transliteration": "ma fakkartish",
+          "english": "you (m) didn't think"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما فكرتيش",
+          "transliteration": "ma fakkartiish",
+          "english": "you (f) didn't think"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما فكرش",
+          "transliteration": "ma fakkarsh",
+          "english": "he didn't think"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما فكرتش",
+          "transliteration": "ma fakkaritsh",
+          "english": "she didn't think"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما فكرناش",
+          "transliteration": "ma fakkarnaash",
+          "english": "we didn't think"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما فكرتوش",
+          "transliteration": "ma fakkartuush",
+          "english": "you (pl) didn't think"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما فكروش",
+          "transliteration": "ma fakkaruush",
+          "english": "they didn't think"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بفكر",
+          "transliteration": "bafakkar",
+          "english": "I think"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتفكر",
+          "transliteration": "bitfakkar",
+          "english": "you (m) think"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتفكري",
+          "transliteration": "bitfakkari",
+          "english": "you (f) think"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيفكر",
+          "transliteration": "biyfakkar",
+          "english": "he thinks"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتفكر",
+          "transliteration": "bitfakkar",
+          "english": "she thinks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنفكر",
+          "transliteration": "binfakkar",
+          "english": "we think"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتفكروا",
+          "transliteration": "bitfakkaru",
+          "english": "you (pl) think"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيفكروا",
+          "transliteration": "biyfakkaru",
+          "english": "they think"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابفكرش",
+          "transliteration": "mabafakkarsh",
+          "english": "I don't think"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتفكرش",
+          "transliteration": "mabitfakkarsh",
+          "english": "you (m) don't think"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتفكريش",
+          "transliteration": "mabitfakkariish",
+          "english": "you (f) don't think"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيفكرش",
+          "transliteration": "mabiyfakkarsh",
+          "english": "he doesn't think"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتفكرش",
+          "transliteration": "mabitfakkarsh",
+          "english": "she doesn't think"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنفكرش",
+          "transliteration": "mabinfakkarsh",
+          "english": "we don't think"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتفكروش",
+          "transliteration": "mabitfakkaruush",
+          "english": "you (pl) don't think"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيفكروش",
+          "transliteration": "mabiyfakkaruush",
+          "english": "they don't think"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هفكر",
+          "transliteration": "hafakkar",
+          "english": "I will think"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتفكر",
+          "transliteration": "hatfakkar",
+          "english": "you (m) will think"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتفكري",
+          "transliteration": "hatfakkari",
+          "english": "you (f) will think"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيفكر",
+          "transliteration": "hayfakkar",
+          "english": "he will think"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتفكر",
+          "transliteration": "hatfakkar",
+          "english": "she will think"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنفكر",
+          "transliteration": "hanfakkar",
+          "english": "we will think"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتفكروا",
+          "transliteration": "hatfakkaru",
+          "english": "you (pl) will think"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيفكروا",
+          "transliteration": "hayfakkaru",
+          "english": "they will think"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هفكر",
+          "transliteration": "mish hafakkar",
+          "english": "I won't think"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتفكر",
+          "transliteration": "mish hatfakkar",
+          "english": "you (m) won't think"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتفكري",
+          "transliteration": "mish hatfakkari",
+          "english": "you (f) won't think"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيفكر",
+          "transliteration": "mish hayfakkar",
+          "english": "he won't think"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتفكر",
+          "transliteration": "mish hatfakkar",
+          "english": "she won't think"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنفكر",
+          "transliteration": "mish hanfakkar",
+          "english": "we won't think"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتفكروا",
+          "transliteration": "mish hatfakkaru",
+          "english": "you (pl) won't think"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيفكروا",
+          "transliteration": "mish hayfakkaru",
+          "english": "they won't think"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

@@ -295,12 +295,12 @@ const PAGES: GameFeature[] = [
 		name: 'Verb Blitz',
 		emoji: '🔁',
 		heading: 'Arabic verb drills: every person, every tense',
-		lede: 'Pick the right form of an everyday verb for a person and a tense, affirmative or negative. 72 verbs with full tables in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic.',
-		blurb: '72 verbs, every person and tense, in seven dialects.',
+		lede: 'Pick the right form of an everyday verb for a person and a tense, affirmative or negative. 200 verbs with full tables in Egyptian, Levantine, Moroccan Darija, Iraqi, Gulf, Saudi and Modern Standard Arabic.',
+		blurb: '200 verbs, every person and tense, in seven dialects.',
 		seo: {
 			title: 'Arabic Verb Drills in Seven Dialects | Parallel Arabic',
 			description:
-				'Drill 72 everyday Arabic verbs for every person in the past, present and future, negative included. Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.'
+				'Drill 200 everyday Arabic verbs for every person in the past, present and future, negative included. Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi and Fusha.'
 		},
 		hero: shot(
 			'game-verb-blitz',
@@ -338,7 +338,7 @@ const PAGES: GameFeature[] = [
 			{
 				question: 'Which verbs are included?',
 				answer:
-					'72 everyday verbs, from to be, to go and to come to to apologise for, to compare and to punish, each with past, present and future in the affirmative and negative.'
+					'200 everyday verbs, from to be, to go and to eat to to apologise for, to compare and to punish, each with past, present and future in the affirmative and negative.'
 			},
 			{
 				question: 'Why does Fusha have vowel marks and the dialects don’t?',

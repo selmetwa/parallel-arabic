@@ -1,0 +1,320 @@
+{
+  "slug": "salla",
+  "arabic": "صلى",
+  "transliteration": "sella",
+  "english": "to pray",
+  "wordId": null,
+  "rootLetters": "ص ل ي",
+  "verbClass": "defective",
+  "notes": "Form II verb ending in a vowel: sellit in the past, nselli in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صليت",
+          "transliteration": "sellit",
+          "english": "I prayed"
+        },
+        {
+          "person": "enta",
+          "arabic": "صليتي",
+          "transliteration": "selliti",
+          "english": "you (m) prayed"
+        },
+        {
+          "person": "enti",
+          "arabic": "صليتي",
+          "transliteration": "selliti",
+          "english": "you (f) prayed"
+        },
+        {
+          "person": "howa",
+          "arabic": "صلى",
+          "transliteration": "sella",
+          "english": "he prayed"
+        },
+        {
+          "person": "heya",
+          "arabic": "صلات",
+          "transliteration": "sellat",
+          "english": "she prayed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صلينا",
+          "transliteration": "sellina",
+          "english": "we prayed"
+        },
+        {
+          "person": "entu",
+          "arabic": "صليتيو",
+          "transliteration": "sellitiw",
+          "english": "you (pl) prayed"
+        },
+        {
+          "person": "homma",
+          "arabic": "صلاو",
+          "transliteration": "sellaw",
+          "english": "they prayed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما صليتش",
+          "transliteration": "ma sellitsh",
+          "english": "I didn't pray"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما صليتيش",
+          "transliteration": "ma sellitish",
+          "english": "you (m) didn't pray"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما صليتيش",
+          "transliteration": "ma sellitish",
+          "english": "you (f) didn't pray"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما صلاش",
+          "transliteration": "ma sellash",
+          "english": "he didn't pray"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما صلاتش",
+          "transliteration": "ma sellatsh",
+          "english": "she didn't pray"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما صليناش",
+          "transliteration": "ma sellinash",
+          "english": "we didn't pray"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما صليتيوش",
+          "transliteration": "ma sellitiwsh",
+          "english": "you (pl) didn't pray"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما صلاوش",
+          "transliteration": "ma sellawsh",
+          "english": "they didn't pray"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنصلي",
+          "transliteration": "kanselli",
+          "english": "I pray"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتصلي",
+          "transliteration": "katselli",
+          "english": "you (m) pray"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتصلي",
+          "transliteration": "katselli",
+          "english": "you (f) pray"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيصلي",
+          "transliteration": "kayselli",
+          "english": "he prays"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتصلي",
+          "transliteration": "katselli",
+          "english": "she prays"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنصليو",
+          "transliteration": "kanselliw",
+          "english": "we pray"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتصليو",
+          "transliteration": "katselliw",
+          "english": "you (pl) pray"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيصليو",
+          "transliteration": "kayselliw",
+          "english": "they pray"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنصليش",
+          "transliteration": "ma kansellish",
+          "english": "I don't pray"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتصليش",
+          "transliteration": "ma katsellish",
+          "english": "you (m) don't pray"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتصليش",
+          "transliteration": "ma katsellish",
+          "english": "you (f) don't pray"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيصليش",
+          "transliteration": "ma kaysellish",
+          "english": "he doesn't pray"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتصليش",
+          "transliteration": "ma katsellish",
+          "english": "she doesn't pray"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنصليوش",
+          "transliteration": "ma kanselliwsh",
+          "english": "we don't pray"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتصليوش",
+          "transliteration": "ma katselliwsh",
+          "english": "you (pl) don't pray"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيصليوش",
+          "transliteration": "ma kayselliwsh",
+          "english": "they don't pray"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نصلي",
+          "transliteration": "ghadi nselli",
+          "english": "I will pray"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تصلي",
+          "transliteration": "ghadi tselli",
+          "english": "you (m) will pray"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تصلي",
+          "transliteration": "ghadi tselli",
+          "english": "you (f) will pray"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يصلي",
+          "transliteration": "ghadi yselli",
+          "english": "he will pray"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تصلي",
+          "transliteration": "ghadi tselli",
+          "english": "she will pray"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نصليو",
+          "transliteration": "ghadi nselliw",
+          "english": "we will pray"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تصليو",
+          "transliteration": "ghadi tselliw",
+          "english": "you (pl) will pray"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يصليو",
+          "transliteration": "ghadi yselliw",
+          "english": "they will pray"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نصلي",
+          "transliteration": "ma ghadish nselli",
+          "english": "I won't pray"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تصلي",
+          "transliteration": "ma ghadish tselli",
+          "english": "you (m) won't pray"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تصلي",
+          "transliteration": "ma ghadish tselli",
+          "english": "you (f) won't pray"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يصلي",
+          "transliteration": "ma ghadish yselli",
+          "english": "he won't pray"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تصلي",
+          "transliteration": "ma ghadish tselli",
+          "english": "she won't pray"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نصليو",
+          "transliteration": "ma ghadish nselliw",
+          "english": "we won't pray"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تصليو",
+          "transliteration": "ma ghadish tselliw",
+          "english": "you (pl) won't pray"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يصليو",
+          "transliteration": "ma ghadish yselliw",
+          "english": "they won't pray"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

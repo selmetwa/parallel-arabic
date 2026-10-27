@@ -11,6 +11,7 @@ import { VOCAB_DIALECTS, topicSlugsFor } from '$lib/data/vocab/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
 import { GAMES, gameHref } from '$lib/constants/games';
 import { FEATURES } from '$lib/constants/features';
+import { GRAMMAR_DIALECTS, GRAMMAR_TOPICS } from '$lib/data/grammar/topics';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
 // Supabase caps a select at 1000 rows. There are more stories than that, so
@@ -270,6 +271,34 @@ export const GET: RequestHandler = async () => {
     <priority>0.8</priority>
   </url>`);
 		}
+	}
+
+	// Grammar reference (static Markdown in the repo)
+	for (const dialect of GRAMMAR_DIALECTS) {
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/grammar/${dialect}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+		for (const topic of GRAMMAR_TOPICS) {
+			urls.push(`
+  <url>
+    <loc>${BASE_URL}/grammar/${dialect}/${escapeXml(topic.slug)}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+		}
+	}
+
+	// Dictionary search pages, one per dialect
+	for (const dialect of VERB_DIALECTS) {
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/dictionary/${dialect}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
 	}
 
 	// Fetch dynamic content from database

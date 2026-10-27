@@ -1,6 +1,7 @@
 <script lang="ts">
   import Button from "./Button.svelte";
   import MobileMenu from "./MobileMenu.svelte";
+  import DialectSwitcher from "./DialectSwitcher.svelte";
 
   interface Props {
     handleOpenDrawer: () => void;
@@ -17,31 +18,8 @@
 
   let mobileMenuOpen = $state(false);
 
-  // Map dialect values to flags (default to Egyptian)
-  const dialectFlags: Record<string, string> = {
-    'egyptian-arabic': '🇪🇬',
-    'darija': '🇲🇦',
-    'levantine': '🇱🇧',
-    'fusha': '🇸🇦',
-    'iraqi': '🇮🇶',
-    'khaleeji': '🇦🇪',
-    'saudi': '🇸🇦'
-  };
-
-  const dialectDisplayNames: Record<string, string> = {
-    'egyptian-arabic': 'Egyptian Arabic',
-    'darija': 'Moroccan Darija',
-    'levantine': 'Levantine Arabic',
-    'fusha': 'Modern Standard Arabic (Fusha)',
-    'iraqi': 'Iraqi Arabic',
-    'khaleeji': 'Gulf Arabic (Khaleeji)',
-    'saudi': 'Saudi Arabic (Hijazi)'
-  };
-
-  // Default to Egyptian if no dialect is set - make reactive with $derived
+  // Default to Egyptian if no dialect is set
   const learningDialect = $derived(targetDialect || 'egyptian-arabic');
-  const flag = $derived(dialectFlags[learningDialect] || '🇪🇬');
-  const displayName = $derived(dialectDisplayNames[learningDialect] || 'Egyptian Arabic');
   
   // Streak counter
   const currentStreak = $derived(user?.current_streak ?? 0);
@@ -65,10 +43,11 @@
         </li>
         <menu class="ml-auto flex flex-row gap-3 sm:gap-4 items-center">
           {#if session}
+            <li>
+              <DialectSwitcher dialect={learningDialect} />
+            </li>
+            {#if currentStreak > 0}
             <li class="flex items-center gap-2 bg-tile-400/50 px-3 py-1.5 rounded-full border border-tile-500/50">
-              <span class="text-xl sm:text-2xl">{flag}</span>
-              <span class="text-text-200 text-xs sm:text-sm hidden md:inline">Learning {displayName}</span>
-              {#if currentStreak > 0}
                 <span class="text-xl sm:text-2xl">🔥</span>
                 <span class="text-text-200 text-xs sm:text-sm font-bold">
                   {currentStreak}
@@ -76,8 +55,8 @@
                     <span class="text-text-300 opacity-75 font-normal">/ {longestStreak}</span>
                   {/if}
                 </span>
-              {/if}
             </li>
+            {/if}
           {:else}
             <li>
               <a class="text-text-300 text-sm sm:text-base font-semibold hover:text-text-100 transition-colors duration-200 px-3 py-1.5 rounded-lg hover:bg-tile-400/30" href="/login">
@@ -104,4 +83,5 @@
   onClose={() => (mobileMenuOpen = false)}
   {session}
   {handleOpenDrawer}
+  targetDialect={learningDialect}
 />

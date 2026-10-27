@@ -1,0 +1,320 @@
+{
+  "slug": "2aal",
+  "arabic": "قَالَ",
+  "transliteration": "qala",
+  "english": "to say",
+  "wordId": null,
+  "rootLetters": "ق و ل",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a waw root; the middle vowel drops and the first letter takes a damma in the past tense when a consonant-initial suffix is added (e.g., qultu), and the waw appears in the present tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قُلْتُ",
+          "transliteration": "qultu",
+          "english": "I said"
+        },
+        {
+          "person": "enta",
+          "arabic": "قُلْتَ",
+          "transliteration": "qulta",
+          "english": "you (m) said"
+        },
+        {
+          "person": "enti",
+          "arabic": "قُلْتِ",
+          "transliteration": "qulti",
+          "english": "you (f) said"
+        },
+        {
+          "person": "howa",
+          "arabic": "قَالَ",
+          "transliteration": "qala",
+          "english": "he said"
+        },
+        {
+          "person": "heya",
+          "arabic": "قَالَتْ",
+          "transliteration": "qalat",
+          "english": "she said"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قُلْنَا",
+          "transliteration": "qulna",
+          "english": "we said"
+        },
+        {
+          "person": "entu",
+          "arabic": "قُلْتُمْ",
+          "transliteration": "qultum",
+          "english": "you (pl) said"
+        },
+        {
+          "person": "homma",
+          "arabic": "قَالُوا",
+          "transliteration": "qalu",
+          "english": "they said"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا قُلْتُ",
+          "transliteration": "ma qultu",
+          "english": "I didn't say"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا قُلْتَ",
+          "transliteration": "ma qulta",
+          "english": "you (m) didn't say"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا قُلْتِ",
+          "transliteration": "ma qulti",
+          "english": "you (f) didn't say"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا قَالَ",
+          "transliteration": "ma qala",
+          "english": "he didn't say"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا قَالَتْ",
+          "transliteration": "ma qalat",
+          "english": "she didn't say"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا قُلْنَا",
+          "transliteration": "ma qulna",
+          "english": "we didn't say"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا قُلْتُمْ",
+          "transliteration": "ma qultum",
+          "english": "you (pl) didn't say"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا قَالُوا",
+          "transliteration": "ma qalu",
+          "english": "they didn't say"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَقُولُ",
+          "transliteration": "aqulu",
+          "english": "I say"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَقُولُ",
+          "transliteration": "taqulu",
+          "english": "you (m) say"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَقُولِينَ",
+          "transliteration": "taqulina",
+          "english": "you (f) say"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَقُولُ",
+          "transliteration": "yaqulu",
+          "english": "he says"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَقُولُ",
+          "transliteration": "taqulu",
+          "english": "she says"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَقُولُ",
+          "transliteration": "naqulu",
+          "english": "we say"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَقُولُونَ",
+          "transliteration": "taquluna",
+          "english": "you (pl) say"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَقُولُونَ",
+          "transliteration": "yaquluna",
+          "english": "they say"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَقُولُ",
+          "transliteration": "la aqulu",
+          "english": "I don't say"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَقُولُ",
+          "transliteration": "la taqulu",
+          "english": "you (m) don't say"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَقُولِينَ",
+          "transliteration": "la taqulina",
+          "english": "you (f) don't say"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَقُولُ",
+          "transliteration": "la yaqulu",
+          "english": "he doesn't say"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَقُولُ",
+          "transliteration": "la taqulu",
+          "english": "she doesn't say"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَقُولُ",
+          "transliteration": "la naqulu",
+          "english": "we don't say"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَقُولُونَ",
+          "transliteration": "la taquluna",
+          "english": "you (pl) don't say"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَقُولُونَ",
+          "transliteration": "la yaquluna",
+          "english": "they don't say"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَقُولُ",
+          "transliteration": "sa2aqulu",
+          "english": "I will say"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَقُولُ",
+          "transliteration": "sataqulu",
+          "english": "you (m) will say"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَقُولِينَ",
+          "transliteration": "sataqulina",
+          "english": "you (f) will say"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَقُولُ",
+          "transliteration": "sayaqulu",
+          "english": "he will say"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَقُولُ",
+          "transliteration": "sataqulu",
+          "english": "she will say"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَقُولُ",
+          "transliteration": "sanaqulu",
+          "english": "we will say"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَقُولُونَ",
+          "transliteration": "sataquluna",
+          "english": "you (pl) will say"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَقُولُونَ",
+          "transliteration": "sayaquluna",
+          "english": "they will say"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَقُولَ",
+          "transliteration": "lan aqula",
+          "english": "I won't say"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَقُولَ",
+          "transliteration": "lan taqula",
+          "english": "you (m) won't say"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَقُولِي",
+          "transliteration": "lan taquli",
+          "english": "you (f) won't say"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَقُولَ",
+          "transliteration": "lan yaqula",
+          "english": "he won't say"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَقُولَ",
+          "transliteration": "lan taqula",
+          "english": "she won't say"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَقُولَ",
+          "transliteration": "lan naqula",
+          "english": "we won't say"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَقُولُوا",
+          "transliteration": "lan taqulu",
+          "english": "you (pl) won't say"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَقُولُوا",
+          "transliteration": "lan yaqulu",
+          "english": "they won't say"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

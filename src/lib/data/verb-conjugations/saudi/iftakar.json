@@ -1,0 +1,320 @@
+{
+  "slug": "iftakar",
+  "arabic": "اتدكر",
+  "transliteration": "itdakkar",
+  "english": "to remember",
+  "wordId": null,
+  "rootLetters": "د ك ر",
+  "verbClass": "sound",
+  "notes": "The root is originally ذ ك ر, but in Hijazi Arabic ذ is pronounced and written as د. It is a Form V verb (equivalent to MSA تذكر) which takes a prothetic vowel (اتدكر) in the past tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اتدكرت",
+          "transliteration": "itdakkart",
+          "english": "I remembered"
+        },
+        {
+          "person": "enta",
+          "arabic": "اتدكرت",
+          "transliteration": "itdakkart",
+          "english": "you (m) remembered"
+        },
+        {
+          "person": "enti",
+          "arabic": "اتدكرتي",
+          "transliteration": "itdakkarti",
+          "english": "you (f) remembered"
+        },
+        {
+          "person": "howa",
+          "arabic": "اتدكر",
+          "transliteration": "itdakkar",
+          "english": "he remembered"
+        },
+        {
+          "person": "heya",
+          "arabic": "اتدكرت",
+          "transliteration": "itdakkarat",
+          "english": "she remembered"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اتدكرنا",
+          "transliteration": "itdakkarna",
+          "english": "we remembered"
+        },
+        {
+          "person": "entu",
+          "arabic": "اتدكرتوا",
+          "transliteration": "itdakkartu",
+          "english": "you (pl) remembered"
+        },
+        {
+          "person": "homma",
+          "arabic": "اتدكروا",
+          "transliteration": "itdakkaru",
+          "english": "they remembered"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اتدكرت",
+          "transliteration": "ma itdakkart",
+          "english": "I didn't remember"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اتدكرت",
+          "transliteration": "ma itdakkart",
+          "english": "you (m) didn't remember"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اتدكرتي",
+          "transliteration": "ma itdakkarti",
+          "english": "you (f) didn't remember"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اتدكر",
+          "transliteration": "ma itdakkar",
+          "english": "he didn't remember"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اتدكرت",
+          "transliteration": "ma itdakkarat",
+          "english": "she didn't remember"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اتدكرنا",
+          "transliteration": "ma itdakkarna",
+          "english": "we didn't remember"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اتدكرتوا",
+          "transliteration": "ma itdakkartu",
+          "english": "you (pl) didn't remember"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اتدكروا",
+          "transliteration": "ma itdakkaru",
+          "english": "they didn't remember"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باتدكر",
+          "transliteration": "batdakkar",
+          "english": "I remember"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتتدكر",
+          "transliteration": "btitdakkar",
+          "english": "you (m) remember"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتتدكري",
+          "transliteration": "btitdakkari",
+          "english": "you (f) remember"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيتدكر",
+          "transliteration": "byitdakkar",
+          "english": "he remembers"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتتدكر",
+          "transliteration": "btitdakkar",
+          "english": "she remembers"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنتدكر",
+          "transliteration": "bnitdakkar",
+          "english": "we remember"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتتدكروا",
+          "transliteration": "btitdakkaru",
+          "english": "you (pl) remember"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيتدكروا",
+          "transliteration": "byitdakkaru",
+          "english": "they remember"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باتدكر",
+          "transliteration": "ma batdakkar",
+          "english": "I don't remember"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتتدكر",
+          "transliteration": "ma btitdakkar",
+          "english": "you (m) don't remember"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتتدكري",
+          "transliteration": "ma btitdakkari",
+          "english": "you (f) don't remember"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيتدكر",
+          "transliteration": "ma byitdakkar",
+          "english": "he doesn't remember"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتتدكر",
+          "transliteration": "ma btitdakkar",
+          "english": "she doesn't remember"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنتدكر",
+          "transliteration": "ma bnitdakkar",
+          "english": "we don't remember"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتتدكروا",
+          "transliteration": "ma btitdakkaru",
+          "english": "you (pl) don't remember"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيتدكروا",
+          "transliteration": "ma byitdakkaru",
+          "english": "they don't remember"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاتدكر",
+          "transliteration": "7atdakkar",
+          "english": "I will remember"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتتدكر",
+          "transliteration": "7atitdakkar",
+          "english": "you (m) will remember"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتتدكري",
+          "transliteration": "7atitdakkari",
+          "english": "you (f) will remember"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيتدكر",
+          "transliteration": "7ayitdakkar",
+          "english": "he will remember"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتتدكر",
+          "transliteration": "7atitdakkar",
+          "english": "she will remember"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنتدكر",
+          "transliteration": "7anitdakkar",
+          "english": "we will remember"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتتدكروا",
+          "transliteration": "7atitdakkaru",
+          "english": "you (pl) will remember"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيتدكروا",
+          "transliteration": "7ayitdakkaru",
+          "english": "they will remember"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاتدكر",
+          "transliteration": "ma 7atdakkar",
+          "english": "I won't remember"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتتدكر",
+          "transliteration": "ma 7atitdakkar",
+          "english": "you (m) won't remember"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتتدكري",
+          "transliteration": "ma 7atitdakkari",
+          "english": "you (f) won't remember"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيتدكر",
+          "transliteration": "ma 7ayitdakkar",
+          "english": "he won't remember"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتتدكر",
+          "transliteration": "ma 7atitdakkar",
+          "english": "she won't remember"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنتدكر",
+          "transliteration": "ma 7anitdakkar",
+          "english": "we won't remember"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتتدكروا",
+          "transliteration": "ma 7atitdakkaru",
+          "english": "you (pl) won't remember"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيتدكروا",
+          "transliteration": "ma 7ayitdakkaru",
+          "english": "they won't remember"
+        }
+      ]
+    }
+  },
+  "form": "V",
+  "source": "generated"
+}

@@ -1,0 +1,320 @@
+{
+  "slug": "akal",
+  "arabic": "أكل",
+  "transliteration": "akal",
+  "english": "to eat",
+  "wordId": null,
+  "rootLetters": "أ ك ل",
+  "verbClass": "irregular",
+  "notes": "As a Form I verb starting with a hamza, the hamza assimilates into a long 'a' sound in the present and future tenses (e.g., bakol instead of b2akol).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أكلت",
+          "transliteration": "akalt",
+          "english": "I ate"
+        },
+        {
+          "person": "enta",
+          "arabic": "أكلت",
+          "transliteration": "akalt",
+          "english": "you (m) ate"
+        },
+        {
+          "person": "enti",
+          "arabic": "أكلتي",
+          "transliteration": "akalti",
+          "english": "you (f) ate"
+        },
+        {
+          "person": "howa",
+          "arabic": "أكل",
+          "transliteration": "akal",
+          "english": "he ate"
+        },
+        {
+          "person": "heya",
+          "arabic": "أكلت",
+          "transliteration": "akalit",
+          "english": "she ate"
+        },
+        {
+          "person": "ehna",
+          "arabic": "أكلنا",
+          "transliteration": "akalna",
+          "english": "we ate"
+        },
+        {
+          "person": "entu",
+          "arabic": "أكلتوا",
+          "transliteration": "akaltu",
+          "english": "you (pl) ate"
+        },
+        {
+          "person": "homma",
+          "arabic": "أكلوا",
+          "transliteration": "akalu",
+          "english": "they ate"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما أكلت",
+          "transliteration": "ma akalt",
+          "english": "I didn't eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما أكلت",
+          "transliteration": "ma akalt",
+          "english": "you (m) didn't eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما أكلتي",
+          "transliteration": "ma akalti",
+          "english": "you (f) didn't eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما أكل",
+          "transliteration": "ma akal",
+          "english": "he didn't eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما أكلت",
+          "transliteration": "ma akalit",
+          "english": "she didn't eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما أكلنا",
+          "transliteration": "ma akalna",
+          "english": "we didn't eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما أكلتوا",
+          "transliteration": "ma akaltu",
+          "english": "you (pl) didn't eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما أكلوا",
+          "transliteration": "ma akalu",
+          "english": "they didn't eat"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باكل",
+          "transliteration": "bakol",
+          "english": "I eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتاكل",
+          "transliteration": "btakol",
+          "english": "you (m) eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتاكلي",
+          "transliteration": "btakli",
+          "english": "you (f) eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "بياكل",
+          "transliteration": "byakol",
+          "english": "he eats"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتاكل",
+          "transliteration": "btakol",
+          "english": "she eats"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مناكل",
+          "transliteration": "mnakol",
+          "english": "we eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتاكلوا",
+          "transliteration": "btaklu",
+          "english": "you (pl) eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "بياكلوا",
+          "transliteration": "byaklu",
+          "english": "they eat"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باكل",
+          "transliteration": "ma bakol",
+          "english": "I don't eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتاكل",
+          "transliteration": "ma btakol",
+          "english": "you (m) don't eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتاكلي",
+          "transliteration": "ma btakli",
+          "english": "you (f) don't eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بياكل",
+          "transliteration": "ma byakol",
+          "english": "he doesn't eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتاكل",
+          "transliteration": "ma btakol",
+          "english": "she doesn't eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما مناكل",
+          "transliteration": "ma mnakol",
+          "english": "we don't eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتاكلوا",
+          "transliteration": "ma btaklu",
+          "english": "you (pl) don't eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بياكلوا",
+          "transliteration": "ma byaklu",
+          "english": "they don't eat"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اكل",
+          "transliteration": "ra7 akol",
+          "english": "I will eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تاكل",
+          "transliteration": "ra7 takol",
+          "english": "you (m) will eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تاكلي",
+          "transliteration": "ra7 takli",
+          "english": "you (f) will eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح ياكل",
+          "transliteration": "ra7 yakol",
+          "english": "he will eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تاكل",
+          "transliteration": "ra7 takol",
+          "english": "she will eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح ناكل",
+          "transliteration": "ra7 nakol",
+          "english": "we will eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تاكلوا",
+          "transliteration": "ra7 taklu",
+          "english": "you (pl) will eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح ياكلوا",
+          "transliteration": "ra7 yaklu",
+          "english": "they will eat"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اكل",
+          "transliteration": "ma ra7 akol",
+          "english": "I won't eat"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تاكل",
+          "transliteration": "ma ra7 takol",
+          "english": "you (m) won't eat"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تاكلي",
+          "transliteration": "ma ra7 takli",
+          "english": "you (f) won't eat"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح ياكل",
+          "transliteration": "ma ra7 yakol",
+          "english": "he won't eat"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تاكل",
+          "transliteration": "ma ra7 takol",
+          "english": "she won't eat"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح ناكل",
+          "transliteration": "ma ra7 nakol",
+          "english": "we won't eat"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تاكلوا",
+          "transliteration": "ma ra7 taklu",
+          "english": "you (pl) won't eat"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح ياكلوا",
+          "transliteration": "ma ra7 yaklu",
+          "english": "they won't eat"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

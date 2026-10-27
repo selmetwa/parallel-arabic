@@ -1,0 +1,320 @@
+{
+  "slug": "rigi3",
+  "arabic": "رجع",
+  "transliteration": "rigi3",
+  "english": "to return",
+  "wordId": null,
+  "rootLetters": "ر ج ع",
+  "verbClass": "sound",
+  "notes": "This is a Form I sound verb of the CiCiC type. The second vowel drops when a vowel-initial suffix is added in the past tense (e.g., heya rig3it).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رجعت",
+          "transliteration": "rigi3t",
+          "english": "I returned"
+        },
+        {
+          "person": "enta",
+          "arabic": "رجعت",
+          "transliteration": "rigi3t",
+          "english": "you (m) returned"
+        },
+        {
+          "person": "enti",
+          "arabic": "رجعتي",
+          "transliteration": "rigi3ti",
+          "english": "you (f) returned"
+        },
+        {
+          "person": "howa",
+          "arabic": "رجع",
+          "transliteration": "rigi3",
+          "english": "he returned"
+        },
+        {
+          "person": "heya",
+          "arabic": "رجعت",
+          "transliteration": "rig3it",
+          "english": "she returned"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رجعنا",
+          "transliteration": "rigi3na",
+          "english": "we returned"
+        },
+        {
+          "person": "entu",
+          "arabic": "رجعتوا",
+          "transliteration": "rigi3tu",
+          "english": "you (pl) returned"
+        },
+        {
+          "person": "homma",
+          "arabic": "رجعوا",
+          "transliteration": "rig3u",
+          "english": "they returned"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رجعتش",
+          "transliteration": "ma rigi3tish",
+          "english": "I didn't return"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رجعتش",
+          "transliteration": "ma rigi3tish",
+          "english": "you (m) didn't return"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رجعتيش",
+          "transliteration": "ma rigi3tiish",
+          "english": "you (f) didn't return"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رجعش",
+          "transliteration": "ma rigi3sh",
+          "english": "he didn't return"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رجعتش",
+          "transliteration": "ma rig3itsh",
+          "english": "she didn't return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رجعناش",
+          "transliteration": "ma rigi3naash",
+          "english": "we didn't return"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رجعتوش",
+          "transliteration": "ma rigi3tuush",
+          "english": "you (pl) didn't return"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رجعوش",
+          "transliteration": "ma rig3uush",
+          "english": "they didn't return"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "برجع",
+          "transliteration": "barga3",
+          "english": "I return"
+        },
+        {
+          "person": "enta",
+          "arabic": "بترجع",
+          "transliteration": "bitirga3",
+          "english": "you (m) return"
+        },
+        {
+          "person": "enti",
+          "arabic": "بترجعي",
+          "transliteration": "bitirga3i",
+          "english": "you (f) return"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيرجع",
+          "transliteration": "biyirga3",
+          "english": "he returns"
+        },
+        {
+          "person": "heya",
+          "arabic": "بترجع",
+          "transliteration": "bitirga3",
+          "english": "she returns"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنرجع",
+          "transliteration": "binirga3",
+          "english": "we return"
+        },
+        {
+          "person": "entu",
+          "arabic": "بترجعوا",
+          "transliteration": "bitirga3u",
+          "english": "you (pl) return"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيرجعوا",
+          "transliteration": "biyirga3u",
+          "english": "they return"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابرجعش",
+          "transliteration": "mabarga3sh",
+          "english": "I don't return"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابترجعش",
+          "transliteration": "mabitirga3sh",
+          "english": "you (m) don't return"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابترجعيش",
+          "transliteration": "mabitirga3iish",
+          "english": "you (f) don't return"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيرجعش",
+          "transliteration": "mabiyirga3sh",
+          "english": "he doesn't return"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابترجعش",
+          "transliteration": "mabitirga3sh",
+          "english": "she doesn't return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنرجعش",
+          "transliteration": "mabinirga3sh",
+          "english": "we don't return"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابترجعوش",
+          "transliteration": "mabitirga3uush",
+          "english": "you (pl) don't return"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيرجعوش",
+          "transliteration": "mabiyirga3uush",
+          "english": "they don't return"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هرجع",
+          "transliteration": "harga3",
+          "english": "I will return"
+        },
+        {
+          "person": "enta",
+          "arabic": "هترجع",
+          "transliteration": "hatirga3",
+          "english": "you (m) will return"
+        },
+        {
+          "person": "enti",
+          "arabic": "هترجعي",
+          "transliteration": "hatirga3i",
+          "english": "you (f) will return"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيرجع",
+          "transliteration": "hayirga3",
+          "english": "he will return"
+        },
+        {
+          "person": "heya",
+          "arabic": "هترجع",
+          "transliteration": "hatirga3",
+          "english": "she will return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنرجع",
+          "transliteration": "hanirga3",
+          "english": "we will return"
+        },
+        {
+          "person": "entu",
+          "arabic": "هترجعوا",
+          "transliteration": "hatirga3u",
+          "english": "you (pl) will return"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيرجعوا",
+          "transliteration": "hayirga3u",
+          "english": "they will return"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هرجع",
+          "transliteration": "mish harga3",
+          "english": "I won't return"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هترجع",
+          "transliteration": "mish hatirga3",
+          "english": "you (m) won't return"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هترجعي",
+          "transliteration": "mish hatirga3i",
+          "english": "you (f) won't return"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيرجع",
+          "transliteration": "mish hayirga3",
+          "english": "he won't return"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هترجع",
+          "transliteration": "mish hatirga3",
+          "english": "she won't return"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنرجع",
+          "transliteration": "mish hanirga3",
+          "english": "we won't return"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هترجعوا",
+          "transliteration": "mish hatirga3u",
+          "english": "you (pl) won't return"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيرجعوا",
+          "transliteration": "mish hayirga3u",
+          "english": "they won't return"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

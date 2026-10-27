@@ -1,0 +1,320 @@
+{
+  "slug": "3add",
+  "arabic": "عَدَّ",
+  "transliteration": "3adda",
+  "english": "to count",
+  "wordId": null,
+  "rootLetters": "ع د د",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb, so the identical second and third root letters merge with a shadda in most forms but separate when a consonant-initial suffix is added in the past tense.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عَدَدْتُ",
+          "transliteration": "3adadtu",
+          "english": "I counted"
+        },
+        {
+          "person": "enta",
+          "arabic": "عَدَدْتَ",
+          "transliteration": "3adadta",
+          "english": "you (m) counted"
+        },
+        {
+          "person": "enti",
+          "arabic": "عَدَدْتِ",
+          "transliteration": "3adadti",
+          "english": "you (f) counted"
+        },
+        {
+          "person": "howa",
+          "arabic": "عَدَّ",
+          "transliteration": "3adda",
+          "english": "he counted"
+        },
+        {
+          "person": "heya",
+          "arabic": "عَدَّتْ",
+          "transliteration": "3addat",
+          "english": "she counted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عَدَدْنَا",
+          "transliteration": "3adadna",
+          "english": "we counted"
+        },
+        {
+          "person": "entu",
+          "arabic": "عَدَدْتُمْ",
+          "transliteration": "3adadtum",
+          "english": "you (pl) counted"
+        },
+        {
+          "person": "homma",
+          "arabic": "عَدُّوا",
+          "transliteration": "3addu",
+          "english": "they counted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا عَدَدْتُ",
+          "transliteration": "ma 3adadtu",
+          "english": "I didn't count"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا عَدَدْتَ",
+          "transliteration": "ma 3adadta",
+          "english": "you (m) didn't count"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا عَدَدْتِ",
+          "transliteration": "ma 3adadti",
+          "english": "you (f) didn't count"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا عَدَّ",
+          "transliteration": "ma 3adda",
+          "english": "he didn't count"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا عَدَّتْ",
+          "transliteration": "ma 3addat",
+          "english": "she didn't count"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا عَدَدْنَا",
+          "transliteration": "ma 3adadna",
+          "english": "we didn't count"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا عَدَدْتُمْ",
+          "transliteration": "ma 3adadtum",
+          "english": "you (pl) didn't count"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا عَدُّوا",
+          "transliteration": "ma 3addu",
+          "english": "they didn't count"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَعُدُّ",
+          "transliteration": "a3uddu",
+          "english": "I count"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَعُدُّ",
+          "transliteration": "ta3uddu",
+          "english": "you (m) count"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَعُدِّينَ",
+          "transliteration": "ta3uddina",
+          "english": "you (f) count"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَعُدُّ",
+          "transliteration": "ya3uddu",
+          "english": "he counts"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَعُدُّ",
+          "transliteration": "ta3uddu",
+          "english": "she counts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَعُدُّ",
+          "transliteration": "na3uddu",
+          "english": "we count"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَعُدُّونَ",
+          "transliteration": "ta3udduna",
+          "english": "you (pl) count"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَعُدُّونَ",
+          "transliteration": "ya3udduna",
+          "english": "they count"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَعُدُّ",
+          "transliteration": "la a3uddu",
+          "english": "I don't count"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَعُدُّ",
+          "transliteration": "la ta3uddu",
+          "english": "you (m) don't count"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَعُدِّينَ",
+          "transliteration": "la ta3uddina",
+          "english": "you (f) don't count"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَعُدُّ",
+          "transliteration": "la ya3uddu",
+          "english": "he doesn't count"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَعُدُّ",
+          "transliteration": "la ta3uddu",
+          "english": "she doesn't count"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَعُدُّ",
+          "transliteration": "la na3uddu",
+          "english": "we don't count"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَعُدُّونَ",
+          "transliteration": "la ta3udduna",
+          "english": "you (pl) don't count"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَعُدُّونَ",
+          "transliteration": "la ya3udduna",
+          "english": "they don't count"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَعُدُّ",
+          "transliteration": "sa2a3uddu",
+          "english": "I will count"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَعُدُّ",
+          "transliteration": "sata3uddu",
+          "english": "you (m) will count"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَعُدِّينَ",
+          "transliteration": "sata3uddina",
+          "english": "you (f) will count"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَعُدُّ",
+          "transliteration": "saya3uddu",
+          "english": "he will count"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَعُدُّ",
+          "transliteration": "sata3uddu",
+          "english": "she will count"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَعُدُّ",
+          "transliteration": "sana3uddu",
+          "english": "we will count"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَعُدُّونَ",
+          "transliteration": "sata3udduna",
+          "english": "you (pl) will count"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَعُدُّونَ",
+          "transliteration": "saya3udduna",
+          "english": "they will count"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَعُدَّ",
+          "transliteration": "lan a3udda",
+          "english": "I won't count"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَعُدَّ",
+          "transliteration": "lan ta3udda",
+          "english": "you (m) won't count"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَعُدِّي",
+          "transliteration": "lan ta3uddi",
+          "english": "you (f) won't count"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَعُدَّ",
+          "transliteration": "lan ya3udda",
+          "english": "he won't count"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَعُدَّ",
+          "transliteration": "lan ta3udda",
+          "english": "she won't count"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَعُدَّ",
+          "transliteration": "lan na3udda",
+          "english": "we won't count"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَعُدُّوا",
+          "transliteration": "lan ta3uddu",
+          "english": "you (pl) won't count"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَعُدُّوا",
+          "transliteration": "lan ya3uddu",
+          "english": "they won't count"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

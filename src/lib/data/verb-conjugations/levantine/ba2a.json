@@ -1,0 +1,320 @@
+{
+  "slug": "ba2a",
+  "arabic": "صار",
+  "transliteration": "sar",
+  "english": "to become",
+  "wordId": null,
+  "rootLetters": "ص ي ر",
+  "verbClass": "hollow",
+  "notes": "Levantine says sar for \"become\"; the long a shortens to i before consonant endings (sirt).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صرت",
+          "transliteration": "sirt",
+          "english": "I became"
+        },
+        {
+          "person": "enta",
+          "arabic": "صرت",
+          "transliteration": "sirt",
+          "english": "you (m) became"
+        },
+        {
+          "person": "enti",
+          "arabic": "صرتي",
+          "transliteration": "sirti",
+          "english": "you (f) became"
+        },
+        {
+          "person": "howa",
+          "arabic": "صار",
+          "transliteration": "sar",
+          "english": "he became"
+        },
+        {
+          "person": "heya",
+          "arabic": "صارت",
+          "transliteration": "sarit",
+          "english": "she became"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صرنا",
+          "transliteration": "sirna",
+          "english": "we became"
+        },
+        {
+          "person": "entu",
+          "arabic": "صرتوا",
+          "transliteration": "sirtu",
+          "english": "you (pl) became"
+        },
+        {
+          "person": "homma",
+          "arabic": "صاروا",
+          "transliteration": "saru",
+          "english": "they became"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما صرت",
+          "transliteration": "ma sirt",
+          "english": "I didn't become"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما صرت",
+          "transliteration": "ma sirt",
+          "english": "you (m) didn't become"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما صرتي",
+          "transliteration": "ma sirti",
+          "english": "you (f) didn't become"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما صار",
+          "transliteration": "ma sar",
+          "english": "he didn't become"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما صارت",
+          "transliteration": "ma sarit",
+          "english": "she didn't become"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما صرنا",
+          "transliteration": "ma sirna",
+          "english": "we didn't become"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما صرتوا",
+          "transliteration": "ma sirtu",
+          "english": "you (pl) didn't become"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما صاروا",
+          "transliteration": "ma saru",
+          "english": "they didn't become"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بصير",
+          "transliteration": "bsir",
+          "english": "I become"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتصير",
+          "transliteration": "btsir",
+          "english": "you (m) become"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتصيري",
+          "transliteration": "btsiri",
+          "english": "you (f) become"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيصير",
+          "transliteration": "bisir",
+          "english": "he becomes"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتصير",
+          "transliteration": "btsir",
+          "english": "she becomes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منصير",
+          "transliteration": "mnsir",
+          "english": "we become"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتصيروا",
+          "transliteration": "btsiru",
+          "english": "you (pl) become"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيصيروا",
+          "transliteration": "bisiru",
+          "english": "they become"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بصير",
+          "transliteration": "ma bsir",
+          "english": "I don't become"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتصير",
+          "transliteration": "ma btsir",
+          "english": "you (m) don't become"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتصيري",
+          "transliteration": "ma btsiri",
+          "english": "you (f) don't become"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيصير",
+          "transliteration": "ma bisir",
+          "english": "he doesn't become"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتصير",
+          "transliteration": "ma btsir",
+          "english": "she doesn't become"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منصير",
+          "transliteration": "ma mnsir",
+          "english": "we don't become"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتصيروا",
+          "transliteration": "ma btsiru",
+          "english": "you (pl) don't become"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيصيروا",
+          "transliteration": "ma bisiru",
+          "english": "they don't become"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح صير",
+          "transliteration": "ra7 sir",
+          "english": "I will become"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تصير",
+          "transliteration": "ra7 tsir",
+          "english": "you (m) will become"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تصيري",
+          "transliteration": "ra7 tsiri",
+          "english": "you (f) will become"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يصير",
+          "transliteration": "ra7 ysir",
+          "english": "he will become"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تصير",
+          "transliteration": "ra7 tsir",
+          "english": "she will become"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نصير",
+          "transliteration": "ra7 nsir",
+          "english": "we will become"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تصيروا",
+          "transliteration": "ra7 tsiru",
+          "english": "you (pl) will become"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يصيروا",
+          "transliteration": "ra7 ysiru",
+          "english": "they will become"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح صير",
+          "transliteration": "ma ra7 sir",
+          "english": "I won't become"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تصير",
+          "transliteration": "ma ra7 tsir",
+          "english": "you (m) won't become"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تصيري",
+          "transliteration": "ma ra7 tsiri",
+          "english": "you (f) won't become"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يصير",
+          "transliteration": "ma ra7 ysir",
+          "english": "he won't become"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تصير",
+          "transliteration": "ma ra7 tsir",
+          "english": "she won't become"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نصير",
+          "transliteration": "ma ra7 nsir",
+          "english": "we won't become"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تصيروا",
+          "transliteration": "ma ra7 tsiru",
+          "english": "you (pl) won't become"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يصيروا",
+          "transliteration": "ma ra7 ysiru",
+          "english": "they won't become"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}

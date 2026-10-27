@@ -1,0 +1,320 @@
+{
+  "slug": "sallim",
+  "arabic": "سَلَّمَ عَلَى",
+  "transliteration": "sallama 3ala",
+  "english": "to greet",
+  "wordId": null,
+  "rootLetters": "س ل م",
+  "verbClass": "sound",
+  "notes": "This is a regular Form II verb; it requires the preposition عَلَى (3ala) to mean 'to greet'.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَلَّمْتُ عَلَى",
+          "transliteration": "sallamtu 3ala",
+          "english": "I greeted"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَلَّمْتَ عَلَى",
+          "transliteration": "sallamta 3ala",
+          "english": "you (m) greeted"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَلَّمْتِ عَلَى",
+          "transliteration": "sallamti 3ala",
+          "english": "you (f) greeted"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَلَّمَ عَلَى",
+          "transliteration": "sallama 3ala",
+          "english": "he greeted"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَلَّمَتْ عَلَى",
+          "transliteration": "sallamat 3ala",
+          "english": "she greeted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَلَّمْنَا عَلَى",
+          "transliteration": "sallamna 3ala",
+          "english": "we greeted"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَلَّمْتُمْ عَلَى",
+          "transliteration": "sallamtum 3ala",
+          "english": "you (pl) greeted"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَلَّمُوا عَلَى",
+          "transliteration": "sallamu 3ala",
+          "english": "they greeted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا سَلَّمْتُ عَلَى",
+          "transliteration": "ma sallamtu 3ala",
+          "english": "I didn't greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا سَلَّمْتَ عَلَى",
+          "transliteration": "ma sallamta 3ala",
+          "english": "you (m) didn't greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا سَلَّمْتِ عَلَى",
+          "transliteration": "ma sallamti 3ala",
+          "english": "you (f) didn't greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا سَلَّمَ عَلَى",
+          "transliteration": "ma sallama 3ala",
+          "english": "he didn't greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا سَلَّمَتْ عَلَى",
+          "transliteration": "ma sallamat 3ala",
+          "english": "she didn't greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا سَلَّمْنَا عَلَى",
+          "transliteration": "ma sallamna 3ala",
+          "english": "we didn't greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا سَلَّمْتُمْ عَلَى",
+          "transliteration": "ma sallamtum 3ala",
+          "english": "you (pl) didn't greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا سَلَّمُوا عَلَى",
+          "transliteration": "ma sallamu 3ala",
+          "english": "they didn't greet"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أُسَلِّمُ عَلَى",
+          "transliteration": "usallimu 3ala",
+          "english": "I greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "تُسَلِّمُ عَلَى",
+          "transliteration": "tusallimu 3ala",
+          "english": "you (m) greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "تُسَلِّمِينَ عَلَى",
+          "transliteration": "tusallimina 3ala",
+          "english": "you (f) greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "يُسَلِّمُ عَلَى",
+          "transliteration": "yusallimu 3ala",
+          "english": "he greets"
+        },
+        {
+          "person": "heya",
+          "arabic": "تُسَلِّمُ عَلَى",
+          "transliteration": "tusallimu 3ala",
+          "english": "she greets"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نُسَلِّمُ عَلَى",
+          "transliteration": "nusallimu 3ala",
+          "english": "we greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "تُسَلِّمُونَ عَلَى",
+          "transliteration": "tusallimuna 3ala",
+          "english": "you (pl) greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "يُسَلِّمُونَ عَلَى",
+          "transliteration": "yusallimuna 3ala",
+          "english": "they greet"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أُسَلِّمُ عَلَى",
+          "transliteration": "la usallimu 3ala",
+          "english": "I don't greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تُسَلِّمُ عَلَى",
+          "transliteration": "la tusallimu 3ala",
+          "english": "you (m) don't greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تُسَلِّمِينَ عَلَى",
+          "transliteration": "la tusallimina 3ala",
+          "english": "you (f) don't greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يُسَلِّمُ عَلَى",
+          "transliteration": "la yusallimu 3ala",
+          "english": "he doesn't greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تُسَلِّمُ عَلَى",
+          "transliteration": "la tusallimu 3ala",
+          "english": "she doesn't greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نُسَلِّمُ عَلَى",
+          "transliteration": "la nusallimu 3ala",
+          "english": "we don't greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تُسَلِّمُونَ عَلَى",
+          "transliteration": "la tusallimuna 3ala",
+          "english": "you (pl) don't greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يُسَلِّمُونَ عَلَى",
+          "transliteration": "la yusallimuna 3ala",
+          "english": "they don't greet"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأُسَلِّمُ عَلَى",
+          "transliteration": "sa2usallimu 3ala",
+          "english": "I will greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتُسَلِّمُ عَلَى",
+          "transliteration": "satusallimu 3ala",
+          "english": "you (m) will greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتُسَلِّمِينَ عَلَى",
+          "transliteration": "satusallimina 3ala",
+          "english": "you (f) will greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيُسَلِّمُ عَلَى",
+          "transliteration": "sayusallimu 3ala",
+          "english": "he will greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتُسَلِّمُ عَلَى",
+          "transliteration": "satusallimu 3ala",
+          "english": "she will greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنُسَلِّمُ عَلَى",
+          "transliteration": "sanusallimu 3ala",
+          "english": "we will greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتُسَلِّمُونَ عَلَى",
+          "transliteration": "satusallimuna 3ala",
+          "english": "you (pl) will greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيُسَلِّمُونَ عَلَى",
+          "transliteration": "sayusallimuna 3ala",
+          "english": "they will greet"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أُسَلِّمَ عَلَى",
+          "transliteration": "lan usallima 3ala",
+          "english": "I won't greet"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تُسَلِّمَ عَلَى",
+          "transliteration": "lan tusallima 3ala",
+          "english": "you (m) won't greet"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تُسَلِّمِي عَلَى",
+          "transliteration": "lan tusallimi 3ala",
+          "english": "you (f) won't greet"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يُسَلِّمَ عَلَى",
+          "transliteration": "lan yusallima 3ala",
+          "english": "he won't greet"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تُسَلِّمَ عَلَى",
+          "transliteration": "lan tusallima 3ala",
+          "english": "she won't greet"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نُسَلِّمَ عَلَى",
+          "transliteration": "lan nusallima 3ala",
+          "english": "we won't greet"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تُسَلِّمُوا عَلَى",
+          "transliteration": "lan tusallimu 3ala",
+          "english": "you (pl) won't greet"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يُسَلِّمُوا عَلَى",
+          "transliteration": "lan yusallimu 3ala",
+          "english": "they won't greet"
+        }
+      ]
+    }
+  },
+  "form": "II",
+  "source": "generated"
+}

@@ -1,6 +1,9 @@
 <script lang="ts">
   import type { VerbIndexEntry } from '$lib/data/verb-conjugations/manifest';
   import { formatDialectName } from '$lib/utils/seo';
+  import VerbGlossary from '$lib/components/dialect-shared/conjugations/VerbGlossary.svelte';
+  import { FORMS, type DerivedForm } from '$lib/data/verb-conjugations/glossary';
+  import { hasGrammar } from '$lib/data/grammar/topics';
 
   let {
     data
@@ -36,6 +39,8 @@
   <p class="text-text-200 mb-6">
     Practice all conjugations: past &amp; present, affirmative &amp; negative, all 8 pronouns.
   </p>
+
+  <VerbGlossary grammarHref={hasGrammar(data.dialect) ? `/grammar/${data.dialect}` : undefined} />
 
   <div class="flex flex-wrap gap-3 mb-6">
     <input
@@ -87,8 +92,10 @@
           <p class="text-3xl font-bold text-text-300 mb-1 text-center" dir="rtl">{verb.arabic}</p>
           <p class="text-sm text-text-200 text-center mb-1">{verb.transliteration}</p>
           <p class="text-base font-semibold text-text-300 text-center mb-2">{verb.english}</p>
-          <div class="flex items-center justify-between">
-            <p class="text-xs text-text-200">{verb.rootLetters}</p>
+          <div class="flex items-center justify-between gap-2">
+            <p class="text-xs text-text-200">
+              {verb.rootLetters}{#if verb.form}<span class="ml-1">· {FORMS[verb.form as DerivedForm]?.label}</span>{/if}
+            </p>
             <span
               class="text-xs px-2 py-0.5 rounded-full font-medium {verbClassColors[verb.verbClass] ??
                 'bg-tile-500 text-text-200'}"

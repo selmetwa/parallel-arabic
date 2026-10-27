@@ -119,7 +119,10 @@
 	</ul>
 	<p>
 		The <a href={resolve('/levantine/conjugations')}>Levantine conjugation tables</a> have every
-		tense of the common verbs, affirmative and negative.
+		tense of 200 common verbs, affirmative and negative, and the
+		<a href={resolve('/grammar/levantine')}>Levantine grammar guide</a> explains the rules behind
+		them, from the <a href={resolve('/grammar/levantine/present-tense')}>b- present</a> to
+		<a href={resolve('/grammar/levantine/future')}>ra7 for the future</a>.
 	</p>
 
 	<h2>6. Read and listen to something longer (month 3 onwards)</h2>

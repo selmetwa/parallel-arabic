@@ -1045,6 +1045,8 @@ function normalise(url: string): string {
  * Structured-data counterpart to `resolvePageMeta`, resolved from the same path.
  */
 export function resolveStructuredData(pathname: string, data?: any) {
+	// A route can supply its own JSON-LD (the grammar articles do).
+	if (data?.structuredData) return data.structuredData;
 	const path = pathname.replace(/\/+$/, '') || '/';
 	const match = resolvePageKey(path);
 	if (!match) return generateStructuredData('__unmapped__');

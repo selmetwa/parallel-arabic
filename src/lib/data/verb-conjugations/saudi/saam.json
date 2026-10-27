@@ -1,0 +1,320 @@
+{
+  "slug": "saam",
+  "arabic": "صام",
+  "transliteration": "saam",
+  "english": "to fast",
+  "wordId": null,
+  "rootLetters": "ص و م",
+  "verbClass": "hollow",
+  "notes": "This is a Form I hollow verb with a 'waw' root, so the middle vowel becomes 'u' in the first and second person past tense, and 'oo' in the present/future.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صمت",
+          "transliteration": "sumt",
+          "english": "I fasted"
+        },
+        {
+          "person": "enta",
+          "arabic": "صمت",
+          "transliteration": "sumt",
+          "english": "you (m) fasted"
+        },
+        {
+          "person": "enti",
+          "arabic": "صمتي",
+          "transliteration": "sumti",
+          "english": "you (f) fasted"
+        },
+        {
+          "person": "howa",
+          "arabic": "صام",
+          "transliteration": "saam",
+          "english": "he fasted"
+        },
+        {
+          "person": "heya",
+          "arabic": "صامت",
+          "transliteration": "saamat",
+          "english": "she fasted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صمنا",
+          "transliteration": "sumna",
+          "english": "we fasted"
+        },
+        {
+          "person": "entu",
+          "arabic": "صمتوا",
+          "transliteration": "sumtu",
+          "english": "you (pl) fasted"
+        },
+        {
+          "person": "homma",
+          "arabic": "صاموا",
+          "transliteration": "saamu",
+          "english": "they fasted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما صمت",
+          "transliteration": "ma sumt",
+          "english": "I didn't fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما صمت",
+          "transliteration": "ma sumt",
+          "english": "you (m) didn't fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما صمتي",
+          "transliteration": "ma sumti",
+          "english": "you (f) didn't fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما صام",
+          "transliteration": "ma saam",
+          "english": "he didn't fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما صامت",
+          "transliteration": "ma saamat",
+          "english": "she didn't fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما صمنا",
+          "transliteration": "ma sumna",
+          "english": "we didn't fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما صمتوا",
+          "transliteration": "ma sumtu",
+          "english": "you (pl) didn't fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما صاموا",
+          "transliteration": "ma saamu",
+          "english": "they didn't fast"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باصوم",
+          "transliteration": "basoom",
+          "english": "I fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتصوم",
+          "transliteration": "btisoom",
+          "english": "you (m) fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتصومي",
+          "transliteration": "btisoomi",
+          "english": "you (f) fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيصوم",
+          "transliteration": "byisoom",
+          "english": "he fasts"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتصوم",
+          "transliteration": "btisoom",
+          "english": "she fasts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنصوم",
+          "transliteration": "bnisoom",
+          "english": "we fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتصوموا",
+          "transliteration": "btisoomu",
+          "english": "you (pl) fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيصوموا",
+          "transliteration": "byisoomu",
+          "english": "they fast"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باصوم",
+          "transliteration": "ma basoom",
+          "english": "I don't fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتصوم",
+          "transliteration": "ma btisoom",
+          "english": "you (m) don't fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتصومي",
+          "transliteration": "ma btisoomi",
+          "english": "you (f) don't fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيصوم",
+          "transliteration": "ma byisoom",
+          "english": "he doesn't fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتصوم",
+          "transliteration": "ma btisoom",
+          "english": "she doesn't fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنصوم",
+          "transliteration": "ma bnisoom",
+          "english": "we don't fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتصوموا",
+          "transliteration": "ma btisoomu",
+          "english": "you (pl) don't fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيصوموا",
+          "transliteration": "ma byisoomu",
+          "english": "they don't fast"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاصوم",
+          "transliteration": "7asoom",
+          "english": "I will fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتصوم",
+          "transliteration": "7atisoom",
+          "english": "you (m) will fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتصومي",
+          "transliteration": "7atisoomi",
+          "english": "you (f) will fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيصوم",
+          "transliteration": "7ayisoom",
+          "english": "he will fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتصوم",
+          "transliteration": "7atisoom",
+          "english": "she will fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنصوم",
+          "transliteration": "7anisoom",
+          "english": "we will fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتصوموا",
+          "transliteration": "7atisoomu",
+          "english": "you (pl) will fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيصوموا",
+          "transliteration": "7ayisoomu",
+          "english": "they will fast"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاصوم",
+          "transliteration": "ma 7asoom",
+          "english": "I won't fast"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتصوم",
+          "transliteration": "ma 7atisoom",
+          "english": "you (m) won't fast"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتصومي",
+          "transliteration": "ma 7atisoomi",
+          "english": "you (f) won't fast"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيصوم",
+          "transliteration": "ma 7ayisoom",
+          "english": "he won't fast"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتصوم",
+          "transliteration": "ma 7atisoom",
+          "english": "she won't fast"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنصوم",
+          "transliteration": "ma 7anisoom",
+          "english": "we won't fast"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتصوموا",
+          "transliteration": "ma 7atisoomu",
+          "english": "you (pl) won't fast"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيصوموا",
+          "transliteration": "ma 7ayisoomu",
+          "english": "they won't fast"
+        }
+      ]
+    }
+  },
+  "form": "I",
+  "source": "generated"
+}
