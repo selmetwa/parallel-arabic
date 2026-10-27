@@ -47,7 +47,7 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 		},
 		{ t: "it's exactly the sort of thing I was looking for", b: true },
 		{
-			t: ' - there is so much packed in and this has quickly become an invaluable resource when there aren\'t many resources for learning dialects out there'
+			t: ' - there is so much packed in and this has quickly become an invaluable resource'
 		}
 	]
 ];
