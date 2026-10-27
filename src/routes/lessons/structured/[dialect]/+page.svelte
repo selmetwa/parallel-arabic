@@ -715,7 +715,9 @@
 		top: 100%;
 		left: 50%;
 		z-index: 30;
-		width: 8rem;
+		/* Wide enough that even the longest title takes two lines, which
+		   keeps the label clear of the next step 140px below. */
+		width: 10.5rem;
 		margin-top: 0.9rem;
 		transform: translateX(-50%);
 		padding: 0.35rem 0.5rem;
@@ -724,12 +726,15 @@
 		border: 2px solid var(--tile5);
 		background: var(--tile3);
 	}
-	.tip-mobile span {
-		display: block;
+	/* Whole titles, wrapped small, rather than one truncated line. */
+	.tip-mobile > span {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		line-clamp: 3;
+		-webkit-box-orient: vertical;
 		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		font-size: 0.72rem;
+		font-size: 0.66rem;
+		line-height: 1.25;
 		font-weight: 600;
 		color: var(--text1);
 	}
