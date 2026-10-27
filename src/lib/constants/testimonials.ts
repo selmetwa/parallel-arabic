@@ -7,6 +7,15 @@ export type TestimonialSegment = { t: string; b?: boolean };
 
 export const TESTIMONIALS: TestimonialSegment[][] = [
 	[
+		{
+			t: "I've been learning Egyptian Arabic with a teacher for a few months now and was looking for something to supplement my classes and practise with outside of lessons. I came across your platform after someone mentioned it on Reddit and honestly "
+		},
+		{ t: "it's exactly the sort of thing I was looking for", b: true },
+		{
+			t: ' - there is so much packed in and this has quickly become an invaluable resource'
+		}
+	],
+	[
 		{ t: 'After only a day, I love Parallel Arabic.', b: true },
 		{
 			t: ' As a language teacher and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.'
