@@ -5,6 +5,7 @@
 	import { rememberNext, safeNext, withNewSignup } from '$lib/helpers/safe-next';
 	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
+	import Turnstile from '$lib/components/Turnstile.svelte';
 	import TestimonialWall from '$lib/components/TestimonialWall.svelte';
 	import AuthValueProps from '$lib/components/AuthValueProps.svelte';
 	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
@@ -22,6 +23,8 @@
   // Form state
   let loading = $state(false);
   let resetMode = $state(false);
+  let turnstile: ReturnType<typeof Turnstile> | undefined = $state();
+  let captchaVerified = $state(false);
 
   // Get the supabase client for Google OAuth (still needs to be client-side)
   let { supabase } = $derived(data);
@@ -245,6 +248,7 @@
         return async ({ update }) => {
           loading = false;
           await update();
+          turnstile?.reset();
         };
       }}
       class="bg-tile-400 border-2 border-tile-600 rounded-xl shadow-xl p-8 shrink-0"
@@ -282,7 +286,9 @@
         {/if}
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full !py-3 !text-lg mb-4">
+      <Turnstile bind:this={turnstile} bind:verified={captchaVerified} />
+
+      <Button type="submit" disabled={loading || !captchaVerified} className="w-full !py-3 !text-lg mb-4">
         {loading ? (resetMode ? 'Sending...' : 'Signing in...') : (resetMode ? 'Send Reset Link' : 'Log In')}
       </Button>
 

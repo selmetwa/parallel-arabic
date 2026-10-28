@@ -21,8 +21,13 @@ export const actions: Actions = {
 		const email = formData.get('email') as string;
 		const password = formData.get('password') as string;
 		const next = safeNext(formData.get('next') as string | null);
+		const captchaToken = (formData.get('captchaToken') as string | null) || undefined;
 
-		const { data, error } = await supabase.auth.signUp({ email, password });
+		const { data, error } = await supabase.auth.signUp({
+			email,
+			password,
+			options: { captchaToken }
+		});
 		if (error) {
 			return {
 				error: error.message
