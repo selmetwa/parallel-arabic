@@ -18,8 +18,13 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const email = formData.get('email') as string;
 		const password = formData.get('password') as string;
+		const captchaToken = (formData.get('captchaToken') as string | null) || undefined;
 
-		const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+		const { data, error } = await supabase.auth.signInWithPassword({
+			email,
+			password,
+			options: { captchaToken }
+		});
 
 		if (error) {
 			return {
@@ -33,9 +38,11 @@ export const actions: Actions = {
 	resetPassword: async ({ request, locals: { supabase }, url }) => {
 		const formData = await request.formData();
 		const email = formData.get('email') as string;
+		const captchaToken = (formData.get('captchaToken') as string | null) || undefined;
 
 		const { error } = await supabase.auth.resetPasswordForEmail(email, {
-			redirectTo: `${url.origin}/auth/reset-password`
+			redirectTo: `${url.origin}/auth/reset-password`,
+			captchaToken
 		});
 
 		if (error) {
