@@ -100,7 +100,7 @@
     reviewWordsError = '';
 
     try {
-      const words = await fetchUserReviewWords(user.id, reviewWordsSource);
+      const words = await fetchUserReviewWords(reviewWordsSource);
       reviewWords = words;
 
       if (words.length === 0) {

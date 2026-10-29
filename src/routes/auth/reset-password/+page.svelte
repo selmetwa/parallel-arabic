@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { supabase } from '$lib/supabaseClient'
   import { goto } from '$app/navigation'
   import { onMount } from 'svelte'
   import { page } from '$app/stores'
   import Button from '$lib/components/Button.svelte'
+  import type { AuthChangeEvent, Session } from '@supabase/supabase-js'
 
   let password = $state('')
   let confirmPassword = $state('')
@@ -28,8 +28,8 @@
     }
 
     // Listen for auth changes using the supabase client from layout
-    const supabaseClient = $page.data?.supabase || supabase
-    const { data: { subscription } } = supabaseClient.auth.onAuthStateChange((_event, _session) => {
+    const supabaseClient = $page.data.supabase
+    const { data: { subscription } } = supabaseClient.auth.onAuthStateChange((_event: AuthChangeEvent, _session: Session | null) => {
       session = _session
       
       if (!_session && _event !== 'SIGNED_OUT') {
@@ -62,7 +62,7 @@
     }
 
     try {
-      const supabaseClient = $page.data?.supabase || supabase
+      const supabaseClient = $page.data.supabase
       const { error: updateError } = await supabaseClient.auth.updateUser({
         password: password
       })

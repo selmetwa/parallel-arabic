@@ -1,7 +1,6 @@
 <script>
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
-  import { supabase } from '$lib/supabaseClient';
   import classNames from "classnames";
 
   /**

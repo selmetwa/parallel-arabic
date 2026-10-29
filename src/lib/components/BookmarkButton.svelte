@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { supabase } from '$lib/supabaseClient';
-    
     interface Props {
         arabic: string;
         english: string;
@@ -18,20 +16,9 @@
     // Check if word is already saved (for UI state only)
     async function checkIfSaved() {
         try {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) {
-                isChecking = false;
-                return;
-            }
-            
-            const { data } = await supabase
-                .from('saved_word')
-                .select('id')
-                .eq('arabic_word', arabic)
-                .eq('user_id', user.id)
-                .maybeSingle();
-            
-            isSaved = !!data?.id;
+            const res = await fetch(`/api/save-word?arabic=${encodeURIComponent(arabic)}`);
+            const data = await res.json();
+            isSaved = !!data?.saved;
         } catch (error) {
             console.error('[BookmarkButton] Error checking saved status:', error);
         } finally {

@@ -2,6 +2,7 @@ import { getStoriesPaginated, getStoryById } from '$lib/helpers/story-helpers';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 import { isDialect } from '$lib/constants/dialects';
+import { supabase } from '$lib/supabaseClient';
 
 const PAGE_SIZE = 12;
 
@@ -13,7 +14,7 @@ function proficiencyToDifficulty(level: string | null | undefined): string | nul
 }
 
 
-export const load = async ({ parent, locals, url }) => {
+export const load = async ({ parent, url }) => {
   // Get session and subscription status from layout
   const { session, isSubscribed, user } = await parent();
 
@@ -52,11 +53,11 @@ export const load = async ({ parent, locals, url }) => {
   let topicStoryMap: Record<string, string> = {};
   if (user?.id) {
     const [completionsRes, topicRes] = await Promise.all([
-      locals.supabase
+      supabase
         .from('user_story_completion')
         .select('story_id')
         .eq('user_id', user.id),
-      locals.supabase
+      supabase
         .from('user_topic_story')
         .select('topic_id, story_id')
         .eq('user_id', user.id)

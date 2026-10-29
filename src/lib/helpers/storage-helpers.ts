@@ -1,7 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public';
-
-const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY);
+import { supabase } from '$lib/supabaseClient';
 
 /**
  * Upload story JSON to the generated_story bucket
