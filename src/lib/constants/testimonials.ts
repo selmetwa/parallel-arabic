@@ -49,6 +49,10 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 		{ t: 'I really like the website and find it very useful. For me ' },
 		{ t: "it's better than a lot of other platforms", b: true },
 		{ t: " — it's well thought out and has a lot of features." }
+	],
+	[
+		{ t: 'I love the parallel Arabic app so much!!', b: true },
+		{ t: ' It’s been so helpful for my learning' }
 	]
 ];
 
