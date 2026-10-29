@@ -12,8 +12,7 @@ export const load: PageServerLoad = async ({ locals }) => {
     .select('id, email, xp_this_week')
     .eq('leaderboard_opt_out', false)
     .gt('xp_this_week', 0)
-    .order('xp_this_week', { ascending: false })
-    .limit(10);
+    .order('xp_this_week', { ascending: false });
 
   if (error) {
     console.error('Error fetching leaderboard:', error);
