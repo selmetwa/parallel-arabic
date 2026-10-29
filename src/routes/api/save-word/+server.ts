@@ -88,3 +88,21 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		return json({ message: 'Something went wrong' }, { status: 500 });
 	}
 };
+
+export const GET: RequestHandler = async ({ url, locals }) => {
+	const { sessionId, user } = (await locals?.auth?.validate()) || {};
+	const arabic = url.searchParams.get('arabic');
+
+	if (!sessionId || !user || !arabic) {
+		return json({ saved: false });
+	}
+
+	const { data } = await supabase
+		.from('saved_word')
+		.select('id')
+		.eq('arabic_word', arabic)
+		.eq('user_id', user.id)
+		.limit(1);
+
+	return json({ saved: !!data?.[0]?.id });
+};

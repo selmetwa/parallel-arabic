@@ -1,5 +1,7 @@
 import { redirect } from '@sveltejs/kit'
+import { createClient } from '@supabase/supabase-js'
 import { supabase } from '$lib/supabaseClient'
+import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public'
 import type { RequestHandler } from './$types'
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
 import { sendWelcomeEmail } from '$lib/server/email'
@@ -20,7 +22,11 @@ export const GET: RequestHandler = async ({ url }) => {
 
   if (code) {
     try {
-      const { data, error: exchangeError } = await supabase.auth.exchangeCodeForSession(code)
+      // Per-request client: exchanging the code stores a session, which must not land on the shared admin client
+      const authClient = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY, {
+        auth: { persistSession: false, autoRefreshToken: false }
+      })
+      const { data, error: exchangeError } = await authClient.auth.exchangeCodeForSession(code)
       
       if (exchangeError) {
         console.error('Code exchange error:', exchangeError)

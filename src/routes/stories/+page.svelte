@@ -182,7 +182,7 @@
 			source: 'topic_card'
 		});
 		try {
-			const reviewWords = await fetchUserReviewWords(data.user.id, 'due-for-review');
+			const reviewWords = await fetchUserReviewWords('due-for-review');
 			const vocabularyWords = reviewWords
 				.slice(0, 15)
 				.map((w: { arabic: string; english: string }) => `${w.arabic} (${w.english})`)

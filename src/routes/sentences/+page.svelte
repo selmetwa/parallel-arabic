@@ -109,7 +109,7 @@
 		reviewWordsError = '';
 
 		try {
-			const words = await fetchUserReviewWords(data.user.id, reviewWordsSource);
+			const words = await fetchUserReviewWords(reviewWordsSource);
 			reviewWords = words;
 
 			if (words.length === 0) {

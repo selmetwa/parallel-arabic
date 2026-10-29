@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { getStoryById } from '$lib/helpers/story-helpers';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
+import { supabase } from '$lib/supabaseClient';
 
 export const load = async ({ params, locals, setHeaders, parent }) => {
   const { isSubscribed } = await parent();
@@ -37,11 +38,11 @@ export const load = async ({ params, locals, setHeaders, parent }) => {
 
   let storyCompleted = false;
   if (userId) {
-    const { data: completion } = await locals.supabase
+    const { data: completion } = await supabase
       .from('user_story_completion')
       .select('id')
       .eq('user_id', userId)
-      .eq('story_id', story.id)
+      .eq('story_id', params.id)
       .maybeSingle();
     storyCompleted = !!completion;
   }

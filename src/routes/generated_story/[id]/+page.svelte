@@ -21,7 +21,7 @@
   $effect(() => {
     const userId = data.userId;
     if (!userId) return;
-    fetchUserReviewWords(userId, 'all').then((words) => {
+    fetchUserReviewWords('all').then((words) => {
       savedWords = new Set(
         words.map((w) => w.arabic.replace(/[،,؟!.;:)(؛]/g, '').trim())
       );

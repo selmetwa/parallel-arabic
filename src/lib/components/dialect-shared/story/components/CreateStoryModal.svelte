@@ -111,7 +111,7 @@
 		reviewWordsError = '';
 		
 		try {
-			const words = await fetchUserReviewWords(data.user.id, reviewWordsSource);
+			const words = await fetchUserReviewWords(reviewWordsSource);
       console.log('words', words);
 			reviewWords = words;
 			

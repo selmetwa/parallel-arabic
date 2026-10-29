@@ -5,6 +5,7 @@ import { sequence } from '@sveltejs/kit/hooks';
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public';
 import { dev } from '$app/environment';
 import { ALL_DIALECTS } from '$lib/constants/dialects';
+import { supabase as supabaseAdmin } from '$lib/supabaseClient';
 
 const DIALECTS = ALL_DIALECTS;
 
@@ -110,7 +111,7 @@ const supabase: Handle = async ({ event, resolve }) => {
 			}
 
 			// query the user from the database
-			const { data: realUser, error: realUserError } = await event.locals.supabase
+			const { data: realUser, error: realUserError } = await supabaseAdmin
 				.from('user')
 				.select('*')
 				.eq('supabase_auth_id', user?.id)
