@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
+import { supabase as supabaseAdmin } from '$lib/supabaseClient';
 import { sendWelcomeEmail } from '$lib/server/email';
 import { safeNext, withNewSignup } from '$lib/helpers/safe-next';
 
@@ -38,7 +39,7 @@ export const actions: Actions = {
 		let isNewUser = false;
 		if (data.user) {
 			try {
-				const { data: existingUser, error: selectError } = await supabase
+				const { data: existingUser, error: selectError } = await supabaseAdmin
 					.from('user')
 					.select('id')
 					.eq('supabase_auth_id', data.user.id)
@@ -48,7 +49,7 @@ export const actions: Actions = {
 				// PGRST116 = no rows returned, meaning it's a new user
 				isNewUser = !existingUser && selectError?.code === 'PGRST116';
 
-				await syncSupabaseUserWithDB(data.user, supabase);
+				await syncSupabaseUserWithDB(data.user);
 
 				// Send welcome email to new users (non-blocking)
 				const newUserId = data.user?.id;

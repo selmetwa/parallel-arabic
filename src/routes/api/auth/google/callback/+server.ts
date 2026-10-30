@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
+import { supabase as supabaseAdmin } from '$lib/supabaseClient';
 import { safeNext, withNewSignup } from '$lib/helpers/safe-next';
 
 export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
@@ -35,7 +36,7 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 			console.log('✅ Google OAuth successful for:', data.user.email);
 
 			// Check if this is a new user before syncing
-			const { data: existingUser, error: selectError } = await supabase
+			const { data: existingUser, error: selectError } = await supabaseAdmin
 				.from('user')
 				.select('id')
 				.eq('supabase_auth_id', data.user.id)
@@ -47,7 +48,7 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 			try {
 				// Sync user data with your existing database using our helper
 				console.log('🔄 Syncing user with database...');
-				await syncSupabaseUserWithDB(data.user, supabase);
+				await syncSupabaseUserWithDB(data.user);
 				console.log('✅ User synced to database:', data.user.email);
 			} catch (syncError) {
 				console.error('❌ Failed to sync user to database:', syncError);
