@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit'
 import type { RequestHandler } from './$types'
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
+import { supabase as supabaseAdmin } from '$lib/supabaseClient'
 import { sendWelcomeEmail } from '$lib/server/email'
 import { ADMIN_ID } from '$env/static/private'
 import { NEXT_COOKIE, safeNext, withNewSignup } from '$lib/helpers/safe-next'
@@ -15,7 +16,7 @@ export const GET: RequestHandler = async ({ url, cookies, locals: { supabase } }
     
     if (!error && data.session && data.user) {
       // Check if this is a new user before syncing
-      const { data: existingUser, error: selectError } = await supabase
+      const { data: existingUser, error: selectError } = await supabaseAdmin
         .from('user')
         .select('id')
         .eq('supabase_auth_id', data.user.id)
@@ -26,7 +27,7 @@ export const GET: RequestHandler = async ({ url, cookies, locals: { supabase } }
       
       try {
         // Sync user data with your existing database
-        await syncSupabaseUserWithDB(data.user, supabase)
+        await syncSupabaseUserWithDB(data.user)
         
         // Send welcome email to new users (non-blocking)
         if (isNewUser && data.user.email && data.user.id) {

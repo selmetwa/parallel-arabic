@@ -1,10 +1,13 @@
 import type { Session, User as SupabaseUser, SupabaseClient } from '@supabase/supabase-js'
+import { supabase as supabaseAdmin } from '$lib/supabaseClient'
 
 /**
  * Sync Supabase user with Supabase database
  * Call this after successful authentication to ensure user exists in your user table
+ * Uses the service-role client: RLS on public.user blocks the user-scoped client.
  */
-export async function syncSupabaseUserWithDB(supabaseUser: SupabaseUser, supabase: SupabaseClient) {
+export async function syncSupabaseUserWithDB(supabaseUser: SupabaseUser) {
+  const supabase = supabaseAdmin
   try {
     // Check if user already exists by supabase_auth_id (for migrated users)
     const { data: existingUser, error: selectError } = await supabase
@@ -130,7 +133,7 @@ export async function getSupabaseUserSubscriptionStatus(supabaseUser: SupabaseUs
 
     if (!user) {
       // User doesn't exist in our DB yet, sync them
-      await syncSupabaseUserWithDB(supabaseUser, supabase)
+      await syncSupabaseUserWithDB(supabaseUser)
       return {
         isSubscribed: false,
         user: null

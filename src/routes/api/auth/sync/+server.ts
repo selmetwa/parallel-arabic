@@ -1,6 +1,7 @@
 import { json, type Cookies } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
+import { supabase as supabaseAdmin } from '$lib/supabaseClient';
 import { sendWelcomeEmail } from '$lib/server/email';
 import { createClient } from '@supabase/supabase-js';
 import { PUBLIC_SUPABASE_URL } from '$env/static/public';
@@ -27,17 +28,15 @@ function err(code: ErrorCode, message: string, status: number, detail?: string) 
  */
 async function syncAndCheckOnboarding(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  user: any,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  client: any
+  user: any
 ): Promise<boolean> {
-  const { data: existing } = await client
+  const { data: existing } = await supabaseAdmin
     .from('user')
     .select('id')
     .eq('supabase_auth_id', user.id)
     .maybeSingle();
 
-  const row = await syncSupabaseUserWithDB(user, client);
+  const row = await syncSupabaseUserWithDB(user);
 
   if (!existing && user.email) {
     sendWelcomeEmail(user.email, user.id).catch((e) => console.error('Failed to send welcome email:', e));
@@ -103,7 +102,7 @@ export const POST: RequestHandler = async ({ locals, request, cookies }) => {
     }
     console.log('[sync] Server flow — syncing user:', user.id);
     try {
-      const needsOnboarding = await syncAndCheckOnboarding(user, supabase);
+      const needsOnboarding = await syncAndCheckOnboarding(user);
       console.log('[sync] Server flow sync OK');
       return json({ ok: true, needsOnboarding });
     } catch (e) {
@@ -179,7 +178,7 @@ export const POST: RequestHandler = async ({ locals, request, cookies }) => {
 
   let needsOnboarding = false;
   try {
-    needsOnboarding = await syncAndCheckOnboarding(user, adminSupabase);
+    needsOnboarding = await syncAndCheckOnboarding(user);
     console.log('[sync] Token flow sync OK');
   } catch (e) {
     const message = (e as Error)?.message || 'Sync failed';

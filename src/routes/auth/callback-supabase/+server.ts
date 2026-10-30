@@ -46,7 +46,7 @@ export const GET: RequestHandler = async ({ url }) => {
         
         // Sync user data with your existing database
         try {
-          await syncSupabaseUserWithDB(data.user, supabase)
+          await syncSupabaseUserWithDB(data.user)
           
           // Send welcome email to new users (non-blocking)
           if (isNewUser && data.user.email && data.user.id) {

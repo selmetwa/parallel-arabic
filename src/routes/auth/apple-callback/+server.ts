@@ -19,7 +19,7 @@ export const GET: RequestHandler = async ({ url, locals }) => {
     redirect(303, '/login?error=auth_failed');
   }
 
-  await syncSupabaseUserWithDB(data.user, supabase);
+  await syncSupabaseUserWithDB(data.user);
   redirect(303, '/');
 };
 
@@ -39,6 +39,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     return json({ error: 'Auth failed', detail: error?.message }, { status: 401 });
   }
 
-  await syncSupabaseUserWithDB(data.user, supabase);
+  await syncSupabaseUserWithDB(data.user);
   return json({ ok: true });
 };
