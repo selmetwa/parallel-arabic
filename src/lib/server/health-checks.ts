@@ -9,6 +9,10 @@ const HOUR_MS = 60 * 60 * 1000;
 const CHECK_TIMEOUT_MS = 10_000;
 /** Warn before ElevenLabs runs out, not after. */
 const ELEVENLABS_USAGE_LIMIT = 0.8;
+/** Signups this recent may still be mid-sync, so they don't count as orphaned yet. */
+const SIGNUP_GRACE_MS = 15 * 60 * 1000;
+/** A stray orphan shows up every few days; a broken sync makes one per signup. */
+const ORPHAN_SIGNUP_LIMIT = 3;
 
 const REQUIRED_ENV = [
 	'GEMINI_API_KEY',
@@ -32,6 +36,21 @@ const CRON_MAX_AGE_MS: Record<string, number> = {
 };
 
 const cronKey = (name: string) => `cron:last_run:${name}`;
+
+type AuthUser = { id: string; email?: string | null; created_at: string };
+
+/**
+ * Auth users from the last day, old enough that sync should have created their
+ * public.user row. Users without that row are treated as logged out, which is how
+ * an RLS change silently broke every signup in Oct 2026.
+ */
+export function recentSignups(users: AuthUser[], now: number) {
+	return users.filter((u) => {
+		const age = now - Date.parse(u.created_at);
+		// No email is Apple's hidden-email case, which sync refuses on purpose.
+		return u.email && age > SIGNUP_GRACE_MS && age < 24 * HOUR_MS;
+	});
+}
 
 export type CheckResult = { name: string; ok: boolean; detail?: string };
 
@@ -75,6 +94,30 @@ const checks: Check[] = [
 		run: async () => {
 			const { error } = await supabase.from('user').select('id', { head: true, count: 'exact' });
 			if (error) throw new Error(error.message);
+		}
+	},
+	{
+		name: 'signups',
+		run: async () => {
+			const users: AuthUser[] = [];
+			for (let page = 1; ; page++) {
+				const { data, error } = await supabase.auth.admin.listUsers({ page, perPage: 1000 });
+				if (error) throw new Error(error.message);
+				users.push(...data.users);
+				if (data.users.length < 1000) break;
+			}
+			const recent = recentSignups(users, Date.now());
+			if (!recent.length) return 'no signups in 24h';
+			const { data: rows, error } = await supabase
+				.from('user')
+				.select('supabase_auth_id')
+				.in('supabase_auth_id', recent.map((u) => u.id));
+			if (error) throw new Error(error.message);
+			const linked = new Set((rows ?? []).map((r) => r.supabase_auth_id));
+			const orphans = recent.filter((u) => !linked.has(u.id));
+			const detail = `${orphans.length} of ${recent.length} signups in 24h have no public.user row`;
+			if (orphans.length >= ORPHAN_SIGNUP_LIMIT) throw new Error(detail);
+			return detail;
 		}
 	},
 	{
