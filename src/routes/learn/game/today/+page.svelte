@@ -111,6 +111,7 @@
 			</div>
 			<div class="step-body" style="--accent:{root.accent}; --deep:{root.deep};">
 				<DailyRoot
+					{dialect}
 					signedIn={!!data.user}
 					accent={root.accent}
 					deep={root.deep}

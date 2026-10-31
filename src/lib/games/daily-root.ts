@@ -1,5 +1,6 @@
 import { shuffle } from './shuffle';
 import { letterKey } from './arabic-letters';
+import { DIALECT_OPTIONS, type GameDialect } from './themes';
 
 export const MAX_TRIES = 3;
 /** Day 1 of the puzzle; the number in the share text counts from here. */
@@ -19,6 +20,7 @@ export interface RootWord {
 export interface RootPuzzle {
 	/** 1 on launch day, 2 the day after… */
 	number: number;
+	dialect: GameDialect;
 	root: string;
 	meaning: string;
 	words: RootWord[];
@@ -89,8 +91,9 @@ export function isSolved(guess: string, answer: string): boolean {
 export function shareText(puzzle: RootPuzzle, tries: (number | null)[], url: string): string {
 	const squares = tries.map((t) => (t === null ? '⬛' : t === 1 ? '🟩' : t === 2 ? '🟨' : '🟧'));
 	const solved = tries.filter((t) => t !== null).length;
+	const { emoji, label } = DIALECT_OPTIONS.find((o) => o.value === puzzle.dialect)!;
 	return [
-		`Parallel Arabic Daily Root #${puzzle.number}`,
+		`Parallel Arabic Daily Root #${puzzle.number} ${emoji} ${label}`,
 		`${puzzle.root.replace(/ /g, '-')} · ${solved}/${tries.length}`,
 		squares.join(''),
 		url

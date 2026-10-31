@@ -495,7 +495,7 @@ const PAGES: GameFeature[] = [
 			{
 				question: 'Do roots work in the dialects too?',
 				answer:
-					'Yes. The puzzle uses Modern Standard Arabic, but the same roots run through Egyptian, Levantine and Darija, often with the same patterns.'
+					'Yes. Everyone gets the same root each day, and you pick the dialect the words come in: Egyptian, Levantine, Darija, Iraqi, Khaleeji, Saudi or Modern Standard Arabic.'
 			},
 			{
 				question: 'Is Daily Root free?',

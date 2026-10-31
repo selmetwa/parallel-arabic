@@ -27,6 +27,7 @@
 	let index = $state(0);
 	/** The dialect picked: the answer to every kind of question is a dialect. */
 	let picked = $state<GameDialect | null>(null);
+	let hinted = $state(false);
 	let score = $state(0);
 	let xpEarned = $state(0);
 	let announcement = $state('');
@@ -69,6 +70,7 @@
 	function next() {
 		index++;
 		picked = null;
+		hinted = false;
 		announcement = '';
 		if (index === questions.length) onFinish?.(score, questions.length);
 		playIfListen();
@@ -130,9 +132,19 @@
 					{#if picked !== null}
 						<span class="ar" lang="ar" dir="rtl">{question.item.forms[question.dialect].arabic}</span>
 					{/if}
+					{#if picked !== null || hinted}
+						<span class="tr">{question.item.forms[question.dialect].transliteration}</span>
+					{:else}
+						<PressButton quiet onclick={() => (hinted = true)}>Hint</PressButton>
+					{/if}
 				{:else}
 					<span class="ar big" lang="ar" dir="rtl">{question.item.forms[question.dialect].arabic}</span>
 					<span class="tr">{question.item.forms[question.dialect].transliteration}</span>
+					{#if question.item.forms[question.dialect].audioUrl}
+						<PressButton quiet onclick={() => play(question.item.forms[question.dialect].audioUrl)}
+							>🔊 Listen</PressButton
+						>
+					{/if}
 				{/if}
 				<span class="meaning">“{question.item.english}”</span>
 			</div>

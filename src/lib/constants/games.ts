@@ -784,12 +784,12 @@ export const GAMES: GameInfo[] = [
 			{
 				question: 'Is it the same puzzle for everyone?',
 				answer:
-					'Yes. Everyone gets the same root on the same day, which is what makes the share squares worth comparing.'
+					'Yes. Everyone gets the same root on the same day, which is what makes the share squares worth comparing. The words come in your dialect, and the share text shows its flag.'
 			},
 			{
 				question: 'Which kind of Arabic is it in?',
 				answer:
-					'Modern Standard Arabic. Roots are shared by every dialect, so the same families turn up in Egyptian, Levantine and Darija too.'
+					'Your choice: Egyptian, Levantine, Darija, Iraqi, Khaleeji, Saudi or Modern Standard Arabic. The root is the same everywhere; the words are the ones your dialect uses, spelled the usual way.'
 			},
 			{
 				question: 'Do I need to type in Arabic?',

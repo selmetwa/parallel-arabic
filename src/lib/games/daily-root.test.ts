@@ -9,6 +9,13 @@ import {
 	shareText
 } from './daily-root';
 import { ROOT_COUNT, puzzleFor } from '$lib/server/games/daily-root';
+import { GAME_DIALECTS } from './themes';
+import roots from '$lib/data/daily-root/roots.json';
+
+const dialectFiles = import.meta.glob<Record<string, unknown>>(
+	'../data/daily-root/dialects/*.json',
+	{ eager: true, import: 'default' }
+);
 
 describe('puzzleNumber', () => {
 	it('is 1 on launch day and counts up a day at a time', () => {
@@ -25,9 +32,18 @@ describe('rootIndex', () => {
 });
 
 describe('the roots', () => {
-	it('gives every day four or five words, spelled with Arabic letters only', () => {
+	it('has a word list for every dialect, covering exactly the Fusha roots', () => {
+		const all = (roots as { root: string }[]).map((r) => r.root).sort();
+		for (const d of GAME_DIALECTS.filter((d) => d !== 'fusha')) {
+			const file = dialectFiles[`../data/daily-root/dialects/${d}.json`];
+			expect(file, d).toBeTruthy();
+			expect(Object.keys(file).sort(), d).toEqual(all);
+		}
+	});
+
+	it.each(GAME_DIALECTS)('gives every %s day four or five words, spelled with Arabic letters only', (d) => {
 		for (let n = 1; n <= ROOT_COUNT; n++) {
-			const p = puzzleFor(n);
+			const p = puzzleFor(n, d);
 			expect(p.words.length, p.root).toBeGreaterThanOrEqual(4);
 			expect(p.words.length, p.root).toBeLessThanOrEqual(5);
 			for (const w of p.words) {
@@ -38,10 +54,10 @@ describe('the roots', () => {
 		}
 	});
 
-	it('builds every word of a regular root from its three letters', () => {
+	it.each(GAME_DIALECTS)('builds every %s word of a regular root from its three letters', (d) => {
 		const weak = /[اويءأؤئى]/;
 		for (let n = 1; n <= ROOT_COUNT; n++) {
-			const p = puzzleFor(n);
+			const p = puzzleFor(n, d);
 			const letters = p.root.split(' ');
 			// Doubled roots and roots with و, ي or a hamza change shape in derived words.
 			if (letters[1] === letters[2] || letters.some((l) => weak.test(l))) continue;
@@ -80,6 +96,7 @@ describe('shareText', () => {
 	it('shows one square per clue', () => {
 		const text = shareText(puzzleFor(1), [1, 2, 3, null, 1], 'https://x');
 		expect(text).toContain('🟩🟨🟧⬛🟩');
-		expect(text).toContain('#1');
+		expect(text).toContain('#1 📖 Fusha');
+		expect(shareText(puzzleFor(1, 'levantine'), [1], 'https://x')).toContain('🇱🇧 Levantine');
 	});
 });

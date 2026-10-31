@@ -28,7 +28,7 @@
 		game: GameInfo;
 		dialect: GameDialect;
 		onDialectChange: (dialect: GameDialect) => void;
-		/** False for games that cover every dialect at once (Dialect Match, Daily Root). */
+		/** False for games that cover every dialect at once (Dialect Match). */
 		showDialect?: boolean;
 		/** Theme, board size, level — rendered as chip rows under the dialect. */
 		pickers?: Picker[];

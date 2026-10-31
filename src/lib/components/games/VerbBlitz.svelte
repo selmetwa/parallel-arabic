@@ -27,6 +27,7 @@
 	let loadError = $state('');
 	let index = $state(0);
 	let picked = $state<number | null>(null);
+	let hinted = $state(false);
 	let missed = $state<BlitzQuestion[]>([]);
 	let score = $state(0);
 	let xpEarned = $state(0);
@@ -69,6 +70,7 @@
 	function next() {
 		index++;
 		picked = null;
+		hinted = false;
 		announcement = '';
 		if (questions && index === questions.length) onFinish?.(score, questions.length);
 	}
@@ -118,6 +120,7 @@
 			<p class="verb">
 				<span class="ar" lang="ar" dir="rtl">{question.verb.arabic}</span>
 				<span class="en">{question.verb.english}</span>
+				{#if hinted}<span class="tr">{question.verb.transliteration}</span>{/if}
 			</p>
 			<p class="ask">
 				<span class="chip">
@@ -128,6 +131,13 @@
 				{#if question.negative}<span class="chip neg">Negative</span>{/if}
 			</p>
 		</div>
+
+		{#if picked === null}
+			<div class="tools">
+				<PressButton quiet onclick={() => (hinted = true)} disabled={hinted}>Hint</PressButton>
+				<PressButton quiet onclick={() => say(question.verb.arabic)}>🔊 Listen</PressButton>
+			</div>
+		{/if}
 
 		<div class="options" dir="rtl">
 			{#each question.options as option, i (i)}
@@ -140,7 +150,7 @@
 					onclick={() => pick(i)}
 				>
 					<span class="ar" lang="ar">{option.arabic}</span>
-					{#if picked !== null}<span class="tr" dir="ltr">{option.transliteration}</span>{/if}
+					{#if picked !== null || hinted}<span class="tr" dir="ltr">{option.transliteration}</span>{/if}
 				</button>
 			{/each}
 		</div>
@@ -267,6 +277,12 @@
 		font-style: italic;
 		font-weight: 400;
 		color: var(--text2);
+	}
+
+	.tools {
+		display: flex;
+		justify-content: center;
+		gap: 0.6rem;
 	}
 
 	.options {
