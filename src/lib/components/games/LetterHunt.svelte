@@ -25,6 +25,7 @@
 	let questions = $state(untrack(() => buildRound()));
 	let index = $state(0);
 	let picked = $state<number | null>(null);
+	let hinted = $state(false);
 	let missed = $state<Letter[]>([]);
 	let score = $state(0);
 	let xpEarned = $state(0);
@@ -68,6 +69,7 @@
 	function next() {
 		index++;
 		picked = null;
+		hinted = false;
 		announcement = '';
 		if (index === questions.length) onFinish?.(score, questions.length);
 		playIfSound();
@@ -127,6 +129,16 @@
 			</button>
 		{/if}
 
+		{#if picked === null}
+			<div class="tools">
+				<PressButton quiet onclick={() => (hinted = true)} disabled={hinted}>Hint</PressButton>
+				{#if question.kind !== 'sound-to-letter'}
+					<PressButton quiet onclick={() => play(question.letter)}>🔊 Listen</PressButton>
+				{/if}
+			</div>
+			{#if hinted}<p class="hint">It's {question.letter.name}.</p>{/if}
+		{/if}
+
 		<div class="options" dir="rtl">
 			{#each question.options as option, i (i)}
 				<button
@@ -179,6 +191,18 @@
 		font-size: 1.1rem;
 		font-weight: 600;
 		color: var(--text1);
+	}
+
+	.tools {
+		display: flex;
+		justify-content: center;
+		gap: 0.6rem;
+	}
+
+	.hint {
+		text-align: center;
+		font-style: italic;
+		color: var(--text2);
 	}
 
 	.prompt {

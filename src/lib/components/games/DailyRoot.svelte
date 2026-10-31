@@ -13,8 +13,10 @@
 		type RootPuzzle,
 		type Tile
 	} from '$lib/games/daily-root';
+	import type { GameDialect } from '$lib/games/themes';
 
 	interface Props {
+		dialect: GameDialect;
 		signedIn: boolean;
 		accent: string;
 		deep: string;
@@ -22,7 +24,7 @@
 		onDone?: () => void;
 	}
 
-	let { signedIn, accent, deep, onDone }: Props = $props();
+	let { dialect, signedIn, accent, deep, onDone }: Props = $props();
 
 	interface ClueState {
 		guesses: string[];
@@ -36,6 +38,7 @@
 	let tiles = $state<Tile[]>([]);
 	let placed = $state<number[]>([]);
 	let copied = $state(false);
+	let hinted = $state(false);
 	let announcement = $state('');
 
 	const word = $derived(puzzle?.words[active]);
@@ -45,12 +48,14 @@
 	const built = $derived(placed.map((id) => tiles.find((t) => t.id === id)!.char).join(''));
 	const tries = $derived(clues.map((c) => (c.solved ? c.guesses.length : null)));
 
-	const storageKey = (n: number) => `pa-daily-root:${n}`;
+	// Fusha keeps the key it had before there were dialects, so today's progress survives.
+	const storageKey = (p: RootPuzzle) =>
+		p.dialect === 'fusha' ? `pa-daily-root:${p.number}` : `pa-daily-root:${p.number}:${p.dialect}`;
 
 	function save() {
 		if (!puzzle) return;
 		try {
-			localStorage.setItem(storageKey(puzzle.number), JSON.stringify(clues));
+			localStorage.setItem(storageKey(puzzle), JSON.stringify(clues));
 		} catch {
 			// Private mode: today's progress just isn't kept.
 		}
@@ -58,7 +63,7 @@
 
 	function restore(p: RootPuzzle): ClueState[] {
 		try {
-			const saved = JSON.parse(localStorage.getItem(storageKey(p.number)) ?? 'null');
+			const saved = JSON.parse(localStorage.getItem(storageKey(p)) ?? 'null');
 			if (Array.isArray(saved) && saved.length === p.words.length) return saved;
 		} catch {
 			// Fall through to a fresh start.
@@ -71,12 +76,13 @@
 		active = i;
 		tiles = makeTiles(puzzle.words[i].plain);
 		placed = [];
+		hinted = false;
 		announcement = '';
 	}
 
 	onMount(async () => {
 		try {
-			const res = await fetch('/api/games/daily-root');
+			const res = await fetch(`/api/games/daily-root?${new URLSearchParams({ dialect })}`);
 			if (!res.ok) throw new Error();
 			const p: RootPuzzle = (await res.json()).puzzle;
 			clues = restore(p);
@@ -99,8 +105,7 @@
 		placed = placed.slice(0, -1);
 	}
 
-	// The roots are Modern Standard Arabic words, so they're spoken in Fusha.
-	const say = (arabic: string) => playClip(gameAudioUrl(arabic, 'fusha'));
+	const say = (arabic: string) => playClip(gameAudioUrl(arabic, dialect));
 	onDestroy(stopClip);
 
 	function check() {
@@ -130,7 +135,8 @@
 
 	async function share() {
 		if (!puzzle) return;
-		const text = shareText(puzzle, tries, `${location.origin}/learn/game/daily-root`);
+		const url = `${location.origin}/learn/game/daily-root?${new URLSearchParams({ dialect })}`;
+		const text = shareText(puzzle, tries, url);
 		try {
 			if (navigator.share) await navigator.share({ text });
 			else {
@@ -199,6 +205,9 @@
 						MAX_TRIES
 					)} of {MAX_TRIES}
 				</p>
+				{#if hinted && !clueDone(clue)}
+					<p class="tr hint">{word.transliteration}</p>
+				{/if}
 
 				{#each clue.guesses as guess, g (g)}
 					{@const marks = markGuess(guess, word.plain)}
@@ -243,6 +252,8 @@
 					</div>
 					<div class="actions">
 						<PressButton quiet onclick={undo} disabled={placed.length === 0}>Undo</PressButton>
+						<PressButton quiet onclick={() => (hinted = true)} disabled={hinted}>Hint</PressButton>
+						<PressButton quiet onclick={() => say(word.arabic)}>🔊 Listen</PressButton>
 						<PressButton
 							onclick={check}
 							disabled={placed.length !== [...word.plain].length}
@@ -447,7 +458,13 @@
 
 	.actions {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 0.6rem;
+	}
+
+	.hint {
+		text-align: center;
 	}
 
 	.reveal {
