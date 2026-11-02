@@ -32,11 +32,14 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
       };
     }
 
-    // Only show onboarding if:
-    // 1. User has newSignup=true query parameter (just signed up)
-    // 2. AND onboarding is not completed
-    const isNewSignup = url.searchParams.get('newSignup') === 'true'
-    const showOnboarding = isNewSignup && !user.onboarding_completed
+    // Onboarding shows on every page until it is finished: finishing it is what
+    // assigns the paywall, so leaving it early must not mean a free account.
+    // Subscribers skip it, and so do the paywall's exempt pages (/profile has
+    // account deletion). url.pathname is only read for users who still need it.
+    const showOnboarding =
+      !user.onboarding_completed &&
+      !checkUserSubscription(user) &&
+      !isPaywallExempt(url.pathname)
 
     console.log({ user })
     return {
