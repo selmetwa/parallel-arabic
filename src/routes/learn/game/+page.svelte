@@ -3,7 +3,6 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import GameCard from '$lib/components/games/GameCard.svelte';
-	import SocialProof from '$lib/components/SocialProof.svelte';
 	import { noteGameSignup } from '$lib/games/signup-source';
 	import {
 		GAMES,
@@ -69,7 +68,6 @@
 	<header class="mb-6">
 		<h1 class="hero-title">Arabic Games</h1>
 		<p class="hero-sub">Short games for learning Arabic, in seven dialects. Your first three rounds are free.</p>
-		<SocialProof quotes={0} alignStart class="mt-3" />
 	</header>
 
 	<label class="picker">
