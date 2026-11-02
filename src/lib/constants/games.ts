@@ -854,43 +854,36 @@ export function getGame(slug: string): GameInfo | undefined {
 	return GAMES.find((g) => g.slug === slug);
 }
 
-/** The hub's level sections, in page order. */
-export const GAME_LEVEL_GROUPS = [
+/** First on the hub: the games most visitors already pick. */
+export const POPULAR_GAMES = ['memory-pairs', 'room-hunt', 'listen-and-spell', 'letter-hunt', 'quiz'];
+
+/**
+ * The hub's skill sections, in page order. Every hub game sits in exactly one,
+ * except Daily Root, which the Today's challenge banner already covers.
+ */
+export const GAME_SKILL_GROUPS = [
 	{
-		id: 'start',
-		title: 'New to Arabic? Start here',
-		note: 'No reading needed yet: letters, pictures and sounds.'
+		id: 'alphabet',
+		title: 'Alphabet & reading',
+		note: 'Letters, and how they join into words.',
+		games: ['letter-hunt', 'word-scramble', 'memory-pairs']
 	},
 	{
-		id: 'beginner',
-		title: 'Beginner to intermediate',
-		note: 'Everyday words and phrases, once you know a few letters.'
+		id: 'vocabulary',
+		title: 'Vocabulary',
+		note: 'Everyday words, from household objects to fast recall.',
+		games: ['room-hunt', 'speed-round', 'odd-one-out', 'quiz']
 	},
 	{
-		id: 'intermediate',
-		title: 'Intermediate',
-		note: 'For learners who read comfortably.'
+		id: 'listening',
+		title: 'Listening & speaking',
+		note: 'Hear it, say it, and tell the dialects apart.',
+		games: ['listen-and-spell', 'shadowing', 'scenarios', 'dialect-match']
 	},
 	{
-		id: 'all',
-		title: 'All levels',
-		note: 'The difficulty follows the level you pick.'
+		id: 'grammar',
+		title: 'Grammar & sentences',
+		note: 'Verbs, word order and the mistakes learners make.',
+		games: ['verb-blitz', 'sentence-scramble', 'spot-the-mistake', 'fill-the-gap']
 	}
 ] as const;
-
-export type GameLevelGroup = (typeof GAME_LEVEL_GROUPS)[number]['id'];
-
-/** Which hub section a game's `levels` label belongs in. */
-export function levelGroup(levels: string): GameLevelGroup {
-	switch (levels) {
-		case 'Absolute beginner':
-		case 'Beginner':
-			return 'start';
-		case 'Beginner–Intermediate':
-			return 'beginner';
-		case 'Intermediate':
-			return 'intermediate';
-		default:
-			return 'all';
-	}
-}
