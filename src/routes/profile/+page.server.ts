@@ -1,4 +1,4 @@
-import { redirect } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription.js';
@@ -228,7 +228,13 @@ export const load = async ({ locals, parent }) => {
     user, // Include user for stats component
     subscriptionDetails,
     subscriptionProvider,
-    achievements
+    achievements,
+    // Apple-only accounts have no email login, and with "Hide My Email" the account sits on a
+    // relay address, so signing up again by email creates a second account.
+    canAddEmailLogin:
+      (session.user.app_metadata?.providers ?? []).includes('apple') &&
+      !(session.user.app_metadata?.providers ?? []).includes('email'),
+    pendingEmail: session.user.new_email ?? null
 	};
 };
 
@@ -318,6 +324,43 @@ export const actions: Actions = {
 				error: 'Something went wrong'
 			};
 		}
+	},
+	addEmailLogin: async ({ request, url, locals: { supabase: authClient, safeGetSession } }) => {
+		const { session } = await safeGetSession();
+		if (!session) {
+			return fail(401, { error: 'You must be logged in' });
+		}
+
+		const formData = await request.formData();
+		const email = String(formData.get('email') ?? '').trim().toLowerCase();
+		const password = String(formData.get('password') ?? '');
+
+		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+			return fail(400, { error: 'Enter a valid email address' });
+		}
+		if (password.length < 6) {
+			return fail(400, { error: 'Password must be at least 6 characters' });
+		}
+
+		// The new email only takes effect once she clicks the confirmation link, so nobody
+		// can attach an address they don't own. The password is set right away.
+		const { error } = await authClient.auth.updateUser(
+			{ email, password },
+			{ emailRedirectTo: `${url.origin}/auth/callback?next=/profile` }
+		);
+
+		if (error) {
+			if (error.code === 'email_exists' || /already/i.test(error.message)) {
+				return fail(409, {
+					error:
+						'That email already has its own account. Email selmetwa@gmail.com and we’ll merge the two.'
+				});
+			}
+			console.error('addEmailLogin failed:', error);
+			return fail(500, { error: error.message });
+		}
+
+		return { success: true, pendingEmail: email };
 	},
 	updateLeaderboardOptOut: async ({ request, locals: { safeGetSession } }) => {
 		const { session, user } = await safeGetSession();

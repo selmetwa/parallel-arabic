@@ -103,6 +103,26 @@
     };
   }
 
+  // Unlike the other settings, success here waits on an email, so the message stays put.
+  let emailLoginSentTo = $state<string | null>(null);
+
+  function enhanceEmailLogin() {
+    status.emailLogin = { success: null, error: null, pending: true };
+    return async ({ result }: { result: any }) => {
+      if (result.type === 'success' && result.data?.success) {
+        emailLoginSentTo = result.data.pendingEmail;
+        status.emailLogin = { success: null, error: null, pending: false };
+      } else {
+        const errorMsg = result.type === 'failure' ? result.data?.error : null;
+        status.emailLogin = {
+          success: null,
+          error: typeof errorMsg === 'string' ? errorMsg : 'Something went wrong',
+          pending: false
+        };
+      }
+    };
+  }
+
   const dialectFlags: Record<string, string> = {
     'egyptian-arabic': '🇪🇬',
     'darija': '🇲🇦',
@@ -598,6 +618,55 @@
                 Sign Out
               </Button>
             </div>
+
+            {#if data.canAddEmailLogin}
+              <div class="mt-6 pt-6 border-t border-tile-600">
+                <p class="text-sm font-medium text-text-300">Sign in with email and password</p>
+                {#if emailLoginSentTo ?? data.pendingEmail}
+                  <p class="status-ok">
+                    Check {emailLoginSentTo ?? data.pendingEmail} for a confirmation link. Once you confirm, you can sign in
+                    with that email and password as well as with Apple.
+                  </p>
+                {:else}
+                  <p class="text-xs text-text-200 mt-0.5 mb-3 opacity-80">
+                    You sign in with Apple. Add your email and a password so you can also sign in with them on any
+                    device. Your subscription and progress stay on this account.
+                  </p>
+                  <form
+                    method="POST"
+                    action="?/addEmailLogin"
+                    use:enhance={enhanceEmailLogin}
+                    class="flex flex-col sm:flex-row gap-3"
+                  >
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      autocomplete="email"
+                      placeholder="Email"
+                      aria-label="Email"
+                      class="flex-1 min-w-0 bg-tile-300 border-2 border-tile-600 text-text-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand text-base"
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      required
+                      minlength="6"
+                      autocomplete="new-password"
+                      placeholder="Password"
+                      aria-label="Password"
+                      class="flex-1 min-w-0 bg-tile-300 border-2 border-tile-600 text-text-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand text-base"
+                    />
+                    <Button type="submit" className="px-6" disabled={getStatus('emailLogin').pending}>
+                      {getStatus('emailLogin').pending ? 'Saving…' : 'Add'}
+                    </Button>
+                  </form>
+                  {#if getStatus('emailLogin').error}
+                    <p class="status-err" transition:fade>{getStatus('emailLogin').error}</p>
+                  {/if}
+                {/if}
+              </div>
+            {/if}
 
             <!-- Delete Account -->
             <div class="mt-6 pt-6 border-t border-tile-600">
