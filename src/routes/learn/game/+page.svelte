@@ -3,16 +3,15 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import GameCard from '$lib/components/games/GameCard.svelte';
-	import SocialProof from '$lib/components/SocialProof.svelte';
 	import { noteGameSignup } from '$lib/games/signup-source';
 	import {
 		GAMES,
 		GAMES_HUB_FAQS,
-		GAME_LEVEL_GROUPS,
+		GAME_SKILL_GROUPS,
+		POPULAR_GAMES,
 		QUIZ_CARD,
 		gameHref,
-		getGame,
-		levelGroup
+		getGame
 	} from '$lib/constants/games';
 	import { puzzleNumber } from '$lib/games/daily-root';
 	import { gameOfTheDay } from '$lib/games/today';
@@ -56,43 +55,33 @@
 		{ ...QUIZ_CARD, href: gameHref(QUIZ_CARD.slug) }
 	];
 
-	// The game grid, split by level: beginners see where to start first.
-	const groups = GAME_LEVEL_GROUPS.map((group) => ({
-		...group,
-		games: cards.filter((c) => levelGroup(c.levels) === group.id)
-	})).filter((group) => group.games.length);
+	const card = (slug: string) => cards.find((c) => c.slug === slug)!;
 
-	// "Games by skill": every skill a game lists, with the games that train it.
-	const bySkill = [...new Set(cards.flatMap((c) => c.skills))].map((skill) => ({
-		skill,
-		games: cards.filter((c) => c.skills.includes(skill))
-	}));
+	const popular = POPULAR_GAMES.map(card);
+
+	// The full grid, split by skill. Every group gets a fair spot on the page,
+	// where level sections left the all-level games at the bottom.
+	const groups = GAME_SKILL_GROUPS.map((group) => ({ ...group, games: group.games.map(card) }));
 </script>
 
 <section class="mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5">
 	<header class="mb-6">
 		<h1 class="hero-title">Arabic Games</h1>
 		<p class="hero-sub">Short games for learning Arabic, in seven dialects. Your first three rounds are free.</p>
-		<SocialProof quotes={0} alignStart class="mt-3" />
 	</header>
 
-	<div class="picker">
-		<span class="picker-label" id="hub-dialect">Your dialect</span>
-		<div class="chips" role="group" aria-labelledby="hub-dialect">
+	<label class="picker">
+		<span class="picker-label">Playing in</span>
+		<select
+			class="picker-select"
+			value={dialect}
+			onchange={(e) => pickDialect(e.currentTarget.value as GameDialect)}
+		>
 			{#each DIALECT_OPTIONS as option (option.value)}
-				<button
-					type="button"
-					class="chip"
-					class:is-on={option.value === dialect}
-					aria-pressed={option.value === dialect}
-					onclick={() => pickDialect(option.value)}
-				>
-					<span aria-hidden="true">{option.emoji}</span>
-					{option.label}
-				</button>
+				<option value={option.value}>{option.emoji} {option.label}</option>
 			{/each}
-		</div>
-	</div>
+		</select>
+	</label>
 
 	<a href="{resolve('/learn/game/today')}{query}" class="today">
 		<span class="today-emoji" aria-hidden="true">📅</span>
@@ -102,6 +91,19 @@
 		</span>
 		<span class="today-play">Play now <span aria-hidden="true">→</span></span>
 	</a>
+	<p class="today-alt">
+		Just the word puzzle? <a href="{resolve('/learn/game/daily-root')}{query}">Play Daily Root</a>
+	</p>
+
+	<section class="level">
+		<h2 class="section-title">Popular games</h2>
+		<p class="level-note">New to Arabic? Start with Letter Hunt, then Word Scramble.</p>
+		<div class="grid">
+			{#each popular as game (game.slug)}
+				<GameCard {...game} {query} />
+			{/each}
+		</div>
+	</section>
 
 	{#if !page.data.user}
 		<div class="join">
@@ -144,22 +146,6 @@
 	</section>
 
 	<section class="info">
-		<h2 class="section-title">Games by skill</h2>
-		<dl class="skills">
-			{#each bySkill as { skill, games } (skill)}
-				<div class="skill-row">
-					<dt>{skill}</dt>
-					<dd>
-						{#each games as game, i (game.href)}
-							<a href={resolve(game.href)}>{game.name}</a>{#if i < games.length - 1},&nbsp;{/if}
-						{/each}
-					</dd>
-				</div>
-			{/each}
-		</dl>
-	</section>
-
-	<section class="info">
 		<h2 class="section-title">Common questions</h2>
 		<div class="faqs">
 			{#each GAMES_HUB_FAQS as faq (faq.question)}
@@ -182,52 +168,32 @@
 
 <style>
 	.picker {
-		margin-bottom: 1.25rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.9rem;
 	}
 
 	.picker-label {
-		display: block;
-		margin-bottom: 0.4rem;
-		font-size: 0.8rem;
+		font-size: 0.85rem;
 		font-weight: 600;
 		color: var(--text2);
 	}
 
-	.chips {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.45rem;
-	}
-
-	.chip {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.35rem;
+	.picker-select {
 		min-height: 2.5rem;
-		padding: 0.45rem 0.85rem;
+		padding: 0.4rem 0.75rem;
 		border-radius: 100px;
-		font-size: 0.85rem;
-		font-weight: 500;
-		color: var(--text2);
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--text1);
 		background: var(--tile3);
 		border: 2px solid var(--tile5);
 		cursor: pointer;
-		transition:
-			background 0.18s ease,
-			border-color 0.18s ease,
-			color 0.18s ease;
 	}
 
-	.chip:hover {
+	.picker-select:hover {
 		border-color: var(--tile6);
-		color: var(--text1);
-	}
-
-	.chip.is-on {
-		color: var(--text1);
-		font-weight: 600;
-		border-color: #22c55e;
-		background: color-mix(in srgb, #22c55e 18%, var(--tile3));
 	}
 
 	.today {
@@ -280,12 +246,27 @@
 		white-space: nowrap;
 	}
 
+	.today-alt {
+		margin-top: 0.6rem;
+		font-size: 0.85rem;
+		color: var(--text2);
+	}
+	.today-alt a {
+		font-weight: 600;
+		color: var(--text2);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	.today-alt a:hover {
+		color: var(--brand);
+	}
+
 	.join {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.75rem 1.1rem;
-		margin-top: 0.9rem;
+		margin-top: 2rem;
 		border-radius: 1.25rem;
 		border: 2px dashed var(--tile6);
 		background: var(--tile3);
@@ -382,39 +363,6 @@
 		letter-spacing: -0.025em;
 		color: var(--text1);
 		margin-bottom: 1rem;
-	}
-
-	.skills {
-		display: grid;
-		gap: 0.5rem;
-	}
-
-	.skill-row {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.3rem 0.9rem;
-		font-size: 0.9rem;
-	}
-
-	.skill-row dt {
-		min-width: 7rem;
-		font-weight: 600;
-		color: var(--text1);
-	}
-
-	.skill-row dd {
-		color: var(--text2);
-	}
-
-	.skill-row a {
-		font-weight: 600;
-		color: var(--text2);
-		text-decoration: underline;
-		text-underline-offset: 3px;
-	}
-
-	.skill-row a:hover {
-		color: var(--brand);
 	}
 
 	.faqs {

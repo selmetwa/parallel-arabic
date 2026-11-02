@@ -1,6 +1,6 @@
 import { readdirSync } from 'fs';
 import { describe, expect, it } from 'vitest';
-import { GAMES, GAMES_HUB_FAQS, GAME_LEVEL_GROUPS, QUIZ_CARD, getGame, levelGroup } from './games';
+import { GAMES, GAMES_HUB_FAQS, GAME_SKILL_GROUPS, POPULAR_GAMES, QUIZ_CARD, getGame } from './games';
 import { QUIZ_FAQS } from './game-content';
 import { GAME_DIALECTS, GAME_THEMES, themesFor } from '$lib/games/themes';
 import { sections } from './sections';
@@ -89,15 +89,19 @@ describe('game themes', () => {
 	});
 });
 
-describe('hub level groups', () => {
-	it('puts each game in a known group, and every group has games', () => {
-		const ids = GAME_LEVEL_GROUPS.map((g) => g.id) as string[];
-		const used = new Set([...GAMES, QUIZ_CARD].map((g) => levelGroup(g.levels)));
-		for (const group of used) expect(ids).toContain(group);
-		for (const id of ids) expect(used.has(id as never), id).toBe(true);
+describe('hub skill groups', () => {
+	const hubSlugs = [...GAMES, QUIZ_CARD].map((g) => g.slug).filter((s) => s !== 'daily-root');
+	const grouped = GAME_SKILL_GROUPS.flatMap((g) => g.games as readonly string[]);
+
+	it('puts every hub game except Daily Root in exactly one group', () => {
+		expect([...grouped].sort()).toEqual([...hubSlugs].sort());
+	});
+
+	it('lists only real games as popular', () => {
+		for (const slug of POPULAR_GAMES) expect(hubSlugs, slug).toContain(slug);
 	});
 
 	it('starts absolute beginners with Letter Hunt', () => {
-		expect(levelGroup(getGame('letter-hunt')!.levels)).toBe('start');
+		expect(GAME_SKILL_GROUPS[0].games[0]).toBe('letter-hunt');
 	});
 });
