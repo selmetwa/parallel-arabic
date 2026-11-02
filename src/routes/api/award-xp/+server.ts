@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { supabase } from '$lib/supabaseClient';
 import { awardXp } from '$lib/helpers/award-xp';
 import { touchStreak } from '$lib/helpers/track-activity';
 import type { XpEventType } from '$lib/helpers/xp-levels';
@@ -10,7 +11,7 @@ const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sen
 const ONBOARDING_BONUS_WINDOW_MS = 60 * 60 * 1000;
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-	const { supabase, safeGetSession } = locals;
+	const { safeGetSession } = locals;
 	const { session, user } = await safeGetSession();
 
 	if (!session || !user) {

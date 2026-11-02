@@ -1,9 +1,10 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { supabase } from '$lib/supabaseClient';
 import { isDialect } from '$lib/constants/dialects';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-  const { supabase, safeGetSession } = locals;
+  const { safeGetSession } = locals;
   const { session, user } = await safeGetSession();
 
   if (!session || !user) {
