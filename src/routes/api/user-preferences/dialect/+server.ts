@@ -1,10 +1,11 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { supabase } from '$lib/supabaseClient';
 import { isSelectableDialect } from '$lib/constants/dialects';
 
 // Switches the dialect the learner is studying. Every page defaults to it.
 export const POST: RequestHandler = async ({ request, locals }) => {
-	const { supabase, safeGetSession } = locals;
+	const { safeGetSession } = locals;
 	const { session, user } = await safeGetSession();
 
 	if (!session || !user) {

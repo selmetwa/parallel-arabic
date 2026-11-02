@@ -1,11 +1,12 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { supabase } from '$lib/supabaseClient';
 import { v4 as uuidv4 } from 'uuid';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 import { awardXp } from '$lib/helpers/award-xp';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-	const { supabase, safeGetSession } = locals;
+	const { safeGetSession } = locals;
 	
 	const { session, user } = await safeGetSession();
 	
