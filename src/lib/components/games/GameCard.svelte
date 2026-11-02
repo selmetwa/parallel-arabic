@@ -39,8 +39,9 @@
 		<span class="shot">
 			<img src={shot.src} width={shot.w} height={shot.h} alt={shot.alt} loading="lazy" decoding="async" />
 		</span>
+	{:else}
+		<span class="emoji" aria-hidden="true">{emoji}</span>
 	{/if}
-	<span class="emoji" aria-hidden="true">{emoji}</span>
 	<span class="name">{name}</span>
 	<span class="tagline">{tagline}</span>
 	{#if !compact}
