@@ -25,6 +25,9 @@
 	let greetingAr = $state('أهلاً');
 	let todayLabel = $state('');
 
+	// Same deep link as the sidebar: straight to the learner's dialect.
+	const lessonsHref = $derived(`/lessons/structured/${data.targetDialect || 'egyptian-arabic'}`);
+
 	const suggestions = $derived(data.suggestions || []);
 	const reviewSuggestion = $derived(suggestions.find((s) => s.id === 'review'));
 	const otherSuggestions = $derived(suggestions.filter((s) => s.id !== 'review').slice(0, 4));
@@ -314,7 +317,7 @@
 				'#0369a1'
 			)}
 			{@render tile(
-				'/lessons',
+				lessonsHref,
 				'📚',
 				'Lessons',
 				'A structured path with exercises and pronunciation.',
