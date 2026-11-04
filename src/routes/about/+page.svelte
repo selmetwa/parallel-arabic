@@ -477,7 +477,7 @@
 				</p>
 
 				<div
-					class="reveal mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+					class="reveal mt-8 flex flex-col gap-3 sm:flex-row sm:items-stretch"
 					style="animation-delay: 180ms;"
 				>
 					{@render startCta('')}
@@ -486,6 +486,13 @@
 						className="justify-center rounded-full border-2 border-tile-600 px-6 py-2.5 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
 					/>
 				</div>
+				<a
+					href={resolve('/demo')}
+					class="link reveal mt-5 whitespace-nowrap"
+					style="animation-delay: 210ms;"
+				>
+					Watch the demo videos <span aria-hidden="true">→</span>
+				</a>
 
 				<ul class="assurances reveal" style="animation-delay: 240ms;">
 					<li>{@render check()}Free to start</li>
@@ -714,7 +721,8 @@
 
 			<p class="body mt-10 rise">
 				Every one of these has its own page with screenshots and answers to common questions:
-				<a href={resolve('/features')} class="link">see every feature</a>.
+				<a href={resolve('/features')} class="link">see every feature</a>, or
+				<a href={resolve('/demo')} class="link">watch them in short demo videos</a>.
 			</p>
 		</div>
 	</section>

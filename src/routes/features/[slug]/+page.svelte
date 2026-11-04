@@ -63,6 +63,36 @@
 		{@render screenshot(feature.hero, true)}
 	</header>
 
+	{#if data.demos.length}
+		<section class="demos" aria-labelledby="demo-title">
+			<h2 id="demo-title" class="h2">{data.demos.length > 1 ? 'Watch the demos' : 'Watch the demo'}</h2>
+			<div class="demo-grid" class:pair={data.demos.length > 1}>
+				{#each data.demos as demo (demo.slug)}
+					<div class="demo">
+						<figure class="frame">
+							<span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+							<!-- svelte-ignore a11y_media_has_caption -->
+							<video
+								src={demo.video.src}
+								poster={demo.video.poster}
+								width="1920"
+								height="1080"
+								controls
+								playsinline
+								preload="none"
+								aria-label={demo.heading}
+							></video>
+						</figure>
+						<p class="body">
+							{demo.blurb}
+							<a class="demo-link" href={resolve(`/demo/${demo.slug}`)}>{demo.name} demo page</a>
+						</p>
+					</div>
+				{/each}
+			</div>
+		</section>
+	{/if}
+
 	{#if shown.length}
 		<section class="rows" aria-label="How it works">
 			{#each shown as section, i (section.title)}
@@ -259,6 +289,27 @@
 		display: block;
 		width: 100%;
 		height: auto;
+	}
+
+	/* ── Demo videos ───────────────────────────────────────────────────── */
+	.demos {
+		margin-top: 5rem;
+	}
+	.demo-grid {
+		display: grid;
+		gap: 2rem;
+		margin-top: 1.5rem;
+	}
+	@media (min-width: 900px) {
+		.demo-grid.pair {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	.demo-link {
+		font-weight: 600;
+		color: var(--text1);
+		text-decoration: underline;
+		text-underline-offset: 4px;
 	}
 
 	/* ── Sections ──────────────────────────────────────────────────────── */

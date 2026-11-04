@@ -11,6 +11,7 @@ import { VOCAB_DIALECTS, topicSlugsFor } from '$lib/data/vocab/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
 import { GAMES, gameHref } from '$lib/constants/games';
 import { FEATURES } from '$lib/constants/features';
+import { DEMOS } from '$lib/constants/demos';
 import { GRAMMAR_DIALECTS, GRAMMAR_TOPICS } from '$lib/data/grammar/topics';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
@@ -65,6 +66,10 @@ const staticPages = [
 	// Feature landing pages
 	{ path: '/features', priority: '0.8', changefreq: 'monthly' },
 	...FEATURES.map((f) => ({ path: `/features/${f.slug}`, priority: '0.8', changefreq: 'monthly' })),
+
+	// Demo videos
+	{ path: '/demo', priority: '0.7', changefreq: 'monthly' },
+	...DEMOS.map((d) => ({ path: `/demo/${d.slug}`, priority: '0.7', changefreq: 'monthly' })),
 
 	// Practice section
 	{ path: '/stories', priority: '0.8', changefreq: 'weekly' },
