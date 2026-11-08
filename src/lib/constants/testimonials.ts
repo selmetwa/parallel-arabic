@@ -53,6 +53,26 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 	[
 		{ t: 'I love the parallel Arabic app so much!!', b: true },
 		{ t: ' It’s been so helpful for my learning' }
+	],
+	[
+		{
+			t: 'Having tried at least a dozen different resources in the past two years to learn Moroccan Darija, I think '
+		},
+		{ t: 'yours is the top of the line, definitely my favorite!', b: true }
+	],
+	[
+		{ t: 'Very few resources do a good job of teaching dialects at anything beyond ' },
+		{ t: '"travel basics."', b: true }
+	],
+	[
+		{ t: 'I absolutely love the feature in your app where you can compare the dialects! ' },
+		{ t: 'That is TOTALLY BRILLIANT!!', b: true }
+	],
+	[
+		{
+			t: 'This is such a fantastic way to bring people along in their studies of the Arabic language!',
+			b: true
+		}
 	]
 ];
 
