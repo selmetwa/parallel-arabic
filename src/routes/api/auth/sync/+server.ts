@@ -90,16 +90,15 @@ function writeSupabaseSessionCookies(
 export const POST: RequestHandler = async ({ locals, request, cookies }) => {
   console.log('[sync] ========== START ==========');
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { session, supabase } = locals as any;
-  console.log('[sync] locals.session present:', !!session);
+  const { supabase } = locals as any;
 
   // -------- Server flow: cookies already have a valid session --------
-  if (session) {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
-      console.log('[sync] No user from server session');
-      return err('unauthorized', 'No user', 401);
-    }
+  // Read the cookie session directly. locals.session stays null until the
+  // public.user row exists, and a first sign-in is here to create that row.
+  const { data: { user: cookieUser } } = await supabase.auth.getUser();
+  console.log('[sync] cookie session user present:', !!cookieUser);
+  if (cookieUser) {
+    const user = cookieUser;
     console.log('[sync] Server flow — syncing user:', user.id);
     try {
       const needsOnboarding = await syncAndCheckOnboarding(user);

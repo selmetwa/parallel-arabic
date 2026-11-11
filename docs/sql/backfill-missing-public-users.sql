@@ -9,7 +9,7 @@ insert into public."user" (
 select
   substr(md5(random()::text || a.id::text), 1, 13),
   a.email,
-  0,
+  false,
   a.raw_user_meta_data->>'full_name',
   a.raw_user_meta_data->>'avatar_url',
   false,
