@@ -16,6 +16,7 @@ export type StorePlan = {
 export type StorePlans = { monthly: StorePlan; annual: StorePlan | null };
 
 let initPromise: Promise<void> | null = null;
+let initUserId: string | null = null;
 let plansPromise: Promise<StorePlans | null> | null = null;
 
 const DAYS_PER_UNIT: Record<string, number> = { DAY: 1, WEEK: 7 };
@@ -36,8 +37,21 @@ function toStorePlan(pkg: PurchasesPackage, eligible: boolean): StorePlan {
 export const RevenueCatService = {
   // Shared promise so callers that start at the same time configure once.
   initialize(userId: string): Promise<void> {
-    initPromise ??= (async () => {
+    if (initPromise && initUserId === userId) return initPromise;
+    const previous = initPromise;
+    initUserId = userId;
+    // Trial eligibility belongs to the user, so another user's plans are stale.
+    plansPromise = null;
+    initPromise = (async () => {
+      await previous?.catch(() => {});
       const { Purchases, LOG_LEVEL } = await import('@revenuecat/purchases-capacitor');
+      // The native SDK outlives page loads, so it can still be identified as
+      // whoever used the app before. Purchases made then would go to them.
+      const { isConfigured } = await Purchases.isConfigured();
+      if (isConfigured) {
+        await Purchases.logIn({ appUserID: userId });
+        return;
+      }
       await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
       const apiKey = env.PUBLIC_REVENUECAT_IOS_API_KEY ?? 'MISSING';
       console.log(`🔑🔑🔑 RC API KEY = [${apiKey}] length=${apiKey.length}`);
@@ -47,9 +61,30 @@ export const RevenueCatService = {
       });
     })().catch((err) => {
       initPromise = null;
+      initUserId = null;
       throw err;
     });
     return initPromise;
+  },
+
+  /**
+   * Sends this Apple ID's purchases to RevenueCat under the current user, which
+   * moves a subscription that landed on another customer back here, then saves
+   * it. Returns true when an active subscription was saved.
+   */
+  async resyncSubscription(): Promise<boolean> {
+    const { Purchases } = await import('@revenuecat/purchases-capacitor');
+    await Purchases.syncPurchases();
+    const { customerInfo } = await Purchases.getCustomerInfo();
+    if (!this.isEntitlementActive(customerInfo)) return false;
+
+    const res = await fetch('/api/verify-apple-purchase', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ customerInfo })
+    });
+    const data = await res.json().catch(() => ({}));
+    return res.ok && data?.active === true;
   },
 
   /**

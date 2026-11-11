@@ -3,33 +3,24 @@ import { json } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
 import { createClient } from '@supabase/supabase-js';
 import { PUBLIC_SUPABASE_URL } from '$env/static/public';
+import {
+  ENTITLEMENT_ID,
+  resolveFromRevenueCatRest,
+  type ResolvedEntitlement
+} from '$lib/server/revenuecat-entitlement';
 
-const ENTITLEMENT_ID = 'Parallel Arabic Premium';
+function resolveFromCustomerInfo(customerInfo: any, rcUserId: string): ResolvedEntitlement | null {
+  // Only trust it when the SDK was identified as this user. Otherwise the
+  // purchase lives under another RevenueCat customer, and renewals sent there
+  // would never reach this row.
+  if (customerInfo?.originalAppUserId !== rcUserId) {
+    console.warn('[verify-apple-purchase] customerInfo belongs to another app user', {
+      rcUserId,
+      originalAppUserId: customerInfo?.originalAppUserId
+    });
+    return null;
+  }
 
-type ResolvedEntitlement = {
-  isActive: boolean;
-  expiresMs: number | null;
-  transactionId: string | null;
-  source: 'revenuecat_rest' | 'client_customer_info';
-};
-
-function resolveFromRevenueCatRest(data: any): ResolvedEntitlement | null {
-  const entitlement = data?.subscriber?.entitlements?.[ENTITLEMENT_ID];
-  if (!entitlement) return null;
-
-  const expiresMs = entitlement.expires_date ? new Date(entitlement.expires_date).getTime() : null;
-  const isActive = expiresMs ? expiresMs > Date.now() : false;
-
-  // With monthly and annual products a subscriber can have several entries, so
-  // use the one that grants the entitlement, not whichever is listed first.
-  const subscriptions = data?.subscriber?.subscriptions ?? {};
-  const subKey = entitlement.product_identifier ?? Object.keys(subscriptions)[0];
-  const transactionId = subscriptions[subKey]?.original_transaction_id ?? subKey ?? null;
-
-  return { isActive, expiresMs, transactionId, source: 'revenuecat_rest' };
-}
-
-function resolveFromCustomerInfo(customerInfo: any): ResolvedEntitlement | null {
   const entitlement = customerInfo?.entitlements?.active?.[ENTITLEMENT_ID];
   if (!entitlement) return null;
 
@@ -132,7 +123,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     // active entitlement. This covers the sandbox propagation lag where Apple
     // and the SDK already see the purchase but RC's REST cache hasn't caught up.
     if (!resolved?.isActive && clientCustomerInfo) {
-      const fromClient = resolveFromCustomerInfo(clientCustomerInfo);
+      const fromClient = resolveFromCustomerInfo(clientCustomerInfo, rcUserId);
       if (fromClient?.isActive) {
         resolved = fromClient;
         console.log('[verify-apple-purchase] using client customerInfo as fallback', {

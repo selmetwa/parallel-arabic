@@ -157,7 +157,21 @@
 		// Initialize RevenueCat in native app when user is logged in
 		if (isNativeApp() && data.user?.id) {
 			const { RevenueCatService } = await import('$lib/services/revenuecat.service');
-			RevenueCatService.initialize(data.user.id).catch(console.error);
+			const appleId: string | null = data.user.subscriber_id ?? null;
+			// An Apple subscription RevenueCat never confirmed for this user (saved
+			// as a date or product id, not a transaction id), or one that lapsed,
+			// may be renewing under another RevenueCat customer. Pull it back here.
+			const needsResync =
+				!!appleId &&
+				!appleId.startsWith('sub_') &&
+				(!/^\d+$/.test(appleId) || !data.isSubscribed);
+			RevenueCatService.initialize(data.user.id)
+				.then(async () => {
+					if (!needsResync) return;
+					const saved = await RevenueCatService.resyncSubscription();
+					if (saved && !data.isSubscribed) window.location.reload();
+				})
+				.catch(console.error);
 		}
 
 		// Only inject Vercel analytics when NOT in native app
