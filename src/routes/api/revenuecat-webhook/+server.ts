@@ -3,6 +3,7 @@ import { json } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
 import { createClient } from '@supabase/supabase-js';
 import { PUBLIC_SUPABASE_URL } from '$env/static/public';
+import { fetchRevenueCatEntitlement } from '$lib/server/revenuecat-entitlement';
 
 export const POST: RequestHandler = async ({ request }) => {
   console.log('[RC webhook] ========== REQUEST RECEIVED ==========');
@@ -47,8 +48,34 @@ export const POST: RequestHandler = async ({ request }) => {
   console.log('[RC webhook] expiration_at_ms:', expiration_at_ms);
   console.log('[RC webhook] original_transaction_id:', original_transaction_id);
 
+  // A restore on another account moved the purchase there. Renewals now go to
+  // the new owner, so save the subscription on that user's row too.
+  if (type === 'TRANSFER') {
+    const transferredTo: string[] = event.transferred_to ?? [];
+    console.log('[RC webhook] TRANSFER', { from: event.transferred_from, to: transferredTo });
+    for (const userId of transferredTo) {
+      if (userId.startsWith('$RCAnonymousID')) continue;
+      const resolved = await fetchRevenueCatEntitlement(userId, env.REVENUECAT_API_KEY ?? '');
+      if (!resolved?.isActive) continue;
+
+      const { data, error } = await adminSupabase
+        .from('user')
+        .update({
+          is_subscriber: true,
+          subscriber_id: resolved.transactionId,
+          subscription_end_date: resolved.expiresMs ? Math.floor(resolved.expiresMs / 1000) : null
+        })
+        .eq('id', userId)
+        .select('id');
+
+      if (error) console.error('[RC webhook] TRANSFER DB error:', error);
+      else if (!data?.length) console.warn('[RC webhook] TRANSFER matched no user row:', userId);
+    }
+    return json({ received: true });
+  }
+
   if (!app_user_id) {
-    console.log('[RC webhook] No app_user_id for event type:', type, '— skipping (expected for TRANSFER events)');
+    console.log('[RC webhook] No app_user_id for event type:', type, '— skipping');
     return json({ received: true });
   }
 
@@ -77,6 +104,9 @@ export const POST: RequestHandler = async ({ request }) => {
       console.log('[RC webhook] Update result - data:', JSON.stringify(data));
       console.log('[RC webhook] Update result - error:', JSON.stringify(error));
       if (error) console.error('[RC webhook] DB error:', error);
+      // The purchase belongs to a RevenueCat customer we have no row for, so
+      // this user keeps paying without access.
+      else if (!data?.length) console.warn('[RC webhook] No user row for app_user_id:', app_user_id);
       break;
     }
 
