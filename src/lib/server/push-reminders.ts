@@ -1,4 +1,5 @@
 import { supabase } from '$lib/supabaseClient';
+import { dueFilter } from '$lib/server/srs-due';
 import { pickPush, REVIEWS_MIN, type PushKind } from '$lib/helpers/push-plan';
 import { apnsConfigured, sendPushes, type PushMessage } from '$lib/server/apns';
 import { streakGoalLine } from '$lib/helpers/streak';
@@ -24,7 +25,7 @@ export async function dueWordCount(userId: string, now: number): Promise<number>
 		.from('saved_word')
 		.select('id', { count: 'exact', head: true })
 		.eq('user_id', userId)
-		.or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`);
+		.or(dueFilter(now));
 	return count ?? 0;
 }
 

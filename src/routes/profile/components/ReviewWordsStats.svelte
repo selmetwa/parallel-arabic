@@ -1,16 +1,21 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
+  import DueForecast from '$lib/components/review/DueForecast.svelte';
+  import StrengthBar from '$lib/components/review/StrengthBar.svelte';
+
   interface Props {
     wordStats: {
       total: number;
       byDialect: Record<string, { total: number; dueForReview: number; learning: number }>;
       dueForReview: number;
       learning: number;
+      mastered: number;
+      strength: number[];
+      forecast: number[];
     };
   }
 
   let { wordStats }: Props = $props();
-
-  let showModal = $state(false);
 
   const dialectLabels: Record<string, string> = {
     'egyptian-arabic': 'Egyptian',
@@ -22,220 +27,108 @@
     'saudi': 'Saudi'
   };
 
-  const dialectEmojis: Record<string, string> = {
-    'egyptian-arabic': '🇪🇬',
-    'fusha': '📚',
-    'levantine': '🇱🇧',
-    'darija': '🇲🇦',
-    'iraqi': '🇮🇶',
-    'khaleeji': '🇦🇪',
-    'saudi': '🇸🇦'
-  };
+  const strengthLabels = ['New', 'Fragile', 'Forming', 'Steady', 'Strong', 'Lasting'];
 
   const dialectEntries = $derived(
     Object.entries(wordStats.byDialect).sort((a, b) => b[1].total - a[1].total)
   );
 
-  // Calculate progress percentage for visual bar
-  const masteryProgress = $derived(
-    wordStats.total > 0
-      ? Math.round(((wordStats.total - wordStats.learning) / wordStats.total) * 100)
-      : 0
-  );
-
   const overviewTiles = $derived([
-    { value: wordStats.total, label: 'Total', accent: 'var(--text1)' },
-    { value: wordStats.dueForReview, label: 'Due', accent: '#2563eb' },
-    { value: wordStats.learning, label: 'Learning', accent: '#d97706' }
+    { value: wordStats.total, label: 'Words' },
+    { value: wordStats.dueForReview, label: 'Due now' },
+    { value: wordStats.learning, label: 'Learning' },
+    { value: wordStats.mastered, label: 'Mastered' }
   ]);
+
+  const hasForecast = $derived(wordStats.forecast.some((n) => n > 0));
 </script>
 
-<div class="bg-tile-400 border-2 border-tile-600 rounded-2xl shadow-lg overflow-hidden">
-  <!-- Header -->
-  <div class="p-4 sm:p-6 border-b border-tile-600 bg-tile-500/30">
-    <div class="flex items-center justify-between gap-3">
-      <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-        <span>🗂️</span>
-        Vocabulary Progress
-        <button
-          onclick={() => (showModal = true)}
-          class="ml-1 w-5 h-5 rounded-full bg-tile-600 hover:bg-tile-500 text-text-200 hover:text-text-300 text-xs font-bold transition-colors flex items-center justify-center leading-none"
-          aria-label="How graduation works"
-        >
-          ?
-        </button>
-      </h3>
-      {#if wordStats.dueForReview > 0}
-        <a
-          href="/review"
-          class="shrink-0 text-sm font-medium bg-brand hover:opacity-90 text-white px-3.5 py-1.5 rounded-lg transition-opacity"
-        >
-          Review {wordStats.dueForReview} due →
-        </a>
-      {/if}
+<div class="rounded-2xl border border-tile-600 bg-tile-300 overflow-hidden">
+  <div class="flex items-center justify-between gap-3 px-4 sm:px-6 pt-5">
+    <div>
+      <p class="srs-label">Spaced repetition</p>
+      <h3 class="text-lg font-semibold text-text-300">Vocabulary</h3>
     </div>
+    {#if wordStats.dueForReview > 0}
+      <a
+        href={resolve('/review')}
+        class="shrink-0 text-sm font-semibold px-3.5 py-1.5 rounded-lg border border-tile-600 bg-tile-400 hover:bg-tile-500 text-text-300 transition-colors"
+      >
+        Review {wordStats.dueForReview} →
+      </a>
+    {/if}
   </div>
 
-  <div class="p-4 sm:p-6">
-    <!-- Overall Stats Row -->
-    <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-6">
+  <div class="px-4 sm:px-6 py-5">
+    <dl class="grid grid-cols-4 border-y border-tile-500 divide-x divide-tile-500 mb-6">
       {#each overviewTiles as tile (tile.label)}
-        <div class="relative overflow-hidden bg-tile-300 rounded-xl p-4 text-center border border-tile-600">
-          <div class="absolute inset-x-0 top-0 h-1" style="background: {tile.accent};"></div>
-          <div class="text-2xl sm:text-3xl font-bold tabular-nums" style="color: {tile.accent};">{tile.value}</div>
- <div class="text-xs text-text-200 mt-1">{tile.label}</div>
+        <div class="py-3 text-center">
+          <dd class="text-xl sm:text-2xl font-semibold text-text-300 tabular-nums">{tile.value}</dd>
+          <dt class="srs-label !text-[10px] mt-0.5">{tile.label}</dt>
         </div>
       {/each}
-    </div>
+    </dl>
 
-    <!-- Mastery Progress Bar -->
     {#if wordStats.total > 0}
       <div class="mb-6">
-        <div class="flex items-center justify-between text-sm mb-2">
-          <span class="text-text-200">Mastery Progress</span>
-          <span class="text-text-300 font-semibold tabular-nums">{masteryProgress}%</span>
+        <p class="srs-label mb-2">Memory strength</p>
+        <div class="flex h-2.5 rounded-full overflow-hidden bg-tile-500" role="img" aria-label="Words by memory strength">
+          {#each wordStats.strength as count, level (level)}
+            {#if count > 0}
+              <div
+                class="h-full"
+                style="width: {(count / wordStats.total) * 100}%; background: {level === 0
+                  ? 'var(--tile6)'
+                  : `color-mix(in srgb, var(--srs-good) ${20 + level * 16}%, var(--tile4))`};"
+                title="{strengthLabels[level]}: {count}"
+              ></div>
+            {/if}
+          {/each}
         </div>
-        <div class="h-3 bg-tile-600 rounded-full overflow-hidden">
-          <div
-            class="h-full bg-gradient-to-r from-green-500 to-emerald-400 rounded-full transition-all duration-500"
-            style="width: {masteryProgress}%"
-          ></div>
-        </div>
-        <p class="text-xs text-text-200 mt-1.5 opacity-80">
-          {wordStats.total - wordStats.learning} mastered • {wordStats.learning} still learning
-        </p>
-      </div>
-    {/if}
-
-    <!-- By Dialect -->
-    {#if dialectEntries.length > 0}
-      <div>
- <h4 class="text-xs font-semibold text-text-200 mb-3">By Dialect</h4>
-        <div class="grid grid-cols-2 gap-3">
-          {#each dialectEntries as [dialect, stats] (dialect)}
-            <div class="bg-tile-300 rounded-xl p-3 border border-tile-600 hover:border-brand transition-colors">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="text-lg">{dialectEmojis[dialect] || '📝'}</span>
-                <span class="font-medium text-text-300 text-sm">{dialectLabels[dialect] || dialect}</span>
-              </div>
-              <div class="flex items-baseline gap-3">
-                <span class="text-xl font-bold text-text-300 tabular-nums">{stats.total}</span>
-                {#if stats.dueForReview > 0}
-                  <span class="text-xs font-medium" style="color: #2563eb;">{stats.dueForReview} due</span>
-                {/if}
-              </div>
-            </div>
+        <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+          {#each wordStats.strength as count, level (level)}
+            {#if count > 0}
+              <span class="inline-flex items-center gap-1.5 text-xs text-text-200">
+                <StrengthBar {level} />
+                {strengthLabels[level]} <span class="tabular-nums text-text-300">{count}</span>
+              </span>
+            {/if}
           {/each}
         </div>
       </div>
+
+      {#if hasForecast}
+        <div class="mb-6">
+          <p class="srs-label mb-3">Coming up this week</p>
+          <DueForecast forecast={wordStats.forecast} />
+        </div>
+      {/if}
+    {/if}
+
+    {#if dialectEntries.length > 0}
+      <div>
+        <p class="srs-label mb-2">By dialect</p>
+        <ul class="divide-y divide-tile-500 border-y border-tile-500">
+          {#each dialectEntries as [dialect, stats] (dialect)}
+            <li class="flex items-baseline justify-between py-2 text-sm">
+              <span class="text-text-300">{dialectLabels[dialect] || dialect}</span>
+              <span class="tabular-nums text-text-200">
+                {#if stats.dueForReview > 0}
+                  <span class="text-[color:var(--srs-good)] font-semibold mr-3">{stats.dueForReview} due</span>
+                {/if}
+                {stats.total}
+              </span>
+            </li>
+          {/each}
+        </ul>
+      </div>
     {:else}
       <div class="text-center py-6">
-        <div class="text-4xl mb-3 opacity-50">📚</div>
         <p class="text-text-200 text-sm mb-3">No words in your review deck yet</p>
-        <a href="/vocabulary" class="text-sm text-brand underline font-medium">
+        <a href={resolve('/vocabulary')} class="text-sm text-text-300 underline underline-offset-4 font-medium">
           Start adding vocabulary →
         </a>
       </div>
     {/if}
   </div>
 </div>
-
-<!-- Graduation Info Modal -->
-{#if showModal}
-  <div
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="graduation-modal-title"
-    class="fixed inset-0 z-50 flex items-center justify-center p-4"
-  >
-    <!-- Backdrop -->
-    <button
-      class="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-default"
-      onclick={() => (showModal = false)}
-      aria-label="Close modal"
-      tabindex="-1"
-    ></button>
-
-    <!-- Modal panel -->
-    <div class="relative z-10 bg-tile-400 border-2 border-tile-600 rounded-2xl shadow-2xl w-full max-w-md p-6">
-      <div class="flex items-center justify-between mb-5">
-        <h2 id="graduation-modal-title" class="text-base font-bold text-text-300">
-          How graduation works
-        </h2>
-        <button
-          onclick={() => (showModal = false)}
-          class="w-8 h-8 rounded-full bg-tile-600 hover:bg-tile-500 text-text-200 hover:text-text-300 transition-colors flex items-center justify-center text-lg leading-none"
-          aria-label="Close modal"
-        >
-          ×
-        </button>
-      </div>
-
-      <div class="space-y-4 text-sm text-text-200">
-        <!-- Learning vs Due -->
-        <div class="space-y-2">
-          <div class="flex items-start gap-3">
-            <span class="mt-1 w-2.5 h-2.5 rounded-full shrink-0" style="background: #d97706;"></span>
-            <p>
-              <span class="font-semibold text-text-300">Learning</span> — words you're actively building memory for. These are reviewed frequently until they stick.
-            </p>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="mt-1 w-2.5 h-2.5 rounded-full shrink-0" style="background: #2563eb;"></span>
-            <p>
-              <span class="font-semibold text-text-300">Due</span> — words ready to be reviewed today. This includes all learning words plus any scheduled words whose review date has arrived.
-            </p>
-          </div>
-        </div>
-
-        <div class="border-t border-tile-600"></div>
-
-        <!-- Graduation threshold -->
-        <p>
-          A word <span class="font-semibold text-text-300">graduates out of Learning</span> once it reaches a 30-day review interval — roughly 5 "Easy" ratings in a row.
-        </p>
-
-        <!-- Interval table -->
-        <div>
-          <p class="font-semibold text-text-300 mb-2">Interval progression</p>
-          <div class="bg-tile-300 rounded-lg overflow-hidden border border-tile-600">
-            <table class="w-full text-xs">
-              <thead>
-                <tr class="border-b border-tile-600">
-                  <th class="text-left px-3 py-2 text-text-200 font-semibold">Review</th>
-                  <th class="text-left px-3 py-2 text-text-200 font-semibold">Next interval</th>
-                </tr>
-              </thead>
-              <tbody>
-                {#each [
-                  { label: '1st', interval: '1 day' },
-                  { label: '2nd', interval: '3 days' },
-                  { label: '3rd', interval: '~7 days' },
-                  { label: '4th', interval: '~17 days' },
-                  { label: '5th', interval: '~42 days (graduated!)' },
-                ] as row, i (row.label)}
-                  <tr class={i % 2 === 0 ? 'bg-tile-300' : 'bg-tile-400'}>
-                    <td class="px-3 py-2 text-text-300">{row.label}</td>
-                    <td class="px-3 py-2 text-text-200">{row.interval}</td>
-                  </tr>
-                {/each}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Rating explanation -->
-        <div class="flex gap-3 text-xs">
-          <div class="flex-1 rounded-lg p-3 border border-green-600/40" style="background: color-mix(in srgb, var(--green1) 50%, var(--tile4));">
-            <p class="font-semibold mb-1" style="color: #16a34a;">Easy</p>
-            <p class="text-text-200">Grows the interval faster — you'll see the word less often.</p>
-          </div>
-          <div class="flex-1 rounded-lg p-3 border border-red-600/40" style="background: color-mix(in srgb, var(--red1) 50%, var(--tile4));">
-            <p class="font-semibold mb-1" style="color: #dc2626;">Hard</p>
-            <p class="text-text-200">Resets the interval — the word comes back sooner.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{/if}

@@ -314,7 +314,7 @@ export const FEATURES: FeatureInfo[] = [
 		sections: [
 			{
 				title: 'Rate it, and the schedule adjusts',
-				body: 'See the word, try to recall it, then reveal the answer and mark it Easy, Medium or Hard. Hard words come back sooner; easy ones wait longer before you see them again.'
+				body: 'See the word, try to recall it, then reveal the answer and mark it Again, Hard, Good or Easy. Each button shows when you will see the word next. Words you miss come back later in the same session, and the gaps grow as a word sticks.'
 			},
 			{
 				title: 'Hints, audio and dialect comparison on every card',

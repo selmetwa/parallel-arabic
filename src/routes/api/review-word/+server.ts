@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
-import { calculateNextReview } from '$lib/helpers/spaced-repetition';
+import { cardToRow, rowToCard, schedule, type Rating } from '$lib/srs/fsrs';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
 import { getUserReviewCount } from '$lib/helpers/get-user-review-count';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
@@ -15,7 +15,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	}
 
 	const userId = user.id;
-	const { saved_word_id, difficulty } = await request.json();
+	const { saved_word_id, rating } = await request.json();
 
 	// Check paywall: allow free users up to 5 reviews, then require subscription
 	const [hasActiveSubscription, reviewCount] = await Promise.all([
@@ -36,9 +36,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		);
 	}
 
-	if (!saved_word_id || !difficulty || difficulty < 1 || difficulty > 3) {
+	if (!saved_word_id || ![1, 2, 3, 4].includes(rating)) {
 		return json(
-			{ error: 'Invalid request. saved_word_id and difficulty (1-3) required.' },
+			{ error: 'Invalid request. saved_word_id and rating (1-4) required.' },
 			{ status: 400 }
 		);
 	}
@@ -56,27 +56,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			return json({ error: 'Word not found' }, { status: 404 });
 		}
 
-		// Calculate next review
-		const reviewResult = calculateNextReview(
-			difficulty as 1 | 2 | 3,
-			savedWord.ease_factor || 2.5,
-			savedWord.interval_days || 0,
-			savedWord.repetitions || 0
-		);
+		const now = new Date();
+		const { card } = schedule(rowToCard(savedWord), rating as Rating, now);
+		const row = cardToRow(card);
 
-		// Update saved_word with new spaced repetition data
-		// Also clear forgotten_in_session flag since word is being reviewed
 		const { error: updateError } = await supabase
 			.from('saved_word')
-			.update({
-				ease_factor: reviewResult.easeFactor,
-				interval_days: reviewResult.intervalDays,
-				repetitions: reviewResult.repetitions,
-				next_review_date: reviewResult.nextReviewDate,
-				last_review_date: Date.now(),
-				is_learning: reviewResult.intervalDays < 30, // Consider mastered if interval > 30 days
-				forgotten_in_session: false // Clear forgotten flag when reviewed
-			})
+			.update(row)
 			.eq('id', saved_word_id);
 
 		if (updateError) {
@@ -85,18 +71,20 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		}
 
 		// Create review history record
-		const reviewId = uuidv4();
 		const { error: reviewError } = await supabase.from('word_review').insert({
-			id: reviewId,
+			id: uuidv4(),
 			saved_word_id: saved_word_id,
 			user_id: userId,
-			difficulty: difficulty,
-			ease_factor: reviewResult.easeFactor,
-			interval_days: reviewResult.intervalDays,
-			repetitions: reviewResult.repetitions,
-			reviewed_at: Date.now(),
-			next_review_date: reviewResult.nextReviewDate,
-			created_at: Date.now()
+			rating,
+			fsrs_stability: row.fsrs_stability,
+			fsrs_difficulty: row.fsrs_difficulty,
+			fsrs_state: row.fsrs_state,
+			interval_days: row.interval_days,
+			repetitions: row.repetitions,
+			reviewed_at: now.getTime(),
+			next_review_date: row.next_review_date,
+			created_at: now.getTime(),
+			dialect: savedWord.dialect
 		});
 
 		if (reviewError) {
@@ -111,9 +99,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 		return json({
 			success: true,
-			nextReviewDate: reviewResult.nextReviewDate,
-			intervalDays: reviewResult.intervalDays,
-			repetitions: reviewResult.repetitions
+			nextReviewDate: row.next_review_date,
+			intervalDays: row.interval_days,
+			repetitions: row.repetitions
 		});
 	} catch (error) {
 		console.error('Error in review-word endpoint:', error);

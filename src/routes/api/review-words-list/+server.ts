@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { dueFilter } from '$lib/server/srs-due';
 
 export const GET: RequestHandler = async ({ url, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -19,7 +20,7 @@ export const GET: RequestHandler = async ({ url, locals }) => {
 	// Same due-for-review filter as the review-words endpoint
 	if (source === 'due-for-review') {
 		const now = Date.now();
-		baseQuery = baseQuery.or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`);
+		baseQuery = baseQuery.or(dueFilter(now));
 	}
 
 	// Paginate past the 1000-row PostgREST default limit

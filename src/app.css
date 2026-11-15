@@ -306,3 +306,36 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+/* Spaced repetition: rating accents, tuned per theme */
+:root,
+[color-scheme="light"] {
+  --srs-again: hsl(0 55% 48%);
+  --srs-hard: hsl(32 70% 42%);
+  --srs-good: hsl(var(--brand-hue) 70% 34%);
+  --srs-easy: hsl(145 40% 32%);
+}
+
+[color-scheme="dark"],
+[color-scheme="dim"] {
+  --srs-again: hsl(0 60% 66%);
+  --srs-hard: hsl(36 70% 60%);
+  --srs-good: hsl(var(--brand-hue) 65% 64%);
+  --srs-easy: hsl(145 38% 58%);
+}
+
+/* Study card surface */
+.srs-paper {
+  background-color: var(--tile2);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--tile6) 60%, transparent),
+    0 24px 48px -24px hsl(var(--brand-hue) 30% 10% / calc(var(--shadow-strength) * 4 + 0.08));
+}
+
+/* Small-caps metadata label */
+.srs-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+}

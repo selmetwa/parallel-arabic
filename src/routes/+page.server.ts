@@ -2,6 +2,7 @@ import { StripeService } from "$lib/services/stripe.service";
 import { redirect, fail } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 import { supabase } from "$lib/supabaseClient";
+import { dueFilter } from "$lib/server/srs-due";
 import { checkUserSubscription } from "$lib/helpers/subscription";
 import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 import { getStoriesPaginated } from "$lib/helpers/story-helpers";
@@ -143,8 +144,7 @@ export const load: PageServerLoad = async ({ parent }) => {
           .from('saved_word')
           .select('*', { count: 'exact', head: true })
           .eq('user_id', userId)
-          .eq('forgotten_in_session', false)
-          .or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`),
+          .or(dueFilter(now)),
         supabase
           .from('game_progress')
           .select('id, dialect, category, game_mode, current_index, total_questions, score')
