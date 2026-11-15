@@ -15,6 +15,8 @@
   import SubscribeButton from '$lib/components/SubscribeButton.svelte';
   import { trackEvent } from '$lib/analytics';
   import { previewIntervals, State, wordToCard, type Rating, type ReviewWord } from '$lib/srs/fsrs';
+  import { loadDeck, pendingReviews, queueReview, saveDeck, type Deck, type SessionState } from '$lib/srs/offline-store';
+  import { applyRating, dueFromDeck, forecastFromWords, syncReviews, withPatch } from '$lib/srs/review-sync';
 
   interface Props {
     data: PageData;
@@ -28,13 +30,8 @@
     practice: boolean;
   }
 
-  interface SessionStats {
-    reviewed: number;
-    again: number;
-    newLearned: number;
-  }
+  type SessionStats = SessionState['stats'];
 
-  const PROGRESS_KEY = 'review-progress';
   // A missed word comes back after this many other cards.
   const AGAIN_GAP = 3;
 
@@ -46,18 +43,25 @@
   let moreAvailable = $state(false);
   let isLoading = $state(true);
   let error = $state<string | null>(null);
-  let saveError = $state(false);
   let requiresSubscription = $state(false);
   let totalReviewCount = $state(0);
   let totalSavedWordsCount = $state(0);
   let showSchedulingModal = $state(false);
   let card = $state<ReturnType<typeof ReviewCard> | null>(null);
 
+  // Offline review: subscribers keep a copy of the deck on the device; every rating is queued and synced.
+  let offline = $state(false);
+  let pending = $state(0);
+  let syncFailed = $state(false);
+  let justSynced = $state(false);
+  let deck: Deck | null = null;
+
   // Generation + import modal visibility
   let showGenerateSentences = $state(false);
   let showGenerateWords = $state(false);
   let showImport = $state(false);
 
+  const userId = $derived(data.user?.id as string | undefined);
   const current = $derived(queue[index]);
   const sessionComplete = $derived(!isLoading && index >= queue.length);
   const previews = $derived(current ? previewIntervals(wordToCard(current.word)) : null);
@@ -72,14 +76,19 @@
   const recalledPct = $derived(stats.reviewed ? Math.round(((stats.reviewed - stats.again) / stats.reviewed) * 100) : 0);
 
   function finishSession() {
-    clearProgress();
+    persistDeck();
     if (stats.reviewed === 0) return;
-    trackEvent('review_session_completed', { total_reviewed: stats.reviewed, again_count: stats.again });
-    awardXp('review_cycle');
+    trackEvent('review_session_completed', { total_reviewed: stats.reviewed, again_count: stats.again, offline });
+    if (offline && deck) {
+      deck.pendingCycleBonus = true;
+      persistDeck();
+    } else {
+      awardXp('review_cycle');
+    }
     refreshSummary();
   }
 
-  function awardXp(eventType: 'review_correct' | 'review_cycle') {
+  function awardXp(eventType: 'review_cycle') {
     fetch('/api/award-xp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -97,40 +106,53 @@
       .catch(() => {});
   }
 
-  // Session progress survives a reload for the rest of the day: stats plus missed words still to practice.
-  function saveProgress() {
-    try {
-      localStorage.setItem(
-        PROGRESS_KEY,
-        JSON.stringify({
-          userId: data.user?.id,
-          day: new Date().toDateString(),
-          stats,
-          practice: queue.slice(index).filter((e) => e.practice).map((e) => e.word)
-        })
-      );
-    } catch {
-      // storage unavailable; the session just won't resume
-    }
+  const today = () => new Date().toDateString();
+
+  // The session (stats and missed words still to practice) survives a reload for the rest of the day.
+  function sessionState(): SessionState {
+    return { day: today(), stats, practice: queue.slice(index).filter((e) => e.practice).map((e) => e.word) };
   }
 
-  function loadProgress(): { stats: SessionStats; practice: ReviewWord[] } | null {
-    try {
-      const saved = JSON.parse(localStorage.getItem(PROGRESS_KEY) || 'null');
-      if (saved?.userId === data.user?.id && saved?.day === new Date().toDateString() && saved.stats) {
-        return { stats: saved.stats, practice: saved.practice ?? [] };
+  function persistDeck() {
+    if (!deck) return;
+    deck.session = sessionState();
+    saveDeck(deck);
+  }
+
+  /** Sends queued ratings and folds the result into the page: XP, paywall, and the server's word state. */
+  async function runSync() {
+    if (!userId) return;
+    const hadPending = pending;
+    const outcome = await syncReviews(userId);
+    pending = outcome.remaining;
+    syncFailed = outcome.status === 'failed';
+    if (outcome.status !== 'synced') return;
+
+    const { response } = outcome;
+    totalReviewCount = response.reviewCount || totalReviewCount;
+    if (response.requiresSubscription) requiresSubscription = true;
+
+    if (response.xp.awarded > 0 && response.xp.last) {
+      const { newTotalXp, newLevel } = response.xp.last;
+      userXp.set(newTotalXp);
+      if (response.xp.leveledUp) userLevel.set(newLevel);
+      const title = LEVEL_TIERS.find((t) => t.level === newLevel)?.title;
+      showXpToast(response.xp.awarded, response.xp.leveledUp, newLevel, title);
+    }
+
+    if (deck) {
+      deck.words = deck.words.map((w) => (response.words[w.id] ? withPatch(w, response.words[w.id]) : w));
+      if (deck.pendingCycleBonus) {
+        deck.pendingCycleBonus = false;
+        awardXp('review_cycle');
       }
-    } catch {
-      // ignore corrupt or unavailable storage
+      persistDeck();
     }
-    return null;
-  }
 
-  function clearProgress() {
-    try {
-      localStorage.removeItem(PROGRESS_KEY);
-    } catch {
-      // ignore
+    // A quiet confirmation after reviews made offline (or several at once) go through.
+    if (hadPending > 1 && pending === 0) {
+      justSynced = true;
+      setTimeout(() => (justSynced = false), 3000);
     }
   }
 
@@ -149,26 +171,77 @@
     totalReviewCount = result.reviewCount || 0;
     totalSavedWordsCount = result.totalSavedWordsCount || 0;
     forecast = result.forecast ?? [];
-    return result.words as ReviewWord[];
+    return result as {
+      words: ReviewWord[];
+      upcoming?: ReviewWord[];
+      limit: number;
+      forecast: number[];
+      hasActiveSubscription: boolean;
+      totalSavedWordsCount: number;
+    };
+  }
+
+  function buildQueue(words: ReviewWord[], session: SessionState | null) {
+    const saved = session?.day === today() ? session : null;
+    const fresh = words.map((word) => ({ word, practice: false }));
+    const practice = (saved?.practice ?? [])
+      .filter((p) => !words.some((w) => w.id === p.id))
+      .map((word) => ({ word, practice: true }));
+    stats = saved?.stats ?? { reviewed: 0, again: 0, newLearned: 0 };
+    queue = [...fresh, ...practice];
+    index = 0;
+    revealed = false;
   }
 
   async function loadWords() {
+    if (!userId) return;
     isLoading = true;
     error = null;
+    // Send anything queued first, so the server's list already reflects it.
+    await runSync();
+    const stored = await loadDeck(userId);
+
     try {
-      const words = await fetchWords();
-      if (!words) return;
-      const saved = loadProgress();
-      const fresh = words.map((word) => ({ word, practice: false }));
-      const practice = (saved?.practice ?? [])
-        .filter((p) => !words.some((w) => w.id === p.id))
-        .map((word) => ({ word, practice: true }));
-      stats = saved?.stats ?? { reviewed: 0, again: 0, newLearned: 0 };
-      queue = [...fresh, ...practice];
-      index = 0;
-      revealed = false;
+      const result = await fetchWords();
+      if (!result) return;
+      // Words with a rating still waiting to sync stay out of today's queue.
+      const waiting = new Set((await pendingReviews(userId)).map((r) => r.savedWordId));
+      const words = result.words.filter((w) => !waiting.has(w.id));
+
+      if (result.hasActiveSubscription) {
+        const byId = new Map([...result.words, ...(result.upcoming ?? [])].map((w) => [w.id, w]));
+        deck = {
+          userId,
+          savedAt: Date.now(),
+          words: [...byId.values()],
+          limit: result.limit,
+          forecast: result.forecast,
+          totalSavedWordsCount: result.totalSavedWordsCount,
+          session: stored?.session ?? null,
+          pendingCycleBonus: stored?.pendingCycleBonus ?? false
+        };
+      } else {
+        deck = null;
+      }
+      buildQueue(words, stored?.session ?? null);
+      persistDeck();
     } catch (err) {
-      error = err instanceof Error ? err.message : 'Failed to load words';
+      // No connection (or the server is down): review from the copy on this device.
+      if (stored) {
+        deck = stored;
+        offline = true;
+        const now = Date.now();
+        totalSavedWordsCount = stored.totalSavedWordsCount;
+        forecast = forecastFromWords(stored.words, now);
+        buildQueue(dueFromDeck(stored.words, stored.limit, now), stored.session);
+      } else {
+        error =
+          typeof navigator !== 'undefined' && !navigator.onLine
+            ? "You're offline. Open Review once with a connection to download your words for offline use."
+            : err instanceof Error
+              ? err.message
+              : 'Failed to load words';
+      }
     } finally {
       isLoading = false;
     }
@@ -176,15 +249,43 @@
 
   /** After a session ends, refresh the forecast so it includes what was just reviewed. */
   async function refreshSummary() {
+    if (offline) {
+      const now = Date.now();
+      forecast = deck ? forecastFromWords(deck.words, now) : forecast;
+      moreAvailable = deck ? dueFromDeck(deck.words, deck.limit, now).length > 0 : false;
+      return;
+    }
     try {
-      const words = await fetchWords();
-      moreAvailable = !!words && words.length > 0;
+      await runSync();
+      const result = await fetchWords();
+      moreAvailable = !!result && result.words.length > 0;
     } catch {
       moreAvailable = false;
     }
   }
 
-  onMount(loadWords);
+  onMount(() => {
+    offline = !navigator.onLine;
+    pendingReviews(userId ?? '').then((r) => (pending = r.length));
+    loadWords();
+
+    const goOnline = () => {
+      offline = false;
+      runSync();
+    };
+    const goOffline = () => (offline = true);
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') runSync();
+    };
+    window.addEventListener('online', goOnline);
+    window.addEventListener('offline', goOffline);
+    document.addEventListener('visibilitychange', onVisible);
+    return () => {
+      window.removeEventListener('online', goOnline);
+      window.removeEventListener('offline', goOffline);
+      document.removeEventListener('visibilitychange', onVisible);
+    };
+  });
 
   function reveal() {
     revealed = true;
@@ -192,16 +293,24 @@
 
   function rate(rating: Rating) {
     const entry = current;
-    if (!entry) return;
+    if (!entry || !userId) return;
     const { word, practice } = entry;
 
-    trackEvent('review_word_answered', { word_id: word.id, rating, correct: rating > 1, practice, dialect: word.dialect });
+    trackEvent('review_word_answered', { word_id: word.id, rating, correct: rating > 1, practice, dialect: word.dialect, offline });
 
     if (!practice) {
       stats.reviewed++;
       if (rating === 1) stats.again++;
       else if (word.state === State.New) stats.newLearned++;
-      submitReview(word.id, rating);
+
+      // Scheduled here first (so it leaves today's list even offline), then queued and synced.
+      const reviewedAt = Date.now();
+      if (deck) {
+        const updated = applyRating(word, rating, reviewedAt);
+        deck.words = deck.words.map((w) => (w.id === word.id ? updated : w));
+      }
+      pending++;
+      queueReview({ id: crypto.randomUUID(), userId, savedWordId: word.id, rating, reviewedAt }).then(runSync);
     }
 
     // A missed word comes back a few cards later. That repeat is practice only; FSRS already scheduled it.
@@ -212,35 +321,13 @@
     index++;
     revealed = false;
     if (index >= queue.length) finishSession();
-    else saveProgress();
-  }
-
-  async function submitReview(savedWordId: string, rating: Rating) {
-    try {
-      const response = await fetch('/api/review-word', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ saved_word_id: savedWordId, rating })
-      });
-      const result = await response.json();
-      if (!response.ok) {
-        if (result.requiresSubscription) {
-          requiresSubscription = true;
-          totalReviewCount = result.reviewCount || totalReviewCount;
-          return;
-        }
-        throw new Error(result.error);
-      }
-      saveError = false;
-      if (rating > 1) awardXp('review_correct');
-    } catch {
-      saveError = true;
-    }
+    else persistDeck();
   }
 
   async function startNewSession() {
     trackEvent('review_session_new_started', { previous_reviewed_count: stats.reviewed });
-    clearProgress();
+    if (deck) deck.session = null;
+    queue = [];
     await loadWords();
   }
 
@@ -260,7 +347,7 @@
     } else if (revealed && ['1', '2', '3', '4'].includes(e.key)) {
       e.preventDefault();
       rate(Number(e.key) as Rating);
-    } else if (e.key === 'r' || e.key === 'R') {
+    } else if (!offline && (e.key === 'r' || e.key === 'R')) {
       card?.playAudio();
     }
   }
@@ -302,6 +389,21 @@
         >?</button>
       </div>
     </header>
+
+    {#if offline || pending > 0 || justSynced || syncFailed}
+      <p class="sync-status" role="status" class:is-offline={offline}>
+        {#if offline}
+          <span class="dot" aria-hidden="true"></span>
+          Offline{#if pending > 0} · {pending} review{pending === 1 ? '' : 's'} will sync when you're back online{:else} · your reviews are saved on this device{/if}
+        {:else if syncFailed}
+          {pending} review{pending === 1 ? '' : 's'} not saved yet · retrying
+        {:else if pending > 0}
+          Saving {pending} review{pending === 1 ? '' : 's'}…
+        {:else}
+          ✓ All reviews synced
+        {/if}
+      </p>
+    {/if}
 
     {#if requiresSubscription}
       <section class="srs-paper rounded-2xl border border-tile-500 px-6 sm:px-10 py-12 text-center">
@@ -387,10 +489,12 @@
           </div>
         {/if}
 
-        <div>
-          <p class="srs-label mb-3">Add to your deck</p>
-          {@render addActions()}
-        </div>
+        {#if !offline}
+          <div>
+            <p class="srs-label mb-3">Add to your deck</p>
+            {@render addActions()}
+          </div>
+        {/if}
       </section>
     {:else if current && previews}
       <div class="mb-3 flex items-center justify-between text-xs">
@@ -416,16 +520,13 @@
           {previews}
           isPractice={current.practice}
           {revealed}
+          {offline}
           onReveal={reveal}
           onRate={rate}
         />
       {/key}
 
-      {#if saveError}
-        <p class="mt-3 text-sm text-center text-[color:var(--srs-again)]">Your last rating didn't save. Check your connection; the word will come back next session.</p>
-      {/if}
-
-      <footer class="mt-10 flex items-center justify-center gap-5 text-sm text-text-200">
+      <footer class="mt-10 flex items-center justify-center gap-5 text-sm text-text-200" class:hidden={offline}>
         <button type="button" class="hover:text-text-300" onclick={() => (showGenerateWords = true)}>Generate words</button>
         <span class="opacity-40">·</span>
         <button type="button" class="hover:text-text-300" onclick={() => (showGenerateSentences = true)}>Sentences</button>
@@ -486,6 +587,24 @@
 </div>
 
 <style>
+  .sync-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: -1rem 0 1.5rem;
+    font-size: 0.8125rem;
+    color: var(--text2);
+  }
+  .sync-status.is-offline {
+    color: var(--text1);
+  }
+  .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--srs-hard);
+  }
+
   .add-action {
     display: flex;
     flex-direction: column;
