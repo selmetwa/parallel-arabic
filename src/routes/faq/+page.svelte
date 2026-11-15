@@ -70,7 +70,7 @@
     {
       id: 'offline',
       question: 'Can I Use Parallel Arabic Offline?',
-      answer: 'Parallel Arabic is a web application that requires an internet connection. However, once loaded, many features work offline thanks to Progressive Web App (PWA) capabilities. For the best experience, we recommend using it with an internet connection to access all features including personalized content.'
+      answer: 'With a subscription, vocab review works offline: open Review once with a connection and your words are kept on that device, and any reviews you do offline sync when you reconnect. Everything else (lessons, stories, games, the AI Tutor) needs an internet connection.'
     }
   ];
 

@@ -1,12 +1,12 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { supabase } from '$lib/supabaseClient';
-import { cardToRow, rowToCard, schedule, type Rating } from '$lib/srs/fsrs';
+import type { Rating } from '$lib/srs/fsrs';
+import { syncReviews } from '$lib/server/srs-sync';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
 import { getUserReviewCount } from '$lib/helpers/get-user-review-count';
-import { trackActivitySimple } from '$lib/helpers/track-activity';
 import { v4 as uuidv4 } from 'uuid';
 
+/** One rating, applied now. Kept for older clients; the review page queues ratings through /api/review-words/sync. */
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
 
@@ -44,58 +44,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	}
 
 	try {
-		// Get current saved word data
-		const { data: savedWord, error: fetchError } = await supabase
-			.from('saved_word')
-			.select('*')
-			.eq('id', saved_word_id)
-			.eq('user_id', userId)
-			.single();
-
-		if (fetchError || !savedWord) {
-			return json({ error: 'Word not found' }, { status: 404 });
-		}
-
-		const now = new Date();
-		const { card } = schedule(rowToCard(savedWord), rating as Rating, now);
-		const row = cardToRow(card);
-
-		const { error: updateError } = await supabase
-			.from('saved_word')
-			.update(row)
-			.eq('id', saved_word_id);
-
-		if (updateError) {
-			console.error('Error updating saved word:', updateError);
-			return json({ error: 'Failed to update word' }, { status: 500 });
-		}
-
-		// Create review history record
-		const { error: reviewError } = await supabase.from('word_review').insert({
-			id: uuidv4(),
-			saved_word_id: saved_word_id,
-			user_id: userId,
-			rating,
-			fsrs_stability: row.fsrs_stability,
-			fsrs_difficulty: row.fsrs_difficulty,
-			fsrs_state: row.fsrs_state,
-			interval_days: row.interval_days,
-			repetitions: row.repetitions,
-			reviewed_at: now.getTime(),
-			next_review_date: row.next_review_date,
-			created_at: now.getTime(),
-			dialect: savedWord.dialect
-		});
-
-		if (reviewError) {
-			console.error('Error creating review record:', reviewError);
-			// Don't fail the request if review history fails
-		}
-
-		// Track activity (non-blocking)
-		trackActivitySimple(userId, 'review', 1).catch((err) => {
-			console.error('Error tracking review activity:', err);
-		});
+		const result = await syncReviews(
+			userId,
+			[{ id: uuidv4(), saved_word_id, rating: rating as Rating, reviewed_at: Date.now() }],
+			{ awardXpForCorrect: false }
+		);
+		const row = result.words[saved_word_id];
+		if (!row) return json({ error: 'Word not found' }, { status: 404 });
 
 		return json({
 			success: true,

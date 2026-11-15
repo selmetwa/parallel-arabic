@@ -50,8 +50,10 @@ const config = {
 			checkOrigin: false
 		},
 
+		// src/service-worker.ts keeps vocab review working offline. The native app loads the live
+		// site, so Android's WebView gets it too; iOS's WKWebView needs App-Bound Domains first.
 		serviceWorker: {
-			register: false
+			register: true
 		}
 	},
 	preprocess: [vitePreprocess({})]

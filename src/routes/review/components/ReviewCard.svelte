@@ -16,12 +16,14 @@
     previews: Record<Rating, number>;
     /** True when this word was missed earlier in the session and is back for practice. */
     isPractice?: boolean;
+    /** No connection: audio, definitions and dialect comparison need the network, so they're hidden. */
+    offline?: boolean;
     revealed: boolean;
     onReveal: () => void;
     onRate: (rating: Rating) => void;
   }
 
-  let { word, previews, isPractice = false, revealed, onReveal, onRate }: Props = $props();
+  let { word, previews, isPractice = false, offline = false, revealed, onReveal, onRate }: Props = $props();
 
   let showHint = $state(false);
   let audioWrap = $state<HTMLSpanElement | null>(null);
@@ -198,6 +200,7 @@
   }
 
   async function askChatGTP(words: string | string[]) {
+    if (offline) return;
     const wordsArray = Array.isArray(words) ? words : [words];
     const wordsText = wordsArray.join(' ');
     const hasArabicChars = /[؀-ۿ]/.test(wordsText);
@@ -341,9 +344,11 @@
 
     <!-- Quiet tools -->
     <div class="mt-4 flex items-center gap-1 text-text-200">
-      <span bind:this={audioWrap} class="inline-flex">
-        <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl} className="!p-2 !rounded-full" />
-      </span>
+      {#if !offline}
+        <span bind:this={audioWrap} class="inline-flex">
+          <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl} className="!p-2 !rounded-full" />
+        </span>
+      {/if}
       {#if !revealed}
         <button
           type="button"
@@ -410,7 +415,7 @@
         {/each}
       </div>
 
-      <div class="rise text-center mt-2" style="animation-delay: 60ms">
+      <div class="rise text-center mt-2" class:hidden={offline} style="animation-delay: 60ms">
         <button type="button" onclick={compareDialects} class="text-sm text-text-200 underline decoration-tile-600 underline-offset-4 hover:text-text-300">
           Compare across dialects
         </button>

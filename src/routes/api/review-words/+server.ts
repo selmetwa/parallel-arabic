@@ -126,6 +126,31 @@ export const GET: RequestHandler = async ({ locals }) => {
       newWords = data ?? [];
     }
 
+    // Subscribers' devices keep a copy for offline review: also send what comes due in the next
+    // day, plus the next batch of new words, so tomorrow's session works without a connection.
+    let upcoming: any[] = [];
+    if (hasActiveSubscription) {
+      const [soonRes, spareNewRes] = await Promise.all([
+        supabase
+          .from('saved_word')
+          .select(WORD_COLUMNS)
+          .eq('user_id', userId)
+          .neq('fsrs_state', 0)
+          .gt('next_review_date', now)
+          .lte('next_review_date', now + DAY_MS)
+          .order('next_review_date', { ascending: true })
+          .limit(limit),
+        supabase
+          .from('saved_word')
+          .select(WORD_COLUMNS)
+          .eq('user_id', userId)
+          .eq('fsrs_state', 0)
+          .order('created_at', { ascending: true })
+          .range(newWords.length, newWords.length + limit - 1)
+      ]);
+      upcoming = [...(soonRes.data ?? []), ...(spareNewRes.data ?? [])];
+    }
+
     // Reviews coming up on each of the next 7 days (index 0 = tomorrow).
     const forecast = Array.from({ length: 7 }, () => 0);
     for (const row of upcomingRes.data ?? []) {
@@ -135,6 +160,8 @@ export const GET: RequestHandler = async ({ locals }) => {
 
     return json({
       words: [...(dueWords ?? []), ...newWords].map(toReviewWord),
+      upcoming: upcoming.map(toReviewWord),
+      limit,
       counts: { due: dueCountRes.count ?? 0, new: newCountRes.count ?? 0 },
       forecast,
       reviewCount,
