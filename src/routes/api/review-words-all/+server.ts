@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { MASTERED_STABILITY } from '$lib/srs/fsrs';
 
 export const GET: RequestHandler = async ({ locals }) => {
   const { sessionId, user } = await locals?.auth?.validate() || {};
@@ -27,7 +28,10 @@ export const GET: RequestHandler = async ({ locals }) => {
           english_word,
           transliterated_word,
           dialect,
-          ease_factor,
+          fsrs_stability,
+          fsrs_difficulty,
+          fsrs_state,
+          lapses,
           interval_days,
           repetitions,
           next_review_date,
@@ -57,23 +61,16 @@ export const GET: RequestHandler = async ({ locals }) => {
 
     // Transform to component format and determine status
     const words = (allWords || []).map((word: any) => {
-      let status: 'learning' | 'due' | 'scheduled' | 'mastered' = 'learning';
-      let statusLabel = 'Learning';
-      
-      if (word.is_learning) {
-        status = 'learning';
-        statusLabel = 'Learning';
-      } else if (!word.next_review_date || word.next_review_date <= now) {
-        status = 'due';
-        statusLabel = 'Due for Review';
-      } else if (word.interval_days >= 30) {
-        status = 'mastered';
-        statusLabel = 'Mastered';
-      } else {
-        status = 'scheduled';
-        const daysUntil = Math.ceil((word.next_review_date - now) / (1000 * 60 * 60 * 24));
-        statusLabel = `Review in ${daysUntil} day${daysUntil !== 1 ? 's' : ''}`;
-      }
+      const isNew = (word.fsrs_state ?? 0) === 0;
+      const isMastered = !isNew && (word.fsrs_stability ?? 0) >= MASTERED_STABILITY;
+      const isDue = !isNew && (!word.next_review_date || word.next_review_date <= now);
+      const status: 'new' | 'due' | 'learning' | 'mastered' = isNew
+        ? 'new'
+        : isDue
+          ? 'due'
+          : isMastered
+            ? 'mastered'
+            : 'learning';
 
       return {
         id: word.id,
@@ -82,20 +79,20 @@ export const GET: RequestHandler = async ({ locals }) => {
         transliteration: word.transliterated_word,
         audioUrl: word.word?.audio_url || undefined,
         dialect: word.dialect || 'egyptian-arabic',
-        easeFactor: word.ease_factor,
-        intervalDays: word.interval_days,
-        repetitions: word.repetitions,
+        stability: word.fsrs_stability,
+        difficulty: word.fsrs_difficulty,
+        state: word.fsrs_state ?? 0,
+        lapses: word.lapses ?? 0,
+        reps: word.repetitions ?? 0,
+        intervalDays: word.interval_days ?? 0,
         nextReviewDate: word.next_review_date,
         lastReviewDate: word.last_review_date,
-        isLearning: word.is_learning,
         masteryLevel: word.mastery_level || 0,
         createdAt: word.created_at,
-        status,
-        statusLabel
+        status
       };
     });
 
-    console.log('words', words);
     return json({ words });
   } catch (error) {
     console.error('Error in review-words-all endpoint:', error);

@@ -1,15 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Button from '$lib/components/Button.svelte';
+  import { resolve } from '$app/paths';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import GenerateWordsModal from '$lib/components/review/GenerateWordsModal.svelte';
   import GenerateSentencesModal from '$lib/components/review/GenerateSentencesModal.svelte';
   import ImportWordsModal from '$lib/components/review/ImportWordsModal.svelte';
+  import StrengthBar from '$lib/components/review/StrengthBar.svelte';
   import { toast } from 'svelte-sonner';
-  import cn from 'classnames';
   import type { Dialect } from '$lib/types';
   import type { PageData } from './$types';
   import { trackEvent } from '$lib/analytics';
+  import { formatDue, masteryLevel, type ReviewWord } from '$lib/srs/fsrs';
 
   interface Props {
     data: PageData;
@@ -21,33 +22,35 @@
   let showGenerateSentences = $state(false);
   let showImport = $state(false);
 
-  interface ReviewWord {
-    id: string;
-    arabic: string;
-    english: string;
-    transliteration: string;
-    audioUrl?: string;
-    dialect: string;
-    easeFactor: number;
-    intervalDays: number;
-    repetitions: number;
-    nextReviewDate: number | null;
-    lastReviewDate: number | null;
-    isLearning: boolean;
-    masteryLevel: number;
+  type Status = 'new' | 'due' | 'learning' | 'mastered';
+  type SortBy = 'recentlyAdded' | 'weakest' | 'nextDue';
+
+  interface DeckWord extends ReviewWord {
     createdAt: number;
-    status: 'learning' | 'due' | 'scheduled' | 'mastered';
-    statusLabel: string;
+    status: Status;
   }
 
-  let words = $state<ReviewWord[]>([]);
+  const filters: { value: 'all' | Status; label: string }[] = [
+    { value: 'all', label: 'All' },
+    { value: 'due', label: 'Due' },
+    { value: 'new', label: 'New' },
+    { value: 'learning', label: 'Learning' },
+    { value: 'mastered', label: 'Mastered' }
+  ];
+
+  const sorts: { value: SortBy; label: string }[] = [
+    { value: 'recentlyAdded', label: 'Recently added' },
+    { value: 'weakest', label: 'Weakest first' },
+    { value: 'nextDue', label: 'Next due' }
+  ];
+
+  let words = $state<DeckWord[]>([]);
   let isLoading = $state(true);
   let error = $state<string | null>(null);
   let deletingIds = $state<Set<string>>(new Set());
-  let filterStatus = $state<'all' | 'learning' | 'due' | 'scheduled' | 'mastered'>('all');
+  let filterStatus = $state<'all' | Status>('all');
   let searchQuery = $state('');
-  let sortBy = $state<'repetitions' | 'nextDue' | 'recentlyAdded'>('recentlyAdded');
-  let sortOrder = $state<'asc' | 'desc'>('desc');
+  let sortBy = $state<SortBy>('recentlyAdded');
 
   onMount(() => {
     loadWords();
@@ -56,11 +59,10 @@
   async function loadWords() {
     isLoading = true;
     error = null;
-    
+
     try {
       const response = await fetch('/api/review-words-all');
       const result = await response.json();
-      console.log('result', result);
       if (!response.ok) {
         throw new Error(result.error || 'Failed to load words');
       }
@@ -96,10 +98,9 @@
         throw new Error(result.error || 'Failed to delete word');
       }
 
-      // Remove word from local state
-      const deleted = words.find(w => w.id === wordId);
+      const deleted = words.find((w) => w.id === wordId);
       trackEvent('review_word_deleted', { word_id: wordId, status_before_delete: deleted?.status, dialect: deleted?.dialect });
-      words = words.filter(w => w.id !== wordId);
+      words = words.filter((w) => w.id !== wordId);
       toast.success('Word removed successfully');
     } catch (err) {
       toast.error(err instanceof Error ? err.message : 'Failed to delete word');
@@ -108,317 +109,166 @@
     }
   }
 
-  function getStatusColor(status: ReviewWord['status']): string {
-    switch (status) {
-      case 'learning':
-        return 'bg-blue-500/40 text-blue-100 border-blue-400';
-      case 'due':
-        return 'bg-red-500/20 text-red-300 border-red-500/50';
-      case 'scheduled':
-        return 'bg-yellow-500/20 text-yellow-300 border-yellow-500/50';
-      case 'mastered':
-        return 'bg-green-500/20 text-green-700 border-green-500/50';
-      default:
-        return 'bg-tile-600 text-text-200 border-tile-500';
-    }
-  }
-
-  function formatDate(timestamp: number | null): string {
-    if (!timestamp) return 'Never';
-    const date = new Date(timestamp);
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
-      year: 'numeric' 
-    });
+  function dueLabel(word: DeckWord): string {
+    if (word.status === 'new') return 'new';
+    return formatDue(word.nextReviewDate);
   }
 
   const filteredWords = $derived.by(() => {
     let filtered = words;
 
-    // Filter by status
     if (filterStatus !== 'all') {
-      filtered = filtered.filter(w => w.status === filterStatus);
+      filtered = filtered.filter((w) => w.status === filterStatus);
     }
 
-    // Filter by search query
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(w => 
-        w.arabic.toLowerCase().includes(query) ||
-        w.english.toLowerCase().includes(query) ||
-        w.transliteration.toLowerCase().includes(query)
+      filtered = filtered.filter(
+        (w) =>
+          w.arabic.toLowerCase().includes(query) ||
+          w.english.toLowerCase().includes(query) ||
+          w.transliteration.toLowerCase().includes(query)
       );
     }
 
-    // Sort the filtered words
-    const sorted = [...filtered].sort((a, b) => {
-      let comparison = 0;
-      
+    return [...filtered].sort((a, b) => {
       switch (sortBy) {
-        case 'repetitions':
-          comparison = a.repetitions - b.repetitions;
-          break;
+        case 'weakest':
+          // New words have no strength yet; list them after the weakest reviewed ones
+          return (a.stability ?? Infinity) - (b.stability ?? Infinity);
         case 'nextDue':
-          // Sort by next review date (null values go to end)
-          if (a.nextReviewDate === null && b.nextReviewDate === null) {
-            comparison = 0;
-          } else if (a.nextReviewDate === null) {
-            comparison = 1; // null goes to end
-          } else if (b.nextReviewDate === null) {
-            comparison = -1; // null goes to end
-          } else {
-            comparison = a.nextReviewDate - b.nextReviewDate;
-          }
-          break;
-        case 'recentlyAdded':
-          comparison = a.createdAt - b.createdAt;
-          break;
+          return (a.nextReviewDate ?? Infinity) - (b.nextReviewDate ?? Infinity);
+        default:
+          return b.createdAt - a.createdAt;
       }
-      
-      // Apply sort order
-      return sortOrder === 'asc' ? comparison : -comparison;
     });
-
-    return sorted;
   });
 
-  function handleSort(newSortBy: 'repetitions' | 'nextDue' | 'recentlyAdded') {
-    // If clicking the same sort, toggle order; otherwise set new sort and default to desc
-    if (sortBy === newSortBy) {
-      sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
-    } else {
-      sortBy = newSortBy;
-      sortOrder = 'desc';
-    }
-    trackEvent('review_all_words_sorted', { sort_by: sortBy, sort_order: sortOrder });
+  function handleSort(next: SortBy) {
+    sortBy = next;
+    trackEvent('review_all_words_sorted', { sort_by: next });
   }
 
   const statusCounts = $derived.by(() => {
-    return {
-      all: words.length,
-      learning: words.filter(w => w.status === 'learning').length,
-      due: words.filter(w => w.status === 'due').length,
-      scheduled: words.filter(w => w.status === 'scheduled').length,
-      mastered: words.filter(w => w.status === 'mastered').length
-    };
+    const counts: Record<'all' | Status, number> = { all: words.length, new: 0, due: 0, learning: 0, mastered: 0 };
+    for (const w of words) counts[w.status]++;
+    return counts;
   });
 </script>
 
-<div class="min-h-screen bg-tile-200 py-8 px-4">
-  <div class="max-w-7xl mx-auto">
-    <header class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+<div class="min-h-screen bg-tile-300">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <header class="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <h1 class="text-3xl font-bold text-text-300 mb-2">All Review Words</h1>
-        <p class="text-text-200">View and manage all your words in review</p>
+        <a href={resolve('/review')} class="srs-label hover:!text-text-300">← Review</a>
+        <h1 class="text-2xl sm:text-3xl text-text-300 font-semibold tracking-tight mt-1">My words</h1>
+        <p class="text-sm text-text-200 mt-1">{statusCounts.all} words · {statusCounts.mastered} mastered</p>
       </div>
-      <div class="flex flex-wrap gap-2">
-        <button
-          onclick={() => { showGenerateWords = true; trackEvent('review_generate_words_opened', { source: 'all_words' }); }}
-          class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-tile-600 bg-tile-300 text-text-300 font-semibold hover:bg-tile-400 active:scale-95 transition-all"
-        >
-          <span>📝</span> Generate Words
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-text-200">
+        <button type="button" class="hover:text-text-300" onclick={() => { showGenerateWords = true; trackEvent('review_generate_words_opened', { source: 'all_words' }); }}>
+          + Generate words
         </button>
-        <button
-          onclick={() => { showGenerateSentences = true; trackEvent('review_generate_sentences_opened', { source: 'all_words' }); }}
-          class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-tile-600 bg-tile-300 text-text-300 font-semibold hover:bg-tile-400 active:scale-95 transition-all"
-        >
-          <span>✍️</span> Generate Sentences
+        <button type="button" class="hover:text-text-300" onclick={() => { showGenerateSentences = true; trackEvent('review_generate_sentences_opened', { source: 'all_words' }); }}>
+          + Sentences
         </button>
-        <button
-          onclick={() => { showImport = true; trackEvent('review_import_opened', { source: 'all_words' }); }}
-          class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-tile-600 bg-tile-300 text-text-300 font-semibold hover:bg-tile-400 active:scale-95 transition-all"
-        >
-          <span>📥</span> Import Words
+        <button type="button" class="hover:text-text-300" onclick={() => { showImport = true; trackEvent('review_import_opened', { source: 'all_words' }); }}>
+          + Import
         </button>
       </div>
     </header>
 
-    <!-- Filters and Search -->
-    <div class="mb-6 flex flex-col gap-4">
-      <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-        <div class="flex flex-wrap gap-2">
+    <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter by status">
+        {#each filters as f (f.value)}
           <button
-            onclick={() => { filterStatus = 'all'; trackEvent('review_all_words_filtered', { filter_status: 'all', results_count: filteredWords.length }); }}
-            class={cn(
-              "px-4 py-2 rounded-lg border transition-colors",
-              filterStatus === 'all'
-                ? "bg-tile-600 text-text-100 border-tile-500"
-                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-            )}
+            type="button"
+            aria-pressed={filterStatus === f.value}
+            onclick={() => { filterStatus = f.value; trackEvent('review_all_words_filtered', { filter_status: f.value, results_count: statusCounts[f.value] }); }}
+            class="chip"
           >
-            All ({statusCounts.all}) in review
+            {f.label}
+            <span class="tabular-nums opacity-60">{statusCounts[f.value]}</span>
           </button>
-        </div>
-
-        <input
-          type="text"
-          placeholder="Search words..."
-          bind:value={searchQuery}
-          onchange={() => searchQuery.trim() && trackEvent('review_all_words_searched', { query: searchQuery, results_count: filteredWords.length })}
-          class="px-4 py-2 rounded-lg border border-tile-500 bg-tile-300 text-text-100 placeholder-text-200 focus:outline-none focus:ring-2 focus:ring-tile-500"
-        />
+        {/each}
       </div>
 
-      <!-- Sort Controls -->
-      <div class="flex flex-wrap items-center gap-3">
-        <span class="text-text-200 text-sm font-medium">Sort by:</span>
-        <div class="flex flex-wrap gap-2">
-          <button
-            onclick={() => handleSort('recentlyAdded')}
-            class={cn(
-              "px-3 py-1.5 rounded-lg border text-sm transition-colors",
-              sortBy === 'recentlyAdded'
-                ? "bg-tile-600 text-text-100 border-tile-500"
-                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-            )}
-          >
-            Recently Added {sortBy === 'recentlyAdded' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
-          </button>
-          <button
-            onclick={() => handleSort('repetitions')}
-            class={cn(
-              "px-3 py-1.5 rounded-lg border text-sm transition-colors",
-              sortBy === 'repetitions'
-                ? "bg-tile-600 text-text-100 border-tile-500"
-                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-            )}
-          >
-            Repetitions {sortBy === 'repetitions' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
-          </button>
-          <button
-            onclick={() => handleSort('nextDue')}
-            class={cn(
-              "px-3 py-1.5 rounded-lg border text-sm transition-colors",
-              sortBy === 'nextDue'
-                ? "bg-tile-600 text-text-100 border-tile-500"
-                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-            )}
-          >
-            Next Due {sortBy === 'nextDue' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
-          </button>
-        </div>
-      </div>
+      <input
+        type="search"
+        placeholder="Search"
+        bind:value={searchQuery}
+        onchange={() => searchQuery.trim() && trackEvent('review_all_words_searched', { query: searchQuery, results_count: filteredWords.length })}
+        class="w-full sm:w-56 px-3.5 py-2 rounded-lg border border-tile-500 bg-tile-200 text-text-300 text-sm placeholder:text-text-200 focus:outline-none focus:border-tile-600"
+      />
     </div>
 
-    <!-- Loading State -->
+    <div class="mb-3 flex items-center gap-3 text-xs">
+      <span class="srs-label">Sort</span>
+      {#each sorts as s (s.value)}
+        <button
+          type="button"
+          onclick={() => handleSort(s.value)}
+          class="{sortBy === s.value ? 'text-text-300 font-semibold underline underline-offset-4' : 'text-text-200 hover:text-text-300'}"
+        >
+          {s.label}
+        </button>
+      {/each}
+    </div>
+
     {#if isLoading}
-      <div class="text-center py-12">
-        <p class="text-text-200">Loading words...</p>
-      </div>
+      <p class="text-center text-text-200 py-16">Loading your words…</p>
     {:else if error}
-      <div class="text-center py-12">
-        <p class="text-red-300 mb-4">{error}</p>
-        <Button onClick={loadWords} type="button">Retry</Button>
+      <div class="text-center py-16">
+        <p class="text-[color:var(--srs-again)] mb-4">{error}</p>
+        <button type="button" class="px-4 py-2 rounded-lg bg-tile-400 border border-tile-600 text-text-300 font-semibold" onclick={loadWords}>Retry</button>
       </div>
     {:else if filteredWords.length === 0}
-      <div class="text-center py-12">
+      <div class="text-center py-16">
         <p class="text-text-200 mb-4">
-          {searchQuery || filterStatus !== 'all' 
-            ? 'No words match your filters' 
-            : 'No words in review yet'}
+          {searchQuery || filterStatus !== 'all' ? 'No words match your filters' : 'No words in review yet'}
         </p>
         {#if searchQuery || filterStatus !== 'all'}
-          <Button onClick={() => { searchQuery = ''; filterStatus = 'all'; }} type="button">
-            Clear Filters
-          </Button>
+          <button type="button" class="text-sm text-text-300 underline underline-offset-4" onclick={() => { searchQuery = ''; filterStatus = 'all'; }}>
+            Clear filters
+          </button>
         {/if}
       </div>
     {:else}
-      <!-- Words Table -->
-      <div class="bg-tile-300 rounded-lg border border-tile-500 overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="w-full">
-            <thead class="bg-tile-600 border-b border-tile-500">
-              <tr>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Arabic</th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">English</th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Transliteration</th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Dialect</th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Status</th>
-                <th 
-                  class="px-4 py-3 text-left text-text-100 font-semibold cursor-pointer hover:bg-tile-500 transition-colors"
-                  onclick={() => handleSort('repetitions')}
-                  role="button"
-                  tabindex="0"
-                  onkeydown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      handleSort('repetitions');
-                    }
-                  }}
-                >
-                  Repetitions {sortBy === 'repetitions' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
-                </th>
-                <th 
-                  class="px-4 py-3 text-left text-text-100 font-semibold cursor-pointer hover:bg-tile-500 transition-colors"
-                  onclick={() => handleSort('nextDue')}
-                  role="button"
-                  tabindex="0"
-                  onkeydown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      handleSort('nextDue');
-                    }
-                  }}
-                >
-                  Next Review {sortBy === 'nextDue' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
-                </th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {#each filteredWords as word (word.id)}
-                <tr class="border-b border-tile-500 hover:bg-tile-400 transition-colors">
-                  <td class="px-4 py-3 text-text-100 text-lg">
-                    <div class="flex items-center gap-2">
-                      {word.arabic}
-                      {#if word.audioUrl}
-                        <AudioButton audioUrl={word.audioUrl} text={word.arabic} dialect={word.dialect as Dialect} />
-                      {/if}
-                    </div>
-                  </td>
-                  <td class="px-4 py-3 text-text-200">{word.english}</td>
-                  <td class="px-4 py-3 text-text-200">{word.transliteration}</td>
-                  <td class="px-4 py-3 text-text-200 capitalize">
-                    {word.dialect.replace('-', ' ')}
-                  </td>
-                  <td class="px-4 py-3">
-                    <span class={cn(
-                      "px-2 py-1 rounded text-xs font-medium border",
-                      getStatusColor(word.status)
-                    )}>
-                      {word.statusLabel}
-                    </span>
-                  </td>
-                  <td class="px-4 py-3 text-text-200">{word.repetitions}</td>
-                  <td class="px-4 py-3 text-text-200 text-sm">
-                    {formatDate(word.nextReviewDate)}
-                  </td>
-                  <td class="px-4 py-3">
-                    <button
-                      onclick={() => deleteWord(word.id)}
-                      disabled={deletingIds.has(word.id)}
-                      class={cn(
-                        "px-3 py-1 rounded text-sm font-medium transition-colors",
-                        deletingIds.has(word.id)
-                          ? "bg-tile-500 text-text-200 cursor-not-allowed"
-                          : "bg-red-500/10 text-red-500 hover:bg-red-500/50 border border-red-400"
-                      )}
-                    >
-                      {deletingIds.has(word.id) ? 'Removing...' : 'Remove'}
-                    </button>
-                  </td>
-                </tr>
-              {/each}
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <ul class="rounded-2xl border border-tile-500 bg-tile-200 divide-y divide-tile-500 overflow-hidden">
+        {#each filteredWords as word (word.id)}
+          <li class="group grid grid-cols-[1fr_auto_auto] sm:grid-cols-[minmax(0,11rem)_1fr_auto_auto] items-center gap-x-4 gap-y-1 px-4 sm:px-5 py-3.5 hover:bg-tile-300 transition-colors">
+            <p class="text-2xl font-semibold text-text-300 leading-snug truncate sm:text-right" dir="rtl">{word.arabic}</p>
+            <div class="row-start-2 sm:row-start-auto min-w-0">
+              <p class="text-text-300 truncate">{word.english}</p>
+              <p class="text-xs text-text-200 truncate">
+                <span class="italic">{word.transliteration}</span>
+                <span class="mx-1 opacity-50">·</span>
+                <span class="capitalize">{word.dialect.replace('-', ' ')}</span>
+              </p>
+            </div>
+            <div class="row-span-2 sm:row-span-1 flex flex-col items-end gap-1 sm:w-20">
+              <StrengthBar level={masteryLevel(word.state, word.stability)} />
+              <span class="text-xs tabular-nums {word.status === 'due' ? 'text-[color:var(--srs-good)] font-semibold' : 'text-text-200'}">{dueLabel(word)}</span>
+            </div>
+            <div class="row-span-2 sm:row-span-1 flex items-center gap-1 text-text-200">
+              {#if word.audioUrl}
+                <AudioButton audioUrl={word.audioUrl} text={word.arabic} dialect={word.dialect as Dialect} className="!p-1.5 !rounded-full" />
+              {/if}
+              <button
+                type="button"
+                onclick={() => deleteWord(word.id)}
+                disabled={deletingIds.has(word.id)}
+                class="p-1.5 rounded-full opacity-60 group-hover:opacity-100 hover:text-[color:var(--srs-again)] hover:bg-tile-400 transition disabled:cursor-not-allowed"
+                aria-label="Remove {word.english} from review"
+                title="Remove"
+              >
+                <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h12M8 6V4h4v2M6 6l.7 10h6.6L14 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </li>
+        {/each}
+      </ul>
 
-      <div class="mt-4 text-sm text-text-200">
-        Showing {filteredWords.length} of {words.length} words
-      </div>
+      <p class="mt-4 text-xs text-text-200">Showing {filteredWords.length} of {words.length} words</p>
     {/if}
   </div>
 </div>
@@ -428,12 +278,26 @@
 <ImportWordsModal bind:open={showImport} user={data.user} onImported={loadWords} />
 
 <style>
-  table {
-    border-collapse: collapse;
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    border: 1px solid var(--tile5);
+    color: var(--text2);
+    transition: background-color 150ms, color 150ms;
   }
-  
-  th, td {
-    text-align: left;
+
+  .chip:hover {
+    background: var(--tile4);
+    color: var(--text1);
+  }
+
+  .chip[aria-pressed='true'] {
+    background: var(--text1);
+    border-color: var(--text1);
+    color: var(--tile2);
   }
 </style>
-

@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { redirect } from '@sveltejs/kit';
 import { supabase } from '$lib/supabaseClient';
+import { dueFilter } from '$lib/server/srs-due';
 
 export const load: PageServerLoad = async ({ parent }) => {
   const { session, user } = await parent();
@@ -42,8 +43,7 @@ export const load: PageServerLoad = async ({ parent }) => {
       .from('saved_word')
       .select('*', { count: 'exact', head: true })
       .eq('user_id', userId)
-      .eq('forgotten_in_session', false)
-      .or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`);
+      .or(dueFilter(now));
 
     if (!dueError && dueCount !== null) {
       wordsDueForReviewCount = dueCount;

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Button from '$lib/components/Button.svelte';
   import { wordDragSelect } from '$lib/actions/word-drag-select';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
@@ -7,46 +6,33 @@
   import WordStatsModal from './WordStatsModal.svelte';
   import type { Dialect } from '$lib/types';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
-  import cn from 'classnames';
   import { filterArabicCharacters } from '$lib/utils/arabic-normalization';
   import { trackEvent } from '$lib/analytics';
-
-  interface ReviewWord {
-    id: string;
-    arabic: string;
-    english: string;
-    transliteration: string;
-    audioUrl?: string;
-    dialect: string;
-    easeFactor: number;
-    intervalDays: number;
-    repetitions: number;
-    nextReviewDate: number | null;
-    lastReviewDate: number | null;
-    isLearning: boolean;
-  }
+  import { formatInterval, retrievability, State, wordToCard, type Rating, type ReviewWord } from '$lib/srs/fsrs';
 
   interface Props {
     word: ReviewWord;
-    onReview: (difficulty: 1 | 2 | 3) => void;
-    onForgot?: () => void;
+    /** Days until next review for each rating. */
+    previews: Record<Rating, number>;
+    /** True when this word was missed earlier in the session and is back for practice. */
+    isPractice?: boolean;
+    revealed: boolean;
+    onReveal: () => void;
+    onRate: (rating: Rating) => void;
   }
 
-  let { word, onReview, onForgot }: Props = $props();
+  let { word, previews, isPractice = false, revealed, onReveal, onRate }: Props = $props();
 
-  let showAnswer = $state(false);
   let showHint = $state(false);
-  let selectedDifficulty = $state<1 | 2 | 3 | null>(null);
-  
+  let audioWrap = $state<HTMLSpanElement | null>(null);
+
   // Drag-to-highlight state (English words)
   let selectedWords = $state<string[]>([]);
-  let isSelecting = $state(false);
   let selectionStartIndex = $state(-1);
   let selectionEndIndex = $state(-1);
-  
+
   // Drag-to-highlight state (Arabic words)
   let selectedArabicWords = $state<string[]>([]);
-  let isSelectingArabic = $state(false);
   let selectionStartIndexArabic = $state(-1);
   let selectionEndIndexArabic = $state(-1);
   let isDefinitionModalOpen = $state(false);
@@ -62,6 +48,35 @@
   let isComparing = $state(false);
   let comparisonError = $state<string | null>(null);
 
+  const recall = $derived(word.state === State.New ? null : retrievability(wordToCard(word)));
+
+  const ratings: { value: Rating; label: string; color: string }[] = [
+    { value: 1, label: 'Again', color: 'var(--srs-again)' },
+    { value: 2, label: 'Hard', color: 'var(--srs-hard)' },
+    { value: 3, label: 'Good', color: 'var(--srs-good)' },
+    { value: 4, label: 'Easy', color: 'var(--srs-easy)' }
+  ];
+
+  const dialectName: Record<string, string> = {
+    fusha: 'Modern Standard Arabic',
+    levantine: 'Levantine Arabic',
+    darija: 'Moroccan Darija',
+    'egyptian-arabic': 'Egyptian Arabic',
+    iraqi: 'Iraqi Arabic',
+    khaleeji: 'Khaleeji Arabic',
+    saudi: 'Saudi Arabic (Hijazi)'
+  };
+
+  /** Replays the word's audio; used by the page's R shortcut. */
+  export function playAudio() {
+    audioWrap?.querySelector('button')?.click();
+  }
+
+  function reveal() {
+    trackEvent('review_card_flipped', { word_id: word.id, revealed: true });
+    onReveal();
+  }
+
   async function compareDialects() {
     trackEvent('review_card_dialect_comparison_requested', { word_id: word.id, dialect: word.dialect });
     isComparing = true;
@@ -73,13 +88,13 @@
       const res = await fetch('/api/compare-dialects', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           text: word.arabic,
           currentDialect: word.dialect,
           transliteration: word.transliteration
         })
       });
-      
+
       if (res.ok) {
         comparisonData = await res.json();
       } else {
@@ -93,127 +108,16 @@
     }
   }
 
-  function closeComparisonModal() {
-    isComparisonModalOpen = false;
-  }
-
-  function closeStatsModal() {
-    isStatsModalOpen = false;
-  }
-
-  const dialectName: Record<string, string> = {
-    fusha: 'Modern Standard Arabic',
-    levantine: 'Levantine Arabic',
-    darija: 'Moroccan Darija',
-    'egyptian-arabic': 'Egyptian Arabic',
-    iraqi: 'Iraqi Arabic',
-    khaleeji: 'Khaleeji Arabic',
-    saudi: 'Saudi Arabic (Hijazi)'
-  };
-
-  function handleDifficultyClick(difficulty: 1 | 2 | 3) {
-    selectedDifficulty = difficulty;
-    // Reset immediately to prevent showing answer for next word
-    showAnswer = false;
-    showHint = false;
-    clearSelection();
-    onReview(difficulty);
-    // Reset selectedDifficulty after a delay for visual feedback
-    setTimeout(() => {
-      selectedDifficulty = null;
-    }, 500);
-  }
-
-  function handleForgot() {
-    selectedDifficulty = null;
-    showAnswer = false;
-    showHint = false;
-    clearSelection();
-    if (onForgot) {
-      onForgot();
-    }
-  }
-  
-  // Reset state when word changes
-  $effect(() => {
-    if (word) {
-      // Suppress the flip-back animation on word change so both faces can't
-      // briefly render together while the rotation is in flight.
-      if (flipCardInner) flipCardInner.style.transition = 'none';
-      showAnswer = false;
-      showHint = false;
-      selectedDifficulty = null;
-      isFlipping = false;
-      clearSelection();
-      clearArabicSelection();
-      requestAnimationFrame(() => {
-        if (flipCardInner) flipCardInner.style.transition = '';
-      });
-    }
-  });
-
-  let isFlipping = $state(false);
-  let flipCardInner: HTMLDivElement | null = null;
-  let frontFace: HTMLDivElement | null = null;
-  let backFace: HTMLDivElement | null = null;
-  let cardMinHeight = $state(0);
-
-  // Calculate and set min-height based on content
-  $effect(() => {
-    // Recalculate when word changes or when UI state changes
-    // Dependencies: word, showHint, selectedWords, selectedArabicWords, showAnswer
-    if (frontFace && backFace && word) {
-      // Use requestAnimationFrame to ensure DOM is updated
-      requestAnimationFrame(() => {
-        if (frontFace && backFace) {
-          const frontHeight = frontFace.scrollHeight;
-          const backHeight = backFace.scrollHeight;
-          const maxHeight = Math.max(frontHeight, backHeight);
-          cardMinHeight = maxHeight;
-        }
-      });
-    }
-    // Access state variables to make them dependencies
-    void showHint;
-    void selectedWords;
-    void selectedArabicWords;
-    void showAnswer;
-  });
-
-  function toggleFlip() {
-    if (isFlipping) return;
-
-    isFlipping = true;
-    showAnswer = !showAnswer;
-    trackEvent('review_card_flipped', { word_id: word.id, revealed: showAnswer });
-
-    if (!showAnswer) {
-      clearSelection();
-      clearArabicSelection();
-    }
-
-    setTimeout(() => {
-      isFlipping = false;
-    }, 600);
-  }
-
-  // Word selection functions for drag-to-highlight
+  // Word selection for drag-to-highlight
   function handleWordMouseDown(index: number) {
-    isSelecting = true;
     selectionStartIndex = index;
     selectionEndIndex = index;
     updateSelectedWords();
   }
 
   function handleWordMouseEnter(index: number) {
-    if (isSelecting) {
-      selectionEndIndex = index;
-      updateSelectedWords();
-    }
-  }
-
-  function handleWordMouseUp() {
-    isSelecting = false;
+    selectionEndIndex = index;
+    updateSelectedWords();
   }
 
   function updateSelectedWords() {
@@ -225,28 +129,19 @@
 
   function clearSelection() {
     selectedWords = [];
-    isSelecting = false;
     selectionStartIndex = -1;
     selectionEndIndex = -1;
   }
-  
-  // Arabic word selection functions
+
   function handleArabicWordMouseDown(index: number) {
-    isSelectingArabic = true;
     selectionStartIndexArabic = index;
     selectionEndIndexArabic = index;
     updateSelectedArabicWords();
   }
 
   function handleArabicWordMouseEnter(index: number) {
-    if (isSelectingArabic) {
-      selectionEndIndexArabic = index;
-      updateSelectedArabicWords();
-    }
-  }
-
-  function handleArabicWordMouseUp() {
-    isSelectingArabic = false;
+    selectionEndIndexArabic = index;
+    updateSelectedArabicWords();
   }
 
   function updateSelectedArabicWords() {
@@ -258,7 +153,6 @@
 
   function clearArabicSelection() {
     selectedArabicWords = [];
-    isSelectingArabic = false;
     selectionStartIndexArabic = -1;
     selectionEndIndexArabic = -1;
   }
@@ -275,35 +169,27 @@
     return selectedWords.length > 0 && index >= start && index <= end;
   }
 
-  // Function to map English words to corresponding Arabic words
+  // Map selected English words to the Arabic words at the same positions
   function mapEnglishToArabic(englishWords: string[]): string {
     const allEnglishWords = word.english.split(' ');
     const allArabicWords = word.arabic.split(' ');
-    
-    // Find the indices of the selected English words
     const selectedIndices: number[] = [];
-    
+
     for (const englishWord of englishWords) {
-      const index = allEnglishWords.findIndex((word, i) => 
-        word.toLowerCase() === englishWord.toLowerCase() && !selectedIndices.includes(i)
+      const index = allEnglishWords.findIndex(
+        (w, i) => w.toLowerCase() === englishWord.toLowerCase() && !selectedIndices.includes(i)
       );
-      if (index !== -1) {
-        selectedIndices.push(index);
-      }
+      if (index !== -1) selectedIndices.push(index);
     }
-    
-    // Extract corresponding Arabic words
+
     const correspondingArabicWords = selectedIndices
-      .sort((a, b) => a - b) // Maintain order
-      .map(index => allArabicWords[index])
-      .filter(word => word); // Remove undefined/empty words
-    
+      .sort((a, b) => a - b)
+      .map((index) => allArabicWords[index])
+      .filter((w) => w);
+
     if (correspondingArabicWords.length > 0) {
-      const arabicText = correspondingArabicWords.join(' ');
-      return filterArabicCharacters(arabicText);
+      return filterArabicCharacters(correspondingArabicWords.join(' '));
     }
-    
-    // Fallback: filter the entire Arabic word
     return filterArabicCharacters(word.arabic);
   }
 
@@ -314,21 +200,17 @@
   async function askChatGTP(words: string | string[]) {
     const wordsArray = Array.isArray(words) ? words : [words];
     const wordsText = wordsArray.join(' ');
-    
-    // Check if the input contains Arabic characters
-    const hasArabicChars = /[\u0600-\u06FF]/.test(wordsText);
-    
+    const hasArabicChars = /[؀-ۿ]/.test(wordsText);
+
     if (hasArabicChars) {
-      // Input is Arabic - use it directly
       targetArabicWord = wordsText;
-      targetWord = ''; // No English equivalent needed
+      targetWord = '';
     } else {
-      // Input is English - map to Arabic
       targetWord = wordsText;
       targetArabicWord = mapEnglishToArabic(wordsArray);
     }
     const isSingleWordDefinition = wordsArray.length === 1 && countTokens(targetArabicWord) === 1;
-    
+
     isLoadingDefinition = true;
     isDefinitionModalOpen = true;
     trackEvent('review_card_definition_requested', { word_id: word.id, selected_text: wordsText, single_word: isSingleWordDefinition });
@@ -338,37 +220,24 @@
 		Arabic: "${word.arabic}"
 		English: "${word.english}"
 		Transliteration: "${word.transliteration}"
-		
+
 		Please provide a definition based on the context.`;
 
     try {
       const res = await fetch('/api/definition-sentence', {
         method: 'POST',
         headers: { accept: 'application/json' },
-        body: JSON.stringify({
-          question,
-          isSingleWordDefinition
-        })
+        body: JSON.stringify({ question, isSingleWordDefinition })
       });
-
       const data = await res.json();
 
-      // Store the structured JSON response as a string so the UI can parse it
-      // The response should already be valid JSON from the API
       try {
         let content = data.message?.content || '';
-
-        // Strip markdown code blocks if present
         if (content.includes('```')) {
           content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
         }
-
-        // Verify it's valid JSON and store it as a string for the UI components
-        const parsed = JSON.parse(content);
-        // Store the entire parsed object as JSON string for the UI to parse
-        definition = JSON.stringify(parsed);
-      } catch (e) {
-        // Fallback for plain text responses (shouldn't happen with structured output)
+        definition = JSON.stringify(JSON.parse(content));
+      } catch {
         definition = data.message?.content || 'No definition available';
       }
     } catch (error) {
@@ -389,11 +258,7 @@
   }
 </script>
 
-<WordStatsModal
-  isOpen={isStatsModalOpen}
-  closeModal={closeStatsModal}
-  {word}
-/>
+<WordStatsModal isOpen={isStatsModalOpen} closeModal={() => (isStatsModalOpen = false)} {word} />
 
 <DefinitionModal
   activeWordObj={{
@@ -409,7 +274,7 @@
 
 <DialectComparisonModal
   isOpen={isComparisonModalOpen}
-  closeModal={closeComparisonModal}
+  closeModal={() => (isComparisonModalOpen = false)}
   originalText={word.arabic}
   originalEnglish={word.english}
   {comparisonData}
@@ -418,357 +283,252 @@
   currentDialect={word.dialect as Dialect}
 />
 
-<div
-  class="flip-card p-4 sm:p-6 bg-gradient-to-br from-tile-400/60 to-tile-400/40 border-2 border-tile-600 rounded-2xl shadow-xl duration-300"
->
-  <div
-    bind:this={flipCardInner}
-    class={cn("flip-card-inner p-4 sm:p-6", {
-      "flipped": showAnswer,
-      "is-animating": isFlipping
-    })}
-    style={showAnswer && cardMinHeight > 0 ? `min-height: ${cardMinHeight}px` : ''}
-  >
-    <!-- Front Face -->
-    <div class="flip-card-front" bind:this={frontFace}>
-      <div class="text-left mb-6">
-        <!-- Dialect Badge + Review count -->
-        <div class="mb-4 flex items-center gap-2 flex-wrap">
-          <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
-            {dialectName[word.dialect] || word.dialect}
-          </span>
-          <span class="inline-block px-2 py-0.5 bg-tile-600 text-text-200 rounded-full text-xs">
-            {word.repetitions === 0 ? 'First review' : `Reviewed ${word.repetitions}×`}
-          </span>
-          <button
-            type="button"
-            onclick={() => { isStatsModalOpen = true; trackEvent('review_card_stats_opened', { word_id: word.id }); }}
-            class="inline-flex items-center px-2 py-0.5 bg-tile-600 text-text-200 rounded-full text-xs hover:bg-tile-500 transition-colors"
-            title="View word statistics"
-          >
-            📊 Stats
-          </button>
-        </div>
-      <div class="flex flex-col items-center justify-center gap-3 mb-4">
-        <!-- Arabic word selection controls -->
-        {#if selectedArabicWords.length > 0}
-          <div class="flex gap-2 mb-2">
-            <button
-              onclick={() => askChatGTP(selectedArabicWords.join(' '))}
-              class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-            >
-              Define "{selectedArabicWords.join(' ')}"
-            </button>
-            <button
-              onclick={clearArabicSelection}
-              class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-            >
-              Clear Selection
-            </button>
-          </div>
-        {/if}
-        
-        <div
-          class="flex w-fit flex-row flex-wrap text-4xl p-2 sm:text-5xl font-bold text-text-100 select-none"
-          use:wordDragSelect={{ onStart: handleArabicWordMouseDown, onExtend: handleArabicWordMouseEnter, onEnd: handleArabicWordMouseUp }}
-          aria-label="Arabic word selection area for definitions"
-          role="application"
+<article class="srs-paper relative rounded-2xl border border-tile-500 overflow-hidden">
+  <!-- Meta row -->
+  <header class="flex items-center justify-between px-5 sm:px-8 pt-5">
+    <span class="srs-label">{dialectName[word.dialect] || word.dialect}</span>
+    {#if isPractice}
+      <span class="srs-label !text-[color:var(--srs-again)]">Again · practice</span>
+    {:else if word.state === State.New}
+      <span class="srs-label !text-[color:var(--srs-good)]">New word</span>
+    {:else if recall !== null}
+      <span class="srs-label inline-flex items-center gap-1.5" title="Chance you remember this word right now">
+        <span
+          class="w-1.5 h-1.5 rounded-full"
+          style="background: {recall >= 0.85 ? 'var(--srs-easy)' : recall >= 0.7 ? 'var(--srs-hard)' : 'var(--srs-again)'}"
+        ></span>
+        {Math.round(recall * 100)}% recall
+      </span>
+    {/if}
+  </header>
+
+  <!-- The word -->
+  <div class="px-5 sm:px-8 pt-8 sm:pt-12 pb-6 flex flex-col items-center text-center">
+    {#if selectedArabicWords.length > 0}
+      <div class="flex gap-3 mb-3 text-sm">
+        <button type="button" class="underline underline-offset-4 text-text-300" onclick={() => askChatGTP(selectedArabicWords.join(' '))}>
+          Define “{selectedArabicWords.join(' ')}”
+        </button>
+        <button type="button" class="text-text-200 hover:text-text-300" onclick={clearArabicSelection}>Clear</button>
+      </div>
+    {/if}
+
+    <div
+      class="flex flex-wrap justify-center gap-x-3 select-none word"
+      use:wordDragSelect={{ onStart: handleArabicWordMouseDown, onExtend: handleArabicWordMouseEnter, onEnd: () => {} }}
+      aria-label="Arabic word. Tap a word for its definition."
+      role="application"
+      dir="rtl"
+    >
+      {#each word.arabic.split(' ') as arabicWord, index (index)}
+        <button
+          type="button"
+          data-word-zone
+          data-word-index={index}
+          onclick={() => askChatGTP(arabicWord)}
+          aria-label={`Get definition for: ${arabicWord}`}
+          class="font-bold text-text-300 leading-[1.5] rounded-lg px-1 transition-colors {isArabicWordSelected(index)
+            ? 'bg-[color:color-mix(in_srgb,var(--srs-good)_18%,transparent)]'
+            : 'hover:bg-[color:color-mix(in_srgb,var(--tile6)_35%,transparent)]'}"
           dir="rtl"
-        >
-          {#each word.arabic.split(' ') as arabicWord, index}
-            <button
-              type="button"
-              data-word-zone
-              data-word-index={index}
-              onclick={() => askChatGTP(arabicWord)}
-              onkeydown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  askChatGTP(arabicWord);
-                }
-              }}
-              tabindex="0"
-              aria-label={`Get definition for: ${arabicWord}`}
-              class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2 rounded-lg transition-all", {
-                "bg-gradient-to-br from-blue-200 to-blue-300 border-blue-500 shadow-lg scale-110 animate-pulse-subtle": isArabicWordSelected(index),
-                "hover:bg-tile-400/50 border-transparent hover:border-tile-600 hover:scale-105": !isArabicWordSelected(index)
-              })}
-              dir="rtl"
-            >{arabicWord}</button>
-          {/each}
-        </div>
-      </div>
-        {#if showHint}
-          <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
-        {/if}
-        <div class="flex flex-col items-center gap-3 mt-4">
-          <div class="flex flex-row justify-center gap-2">
-            <Button onClick={() => { showHint = !showHint; trackEvent('review_card_hint_toggled', { word_id: word.id, visible: showHint }); }} type="button">
-              {showHint ? 'Hide' : 'Show'} Hint
-            </Button>
-            <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
-              Listen
-            </AudioButton>
-          </div>
-          <button
-            type="button"
-            onclick={toggleFlip}
-            class="mt-4 px-6 py-3 bg-tile-500 hover:bg-tile-600 text-text-300 font-semibold rounded-xl border-2 border-tile-600 hover:border-tile-500 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
-          >
-            Reveal Translation
-          </button>
-        </div>
-      </div>
+        >{arabicWord}</button>
+      {/each}
     </div>
 
-    <!-- Back Face -->
-    <div class="flip-card-back" bind:this={backFace}>
-      <div class="text-left mb-6">
-        <!-- Dialect Badge -->
-        <div class="mb-4">
-          <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
-            {dialectName[word.dialect] || word.dialect}
-          </span>
-        </div>
-      <div class="space-y-4">
-        <div class="flex flex-col items-center justify-center gap-3">
-          <!-- Arabic word selection controls -->
-          {#if selectedArabicWords.length > 0}
-            <div class="flex gap-2 mb-2">
-              <button
-                onclick={() => askChatGTP(selectedArabicWords.join(' '))}
-                class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-              >
-                Define "{selectedArabicWords.join(' ')}"
-              </button>
-              <button
-                onclick={clearArabicSelection}
-                class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-              >
-                Clear Selection
-              </button>
-            </div>
-          {/if}
-          
-          <div
-            class="flex w-fit flex-row flex-wrap text-4xl sm:text-5xl font-bold text-text-100 select-none"
-            use:wordDragSelect={{ onStart: handleArabicWordMouseDown, onExtend: handleArabicWordMouseEnter, onEnd: handleArabicWordMouseUp }}
-            aria-label="Arabic word selection area for definitions"
-            role="application"
-            dir="rtl"
-          >
-            {#each word.arabic.split(' ') as arabicWord, index}
-              <span
-                data-word-zone
-                data-word-index={index}
-                onclick={() => askChatGTP(arabicWord)}
-                onkeydown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    askChatGTP(arabicWord);
-                  }
-                }}
-                role="button"
-                tabindex="0"
-                aria-label={`Get definition for: ${arabicWord}`}
-                class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2", {
-                  "bg-blue-200 border-blue-400": isArabicWordSelected(index),
-                  "hover:opacity-80 border-transparent hover:border-tile-600": !isArabicWordSelected(index)
-                })}
-                dir="rtl"
-              >{arabicWord}</span>
-            {/each}
-          </div>
-          <!-- Transliteration (always visible on the back) -->
-          <p class="text-center text-lg sm:text-xl text-text-200 italic">{word.transliteration}</p>
-        </div>
+    <p class="h-7 mt-1 text-lg text-text-200 italic transition-opacity {showHint || revealed ? 'opacity-100' : 'opacity-0'}" aria-hidden={!(showHint || revealed)}>
+      {word.transliteration}
+    </p>
 
-        <div class="flex flex-col items-center justify-center gap-3">
-          <!-- Selection controls -->
-          {#if selectedWords.length > 0}
-            <div class="flex gap-2 mb-2">
-              <button
-                onclick={() => askChatGTP(selectedWords)}
-                class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-              >
-                Define "{selectedWords.join(' ')}"
-              </button>
-              <button
-                onclick={clearSelection}
-                class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-              >
-                Clear Selection
-              </button>
-            </div>
-          {/if}
-          
-          <div
-            class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
-            use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
-            aria-label="Word selection area for definitions"
-            role="application"
-          >
-            {#each word.english.split(' ') as englishWord, index}
-              <span
-                data-word-zone
-                data-word-index={index}
-                onclick={() => askChatGTP(englishWord)}
-                onkeydown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    askChatGTP(englishWord);
-                  }
-                }}
-                role="button"
-                tabindex="0"
-                aria-label={`Get definition for: ${englishWord}`}
-                class={cn("p-1 text-3xl sm:text-4xl duration-300 cursor-pointer border-2", {
-                  "bg-blue-200 border-blue-400": isWordSelected(index),
-                  "hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
-                })}
-              >{englishWord}</span>
-            {/each}
-          </div>
-        </div>
-
-        <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap">
-          <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
-            Listen
-          </AudioButton>
-          <Button onClick={compareDialects} type="button">Compare Dialects</Button>
-          <button
-            type="button"
-            onclick={toggleFlip}
-            class="px-4 py-2 bg-tile-500 hover:bg-tile-600 text-text-300 font-semibold rounded-xl border-2 border-tile-600 hover:border-tile-500 transition-all duration-200 active:scale-95"
-          >
-            ↩ Flip back
-          </button>
-        </div>
-      </div>
-
-      <div class="border-t border-tile-500 pt-6 mt-6">
-        <p class="text-left text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
-        <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
-          <button
-            type="button"
-            onclick={() => handleDifficultyClick(1)}
-            disabled={selectedDifficulty !== null}
-            class="group relative overflow-hidden border-2 border-green-500 bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <!-- <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😊</div> -->
-            <div class="relative z-10">Easy</div>
-            <div class="hidden sm:block text-sm font-normal mt-1 text-green-700">Remembered easily</div>
-          </button>
-
-          <button
-            type="button"
-            onclick={() => handleDifficultyClick(2)}
-            disabled={selectedDifficulty !== null}
-            class="group relative overflow-hidden border-2 border-yellow-500 bg-gradient-to-br from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <!-- <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">🤔</div> -->
-            <div class="relative z-10">Medium</div>
-            <div class="hidden sm:block text-sm font-normal mt-1 text-yellow-700">Remembered with effort</div>
-          </button>
-
-          <button
-            type="button"
-            onclick={() => handleDifficultyClick(3)}
-            disabled={selectedDifficulty !== null}
-            class="group relative overflow-hidden border-2 border-red-500 bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <!-- <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😓</div> -->
-            <div class="relative z-10">Hard</div>
-            <div class="hidden sm:block text-sm font-normal mt-1 text-red-700">Struggled</div>
-          </button>
-        </div>
-        {#if onForgot}
-          <div class="flex justify-center mt-2 sm:mt-4">
-            <button
-              type="button"
-              onclick={handleForgot}
-              disabled={selectedDifficulty !== null}
-              class="group relative overflow-hidden border-2 border-orange-500 bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 text-text-300 py-2 px-4 sm:py-3 sm:px-8 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95"
-            >
-              <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-              <!-- <span class="text-lg sm:text-xl transform group-hover:scale-110 transition-transform duration-300">❌</span> -->
-              <span class="relative z-10">Forgot - Review Again</span>
-            </button>
-          </div>
-        {/if}
-      </div>
+    <!-- Quiet tools -->
+    <div class="mt-4 flex items-center gap-1 text-text-200">
+      <span bind:this={audioWrap} class="inline-flex">
+        <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl} className="!p-2 !rounded-full" />
+      </span>
+      {#if !revealed}
+        <button
+          type="button"
+          class="tool"
+          aria-pressed={showHint}
+          onclick={() => { showHint = !showHint; trackEvent('review_card_hint_toggled', { word_id: word.id, visible: showHint }); }}
+        >
+          <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7.5 15.5h5M8 18h4M10 2.5a5.5 5.5 0 0 0-3.2 10c.5.4.7.9.7 1.5v.5h5V14c0-.6.3-1.1.7-1.5A5.5 5.5 0 0 0 10 2.5Z" stroke-linejoin="round"/></svg>
+          {showHint ? 'Hide hint' : 'Hint'}
+        </button>
+      {/if}
+      <button
+        type="button"
+        class="tool"
+        onclick={() => { isStatsModalOpen = true; trackEvent('review_card_stats_opened', { word_id: word.id }); }}
+      >
+        <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 15c3-8 6-10 15-11" stroke-linecap="round"/><path d="M2.5 17.5h15" stroke-linecap="round"/></svg>
+        Memory
+      </button>
     </div>
   </div>
-</div>
 
-  {#if word.repetitions > 0}
-    <div class="mt-6 pt-4 border-t border-tile-500">
-      <div class="bg-gradient-to-br from-tile-300/30 to-tile-300/60 rounded-xl p-5 border border-tile-500/30 shadow-inner">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-10 h-10 rounded-full bg-tile-400 flex items-center justify-center text-xl shadow-md">📊</div>
-          <p class="text-base font-bold text-text-300">Your Progress</p>
+  {#if !revealed}
+    <div class="px-5 sm:px-8 pb-6">
+      <button
+        type="button"
+        onclick={reveal}
+        class="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-tile-400 hover:bg-tile-500 border border-tile-600 text-text-300 font-semibold transition-colors"
+      >
+        Show answer
+        <kbd class="key">Space</kbd>
+      </button>
+    </div>
+  {:else}
+    <div class="answer px-5 sm:px-8 pb-6">
+      <div class="divider mx-auto mb-5"></div>
+
+      {#if selectedWords.length > 0}
+        <div class="flex justify-center gap-3 mb-2 text-sm">
+          <button type="button" class="underline underline-offset-4 text-text-300" onclick={() => askChatGTP(selectedWords)}>
+            Define “{selectedWords.join(' ')}”
+          </button>
+          <button type="button" class="text-text-200 hover:text-text-300" onclick={clearSelection}>Clear</button>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="bg-tile-400/40 rounded-lg p-3">
-            <p class="text-xs text-text-200 mb-1">Reviews</p>
-            <p class="text-2xl font-bold text-text-300">{word.repetitions}</p>
-          </div>
-          {#if word.intervalDays > 0}
-            <div class="bg-tile-400/40 rounded-lg p-3">
-              <p class="text-xs text-text-200 mb-1">Next in</p>
-              <p class="text-2xl font-bold text-text-300">{word.intervalDays}d</p>
-            </div>
-          {:else if word.isLearning}
-            <div class="bg-blue-100/50 rounded-lg p-3 col-span-2">
-              <p class="text-xs text-blue-600 font-medium">Currently learning - will appear more frequently</p>
-            </div>
-          {/if}
-        </div>
+      {/if}
+
+      <div
+        class="rise flex flex-wrap justify-center text-2xl sm:text-3xl font-semibold text-text-300 select-none"
+        use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: () => {} }}
+        aria-label="English meaning. Tap a word for its definition."
+        role="application"
+      >
+        {#each word.english.split(' ') as englishWord, index (index)}
+          <button
+            type="button"
+            data-word-zone
+            data-word-index={index}
+            onclick={() => askChatGTP(englishWord)}
+            aria-label={`Get definition for: ${englishWord}`}
+            class="px-1 rounded-md transition-colors {isWordSelected(index)
+              ? 'bg-[color:color-mix(in_srgb,var(--srs-good)_18%,transparent)]'
+              : 'hover:bg-[color:color-mix(in_srgb,var(--tile6)_35%,transparent)]'}"
+          >{englishWord}</button>
+        {/each}
+      </div>
+
+      <div class="rise text-center mt-2" style="animation-delay: 60ms">
+        <button type="button" onclick={compareDialects} class="text-sm text-text-200 underline decoration-tile-600 underline-offset-4 hover:text-text-300">
+          Compare across dialects
+        </button>
+      </div>
+
+      <div class="rise grid grid-cols-4 gap-2 mt-6" style="animation-delay: 120ms" role="group" aria-label="How well did you remember it?">
+        {#each ratings as r (r.value)}
+          <button type="button" class="rate" style="--accent: {r.color}" onclick={() => onRate(r.value)}>
+            <span class="font-semibold text-sm sm:text-base">{r.label}</span>
+            <span class="text-xs tabular-nums text-text-200">
+              {#if isPractice}{r.value === 1 ? 'soon' : 'done'}{:else}{formatInterval(previews[r.value])}{/if}
+            </span>
+            <kbd class="key absolute top-1.5 right-1.5">{r.value}</kbd>
+          </button>
+        {/each}
       </div>
     </div>
-  {:else if word.isLearning}
-
   {/if}
-</div>
+</article>
 
 <style>
-  .flip-card {
-    perspective: 1000px;
-    overflow: visible;
+  .word button {
+    font-size: clamp(2.25rem, 8vw, 4.25rem);
   }
 
-  .flip-card-inner {
+  .tool {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    transition: background-color 150ms, color 150ms;
+  }
+
+  .tool:hover,
+  .tool[aria-pressed='true'] {
+    background: color-mix(in srgb, var(--tile6) 35%, transparent);
+    color: var(--text1);
+  }
+
+  .key {
+    display: none;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.625rem;
+    line-height: 1;
+    padding: 0.2rem 0.35rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--tile6);
+    color: var(--text3);
+  }
+
+  @media (hover: hover) {
+    .key {
+      display: inline-block;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    width: 4rem;
+    background: var(--tile6);
+    transform-origin: center;
+    animation: draw 400ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .rise {
+    animation: rise 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .rate {
     position: relative;
-    width: 100%;
-    transition: transform 0.6s, min-height 0.3s ease;
-    transform-style: preserve-3d;
-    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.125rem;
+    min-height: 3.75rem;
+    padding: 0.5rem 0.25rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--tile5);
+    border-top: 3px solid var(--accent);
+    background: var(--tile3);
+    color: var(--text1);
+    transition: background-color 150ms, transform 100ms;
   }
 
-  .flip-card-inner.flipped {
-    transform: rotateY(180deg);
+  .rate:hover {
+    background: color-mix(in srgb, var(--accent) 16%, var(--tile3));
   }
 
-  .flip-card-front,
-  .flip-card-back {
-    width: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+  .rate:active {
+    transform: translateY(1px);
+    background: color-mix(in srgb, var(--accent) 28%, var(--tile3));
   }
 
-  .flip-card-front {
-    position: relative;
-    transform: translate3d(0, 0, 0);
+  .rate:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
   }
 
-  .flip-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: rotateY(180deg) translate3d(0, 0, 0);
+  @keyframes draw {
+    from {
+      transform: scaleX(0);
+    }
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .divider,
+    .rise {
+      animation: none;
+    }
   }
 </style>

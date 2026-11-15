@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { masteryLevel, MASTERED_STABILITY } from '$lib/srs/fsrs';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription.js';
 import { getStoriesByUser } from '$lib/helpers/story-helpers';
 import { StripeService } from '$lib/services/stripe.service';
@@ -115,7 +116,12 @@ export const load = async ({ locals, parent }) => {
     total: 0,
     byDialect: {} as Record<string, { total: number; dueForReview: number; learning: number }>,
     dueForReview: 0,
-    learning: 0
+    learning: 0,
+    mastered: 0,
+    // Word counts per memory-strength level 0 (new) to 5
+    strength: [0, 0, 0, 0, 0, 0],
+    // Reviews due on each of the next 7 days (index 0 = tomorrow)
+    forecast: [0, 0, 0, 0, 0, 0, 0]
   };
 
   try {
@@ -125,7 +131,7 @@ export const load = async ({ locals, parent }) => {
     while (true) {
       const { data, error: pageError } = await supabase
         .from('saved_word')
-        .select('dialect, is_learning, next_review_date')
+        .select('dialect, fsrs_state, fsrs_stability, next_review_date')
         .eq('user_id', userId)
         .range(from, from + PAGE_SIZE - 1);
       if (pageError || !data || data.length === 0) break;
@@ -148,8 +154,13 @@ export const load = async ({ locals, parent }) => {
         
         wordStats.byDialect[dialect].total++;
         
-        const isLearning = word.is_learning || false;
-        const isDueForReview = isLearning || !word.next_review_date || word.next_review_date <= now;
+        const level = masteryLevel(word.fsrs_state ?? 0, word.fsrs_stability);
+        wordStats.strength[level]++;
+        const isLearning = level > 0 && word.fsrs_stability < MASTERED_STABILITY;
+        if (level > 0 && !isLearning) wordStats.mastered++;
+        const isDueForReview = !word.next_review_date || word.next_review_date <= now;
+        const daysAhead = word.next_review_date ? Math.ceil((word.next_review_date - now) / 86400000) : 0;
+        if (daysAhead >= 1 && daysAhead <= 7) wordStats.forecast[daysAhead - 1]++;
         
         if (isLearning) {
           wordStats.byDialect[dialect].learning++;
