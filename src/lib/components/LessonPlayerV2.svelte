@@ -11,6 +11,7 @@
 	import LessonTutorStep from '$lib/components/lesson-v2/LessonTutorStep.svelte';
 	import LessonMcqStep from '$lib/components/lesson-v2/LessonMcqStep.svelte';
 	import LessonReorderStep from '$lib/components/lesson-v2/LessonReorderStep.svelte';
+	import LessonWriteStep from '$lib/components/lesson-v2/LessonWriteStep.svelte';
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
@@ -22,11 +23,13 @@
 		lesson: GeneratedLessonV2;
 		onClose: () => void;
 		onLessonComplete?: (nextLessonId?: string) => void | Promise<void>;
+		/** Saves the resume step somewhere other than the account's last-content slot (tutor-notes lessons). */
+		onProgress?: (step: number) => void;
 		user?: { id: string } | null;
 		initialStep?: number;
 	}
 
-	let { lesson, onClose, onLessonComplete, user, initialStep }: Props = $props();
+	let { lesson, onClose, onLessonComplete, onProgress, user, initialStep }: Props = $props();
 
 	let dialect = $derived(lesson.dialect as Dialect);
 	// The dialect's accent, as on its learning path. Step components inherit it.
@@ -60,7 +63,14 @@
 		reading: 'Read',
 		'tutor-conversation': 'Converse'
 	};
-	let stepLabel = $derived(currentStep ? (STEP_LABELS[currentStep.type] ?? '') : '');
+	let stepLabel = $derived(
+		currentStep ? (currentStep.type === 'typing' && lesson.writing ? 'Write' : (STEP_LABELS[currentStep.type] ?? '')) : ''
+	);
+
+	// Tutor-notes lessons are the learner's own; they have no curriculum level.
+	let isTutorLesson = $derived(lesson.topicId.startsWith('tutor-'));
+	// Word-only writing steps ("write it in Arabic") vs whole sentences.
+	let vocabGlosses = $derived(new Set(lesson.vocab.map((v) => v.english)));
 
 	// The grammar the lesson teaches: shown before step 1, then one tap away.
 	let grammarTopics = $derived(grammarForLesson(lesson.topicId, lesson.dialect));
@@ -69,9 +79,15 @@
 	);
 	let grammarOpen = $state(untrack(() => grammarIntro));
 
-	// Global interlinear toggles (per-word English / transliteration).
+	// Global interlinear toggles (per-word English / transliteration / tashkeel).
 	let showEnglish = $state(false);
 	let showTransliteration = $state(true);
+	let showTashkeel = $state(true);
+
+	/** With tashkeel off, blank arabicTashkeel so every display falls back to the clean `arabic`. */
+	function tk<T extends { arabicTashkeel?: string }>(s: T): T {
+		return showTashkeel ? s : { ...s, arabicTashkeel: '' };
+	}
 
 	// Reading define modal state (cleared on close and on advancing).
 	let activeWord = $state<{
@@ -95,6 +111,10 @@
 	});
 
 	function saveProgress() {
+		if (onProgress) {
+			onProgress(currentStepIndex);
+			return;
+		}
 		if (!user?.id || !lesson.topicId) return;
 		fetch('/api/user-preferences/last-content', {
 			method: 'POST',
@@ -166,7 +186,7 @@
 	function toNested(s: SentenceItem) {
 		return {
 			arabic: { text: s.arabic },
-			arabicTashkeel: s.arabicTashkeel ? { text: s.arabicTashkeel } : undefined,
+			arabicTashkeel: showTashkeel && s.arabicTashkeel ? { text: s.arabicTashkeel } : undefined,
 			english: { text: s.english },
 			transliteration: { text: s.transliteration },
 			wordAlignments: s.wordAlignments
@@ -195,7 +215,7 @@
 			<button class="ghost back" onclick={goBack}>‹ Back</button>
 		{/if}
 		<div class="crumbs">
-			<span class="level">{lesson.level}</span>
+			{#if !isTutorLesson}<span class="level">{lesson.level}</span>{/if}
 			{#if stepLabel && !showCongratulations}<span class="step-label">{stepLabel}</span>{/if}
 			<span class="title">{lesson.title}</span>
 		</div>
@@ -206,6 +226,13 @@
 		<div class="toggle-group" role="group" aria-label="Show translation lines">
 			<button class="tog" class:on={showEnglish} onclick={() => (showEnglish = !showEnglish)}>EN</button>
 			<button class="tog" class:on={showTransliteration} onclick={() => (showTransliteration = !showTransliteration)}>Aa</button>
+			<button
+				class="tog"
+				class:on={showTashkeel}
+				onclick={() => (showTashkeel = !showTashkeel)}
+				aria-label="Show tashkeel"
+				title="Tashkeel"
+				dir="rtl">حَ</button>
 		</div>
 		{#if !showCongratulations}
 			<button class="ghost skip" onclick={goNext}>Skip ›</button>
@@ -217,7 +244,7 @@
 			<div class="done">
 				{#if signatureWord}
 					<SignatureWord
-						arabic={signatureWord.arabicTashkeel || signatureWord.arabic}
+						arabic={(showTashkeel && signatureWord.arabicTashkeel) || signatureWord.arabic}
 						transliteration={signatureWord.transliteration}
 						english={signatureWord.english}
 						caption="Your word from this lesson"
@@ -242,7 +269,7 @@
 									{#each currentStep.examples as ex (ex.arabic)}
 										<li>
 											<div class="ex-main">
-												<div class="ex-ar" dir="rtl">{ex.arabicTashkeel || ex.arabic}</div>
+												<div class="ex-ar" dir="rtl">{(showTashkeel && ex.arabicTashkeel) || ex.arabic}</div>
 												<div class="ex-tr">{ex.transliteration}</div>
 												<div class="ex-en">{ex.english}</div>
 											</div>
@@ -261,7 +288,7 @@
 								{#each currentStep.items as v, i (v.arabic)}
 									<div class="vocab" style="--i:{i}">
 										<div class="v-top">
-											<span class="v-ar" dir="rtl">{v.arabicTashkeel || v.arabic}</span>
+											<span class="v-ar" dir="rtl">{(showTashkeel && v.arabicTashkeel) || v.arabic}</span>
 											<AudioButton text={v.arabic} {dialect} />
 										</div>
 										<div class="v-tr">{v.transliteration}</div>
@@ -276,7 +303,7 @@
 							<LessonMcqStep
 								mode="multiple-choice"
 								prompt={currentStep.prompt}
-								options={currentStep.options}
+								options={currentStep.options.map(tk)}
 								correctIndex={currentStep.correctIndex}
 								{dialect}
 								{showTransliteration}
@@ -287,25 +314,33 @@
 						<section class="card pad">
 							<LessonMcqStep
 								mode="translate"
-								sentence={currentStep.sentence}
-								options={currentStep.options}
+								sentence={tk(currentStep.sentence)}
+								options={currentStep.options.map(tk)}
 								correctIndex={currentStep.correctIndex}
 								{dialect}
 								{showTransliteration}
 								onContinue={goNext}
 							/>
 						</section>
+					{:else if currentStep.type === 'typing' && lesson.writing}
+						<section class="card pad">
+							<div class="eyebrow">Write</div>
+							<h2 class="head">
+								{vocabGlosses.has(currentStep.sentence.english) ? 'Write it in Arabic' : 'Write the sentence in Arabic'}
+							</h2>
+							<LessonWriteStep sentence={tk(currentStep.sentence)} {dialect} onContinue={goNext} />
+						</section>
 					{:else if currentStep.type === 'typing' || currentStep.type === 'reorder'}
 						<section class="card pad">
 							<div class="eyebrow">Build</div>
 							<h2 class="head">Build the sentence in Arabic</h2>
-							<LessonReorderStep sentence={currentStep.sentence} {dialect} onContinue={goNext} />
+							<LessonReorderStep sentence={tk(currentStep.sentence)} {dialect} onContinue={goNext} />
 						</section>
 					{:else if currentStep.type === 'speaking'}
 						<section class="card pad">
 							<div class="eyebrow">Speak</div>
 							<h2 class="head">Say it out loud</h2>
-							<SpeakSentence sentence={currentStep.sentence} resetSentences={noop} {dialect} />
+							<SpeakSentence sentence={tk(currentStep.sentence)} resetSentences={noop} {dialect} />
 							<button class="primary" onclick={goNext}>Continue</button>
 						</section>
 					{:else if currentStep.type === 'reading'}

@@ -303,3 +303,31 @@ export async function checkExistingLessonsV2(
     }
     return result;
 }
+
+// ---------------------------------------------------------------------------
+// Tutor-notes lessons — private, one per upload
+// File structure: tutor-v2/{userId}/{id}.json
+// ---------------------------------------------------------------------------
+
+/** Saves a learner's tutor-notes lesson and returns its storage path. */
+export async function saveTutorLesson(userId: string, id: string, lesson: GeneratedLessonV2): Promise<string> {
+    const storagePath = `tutor-v2/${userId}/${id}.json`;
+    const { error } = await supabase.storage
+        .from(STRUCTURED_LESSONS_BUCKET)
+        .upload(storagePath, JSON.stringify(lesson), { contentType: 'application/json', upsert: true });
+    if (error) {
+        throw new Error(`Failed to save tutor lesson to storage: ${error.message}`);
+    }
+    return storagePath;
+}
+
+/** Loads a tutor-notes lesson by its storage path. Returns null if it does not exist. */
+export async function loadTutorLesson(storagePath: string): Promise<GeneratedLessonV2 | null> {
+    const { data, error } = await supabase.storage.from(STRUCTURED_LESSONS_BUCKET).download(storagePath);
+    if (error || !data) return null;
+    return JSON.parse(await data.text()) as GeneratedLessonV2;
+}
+
+export async function deleteTutorLesson(storagePath: string): Promise<void> {
+    await supabase.storage.from(STRUCTURED_LESSONS_BUCKET).remove([storagePath]);
+}

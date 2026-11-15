@@ -168,7 +168,9 @@ export const generatedLessonV2Schema = z.object({
 	level: z.string(), // CEFR level, e.g. "A1"
 	objectives: z.array(z.string()),
 	vocab: z.array(vocabItemSchema),
-	steps: z.array(lessonStepV2Schema)
+	steps: z.array(lessonStepV2Schema),
+	// Tutor-notes lessons: typing steps are played with a keyboard instead of as word tiles.
+	writing: z.boolean().optional()
 });
 
 // ---------------------------------------------------------------------------

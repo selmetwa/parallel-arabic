@@ -64,6 +64,19 @@ export interface AssembleParams {
 		goalEnglish: string;
 		targetWords: string[];
 	} | null;
+	/** Per-word floor; defaults to MIN_RECURRENCE. Tutor-notes lessons use a lighter 4. */
+	minRecurrence?: number;
+	/** Per-word soft target; defaults to the level mix target. */
+	targetRecurrence?: number;
+	/**
+	 * Writing practice: every new word gets a "write it in Arabic" typing step right
+	 * after its recognition MCQ, and typing joins the production cycle at every level.
+	 */
+	writing?: boolean;
+	/** Teaching cards placed after the first vocab chunk that introduces one of `words` (else after the first chunk). */
+	concepts?: { title: string; text: string; examples: SentenceItem[]; words: string[] }[];
+	/** Replaces the default opening card text. */
+	introText?: string;
 }
 
 /** Strip metadata so a VocabItem/PracticeItem can render as a plain SentenceItem. */
@@ -79,7 +92,12 @@ function toSentence(item: VocabItem | PracticeItem | SentenceItem): SentenceItem
 
 export function assembleLessonV2(params: AssembleParams): GeneratedLessonV2 {
 	const { vocab, pool } = params;
-	const mix = LEVEL_MIX[params.level] ?? LEVEL_MIX.A1;
+	const levelMix = LEVEL_MIX[params.level] ?? LEVEL_MIX.A1;
+	const mix = {
+		typeCycle: params.writing ? (['reorder', 'typing', 'translate', 'speaking'] as CycleType[]) : levelMix.typeCycle,
+		target: params.targetRecurrence ?? levelMix.target
+	};
+	const minRecurrence = params.minRecurrence ?? MIN_RECURRENCE;
 	const steps: LessonStepV2[] = [];
 
 	// Recurrence counter keyed by english gloss (vocab is tagged by english).
@@ -216,9 +234,10 @@ export function assembleLessonV2(params: AssembleParams): GeneratedLessonV2 {
 		type: 'content',
 		title: params.title,
 		text:
+			params.introText ??
 			'In this lesson you will learn and heavily practice new words and phrases. ' +
-			'Each new word comes back many times across reading, listening, speaking, ' +
-			'building sentences, and translating — so it really sticks.',
+				'Each new word comes back many times across reading, listening, speaking, ' +
+				'building sentences, and translating — so it really sticks.',
 		examples: []
 	});
 	if (params.objectives.length) {
@@ -235,7 +254,14 @@ export function assembleLessonV2(params: AssembleParams): GeneratedLessonV2 {
 		chunks.push(vocab.slice(i, i + CHUNK_SIZE));
 	}
 
-	chunks.forEach((chunk) => {
+	// Each concept goes after the first chunk that introduces one of its words.
+	const conceptChunk = (params.concepts ?? []).map((c) => {
+		const words = new Set(c.words);
+		const idx = chunks.findIndex((chunk) => chunk.some((v) => words.has(v.english)));
+		return idx === -1 ? 0 : idx;
+	});
+
+	chunks.forEach((chunk, chunkIdx) => {
 		steps.push({ type: 'vocab-intro', items: chunk });
 		chunk.forEach((v) => {
 			introduced.push(v);
@@ -244,12 +270,24 @@ export function assembleLessonV2(params: AssembleParams): GeneratedLessonV2 {
 		});
 		// Immediate recognition for each new word (distractors are introduced-only).
 		chunk.forEach((v) => steps.push(vocabMcq(v)));
+		// Writing: produce each new word from its English.
+		if (params.writing) {
+			chunk.forEach((v) => {
+				bump([v.english]);
+				steps.push({ type: 'typing', sentence: toSentence(v), targetWords: [v.english] });
+			});
+		}
 		// One production rep per new word, reviewing as material allows.
 		chunk.forEach((v) => steps.push(productionStep(v)));
+		(params.concepts ?? []).forEach((c, i) => {
+			if (conceptChunk[i] === chunkIdx) {
+				steps.push({ type: 'content', title: c.title, text: c.text, examples: c.examples });
+			}
+		});
 	});
 
 	// --- 2. Spaced quota-fill until every word hits the target -------------
-	const belowMin = () => introduced.some((v) => (counts.get(v.english) ?? 0) < MIN_RECURRENCE);
+	const belowMin = () => introduced.some((v) => (counts.get(v.english) ?? 0) < minRecurrence);
 	const aimReached = () => introduced.every((v) => (counts.get(v.english) ?? 0) >= mix.target);
 	const lowestWord = (): VocabItem => {
 		let best = introduced[0];
@@ -313,7 +351,8 @@ export function assembleLessonV2(params: AssembleParams): GeneratedLessonV2 {
 		level: params.level,
 		objectives: params.objectives,
 		vocab,
-		steps
+		steps,
+		writing: params.writing || undefined
 	};
 }
 
