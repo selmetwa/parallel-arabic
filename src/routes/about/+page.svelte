@@ -160,13 +160,15 @@
 		dialog.showModal();
 	}
 
-	// Rounded-down floors, not live counts: 1,602 accounts and 21,527 saved words
-	// in the database on 2026-09-25.
-	const stats = [
-		{ value: '1,500+', label: 'learners' },
+	let { data } = $props();
+
+	// The learner count is rounded down to the hundred and cached for an hour; the
+	// fallback covers a failed count, which comes back as 0.
+	const stats = $derived([
+		{ value: `${(data.learners || 1500).toLocaleString('en-US')}+`, label: 'learners' },
 		{ value: '7', label: 'dialects' },
 		{ value: 'A1–C2', label: 'lesson levels' }
-	];
+	]);
 
 	/** @type {Step[]} */
 	const steps = [
