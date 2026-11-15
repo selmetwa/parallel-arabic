@@ -12,9 +12,7 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 	if (!row) throw error(404, 'Not found');
 
 	const lesson = row.status === 'ready' && row.storage_path ? await loadTutorLesson(row.storage_path) : null;
-	const topicId = `tutor-${row.id}`;
-	const resumeStep =
-		user.last_content_type === 'tutor-notes' && user.last_content_id === topicId ? (user.last_content_position ?? 0) : 0;
+	const resumeStep = lesson ? Math.min(row.last_step ?? 0, lesson.steps.length - 1) : 0;
 
 	return {
 		note: {

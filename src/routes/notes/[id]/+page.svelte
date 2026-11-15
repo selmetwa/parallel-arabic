@@ -126,6 +126,19 @@
 		requesting = false;
 	}
 
+	// The step to reopen at is saved on this lesson after every step. Closing waits for the
+	// latest save so the page reloads with the right resume point.
+	let lastSave: Promise<unknown> = Promise.resolve();
+	function saveStep(step: number) {
+		lastSave = fetch(`/api/tutor-notes/${note.id}/progress`, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ step }),
+			keepalive: true
+		}).catch(() => {});
+		return lastSave;
+	}
+
 	async function remove() {
 		if (!confirm('Delete these notes and their lesson? Words already in your review deck stay there.')) return;
 		await fetch(`/api/tutor-notes/${note.id}`, { method: 'DELETE' });
@@ -271,13 +284,17 @@
 		lesson={data.lesson}
 		user={data.user}
 		initialStep={data.resumeStep}
+		onProgress={saveStep}
 		onClose={async () => {
 			playing = false;
+			await lastSave;
 			await invalidateAll();
 		}}
 		onLessonComplete={async () => {
 			trackEvent('tutor_notes_lesson_completed', { words: note.wordCount });
 			playing = false;
+			// Finished: the next visit starts from the top.
+			await saveStep(0);
 			await invalidateAll();
 		}}
 	/>

@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte';
 	import { type Dialect, type Keyboard } from '$lib/types/index';
 	import AudioButton from '$lib/components/AudioButton.svelte';
-	import { normalizeArabicText } from '$lib/utils/arabic-normalization';
+	import { normalizeArabicText, normalizeArabicTextLight, stripArabicDiacritics } from '$lib/utils/arabic-normalization';
+	import { arabicRunsHtml } from '$lib/helpers/arabic-runs';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
@@ -30,11 +31,30 @@
 	let correct = $state(false);
 	let showHint = $state(false);
 	let showAnswer = $state(false);
+	// Trace: the answer sits dimmed on the board and fills in as you type.
+	let trace = $state(false);
 
 	const answer = $derived(sentence.arabicTashkeel || sentence.arabic);
 	const matches = (value: string) =>
 		normalizeArabicText(value).replace(/\s+/g, ' ').trim() ===
 		normalizeArabicText(sentence.arabic).replace(/\s+/g, ' ').trim();
+
+	const escape = (c: string) => (c === '<' ? '&lt;' : c === '>' ? '&gt;' : c === '&' ? '&amp;' : c);
+
+	// Letters as written, minus tashkeel, so positions line up; each letter is normalized only to compare.
+	const letters = (s: string) => stripArabicDiacritics(s).trim().split('');
+	const same = (a: string, b: string | undefined) => b !== undefined && normalizeArabicTextLight(a) === normalizeArabicTextLight(b);
+
+	// Each typed letter compared with the answer's letter at the same position, as SentenceBlock does:
+	// trace fills the faded answer in (ok) and typing colours each letter (good / bad).
+	const boardHtml = $derived.by(() => {
+		const target = letters(sentence.arabic);
+		const input = letters(typed);
+		const chars = trace
+			? target.map((char, i) => ({ char, state: i >= input.length ? 'pending' : same(input[i], char) ? 'ok' : 'bad' }))
+			: input.map((char, i) => ({ char, state: same(char, target[i]) ? 'good' : 'bad' }));
+		return arabicRunsHtml(chars, (c) => escape(c.char), (c) => c.state);
+	});
 
 	function virtualKeyboard() {
 		return keyboardWrap?.querySelector('arabic-keyboard') as Keyboard | null;
@@ -45,6 +65,12 @@
 		if (keyboard !== 'virtual' || checked) return;
 		const value = virtualKeyboard()?.getTextAreaValue();
 		if (typeof value === 'string') typed = value;
+		checkIfRight();
+	}
+
+	/** Marks the answer right as soon as it matches, so the learner doesn't have to press Check. */
+	function checkIfRight() {
+		if (!checked && typed.trim() && matches(typed)) check();
 	}
 
 	onMount(() => {
@@ -59,10 +85,13 @@
 	});
 
 	function check() {
-		readVirtual();
+		if (keyboard === 'virtual') {
+			const value = virtualKeyboard()?.getTextAreaValue();
+			if (typeof value === 'string') typed = value;
+		}
 		correct = matches(typed);
 		checked = true;
-		trackEvent('lesson_write_submitted', { correct, dialect, keyboard });
+		trackEvent('lesson_write_submitted', { correct, dialect, keyboard, trace });
 		if (correct) awardXp();
 	}
 
@@ -92,33 +121,44 @@
 <div class="write">
 	<p class="english">{sentence.english}</p>
 
-	<div class="seg-wrap" role="group" aria-label="Keyboard">
-		<button type="button" class="seg" class:is-on={keyboard === 'virtual'} onclick={() => (keyboard = 'virtual')}>
-			Arabic keyboard
+	<div class="tools">
+		<button type="button" class="tool" class:on={showHint} onclick={() => (showHint = !showHint)}>Hint</button>
+		<button type="button" class="tool" class:on={showAnswer} onclick={() => (showAnswer = !showAnswer)}>
+			Show answer
 		</button>
-		<button type="button" class="seg" class:is-on={keyboard === 'physical'} onclick={() => (keyboard = 'physical')}>
-			My keyboard
-		</button>
+		<button
+			type="button"
+			class="tool"
+			class:on={trace}
+			aria-pressed={trace}
+			onclick={() => {
+				trace = !trace;
+				trackEvent('lesson_write_trace_toggled', { on: trace });
+			}}>Trace</button
+		>
+		<AudioButton text={sentence.arabic} {dialect} />
 	</div>
 
+	{#if showHint || showAnswer}
+		<div class="reveal">
+			{#if showAnswer}<p class="reveal-ar" dir="rtl">{answer}</p>{/if}
+			{#if showHint}<p class="reveal-tr">{sentence.transliteration}</p>{/if}
+		</div>
+	{/if}
+
 	<div
-		bind:this={keyboardWrap}
-		class="input-wrap"
+		class="board"
 		class:is-right={checked && correct}
 		class:is-wrong={checked && !correct}
+		dir="rtl"
+		aria-live="polite"
+		aria-label="What you have written"
 	>
-		<div class:hidden={keyboard !== 'virtual'}>
-			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-		</div>
-		{#if keyboard === 'physical'}
-			<textarea
-				bind:value={typed}
-				readonly={checked}
-				placeholder="اكتب هنا..."
-				dir="rtl"
-				rows="2"
-				aria-label="Your answer in Arabic"
-			></textarea>
+		{#if typed.trim() || trace}
+			<!-- eslint-disable-next-line svelte/no-at-html-tags -- letters are escaped above -->
+			<span class="board-text">{@html boardHtml}</span>
+		{:else}
+			<span class="board-placeholder">اكتب هنا</span>
 		{/if}
 	</div>
 
@@ -129,19 +169,33 @@
 		<p class="solution" dir="rtl">{answer}</p>
 	{/if}
 
-	{#if showHint || showAnswer}
-		<div class="reveal">
-			{#if showAnswer}<p class="reveal-ar" dir="rtl">{answer}</p>{/if}
-			{#if showHint}<p class="reveal-tr">{sentence.transliteration}</p>{/if}
-		</div>
-	{/if}
-
-	<div class="tools">
-		<button type="button" class="tool" class:on={showHint} onclick={() => (showHint = !showHint)}>Hint</button>
-		<button type="button" class="tool" class:on={showAnswer} onclick={() => (showAnswer = !showAnswer)}>
-			Show answer
+	<div class="seg-wrap" role="group" aria-label="Keyboard">
+		<button type="button" class="seg" class:is-on={keyboard === 'virtual'} onclick={() => (keyboard = 'virtual')}>
+			Arabic keyboard
 		</button>
-		<AudioButton text={sentence.arabic} {dialect} />
+		<button type="button" class="seg" class:is-on={keyboard === 'physical'} onclick={() => (keyboard = 'physical')}>
+			My keyboard
+		</button>
+	</div>
+
+	<div bind:this={keyboardWrap}>
+		<div class:hidden={keyboard !== 'virtual'}>
+			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+		</div>
+		{#if keyboard === 'physical'}
+			<textarea
+				bind:value={typed}
+				oninput={(e) => {
+					typed = e.currentTarget.value;
+					checkIfRight();
+				}}
+				readonly={checked}
+				placeholder="اكتب هنا..."
+				dir="rtl"
+				rows="2"
+				aria-label="Your answer in Arabic"
+			></textarea>
+		{/if}
 	</div>
 
 	{#if !checked}
@@ -193,20 +247,53 @@
 		color: #fff;
 	}
 
-	.input-wrap {
+	/* Big live view of what the learner has written (or the trace filling in). */
+	.board {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 5.5rem;
+		padding: 0.75rem 1rem;
 		border-radius: 1.1rem;
-		border: 2px solid transparent;
+		border: 2px dashed var(--tile5);
+		background: var(--tile1);
+		text-align: center;
 		transition:
 			border-color 0.2s ease,
 			background 0.2s ease;
 	}
-	.input-wrap.is-right {
+	.board.is-right {
+		border-style: solid;
 		border-color: #2e9e5b;
-		background: color-mix(in srgb, #2e9e5b 12%, transparent);
+		background: color-mix(in srgb, #2e9e5b 12%, var(--tile1));
 	}
-	.input-wrap.is-wrong {
+	.board.is-wrong {
+		border-style: solid;
 		border-color: #d65745;
-		background: color-mix(in srgb, #d65745 12%, transparent);
+		background: color-mix(in srgb, #d65745 12%, var(--tile1));
+	}
+	.board-text {
+		font-size: clamp(2rem, 7vw, 3rem);
+		font-weight: 600;
+		line-height: 1.5;
+		color: var(--text1);
+	}
+	.board-text :global(.ok) {
+		color: var(--text1);
+	}
+	/* Typing mode colours each letter like the Sentences page: green when it matches, red when not. */
+	.board-text :global(.good) {
+		color: #2e9e5b;
+	}
+	.board-text :global(.bad) {
+		color: #d65745;
+	}
+	.board-text :global(.pending) {
+		color: color-mix(in srgb, var(--text1) 30%, transparent);
+	}
+	.board-placeholder {
+		font-size: 1.5rem;
+		color: color-mix(in srgb, var(--text1) 30%, transparent);
 	}
 	.hidden {
 		display: none;

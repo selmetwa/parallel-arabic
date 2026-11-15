@@ -16,6 +16,8 @@ export interface TutorLessonRow {
 	word_count: number | null;
 	step_count: number | null;
 	build_started_at: number | null;
+	/** 0-based step to reopen the lesson at. */
+	last_step: number;
 	created_at: number;
 }
 
@@ -25,7 +27,9 @@ export type TutorLessonSummary = Pick<
 	'id' | 'title' | 'dialect' | 'status' | 'word_count' | 'step_count' | 'created_at'
 >;
 
-export async function insertTutorLesson(row: Omit<TutorLessonRow, 'selection' | 'error' | 'storage_path' | 'word_count' | 'step_count' | 'build_started_at'>) {
+export async function insertTutorLesson(
+	row: Omit<TutorLessonRow, 'selection' | 'error' | 'storage_path' | 'word_count' | 'step_count' | 'build_started_at' | 'last_step'>
+) {
 	const { error } = await supabase.from('tutor_lesson').insert(row);
 	if (error) throw new Error(`Failed to save tutor notes: ${error.message}`);
 }

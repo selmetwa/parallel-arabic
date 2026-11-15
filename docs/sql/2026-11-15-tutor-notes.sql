@@ -27,8 +27,8 @@ create index if not exists tutor_lesson_user_idx on public.tutor_lesson (user_id
 -- The app reaches this table through the service role key only (see 2026-10-28-enable-rls.sql).
 alter table public.tutor_lesson enable row level security;
 
--- Tutor lessons save their resume point under their own content type, so the home page's
--- "continue lesson" card and the retention email (both curriculum-only) leave them alone.
+-- Allows a 'tutor-notes' last-content type. Already applied, and harmless, but unused: tutor lessons
+-- now keep their resume step on tutor_lesson.last_step (2026-11-15-tutor-notes-progress.sql).
 alter table public."user" drop constraint if exists user_last_content_type_check;
 alter table public."user" add constraint user_last_content_type_check check (
   last_content_type = any (array['sentences', 'lessons', 'stories', 'vocabulary', 'alphabet', 'review', 'tutor-notes'])

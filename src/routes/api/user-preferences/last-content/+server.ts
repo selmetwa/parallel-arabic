@@ -20,7 +20,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   } = body;
 
   // Validate content type
-  const validContentTypes = ['sentences', 'lessons', 'stories', 'vocabulary', 'alphabet', 'review', 'tutor-notes'];
+  const validContentTypes = ['sentences', 'lessons', 'stories', 'vocabulary', 'alphabet', 'review'];
   if (last_content_type && !validContentTypes.includes(last_content_type)) {
     return json({ error: 'Invalid content type' }, { status: 400 });
   }

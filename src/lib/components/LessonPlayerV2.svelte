@@ -23,11 +23,13 @@
 		lesson: GeneratedLessonV2;
 		onClose: () => void;
 		onLessonComplete?: (nextLessonId?: string) => void | Promise<void>;
+		/** Saves the resume step somewhere other than the account's last-content slot (tutor-notes lessons). */
+		onProgress?: (step: number) => void;
 		user?: { id: string } | null;
 		initialStep?: number;
 	}
 
-	let { lesson, onClose, onLessonComplete, user, initialStep }: Props = $props();
+	let { lesson, onClose, onLessonComplete, onProgress, user, initialStep }: Props = $props();
 
 	let dialect = $derived(lesson.dialect as Dialect);
 	// The dialect's accent, as on its learning path. Step components inherit it.
@@ -109,12 +111,16 @@
 	});
 
 	function saveProgress() {
+		if (onProgress) {
+			onProgress(currentStepIndex);
+			return;
+		}
 		if (!user?.id || !lesson.topicId) return;
 		fetch('/api/user-preferences/last-content', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
-				last_content_type: isTutorLesson ? 'tutor-notes' : 'lessons',
+				last_content_type: 'lessons',
 				last_content_id: lesson.topicId,
 				last_content_position: currentStepIndex,
 				last_content_dialect: lesson.dialect
