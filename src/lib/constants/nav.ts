@@ -18,6 +18,7 @@ export function getNavSections(session: unknown, dialect: string): NavSection[] 
 		{ label: 'Alphabet', href: '/alphabet', icon: '✍️' },
 		{ label: 'Lessons', href: `/lessons/structured/${dialect}`, icon: '📚' },
 		{ label: 'Custom Lessons', href: '/lessons/custom', icon: '🧩' },
+		{ label: 'Tutor Notes', href: '/notes', icon: '📒' },
 		{ label: 'Grammar', href: `/grammar/${dialect}`, icon: '📐' },
 		{ label: 'Dictionary', href: `/dictionary/${dialect}`, icon: '🔎' },
 		{ label: 'Verb Tables', href: `/${dialect}/conjugations`, icon: '📋' }
