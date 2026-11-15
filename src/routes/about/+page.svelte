@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import AppStoreBadge from '$lib/components/AppStoreBadge.svelte';
 	import { PLANS } from '$lib/constants/pricing';
+	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
 
 	/**
 	 * Every in-app link the page makes, narrow enough for `resolve()` to type-check.
@@ -320,52 +321,18 @@
 		}
 	];
 
-	/** @type {QuoteSegment[][]} */
-	const testimonials = [
-		[
-			{ t: 'After only a day, I love Parallel Arabic.', b: true },
-			{
-				t: ' As a language teacher — I teach French at a huge public high school in Southern California — and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.'
-			}
-		],
-		[
-			{
-				t: 'Wow this is perfect for what I need currently. The stories section in particular is a great idea as '
-			},
-			{ t: "I can't find any graded stories for practice.", b: true },
-			{ t: ' Thank you so much for this :)' }
-		],
-		[{ t: 'This is great! As someone outgrowing Duolingo this is perfect.', b: true }],
-		[
-			{ t: 'I love it! This is something I have been ' },
-			{ t: 'searching for ages', b: true },
-			{ t: ' :) thank you so much' }
-		],
-		[
-			{ t: "Have tried many of the 'apps' and " },
-			{ t: 'this is the closest one to doing what I want!', b: true },
-			{
-				t: " Very useful and comprehensive app, everything's very useful — I love the interlinear format for the stories."
-			}
-		],
-		[
-			{ t: "Even though I'm a beginner, " },
-			{ t: "your AI is the best I've tried among all the apps!", b: true },
-			{ t: ' The others are always weird in their answers and pronounce the words weirdly.' }
-		],
-		[
-			{ t: 'Stories UI is really good!', b: true },
-			{
-				t: ' The large, readable font, easy switching of transliteration and English, and interactive click-to-define are all really excellent.'
-			}
-		],
-		[
-			{ t: 'I really like the website and find it very useful. For me ' },
-			{ t: "it's better than a lot of other platforms", b: true },
-			{ t: " — it's well thought out and has a lot of features." }
-		]
+	// The fuller wording of the shared French teacher quote, which the caption leans on.
+	/** @type {QuoteSegment[]} */
+	const featuredQuote = [
+		{ t: 'After only a day, I love Parallel Arabic.', b: true },
+		{
+			t: ' As a language teacher — I teach French at a huge public high school in Southern California — and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.'
+		}
 	];
-	const [featuredQuote, ...quotes] = testimonials;
+	const quotes = [
+		EGYPTIAN_TESTIMONIAL,
+		...TESTIMONIALS.filter((q) => q[0].t !== featuredQuote[0].t)
+	];
 
 	const freePlan = [
 		'The alphabet, with audio',

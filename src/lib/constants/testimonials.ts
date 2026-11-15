@@ -7,6 +7,10 @@ export type TestimonialSegment = { t: string; b?: boolean };
 
 export const TESTIMONIALS: TestimonialSegment[][] = [
 	[
+		{ t: 'Very few resources do a good job of teaching dialects at anything beyond ' },
+		{ t: '"travel basics."', b: true }
+	],
+	[
 		{
 			t: "I've been learning Egyptian Arabic with a teacher for a few months now and was looking for something to supplement my classes and practise with outside of lessons. I came across your platform after someone mentioned it on Reddit and honestly "
 		},
@@ -59,10 +63,6 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 			t: 'Having tried at least a dozen different resources in the past two years to learn Moroccan Darija, I think '
 		},
 		{ t: 'yours is the top of the line, definitely my favorite!', b: true }
-	],
-	[
-		{ t: 'Very few resources do a good job of teaching dialects at anything beyond ' },
-		{ t: '"travel basics."', b: true }
 	],
 	[
 		{ t: 'I absolutely love the feature in your app where you can compare the dialects! ' },
