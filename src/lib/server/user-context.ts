@@ -1,6 +1,8 @@
 import { checkUserSubscription } from '$lib/helpers/subscription';
 
 interface ContextUser {
+  id?: string | null;
+  subscriber_id?: string | null;
   email?: string | null;
   is_subscriber?: boolean | null;
   subscription_end_date?: string | number | Date | null;
@@ -24,6 +26,12 @@ export function getUserContext(user: ContextUser) {
   const isSubscribed = checkUserSubscription(user);
 
   return {
+    // The id RevenueCat must be logged in with: public.user.id, which the
+    // webhook and verify endpoint look up. Not page.data.user.id, which
+    // +layout.ts sets to the Supabase auth user on most pages.
+    purchasesUserId: user.id ?? null,
+    // Stripe "sub_…", an Apple transaction id, or a product id/date from older saves.
+    subscriberId: user.subscriber_id ?? null,
     isSubscribed,
     // Card-up-front trial is offered once per account, and only to users who
     // aren't already subscribed. Consumers must also check they're not running

@@ -5,17 +5,19 @@ import { createClient } from '@supabase/supabase-js';
 import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 import {
   ENTITLEMENT_ID,
+  fetchRevenueCatEntitlement,
   resolveFromRevenueCatRest,
   type ResolvedEntitlement
 } from '$lib/server/revenuecat-entitlement';
 
-function resolveFromCustomerInfo(customerInfo: any, rcUserId: string): ResolvedEntitlement | null {
-  // Only trust it when the SDK was identified as this user. Otherwise the
+function resolveFromCustomerInfo(customerInfo: any, ownIds: string[]): ResolvedEntitlement | null {
+  // Only trust it when the SDK was identified as this user (either of their
+  // ids; the webhook maps both to this row). Otherwise the
   // purchase lives under another RevenueCat customer, and renewals sent there
   // would never reach this row.
-  if (customerInfo?.originalAppUserId !== rcUserId) {
+  if (!ownIds.includes(customerInfo?.originalAppUserId)) {
     console.warn('[verify-apple-purchase] customerInfo belongs to another app user', {
-      rcUserId,
+      ownIds,
       originalAppUserId: customerInfo?.originalAppUserId
     });
     return null;
@@ -90,6 +92,10 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     let resolved: ResolvedEntitlement | null = null;
     let restStatus = 0;
 
+    // Old app builds logged RevenueCat in with the Supabase auth id on some
+    // screens, so a purchase can sit under either id. Both belong to this user.
+    const ownIds = [rcUserId, supabaseAuthId];
+
     // Defense in depth: try RC REST first. If it has the entitlement, trust it.
     for (let attempt = 0; attempt < 2; attempt++) {
       const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${rcUserId}`, {
@@ -119,11 +125,16 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       }
     }
 
+    if (!resolved?.isActive) {
+      const fromAuthId = await fetchRevenueCatEntitlement(supabaseAuthId, env.REVENUECAT_API_KEY);
+      if (fromAuthId?.isActive) resolved = fromAuthId;
+    }
+
     // Fallback: trust the client-provided customerInfo if REST didn't find an
     // active entitlement. This covers the sandbox propagation lag where Apple
     // and the SDK already see the purchase but RC's REST cache hasn't caught up.
     if (!resolved?.isActive && clientCustomerInfo) {
-      const fromClient = resolveFromCustomerInfo(clientCustomerInfo, rcUserId);
+      const fromClient = resolveFromCustomerInfo(clientCustomerInfo, ownIds);
       if (fromClient?.isActive) {
         resolved = fromClient;
         console.log('[verify-apple-purchase] using client customerInfo as fallback', {

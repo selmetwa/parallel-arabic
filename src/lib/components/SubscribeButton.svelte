@@ -48,7 +48,7 @@
 
   onMount(() => {
     isNative = !!(window as any).Capacitor?.isNativePlatform?.();
-    const userId = page.data.user?.id;
+    const userId = page.data.purchasesUserId;
     if (isNative && userId) {
       RevenueCatService.getPlans(userId).then((plans) => (storePlans = plans));
     }
@@ -98,7 +98,7 @@
     purchaseError = null;
     purchaseSuccess = null;
     try {
-      const userId = page.data.user?.id;
+      const userId = page.data.purchasesUserId;
       if (!userId) {
         purchaseError = 'Please sign in before restoring purchases.';
         return;
@@ -124,7 +124,7 @@
     purchaseError = null;
     purchaseSuccess = null;
     try {
-      const userId = page.data.user?.id;
+      const userId = page.data.purchasesUserId;
       if (!userId) {
         purchaseError = 'Please sign in before subscribing.';
         return;
