@@ -73,6 +73,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       session, 
       supabase, 
       user,
+      purchasesUserId: data.purchasesUserId ?? null,
+      subscriberId: data.subscriberId ?? null,
       showOnboarding: data.showOnboarding ?? false,
       targetDialect: data.targetDialect ?? null,
       isSubscribed: data.isSubscribed,

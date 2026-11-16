@@ -1,3 +1,5 @@
+import type { SupabaseClient } from '@supabase/supabase-js';
+
 export const ENTITLEMENT_ID = 'Parallel Arabic Premium';
 
 export type ResolvedEntitlement = {
@@ -21,6 +23,25 @@ export function resolveFromRevenueCatRest(data: any): ResolvedEntitlement | null
   const transactionId = subscriptions[subKey]?.original_transaction_id ?? subKey ?? null;
 
   return { isActive, expiresMs, transactionId, source: 'revenuecat_rest' };
+}
+
+/**
+ * The public.user.id a RevenueCat app user id belongs to. Old app builds logged
+ * the SDK in with the Supabase auth id on some screens, so purchases can live
+ * under either id. Null when no row matches.
+ */
+export async function resolveUserRowId(
+  adminSupabase: SupabaseClient,
+  appUserId: string
+): Promise<string | null> {
+  const { data: byId } = await adminSupabase.from('user').select('id').eq('id', appUserId).maybeSingle();
+  if (byId?.id) return byId.id;
+  const { data: byAuthId } = await adminSupabase
+    .from('user')
+    .select('id')
+    .eq('supabase_auth_id', appUserId)
+    .maybeSingle();
+  return byAuthId?.id ?? null;
 }
 
 /** Looks a subscriber up through RevenueCat's REST API. Null when the call fails. */

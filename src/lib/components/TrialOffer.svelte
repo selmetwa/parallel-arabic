@@ -93,7 +93,7 @@
 
 	onMount(() => {
 		isNative = isNativeApp();
-		const userId = page.data.user?.id;
+		const userId = page.data.purchasesUserId;
 		if (isNative && userId) {
 			RevenueCatService.getPlans(userId).then((plans) => {
 				appleTrial = !!(plans?.monthly.trialDays || plans?.annual?.trialDays);
