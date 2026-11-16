@@ -26,12 +26,36 @@ export interface DialectLandingContent {
 	features: { title: string; body: string }[];
 	faqs: DialectFaq[];
 	extraLinks?: DialectLandingLink[];
+	/**
+	 * Descriptions for the landing page's tiles, so each page says something about
+	 * its own dialect rather than repeating the same lines on all seven.
+	 */
+	tiles: {
+		lessons: string;
+		stories: string;
+		conjugations: string;
+		tutor: string;
+		search: string;
+		/** Only for dialects with word pages. */
+		words?: string;
+		/** Only for dialects with grammar guides. */
+		grammar?: string;
+	};
 }
 
 export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	'egyptian-arabic': {
 		heading: 'Egyptian Arabic',
 		nativeName: 'المصري',
+		tiles: {
+			lessons: 'A structured path from greetings to your first real conversation in Egyptian, the dialect of Cairo.',
+			stories: 'Short stories in everyday Cairene, read and heard, with tap-to-define on every word.',
+			conjugations: '200 common verbs with the b- present, the ha- future and the ma...sh negative.',
+			tutor: 'Talk in Egyptian Arabic, from ezzayak to ordering ahwa, and get corrections as you go.',
+			search: 'Search Egyptian Arabic words, hear each one, and save it to your review deck.',
+			words: 'The words you hear most in Cairo, like tayeb (okay), awi (very) and khalas (already), each with audio and real example sentences.',
+			grammar: 'Egyptian grammar in plain English: the b- present, the ha- future, ma...sh negation and more.'
+		},
 		tagline:
 			'The most widely understood dialect in the Arab world, thanks to a century of Egyptian film, television and music.',
 		whereSpoken:
@@ -95,6 +119,15 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	levantine: {
 		heading: 'Levantine Arabic',
 		nativeName: 'الشامي',
+		tiles: {
+			lessons: 'A structured path in the Arabic of Syria, Lebanon, Jordan and Palestine, starting with marhaba and keefak.',
+			stories: 'Levantine stories, read and heard, with tap-to-define on every word.',
+			conjugations: '200 common verbs with the b- present, the rah future and every negative.',
+			tutor: 'Talk in Levantine Arabic and get corrections as you go, from keefak to ordering coffee.',
+			search: 'Search Levantine words, hear each one, and save it to your review deck.',
+			words: 'Everyday Levantine words like kamen (also), hun (here) and dayman (always), each with audio and real example sentences.',
+			grammar: 'Levantine grammar in plain English: the b- present, the rah future, pronouns, plurals and more.'
+		},
 		tagline:
 			'The Arabic of Syria, Lebanon, Jordan and Palestine — often the first dialect learners find easy to listen to.',
 		whereSpoken:
@@ -146,6 +179,14 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	darija: {
 		heading: 'Moroccan Darija',
 		nativeName: 'الدارجة',
+		tiles: {
+			lessons: 'A structured path in Moroccan Darija, the dialect most courses skip.',
+			stories: 'Graded Darija stories, read and heard, with tap-to-define on every word.',
+			conjugations: '200 common verbs with the ka- present and ma...sh negation.',
+			tutor: 'Talk in Darija, French and Amazigh loanwords included, and get corrections as you go.',
+			search: 'Search Darija words, French and Amazigh loanwords included, hear each one, and save it to your review deck.',
+			grammar: 'Darija grammar in plain English: the ka- present, dyal for possession, ma...sh negation and more.'
+		},
 		tagline:
 			'The Arabic of Morocco — the most distinctive of the major dialects, and the hardest to find good material for.',
 		whereSpoken:
@@ -197,6 +238,15 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	fusha: {
 		heading: 'Fusha (Modern Standard Arabic)',
 		nativeName: 'الفصحى',
+		tiles: {
+			lessons: 'A structured path in Modern Standard Arabic, the Arabic of news, books and formal speech.',
+			stories: 'Graded reading in Fusha, with audio and tap-to-define on every word.',
+			conjugations: '200 common verbs in the standard forms, with every tense and negative.',
+			tutor: 'Practise formal Arabic out loud and get corrections as you go.',
+			search: 'Search Modern Standard Arabic words, hear each one, and save it to your review deck.',
+			words: 'Core Fusha words like madiina (city), madrasa (school) and ta3aam (food), each with audio and example sentences.',
+			grammar: 'Fusha grammar in plain English: the dual, the ten verb forms, conditionals and more.'
+		},
 		tagline:
 			'The written and formal Arabic shared across the entire Arab world — the language of news, books, and the Quran.',
 		whereSpoken:
@@ -240,6 +290,13 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	iraqi: {
 		heading: 'Iraqi Arabic',
 		nativeName: 'العراقي',
+		tiles: {
+			lessons: 'Structured Iraqi lessons from A1 to B2 in the Baghdadi dialect.',
+			stories: 'Iraqi stories, read and heard, with tap-to-define on every word.',
+			conjugations: '200 common verbs in Baghdadi Arabic, every tense, affirmative and negative.',
+			tutor: 'Talk in Iraqi Arabic, aku and maku included, and get corrections as you go.',
+			search: 'Search Iraqi Arabic words, hear each one, and save it to your review deck.'
+		},
 		tagline:
 			'The Arabic of Baghdad and the two rivers — direct, warm, and full of words borrowed from Persian, Turkish and English.',
 		whereSpoken:
@@ -291,6 +348,13 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	khaleeji: {
 		heading: 'Gulf Arabic (Khaleeji)',
 		nativeName: 'الخليجي',
+		tiles: {
+			lessons: 'Structured Gulf Arabic lessons from A1 to B2 in the shared Gulf Arabic of the UAE, Kuwait, Qatar and Bahrain.',
+			stories: 'Gulf Arabic stories, read and heard, with tap-to-define on every word.',
+			conjugations: '200 common verbs in Gulf Arabic, every tense, affirmative and negative.',
+			tutor: 'Talk in Gulf Arabic, from abi gahwa to shloonich, and get corrections as you go.',
+			search: 'Search Gulf Arabic words, hear each one, and save it to your review deck.'
+		},
 		tagline:
 			'The Arabic of the UAE, Kuwait, Qatar and Bahrain — the language of the majlis, the souk and the fast-growing Gulf cities.',
 		whereSpoken:
@@ -342,6 +406,13 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 	saudi: {
 		heading: 'Saudi Arabic (Hijazi)',
 		nativeName: 'الحجازي',
+		tiles: {
+			lessons: 'Structured Saudi lessons from A1 to B2 in Hijazi, the Arabic of Jeddah, Mecca and Medina.',
+			stories: 'Hijazi stories, read and heard, with tap-to-define on every word.',
+			conjugations: '200 common verbs with the b- present and the 7a- future, affirmative and negative.',
+			tutor: 'Talk in Hijazi, da7een and abgha included, and get corrections as you go.',
+			search: 'Search Hijazi words, hear each one, and save it to your review deck.'
+		},
 		tagline:
 			'The Arabic of Jeddah, Mecca and Medina — a crossroads dialect shaped by centuries of pilgrims and traders.',
 		whereSpoken:

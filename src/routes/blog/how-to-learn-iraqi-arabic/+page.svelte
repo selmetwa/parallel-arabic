@@ -194,8 +194,8 @@
 	</p>
 
 	<p>
-		Ready to start? Everything above lives on the
-		<a href={resolve('/iraqi')}>Iraqi Arabic page</a>, with the
+		Ready to start? Everything you need to
+		<a href={resolve('/iraqi')}>learn Iraqi Arabic</a> is in one place, with the
 		<a href={resolve('/lessons/structured/[dialect]', { dialect: 'iraqi' })}>structured lessons</a>
 		as the place to begin.
 	</p>

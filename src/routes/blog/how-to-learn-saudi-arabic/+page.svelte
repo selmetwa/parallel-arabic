@@ -181,8 +181,8 @@
 	</p>
 
 	<p>
-		Ready to start? Everything above lives on the
-		<a href={resolve('/saudi')}>Saudi Arabic page</a>, with the
+		Ready to start? Everything you need to
+		<a href={resolve('/saudi')}>learn Saudi Arabic</a> is in one place, with the
 		<a href={resolve('/lessons/structured/[dialect]', { dialect: 'saudi' })}>structured lessons</a>
 		as the place to begin.
 	</p>

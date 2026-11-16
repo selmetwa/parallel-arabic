@@ -196,7 +196,15 @@ describe('egyptian-only routes', () => {
 describe('breadcrumbs', () => {
 	it('skips pages too shallow to need a trail', () => {
 		expect(resolveBreadcrumbs('/')).toBeNull();
-		expect(resolveBreadcrumbs('/egyptian-arabic')).toBeNull();
+		expect(resolveBreadcrumbs('/about')).toBeNull();
+	});
+
+	it('gives dialect landing pages a Home › Dialect trail', () => {
+		const crumbs = resolveBreadcrumbs('/egyptian-arabic') as {
+			itemListElement: { name: string; item: string }[];
+		};
+		expect(crumbs.itemListElement.map((c) => c.name)).toEqual(['Home', 'Egyptian Arabic']);
+		expect(crumbs.itemListElement[1].item).toBe('https://www.parallel-arabic.com/egyptian-arabic');
 	});
 
 	it('skips noindex paths', () => {

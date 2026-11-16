@@ -15,7 +15,8 @@
 	{#if data.available}
 		<p class="mt-2 max-w-2xl text-text-200">
 			The rules behind the lessons, explained in plain English. Each topic has examples with transliteration,
-			and you can compare how other dialects do the same thing.
+			and you can compare how other dialects do the same thing. New to the dialect? Start on the
+			<a class="underline hover:text-text-300" href="/{data.dialect}">Learn {dialectName}</a> page.
 		</p>
 
 		{#each data.levels as group (group.level)}
