@@ -26,6 +26,9 @@
 	>
 		← All {dialectName} grammar
 	</a>
+	<a href="/{data.dialect}" class="mb-6 ms-4 inline-flex text-sm text-text-200 underline hover:text-text-300">
+		Learn {dialectName}
+	</a>
 
 	<p class="mb-2 border-l-2 border-brand pl-2 text-[0.65rem] font-bold text-text-200">
 		{data.topic.level} · {dialectName} grammar

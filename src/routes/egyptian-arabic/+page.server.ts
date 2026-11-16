@@ -1,10 +1,13 @@
 import type { PageServerLoad } from './$types';
+import { getSocialProof } from '$lib/server/social-proof';
 import { phraseIndexFor, phraseSlugsFor } from '$lib/data/phrases/manifest';
 import { PHRASE_SEEDS } from '$lib/constants/phrase-seeds';
 import { wordSlugsFor } from '$lib/data/words/manifest';
 import { DIALECT_LANDING } from '$lib/constants/dialect-landing';
 
-export const load: PageServerLoad = () => ({
+export const load: PageServerLoad = async () => ({
+	// Real, rounded learner count for the hero's social proof (cached for an hour).
+	learners: (await getSocialProof()).learners,
 	hasPhrases: phraseSlugsFor('egyptian-arabic').length > 0,
 	hasWords: wordSlugsFor('egyptian-arabic').length > 0,
 	// Surfaced so the layout can emit FAQPage structured data.
@@ -14,6 +17,7 @@ export const load: PageServerLoad = () => ({
 		'egyptian-arabic',
 		PHRASE_SEEDS.map((seed) => seed.slug)
 	).map((phrase) => ({
+		slug: phrase.slug,
 		arabic: phrase.arabic,
 		english: phrase.english,
 		transliteration: phrase.transliteration

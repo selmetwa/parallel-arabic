@@ -15,6 +15,9 @@
   >
     ← Back to all {formatDialectName(data.dialect)} verbs
   </a>
+  <a href="/{data.dialect}" class="ms-4 text-sm text-text-200 underline hover:text-text-300">
+    Learn {formatDialectName(data.dialect)}
+  </a>
 
   <ConjugationExercise verb={data.verb} />
 

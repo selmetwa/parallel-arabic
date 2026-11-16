@@ -178,7 +178,7 @@ const DIALECT_META: Record<DialectSlug, { title: string; description: string }> 
 			'Learn Egyptian Arabic (Masri), the most widely understood Arabic dialect. Lessons, graded stories, vocabulary by topic, verb tables and speaking practice.'
 	},
 	levantine: {
-		title: 'Learn Levantine Arabic Online (Shami): Phrases, Stories, Vocabulary',
+		title: 'Learn Levantine Arabic Online: Lebanese & Syrian Phrases, Stories',
 		description:
 			'Learn Levantine Arabic (Shami), the dialect of Syria, Lebanon, Jordan and Palestine. Phrases with audio, graded stories, vocabulary and speaking practice.'
 	},
@@ -188,7 +188,7 @@ const DIALECT_META: Record<DialectSlug, { title: string; description: string }> 
 			'Learn Moroccan Arabic (Darija), the Arabic of Morocco. Everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
 	},
 	fusha: {
-		title: 'Learn Fusha (Modern Standard Arabic): Lessons & Vocabulary',
+		title: 'Learn Modern Standard Arabic (Fusha) Online: Lessons & Reading',
 		description:
 			'Learn Fusha, Modern Standard Arabic: the written, formal Arabic of news, books and the Quran. Lessons, graded reading, vocabulary and common phrases with audio.'
 	},
@@ -1291,7 +1291,9 @@ export function siteStructuredData() {
 export function resolveBreadcrumbs(pathname: string, data?: any) {
 	const path = pathname.replace(/\/+$/, '') || '/';
 	const parts = path.split('/').filter(Boolean);
-	if (parts.length < 2) return null;
+	const isDialectLanding = parts.length === 1 && (DIALECTS as readonly string[]).includes(parts[0]);
+	// Dialect landing pages get Home › Dialect; other top-level pages need no trail.
+	if (parts.length < 2 && !isDialectLanding) return null;
 	if (isNoindexPath(path)) return null;
 
 	const trail: { name: string; path: string }[] = [{ name: 'Home', path: '/' }];

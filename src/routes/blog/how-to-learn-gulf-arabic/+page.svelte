@@ -185,8 +185,8 @@
 	</p>
 
 	<p>
-		Ready to start? Everything above lives on the
-		<a href={resolve('/khaleeji')}>Gulf Arabic page</a>, with the
+		Ready to start? Everything you need to
+		<a href={resolve('/khaleeji')}>learn Gulf Arabic</a> is in one place, with the
 		<a href={resolve('/lessons/structured/[dialect]', { dialect: 'khaleeji' })}>structured lessons</a>
 		as the place to begin.
 	</p>

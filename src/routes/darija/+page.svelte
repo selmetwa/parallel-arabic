@@ -5,7 +5,9 @@
 
 	let {
 		data
-	}: { data: { hasPhrases: boolean; hasWords: boolean; practiceWords: PracticeWord[] } } = $props();
+	}: {
+		data: { hasPhrases: boolean; hasWords: boolean; practiceWords: (PracticeWord & { slug: string })[]; learners: number };
+	} = $props();
 </script>
 
 <DialectLanding
@@ -13,4 +15,5 @@
 	hasPhrases={data.hasPhrases}
 	hasWords={data.hasWords}
 	practiceWords={data.practiceWords}
+	learners={data.learners}
 />
