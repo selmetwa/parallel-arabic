@@ -115,7 +115,7 @@ export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 			: // Exact-match fixes first; otherwise spell it the way the dialect says it (geneh, not jeneh).
 				spellForSpeech(applyPronunciationFixes(normalizeForTTS(text), dialect), dialect);
 
-		const content = await synthesizeSpeech({
+		const { audio: content } = await synthesizeSpeech({
 			text: textForTTS,
 			dialect,
 			variety: learnerVariety(locals, dialect, requestedVariety)
