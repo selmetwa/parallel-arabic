@@ -220,6 +220,7 @@
 		<p class="text-sm text-text-200">
 			Read more: <a href={resolve('/blog/levantine-arabic-dialects-compared')} class="crumb">How different are the Levantine dialects?</a>
 			· <a href={resolve('/blog/how-to-learn-levantine-arabic')} class="crumb">How to learn Levantine Arabic</a>
+			· <a href={resolve('/arabic-dialects')} class="crumb">All Arabic dialects compared</a>
 		</p>
 	</div>
 </section>

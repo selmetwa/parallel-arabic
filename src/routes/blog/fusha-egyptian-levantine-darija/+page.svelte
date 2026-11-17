@@ -199,6 +199,11 @@
 		{/snippet}
 	</BlogGame>
 
+	<p>
+		For Gulf, Iraqi and Saudi Arabic too, <a href="/arabic-dialects">the Arabic dialects
+		compared</a> puts all seven side by side, with audio for every word.
+	</p>
+
 	<h2>So which one should you learn?</h2>
 	<p>It depends almost entirely on who you want to talk to.</p>
 	<ul>

@@ -3,7 +3,8 @@
  * Record the sample phrases on each variety landing page in that variety's Nur
  * voice, as static mp3s. The first phrase doubles as the onboarding preview.
  * Also records the Levantine comparison clips (/levantine-dialects and its blog
- * post), each in its variety's voice.
+ * post), each in its variety's voice. (/arabic-dialects needs no files: it uses
+ * /api/game-audio, which only speaks in a dialect's default voice.)
  *
  * Writes static/audio/varieties/<variety>-<index>.mp3 and
  * static/audio/levantine/*.mp3. Existing files are kept unless --regenerate.
@@ -31,16 +32,17 @@ const regenerate = process.argv.includes('--regenerate');
 const outDir = join(root, 'static/audio/varieties');
 mkdirSync(outDir, { recursive: true });
 
-async function record(file: string, arabic: string, variety: VarietyInfo, label: string) {
+/** `variety` picks the voice; without one, the dialect's default voice. */
+async function record(file: string, arabic: string, dialect: string, variety: VarietyInfo | undefined, label: string) {
 	if (existsSync(file) && !regenerate) return;
-	const { voice, language } = nurVoiceFor(variety.dialect, variety);
+	const { voice, language } = nurVoiceFor(dialect, variety);
 	const res = await fetch('https://api.eesi.ai/v1/audio/speech', {
 		method: 'POST',
 		headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
 		body: JSON.stringify({
 			model: 'nur-v1',
 			voice,
-			input: spellForSpeech(arabic.replace(/[؟?!]+$/, ''), variety.dialect),
+			input: spellForSpeech(arabic.replace(/[؟?!]+$/, ''), dialect),
 			speed: 0.9,
 			...(language && { language })
 		})
@@ -53,10 +55,11 @@ async function record(file: string, arabic: string, variety: VarietyInfo, label:
 
 for (const variety of VARIETIES) {
 	for (const [i, phrase] of VARIETY_LANDING[variety.key].phrases.entries()) {
-		await record(join(outDir, `${variety.key}-${i}.mp3`), phrase.arabic, variety, `${variety.key}-${i}`);
+		await record(join(outDir, `${variety.key}-${i}.mp3`), phrase.arabic, variety.dialect, variety, `${variety.key}-${i}`);
 	}
 }
 
 for (const clip of levantineClips()) {
-	await record(join(root, 'static', clip.path), clip.arabic, getVarietyInfo(clip.variety)!, clip.path);
+	const variety = getVarietyInfo(clip.variety)!;
+	await record(join(root, 'static', clip.path), clip.arabic, variety.dialect, variety, clip.path);
 }

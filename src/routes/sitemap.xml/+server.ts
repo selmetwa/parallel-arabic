@@ -226,6 +226,15 @@ export const GET: RequestHandler = async () => {
 		}
 	}
 
+	// Every dialect side by side
+	urls.push(`
+  <url>
+    <loc>${BASE_URL}/arabic-dialects</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>`);
+
 	// Dialect comparison pages
 	for (const slug of COMPARISON_SLUGS) {
 		urls.push(`

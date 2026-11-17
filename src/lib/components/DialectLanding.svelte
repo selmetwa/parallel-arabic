@@ -400,6 +400,7 @@
 			{#each otherDialects as other (other.href)}
 				<a href={resolve(other.href as Pathname)} class="chip">{other.title}</a>
 			{/each}
+			<a href={resolve('/arabic-dialects')} class="chip">🎧 All dialects compared</a>
 		</div>
 		{#if otherVarieties.length}
 			<p class="mb-2 mt-4 text-xs font-semibold text-text-200">By country</p>

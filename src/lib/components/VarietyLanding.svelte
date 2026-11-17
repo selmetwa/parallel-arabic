@@ -248,6 +248,7 @@
 			{#each otherVarieties as v (v.key)}
 				<a href={resolve(`/${v.slug}` as Pathname)} class="chip">{v.flag} {v.name}</a>
 			{/each}
+			<a href={resolve('/arabic-dialects')} class="chip">🎧 All dialects compared</a>
 		</div>
 	</div>
 </section>

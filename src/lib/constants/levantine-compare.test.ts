@@ -28,3 +28,20 @@ describe('Levantine comparison audio', () => {
 		}
 	});
 });
+
+describe('Arabic dialects comparison audio', async () => {
+	const { DIALECT_SENTENCES, DIALECT_WORDS, UNIVERSAL_WORDS, UNIVERSAL_VOICE, COMPARED_DIALECTS } = await import(
+		'./dialect-compare'
+	);
+	const { canSpeak } = await import('$lib/games/game-audio');
+
+	it('gives every sentence and word a form /api/game-audio can speak, in every dialect', () => {
+		for (const item of [...DIALECT_SENTENCES, ...DIALECT_WORDS]) {
+			for (const d of COMPARED_DIALECTS) {
+				expect(item.forms[d].arabic).toMatch(/[\u0600-\u06FF]/);
+				expect(canSpeak(item.forms[d].arabic, d)).toBe(true);
+			}
+		}
+		for (const w of UNIVERSAL_WORDS) expect(canSpeak(w.arabic, UNIVERSAL_VOICE)).toBe(true);
+	});
+});
