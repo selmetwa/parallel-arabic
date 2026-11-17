@@ -206,8 +206,15 @@ export const GET: RequestHandler = async () => {
   </url>`);
 	}
 
-	// Variety landing pages (/lebanese-arabic, ...)
+	// Variety landing pages (/lebanese-arabic, ...) and the Levantine comparison
 	if (NUR_ENABLED) {
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/levantine-dialects</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
 		for (const variety of VARIETIES) {
 			urls.push(`
   <url>

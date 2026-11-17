@@ -233,6 +233,9 @@
 			{#each siblings as s (s.key)}
 				<a href={resolve(`/${s.slug}` as Pathname)} class="chip">{s.flag} {s.name}</a>
 			{/each}
+			{#if info.dialect === 'levantine'}
+				<a href={resolve('/levantine-dialects')} class="chip">🎧 Compare all four</a>
+			{/if}
 		</div>
 	</div>
 
