@@ -5,6 +5,8 @@ import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { checkUserSubscription } from '$lib/helpers/subscription';
 import type { PaywallVariant } from '$lib/server/paywall-experiment';
 import { isDialect } from '$lib/constants/dialects';
+import { NUR_ENABLED } from '$lib/constants/feature-flags';
+import { isVarietyOf } from '$lib/constants/varieties';
 import type { DailyGoal } from '$lib/constants/daily-goal';
 import {
 	isDailyMinutes,
@@ -23,6 +25,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const {
 		target_dialect,
+		target_variety,
 		learning_reason,
 		proficiency_level,
 		goal_level,
@@ -70,6 +73,10 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	if (goal_level) {
 		updateData.goal_level = goal_level;
+	}
+
+	if (NUR_ENABLED && isVarietyOf(target_variety, target_dialect)) {
+		updateData.target_variety = target_variety;
 	}
 
 	// The time they said they have becomes their daily goal (the column already exists).

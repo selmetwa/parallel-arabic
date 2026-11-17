@@ -14,6 +14,7 @@ import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 import { invalidateStoryCaches } from '$lib/server/redis';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 interface GenerationData {
 	description: string;
@@ -445,7 +446,7 @@ Dialect flavor words: دحين، إيش، كدا، مرّة، أبغى، يا ش
 			model: 'gemini-2.5-flash',
 			contents: question,
 			config: {
-				systemInstruction: getDialectSystemInstruction(dialect),
+				systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect)),
 				temperature: 0.8,
 				maxOutputTokens: 32768, // High cap so schema-enforced JSON isn't truncated on long stories
 				responseMimeType: 'application/json',

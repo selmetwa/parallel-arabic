@@ -48,6 +48,7 @@
     "build:vocab": "vite-node scripts/build-vocab-topics.ts",
     "generate:room-hunt": "vite-node scripts/generate-room-hunt-vocab.ts",
     "generate:room-hunt-audio": "vite-node scripts/generate-room-hunt-audio.ts",
+    "generate:variety-audio": "vite-node scripts/generate-variety-audio.ts",
     "generate:room-hunt-scenario": "vite-node scripts/generate-room-hunt-scenario.ts",
     "screenshots:room-hunt": "vite-node scripts/capture-room-hunt-media.ts"
   },

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 	import { get } from 'svelte/store';
 	import {
 		currentDialect,
@@ -26,6 +26,7 @@
 	import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
 	import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
 	import { isSelectableDialect } from '$lib/constants/dialects';
+	import { resolveVariety, varietiesFor } from '$lib/constants/varieties';
 
 	let { data } = $props();
 
@@ -77,7 +78,7 @@
 			const res = await fetch('/api/definition-sentence', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
+				body: JSON.stringify({ variety: selectedVariety, 
 					word: cleanWord,
 					type: type,
 					sentence: {
@@ -256,6 +257,15 @@
 
 	let scenariosForDialect = $derived(TUTOR_SCENARIOS.filter((s) => s.dialogs[selectedDialect]));
 
+	// The tutor's accent for this session (Lebanese, Kuwaiti, ...). Starts on the
+	// learner's own variety, or the dialect's default; picking another doesn't
+	// change their saved one.
+	function defaultVariety(dialect: string): string | null {
+		return resolveVariety(dialect, { target_dialect: data.targetDialect, target_variety: data.targetVariety })?.key ?? null;
+	}
+	let selectedVariety = $state<string | null>(untrack(() => defaultVariety(selectedDialect)));
+	let accentOptions = $derived(varietiesFor(selectedDialect));
+
 	let activeScenarioDialog = $derived(
 		activeScenarioContext ? activeScenarioContext.dialogs[selectedDialect] ?? null : null
 	);
@@ -375,7 +385,7 @@
 			const r = await fetch('/api/scenario-intro', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
+				body: JSON.stringify({ variety: selectedVariety, 
 					dialect: selectedDialect,
 					scenarioTitle: activeScenarioContext.title,
 					scenarioDescription: activeScenarioContext.description,
@@ -560,7 +570,7 @@
 			const res = await fetch('/api/tutor-hint', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(body)
+				body: JSON.stringify({ ...body, variety: selectedVariety })
 			});
 			if (!res.ok) throw new Error('Failed to fetch hint');
 			const json = await res.json();
@@ -896,7 +906,7 @@
 		isComparisonModalOpen = false;
 	}
 
-	async function setDialect(dialect: string) {
+	async function setDialect(dialect: string, variety?: string) {
 		// Summarize current conversation before switching dialects
 		if (conversationId && conversation.length >= 4) {
 			try {
@@ -913,8 +923,9 @@
 			}
 		}
 
-		trackEvent('tutor_dialect_changed', { dialect });
+		trackEvent('tutor_dialect_changed', { dialect, variety: variety ?? null });
 		selectedDialect = dialect as Dialect;
+		selectedVariety = variety ?? defaultVariety(dialect);
 		conversation = [];
 		conversationId = null; // Reset for new dialect
 		exitScenario();
@@ -1058,7 +1069,7 @@
 			const r = await fetch('/api/tutor-chat', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
+				body: JSON.stringify({ variety: selectedVariety, 
 					message: userMessage,
 					dialect: selectedDialect,
 					conversation: conversationHistory,
@@ -1154,7 +1165,7 @@
 		const translatePromise = fetch('/api/translate-user-message', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
+			body: JSON.stringify({ variety: selectedVariety, 
 				message: userMessage,
 				dialect: selectedDialect,
 				inputLanguage: language
@@ -1471,7 +1482,7 @@
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify({ text, dialect })
+				body: JSON.stringify({ variety: selectedVariety,  text, dialect })
 			});
 
 			if (!res.ok) {
@@ -1624,6 +1635,26 @@
 				{/if}
 			</div>
 		</div>
+		<!-- Accents get their own row: next to the dialects they squeeze the title off the page. -->
+		{#if accentOptions.length}
+			<div class="mx-auto mt-3 flex max-w-5xl items-center gap-2 overflow-x-auto px-3 sm:justify-end sm:px-6">
+				<span class="shrink-0 text-xs font-semibold text-text-200">Accent</span>
+				<div class="dial-group shrink-0" role="group" aria-label="Select accent">
+					{#each accentOptions as v (v.key)}
+						<button
+							type="button"
+							onclick={() => v.key !== selectedVariety && setDialect(selectedDialect, v.key)}
+							title={v.name}
+							aria-pressed={selectedVariety === v.key}
+							class="dial {selectedVariety === v.key ? 'is-on' : ''}"
+						>
+							<span class="dial-flag" aria-hidden="true">{v.flag}</span>
+							{v.shortName}
+						</button>
+					{/each}
+				</div>
+			</div>
+		{/if}
 	</header>
 
 	<div class="mx-auto min-h-screen p-4 sm:p-6">
@@ -1763,7 +1794,7 @@
 							<div class="rounded-xl border-2 border-tile-500 bg-tile-300 p-6">
 								<div class="mb-4 flex items-start justify-between gap-4">
 									<span class="text-sm font-medium text-text-200">Listen & Repeat</span>
-									<AudioButton
+									<AudioButton variety={selectedVariety}
 										text={currentPracticeSentence.arabic}
 										dialect={selectedDialect}
 										className="!p-3 !rounded-xl bg-sky-500 hover:bg-sky-600 text-white"
@@ -2131,7 +2162,7 @@
 									<p class="mb-1 text-lg text-text-200">{currentVocabItem.transliteration}</p>
 									<p class="mb-5 text-sm text-text-200">{currentVocabItem.english}</p>
 									<div class="flex justify-center">
-										<AudioButton text={currentVocabItem.arabic} dialect={selectedDialect}
+										<AudioButton variety={selectedVariety} text={currentVocabItem.arabic} dialect={selectedDialect}
 											>Hear it</AudioButton
 										>
 									</div>
@@ -2299,7 +2330,7 @@
 											<span class="text-xs font-bold text-sky-700"> 💡 Hint — try saying </span>
 											{#if currentHint && !isLoadingHint}
 												<div class="flex items-center gap-1.5">
-													<AudioButton
+													<AudioButton variety={selectedVariety}
 														text={currentHint.arabic}
 														dialect={selectedDialect}
 														className="!p-1.5 !rounded-md bg-tile-500 hover:bg-tile-600"

@@ -44,6 +44,9 @@
 	import { trackEvent } from '$lib/analytics';
 	import type { Dialect } from '$lib/types';
 	import { isSelectableDialect } from '$lib/constants/dialects';
+	import { DEFAULT_VARIETY, getVarietyInfo, isVarietyOf } from '$lib/constants/varieties';
+	import { takeVarietyHint } from '$lib/helpers/variety-hint';
+	import { NUR_ENABLED } from '$lib/constants/feature-flags';
 
 	type Props = {
 		isOpen: boolean;
@@ -86,6 +89,8 @@
 
 	let step = $state<number>(STEP.WELCOME);
 	let targetDialect = $state('');
+	/** Lebanese within Levantine, etc. Only set for dialects that have varieties. */
+	let targetVariety = $state<string | null>(null);
 	let learningReason = $state('');
 	let proficiencyLevel = $state<CefrLevel | ''>('');
 	let goalLevel = $state<CefrLevel | ''>('');
@@ -110,6 +115,9 @@
 
 	onMount(() => {
 		isNative = isNativeApp();
+		// They came from a variety landing page: start on the accent they chose.
+		const hint = takeVarietyHint();
+		if (hint && isSelectableDialect(hint.dialect)) selectDialect(hint.dialect, hint.variety);
 	});
 
 	// Keep the page behind from scrolling while onboarding is up, as PaywallModal does.
@@ -222,6 +230,8 @@
 
 	let chosenDialectName = $derived.by(() => {
 		if (targetDialect === 'fusha') return 'Modern Standard Arabic';
+		const variety = getVarietyInfo(targetVariety);
+		if (variety) return variety.name;
 		const d = dialects.find((d) => d.id === targetDialect);
 		return d ? `${d.label} Arabic` : '';
 	});
@@ -393,8 +403,13 @@
 		goalLevel = CEFR_LEVELS[Math.min(CEFR_LEVELS.length - 1, currentIndex + GOAL_OFFSET)];
 	}
 
-	function selectDialect(id: string) {
+	function selectDialect(id: string, variety?: string) {
 		targetDialect = id;
+		targetVariety = !NUR_ENABLED
+			? null
+			: isVarietyOf(variety, id)
+				? variety
+				: (DEFAULT_VARIETY[id as Dialect] ?? null);
 		currentDialect.set(id);
 	}
 
@@ -420,6 +435,7 @@
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					target_dialect: targetDialect,
+					target_variety: targetVariety,
 					learning_reason: learningReason,
 					proficiency_level: proficiencyLevel,
 					goal_level: goalLevel || null,
@@ -616,7 +632,7 @@
 								<p class="screen-note">This shapes all your lessons, stories, and vocabulary.</p>
 							</div>
 
-							<DialectPicker {dialects} value={targetDialect} onSelect={selectDialect} />
+							<DialectPicker {dialects} value={targetDialect} variety={targetVariety} onSelect={selectDialect} />
 
 							<div class="mt-7 flex justify-center">
 								<button

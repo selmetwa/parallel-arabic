@@ -4,6 +4,7 @@
  */
 import type { GoogleGenAI } from '@google/genai';
 import { getDialectName, getDialectSystemInstruction, getLessonFormatRules } from '$lib/data/dialect-rules-v2';
+import type { VarietyInfo } from '$lib/constants/varieties';
 import { callGemini } from '$lib/server/lesson-v2-generation';
 import {
 	createConceptExamplesSchema,
@@ -92,9 +93,14 @@ const MAX_COVERING_TOKENS = 3;
  * Vocab pass, then (in parallel) a grammar-points pass and a follow-up vocab pass
  * for any Arabic words the first pass missed.
  */
-export async function extractNotes(ai: GoogleGenAI, notes: string, dialect: string): Promise<TutorExtraction> {
+export async function extractNotes(
+	ai: GoogleGenAI,
+	notes: string,
+	dialect: string,
+	variety?: VarietyInfo
+): Promise<TutorExtraction> {
 	const schema = createExtractionSchema();
-	const system = getDialectSystemInstruction(dialect);
+	const system = getDialectSystemInstruction(dialect, variety);
 	const ask = (prompt: string, maxTokens: number) =>
 		callGemini(ai, system, prompt, schema.zodSchema, schema.jsonSchema, maxTokens).then((r) => r.items);
 
@@ -146,14 +152,15 @@ export async function generateConceptExamples(
 	ai: GoogleGenAI,
 	concepts: ExtractedItem[],
 	vocab: VocabItem[],
-	dialect: string
+	dialect: string,
+	variety?: VarietyInfo
 ): Promise<ConceptExample[]> {
 	if (!concepts.length) return [];
 	const schema = createConceptExamplesSchema();
 	const dialectName = getDialectName(dialect);
 	const result = await callGemini(
 		ai,
-		getDialectSystemInstruction(dialect),
+		getDialectSystemInstruction(dialect, variety),
 		`${getLessonFormatRules()}
 - ${TRANSLITERATION_RULE}
 

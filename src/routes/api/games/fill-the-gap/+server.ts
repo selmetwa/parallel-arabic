@@ -5,6 +5,7 @@ import { createFillTheGapSchema } from '$lib/utils/gemini-schemas';
 import { stripArabicDiacritics } from '$lib/utils/arabic-normalization';
 import { checkGameAccess } from '$lib/server/games/access';
 import { gameErrorResponse, generateValidated, parseGameRequest } from '$lib/server/games/generate';
+import { learnerVariety } from '$lib/server/learner-variety';
 import {
 	ITEMS_PER_ROUND,
 	MAX_SAVED_WORDS,
@@ -44,6 +45,7 @@ export const POST: RequestHandler = async (event) => {
 	try {
 		const items = await generateValidated({
 			dialect,
+			variety: learnerVariety(locals, dialect),
 			prompt: fillTheGapPrompt(dialect, level, saved),
 			schema: createFillTheGapSchema(),
 			items: (parsed) => parsed.items,

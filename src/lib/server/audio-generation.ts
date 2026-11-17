@@ -1,19 +1,8 @@
-import { ElevenLabsClient } from 'elevenlabs';
-import { env } from '$env/dynamic/private';
-import { getVoiceConfig } from '$lib/utils/voice-config';
+import { synthesizeSpeech } from '$lib/server/tts';
+import { resolveVariety } from '$lib/constants/varieties';
 import { uploadAudioToStorage, getAudioUrl } from '$lib/helpers/storage-helpers';
 import { downloadStoryFromStorage } from '$lib/helpers/storage-helpers';
 import { supabase } from '$lib/supabaseClient';
-
-const ELEVENLABS_API_KEY = env.ELEVENLABS_API_KEY;
-
-if (!ELEVENLABS_API_KEY) {
-	throw new Error('Missing ELEVENLABS_API_KEY in environment variables');
-}
-
-const client = new ElevenLabsClient({
-	apiKey: ELEVENLABS_API_KEY
-});
 
 interface StorySentence {
 	arabic: { text: string };
@@ -72,27 +61,13 @@ export async function generateStoryAudioFromBody(storyId: string, dialect: strin
 			return { success: false, error: 'No Arabic content found in story' };
 		}
 
-		// Get voice configuration for the dialect
-		const voiceConfig = getVoiceConfig(dialect || 'egyptian-arabic');
-
-		// Generate audio using ElevenLabs
-		const audioStream = await client.generate({
-			voice: voiceConfig.voice,
-			model_id: 'eleven_turbo_v2_5',
+		// Stories are shared, so they use the dialect's default voice.
+		const dialectKey = dialect || 'egyptian-arabic';
+		const audioBuffer = await synthesizeSpeech({
 			text: fullArabicText,
-			voice_settings: {
-				stability: voiceConfig.stability,
-				similarity_boost: voiceConfig.similarity_boost
-			}
+			dialect: dialectKey,
+			variety: resolveVariety(dialectKey)
 		});
-
-		// Collect audio chunks
-		const chunks: Uint8Array[] = [];
-		for await (const chunk of audioStream) {
-			chunks.push(chunk);
-		}
-
-		const audioBuffer = Buffer.concat(chunks);
 
 		// Upload audio to Supabase storage
 		const dialectDir = dialect || 'egyptian-arabic';

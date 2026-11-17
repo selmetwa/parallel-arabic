@@ -77,6 +77,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       subscriberId: data.subscriberId ?? null,
       showOnboarding: data.showOnboarding ?? false,
       targetDialect: data.targetDialect ?? null,
+      targetVariety: data.targetVariety ?? null,
       isSubscribed: data.isSubscribed,
       trialEligible: data.trialEligible ?? false,
       userXp: data.userXp ?? 0,
@@ -103,6 +104,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         user: null,
         showOnboarding: data.showOnboarding ?? false,
         targetDialect: data.targetDialect ?? null,
+        targetVariety: data.targetVariety ?? null,
         isSubscribed: data.isSubscribed,
         trialEligible: data.trialEligible ?? false
       }

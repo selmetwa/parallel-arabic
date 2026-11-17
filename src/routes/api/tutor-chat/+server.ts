@@ -13,6 +13,7 @@ import {
   saveMessage
 } from '$lib/utils/tutor-memory';
 import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
+import { learnerVariety } from '$lib/server/learner-variety';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -66,7 +67,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
     
     const ai = new GoogleGenAI({ apiKey });
-    const { message, dialect, conversation, conversationId: clientConversationId, proficiencyLevel: clientProficiencyLevel } = await request.json();
+    const { message, dialect, conversation, conversationId: clientConversationId, proficiencyLevel: clientProficiencyLevel, variety: requestedVariety } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return error(400, { message: 'Invalid message format' });
@@ -113,10 +114,15 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     // Build conversation history for context
     const conversationHistory: ChatMessage[] = conversation || [];
     
-    const dialectName = dialectNames[dialect as Dialect];
+    // A Lebanese learner gets a tutor from Beirut who speaks Lebanese.
+    const variety = learnerVariety(locals, dialect, requestedVariety);
+    const dialectName = variety?.name ?? dialectNames[dialect as Dialect];
+    const persona = variety
+      ? ` You are from ${variety.city}. ${variety.name} is a variety of ${dialectNames[dialect as Dialect]}: the student's lessons teach general ${dialectNames[dialect as Dialect]}, so when a local word differs from what they learned, use the local one and briefly mention the general form.`
+      : '';
     
     // Build adaptive system prompt with learner context
-    const systemPrompt = `You are a friendly, patient, and encouraging Arabic tutor specializing in ${dialectName}. You're having a natural conversation with a student learning Arabic.
+    const systemPrompt = `You are a friendly, patient, and encouraging Arabic tutor specializing in ${dialectName}.${persona} You're having a natural conversation with a student learning Arabic.
 
 === RESPONSE LEVEL — MOST IMPORTANT RULE ===
 The student's level is ${level} (CEFR). Calibrate EVERY response to this level:
@@ -192,7 +198,7 @@ IMPORTANT: wordAlignments must have one entry per Arabic word in your response, 
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, variety),
         temperature: 0.8, // Slightly higher for more natural conversation
         maxOutputTokens: 4096,
         topP: 0.9,

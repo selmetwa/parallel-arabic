@@ -7,6 +7,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createTranslationWithFeedbackAndAlignmentsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
+import { learnerVariety } from '$lib/server/learner-variety';
 
 const dialectNames: Record<Dialect, string> = {
   'fusha': 'Modern Standard Arabic (Fusha)',
@@ -19,7 +20,7 @@ const dialectNames: Record<Dialect, string> = {
 };
 
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   try {
     const apiKey = env['GEMINI_API_KEY'];
     if (!apiKey) {
@@ -27,7 +28,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
     
     const ai = new GoogleGenAI({ apiKey });
-    const { message, dialect, inputLanguage } = await request.json();
+    const { message, dialect, inputLanguage, variety } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return error(400, { message: 'Invalid message format' });
@@ -117,7 +118,7 @@ Do not include a suggestedSentence field for English input — the arabic field 
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect, variety)),
         temperature: 0.3,
         maxOutputTokens: 2048,
         topP: 0.9,

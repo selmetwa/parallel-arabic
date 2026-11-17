@@ -234,3 +234,23 @@ describe('breadcrumbs', () => {
 		expect(crumbs.itemListElement.at(-1)?.name).toBe('Pronunciation');
 	});
 });
+
+describe('dialect landing meta fits search results', () => {
+	for (const dialect of ['egyptian-arabic', 'levantine', 'darija', 'fusha', 'iraqi', 'khaleeji', 'saudi']) {
+		it(dialect, () => {
+			const meta = resolvePageMeta(`/${dialect}`);
+			expect(meta.title.length).toBeLessThanOrEqual(60);
+			expect(meta.description.length).toBeLessThanOrEqual(160);
+		});
+	}
+
+	it('uses a breadcrumb trail a route supplies', () => {
+		const trail = [
+			{ name: 'Home', path: '/' },
+			{ name: 'Levantine Arabic', path: '/levantine' },
+			{ name: 'Lebanese Arabic', path: '/lebanese-arabic' }
+		];
+		const crumbs = resolveBreadcrumbs('/lebanese-arabic', { breadcrumbTrail: trail });
+		expect(crumbs?.itemListElement.map((i: { name: string }) => i.name)).toEqual(trail.map((t) => t.name));
+	});
+});

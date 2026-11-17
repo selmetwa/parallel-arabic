@@ -9,6 +9,7 @@ import {
   createListeningComprehensionSchema
 } from '$lib/utils/gemini-schemas';
 import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
+import { learnerVariety } from '$lib/server/learner-variety';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 // Function to clean unwanted characters from text
@@ -39,7 +40,7 @@ function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration')
   return cleaned;
 }
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   const apiKey = env['GEMINI_API_KEY'];
   if (!apiKey) {
     return error(500, { message: 'GEMINI_API_KEY is not configured' });
@@ -288,7 +289,7 @@ export const POST: RequestHandler = async ({ request }) => {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect)),
         temperature: 0.8,
         maxOutputTokens: 8192,
         responseMimeType: 'application/json',

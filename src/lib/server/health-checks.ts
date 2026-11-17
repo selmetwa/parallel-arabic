@@ -4,6 +4,7 @@ import { Stripe } from 'stripe';
 import { supabase } from '$lib/supabaseClient';
 import { getRedisClient } from '$lib/server/redis';
 import { getMailgunClient, MAILGUN_DOMAIN } from '$lib/server/email';
+import { NUR_ENABLED } from '$lib/constants/feature-flags';
 
 const HOUR_MS = 60 * 60 * 1000;
 const CHECK_TIMEOUT_MS = 10_000;
@@ -16,7 +17,7 @@ const ORPHAN_SIGNUP_LIMIT = 3;
 
 const REQUIRED_ENV = [
 	'GEMINI_API_KEY',
-	'ELEVENLABS_API_KEY',
+	NUR_ENABLED ? 'EESI_API_KEY' : 'ELEVENLABS_API_KEY',
 	'SUPABASE_SERVICE_ROLE_KEY',
 	'STRIPE_SECRET',
 	'STRIPE_MONTHLY_PRICE_ID',
@@ -52,9 +53,34 @@ export function recentSignups(users: AuthUser[], now: number) {
 	});
 }
 
+/**
+ * EESI has no usage endpoint, so this speaks one short word: it proves the key,
+ * the remaining credits (EESI answers 429 when they run out) and the voice all
+ * work. About half a second of audio per run. Runs whenever a key is set, so
+ * Nur can be watched before NUR_ENABLED is turned on.
+ */
+export async function checkEesi(): Promise<string | void> {
+	if (!env.EESI_API_KEY) {
+		if (NUR_ENABLED) throw new Error('EESI_API_KEY is not set');
+		return 'not configured';
+	}
+	const res = await fetch('https://api.eesi.ai/v1/audio/speech', {
+		method: 'POST',
+		headers: { Authorization: `Bearer ${env.EESI_API_KEY}`, 'Content-Type': 'application/json' },
+		body: JSON.stringify({ model: 'nur-v1', voice: 'ev_060e18ed', input: 'هلا' })
+	});
+	if (res.status === 401 || res.status === 403) throw new Error(`invalid API key (HTTP ${res.status})`);
+	if (res.status === 429) throw new Error('out of credits or rate limited (HTTP 429)');
+	if (!res.ok) throw new Error(`HTTP ${res.status}`);
+	const audio = await res.arrayBuffer();
+	if (audio.byteLength === 0) throw new Error('empty audio');
+	return NUR_ENABLED ? undefined : 'standby (NUR_ENABLED is off)';
+}
+
 export type CheckResult = { name: string; ok: boolean; detail?: string };
 
-type Check = { name: string; run: () => Promise<string | void> };
+/** `skip`: the service isn't in use (text-to-speech runs on one provider at a time). */
+type Check = { name: string; skip?: boolean; run: () => Promise<string | void> };
 
 const checks: Check[] = [
 	{
@@ -76,7 +102,12 @@ const checks: Check[] = [
 		}
 	},
 	{
+		name: 'eesi',
+		run: checkEesi
+	},
+	{
 		name: 'elevenlabs',
+		skip: NUR_ENABLED,
 		run: async () => {
 			const res = await fetch('https://api.elevenlabs.io/v1/user/subscription', {
 				headers: { 'xi-api-key': env.ELEVENLABS_API_KEY ?? '' }
@@ -174,9 +205,10 @@ function withTimeout<T>(promise: Promise<T>): Promise<T> {
 }
 
 export async function runHealthChecks(): Promise<CheckResult[]> {
-	const settled = await Promise.allSettled(checks.map((check) => withTimeout(check.run())));
+	const active = checks.filter((check) => !check.skip);
+	const settled = await Promise.allSettled(active.map((check) => withTimeout(check.run())));
 	return settled.map((outcome, i) => {
-		const name = checks[i].name;
+		const name = active[i].name;
 		if (outcome.status === 'fulfilled') {
 			return { name, ok: true, ...(outcome.value ? { detail: outcome.value } : {}) };
 		}

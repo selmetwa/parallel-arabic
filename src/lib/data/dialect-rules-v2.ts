@@ -10,6 +10,8 @@
  * tutor) is already dialect-agnostic.
  */
 
+import type { VarietyInfo } from '$lib/constants/varieties';
+
 export const DIALECT_DISPLAY_NAMES: Record<string, string> = {
 	'egyptian-arabic': 'Egyptian Arabic (Masri)',
 	levantine: 'Levantine Arabic (Shami)',
@@ -225,7 +227,7 @@ export function getDialectStyle(dialect: string): string {
  * The system instruction for any call that writes Arabic in a dialect: the style
  * guide, the MSA words to avoid, and example sentences. Fusha gets the style only.
  */
-export function getDialectSystemInstruction(dialect: string): string {
+export function getDialectSystemInstruction(dialect: string, variety?: VarietyInfo): string {
 	const parts = [getDialectStyle(dialect)];
 	const swaps = MSA_TO_DIALECT[dialect];
 	if (swaps) {
@@ -237,6 +239,12 @@ export function getDialectSystemInstruction(dialect: string): string {
 	const examples = DIALECT_EXAMPLES[dialect];
 	if (examples) {
 		parts.push(`Examples of the register to write in:\n${examples}`);
+	}
+	// The learner's country: its words win over the general ones above.
+	if (variety) {
+		parts.push(
+			`The learner is learning ${variety.name} specifically. Where it differs from the general guidance above, follow this:\n${variety.notes}`
+		);
 	}
 	return parts.join('\n\n');
 }

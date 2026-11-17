@@ -28,7 +28,8 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
         isSubscribed: false,
         dbUser: null,
         showOnboarding: false,
-        targetDialect: null
+        targetDialect: null,
+        targetVariety: null
       };
     }
 
@@ -62,7 +63,8 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
         isSubscribed: false,
         dbUser: null,
         showOnboarding: false,
-        targetDialect: null
+        targetDialect: null,
+        targetVariety: null
       };
   }
 };

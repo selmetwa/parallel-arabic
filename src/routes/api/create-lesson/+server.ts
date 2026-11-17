@@ -12,6 +12,7 @@ import { invalidateLessonCaches } from '$lib/server/redis';
 import fs from 'fs';
 import path from 'path';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 interface LessonGenerationData {
 	topic: string;
@@ -509,7 +510,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			model: 'gemini-2.5-flash',
 			contents: question,
 			config: {
-				systemInstruction: getDialectSystemInstruction(dialect),
+				systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect)),
 				temperature: 0.9,
 				maxOutputTokens: 32768, // Higher token limit for comprehensive lessons
 				responseMimeType: 'application/json',

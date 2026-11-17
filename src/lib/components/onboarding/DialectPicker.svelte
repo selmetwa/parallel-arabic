@@ -3,6 +3,8 @@
 	import { scale } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import { geoMercator, geoPath } from 'd3';
+	import { varietiesFor, VARIETIES } from '$lib/constants/varieties';
+	import { NUR_ENABLED } from '$lib/constants/feature-flags';
 
 	type DialectOption = {
 		id: string;
@@ -16,10 +18,28 @@
 	type Props = {
 		dialects: DialectOption[];
 		value: string;
-		onSelect: (id: string) => void;
+		/** The country variety within `value` (Lebanese in Levantine), if any. */
+		variety?: string | null;
+		onSelect: (id: string, variety?: string) => void;
 	};
 
-	let { dialects, value, onSelect }: Props = $props();
+	let { dialects, value, variety = null, onSelect }: Props = $props();
+
+	// Tapping Lebanon picks Levantine *and* Lebanese.
+	const COUNTRY_VARIETY: Record<string, string> = NUR_ENABLED
+		? Object.fromEntries(VARIETIES.map((v) => [v.iso, v.key]))
+		: {};
+
+	let varieties = $derived(varietiesFor(value));
+	let preview: HTMLAudioElement | null = null;
+
+	function pickVariety(key: string) {
+		onSelect(value, key);
+		// Their first taste of the accent: the variety's greeting in its own voice.
+		preview?.pause();
+		preview = new Audio(`/audio/varieties/${key}-0.mp3`);
+		preview.play().catch(() => {});
+	}
 
 	const WIDTH = 800;
 	const HEIGHT = 380;
@@ -91,7 +111,8 @@
 				d: path(feature) ?? '',
 				// null for the surrounding, non-Arab land
 				// A country whose dialect isn't offered falls back to Fusha.
-				dialect: iso ? (COUNTRY_DIALECT[iso] in accents ? COUNTRY_DIALECT[iso] : 'fusha') : null
+				dialect: iso ? (COUNTRY_DIALECT[iso] in accents ? COUNTRY_DIALECT[iso] : 'fusha') : null,
+				variety: iso ? COUNTRY_VARIETY[iso] : undefined
 			};
 		})
 	);
@@ -132,7 +153,7 @@
 						class="country {lit ? 'is-lit' : ''} {country.dialect !== 'fusha' ? 'is-region' : ''}"
 						style="--c:{accents[active === 'fusha' ? 'fusha' : country.dialect]};"
 						d={country.d}
-						onclick={() => onSelect(country.dialect)}
+						onclick={() => onSelect(country.dialect, country.variety)}
 						onpointerenter={(e) => hover(e, country.dialect)}
 						onpointerleave={() => (hovered = '')}
 					/>
@@ -194,6 +215,26 @@
 			</button>
 		{/each}
 	</div>
+
+	{#if varieties.length}
+		<div class="accents" in:scale={{ duration: 200, start: 0.96 }}>
+			<p class="accents-label">Which accent? <span>Tap to hear it</span></p>
+			<div class="flex flex-wrap justify-center gap-2">
+				{#each varieties as v (v.key)}
+					<button
+						type="button"
+						class="accent {variety === v.key ? 'is-on' : ''}"
+						aria-pressed={variety === v.key}
+						onclick={() => pickVariety(v.key)}
+					>
+						<span aria-hidden="true">{v.flag}</span>
+						{v.shortName}
+						<span class="accent-play" aria-hidden="true">▶</span>
+					</button>
+				{/each}
+			</div>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -355,6 +396,48 @@
 	.pick-check svg {
 		width: 0.7rem;
 		height: 0.7rem;
+	}
+
+	.accents {
+		margin-top: 1.1rem;
+		text-align: center;
+	}
+
+	.accents-label {
+		margin-bottom: 0.6rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.accents-label span {
+		font-weight: 400;
+		color: var(--text2);
+	}
+
+	.accent {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.45rem 0.9rem;
+		border-radius: 100px;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 3px 0 var(--tile5);
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: var(--text1);
+		cursor: pointer;
+	}
+
+	.accent.is-on {
+		border-color: var(--text1);
+		background: var(--tile4);
+	}
+
+	.accent-play {
+		font-size: 0.65rem;
+		color: var(--text2);
 	}
 
 	@media (prefers-reduced-motion: reduce) {

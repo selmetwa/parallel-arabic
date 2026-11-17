@@ -8,6 +8,7 @@ import { textWithTranslationSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -24,7 +25,7 @@ const dialectNames: Record<Dialect, string> = {
   saudi: 'Saudi Arabic (Hijazi)'
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   try {
     const apiKey = env['GEMINI_API_KEY'];
     if (!apiKey) {
@@ -37,7 +38,8 @@ export const POST: RequestHandler = async ({ request }) => {
       scenarioTitle,
       scenarioDescription,
       otherRole,
-      proficiencyLevel
+      proficiencyLevel,
+      variety
     } = await request.json();
 
     if (!dialect || !dialectNames[dialect as Dialect]) {
@@ -97,7 +99,7 @@ Respond as JSON with this exact shape:
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect, variety)),
         temperature: 0.7,
         maxOutputTokens: 1024,
         // Disable thinking — gemini-2.5-flash's thinking tokens count against
