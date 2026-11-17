@@ -9,6 +9,7 @@ import { createSentencesSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
 import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
+import { learnerVariety } from '$lib/server/learner-variety';
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -46,7 +47,7 @@ type SentenceType = {
   transliteration: string;
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   const apiKey = env['GEMINI_API_KEY'];
   if (!apiKey) {
     return error(500, { message: 'GEMINI_API_KEY is not configured' });
@@ -336,7 +337,7 @@ IMPORTANT:
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect)),
         temperature: 0.9,
         topP: 0.95,
         maxOutputTokens: 8192, // Increase token limit to prevent truncation

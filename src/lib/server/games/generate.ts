@@ -10,6 +10,7 @@ import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { isGameDialect, type GameDialect } from '$lib/games/themes';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import type { VarietyInfo } from '$lib/constants/varieties';
 import { GAME_LEVELS, type GameLevel } from '$lib/games/levels';
 
 export const LEVEL_GUIDE: Record<GameLevel, string> = {
@@ -37,6 +38,7 @@ const MIN_ITEMS = 3;
 
 export async function generateValidated<Parsed, Item>({
 	dialect,
+	variety,
 	prompt,
 	schema,
 	items,
@@ -47,6 +49,8 @@ export async function generateValidated<Parsed, Item>({
 }: {
 	/** Sets the system instruction: how to write this dialect. */
 	dialect: GameDialect;
+	/** The learner's country variety (Lebanese, ...), added to the system instruction. */
+	variety?: VarietyInfo;
 	prompt: string;
 	schema: { zodSchema: z.ZodSchema<Parsed>; jsonSchema: unknown };
 	/** Pull the raw item list out of the parsed response. */
@@ -71,7 +75,7 @@ export async function generateValidated<Parsed, Item>({
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			config: {
-				systemInstruction: getDialectSystemInstruction(dialect),
+				systemInstruction: getDialectSystemInstruction(dialect, variety),
 				temperature,
 				maxOutputTokens: 8192 + thinkingBudget,
 				thinkingConfig: { thinkingBudget },

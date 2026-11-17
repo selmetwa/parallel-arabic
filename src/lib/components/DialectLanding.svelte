@@ -12,6 +12,8 @@
 	import { DIALECT_COMPARISONS, comparisonSlug } from '$lib/constants/dialect-comparisons';
 	import { SELECTABLE_DIALECTS, getDialectInfo } from '$lib/constants/dialects';
 	import { dialectAccent } from '$lib/constants/dialect-accents';
+	import { VARIETIES, varietiesFor } from '$lib/constants/varieties';
+	import { NUR_ENABLED } from '$lib/constants/feature-flags';
 	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS, type TestimonialSegment } from '$lib/constants/testimonials';
 	import { getGrammarTopic, hasGrammar } from '$lib/data/grammar/topics';
 	import { trackEvent } from '$lib/analytics';
@@ -153,6 +155,11 @@
 			deep: '#0369a1'
 		}
 	]);
+
+	// Country varieties (Lebanese, Kuwaiti, ...); empty while NUR_ENABLED is off.
+	const varieties = $derived(varietiesFor(dialect));
+	// Every other variety page, so each dialect page links to all of them.
+	const otherVarieties = $derived(NUR_ENABLED ? VARIETIES.filter((v) => v.dialect !== dialect) : []);
 
 	const grammar = ['pronouns', 'possessive-suffixes', 'plurals', 'numbers-counting', 'present-tense', 'past-tense']
 		.map((slug) => getGrammarTopic(slug))
@@ -318,6 +325,18 @@
 		<p class="panel-body">{content.whereSpoken}</p>
 	</div>
 
+	<!-- ── Varieties ──────────────────────────────────────────────────────── -->
+	{#if varieties.length}
+		<div>
+			{@render sectionHead('🎙️', `Pick your ${short} accent`, 'same lessons, local voice')}
+			<div class="flex flex-wrap gap-2">
+				{#each varieties as v (v.key)}
+					<a href={resolve(`/${v.slug}` as Pathname)} class="chip">{v.flag} {v.name}</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
+
 	<!-- ── Grammar ────────────────────────────────────────────────────────── -->
 	{#if hasGrammar(dialect) && grammar.length}
 		<div>
@@ -379,6 +398,14 @@
 				<a href={resolve(other.href as Pathname)} class="chip">{other.title}</a>
 			{/each}
 		</div>
+		{#if otherVarieties.length}
+			<p class="mb-2 mt-4 text-xs font-semibold text-text-200">By country</p>
+			<div class="flex flex-wrap gap-2">
+				{#each otherVarieties as v (v.key)}
+					<a href={resolve(`/${v.slug}` as Pathname)} class="chip">{v.flag} {v.name}</a>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </section>
 

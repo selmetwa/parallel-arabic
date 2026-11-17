@@ -5,6 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { createWordDefinitionSchema } from '$lib/utils/gemini-schemas';
 import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
+import { learnerVariety } from '$lib/server/learner-variety';
 
 const dialectNames: Record<string, string> = {
   fusha: 'Modern Standard Arabic',
@@ -46,7 +47,7 @@ function normalizeRoot(root: unknown, allowRoot: boolean): DefinitionRoot | null
   };
 }
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   const apiKey = env['GEMINI_API_KEY'];
   if (!apiKey) {
     console.error('GEMINI_API_KEY is not configured');
@@ -149,7 +150,7 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
       config: {
-        ...(typeof data.dialect === 'string' && { systemInstruction: getDialectSystemInstruction(data.dialect) }),
+        ...(typeof data.dialect === 'string' && { systemInstruction: getDialectSystemInstruction(data.dialect, learnerVariety(locals, data.dialect, data.variety)) }),
         responseMimeType: 'application/json',
         responseJsonSchema: jsonSchema
       }

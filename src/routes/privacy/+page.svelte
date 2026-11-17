@@ -1,3 +1,9 @@
+<script lang="ts">
+	import { NUR_ENABLED } from '$lib/constants/feature-flags';
+
+	const ttsProvider = NUR_ENABLED ? 'EESI' : 'ElevenLabs';
+</script>
+
 <section class="max-w-3xl mx-auto px-6 py-12">
 	<h1 class="text-4xl font-bold text-text-300 mb-2">Privacy Policy</h1>
 	<p class="text-text-200 mb-10">Last updated: April 25, 2026</p>
@@ -68,7 +74,7 @@
 				<li>To operate and personalize your learning experience</li>
 				<li>To track progress, streaks, XP, and leaderboard rankings</li>
 				<li>To deliver AI-generated content (stories, lessons, sentences) via Google Gemini</li>
-				<li>To provide text-to-speech audio via ElevenLabs</li>
+				<li>To provide text-to-speech audio via {ttsProvider}</li>
 				<li>To process subscription payments via Stripe</li>
 				<li>To send transactional emails (e.g., password reset) via Mailgun</li>
 				<li>To improve app performance and fix errors</li>
@@ -83,7 +89,7 @@
 				<li><strong>Supabase</strong> — authentication and database hosting</li>
 				<li><strong>Stripe</strong> — payment processing and subscription management</li>
 				<li><strong>Google Cloud / Google Gemini</strong> — AI content generation and speech-to-text</li>
-				<li><strong>ElevenLabs</strong> — text-to-speech audio generation</li>
+				<li><strong>{ttsProvider}</strong> — text-to-speech audio generation</li>
 				<li><strong>Mailgun</strong> — transactional email delivery</li>
 				<li><strong>Vercel</strong> — hosting and anonymized analytics</li>
 				<li><strong>YouTube</strong> — video content and transcript processing</li>

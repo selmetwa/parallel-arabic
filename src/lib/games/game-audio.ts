@@ -5,11 +5,14 @@
  * word is generated once and then served like a static file.
  */
 import { isGameDialect } from './themes';
+import { NUR_ENABLED } from '$lib/constants/feature-flags';
 
 export const MAX_GAME_AUDIO_CHARS = 200;
 
 export function gameAudioUrl(text: string, dialect: string): string {
 	const params = new URLSearchParams({ d: dialect, t: text.trim() });
+	// A new URL, so clips the CDN cached in the old voice aren't mixed in.
+	if (NUR_ENABLED) params.set('v', 'nur');
 	return `/api/game-audio?${params}`;
 }
 

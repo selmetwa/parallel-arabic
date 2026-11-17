@@ -12,9 +12,11 @@
     className?: string;
     children?: Snippet;
     bypassPaywall?: boolean;
+    /** A country variety (lebanese, ...) to speak in, instead of the learner's saved one. */
+    variety?: string | null;
   }
 
-  let { text, dialect = 'egyptian-arabic', audioUrl, className = '', children, bypassPaywall = false }: Props = $props();
+  let { text, dialect = 'egyptian-arabic', audioUrl, className = '', children, bypassPaywall = false, variety = null }: Props = $props();
 
 	let isLoading = $state(false);
 	let paywalled = $state(false);
@@ -59,7 +61,7 @@
 					headers: {
 						'Content-Type': 'application/json'
 					},
-					body: JSON.stringify({ text, dialect, context: bypassPaywall ? 'onboarding' : undefined })
+					body: JSON.stringify({ text, dialect, variety, context: bypassPaywall ? 'onboarding' : undefined })
 				});
 
 				if (!res.ok) {

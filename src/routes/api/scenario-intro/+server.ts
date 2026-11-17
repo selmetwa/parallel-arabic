@@ -7,6 +7,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createScenarioVocabSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 type ScenarioLine = {
   speaker: 'student' | 'other';
@@ -25,14 +26,14 @@ const dialectNames: Record<Dialect, string> = {
   saudi: 'Saudi Arabic (Hijazi)'
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   try {
     const apiKey = env['GEMINI_API_KEY'];
     if (!apiKey) {
       return error(500, { message: 'GEMINI_API_KEY is not configured' });
     }
 
-    const { dialect, scenarioTitle, scenarioDescription, lines, proficiencyLevel } =
+    const { dialect, scenarioTitle, scenarioDescription, lines, proficiencyLevel, variety } =
       await request.json();
 
     if (!dialect || !dialectNames[dialect as Dialect]) {
@@ -90,7 +91,7 @@ Respond as JSON with this exact shape:
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect, variety)),
         temperature: 0.6,
         maxOutputTokens: 4096,
         // Disable thinking — gemini-2.5-flash's thinking tokens count against

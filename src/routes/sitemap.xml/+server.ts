@@ -6,6 +6,8 @@ import { stories as staticStories } from '$lib/constants/stories/index';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { PHRASE_SEEDS, PHRASE_DIALECTS } from '$lib/constants/phrase-seeds';
 import { COMPARISON_SLUGS } from '$lib/constants/dialect-comparisons';
+import { NUR_ENABLED } from '$lib/constants/feature-flags';
+import { VARIETIES } from '$lib/constants/varieties';
 import { WORD_DIALECTS, wordSlugsFor } from '$lib/data/words/manifest';
 import { VOCAB_DIALECTS, topicSlugsFor } from '$lib/data/vocab/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
@@ -202,6 +204,19 @@ export const GET: RequestHandler = async () => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`);
+	}
+
+	// Variety landing pages (/lebanese-arabic, ...)
+	if (NUR_ENABLED) {
+		for (const variety of VARIETIES) {
+			urls.push(`
+  <url>
+    <loc>${BASE_URL}/${variety.slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+		}
 	}
 
 	// Dialect comparison pages

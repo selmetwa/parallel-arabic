@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { requireSubscriber } from '$lib/server/tutor-notes/auth';
 import { BUILD_TIMEOUT_MS, getTutorLesson, updateTutorLesson } from '$lib/server/tutor-notes/store';
 import { buildTutorLesson } from '$lib/server/tutor-notes/build';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 /** Builds the lesson from the kept items: `{ selection: number[] }` (indexes into extraction.items). */
 export const POST: RequestHandler = async ({ params, request, locals }) => {
@@ -24,7 +25,7 @@ export const POST: RequestHandler = async ({ params, request, locals }) => {
 	await updateTutorLesson(row.id, auth.userId, { status: 'building', selection, error: null, build_started_at: Date.now() });
 
 	try {
-		const { storagePath, wordCount, stepCount } = await buildTutorLesson(row, selection);
+		const { storagePath, wordCount, stepCount } = await buildTutorLesson(row, selection, learnerVariety(locals, row.dialect));
 		await updateTutorLesson(row.id, auth.userId, {
 			status: 'ready',
 			storage_path: storagePath,

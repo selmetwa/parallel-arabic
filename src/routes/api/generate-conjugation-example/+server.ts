@@ -7,6 +7,7 @@ import { textWithTranslationSchema } from '$lib/utils/gemini-schemas';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 const DIALECT_NAMES: Record<string, string> = {
 	'egyptian-arabic': 'Egyptian Arabic (colloquial, not MSA)',
@@ -18,7 +19,7 @@ const DIALECT_NAMES: Record<string, string> = {
 	saudi: 'Saudi Arabic (Hijazi)'
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
 	const apiKey = env['GEMINI_API_KEY'];
 	if (!apiKey) {
 		return error(500, { message: 'GEMINI_API_KEY is not configured' });
@@ -54,7 +55,7 @@ Return PURE JSON only. No markdown code blocks. No explanations.`;
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			config: {
-				systemInstruction: getDialectSystemInstruction(dialect),
+				systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect)),
 				responseMimeType: 'application/json',
 				responseJsonSchema: jsonSchema
 			}

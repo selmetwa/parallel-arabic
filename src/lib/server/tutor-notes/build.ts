@@ -5,6 +5,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { supabase } from '$lib/supabaseClient';
 import { getDialectName, getDialectSystemInstruction, getLessonFormatRules } from '$lib/data/dialect-rules-v2';
+import type { VarietyInfo } from '$lib/constants/varieties';
 import { generatedLessonV2Schema, type VocabItem } from '$lib/schemas/lesson-v2-schema';
 import { assembleLessonV2, recurrenceHistogram } from '$lib/server/assemble-lesson-v2';
 import {
@@ -55,7 +56,7 @@ async function saveWords(userId: string, dialect: string, vocab: VocabItem[]) {
 type LessonSource = Pick<TutorLessonRow, 'id' | 'title' | 'dialect' | 'source_text' | 'extraction'>;
 
 /** Generates and assembles the lesson from the kept items. No database or storage writes. */
-export async function generateTutorLesson(row: LessonSource, selection: number[]) {
+export async function generateTutorLesson(row: LessonSource, selection: number[], variety?: VarietyInfo) {
 	const { items } = row.extraction;
 	const vocab = selectedVocab(items, selection);
 	if (vocab.length < MIN_WORDS) throw new Error(`Pick at least ${MIN_WORDS} words to build a lesson.`);
@@ -65,7 +66,7 @@ export async function generateTutorLesson(row: LessonSource, selection: number[]
 	const ai = buildAi();
 	const ctx: GenerationContext = {
 		ai,
-		system: getDialectSystemInstruction(row.dialect),
+		system: getDialectSystemInstruction(row.dialect, variety),
 		rules: getLessonFormatRules(),
 		dialectName: getDialectName(row.dialect),
 		lessonLabel: `the learner's own tutor notes ("${row.title}")`,
@@ -88,7 +89,7 @@ export async function generateTutorLesson(row: LessonSource, selection: number[]
 					: [])
 			]
 		}),
-		generateConceptExamples(ai, concepts, vocab, row.dialect).catch((e) => {
+		generateConceptExamples(ai, concepts, vocab, row.dialect, variety).catch((e) => {
 			console.warn('[tutor-notes] concept examples failed, using the patterns only:', e);
 			return [];
 		}),
@@ -131,13 +132,13 @@ export async function generateTutorLesson(row: LessonSource, selection: number[]
 }
 
 /** Saves the kept words for review, builds the lesson and stores it. */
-export async function buildTutorLesson(row: TutorLessonRow, selection: number[]) {
+export async function buildTutorLesson(row: TutorLessonRow, selection: number[], variety?: VarietyInfo) {
 	const vocab = selectedVocab(row.extraction.items, selection);
 	if (vocab.length < MIN_WORDS) throw new Error(`Pick at least ${MIN_WORDS} words to build a lesson.`);
 	if (vocab.length > MAX_WORDS) throw new Error(`Pick at most ${MAX_WORDS} words for one lesson.`);
 	await saveWords(row.user_id, row.dialect, vocab);
 
-	const { lesson } = await generateTutorLesson(row, selection);
+	const { lesson } = await generateTutorLesson(row, selection, variety);
 	const storagePath = await saveTutorLesson(row.user_id, row.id, lesson);
 	return { storagePath, wordCount: vocab.length, stepCount: lesson.steps.length };
 }

@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { createOddOneOutSchema } from '$lib/utils/gemini-schemas';
 import { checkGameAccess } from '$lib/server/games/access';
 import { gameErrorResponse, generateValidated, parseGameRequest } from '$lib/server/games/generate';
+import { learnerVariety } from '$lib/server/learner-variety';
 import {
 	oddOneOutPrompt,
 	PUZZLES_PER_ROUND,
@@ -22,6 +23,7 @@ export const POST: RequestHandler = async (event) => {
 	try {
 		const items = await generateValidated({
 			dialect,
+			variety: learnerVariety(event.locals, dialect),
 			prompt: oddOneOutPrompt(dialect, level),
 			schema: createOddOneOutSchema(),
 			items: (parsed) => parsed.puzzles,

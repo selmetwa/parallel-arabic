@@ -1,13 +1,10 @@
-import { ElevenLabsClient } from 'elevenlabs';
-import { env } from '$env/dynamic/private';
 import type { RequestHandler } from './$types';
-import { getVoiceConfig } from '$lib/utils/voice-config';
+import { synthesizeSpeech } from '$lib/server/tts';
+import { learnerVariety } from '$lib/server/learner-variety';
 import { spellForSpeech } from '$lib/utils/speech-spelling';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
 import { getUserTtsCount } from '$lib/helpers/get-user-tts-count';
 import { supabase } from '$lib/supabaseClient';
-
-const ELEVENLABS_API_KEY = env.ELEVENLABS_API_KEY;
 
 /** When true: only strip Arabic ؟ from text, keep diacritics, no pronunciation mapping. Set in .env.local to test. */
 const STRIP_ARABIC_QM_ONLY = false;
@@ -20,14 +17,6 @@ const ONBOARDING_BYPASS_WINDOW_MS = 60 * 60 * 1000;
 /** Per-browser audio plays allowed before signing in. */
 const ANON_TTS_LIMIT = 6;
 const ANON_TTS_COOKIE = 'anon_tts_plays';
-
-if (!ELEVENLABS_API_KEY) {
-	throw new Error('Missing ELEVENLABS_API_KEY in environment variables');
-}
-
-const client = new ElevenLabsClient({
-	apiKey: ELEVENLABS_API_KEY
-});
 
 // Spelling that TTS misreads → spelling that sounds right (per dialect). Exact key match only; no stripping so male/female stay distinct.
 const TTS_PRONUNCIATION_FIXES: Record<string, Record<string, string>> = {
@@ -54,7 +43,7 @@ export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 	const userId = sessionId && user ? user.id : null;
 
 	const data = await request.json();
-	const { text, dialect, context } = data;
+	const { text, dialect, context, variety: requestedVariety } = data;
 
 	if (!text) {
 		return new Response(JSON.stringify({ error: 'Missing required field: text' }), {
@@ -121,29 +110,16 @@ export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 	}
 
 	try {
-		const voiceConfig = getVoiceConfig(dialect);
-
 		const textForTTS = STRIP_ARABIC_QM_ONLY
 			? text.replace(/؟/g, '')
 			: // Exact-match fixes first; otherwise spell it the way the dialect says it (geneh, not jeneh).
 				spellForSpeech(applyPronunciationFixes(normalizeForTTS(text), dialect), dialect);
 
-		const audioStream = await client.generate({
-			voice: voiceConfig.voice,
-			model_id: 'eleven_turbo_v2_5',
+		const content = await synthesizeSpeech({
 			text: textForTTS,
-			voice_settings: {
-				stability: voiceConfig.stability,
-				similarity_boost: voiceConfig.similarity_boost
-			}
+			dialect,
+			variety: learnerVariety(locals, dialect, requestedVariety)
 		});
-
-		const chunks: Uint8Array[] = [];
-		for await (const chunk of audioStream) {
-			chunks.push(chunk);
-		}
-
-		const content = Buffer.concat(chunks);
 
 		// Increment counter for free users after successful generation (skipped
 		// entirely for the onboarding bypass — those plays don't count against

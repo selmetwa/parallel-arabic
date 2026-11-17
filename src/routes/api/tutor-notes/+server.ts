@@ -6,6 +6,7 @@ import { isSelectableDialect } from '$lib/constants/dialects';
 import { buildAi } from '$lib/server/lesson-v2-generation';
 import { readSource, SourceError } from '$lib/server/tutor-notes/read-source';
 import { extractNotes } from '$lib/server/tutor-notes/extract';
+import { learnerVariety } from '$lib/server/learner-variety';
 import { lessonTitle } from '$lib/server/tutor-notes/prepare';
 import { insertTutorLesson, listTutorLessons } from '$lib/server/tutor-notes/store';
 
@@ -42,7 +43,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	try {
 		const ai = buildAi();
 		const notes = await readSource(ai, input);
-		const extraction = await extractNotes(ai, notes, dialect);
+		const extraction = await extractNotes(ai, notes, dialect, learnerVariety(locals, dialect));
 		if (!extraction.items.some((i) => i.kind === 'vocab')) {
 			return json({ error: "We couldn't find any vocabulary in those notes." }, { status: 422 });
 		}

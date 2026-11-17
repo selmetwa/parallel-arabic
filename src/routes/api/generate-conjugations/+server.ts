@@ -6,6 +6,7 @@ import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-
 import { createConjugationExerciseSchema } from '$lib/utils/gemini-schemas';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
+import { learnerVariety } from '$lib/server/learner-variety';
 
 type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija' | 'iraqi' | 'khaleeji' | 'saudi';
 
@@ -65,7 +66,7 @@ const DIALECT_CONJUGATION_GUIDE: Record<DialectKey, { name: string; guide: strin
 	}
 };
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
 	const apiKey = env['GEMINI_API_KEY'];
 	if (!apiKey) {
 		return error(500, { message: 'GEMINI_API_KEY is not configured' });
@@ -132,7 +133,7 @@ Return PURE JSON only. No markdown code blocks. No explanations.`;
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			config: {
-				systemInstruction: getDialectSystemInstruction(dialectKey),
+				systemInstruction: getDialectSystemInstruction(dialectKey, learnerVariety(locals, dialectKey)),
 				responseMimeType: 'application/json',
 				responseJsonSchema: jsonSchema
 			}

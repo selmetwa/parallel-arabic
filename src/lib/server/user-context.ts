@@ -8,6 +8,7 @@ interface ContextUser {
   subscription_end_date?: string | number | Date | null;
   has_used_trial?: boolean | null;
   target_dialect?: string | null;
+  target_variety?: string | null;
   proficiency_level?: string | null;
   goal_level?: string | null;
   total_xp?: number | null;
@@ -38,6 +39,8 @@ export function getUserContext(user: ContextUser) {
     // inside the native app before showing any trial copy.
     trialEligible: !isSubscribed && !user.has_used_trial,
     targetDialect: user.target_dialect || null,
+    // Null until the column exists and the learner (or onboarding) picks one.
+    targetVariety: user.target_variety || null,
     proficiencyLevel: user.proficiency_level || null,
     goalLevel: user.goal_level || null,
     userXp: user.total_xp ?? 0,

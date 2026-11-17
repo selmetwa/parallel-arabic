@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { createSpotTheMistakeSchema } from '$lib/utils/gemini-schemas';
 import { checkGameAccess } from '$lib/server/games/access';
 import { gameErrorResponse, generateValidated, parseGameRequest } from '$lib/server/games/generate';
+import { learnerVariety } from '$lib/server/learner-variety';
 import {
 	ITEMS_PER_ROUND,
 	spotTheMistakePrompt,
@@ -21,6 +22,7 @@ export const POST: RequestHandler = async (event) => {
 	try {
 		const items = await generateValidated({
 			dialect,
+			variety: learnerVariety(event.locals, dialect),
 			prompt: spotTheMistakePrompt(dialect, level),
 			schema: createSpotTheMistakeSchema(),
 			items: (parsed) => parsed.items,

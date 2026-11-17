@@ -9,6 +9,7 @@ import { createWordsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { supabase } from '$lib/supabaseClient';
 import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
+import { learnerVariety } from '$lib/server/learner-variety';
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -250,7 +251,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
-        systemInstruction: getDialectSystemInstruction(dialect),
+        systemInstruction: getDialectSystemInstruction(dialect, learnerVariety(locals, dialect)),
         temperature: 0.7,
         maxOutputTokens: 8192,
         responseMimeType: 'application/json',

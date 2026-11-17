@@ -173,37 +173,37 @@ function wordDescription(data: any, dialectName: string): string {
  */
 const DIALECT_META: Record<DialectSlug, { title: string; description: string }> = {
 	'egyptian-arabic': {
-		title: 'Learn Egyptian Arabic Online (Masri): Lessons, Stories, Verb Tables',
+		title: 'Learn Egyptian Arabic (Masri) Online: Lessons & Stories',
 		description:
 			'Learn Egyptian Arabic (Masri), the most widely understood Arabic dialect. Lessons, graded stories, vocabulary by topic, verb tables and speaking practice.'
 	},
 	levantine: {
-		title: 'Learn Levantine Arabic Online: Lebanese & Syrian Phrases, Stories',
+		title: 'Learn Levantine Arabic Online: Lebanese & Syrian Phrases',
 		description:
 			'Learn Levantine Arabic (Shami), the dialect of Syria, Lebanon, Jordan and Palestine. Phrases with audio, graded stories, vocabulary and speaking practice.'
 	},
 	darija: {
-		title: 'Learn Moroccan Arabic (Darija) Online: Phrases, Stories & Vocabulary',
+		title: 'Learn Moroccan Arabic (Darija) Online: Phrases & Stories',
 		description:
-			'Learn Moroccan Arabic (Darija), the Arabic of Morocco. Everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
+			'Learn Moroccan Arabic (Darija): everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
 	},
 	fusha: {
-		title: 'Learn Modern Standard Arabic (Fusha) Online: Lessons & Reading',
+		title: 'Learn Modern Standard Arabic (Fusha): Lessons & Reading',
 		description:
-			'Learn Fusha, Modern Standard Arabic: the written, formal Arabic of news, books and the Quran. Lessons, graded reading, vocabulary and common phrases with audio.'
+			'Learn Fusha, Modern Standard Arabic: the written Arabic of news, books and the Quran. Lessons, graded reading, vocabulary and common phrases with audio.'
 	},
 	iraqi: {
-		title: 'Learn Iraqi Arabic Online (Baghdadi): Lessons, Phrases, Verb Tables',
+		title: 'Learn Iraqi Arabic (Baghdadi) Online: Lessons & Phrases',
 		description:
 			'Learn Iraqi Arabic, the Baghdadi dialect of Iraq. Structured lessons from A1 to B2, everyday phrases with audio, verb tables, games and speaking practice.'
 	},
 	khaleeji: {
-		title: 'Learn Gulf Arabic Online (Khaleeji): Lessons, Phrases, Verb Tables',
+		title: 'Learn Gulf Arabic (Khaleeji) Online: Lessons & Phrases',
 		description:
-			'Learn Gulf Arabic (Khaleeji), the Arabic of the UAE, Kuwait, Qatar and Bahrain. Structured lessons from A1 to B2, everyday phrases with audio, verb tables and games.'
+			'Learn Gulf Arabic (Khaleeji), spoken in the UAE, Kuwait, Qatar, Bahrain and Oman. Lessons from A1 to B2, everyday phrases with audio, verb tables and games.'
 	},
 	saudi: {
-		title: 'Learn Saudi Arabic Online (Hijazi): Lessons, Phrases, Verb Tables',
+		title: 'Learn Saudi Arabic (Hijazi) Online: Lessons & Phrases',
 		description:
 			'Learn Saudi Arabic in the Hijazi dialect of Jeddah, Mecca and Medina. Structured lessons from A1 to B2, everyday phrases with audio, verb tables and games.'
 	}
@@ -1289,6 +1289,8 @@ export function siteStructuredData() {
  * from the path so the layout can emit it everywhere at once.
  */
 export function resolveBreadcrumbs(pathname: string, data?: any) {
+	// A route that knows its own place (the variety pages sit under a dialect) supplies the trail.
+	if (Array.isArray(data?.breadcrumbTrail)) return breadcrumbStructuredData(data.breadcrumbTrail);
 	const path = pathname.replace(/\/+$/, '') || '/';
 	const parts = path.split('/').filter(Boolean);
 	const isDialectLanding = parts.length === 1 && (DIALECTS as readonly string[]).includes(parts[0]);
