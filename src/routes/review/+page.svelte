@@ -135,9 +135,11 @@
     if (response.xp.awarded > 0 && response.xp.last) {
       const { newTotalXp, newLevel } = response.xp.last;
       userXp.set(newTotalXp);
-      if (response.xp.leveledUp) userLevel.set(newLevel);
-      const title = LEVEL_TIERS.find((t) => t.level === newLevel)?.title;
-      showXpToast(response.xp.awarded, response.xp.leveledUp, newLevel, title);
+      if (response.xp.leveledUp) {
+        userLevel.set(newLevel);
+        const title = LEVEL_TIERS.find((t) => t.level === newLevel)?.title;
+        showXpToast(response.xp.awarded, true, newLevel, title);
+      }
     }
 
     if (deck) {
