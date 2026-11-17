@@ -233,6 +233,9 @@
 			{#each siblings as s (s.key)}
 				<a href={resolve(`/${s.slug}` as Pathname)} class="chip">{s.flag} {s.name}</a>
 			{/each}
+			{#if info.dialect === 'levantine'}
+				<a href={resolve('/levantine-dialects')} class="chip">🎧 Compare all four</a>
+			{/if}
 		</div>
 	</div>
 
@@ -245,6 +248,7 @@
 			{#each otherVarieties as v (v.key)}
 				<a href={resolve(`/${v.slug}` as Pathname)} class="chip">{v.flag} {v.name}</a>
 			{/each}
+			<a href={resolve('/arabic-dialects')} class="chip">🎧 All dialects compared</a>
 		</div>
 	</div>
 </section>

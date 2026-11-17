@@ -2,9 +2,12 @@
 /**
  * Record the sample phrases on each variety landing page in that variety's Nur
  * voice, as static mp3s. The first phrase doubles as the onboarding preview.
+ * Also records the Levantine comparison clips (/levantine-dialects and its blog
+ * post), each in its variety's voice. (/arabic-dialects needs no files: it uses
+ * /api/game-audio, which only speaks in a dialect's default voice.)
  *
- * Writes static/audio/varieties/<variety>-<index>.mp3. Existing files are kept
- * unless --regenerate.
+ * Writes static/audio/varieties/<variety>-<index>.mp3 and
+ * static/audio/levantine/*.mp3. Existing files are kept unless --regenerate.
  *
  * Usage:
  *   npm run generate:variety-audio [-- --regenerate]
@@ -13,7 +16,8 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
-import { VARIETIES, nurVoiceFor } from '../src/lib/constants/varieties';
+import { VARIETIES, getVarietyInfo, nurVoiceFor, type VarietyInfo } from '../src/lib/constants/varieties';
+import { levantineClips } from '../src/lib/constants/levantine-compare';
 import { VARIETY_LANDING } from '../src/lib/constants/variety-landing';
 import { spellForSpeech } from '../src/lib/utils/speech-spelling';
 
@@ -28,24 +32,34 @@ const regenerate = process.argv.includes('--regenerate');
 const outDir = join(root, 'static/audio/varieties');
 mkdirSync(outDir, { recursive: true });
 
+/** `variety` picks the voice; without one, the dialect's default voice. */
+async function record(file: string, arabic: string, dialect: string, variety: VarietyInfo | undefined, label: string) {
+	if (existsSync(file) && !regenerate) return;
+	const { voice, language } = nurVoiceFor(dialect, variety);
+	const res = await fetch('https://api.eesi.ai/v1/audio/speech', {
+		method: 'POST',
+		headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+		body: JSON.stringify({
+			model: 'nur-v1',
+			voice,
+			input: spellForSpeech(arabic.replace(/[؟?!]+$/, ''), dialect),
+			speed: 0.9,
+			...(language && { language })
+		})
+	});
+	if (!res.ok) throw new Error(`${label}: ${res.status} ${await res.text()}`);
+	mkdirSync(dirname(file), { recursive: true });
+	writeFileSync(file, Buffer.from(await res.arrayBuffer()));
+	console.log(`✓ ${label} ${arabic}`);
+}
+
 for (const variety of VARIETIES) {
-	const { voice, language } = nurVoiceFor(variety.dialect, variety);
 	for (const [i, phrase] of VARIETY_LANDING[variety.key].phrases.entries()) {
-		const file = join(outDir, `${variety.key}-${i}.mp3`);
-		if (existsSync(file) && !regenerate) continue;
-		const res = await fetch('https://api.eesi.ai/v1/audio/speech', {
-			method: 'POST',
-			headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				model: 'nur-v1',
-				voice,
-				input: spellForSpeech(phrase.arabic.replace(/[؟?!]+$/, ''), variety.dialect),
-				speed: 0.9,
-				...(language && { language })
-			})
-		});
-		if (!res.ok) throw new Error(`${variety.key}-${i}: ${res.status} ${await res.text()}`);
-		writeFileSync(file, Buffer.from(await res.arrayBuffer()));
-		console.log(`✓ ${variety.key}-${i} ${phrase.arabic}`);
+		await record(join(outDir, `${variety.key}-${i}.mp3`), phrase.arabic, variety.dialect, variety, `${variety.key}-${i}`);
 	}
+}
+
+for (const clip of levantineClips()) {
+	const variety = getVarietyInfo(clip.variety)!;
+	await record(join(root, 'static', clip.path), clip.arabic, variety.dialect, variety, clip.path);
 }

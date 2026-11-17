@@ -63,7 +63,7 @@ export async function generateStoryAudioFromBody(storyId: string, dialect: strin
 
 		// Stories are shared, so they use the dialect's default voice.
 		const dialectKey = dialect || 'egyptian-arabic';
-		const audioBuffer = await synthesizeSpeech({
+		const { audio: audioBuffer } = await synthesizeSpeech({
 			text: fullArabicText,
 			dialect: dialectKey,
 			variety: resolveVariety(dialectKey)

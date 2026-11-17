@@ -32,6 +32,8 @@
 		If you have a reason to pick one (a partner from Amman, family in Haifa, a move to Beirut), learn
 		that one. If you don't, learn the Damascus/Beirut standard and absorb the regional differences
 		later. They're mostly a handful of words and a few vowel sounds, not a different grammar.
+		<a href={resolve('/blog/levantine-arabic-dialects-compared')}>How different are the Levantine
+		dialects?</a> goes through them, with audio for each accent.
 	</p>
 
 	<h2>1. Learn to read the alphabet (weeks 1–2)</h2>
