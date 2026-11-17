@@ -333,6 +333,9 @@
 				{#each varieties as v (v.key)}
 					<a href={resolve(`/${v.slug}` as Pathname)} class="chip">{v.flag} {v.name}</a>
 				{/each}
+				{#if dialect === 'levantine'}
+					<a href={resolve('/levantine-dialects')} class="chip">🎧 Hear all four side by side</a>
+				{/if}
 			</div>
 		</div>
 	{/if}
@@ -397,6 +400,7 @@
 			{#each otherDialects as other (other.href)}
 				<a href={resolve(other.href as Pathname)} class="chip">{other.title}</a>
 			{/each}
+			<a href={resolve('/arabic-dialects')} class="chip">🎧 All dialects compared</a>
 		</div>
 		{#if otherVarieties.length}
 			<p class="mb-2 mt-4 text-xs font-semibold text-text-200">By country</p>

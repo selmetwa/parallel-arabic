@@ -17,12 +17,31 @@ interface SpeechOptions {
 	small?: boolean;
 }
 
-/** MP3 audio of `text` in the dialect's voice: Nur (EESI) when NUR_ENABLED, else ElevenLabs. */
-export async function synthesizeSpeech({ text, dialect, variety, small }: SpeechOptions): Promise<Buffer> {
-	if (NUR_ENABLED && env.EESI_API_KEY) return nurSpeech(text, dialect, variety);
-	// A missing key shouldn't silence every audio button in the app.
-	if (NUR_ENABLED) console.warn('[tts] NUR_ENABLED but EESI_API_KEY is not set; using ElevenLabs');
-	return elevenLabsSpeech(text, dialect, small);
+export type SpeechProvider = 'nur' | 'elevenlabs';
+
+/**
+ * MP3 audio of `text` in the dialect's voice: Nur (EESI) when NUR_ENABLED, else
+ * ElevenLabs. If Nur can't answer (no key, out of credits, an outage), ElevenLabs
+ * speaks instead, so audio never goes silent. `provider` says which one did.
+ */
+export async function synthesizeSpeech({
+	text,
+	dialect,
+	variety,
+	small
+}: SpeechOptions): Promise<{ audio: Buffer; provider: SpeechProvider }> {
+	if (NUR_ENABLED) {
+		if (env.EESI_API_KEY) {
+			try {
+				return { audio: await nurSpeech(text, dialect, variety), provider: 'nur' };
+			} catch (err) {
+				console.warn('[tts] Nur failed, falling back to ElevenLabs:', err instanceof Error ? err.message : err);
+			}
+		} else {
+			console.warn('[tts] NUR_ENABLED but EESI_API_KEY is not set; using ElevenLabs');
+		}
+	}
+	return { audio: await elevenLabsSpeech(text, dialect, small), provider: 'elevenlabs' };
 }
 
 async function nurSpeech(text: string, dialect: string, variety?: VarietyInfo): Promise<Buffer> {

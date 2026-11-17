@@ -155,4 +155,9 @@
 			<p class="text-sm text-text-200">Lessons, stories, phrases and vocabulary.</p>
 		</a>
 	</div>
+
+	<p class="mt-6 text-center text-text-200">
+		See every dialect side by side, with audio:
+		<a href="/arabic-dialects" class="font-semibold text-text-300 underline underline-offset-2">Arabic dialects compared</a>
+	</p>
 </article>

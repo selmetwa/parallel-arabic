@@ -11,6 +11,14 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'levantine-arabic-dialects-compared',
+		title: 'How different are the Levantine Arabic dialects?',
+		description:
+			'Four accents of one dialect, with audio for every example. The handful of words that give each one away, what they all share, and which to learn.',
+		date: '2026-11-17',
+		readingTime: '6 min read'
+	},
+	{
 		slug: 'how-to-learn-iraqi-arabic',
 		title: 'How to learn Iraqi Arabic',
 		description:
