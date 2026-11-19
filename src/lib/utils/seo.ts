@@ -13,7 +13,7 @@ export interface PageMeta {
 }
 
 const baseUrl = 'https://www.parallel-arabic.com';
-const defaultImage = `${baseUrl}/images/banner.png`;
+const defaultImage = `${baseUrl}/images/og.png`;
 
 const DIALECTS = [
 	'egyptian-arabic',
