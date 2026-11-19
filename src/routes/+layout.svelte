@@ -298,7 +298,7 @@
 	<meta property="og:description" content={seoMeta.description} />
 	<meta
 		property="og:image"
-		content={seoMeta.image || 'https://www.parallel-arabic.com/images/banner.png'}
+		content={seoMeta.image || 'https://www.parallel-arabic.com/images/og.png'}
 	/>
 	<meta property="og:site_name" content="Parallel Arabic" />
 
@@ -309,7 +309,7 @@
 	<meta name="twitter:description" content={seoMeta.description} />
 	<meta
 		name="twitter:image"
-		content={seoMeta.image || 'https://www.parallel-arabic.com/images/banner.png'}
+		content={seoMeta.image || 'https://www.parallel-arabic.com/images/og.png'}
 	/>
 
 	<!-- Additional SEO -->
