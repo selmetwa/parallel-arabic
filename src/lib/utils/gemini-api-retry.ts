@@ -193,6 +193,10 @@ export async function retryGeminiApiCall<T>(
  * Helper function to wrap generateContent calls with retry logic
  * Falls back to gemini-2.5-flash on retryable errors
  *
+ * Thinking is OFF by default for gemini-2.5-flash models (it adds a lot of latency
+ * and these calls are formatting/translation jobs). To turn it back on for a call,
+ * pass `config.thinkingConfig` explicitly, e.g. `{ thinkingBudget: -1 }` for dynamic.
+ *
  * @param ai - GoogleGenAI instance
  * @param params - Parameters to pass to generateContent
  * @param options - Retry configuration options
@@ -207,11 +211,16 @@ export async function generateContentWithRetry(
 	const originalModel = params.model || 'gemini-3.1-flash-lite-preview';
 	const triedModels = new Set<string>([originalModel]);
 
+	const primaryParams =
+		originalModel.startsWith('gemini-2.5-flash') && params.config?.thinkingConfig === undefined
+			? { ...params, config: { ...params.config, thinkingConfig: { thinkingBudget: 0 } } }
+			: params;
+
 	try {
 		// Try with original model and retries
 		return await retryGeminiApiCall(
 			ai,
-			() => ai.models.generateContent(params),
+			() => ai.models.generateContent(primaryParams),
 			options
 		);
 	} catch (error) {
