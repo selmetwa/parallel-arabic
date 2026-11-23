@@ -11,6 +11,14 @@
         <p class="text-text-300 text-sm leading-relaxed max-w-xs">
           Open source language learning platform for Arabic and her dialects.
         </p>
+        <a href="https://www.instagram.com/parallel_arabic/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-text-300 text-sm hover:text-text-100 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+          </svg>
+          Instagram
+        </a>
       </div>
 
       <div class="space-y-4">
