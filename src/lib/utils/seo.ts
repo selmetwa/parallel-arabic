@@ -14,6 +14,8 @@ export interface PageMeta {
 
 const baseUrl = 'https://www.parallel-arabic.com';
 const defaultImage = `${baseUrl}/images/og.png`;
+/** Square logo for Organization structured data; Google wants square, not the 1200x630 preview. */
+const logoImage = `${baseUrl}/icons/icon-512.png`;
 
 const DIALECTS = [
 	'egyptian-arabic',
@@ -1239,7 +1241,7 @@ export function generateStructuredData(page: string, data?: any) {
 				url: baseUrl,
 				logo: {
 					'@type': 'ImageObject',
-					url: defaultImage
+					url: logoImage
 				}
 			},
 			mainEntityOfPage: data.url || `${baseUrl}/blog`,
@@ -1261,7 +1263,8 @@ export function siteStructuredData() {
 			'@type': 'Organization',
 			name: 'Parallel Arabic',
 			url: baseUrl,
-			logo: defaultImage,
+			logo: logoImage,
+			sameAs: ['https://www.instagram.com/parallel_arabic/'],
 			founder: { '@type': 'Person', name: 'Sherif Elmetwally' }
 		},
 		{

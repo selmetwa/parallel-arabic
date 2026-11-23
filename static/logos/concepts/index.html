@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Logo Concepts</title>
+<style>
+	@font-face { font-family: 'ReadexPro'; src: url('/fonts/ReadexPro-SemiBold.ttf') format('truetype'); font-weight: 600; }
+	:root { --bg: #f4f7f9; --card: #fff; --ink: #00334d; --muted: #5b7380; --line: #dde6eb; }
+	@media (prefers-color-scheme: dark) { :root { --bg: #11181c; --card: #1a2328; --ink: #d4e0e6; --muted: #8fa3ad; --line: #2a363c; } }
+	* { box-sizing: border-box; }
+	body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'ReadexPro', system-ui, sans-serif; }
+	main { max-width: 960px; margin: 0 auto; padding: 32px 16px 64px; }
+	h1 { font-size: 28px; margin: 0 0 4px; }
+	.lede { color: var(--muted); margin: 0 0 32px; }
+	.concept { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-bottom: 20px; display: grid; grid-template-columns: 180px 1fr; gap: 24px; align-items: center; }
+	.concept > img { width: 180px; height: 180px; }
+	h2 { font-size: 20px; margin: 0 0 6px; }
+	p { margin: 0 0 16px; color: var(--muted); line-height: 1.5; }
+	.uses { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+	.lockup { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 10px; font-size: 20px; }
+	.lockup.light { background: #fff; color: #00334d; border: 1px solid #dde6eb; }
+	.lockup.dark { background: #0d1a21; color: #e8f0f4; }
+	.lockup img { width: 40px; height: 40px; }
+	.fav { width: 16px; height: 16px; }
+	.icon { width: 64px; height: 64px; border-radius: 14px; }
+	@media (max-width: 600px) { .concept { grid-template-columns: 1fr; } .concept > img { margin: 0 auto; } }
+</style>
+</head>
+<body>
+<main>
+	<h1>Logo concepts</h1>
+	<p class="lede">Six directions without the calligraphic or tile-pattern look of the current mark. Each is shown large, in the header lockup on light and dark, as an app icon and at favicon size.</p>
+	<div id="list"></div>
+</main>
+<script>
+	const concepts = [
+		['1-split-tile.svg', 'Split tile', 'Arabic and English side by side on one tile: the app in a single picture. Strongest as an app icon.'],
+		['2-equals.svg', 'a = ع', 'A translation as an equation, and the equals sign is two parallel lines. It reads "a = ع" left to right and "ع = a" right to left, so it works for both audiences.'],
+		['3-smiling-ta.svg', 'Smiling ت', 'The letter ت is a bowl with two dots above it, which is already a smiley face. Warm and memorable, and the joke lands once someone learns the letter.'],
+		['4-parallel-pages.svg', 'Parallel pages', 'Two leaning pages side by side (a parallelogram, literally), English lines on one and dotted Arabic lines on the other, like the side-by-side reader.'],
+		['5-mirrored-wave.svg', 'Mirrored waveform', 'Speech above the line and its reflection below it: hearing and repeating. Strong on audio, though waveforms are common in podcast branding.'],
+		['6-striped-ain.svg', 'Striped ع', 'The letter filled with seven parallel stripes, one shade per dialect, ending in the warm accent. The most "brand system" of the set: stripes can carry into the UI.']
+	];
+	document.getElementById('list').innerHTML = concepts.map(([file, name, note]) => `
+		<section class="concept">
+			<img src="${file}" alt="${name} logo concept">
+			<div>
+				<h2>${name}</h2>
+				<p>${note}</p>
+				<div class="uses">
+					<span class="lockup light"><img src="${file}" alt="">Parallel Arabic</span>
+					<span class="lockup dark"><img src="${file}" alt="">Parallel Arabic</span>
+					<img class="icon" src="${file}" alt="">
+					<img class="fav" src="${file}" alt="">
+				</div>
+			</div>
+		</section>`).join('');
+</script>
+</body>
+</html>
