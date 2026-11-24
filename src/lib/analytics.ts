@@ -4,7 +4,7 @@
  * measured (game events from signed-out visitors go to `anon_event`);
  * everything else is a no-op until an analytics provider is wired up again.
  */
-const RECORDED_PREFIXES = ['onboarding_', 'trial_offer_', 'paywall_', 'game_', 'cancel_'];
+const RECORDED_PREFIXES = ['onboarding_', 'trial_offer_', 'paywall_', 'game_', 'cancel_', 'today_', 'push_', 'quest'];
 
 /** The only events a signed-out visitor can record. */
 export function isAnonEvent(event: string): boolean {

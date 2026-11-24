@@ -3,7 +3,7 @@
  * chosen from across the app rather than just reviews (docs/retention-daily-goal-plan.md).
  */
 
-export type GoalKind = 'review' | 'game' | 'speak' | 'tutor' | 'lesson' | 'story';
+export type GoalKind = 'review' | 'game' | 'speak' | 'write' | 'tutor' | 'lesson' | 'story';
 
 export interface GoalItem {
 	kind: GoalKind;
@@ -49,6 +49,13 @@ export const GOAL_KINDS: Record<GoalKind, GoalKindInfo> = {
 		unit: 'sentences',
 		href: '/speak'
 	},
+	write: {
+		name: 'Practice writing',
+		label: (n) => `Write ${n} sentences`,
+		amounts: [3, 5, 10],
+		unit: 'sentences',
+		href: '/sentences'
+	},
 	tutor: {
 		name: 'Talk with your tutor',
 		label: () => 'Talk with your tutor',
@@ -72,7 +79,15 @@ export const GOAL_KINDS: Record<GoalKind, GoalKindInfo> = {
 	}
 };
 
-export const GOAL_KIND_ORDER: GoalKind[] = ['review', 'game', 'speak', 'tutor', 'lesson', 'story'];
+export const GOAL_KIND_ORDER: GoalKind[] = [
+	'review',
+	'game',
+	'speak',
+	'write',
+	'tutor',
+	'lesson',
+	'story'
+];
 
 export const MAX_GOAL_ITEMS = 3;
 
@@ -80,6 +95,7 @@ export const NO_ACTIVITY: ActivityCounts = {
 	review: 0,
 	game: 0,
 	speak: 0,
+	write: 0,
 	tutor: 0,
 	lesson: 0,
 	story: 0

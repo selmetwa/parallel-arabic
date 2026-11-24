@@ -4,7 +4,6 @@
 	import { puzzleNumber } from '$lib/games/daily-root';
 	import { gameOfTheDay } from '$lib/games/today';
 	import { getGame } from '$lib/constants/games';
-	import { browser } from '$app/environment';
 	import { resolve } from '$app/paths';
 	import { currentDialect } from '$lib/store/store';
 	import type { PageData } from './$types';
@@ -13,11 +12,10 @@
 	import Leaderboard from '$lib/components/Leaderboard.svelte';
 	import ArabicMap from '$lib/components/ArabicMap.svelte';
 	import WeekStrip from '$lib/components/WeekStrip.svelte';
-	import DailyGoal from '$lib/components/DailyGoal.svelte';
+	import TodayQuests from '$lib/components/TodayQuests.svelte';
+	import { parseGoal } from '$lib/constants/daily-goal';
 
 	let { data }: { data: PageData } = $props();
-
-	let bannerDismissed = $state(false);
 
 	// Masthead greeting — neutral defaults render identically on server & client to
 	// avoid a hydration mismatch; the time-of-day variant is filled in onMount.
@@ -27,15 +25,6 @@
 
 	// Same deep link as the sidebar: straight to the learner's dialect.
 	const lessonsHref = $derived(`/lessons/structured/${data.targetDialect || 'egyptian-arabic'}`);
-
-	const suggestions = $derived(data.suggestions || []);
-	const reviewSuggestion = $derived(suggestions.find((s) => s.id === 'review'));
-	const otherSuggestions = $derived(suggestions.filter((s) => s.id !== 'review').slice(0, 4));
-
-	function dismissBanner() {
-		bannerDismissed = true;
-		if (browser) sessionStorage.setItem('homeBannerDismissed', 'true');
-	}
 
 	onMount(() => {
 		currentDialect.set('');
@@ -51,8 +40,6 @@
 			greetingEn = h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening';
 			greetingAr = h < 12 ? 'صباح الخير' : 'مساء الخير';
 		}
-
-		if (browser) bannerDismissed = sessionStorage.getItem('homeBannerDismissed') === 'true';
 	});
 </script>
 
@@ -121,16 +108,17 @@
 		</a>
 	{/snippet}
 
-	<!-- Suggestion tile -->
-	{#snippet suggTile(href: string, icon: string, title: string, desc: string)}
-		<a href={resolve(href)} class="tile tile--sugg" style="--accent:#0ea5e9; --deep:#0369a1;">
-			<span class="tile-icon" aria-hidden="true">{icon}</span>
-			<span class="min-w-0">
-				<span class="tile-title">{title}</span>
-				<span class="tile-desc">{desc}</span>
-			</span>
-		</a>
-	{/snippet}
+	<!-- ── Today's quests: main quest (their goal, in order) + side quests ─── -->
+	{#if data.todayPath && data.quests}
+		<div class="reveal">
+			<TodayQuests
+				path={data.todayPath}
+				quests={data.quests}
+				goal={parseGoal(data.user?.daily_goal)}
+				streak={data.currentStreak ?? 0}
+			/>
+		</div>
+	{/if}
 
 	<!-- ── Week strip ──────────────────────────────────────────────────────── -->
 	{#if data.user && data.weekActivityDates}
@@ -191,13 +179,6 @@
 		</div>
 	{/if}
 
-	<!-- ── Daily goal (after the first-run card has done its job) ───────────── -->
-	{#if data.user && !data.firstRun}
-		<div class="reveal" style="animation-delay: 150ms;">
-			<DailyGoal progress={data.dailyGoal} />
-		</div>
-	{/if}
-
 	<!-- ── First run: one clear next step ──────────────────────────────────── -->
 	{#if data.firstRun}
 		<div class="reveal jump-panel start-here" style="animation-delay: 120ms;">
@@ -217,43 +198,6 @@
 			<a href={resolve(data.firstRun.lesson.href)} class="start-cta">
 				Start: {data.firstRun.lesson.title} <span aria-hidden="true">→</span>
 			</a>
-		</div>
-	{:else if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
-		<div class="reveal jump-panel" style="animation-delay: 180ms;">
-			<button onclick={dismissBanner} class="dismiss" aria-label="Dismiss suggestions">
-				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2.5"
-						d="M6 18L18 6M6 6l12 12"
-					/>
-				</svg>
-			</button>
-
-			<div class="sec-head pr-8">
-				<span class="sec-emoji" aria-hidden="true">⚡</span>
-				<h2>Jump back in</h2>
-			</div>
-
-			<div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-				{#if reviewSuggestion}
-					{@render suggTile(
-						reviewSuggestion.href,
-						reviewSuggestion.icon,
-						reviewSuggestion.title,
-						reviewSuggestion.subtitle
-					)}
-				{/if}
-				{#each otherSuggestions as suggestion (suggestion.id)}
-					{@render suggTile(
-						suggestion.href,
-						suggestion.icon,
-						suggestion.title,
-						suggestion.subtitle
-					)}
-				{/each}
-			</div>
 		</div>
 	{:else if !data.user}
 		<div class="reveal" style="animation-delay: 120ms;">
@@ -589,8 +533,7 @@
 		box-shadow: 0 1px 0 var(--deep);
 	}
 
-	.tile--compact,
-	.tile--sugg {
+	.tile--compact {
 		flex-direction: row;
 		align-items: center;
 		gap: 0.65rem;
@@ -694,37 +637,6 @@
 		padding: 1rem 1.1rem 1.1rem;
 	}
 
-	.dismiss {
-		position: absolute;
-		top: 0.85rem;
-		right: 0.85rem;
-		z-index: 10;
-		display: grid;
-		place-items: center;
-		width: 1.6rem;
-		height: 1.6rem;
-		border-radius: 50%;
-		border: 2px solid var(--tile5);
-		background: var(--tile4);
-		color: var(--text2);
-		cursor: pointer;
-		transition:
-			background 0.18s ease,
-			color 0.18s ease,
-			transform 0.16s ease;
-	}
-	.dismiss:hover {
-		background: var(--tile5);
-		color: var(--text1);
-	}
-	.dismiss:active {
-		transform: scale(0.92);
-	}
-	.dismiss svg {
-		width: 0.7rem;
-		height: 0.7rem;
-	}
-
 	@keyframes reveal {
 		from {
 			opacity: 0;
@@ -745,8 +657,7 @@
 		}
 		.tile,
 		.stat,
-		.tile-icon,
-		.dismiss {
+		.tile-icon {
 			transition: none;
 		}
 		.tile:hover,

@@ -8,6 +8,7 @@
 	import VerbBlitz from '$lib/components/games/VerbBlitz.svelte';
 	import { gameHref, getGame } from '$lib/constants/games';
 	import { initialDialect } from '$lib/games/themes';
+	import TodayNext from '$lib/components/TodayNext.svelte';
 
 	let { data } = $props();
 
@@ -184,6 +185,10 @@
 				<p><a href={resolve('/signup')}>Sign up</a> to keep a streak and earn XP for days like this.</p>
 			{/if}
 			<p class="tomorrow">A new challenge every day at midnight UTC.</p>
+			<!-- After the claim, so the server has counted the game. -->
+			{#if claim === 'done' || claim === 'already'}
+				<TodayNext />
+			{/if}
 		</div>
 	{/if}
 </section>

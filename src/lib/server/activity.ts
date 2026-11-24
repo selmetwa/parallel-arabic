@@ -1,8 +1,8 @@
 import { supabase } from '$lib/supabaseClient';
 import type { ActivityCounts } from '$lib/constants/daily-goal';
 
-/** Activity with no table of its own: a game round started, a sentence spoken. */
-export type LoggedActivity = 'game' | 'speak';
+/** Activity with no table of its own: a game round started, a sentence spoken or written. */
+export type LoggedActivity = 'game' | 'speak' | 'write';
 
 /** Fire-and-forget: a missed row only undercounts a daily goal. */
 export async function logActivity(userId: string, kind: LoggedActivity): Promise<void> {
@@ -21,7 +21,7 @@ export async function countActivity(userId: string, since: number): Promise<Acti
 		);
 	const head = { count: 'exact', head: true } as const;
 
-	const [review, game, speak, tutor, lesson, story] = await Promise.all([
+	const [review, game, speak, write, tutor, lesson, story] = await Promise.all([
 		count(
 			supabase
 				.from('word_review')
@@ -43,6 +43,14 @@ export async function countActivity(userId: string, since: number): Promise<Acti
 				.select('id', head)
 				.eq('user_id', userId)
 				.eq('kind', 'speak')
+				.gte('created_at', since)
+		),
+		count(
+			supabase
+				.from('activity_event')
+				.select('id', head)
+				.eq('user_id', userId)
+				.eq('kind', 'write')
 				.gte('created_at', since)
 		),
 		count(
@@ -70,5 +78,5 @@ export async function countActivity(userId: string, since: number): Promise<Acti
 		)
 	]);
 
-	return { review, game, speak, tutor, lesson, story };
+	return { review, game, speak, write, tutor, lesson, story };
 }

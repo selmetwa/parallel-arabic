@@ -7,6 +7,7 @@
 	import { noteGameSignup } from '$lib/games/signup-source';
 	import { hapticSuccess } from '$lib/helpers/haptics';
 	import type { GameWord } from '$lib/games/word-pool';
+	import TodayNext from '$lib/components/TodayNext.svelte';
 
 	interface Props {
 		heading: string;
@@ -127,6 +128,10 @@
 		<PressButton onclick={onPlayAgain} {accent} {deep}>{playAgainLabel}</PressButton>
 		<a href={resolve('/learn/game')} class="all">All games</a>
 	</div>
+
+	{#if signedIn}
+		<TodayNext />
+	{/if}
 
 	{#if children}
 		<div class="extra">
