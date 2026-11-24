@@ -1,10 +1,6 @@
 <!-- Design · editorial dashboard · theme-aware (HSL hue-200) · ReadexPro -->
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { puzzleNumber } from '$lib/games/daily-root';
-	import { gameOfTheDay } from '$lib/games/today';
-	import { getGame } from '$lib/constants/games';
-	import { browser } from '$app/environment';
 	import { resolve } from '$app/paths';
 	import { currentDialect } from '$lib/store/store';
 	import type { PageData } from './$types';
@@ -13,11 +9,10 @@
 	import Leaderboard from '$lib/components/Leaderboard.svelte';
 	import ArabicMap from '$lib/components/ArabicMap.svelte';
 	import WeekStrip from '$lib/components/WeekStrip.svelte';
-	import DailyGoal from '$lib/components/DailyGoal.svelte';
+	import TodayQuests from '$lib/components/TodayQuests.svelte';
+	import { parseGoal } from '$lib/constants/daily-goal';
 
 	let { data }: { data: PageData } = $props();
-
-	let bannerDismissed = $state(false);
 
 	// Masthead greeting — neutral defaults render identically on server & client to
 	// avoid a hydration mismatch; the time-of-day variant is filled in onMount.
@@ -27,15 +22,6 @@
 
 	// Same deep link as the sidebar: straight to the learner's dialect.
 	const lessonsHref = $derived(`/lessons/structured/${data.targetDialect || 'egyptian-arabic'}`);
-
-	const suggestions = $derived(data.suggestions || []);
-	const reviewSuggestion = $derived(suggestions.find((s) => s.id === 'review'));
-	const otherSuggestions = $derived(suggestions.filter((s) => s.id !== 'review').slice(0, 4));
-
-	function dismissBanner() {
-		bannerDismissed = true;
-		if (browser) sessionStorage.setItem('homeBannerDismissed', 'true');
-	}
 
 	onMount(() => {
 		currentDialect.set('');
@@ -51,31 +37,11 @@
 			greetingEn = h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening';
 			greetingAr = h < 12 ? 'صباح الخير' : 'مساء الخير';
 		}
-
-		if (browser) bannerDismissed = sessionStorage.getItem('homeBannerDismissed') === 'true';
 	});
 </script>
 
 <section class="mx-auto max-w-6xl space-y-7 px-3 pb-12 pt-6 sm:px-8">
 	<!-- ── Snippets ──────────────────────────────────────────────────────────── -->
-
-	{#snippet stat(label: string, value: string | number, unit: string, href: string, accent: string)}
-		{#if href}
-			<a href={resolve(href)} class="stat" style="--accent:{accent};">
-				<span class="stat-label">{label}</span>
-				<span class="stat-value"
-					>{value}{#if unit}<span class="stat-unit">{unit}</span>{/if}</span
-				>
-			</a>
-		{:else}
-			<div class="stat stat--static" style="--accent:{accent};">
-				<span class="stat-label">{label}</span>
-				<span class="stat-value"
-					>{value}{#if unit}<span class="stat-unit">{unit}</span>{/if}</span
-				>
-			</div>
-		{/if}
-	{/snippet}
 
 	{#snippet sectionHead(emoji: string, label: string, sub: string)}
 		<div class="sec-head">
@@ -121,16 +87,36 @@
 		</a>
 	{/snippet}
 
-	<!-- Suggestion tile -->
-	{#snippet suggTile(href: string, icon: string, title: string, desc: string)}
-		<a href={resolve(href)} class="tile tile--sugg" style="--accent:#0ea5e9; --deep:#0369a1;">
-			<span class="tile-icon" aria-hidden="true">{icon}</span>
-			<span class="min-w-0">
-				<span class="tile-title">{title}</span>
-				<span class="tile-desc">{desc}</span>
-			</span>
-		</a>
-	{/snippet}
+	<!-- ── Today's quests: main quest (their goal, in order) + side quests ─── -->
+	{#if data.todayPath && data.quests}
+		<div class="reveal">
+			<TodayQuests
+				path={data.todayPath}
+				quests={data.quests}
+				goal={parseGoal(data.user?.daily_goal)}
+				streak={data.currentStreak ?? 0}
+			/>
+		</div>
+	{/if}
+
+	<!-- ── Pick up where you left off: a lesson or game left part-way ──────── -->
+	{#if data.resume?.length}
+		<div class="reveal" style="animation-delay: 40ms;">
+			{@render sectionHead('⏯️', 'Pick up where you left off', '')}
+			<div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+				{#each data.resume as item (item.id)}
+					<ContinueCard
+						href={item.href}
+						icon={item.icon}
+						title={item.title}
+						subtitle={item.subtitle}
+						variant={item.variant}
+						compact
+					/>
+				{/each}
+			</div>
+		</div>
+	{/if}
 
 	<!-- ── Week strip ──────────────────────────────────────────────────────── -->
 	{#if data.user && data.weekActivityDates}
@@ -139,62 +125,6 @@
 				weekActivityDates={data.weekActivityDates}
 				weekStartTimestamp={data.weekStartTimestamp}
 			/>
-		</div>
-	{/if}
-
-	<!-- ── Stats ribbon (hidden until there's something to count) ─────────── -->
-	{#if data.user && !data.firstRun}
-		<div
-			class="reveal grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5"
-			style="animation-delay: 120ms;"
-		>
-			{@render stat(
-				'Streak',
-				data.currentStreak ?? 0,
-				data.currentStreak === 1 ? 'day' : 'days',
-				'',
-				'#f59e0b'
-			)}
-			{@render stat(
-				'Words saved',
-				data.totalSavedWordsCount ?? 0,
-				'',
-				'/review/all-words',
-				'#0ea5e9'
-			)}
-			{@render stat(
-				'Due to review',
-				data.cappedReviewCount ?? data.wordsDueForReviewCount ?? 0,
-				'words',
-				'/review',
-				'#f43f5e'
-			)}
-			{#if data.leaderboardCurrentUser}
-				{@render stat(
-					'Weekly rank',
-					'#' + data.leaderboardCurrentUser.rank,
-					'',
-					'/leaderboard',
-					'#8b5cf6'
-				)}
-				{@render stat(
-					'XP this week',
-					data.leaderboardCurrentUser.xpThisWeek,
-					'xp',
-					'/leaderboard',
-					'#10b981'
-				)}
-			{:else}
-				{@render stat('Stories read', data.totalStoriesViewed ?? 0, '', '/stories', '#8b5cf6')}
-				{@render stat('Sentences', data.totalSentencesViewed ?? 0, '', '/sentences', '#10b981')}
-			{/if}
-		</div>
-	{/if}
-
-	<!-- ── Daily goal (after the first-run card has done its job) ───────────── -->
-	{#if data.user && !data.firstRun}
-		<div class="reveal" style="animation-delay: 150ms;">
-			<DailyGoal progress={data.dailyGoal} />
 		</div>
 	{/if}
 
@@ -218,43 +148,6 @@
 				Start: {data.firstRun.lesson.title} <span aria-hidden="true">→</span>
 			</a>
 		</div>
-	{:else if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
-		<div class="reveal jump-panel" style="animation-delay: 180ms;">
-			<button onclick={dismissBanner} class="dismiss" aria-label="Dismiss suggestions">
-				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2.5"
-						d="M6 18L18 6M6 6l12 12"
-					/>
-				</svg>
-			</button>
-
-			<div class="sec-head pr-8">
-				<span class="sec-emoji" aria-hidden="true">⚡</span>
-				<h2>Jump back in</h2>
-			</div>
-
-			<div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-				{#if reviewSuggestion}
-					{@render suggTile(
-						reviewSuggestion.href,
-						reviewSuggestion.icon,
-						reviewSuggestion.title,
-						reviewSuggestion.subtitle
-					)}
-				{/if}
-				{#each otherSuggestions as suggestion (suggestion.id)}
-					{@render suggTile(
-						suggestion.href,
-						suggestion.icon,
-						suggestion.title,
-						suggestion.subtitle
-					)}
-				{/each}
-			</div>
-		</div>
 	{:else if !data.user}
 		<div class="reveal" style="animation-delay: 120ms;">
 			<ContinueCard
@@ -266,43 +159,6 @@
 			/>
 		</div>
 	{/if}
-
-	<!-- ── New: Scenarios ──────────────────────────────────────────────────── -->
-	<div class="reveal" style="animation-delay: 210ms;">
-		<a href={resolve('/scenarios')} class="feature" style="--accent:#0ea5e9; --deep:#0369a1;">
-			<img
-				src="/images/feature-pages/game-scenarios.webp"
-				width="2560"
-				height="1440"
-				alt=""
-				loading="lazy"
-				decoding="async"
-				class="feature-shot"
-			/>
-			<span class="feature-text">
-				<span class="feature-title">
-					<span class="feature-badge">New</span>
-					Scenarios
-				</span>
-				<span class="feature-desc">
-					Real conversations in 3D: take a taxi, shop at a market, check into a hotel.
-				</span>
-			</span>
-			<span class="feature-cta">Try it <span aria-hidden="true">→</span></span>
-		</a>
-	</div>
-
-	<!-- ── Today's challenge ───────────────────────────────────────────────── -->
-	<div class="reveal" style="animation-delay: 220ms;">
-		{@render tile(
-			'/learn/game/today',
-			'📅',
-			'Today’s challenge',
-			`Daily Root + ${getGame(gameOfTheDay(puzzleNumber()))?.name}. About three minutes; keeps your streak going.`,
-			'#22c55e',
-			'#15803d'
-		)}
-	</div>
 
 	<!-- ── Learn ───────────────────────────────────────────────────────────── -->
 	<div class="reveal" style="animation-delay: 240ms;">
@@ -392,57 +248,6 @@
 </section>
 
 <style>
-	/* Stats */
-	.stat {
-		display: flex;
-		flex-direction: column;
-		gap: 0.4rem;
-		border-radius: 1.1rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		padding: 0.9rem 1rem;
-		text-decoration: none;
-		box-shadow: 0 4px 0 var(--tile5);
-		transition:
-			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.18s ease,
-			border-color 0.18s ease;
-	}
-
-	a.stat:hover {
-		transform: translateY(-3px);
-		border-color: var(--accent);
-		box-shadow: 0 7px 0 var(--deep, var(--tile6));
-	}
-	a.stat:active {
-		transform: translateY(2px);
-		box-shadow: 0 1px 0 var(--tile6);
-	}
-	.stat--static {
-		box-shadow: 0 4px 0 var(--tile5);
-	}
-
-	.stat-label {
-		font-size: 0.72rem;
-		font-weight: 600;
-		color: var(--text2);
-	}
-
-	.stat-value {
-		font-size: 1.9rem;
-		font-weight: 600;
-		line-height: 1;
-		color: var(--accent);
-		font-variant-numeric: tabular-nums;
-	}
-
-	.stat-unit {
-		margin-left: 0.3rem;
-		font-size: 0.7rem;
-		font-weight: 600;
-		color: var(--text2);
-	}
-
 	/* Section headings */
 	.sec-head {
 		display: flex;
@@ -474,95 +279,6 @@
 	}
 
 	/* Tiles */
-	/* Featured: Scenarios, one compact row */
-	.feature {
-		display: flex;
-		align-items: center;
-		gap: 0.85rem;
-		border-radius: 1.1rem;
-		border: 2px solid var(--accent);
-		background: color-mix(in srgb, var(--accent) 9%, var(--tile3));
-		padding: 0.7rem 0.9rem;
-		text-decoration: none;
-		box-shadow: 0 4px 0 var(--deep);
-		transition:
-			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.18s ease;
-	}
-
-	.feature:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 7px 0 var(--deep);
-	}
-
-	.feature:active {
-		transform: translateY(2px);
-		box-shadow: 0 1px 0 var(--deep);
-	}
-
-	.feature-shot {
-		display: none;
-		flex-shrink: 0;
-		width: 7.5rem;
-		height: auto;
-		border-radius: 0.6rem;
-		border: 2px solid var(--tile5);
-	}
-
-	@media (min-width: 640px) {
-		.feature-shot {
-			display: block;
-		}
-	}
-
-	.feature-text {
-		display: grid;
-		gap: 0.15rem;
-		flex: 1;
-		min-width: 0;
-	}
-
-	.feature-title {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.5rem;
-		font-size: 1rem;
-		font-weight: 700;
-		color: var(--text1);
-	}
-
-	.feature-badge {
-		padding: 0.05rem 0.5rem;
-		border-radius: 100px;
-		font-size: 0.65rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
-		color: #fff;
-		background: var(--accent);
-	}
-
-	.feature-desc {
-		font-size: 0.85rem;
-		line-height: 1.4;
-		color: var(--text2);
-	}
-
-	.feature-cta {
-		flex-shrink: 0;
-		font-size: 0.88rem;
-		font-weight: 700;
-		color: var(--text1);
-		white-space: nowrap;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.feature {
-			transition: none;
-		}
-	}
-
 	.tile {
 		display: flex;
 		flex-direction: column;
@@ -589,8 +305,7 @@
 		box-shadow: 0 1px 0 var(--deep);
 	}
 
-	.tile--compact,
-	.tile--sugg {
+	.tile--compact {
 		flex-direction: row;
 		align-items: center;
 		gap: 0.65rem;
@@ -694,37 +409,6 @@
 		padding: 1rem 1.1rem 1.1rem;
 	}
 
-	.dismiss {
-		position: absolute;
-		top: 0.85rem;
-		right: 0.85rem;
-		z-index: 10;
-		display: grid;
-		place-items: center;
-		width: 1.6rem;
-		height: 1.6rem;
-		border-radius: 50%;
-		border: 2px solid var(--tile5);
-		background: var(--tile4);
-		color: var(--text2);
-		cursor: pointer;
-		transition:
-			background 0.18s ease,
-			color 0.18s ease,
-			transform 0.16s ease;
-	}
-	.dismiss:hover {
-		background: var(--tile5);
-		color: var(--text1);
-	}
-	.dismiss:active {
-		transform: scale(0.92);
-	}
-	.dismiss svg {
-		width: 0.7rem;
-		height: 0.7rem;
-	}
-
 	@keyframes reveal {
 		from {
 			opacity: 0;
@@ -744,13 +428,10 @@
 			animation: none;
 		}
 		.tile,
-		.stat,
-		.tile-icon,
-		.dismiss {
+		.tile-icon {
 			transition: none;
 		}
-		.tile:hover,
-		a.stat:hover {
+		.tile:hover {
 			transform: none;
 		}
 		.tile:hover .tile-icon {

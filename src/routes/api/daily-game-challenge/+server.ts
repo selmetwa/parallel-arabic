@@ -7,6 +7,7 @@ import { touchStreak } from '$lib/helpers/track-activity';
 import { puzzleNumber } from '$lib/games/daily-root';
 import { TODAY_BONUS_EVENTS, challengeDate } from '$lib/games/today';
 import { isGameDialect } from '$lib/games/themes';
+import { logActivity } from '$lib/server/activity';
 
 /**
  * Record today's challenge as done and pay its bonus, once per day. The row's
@@ -49,5 +50,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		.eq('user_id', userId)
 		.eq('challenge_date', challengeDate(puzzleNumber(now)));
 	await touchStreak(userId);
+	// Its games don't log rounds, so count the challenge toward "play a game".
+	await logActivity(userId, 'game');
 	return json({ ok: true, alreadyDone: false, xpAwarded });
 };

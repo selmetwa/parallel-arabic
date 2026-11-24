@@ -67,6 +67,7 @@ export function weeklyRecapEmail(r: WeekRecap): BrandedEmail | null {
 			c.story && `${plural(c.story, 'story', 'stories')} read`,
 			c.game && `${plural(c.game, 'game', 'games')} played`,
 			c.speak && `${plural(c.speak, 'sentence', 'sentences')} said out loud`,
+			c.write && `${plural(c.write, 'sentence', 'sentences')} written`,
 			c.tutor && `${plural(c.tutor, 'conversation', 'conversations')} with your tutor`
 		].filter((s): s is string => !!s);
 

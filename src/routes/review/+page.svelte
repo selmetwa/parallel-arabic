@@ -17,6 +17,7 @@
   import { previewIntervals, State, wordToCard, type Rating, type ReviewWord } from '$lib/srs/fsrs';
   import { loadDeck, pendingReviews, queueReview, saveDeck, type Deck, type SessionState } from '$lib/srs/offline-store';
   import { applyRating, dueFromDeck, forecastFromWords, syncReviews, withPatch } from '$lib/srs/review-sync';
+  import TodayNext from '$lib/components/TodayNext.svelte';
 
   interface Props {
     data: PageData;
@@ -489,6 +490,10 @@
               </div>
             {/if}
           </div>
+        {/if}
+
+        {#if !offline && stats.reviewed > 0}
+          <TodayNext justFinished="review" />
         {/if}
 
         {#if !offline}

@@ -85,6 +85,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       proficiencyLevel: data.proficiencyLevel ?? null,
       goalLevel: data.goalLevel ?? null,
       progress: data.progress ?? null,
+      streak: data.streak ?? null,
       ...userContext
     }
   } catch (error) {

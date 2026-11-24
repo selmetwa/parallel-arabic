@@ -2,28 +2,24 @@
   import Button from "./Button.svelte";
   import MobileMenu from "./MobileMenu.svelte";
   import DialectSwitcher from "./DialectSwitcher.svelte";
+  import StreakBadge from "./StreakBadge.svelte";
+  import type { LiveStreak } from "$lib/helpers/streak";
 
   interface Props {
     handleOpenDrawer: () => void;
     session: any;
     userEmail: string;
     targetDialect?: string | null;
-    user?: {
-      current_streak?: number | null;
-      longest_streak?: number | null;
-    } | null;
+    streak?: LiveStreak | null;
   }
 
-  let { handleOpenDrawer, session, targetDialect, user }: Props = $props();
+  let { handleOpenDrawer, session, targetDialect, streak = null }: Props = $props();
 
   let mobileMenuOpen = $state(false);
 
   // Default to Egyptian if no dialect is set
   const learningDialect = $derived(targetDialect || 'egyptian-arabic');
-  
-  // Streak counter
-  const currentStreak = $derived(user?.current_streak ?? 0);
-  const longestStreak = $derived(user?.longest_streak ?? 0);
+
 </script>
 
 <nav class="w-full border-b border-tile-600 py-4 bg-gradient-to-b from-tile-300 to-tile-200 backdrop-blur-sm sticky top-0 z-50 shadow-md">
@@ -46,17 +42,9 @@
             <li>
               <DialectSwitcher dialect={learningDialect} />
             </li>
-            {#if currentStreak > 0}
-            <li class="flex items-center gap-2 bg-tile-400/50 px-3 py-1.5 rounded-full border border-tile-500/50">
-                <span class="text-xl sm:text-2xl">🔥</span>
-                <span class="text-text-200 text-xs sm:text-sm font-bold">
-                  {currentStreak}
-                  {#if longestStreak > currentStreak}
-                    <span class="text-text-300 opacity-75 font-normal">/ {longestStreak}</span>
-                  {/if}
-                </span>
+            <li>
+              <StreakBadge {streak} />
             </li>
-            {/if}
           {:else}
             <li>
               <a class="text-text-300 text-sm sm:text-base font-semibold hover:text-text-100 transition-colors duration-200 px-3 py-1.5 rounded-lg hover:bg-tile-400/30" href="/login">

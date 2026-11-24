@@ -4,6 +4,7 @@ import { supabase } from '$lib/supabaseClient';
 import { awardXp } from '$lib/helpers/award-xp';
 import { touchStreak } from '$lib/helpers/track-activity';
 import type { XpEventType } from '$lib/helpers/xp-levels';
+import { logActivity } from '$lib/server/activity';
 
 const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sentence_correct', 'story_complete', 'game_correct', 'challenge_bonus', 'conjugation_correct', 'onboarding_conversation'];
 
@@ -74,6 +75,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		const result = await awardXp(user.id, eventType, supabase);
 		// Playing counts as a day of practice, like reading or reviewing.
 		if (result.success) await touchStreak(user.id);
+		// A sentence typed correctly counts toward a "practice writing" goal.
+		if (result.success && eventType === 'sentence_correct') await logActivity(user.id, 'write');
 		return json(result);
 	} catch (error) {
 		console.error('Error in award-xp endpoint:', error);

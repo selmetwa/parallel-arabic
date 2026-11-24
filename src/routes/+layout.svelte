@@ -4,6 +4,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import QuestTracker from '$lib/components/QuestTracker.svelte';
 
 	import { onMount } from 'svelte';
 	import { theme, sidebarCollapsed } from '$lib/store/store';
@@ -375,7 +376,7 @@
 {/if}
 
 <!-- Desktop Sidebar -->
-<Sidebar {session} {handleOpenDrawer} targetDialect={data.targetDialect} />
+<Sidebar {session} {handleOpenDrawer} targetDialect={data.targetDialect} streak={data.streak} />
 
 <!-- Expand Sidebar Button (shown when collapsed) -->
 {#if $sidebarCollapsed}
@@ -406,11 +407,11 @@
 	<!-- Top Navigation - Only visible on mobile -->
 	<div class="lg:hidden">
 		<Navigation
-			user={data.user}
 			{handleOpenDrawer}
 			session={data.session}
 			userEmail={data?.user?.email ?? ''}
 			targetDialect={data.targetDialect}
+			streak={data.streak}
 		/>
 	</div>
 
@@ -477,4 +478,9 @@
 <!-- Asks app users to turn on reminders - never over onboarding -->
 {#if PushPrompt && !showOnboarding}
 	<PushPrompt />
+{/if}
+
+<!-- Today's quests, on every page but home (which shows the full card) -->
+{#if data.user && !showOnboarding}
+	<QuestTracker sidebarCollapsed={$sidebarCollapsed} />
 {/if}

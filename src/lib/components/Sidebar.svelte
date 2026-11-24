@@ -4,14 +4,17 @@
 	import { sidebarCollapsed } from '$lib/store/store';
 	import { getNavSections } from '$lib/constants/nav';
 	import DialectSwitcher from './DialectSwitcher.svelte';
+	import StreakBadge from './StreakBadge.svelte';
+	import type { LiveStreak } from '$lib/helpers/streak';
 
 	interface Props {
 		session: any;
 		handleOpenDrawer?: () => void;
 		targetDialect?: string | null;
+		streak?: LiveStreak | null;
 	}
 
-	let { session, handleOpenDrawer, targetDialect }: Props = $props();
+	let { session, handleOpenDrawer, targetDialect, streak = null }: Props = $props();
 
 	const learningDialect = $derived(targetDialect || 'egyptian-arabic');
 
@@ -79,6 +82,9 @@
 					Home
 				</span>
 			</a>
+			{#if session}
+				<StreakBadge {streak} />
+			{/if}
 			<button
 				type="button"
 				onclick={toggleSidebar}

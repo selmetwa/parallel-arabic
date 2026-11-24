@@ -18,6 +18,7 @@
 	import { dialectAccent } from '$lib/constants/dialect-accents';
 	import SignatureWord from '$lib/components/SignatureWord.svelte';
 	import { hapticSuccess } from '$lib/helpers/haptics';
+	import TodayNext from '$lib/components/TodayNext.svelte';
 
 	interface Props {
 		lesson: GeneratedLessonV2;
@@ -255,6 +256,7 @@
 				<h2>Lesson complete</h2>
 				<p>You practiced every new word many times over — across reading, speaking, building and translating. That's how it sticks.</p>
 				<button class="primary" onclick={handleFinish}>Finish &amp; continue</button>
+				<TodayNext justFinished="lesson" beforeGo={markComplete} />
 			</div>
 		{:else}
 			{#key currentStepIndex}

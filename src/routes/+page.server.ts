@@ -7,13 +7,11 @@ import { checkUserSubscription } from "$lib/helpers/subscription";
 import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 import { getStoriesPaginated } from "$lib/helpers/story-helpers";
 import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
-import { curriculum } from "$lib/data/curriculum";
 import { env } from "$env/dynamic/private";
 import { isPlanId } from "$lib/constants/pricing";
 import { firstLesson } from "$lib/helpers/first-lesson";
-import { goalProgress, parseGoal } from "$lib/constants/daily-goal";
-import { countActivity } from "$lib/server/activity";
-import { localDayStart } from "$lib/helpers/streak";
+import { loadToday, resolveInProgressLesson } from "$lib/server/today-path";
+import { loadQuests } from "$lib/server/quests";
 
 function proficiencyToDifficulty(level: string | null | undefined): string | null {
   if (!level) return 'a1';
@@ -22,16 +20,6 @@ function proficiencyToDifficulty(level: string | null | undefined): string | nul
 }
 
 import type { PageServerLoad } from "./$types";
-
-export interface ActivitySuggestion {
-  id: string;
-  href: string;
-  icon: string;
-  title: string;
-  subtitle: string;
-  variant: 'blue' | 'green' | 'purple' | 'amber' | 'rose' | 'teal';
-  priority: number;
-}
 
 /**
  * Home page load
@@ -62,12 +50,6 @@ export const load: PageServerLoad = async ({ parent }) => {
   const totalStoriesViewed = user?.total_stories_viewed || 0;
   const totalShortsViewed = user?.total_shorts_viewed || 0;
   const currentStreak = user?.current_streak || 0;
-
-  // Today's goal progress, counted from the start of the learner's own day.
-  const goal = parseGoal(user?.daily_goal);
-  const goalCountsPromise = user?.id && goal
-    ? countActivity(user.id, localDayStart(Date.now(), user.timezone))
-    : null;
 
   // Fetch word of the day + leaderboard top 5 for all visitors (no auth required)
   const todayStr = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
@@ -203,36 +185,8 @@ export const load: PageServerLoad = async ({ parent }) => {
     }
   }
 
-  // Check for in-progress lesson to show resume card on homepage
-  let inProgressLesson: { topicId: string; dialect: string; stepIndex: number; title: string } | null = null;
-
-  // Only resume a lesson in the dialect they're learning now: after a switch,
-  // the old dialect's lesson would pull them back.
-  if (
-    user?.id &&
-    user?.last_content_type === 'lessons' &&
-    user?.last_content_id &&
-    user?.last_content_dialect &&
-    (!user.target_dialect || user.last_content_dialect === user.target_dialect)
-  ) {
-    const { data: lp } = await supabase
-      .from('structured_lesson_progress')
-      .select('status')
-      .eq('user_id', user.id)
-      .eq('topic_id', user.last_content_id)
-      .eq('dialect', user.last_content_dialect)
-      .maybeSingle();
-
-    if (!lp || lp.status === 'in_progress') {
-      const topic = curriculum.flatMap(m => m.topics).find(t => t.id === user.last_content_id);
-      inProgressLesson = {
-        topicId: user.last_content_id,
-        dialect: user.last_content_dialect,
-        stepIndex: user.last_content_position ?? 0,
-        title: topic?.title ?? 'Continue Lesson'
-      };
-    }
-  }
+  // A lesson left part-way through: it counts as started, and today's path resumes it.
+  const inProgressLesson = user?.id ? await resolveInProgressLesson(user) : null;
 
   // Fetch a single featured/recommended story for logged-in users
   let featuredStory: { id: string; title: string; dialect: string; dialectName: string; difficulty: string } | null = null;
@@ -271,126 +225,6 @@ export const load: PageServerLoad = async ({ parent }) => {
   // Calculate capped count based on daily review limit
   const cappedReviewCount = Math.min(wordsDueForReviewCount, dailyReviewLimit);
 
-  // Build dynamic activity suggestions based on user's stats
-  const suggestions: ActivitySuggestion[] = [];
-
-  // Priority 1: Words due for review (highest priority if they have words)
-  if (cappedReviewCount > 0) {
-    suggestions.push({
-      id: 'review',
-      href: '/review',
-      icon: '📚',
-      title: `Review ${cappedReviewCount} word${cappedReviewCount !== 1 ? 's' : ''}`,
-      subtitle: 'Keep your vocabulary fresh with spaced repetition',
-      variant: 'blue',
-      priority: 10
-    });
-  }
-
-  // Priority 2: Practice sentences
-  suggestions.push({
-    id: 'sentences',
-    href: '/sentences',
-    icon: '✏️',
-    title: totalSentencesViewed === 0 ? 'Try sentence practice' : 'Practice more sentences',
-    subtitle: totalSentencesViewed === 0 
-      ? 'Build grammar skills by typing Arabic sentences' 
-      : `You've practiced ${totalSentencesViewed} sentence${totalSentencesViewed !== 1 ? 's' : ''} – keep going!`,
-    variant: 'green',
-    priority: totalSentencesViewed === 0 ? 8 : 5
-  });
-
-  // Priority 3: Read stories
-  suggestions.push({
-    id: 'stories',
-    href: '/stories',
-    icon: '📖',
-    title: totalStoriesViewed === 0 ? 'Read your first story' : 'Read a short story',
-    subtitle: totalStoriesViewed === 0 
-      ? 'Improve comprehension with interactive Arabic stories'
-      : `${totalStoriesViewed} stories read – discover more!`,
-    variant: 'purple',
-    priority: totalStoriesViewed === 0 ? 7 : 4
-  });
-
-  // Priority 4: Play game (or continue in-progress game)
-  if (inProgressGame) {
-    // Build continue game URL with resume params
-    const continueParams = new URLSearchParams({
-      dialect: inProgressGame.dialect,
-      mode: inProgressGame.game_mode,
-      category: inProgressGame.category,
-      resumeId: inProgressGame.id
-    });
-
-    suggestions.push({
-      id: 'game',
-      href: `/learn/game/play?${continueParams}`,
-      icon: '🎮',
-      title: `Continue your game`,
-      subtitle: `${inProgressGame.current_index}/${inProgressGame.total_questions} complete – score: ${inProgressGame.score}`,
-      variant: 'rose',
-      priority: 9 // High priority for in-progress games
-    });
-  } else {
-    suggestions.push({
-      id: 'game',
-      href: '/learn/game',
-      icon: '🎮',
-      title: 'Play a word game',
-      subtitle: 'Word games and a vocabulary quiz in your dialect',
-      variant: 'rose',
-      priority: 6
-    });
-  }
-
-  // Priority 5: Build vocabulary (if no saved words)
-  if (totalSavedWordsCount === 0) {
-    suggestions.push({
-      id: 'vocabulary',
-      href: '/vocabulary',
-      icon: '💾',
-      title: 'Start building your vocabulary',
-      subtitle: 'Save words to create your personal review deck',
-      variant: 'amber',
-      priority: 3
-    });
-    const dialectDisplayNames: Record<string, string> = {
-      'egyptian-arabic': 'Egyptian Arabic',
-      'levantine': 'Levantine Arabic',
-      'darija': 'Moroccan Darija',
-      'fusha': 'Modern Standard Arabic',
-      'iraqi': 'Iraqi Arabic',
-      'khaleeji': 'Gulf Arabic (Khaleeji)',
-      'saudi': 'Saudi Arabic (Hijazi)',
-    };
-    suggestions.push({
-      id: 'start-lesson',
-      href: firstLesson(userDialect, user?.proficiency_level, isSubscribed).href,
-      icon: '📚',
-      title: 'Start a lesson',
-      subtitle: `Begin your first ${dialectDisplayNames[userDialect] ?? userDialect} lesson`,
-      variant: 'teal',
-      priority: 9
-    });
-  }
-
-  // In-progress lesson (resume where you left off)
-  if (inProgressLesson) {
-    suggestions.push({
-      id: 'continue-lesson',
-      href: `/lessons/structured/${inProgressLesson.dialect}?lessonId=${encodeURIComponent(inProgressLesson.topicId)}&step=${inProgressLesson.stepIndex}`,
-      icon: '📖',
-      title: `Continue: ${inProgressLesson.title}`,
-      subtitle: `Step ${inProgressLesson.stepIndex + 1} – pick up where you left off`,
-      variant: 'teal',
-      priority: 9
-    });
-  }
-
-  // Sort by priority (higher first)
-  suggestions.sort((a, b) => b.priority - a.priority);
-
   // Brand-new learners get one "start here" card instead of a page of zeros and
   // equal-weight options (docs/onboarding-v3-plan.md).
   const hasStarted =
@@ -409,7 +243,45 @@ export const load: PageServerLoad = async ({ parent }) => {
         }
       : null;
 
-  const dailyGoal = goal && goalCountsPromise ? goalProgress(goal, await goalCountsPromise) : null;
+  // Today's path and quests lead the page once the first-run card has done its job.
+  const today =
+    user?.id && !firstRun
+      ? await loadToday(user, isSubscribed, { dueNow: cappedReviewCount, inProgressLesson })
+      : null;
+  const todayPath = today?.path ?? null;
+  const quests = user?.id && today ? await loadQuests(user, today) : null;
+
+  // Pick up where they left off: a lesson the main quest doesn't already resume, and a game.
+  const resume: { id: string; href: string; icon: string; title: string; subtitle: string; variant: 'teal' | 'rose' }[] = [];
+  if (todayPath && inProgressLesson) {
+    const lessonHref = `/lessons/structured/${inProgressLesson.dialect}?lessonId=${encodeURIComponent(inProgressLesson.topicId)}&step=${inProgressLesson.stepIndex}`;
+    if (!todayPath.steps.some((s) => s.href === lessonHref)) {
+      resume.push({
+        id: 'lesson',
+        href: lessonHref,
+        icon: '📖',
+        title: `Continue: ${inProgressLesson.title}`,
+        subtitle: `Step ${inProgressLesson.stepIndex + 1} – pick up where you left off`,
+        variant: 'teal'
+      });
+    }
+  }
+  if (todayPath && inProgressGame) {
+    const params = new URLSearchParams({
+      dialect: inProgressGame.dialect,
+      mode: inProgressGame.game_mode,
+      category: inProgressGame.category,
+      resumeId: inProgressGame.id
+    });
+    resume.push({
+      id: 'game',
+      href: `/learn/game/play?${params}`,
+      icon: '🎮',
+      title: 'Continue your game',
+      subtitle: `${inProgressGame.current_index}/${inProgressGame.total_questions} complete – score: ${inProgressGame.score}`,
+      variant: 'rose'
+    });
+  }
 
   return {
     session,
@@ -424,7 +296,6 @@ export const load: PageServerLoad = async ({ parent }) => {
     totalStoriesViewed,
     totalShortsViewed,
     currentStreak,
-    suggestions,
     wordOfDay,
     wordOfDaySaved,
     userDialect,
@@ -435,7 +306,9 @@ export const load: PageServerLoad = async ({ parent }) => {
     weekActivityDates,
     weekStartTimestamp,
     firstRun,
-    dailyGoal,
+    todayPath,
+    quests,
+    resume,
   };
 };
 

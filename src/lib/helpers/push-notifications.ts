@@ -7,10 +7,14 @@
  */
 import { goto } from '$app/navigation';
 import { isNativeApp } from '$lib/helpers/is-native-app';
+import { trackEvent } from '$lib/analytics';
 
 export type PushPermission = 'granted' | 'denied' | 'prompt' | 'unavailable';
 
 let listening = false;
+
+// Diagnostics: no app user has ever registered a device, so record each step.
+const errorText = (err: unknown) => String((err as Error)?.message ?? err).slice(0, 300);
 
 async function plugin() {
 	return (await import('@capacitor/push-notifications')).PushNotifications;
@@ -33,9 +37,11 @@ export async function pushPermission(): Promise<PushPermission> {
 
 	try {
 		const { receive } = await (await plugin()).checkPermissions();
+		trackEvent('push_permission_checked', { receive });
 		if (receive === 'granted' || receive === 'denied') return receive;
 		return 'prompt';
-	} catch {
+	} catch (err) {
+		trackEvent('push_permission_checked', { receive: 'error', error: errorText(err) });
 		return 'unavailable';
 	}
 }
@@ -55,7 +61,16 @@ export async function registerForPush(): Promise<void> {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ token: value })
-			}).catch((err) => console.error('Failed to save push token:', err));
+			})
+				.then((res) => trackEvent('push_token_saved', { status: res.status }))
+				.catch((err) => {
+					console.error('Failed to save push token:', err);
+					trackEvent('push_token_saved', { status: 'error', error: errorText(err) });
+				});
+		});
+
+		await PushNotifications.addListener('registrationError', ({ error }) => {
+			trackEvent('push_registration_failed', { error: errorText(error) });
 		});
 
 		// Tapping a notification opens the page it was about.
@@ -70,9 +85,21 @@ export async function registerForPush(): Promise<void> {
 
 /** Shows the iOS permission dialog. True if the learner allowed notifications. */
 export async function enablePush(): Promise<boolean> {
-	const { receive } = await (await plugin()).requestPermissions();
+	let receive: string;
+	try {
+		({ receive } = await (await plugin()).requestPermissions());
+	} catch (err) {
+		trackEvent('push_permission_answered', { receive: 'error', error: errorText(err) });
+		throw err;
+	}
+	trackEvent('push_permission_answered', { receive });
 	if (receive !== 'granted') return false;
 
-	await registerForPush();
+	try {
+		await registerForPush();
+	} catch (err) {
+		trackEvent('push_registration_failed', { error: errorText(err) });
+		throw err;
+	}
 	return true;
 }
