@@ -1,9 +1,6 @@
 <!-- Design · editorial dashboard · theme-aware (HSL hue-200) · ReadexPro -->
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { puzzleNumber } from '$lib/games/daily-root';
-	import { gameOfTheDay } from '$lib/games/today';
-	import { getGame } from '$lib/constants/games';
 	import { resolve } from '$app/paths';
 	import { currentDialect } from '$lib/store/store';
 	import type { PageData } from './$types';
@@ -162,18 +159,6 @@
 			/>
 		</div>
 	{/if}
-
-	<!-- ── Today's challenge ───────────────────────────────────────────────── -->
-	<div class="reveal" style="animation-delay: 220ms;">
-		{@render tile(
-			'/learn/game/today',
-			'📅',
-			'Today’s challenge',
-			`Daily Root + ${getGame(gameOfTheDay(puzzleNumber()))?.name}. About three minutes; keeps your streak going.`,
-			'#22c55e',
-			'#15803d'
-		)}
-	</div>
 
 	<!-- ── Learn ───────────────────────────────────────────────────────────── -->
 	<div class="reveal" style="animation-delay: 240ms;">
