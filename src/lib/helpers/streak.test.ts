@@ -5,6 +5,7 @@ import {
 	localDayKey,
 	localDayStart,
 	localHour,
+	liveStreak,
 	nextStreak,
 	safeTimeZone,
 	streakAtRisk,
@@ -96,6 +97,23 @@ describe('streakAtRisk', () => {
 		expect(streakAtRisk(state({}), at('2026-10-10T19:00:00Z'))).toBe(true);
 		expect(streakAtRisk(state({}), at('2026-10-09T23:00:00Z'))).toBe(false);
 		expect(streakAtRisk(state({ current: 0 }), at('2026-10-10T19:00:00Z'))).toBe(false);
+	});
+});
+
+describe('liveStreak', () => {
+	it('keeps the streak while it can still continue', () => {
+		expect(liveStreak(state({}), at('2026-10-09T23:00:00Z'))).toEqual({ days: 3, activeToday: true });
+		expect(liveStreak(state({}), at('2026-10-10T12:00:00Z'))).toEqual({ days: 3, activeToday: false });
+	});
+
+	it('counts freezes that can bridge the missed days', () => {
+		expect(liveStreak(state({ freezes: 1 }), at('2026-10-11T12:00:00Z')).days).toBe(3);
+		expect(liveStreak(state({ freezes: 1 }), at('2026-10-12T12:00:00Z')).days).toBe(0);
+	});
+
+	it('is 0 once the streak has lapsed, whatever is stored', () => {
+		expect(liveStreak(state({}), at('2026-10-11T12:00:00Z'))).toEqual({ days: 0, activeToday: false });
+		expect(liveStreak(state({ lastActivity: null }), at('2026-10-10T12:00:00Z')).days).toBe(0);
 	});
 });
 

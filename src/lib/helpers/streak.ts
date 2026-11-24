@@ -177,6 +177,51 @@ export function nextStreak(state: StreakState, now: number): StreakUpdate {
 	};
 }
 
+export interface LiveStreak {
+	days: number;
+	/** They've practised today, their time. */
+	activeToday: boolean;
+}
+
+/**
+ * The streak as it stands now. The stored count only changes on activity, so
+ * after missed days it still shows the old number: this is 0 once the gap is
+ * more than the freezes held can bridge.
+ */
+export function liveStreak(state: StreakState, now: number): LiveStreak {
+	if (state.current <= 0 || state.lastActivity === null) return { days: 0, activeToday: false };
+	const gap = daysBetween(
+		localDayKey(state.lastActivity, state.timezone),
+		localDayKey(now, state.timezone)
+	);
+	if (gap <= 0) return { days: state.current, activeToday: true };
+	if (gap - 1 <= state.freezes) return { days: state.current, activeToday: false };
+	return { days: 0, activeToday: false };
+}
+
+/** liveStreak from a user row. */
+export function liveStreakOf(
+	user: {
+		current_streak?: number | null;
+		longest_streak?: number | null;
+		streak_freezes?: number | null;
+		last_activity_date?: number | null;
+		timezone?: string | null;
+	},
+	now = Date.now()
+): LiveStreak {
+	return liveStreak(
+		{
+			current: user.current_streak ?? 0,
+			longest: user.longest_streak ?? 0,
+			freezes: user.streak_freezes ?? 0,
+			lastActivity: user.last_activity_date ?? null,
+			timezone: user.timezone ?? null
+		},
+		now
+	);
+}
+
 /**
  * Whether the streak ends tonight unless the learner does something: they
  * were last active yesterday (their time) and haven't been today.

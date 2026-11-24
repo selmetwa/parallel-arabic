@@ -376,7 +376,7 @@
 {/if}
 
 <!-- Desktop Sidebar -->
-<Sidebar {session} {handleOpenDrawer} targetDialect={data.targetDialect} />
+<Sidebar {session} {handleOpenDrawer} targetDialect={data.targetDialect} streak={data.streak} />
 
 <!-- Expand Sidebar Button (shown when collapsed) -->
 {#if $sidebarCollapsed}
@@ -407,11 +407,11 @@
 	<!-- Top Navigation - Only visible on mobile -->
 	<div class="lg:hidden">
 		<Navigation
-			user={data.user}
 			{handleOpenDrawer}
 			session={data.session}
 			userEmail={data?.user?.email ?? ''}
 			targetDialect={data.targetDialect}
+			streak={data.streak}
 		/>
 	</div>
 

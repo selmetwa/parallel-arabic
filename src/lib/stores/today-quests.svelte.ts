@@ -9,6 +9,7 @@
 import { toast } from 'svelte-sonner';
 import type { TodayPath } from '$lib/helpers/today-path';
 import type { QuestsState } from '$lib/constants/quests';
+import type { LiveStreak } from '$lib/helpers/streak';
 import { firstTimeToday } from '$lib/helpers/today-flow';
 import { hapticSuccess } from '$lib/helpers/haptics';
 import { XP_AWARDS } from '$lib/helpers/xp-levels';
@@ -17,13 +18,17 @@ import { trackEvent } from '$lib/analytics';
 export interface TodayQuestsData {
 	path: TodayPath;
 	quests: QuestsState;
+	/** From /api/quests only; the home card's server data doesn't carry it. */
+	streak?: LiveStreak;
 }
 
 export const todayQuests = $state<{
 	data: TodayQuestsData | null;
+	/** The latest streak, so the badge lights up after today's first activity without a reload. */
+	streak: LiveStreak | null;
 	claim: 'idle' | 'sending' | 'done' | 'failed';
 	freezeEarned: boolean;
-}>({ data: null, claim: 'idle', freezeEarned: false });
+}>({ data: null, streak: null, claim: 'idle', freezeEarned: false });
 
 /** Requests that can complete a quest step. */
 const WATCHED = [
@@ -74,6 +79,7 @@ export function applyTodayQuests(next: TodayQuestsData): void {
 	}
 
 	todayQuests.data = next;
+	if (next.streak) todayQuests.streak = next.streak;
 	if (next.quests.allDone && !next.quests.claimed && todayQuests.claim === 'idle') claimReward();
 }
 

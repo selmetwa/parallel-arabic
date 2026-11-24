@@ -46,24 +46,6 @@
 <section class="mx-auto max-w-6xl space-y-7 px-3 pb-12 pt-6 sm:px-8">
 	<!-- ── Snippets ──────────────────────────────────────────────────────────── -->
 
-	{#snippet stat(label: string, value: string | number, unit: string, href: string, accent: string)}
-		{#if href}
-			<a href={resolve(href)} class="stat" style="--accent:{accent};">
-				<span class="stat-label">{label}</span>
-				<span class="stat-value"
-					>{value}{#if unit}<span class="stat-unit">{unit}</span>{/if}</span
-				>
-			</a>
-		{:else}
-			<div class="stat stat--static" style="--accent:{accent};">
-				<span class="stat-label">{label}</span>
-				<span class="stat-value"
-					>{value}{#if unit}<span class="stat-unit">{unit}</span>{/if}</span
-				>
-			</div>
-		{/if}
-	{/snippet}
-
 	{#snippet sectionHead(emoji: string, label: string, sub: string)}
 		<div class="sec-head">
 			<span class="sec-emoji" aria-hidden="true">{emoji}</span>
@@ -146,55 +128,6 @@
 				weekActivityDates={data.weekActivityDates}
 				weekStartTimestamp={data.weekStartTimestamp}
 			/>
-		</div>
-	{/if}
-
-	<!-- ── Stats ribbon (hidden until there's something to count) ─────────── -->
-	{#if data.user && !data.firstRun}
-		<div
-			class="reveal grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5"
-			style="animation-delay: 120ms;"
-		>
-			{@render stat(
-				'Streak',
-				data.currentStreak ?? 0,
-				data.currentStreak === 1 ? 'day' : 'days',
-				'',
-				'#f59e0b'
-			)}
-			{@render stat(
-				'Words saved',
-				data.totalSavedWordsCount ?? 0,
-				'',
-				'/review/all-words',
-				'#0ea5e9'
-			)}
-			{@render stat(
-				'Due to review',
-				data.cappedReviewCount ?? data.wordsDueForReviewCount ?? 0,
-				'words',
-				'/review',
-				'#f43f5e'
-			)}
-			{#if data.leaderboardCurrentUser}
-				{@render stat(
-					'Weekly rank',
-					'#' + data.leaderboardCurrentUser.rank,
-					'',
-					'/leaderboard',
-					'#8b5cf6'
-				)}
-				{@render stat(
-					'XP this week',
-					data.leaderboardCurrentUser.xpThisWeek,
-					'xp',
-					'/leaderboard',
-					'#10b981'
-				)}
-			{:else}
-				{@render stat('Stories read', data.totalStoriesViewed ?? 0, '', '/stories', '#8b5cf6')}
-				{@render stat('Sentences', data.totalSentencesViewed ?? 0, '', '/sentences', '#10b981')}
-			{/if}
 		</div>
 	{/if}
 
@@ -355,57 +288,6 @@
 </section>
 
 <style>
-	/* Stats */
-	.stat {
-		display: flex;
-		flex-direction: column;
-		gap: 0.4rem;
-		border-radius: 1.1rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		padding: 0.9rem 1rem;
-		text-decoration: none;
-		box-shadow: 0 4px 0 var(--tile5);
-		transition:
-			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.18s ease,
-			border-color 0.18s ease;
-	}
-
-	a.stat:hover {
-		transform: translateY(-3px);
-		border-color: var(--accent);
-		box-shadow: 0 7px 0 var(--deep, var(--tile6));
-	}
-	a.stat:active {
-		transform: translateY(2px);
-		box-shadow: 0 1px 0 var(--tile6);
-	}
-	.stat--static {
-		box-shadow: 0 4px 0 var(--tile5);
-	}
-
-	.stat-label {
-		font-size: 0.72rem;
-		font-weight: 600;
-		color: var(--text2);
-	}
-
-	.stat-value {
-		font-size: 1.9rem;
-		font-weight: 600;
-		line-height: 1;
-		color: var(--accent);
-		font-variant-numeric: tabular-nums;
-	}
-
-	.stat-unit {
-		margin-left: 0.3rem;
-		font-size: 0.7rem;
-		font-weight: 600;
-		color: var(--text2);
-	}
-
 	/* Section headings */
 	.sec-head {
 		display: flex;
@@ -675,12 +557,10 @@
 			animation: none;
 		}
 		.tile,
-		.stat,
 		.tile-icon {
 			transition: none;
 		}
-		.tile:hover,
-		a.stat:hover {
+		.tile:hover {
 			transform: none;
 		}
 		.tile:hover .tile-icon {

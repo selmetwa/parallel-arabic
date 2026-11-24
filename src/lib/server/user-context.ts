@@ -1,4 +1,5 @@
 import { checkUserSubscription } from '$lib/helpers/subscription';
+import { liveStreakOf } from '$lib/helpers/streak';
 
 interface ContextUser {
   id?: string | null;
@@ -14,6 +15,10 @@ interface ContextUser {
   total_xp?: number | null;
   current_level?: number | null;
   current_streak?: number | null;
+  longest_streak?: number | null;
+  streak_freezes?: number | null;
+  last_activity_date?: number | null;
+  timezone?: string | null;
   total_lessons_viewed?: number | null;
   total_saved_words?: number | null;
 }
@@ -45,6 +50,8 @@ export function getUserContext(user: ContextUser) {
     goalLevel: user.goal_level || null,
     userXp: user.total_xp ?? 0,
     userLevel: user.current_level ?? 1,
+    // For the streak badge in the sidebar and mobile header.
+    streak: liveStreakOf(user),
     // What they've built so far, for the paywall popup to reflect back.
     progress: {
       streak: user.current_streak ?? 0,
