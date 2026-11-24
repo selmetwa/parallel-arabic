@@ -375,6 +375,15 @@
 	async function chooseReminder(id: ReminderWindow) {
 		reminderWindow = id;
 		trackEvent('onboarding_reminder_chosen', { window: id });
+		// Diagnostics: does the page know it is inside the app?
+		if (id !== 'off') {
+			const cap = (window as unknown as { Capacitor?: { getPlatform?: () => string } }).Capacitor;
+			trackEvent('push_reminder_step', {
+				native: isNative,
+				capacitor: cap?.getPlatform?.() ?? null,
+				ua: navigator.userAgent.slice(0, 200)
+			});
+		}
 		if (id !== 'off' && isNative && (await pushPermission()) === 'prompt') {
 			snoozePushPrompt(SNOOZE_AFTER_ONBOARDING_MS);
 			const allowed = await enablePush();
