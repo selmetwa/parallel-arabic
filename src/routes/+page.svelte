@@ -120,6 +120,25 @@
 		</div>
 	{/if}
 
+	<!-- ── Pick up where you left off: a lesson or game left part-way ──────── -->
+	{#if data.resume?.length}
+		<div class="reveal" style="animation-delay: 40ms;">
+			{@render sectionHead('⏯️', 'Pick up where you left off', '')}
+			<div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+				{#each data.resume as item (item.id)}
+					<ContinueCard
+						href={item.href}
+						icon={item.icon}
+						title={item.title}
+						subtitle={item.subtitle}
+						variant={item.variant}
+						compact
+					/>
+				{/each}
+			</div>
+		</div>
+	{/if}
+
 	<!-- ── Week strip ──────────────────────────────────────────────────────── -->
 	{#if data.user && data.weekActivityDates}
 		<div class="reveal" style="animation-delay: 60ms;">

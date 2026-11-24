@@ -251,6 +251,38 @@ export const load: PageServerLoad = async ({ parent }) => {
   const todayPath = today?.path ?? null;
   const quests = user?.id && today ? await loadQuests(user, today) : null;
 
+  // Pick up where they left off: a lesson the main quest doesn't already resume, and a game.
+  const resume: { id: string; href: string; icon: string; title: string; subtitle: string; variant: 'teal' | 'rose' }[] = [];
+  if (todayPath && inProgressLesson) {
+    const lessonHref = `/lessons/structured/${inProgressLesson.dialect}?lessonId=${encodeURIComponent(inProgressLesson.topicId)}&step=${inProgressLesson.stepIndex}`;
+    if (!todayPath.steps.some((s) => s.href === lessonHref)) {
+      resume.push({
+        id: 'lesson',
+        href: lessonHref,
+        icon: '📖',
+        title: `Continue: ${inProgressLesson.title}`,
+        subtitle: `Step ${inProgressLesson.stepIndex + 1} – pick up where you left off`,
+        variant: 'teal'
+      });
+    }
+  }
+  if (todayPath && inProgressGame) {
+    const params = new URLSearchParams({
+      dialect: inProgressGame.dialect,
+      mode: inProgressGame.game_mode,
+      category: inProgressGame.category,
+      resumeId: inProgressGame.id
+    });
+    resume.push({
+      id: 'game',
+      href: `/learn/game/play?${params}`,
+      icon: '🎮',
+      title: 'Continue your game',
+      subtitle: `${inProgressGame.current_index}/${inProgressGame.total_questions} complete – score: ${inProgressGame.score}`,
+      variant: 'rose'
+    });
+  }
+
   return {
     session,
     isSubscribed,
@@ -276,6 +308,7 @@ export const load: PageServerLoad = async ({ parent }) => {
     firstRun,
     todayPath,
     quests,
+    resume,
   };
 };
 
