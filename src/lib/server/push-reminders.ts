@@ -19,14 +19,21 @@ interface Learner {
 	streak_goal: number | null;
 }
 
-/** Same query the review page uses for "due". */
+/**
+ * Words in today's review session: due and new words, capped at the daily
+ * review limit, so reminders promise what /review will actually show (not
+ * every never-reviewed word in a big deck).
+ */
 export async function dueWordCount(userId: string, now: number): Promise<number> {
-	const { count } = await supabase
-		.from('saved_word')
-		.select('id', { count: 'exact', head: true })
-		.eq('user_id', userId)
-		.or(dueFilter(now));
-	return count ?? 0;
+	const [{ count }, { data: user }] = await Promise.all([
+		supabase
+			.from('saved_word')
+			.select('id', { count: 'exact', head: true })
+			.eq('user_id', userId)
+			.or(dueFilter(now)),
+		supabase.from('user').select('daily_review_limit').eq('id', userId).single()
+	]);
+	return Math.min(count ?? 0, user?.daily_review_limit || 20);
 }
 
 function copy(kind: PushKind, learner: Learner, dueWords: number) {

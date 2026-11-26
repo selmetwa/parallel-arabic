@@ -115,7 +115,11 @@ export const load = async ({ locals, parent }) => {
   let wordStats = {
     total: 0,
     byDialect: {} as Record<string, { total: number; dueForReview: number; learning: number }>,
+    // Learned words due now; never-reviewed words are new, not due (as on /review).
     dueForReview: 0,
+    newWords: 0,
+    // Words in today's review session: due first, then new, up to the daily limit.
+    todaySession: 0,
     learning: 0,
     mastered: 0,
     // Word counts per memory-strength level 0 (new) to 5
@@ -158,7 +162,9 @@ export const load = async ({ locals, parent }) => {
         wordStats.strength[level]++;
         const isLearning = level > 0 && word.fsrs_stability < MASTERED_STABILITY;
         if (level > 0 && !isLearning) wordStats.mastered++;
-        const isDueForReview = !word.next_review_date || word.next_review_date <= now;
+        const isNew = (word.fsrs_state ?? 0) === 0;
+        if (isNew) wordStats.newWords++;
+        const isDueForReview = !isNew && !!word.next_review_date && word.next_review_date <= now;
         const daysAhead = word.next_review_date ? Math.ceil((word.next_review_date - now) / 86400000) : 0;
         if (daysAhead >= 1 && daysAhead <= 7) wordStats.forecast[daysAhead - 1]++;
         
@@ -172,6 +178,10 @@ export const load = async ({ locals, parent }) => {
           wordStats.dueForReview++;
         }
       });
+      wordStats.todaySession = Math.min(
+        userData?.daily_review_limit ?? 20,
+        wordStats.dueForReview + wordStats.newWords
+      );
     }
   } catch (error) {
     console.error('Error fetching word statistics:', error);
