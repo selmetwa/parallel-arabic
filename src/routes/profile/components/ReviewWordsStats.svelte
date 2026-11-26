@@ -8,6 +8,8 @@
       total: number;
       byDialect: Record<string, { total: number; dueForReview: number; learning: number }>;
       dueForReview: number;
+      newWords: number;
+      todaySession: number;
       learning: number;
       mastered: number;
       strength: number[];
@@ -49,12 +51,12 @@
       <p class="srs-label">Spaced repetition</p>
       <h3 class="text-lg font-semibold text-text-300">Vocabulary</h3>
     </div>
-    {#if wordStats.dueForReview > 0}
+    {#if wordStats.todaySession > 0}
       <a
         href={resolve('/review')}
         class="shrink-0 text-sm font-semibold px-3.5 py-1.5 rounded-lg border border-tile-600 bg-tile-400 hover:bg-tile-500 text-text-300 transition-colors"
       >
-        Review {wordStats.dueForReview} →
+        Review {wordStats.todaySession} →
       </a>
     {/if}
   </div>
