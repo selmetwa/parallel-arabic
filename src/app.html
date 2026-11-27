@@ -24,7 +24,14 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"></noscript>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <!-- Disable zoom on mobile: iOS Safari ignores user-scalable=no, so also block pinch gestures and double-tap zoom -->
+  <style>html { touch-action: manipulation; }</style>
+  <script>
+    ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (e) {
+      document.addEventListener(e, function (ev) { ev.preventDefault(); }, { passive: false });
+    });
+  </script>
 
   <!-- PWA meta tags -->
   <meta name="theme-color" content="#365463" />
