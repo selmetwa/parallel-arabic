@@ -271,6 +271,17 @@ export const GET: RequestHandler = async () => {
 		}
 	}
 
+	// Free translator, one page per dialect
+	for (const dialect of PHRASE_DIALECTS) {
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/translator</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+	}
+
 	// Hand-written stories served from $lib/constants/stories
 	for (const slug of Object.keys(staticStories)) {
 		urls.push(`

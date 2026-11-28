@@ -2,6 +2,7 @@ import { GAMES, gameHref, getGame } from '$lib/constants/games';
 import { PLANS } from '$lib/constants/pricing';
 import { plainRomanisation } from '$lib/utils/romanise';
 import { getFeature } from '$lib/constants/features';
+import { translatorCopy } from '$lib/constants/translator';
 
 export interface PageMeta {
 	title: string;
@@ -597,6 +598,12 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			url: `${baseUrl}/${dialectSlug}/phrases`,
 			type: 'website'
 		},
+		translator: {
+			title: `${translatorCopy(dialectSlug).title} | Parallel Arabic`,
+			description: translatorCopy(dialectSlug).description,
+			url: `${baseUrl}/${dialectSlug}/translator`,
+			type: 'website'
+		},
 		phrase: {
 			title: data?.arabic
 				? phraseTitle(data, dialectSlug)
@@ -773,6 +780,9 @@ export function resolvePageKey(
 			return parts.length === 2
 				? { key: 'words', data: { dialect } }
 				: { key: 'word', data: { dialect, slug: parts[2] } };
+		}
+		if (parts[1] === 'translator' && parts.length === 2) {
+			return { key: 'translator', data: { dialect } };
 		}
 		if (parts[1] === 'phrases') {
 			return parts.length === 2
