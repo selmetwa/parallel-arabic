@@ -19,6 +19,9 @@
           </svg>
           Instagram
         </a>
+        <div>
+          <a href="https://ipip.fyi/apps/parallel-arabic?ref=badge"><img src="https://ipip.fyi/badge/parallel-arabic.svg" alt="Parallel Arabic on iPip" width="220" height="56"></a>
+        </div>
       </div>
 
       <div class="space-y-4">
