@@ -11,6 +11,78 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'arabic-numbers',
+		title: 'Arabic numbers 1–100, and how each dialect says them',
+		description:
+			'The Arabic digits, the numbers 0 to 10 in seven dialects, the teens, the tens and 100, why 21 is "one and twenty", and which form of the noun follows each number.',
+		date: '2026-11-27',
+		readingTime: '7 min read'
+	},
+	{
+		slug: 'what-does-wallah-mean',
+		title: 'What does "wallah" mean?',
+		description:
+			'Wallah means "I swear by God", but most of the time it means "honestly" or "really?". How wallah, wallahi and wallahi el-3azeem are used, and how each dialect says it.',
+		date: '2026-11-27',
+		readingTime: '5 min read'
+	},
+	{
+		slug: 'what-does-habibi-mean',
+		title: 'What does "habibi" mean? Habibi, habibti and how each dialect uses them',
+		description:
+			'Habibi means "my dear". Who you can say it to, when it becomes habibti or habaybi, and the other terms of endearment Egyptians, Levantines, Moroccans and Gulf Arabs use instead.',
+		date: '2026-11-27',
+		readingTime: '5 min read'
+	},
+	{
+		slug: 'arabic-slang-words',
+		title: 'Arabic slang words, dialect by dialect',
+		description:
+			'The everyday slang you hear in Cairo, Beirut, Casablanca and Dubai: 2ashta, 3anjad, wakha, wayed and more, plus the handful of words every Arab understands.',
+		date: '2026-11-27',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'moroccan-darija-words-and-phrases',
+		title: "Moroccan Darija words and phrases you'll actually hear",
+		description:
+			'The Darija words for now, a lot, okay and please, the French and Spanish loanwords, the phrases for getting around Morocco, and three sayings Moroccans really use.',
+		date: '2026-11-27',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'egyptian-arabic-phrases',
+		title: 'Essential Egyptian Arabic phrases',
+		description:
+			'Egyptian Arabic phrases for greetings, shops, taxis and everyday politeness, plus the reactions you hear all day in Cairo: ma3lesh, yalla, bgad and ya salaam.',
+		date: '2026-11-27',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'is-egyptian-arabic-different',
+		title: 'Is Egyptian Arabic different from "regular" Arabic?',
+		description:
+			'Egyptian Arabic and Modern Standard Arabic side by side: the g for ج, the swallowed ق, the b- present, the ma...sh negation and the everyday words that change.',
+		date: '2026-11-27',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'can-arabs-understand-darija',
+		title: 'Is Moroccan Arabic hard for other Arabs to understand?',
+		description:
+			'Why Egyptians and Levantines struggle with Darija while Moroccans understand them: the dropped vowels, the different basic words, the n- verbs, and how Moroccans switch when talking to other Arabs.',
+		date: '2026-11-27',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'levantine-vs-egyptian-arabic',
+		title: 'Levantine vs Egyptian Arabic: which should you learn?',
+		description:
+			'The same sentences in Levantine and Egyptian, the sounds and grammar that tell them apart, how far each one carries, and which to pick for your goals.',
+		date: '2026-11-27',
+		readingTime: '6 min read'
+	},
+	{
 		slug: 'levantine-arabic-dialects-compared',
 		title: 'How different are the Levantine Arabic dialects?',
 		description:
