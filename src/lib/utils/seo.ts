@@ -185,7 +185,7 @@ const DIALECT_META: Record<DialectSlug, { title: string; description: string }> 
 			'Learn Levantine Arabic (Shami), the dialect of Syria, Lebanon, Jordan and Palestine. Phrases with audio, graded stories, vocabulary and speaking practice.'
 	},
 	darija: {
-		title: 'Learn Moroccan Arabic (Darija) Online: Phrases & Stories',
+		title: 'Darija: Learn the Moroccan Arabic Language Online',
 		description:
 			'Learn Moroccan Arabic (Darija): everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
 	},
@@ -200,7 +200,7 @@ const DIALECT_META: Record<DialectSlug, { title: string; description: string }> 
 			'Learn Iraqi Arabic, the Baghdadi dialect of Iraq. Structured lessons from A1 to B2, everyday phrases with audio, verb tables, games and speaking practice.'
 	},
 	khaleeji: {
-		title: 'Learn Gulf Arabic (Khaleeji) Online: Lessons & Phrases',
+		title: 'Gulf Arabic Dialect (Khaleeji): Learn Online, Lessons & Phrases',
 		description:
 			'Learn Gulf Arabic (Khaleeji), spoken in the UAE, Kuwait, Qatar, Bahrain and Oman. Lessons from A1 to B2, everyday phrases with audio, verb tables and games.'
 	},

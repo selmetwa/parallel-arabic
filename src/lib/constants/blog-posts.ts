@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
 		slug: 'how-to-learn-gulf-arabic',
 		title: 'How to learn Gulf Arabic (Khaleeji)',
 		description:
-			'Emirati, Kuwaiti, Qatari or Bahraini? Why the shared Gulf forms get you all four, the y that replaces j, abi, waayid and il-7een, and the order to learn Khaleeji in, with a realistic timeline for each stage.',
+			'Emirati, Kuwaiti, Qatari or Bahraini? Why the shared Gulf Arabic dialect gets you all four, the y that replaces j, abi, waayid and il-7een, and the order to learn Khaleeji in, with a realistic timeline for each stage.',
 		date: '2026-10-24',
 		readingTime: '7 min read'
 	},
