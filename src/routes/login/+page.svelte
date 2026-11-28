@@ -8,7 +8,11 @@
 	import Turnstile from '$lib/components/Turnstile.svelte';
 	import TestimonialWall from '$lib/components/TestimonialWall.svelte';
 	import AuthValueProps from '$lib/components/AuthValueProps.svelte';
-	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
+	import {
+		BEGINNER_TESTIMONIAL,
+		EGYPTIAN_TESTIMONIAL,
+		TESTIMONIALS
+	} from '$lib/constants/testimonials';
 	import type { ActionData } from './$types';
 	import { Browser } from '@capacitor/browser';
 	import { App } from '@capacitor/app';
@@ -227,14 +231,7 @@
 
 
   // Every shared quote, plus the one only this page has shown.
-  const quotes = [
-    EGYPTIAN_TESTIMONIAL,
-    ...TESTIMONIALS,
-    [
-      { t: "Even though I'm a beginner, " },
-      { t: "your AI is the best I've tried among all the apps!", b: true }
-    ]
-  ];
+  const quotes = [EGYPTIAN_TESTIMONIAL, ...TESTIMONIALS, BEGINNER_TESTIMONIAL];
 </script>
 
 <section class="min-h-screen bg-tile-300 py-8 sm:py-12">

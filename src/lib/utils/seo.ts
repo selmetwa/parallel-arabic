@@ -674,6 +674,13 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			url: `${baseUrl}/faq`,
 			type: 'website'
 		},
+		testimonials: {
+			title: 'Testimonials - What Learners Say About Parallel Arabic',
+			description:
+				'Unedited messages from people learning Egyptian, Levantine, Moroccan and other Arabic dialects with Parallel Arabic.',
+			url: `${baseUrl}/testimonials`,
+			type: 'website'
+		},
 		support: {
 			title: 'Support - Get Help with Parallel Arabic',
 			description:
@@ -854,6 +861,7 @@ export function resolvePageKey(
 		'/anki-decks': 'anki-decks',
 		'/about': 'about',
 		'/faq': 'faq',
+		'/testimonials': 'testimonials',
 		'/support': 'support',
 		'/pricing': 'pricing',
 		'/privacy': 'privacy'

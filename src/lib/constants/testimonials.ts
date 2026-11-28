@@ -1,7 +1,7 @@
 /**
  * What learners have said about Parallel Arabic, quoted as they wrote it.
- * The same quotes appear on /signup and /login. (One more, on /login, mentions
- * "your AI"; it's left out here to keep "AI" out of new copy.)
+ * The same quotes appear on /signup and /login. BEGINNER_TESTIMONIAL mentions
+ * "your AI", so it's kept out of this list and only shown on /login and /testimonials.
  */
 export type TestimonialSegment = { t: string; b?: boolean };
 
@@ -80,4 +80,10 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 export const EGYPTIAN_TESTIMONIAL: TestimonialSegment[] = [
 	{ t: "It's the best app I have found so far", b: true },
 	{ t: ' in my journey to learn Egyptian Arabic' }
+];
+
+/** Mentions "your AI", so it's only shown where every quote is listed. */
+export const BEGINNER_TESTIMONIAL: TestimonialSegment[] = [
+	{ t: "Even though I'm a beginner, " },
+	{ t: "your AI is the best I've tried among all the apps!", b: true }
 ];
