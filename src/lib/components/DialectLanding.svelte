@@ -107,6 +107,14 @@
 					}
 				]
 			: []),
+		{
+			href: `/${dialect}/translator`,
+			icon: '🌐',
+			title: 'Translator',
+			desc: `Type a phrase in English and get it back in spoken ${short}, with a transliteration and audio.`,
+			accent: '#14b8a6',
+			deep: '#0f766e'
+		},
 		...(hasWords
 			? [
 					{

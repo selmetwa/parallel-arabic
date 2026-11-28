@@ -23,6 +23,7 @@ describe('resolvePageMeta', () => {
 			'/egyptian-arabic/conjugations',
 			'/egyptian-arabic/conjugations/gara',
 			'/levantine/phrases/hello',
+			'/darija/translator',
 			'/egyptian-arabic/word/2abl',
 			'/egyptian-arabic-vs-levantine',
 			'/sentences',
@@ -100,6 +101,10 @@ describe('resolvePageKey', () => {
 		expect(resolvePageKey('/levantine')).toEqual({
 			key: 'dialect',
 			data: { dialect: 'levantine' }
+		});
+		expect(resolvePageKey('/darija/translator')).toEqual({
+			key: 'translator',
+			data: { dialect: 'darija' }
 		});
 		expect(resolvePageKey('/levantine/phrases')).toEqual({
 			key: 'phrases',
