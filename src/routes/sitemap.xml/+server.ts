@@ -109,6 +109,7 @@ const staticPages = [
 	// Info pages
 	{ path: '/about', priority: '0.5', changefreq: 'monthly' },
 	{ path: '/faq', priority: '0.5', changefreq: 'monthly' },
+	{ path: '/testimonials', priority: '0.5', changefreq: 'monthly' },
 	{ path: '/support', priority: '0.5', changefreq: 'monthly' },
 
 	// Blog
