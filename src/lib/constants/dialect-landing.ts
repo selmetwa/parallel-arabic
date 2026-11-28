@@ -152,6 +152,16 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 		],
 		faqs: [
 			{
+				question: 'What is Levantine Arabic?',
+				answer:
+					'Levantine Arabic, also called Shami (شامي), is the spoken Arabic of the Levant: Syria, Lebanon, Jordan and Palestine. It is a group of closely related city and village dialects rather than a single standard, and it is what people speak at home, on the street and in most TV drama there. Formal writing and the news use Modern Standard Arabic instead.'
+			},
+			{
+				question: 'Where is Levantine Arabic spoken?',
+				answer:
+					'In Syria, Lebanon, Jordan and Palestine, including Israel’s Arab communities, and among large diaspora communities in Europe, the Americas and the Gulf. Southern Turkey (Hatay) and parts of Iraq near the Syrian border have Levantine-speaking communities too. Around 40 million people speak it as their first language.'
+			},
+			{
 				question: 'Is Levantine Arabic one dialect or several?',
 				answer:
 					'Several closely related ones. Syrian, Lebanese, Jordanian and Palestinian Arabic differ in accent and some vocabulary, but speakers understand each other without difficulty. Material taught as "Levantine" is usually based on Damascus or Beirut speech.'
@@ -210,6 +220,16 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 			}
 		],
 		faqs: [
+			{
+				question: 'What is Darija?',
+				answer:
+					'Darija (الدارجة, "the everyday language") is the spoken Arabic of Morocco. It is what Moroccans speak at home, in the street and in most songs and films, while Modern Standard Arabic is kept for writing, news and formal settings. Algerians and Tunisians also call their own dialects Darija.'
+			},
+			{
+				question: 'Is Darija a language or a dialect?',
+				answer:
+					'Linguists call it a variety of Arabic: its grammar and most of its vocabulary are Arabic, alongside many Amazigh, French and Spanish words. In everyday terms it works like its own language, since it is the mother tongue of most Moroccans and differs enough from other dialects that Eastern Arabs often struggle to follow it.'
+			},
 			{
 				question: 'Can other Arabic speakers understand Darija?',
 				answer:
@@ -378,6 +398,11 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 			}
 		],
 		faqs: [
+			{
+				question: 'What is the Gulf Arabic dialect?',
+				answer:
+					'Gulf Arabic, or Khaleeji (خليجي, "of the Gulf"), is the spoken Arabic of the UAE, Kuwait, Qatar, Bahrain, eastern Saudi Arabia and parts of Oman. It is recognisable by the g for ق, the y that often replaces ج, and everyday words like abi (I want), waayid (a lot) and il-7een (now).'
+			},
 			{
 				question: 'Is Khaleeji the same in every Gulf country?',
 				answer:
